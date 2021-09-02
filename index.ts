@@ -30,7 +30,7 @@ await mark.process(docs);
 let template = new TemplateModule();
 await template.process(docs);
 
-let out = new OutputModule();
+let out = new OutputModule("./out/");
 await out.process(docs);
 
 console.table(docs.map((d)=> ({
