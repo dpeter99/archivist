@@ -4,36 +4,23 @@ import {MarkdownRender} from "./src/Modules/MarkdownRender.ts";
 import {OutputModule} from "./src/Modules/OutputModule.ts";
 import {ExtractMetadata} from "./src/Modules/ExtractMetadata.ts";
 import {TemplateModule} from "./src/Modules/TemplateModule.ts";
-
-// First, create instance of Handlebars
-
-//const handle = new Handlebars();
+import {Pipeline} from "./src/Pipeline.ts";
 
 
+let pipe = new Pipeline();
+pipe.addModule(new FileReaderModule("**/*.md"));
 
+pipe.addModule(new ExtractMetadata())
 
+pipe.addModule(new MarkdownRender());
 
-//const text = await Deno.readTextFile("./test.md");
-//console.log(text);
-let docs :Content[] = [];
+pipe.addModule(new TemplateModule());
 
+pipe.addModule(new OutputModule("./out/"))
 
-let m = new FileReaderModule("**/*.md");
-await m.process(docs);
-
-let meta = new ExtractMetadata();
-await meta.process(docs);
-
-let mark = new MarkdownRender();
-await mark.process(docs);
-
-let template = new TemplateModule();
-await template.process(docs);
-
-let out = new OutputModule("./out/");
-await out.process(docs);
+let docs:Content[] = await pipe.run();
 
 console.table(docs.map((d)=> ({
     name: d.name,
-    title: d.metadata.get("Title")
+    Title: d.metadata.get("Title")
 })));

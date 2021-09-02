@@ -15,7 +15,7 @@ export class ExtractMetadata extends SimpleModule{
 
         meta.forEach((e)=>{
             //if(e.attributes.getNam)
-            console.log(e.textContent);
+            //console.log(e.textContent);
             this.parseBikeshedStyle(doc,e.innerText)
 
             //doc.content = doc.content.replace(e.outerHTML, "");
