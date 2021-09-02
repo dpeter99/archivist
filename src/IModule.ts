@@ -1,9 +1,9 @@
-import {Document} from "./Document.ts";
+import {Content} from "./Content.ts";
 
 
 export interface IModule {
 
-    process(docs:Document[]):Promise<any>
+    process(docs:Content[]):Promise<any>
 
 }
 

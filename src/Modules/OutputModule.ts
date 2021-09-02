@@ -1,8 +1,5 @@
 import {IModule} from "../IModule.ts";
-import {Document} from "../Document.ts";
-
-
-
+import {Content} from "../Content.ts";
 
 
 export class OutputModule implements IModule{
@@ -11,7 +8,7 @@ export class OutputModule implements IModule{
 
     }
 
-    async process(docs:Array<Document>): Promise<any> {
+    async process(docs:Array<Content>): Promise<any> {
 
         for (const d of docs){
             await Deno.writeTextFile(d.path+".html", d.content);

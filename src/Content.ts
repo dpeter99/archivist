@@ -1,11 +1,13 @@
 
 import { basename } from "https://deno.land/std@0.106.0/path/mod.ts";
 
-export class Document {
+export class Content {
 
     name:string
     path:string
     content:string
+
+    metadata = new Map();
 
     constructor(path:string, content:string) {
         this.name = basename(path);
@@ -13,12 +15,13 @@ export class Document {
         this.content = content;
     }
 
-    static async load(path: string): Promise<Document>{
+    static async load(path: string): Promise<Content>{
 
         // @ts-ignore
-        const text = await Deno.readTextFile(path);
+        let text = await Deno.readTextFile(path);
+        text = text.replaceAll("\r\n","\n");
 
-        let doc = new Document(path,text);
+        let doc = new Content(path,text);
 
         return doc;
     }

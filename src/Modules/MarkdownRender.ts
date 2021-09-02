@@ -1,5 +1,5 @@
 import {IModule} from "../IModule.ts";
-import {Document} from "../Document.ts";
+import {Content} from "../Content.ts";
 
 import marked from "./../../node_modules/marked/lib/marked.esm.js";
 
@@ -11,7 +11,7 @@ export class MarkdownRender implements IModule{
 
     }
 
-    async process(docs:Document[]): Promise<any> {
+    async process(docs:Content[]): Promise<any> {
 
         for (let d of docs){
             d.content = marked(d.content);

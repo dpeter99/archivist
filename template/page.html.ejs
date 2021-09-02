@@ -7,9 +7,7 @@
   
   <meta name="w3c-status" content="[STATUS]">
   <meta name="abstract" content="[ABSTRACTATTR]">
-  <link href="../default.css" rel=stylesheet type="text/css">
-  <link href="../csslogo.ico" rel="shortcut icon" type="image/x-icon">
-  <link href="[W3C-STYLESHEET-URL]" rel=stylesheet type="text/css">
+  <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-LS" rel=stylesheet type="text/css">
 
   <style data-fill-with="stylesheet">
   </style>
@@ -19,8 +17,8 @@
 <body class="h-entry">
 <div class="head">
   <p data-fill-with="logo"></p>
-  <h1 id="title" class="p-name no-ref">[TITLE]</h1>
-  <h2 id="subtitle" class="no-num no-toc no-ref">[LONGSTATUS],
+  <h1 id="title" class="p-name no-ref"><%= meta.Title %></h1>
+  <h2 id="subtitle" class="no-num no-toc no-ref"><%= meta.Status %>[LONGSTATUS],
 	<span class="dt-updated"><span class="value-title" title="[CDATE]">[DATE]</span></h2>
   <div data-fill-with="spec-metadata"></div>
   <div data-fill-with="warning"></div>
@@ -33,3 +31,6 @@
 
 <nav data-fill-with="table-of-contents" id="toc"></nav>
 <main>
+  <%- content %>
+</main>
+
