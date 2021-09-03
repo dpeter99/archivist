@@ -5,7 +5,10 @@ import {OutputModule} from "./src/Modules/OutputModule.ts";
 import {ExtractMetadata} from "./src/Modules/ExtractMetadata.ts";
 import {TemplateModule} from "./src/Modules/TemplateModule.ts";
 import {Pipeline} from "./src/Pipeline.ts";
+import {WebpackModule} from "./src/WebpackModule.ts";
 
+let webp = new WebpackModule();
+await webp.process([]);
 
 let pipe = new Pipeline();
 pipe.addModules(
@@ -20,5 +23,8 @@ let docs:Content[] = await pipe.run();
 
 console.table(docs.map((d)=> ({
     name: d.name,
-    Title: d.metadata.get("Title")
+    Title: d.metadata.get("Title"),
+    Editor: d.metadata.get("Editor")
 })));
+
+Deno.exit(0);

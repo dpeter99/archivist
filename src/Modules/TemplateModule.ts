@@ -1,11 +1,14 @@
 import {SimpleModule} from "../SimpleModule.ts";
 import {Content} from "../Content.ts";
-
-import { exists, existsSync} from "https://deno.land/std@0.106.0/fs/mod.ts";
-import {compile,render, Template} from "https://deno.land/x/deno_ejs/mod.ts";
 import {StatusCodes} from "../StatusCodes.ts";
 
-//"https://deno.land/x/dejs@0.9.3/mod.ts";
+import { exists, existsSync} from "https://deno.land/std@0.106.0/fs/mod.ts";
+import { expandGlob } from "https://deno.land/std@0.106.0/fs/mod.ts";
+import * as fs from "https://deno.land/std@0.106.0/fs/mod.ts";
+import * as path from "https://deno.land/std@0.106.0/path/mod.ts";
+
+import {compile,render, Template} from "https://deno.land/x/deno_ejs/mod.ts";
+
 
 function compile_help(text:string, conf:any):Template{
     return compile(text,conf)
@@ -30,6 +33,22 @@ export class TemplateModule extends SimpleModule{
         this.compiled = compile_help(this.template, {} );
 
 
+
+    }
+
+
+    async setup(): Promise<any> {
+        await super.setup();
+
+        for await (const file of expandGlob(this.templateFolder+"/**/*")) {
+
+            if(path.extname(file.path) != ".ejs"){
+                let sub = path.relative(this.templateFolder, file.path);
+                let to = path.join("./out", sub);
+                await fs.copy(file.path, to, { overwrite: true });
+            }
+
+        }
 
     }
 

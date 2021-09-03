@@ -32,7 +32,10 @@ export class ExtractMetadata extends SimpleModule{
         let lines = text.split("\n");
 
         lines.forEach((l)=>{
-            let tokens = l.split(":");
+            let tokens = [];
+            tokens[0] = l.substr(0,l.indexOf(':')); // "72"
+            tokens[1] = l.substr(l.indexOf(':')+1); // "tocirah sneab"
+
             if(tokens[0] != "" && tokens[1] != "") {
                 //console.log(tokens[0] + " : " + tokens[1]);
 

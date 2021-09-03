@@ -6,6 +6,7 @@ Status: LS
 Group: hive
 URL: http://example.com/url-this-spec-will-live-at
 Editor: Your Name, Your Company http://example.com/your-company, your-email@example.com, http://example.com/your-personal-website
+Editor: Your Name2, Your Company http://example.com/your-company, your-email@example.com, http://example.com/your-personal-website
 Abstract: A short description of your spec, one or two sentences.
 !Version: V1.0.0-alpha.1 DRAFT001
 </pre>

@@ -16,4 +16,8 @@ export class SimpleModule implements IModule{
 
     }
 
+    setup(): Promise<any> {
+        return Promise.resolve(undefined);
+    }
+
 }

@@ -12,6 +12,10 @@ export class FileReaderModule implements IModule{
         this.pattern = pattern;
     }
 
+    setup(): Promise<any> {
+        return Promise.resolve();
+    }
+
     async process(docs: Content[]): Promise<any> {
 
         for await (const file of expandGlob(this.pattern)) {

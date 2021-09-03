@@ -15,6 +15,10 @@ export class Pipeline {
     }
 
     async run(): Promise<Content[]>{
+        for (const module of this.modules) {
+            await module.setup();
+        }
+
         let content: Content[] = [];
 
         for (const module of this.modules) {

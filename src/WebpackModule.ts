@@ -3,16 +3,21 @@ import {Content} from "./Content.ts";
 
 
 export class WebpackModule implements IModule{
+    setup(): Promise<any> {
+        throw new Error("Method not implemented.");
+    }
 
     async process(docs: Content[]): Promise<any> {
 
         const p = Deno.run({
             cmd: [
+                "cmd",
+                "/c",
                 "npm",
                 "run",
                 "build"
             ],
-            cwd: "./template",
+            cwd: "C:\\Users\\dpete\\Documents\\Programing\\Archivist\\template",
             stdout: "piped",
             stderr: "piped",
 

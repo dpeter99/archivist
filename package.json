@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run": "deno run --allow-read --unstable --allow-write .\\index.ts",
+    "run": "deno run --allow-read --unstable --allow-write --allow-run .\\index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
