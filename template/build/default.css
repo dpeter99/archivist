@@ -1,0 +1,15 @@
+body {
+  max-width: 50em;
+  margin: 0 auto;
+  padding: 1.6em 1.5em 2em 50px;
+  line-height: 1.5;
+  font-family: sans-serif;
+  widows: 2;
+  orphans: 2;
+  word-wrap: break-word;
+  hyphens: auto;
+  color: black;
+  background: white top left fixed no-repeat;
+  background-size: 25px auto;
+  counter-reset: example figure issue;
+}

@@ -8,15 +8,13 @@ import {Pipeline} from "./src/Pipeline.ts";
 
 
 let pipe = new Pipeline();
-pipe.addModule(new FileReaderModule("**/*.md"));
-
-pipe.addModule(new ExtractMetadata())
-
-pipe.addModule(new MarkdownRender());
-
-pipe.addModule(new TemplateModule());
-
-pipe.addModule(new OutputModule("./out/"))
+pipe.addModules(
+    new FileReaderModule("**/*.md"),
+    new ExtractMetadata(),
+    new MarkdownRender(),
+    new TemplateModule("./template"),
+    new OutputModule("./out/")
+);
 
 let docs:Content[] = await pipe.run();
 

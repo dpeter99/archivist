@@ -15,22 +15,31 @@
 </head>
 
 <body class="h-entry">
-<div class="head">
+<header class="head">
   <p data-fill-with="logo"></p>
   <h1 id="title" class="p-name no-ref"><%= meta.Title %></h1>
-  <h2 id="subtitle" class="no-num no-toc no-ref"><%= StatusCodes.getLongName(meta.Status) %>,
-	<span class="dt-updated"><span class="value-title" title="[CDATE]"><%= (new Date()).toDateString() %></span>
+  <h2 id="subtitle" class="no-num no-toc no-ref">
+    <%= StatusCodes.getLongName(meta.Status) %>,
+	<span class="value-title" title="[CDATE]"><%= (new Date()).toDateString() %></span>
   </h2>
   <div data-fill-with="spec-metadata"></div>
   <div data-fill-with="warning"></div>
   <p class='copyright' data-fill-with='copyright'></p>
   <hr title="Separator for header">
+</header>
+
+<div class="p-summary">
+  <%= meta.Abstract %>
 </div>
 
-<div class="p-summary" data-fill-with="abstract"></div>
-<div data-fill-with="at-risk"></div>
+<div data-fill-with="at-risk">
 
-<nav data-fill-with="table-of-contents" id="toc"></nav>
+</div>
+
+<nav data-fill-with="table-of-contents" id="toc">
+
+</nav>
+
 <main>
   <%- content %>
 </main>

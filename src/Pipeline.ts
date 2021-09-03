@@ -10,6 +10,10 @@ export class Pipeline {
         this.modules.push(m);
     }
 
+    addModules(...m:IModule[]){
+        this.modules.push(...m);
+    }
+
     async run(): Promise<Content[]>{
         let content: Content[] = [];
 
