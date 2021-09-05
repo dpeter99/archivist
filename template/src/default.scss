@@ -1,4 +1,12 @@
 
+:root{
+    --text: white;
+    --heading-text: #8af;
+    --link: #6af;
+
+    --bg: black;
+}
+
 body{
     max-width: 50em;
     margin: 0 auto;
@@ -9,8 +17,49 @@ body{
     orphans: 2;
     word-wrap: break-word;
     hyphens: auto;
-    color: black;
-    background: white top left fixed no-repeat;
-    background-size: 25px auto;
+    color: var(--text);
+    background-color: var(--bg);
+
     counter-reset: example figure issue;
+}
+
+h2, h3{
+    position: relative;
+
+    widows: 2;
+    orphans: 2;
+    overflow-wrap: break-word;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+    font: 100% sans-serif;
+    font-family: inherit;
+    line-height: 1.2;
+    hyphens: manual;
+    margin-top: 3rem;
+    color: var(--heading-text);
+    font-size: 140%;
+
+}
+
+h2 a{
+    position: absolute;
+    top: 0;
+    left: calc(-1 * (3.5rem - 26px));
+    width: calc(3.5rem - 26px);
+    height: 2em;
+    text-align: center;
+    border: none;
+
+    transition: opacity .2s;
+    opacity: .5;
+
+    color: var(--link);
+
+    &:after{
+        content: '§';
+    }
+}
+
+h2 > a {
+    font-size: 83%;
 }

@@ -19,21 +19,21 @@ This is the first draft of a standardisation effort to ensure the **POK** packag
 The standard defines the behaviour of both the client and server side but leaves the implementation details to the programmers.
 the goal of this document is to make sure the interactions between the components is properly defined and agreed upon.
 
-# The POK-API # {#API}
+# The POK-API {#API}
 The POK-API can be thought of as the version of this specification, that the server or client is conforms to. The version identifier must strictly follow [Semantic Versioning 2.0.0](https://semver.org/), allowing for ``-alpha.1`` and ``-beta.1`` suffixes as per the [Sem Ver Specification §9](https://semver.org/#spec-item-9).
 
-## Components ## {#Components}
+## Components {#Components}
 The POK ecosystem is comprised of the server and the client. 
 
-### Client ### {#Comp/Client}
+### Client {#Comp/Client}
 The client can be any graphical or terminal application that allows the user to acquiere pckage info and payload form a server
 
-### Server ### {#Comp/Server}
+### Server {#Comp/Server}
 The server is responsible for storing the package metadata and the payloads, and to serve them to the client through the POK-API.
 
 
 
-## Packages ## {#Packages}
+## Packages {#Packages}
 
 A package is comprised of the following main parts:
 1) Payload that is the core of the package. This can be many things in most cases the compiled code of a program. But any file can be thought of as a package.
@@ -41,7 +41,7 @@ A package is comprised of the following main parts:
 
 Payloads are organized into [versions (3.2)](#3.2 Package Versions) witch 
 
-### Package Metadata ### {#Packages/Meta}
+### Package Metadata {#Packages/Meta}
 The package metadata as of this version (V1.0.0.-alpha.1) contains the following data 
 
 Properties:
@@ -54,7 +54,7 @@ Properties:
 | Latest     | The latest version of the package  | version ref  |
 
 
-#### Package ID #### {#Packages/Meta/ID}
+#### Package ID {#Packages/Meta/ID}
 
 The package ID is a unique identifier for the package, and is derived form the ``Author`` and the ``Name`` metadata. The id is constructed as follows ``<Author>.<Name>`` for example: ``curle.erythro``.
 While the ``Author`` and ``Name`` fields can contain upper and lower case letters the package ID must always use their lover case variants.
