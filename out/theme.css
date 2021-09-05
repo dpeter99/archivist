@@ -1,0 +1,43 @@
+@property ----brand--hue {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 46deg;
+}
+@property ----brand--saturation {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 100%;
+}
+@property ----brand--lightness {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 51%;
+}
+:root {
+  --brand--hue: 46deg;
+  --brand--saturation: 100%;
+  --brand--lightness: 51%;
+  --brand: hsl(var(--brand--hue),var(--brand--saturation), var(--brand--lightness));
+}
+
+:root,
+[color-scheme=dark] {
+  --accent-color: hsl(
+      var(--brand--hue),
+      calc(var(--brand--saturation) / 2),
+      calc(var(--brand--lightness) / 1.1)
+  );
+  --accent-color-light: hsl(
+      var(--brand--hue),
+      calc(var(--brand--saturation) / 2),
+      calc(var(--brand--lightness) / 1)
+  );
+}
+
+:root {
+  --link-color: scale-color();
+  --text: white;
+  --heading-text: var(--accent-color);
+  --link: var(--accent-color-light);
+  --bg: black;
+}

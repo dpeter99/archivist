@@ -1,0 +1,26 @@
+@mixin new-custom-property($name, $type, $inherits, $initial) {
+
+  @property --#{$name} {
+    syntax: $type;
+    inherits: $inherits;
+    initial-value: $initial;
+  }
+}
+
+@mixin new-custom-decomp-color($name, $inherits, $initial) {
+
+  @include new-custom-property(--#{$name}--hue, '<number>', $inherits, hue($initial) );
+
+  @include new-custom-property(--#{$name}--saturation, '<number>', $inherits, saturation($initial) );
+
+  @include new-custom-property(--#{$name}--lightness, '<number>', $inherits, lightness($initial) );
+
+  :root{
+    --#{$name}--hue: #{hue($initial)};
+    --#{$name}--saturation: #{saturation($initial)};
+    --#{$name}--lightness: #{lightness($initial)};
+
+    --#{$name}: hsl(var(--#{$name}--hue),var(--#{$name}--saturation), var(--#{$name}--lightness));
+  }
+
+}

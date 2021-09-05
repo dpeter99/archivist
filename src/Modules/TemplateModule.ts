@@ -31,9 +31,6 @@ export class TemplateModule extends SimpleModule{
         this.template = Deno.readTextFileSync(this.templateFolder+"/page.html.ejs");
 
         this.compiled = compile_help(this.template, {} );
-
-
-
     }
 
 
@@ -69,9 +66,9 @@ export class TemplateModule extends SimpleModule{
     }
 
     processDoc(doc: Content): Promise<any> {
-        
+
         const docContent = doc.content;
-    
+
         let data = {
             content: docContent,
             meta: Object.fromEntries(doc.metadata),

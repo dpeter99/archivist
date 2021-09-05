@@ -24,6 +24,12 @@ export function renderAttrs (slug:string, state:StateCore) {
 
 export function renderPermalink (slug:any, opts:any, state:StateCore, idx:number) {
 
+    if(state.tokens[idx].type === "heading_open"){
+        //TODO: Add confing for this
+        state.tokens[idx].attrs.unshift(['class', 'heading'])
+    }
+
+
     const linkTokens = [
         createToken(state,'link_open', 'a', 1, {
             attrs: [
