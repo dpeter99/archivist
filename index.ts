@@ -6,6 +6,7 @@ import {ExtractMetadata} from "./src/Modules/ExtractMetadata.ts";
 import {TemplateModule} from "./src/Modules/TemplateModule.ts";
 import {Pipeline} from "./src/Pipeline.ts";
 import {WebpackModule} from "./src/WebpackModule.ts";
+import {BikeshedMetadata} from "./src/Modules/BikeshedMetadata.ts";
 
 let webp = new WebpackModule();
 await webp.process([]);
@@ -13,7 +14,9 @@ await webp.process([]);
 let pipe = new Pipeline();
 pipe.addModules(
     new FileReaderModule("**/*.md"),
-    new ExtractMetadata(),
+    new ExtractMetadata(
+        new BikeshedMetadata()
+    ),
     new MarkdownRender(),
     new TemplateModule("./template"),
     new OutputModule("./out/")

@@ -1,5 +1,8 @@
-@use "theme";
-@use "headings";
+@use "styles/reset";
+@use "styles/tables";
+
+@use "styles/theme";
+@use "styles/headings";
 
 body{
     max-width: 50em;
@@ -12,7 +15,7 @@ body{
     word-wrap: break-word;
     hyphens: auto;
     color: var(--text);
-    background-color: var(--bg);
+    background-color: var(--background-color);
 
     counter-reset: example figure issue;
 }

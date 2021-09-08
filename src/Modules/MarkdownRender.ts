@@ -15,6 +15,8 @@ var markdownItAutoParnum = require('markdown-it-auto-parnum')
 var markdownItAttrs = require('markdown-it-attrs');
 var markdownItAnchors = require('markdown-it-anchor');
 
+import markdownItMultimdTable from "https://esm.sh/markdown-it-multimd-table"
+
 
 export class MarkdownRender extends SimpleModule{
 
@@ -24,6 +26,8 @@ export class MarkdownRender extends SimpleModule{
         super.setup();
 
         this.markdownIt = new MarkdownIt();
+        this.markdownIt.use(markdownItMultimdTable);
+
         this.markdownIt.use(shiftHeadings);
         this.markdownIt.use(markdownItAttrs,{
             // optional, these are default options

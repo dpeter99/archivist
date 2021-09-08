@@ -1,0 +1,28 @@
+table{
+
+  display: block;
+  width: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+
+  max-width: 100%;
+  overflow: auto;
+
+  border-radius: 2px;
+
+  tr {
+    background-color: var(--background-color);
+    border-top: 1px solid var(--border-color);
+
+    &:nth-child(2n) {
+      background-color: var(--background-color-2);
+    }
+  }
+
+  th, td{
+    padding: 6px 13px;
+    border: 1px solid var(--border-color);
+  }
+
+}

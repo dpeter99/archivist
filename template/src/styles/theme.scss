@@ -1,0 +1,32 @@
+@use "mixins/index" as helpers;
+
+@include helpers.new-custom-decomp-color("brand",true,hsl(46, 100%, 51%));
+
+:root,
+[color-scheme="dark"] {
+  --accent-color: hsl(var(--brand--hue), calc(var(--brand--saturation) / 2), calc(var(--brand--lightness) / 1.1));
+
+  --accent-color-light: hsl(
+      var(--brand--hue),
+      calc(var(--brand--saturation) / 2),
+      calc(var(--brand--lightness) / 1)
+  );
+
+  --surface1-dark: hsl(var(--brand--hue) 10% 10%);
+  --surface2-dark: hsl(var(--brand--hue) 10% 15%);
+  --surface3-dark: hsl(var(--brand--hue) 5%  20%);
+  --surface4-dark: hsl(var(--brand--hue) 5% 25%);
+
+}
+
+:root{
+  --heading-text: var(--accent-color);
+  --link: var(--accent-color-light);
+
+  --text: white;
+
+  --background-color: var(--surface1-dark);
+  --background-color-2: var(--surface2-dark);
+
+  --border-color: var(--surface4-dark);
+}

@@ -5,7 +5,7 @@ export interface IModule {
 
     process(docs:Content[]):Promise<any>
 
-    setup():Promise<any>
+    setup(parent?:IModule):Promise<any>
 
 }
 
