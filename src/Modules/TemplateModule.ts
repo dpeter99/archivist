@@ -71,7 +71,7 @@ export class TemplateModule extends SimpleModule{
 
         let data = {
             content: docContent,
-            meta: Object.fromEntries(doc.metadata),
+            meta: Object.fromEntries(doc.metadata.data),
             StatusCodes: StatusCodes
         };
 

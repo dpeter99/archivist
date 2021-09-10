@@ -16,6 +16,7 @@ export class ExtractMetadata extends CompositeModule{
 
 }
 
+
 export const AttribNameMapping = {
     Author : "Author",
     Editor : "Author"
@@ -30,6 +31,5 @@ export function getAttribName(name: string) : string {
     else {
         return val;
     }
-
 }
 

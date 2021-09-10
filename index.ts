@@ -26,8 +26,8 @@ let docs:Content[] = await pipe.run();
 
 console.table(docs.map((d)=> ({
     name: d.name,
-    Title: d.metadata.get("Title"),
-    Editor: d.metadata.get("Editor")
+    Title: d.metadata.Title,
+    Editor: d.metadata.Authors.map((v)=>{return v.Name})
 })));
 
 Deno.exit(0);
