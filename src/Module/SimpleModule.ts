@@ -1,8 +1,10 @@
 import {IModule} from "./IModule.ts";
-import {Content} from "./Content.ts";
+import {Content} from "../Content.ts";
+import {Pipeline} from "../Pipeline.ts";
 
 
 export class SimpleModule implements IModule{
+    pipeline!: Pipeline;
 
     parent?:IModule;
 
@@ -18,8 +20,9 @@ export class SimpleModule implements IModule{
 
     }
 
-    setup(parent?:IModule): Promise<any> {
+    setup(pipeline:Pipeline, parent?:IModule): Promise<any> {
         this.parent = parent;
+        this.pipeline = pipeline;
 
         return Promise.resolve(undefined);
     }

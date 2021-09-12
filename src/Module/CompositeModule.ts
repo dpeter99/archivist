@@ -1,6 +1,7 @@
 import {IModule} from "./IModule.ts";
-import {Content} from "./Content.ts";
+import {Content} from "../Content.ts";
 import {SimpleModule} from "./SimpleModule.ts";
+import {Pipeline} from "../Pipeline.ts";
 
 
 export class CompositeModule extends SimpleModule{
@@ -21,11 +22,11 @@ export class CompositeModule extends SimpleModule{
         return Promise.resolve(undefined);
     }
 
-    setup(parent?:IModule): Promise<any> {
-        super.setup(parent);
+    setup(pipeline:Pipeline, parent?:IModule): Promise<any> {
+        super.setup(pipeline,parent);
 
         for (const module of this.modules) {
-            module.setup(this);
+            module.setup(pipeline,this);
         }
 
         return Promise.resolve(undefined);

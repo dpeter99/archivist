@@ -1,4 +1,4 @@
-import {SimpleModule} from "../SimpleModule.ts";
+import {SimpleModule} from "../Module/SimpleModule.ts";
 import {Content} from "../Content.ts";
 
 import { relative, extname, dirname } from "https://deno.land/std@0.106.0/path/mod.ts";
@@ -18,15 +18,15 @@ export class OutputModule extends SimpleModule{
 
         let relPath = relative(Deno.cwd(),doc.path);
         relPath = relPath.replace(extname(relPath),".html");
-        
+
         const path = this.path + relPath
 
-        console.log(path + " dir: " + dirname(path))
+        //console.log(path + " dir: " + dirname(path))
 
         await ensureDir(dirname(path));
-        
+
         await Deno.writeTextFile(path, doc.content);
-        
+
 
     }
 

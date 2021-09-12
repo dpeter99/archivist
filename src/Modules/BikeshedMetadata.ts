@@ -1,4 +1,4 @@
-import {SimpleModule} from "../SimpleModule.ts";
+import {SimpleModule} from "../Module/SimpleModule.ts";
 import {Content} from "../Content.ts";
 
 import {DOMParser, Element, Node, Document} from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";

@@ -1,6 +1,6 @@
-import {IModule} from "../IModule.ts";
+import {IModule} from "../Module/IModule.ts";
 import {Content} from "../Content.ts";
-import {SimpleModule} from "../SimpleModule.ts";
+import {SimpleModule} from "../Module/SimpleModule.ts";
 
 
 export class ExtractFrontMatter extends SimpleModule{

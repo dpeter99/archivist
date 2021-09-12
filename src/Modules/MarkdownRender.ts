@@ -1,7 +1,7 @@
-import {IModule} from "../IModule.ts";
+import {IModule} from "../Module/IModule.ts";
 import {Content} from "../Content.ts";
 
-import {SimpleModule} from "../SimpleModule.ts";
+import {SimpleModule} from "../Module/SimpleModule.ts";
 import {headingNumbers} from "../utils/MarkdownHeaderNumber.ts";
 
 import { createRequire } from "https://deno.land/std/node/module.ts";
@@ -16,14 +16,15 @@ var markdownItAttrs = require('markdown-it-attrs');
 var markdownItAnchors = require('markdown-it-anchor');
 
 import markdownItMultimdTable from "https://esm.sh/markdown-it-multimd-table"
+import {Pipeline} from "../Pipeline.ts";
 
 
 export class MarkdownRender extends SimpleModule{
 
     markdownIt:any;
 
-    setup(): Promise<any> {
-        super.setup();
+    setup(pipeline:Pipeline, parent?:IModule): Promise<any> {
+        super.setup(pipeline, parent);
 
         this.markdownIt = new MarkdownIt();
         this.markdownIt.use(markdownItMultimdTable);

@@ -1,10 +1,10 @@
-import {IModule} from "./IModule.ts";
+import {IModule} from "./Module/IModule.ts";
 import {Content} from "./Content.ts";
 
 
 export class WebpackModule implements IModule{
     setup(): Promise<any> {
-        throw new Error("Method not implemented.");
+        return Promise.resolve();
     }
 
     async process(docs: Content[]): Promise<any> {
@@ -37,5 +37,5 @@ export class WebpackModule implements IModule{
         }
 
     }
-    
+
 }

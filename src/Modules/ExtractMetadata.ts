@@ -1,8 +1,8 @@
-import {SimpleModule} from "../SimpleModule.ts";
+import {SimpleModule} from "../Module/SimpleModule.ts";
 import {Content} from "../Content.ts";
 
 
-import {CompositeModule} from "../CompositeModule.ts";
+import {CompositeModule} from "../Module/CompositeModule.ts";
 
 export class ExtractMetadata extends CompositeModule{
 
