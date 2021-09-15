@@ -1,15 +1,18 @@
 import {SimpleModule} from "../Module/SimpleModule.ts";
 import {Content} from "../Content.ts";
 import {StatusCodes} from "../StatusCodes.ts";
+import {Pipeline} from "../Pipeline.ts";
+import {IModule} from "../Module/IModule.ts";
 
-import { exists, existsSync} from "https://deno.land/std@0.106.0/fs/mod.ts";
-import { expandGlob } from "https://deno.land/std@0.106.0/fs/mod.ts";
+
 import * as fs from "https://deno.land/std@0.106.0/fs/mod.ts";
 import * as path from "https://deno.land/std@0.106.0/path/mod.ts";
 
 import {compile,render, Template} from "https://deno.land/x/deno_ejs/mod.ts";
-import {Pipeline} from "../Pipeline.ts";
-import {IModule} from "../Module/IModule.ts";
+
+import stringInterpolation from 'https://cdn.skypack.dev/string-interpolation';
+
+
 
 
 function compile_help(text:string, conf:any):Template{
@@ -29,9 +32,10 @@ export class TemplateModule extends SimpleModule{
      */
     templateFolder!: string;
 
-
     template!:string;
-    compiled : any
+    compiled : any;
+
+    templates: Map<string,CompiledTemplate> = new Map();
 
     /**
      *
@@ -63,16 +67,6 @@ export class TemplateModule extends SimpleModule{
 
         this.compiled = compile_help(this.template, {} );
 
-        for await (const file of expandGlob(this.templateFolder+"/**/*")) {
-
-            if(path.extname(file.path) != ".ejs"){
-                let sub = path.relative(this.templateFolder, file.path);
-                let to = path.join("./out", sub);
-                await fs.copy(file.path, to, { overwrite: true });
-            }
-
-        }
-
     }
 
     /**
@@ -81,7 +75,7 @@ export class TemplateModule extends SimpleModule{
      */
     getCompiledTemplateFolder(path:string):string{
         let packagePath = path+"/package.json";
-        if(!existsSync(packagePath)){
+        if(!fs.existsSync(packagePath)){
             this.pipeline.reportError(this,`Could not find package.json for template at: \" ${packagePath} \"`);
             return path;
         }
@@ -107,7 +101,27 @@ export class TemplateModule extends SimpleModule{
 
         doc.content = this.compiled(data)
 
-
         return Promise.resolve();
     }
+
+
+    templateMathcers = [
+        "spec-{meta.Status}.html.ejs",
+        "spec.html.ejs"
+    ]
+
+    getTemplateForDoc(doc:Content){
+        const temp = doc.metadata.Template;
+        if(temp != undefined){
+            return "";
+        }
+    }
+}
+
+
+class CompiledTemplate {
+    constructor(
+        public text:string,
+        public compiled: any
+    ) {}
 }

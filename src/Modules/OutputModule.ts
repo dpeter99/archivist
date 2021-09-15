@@ -4,14 +4,25 @@ import {Content} from "../Content.ts";
 import { relative, extname, dirname } from "https://deno.land/std@0.106.0/path/mod.ts";
 
 import {ensureDir} from "https://deno.land/std@0.106.0/fs/mod.ts";
+import {Archivist, archivistInst} from "../Archivist.ts";
+import {Pipeline} from "../Pipeline.ts";
+import {IModule} from "../Module/IModule.ts";
 
 export class OutputModule extends SimpleModule{
 
     path:string
 
-    constructor(path:string) {
+    constructor(path?:string) {
         super();
-        this.path = path;
+        this.path = path ?? archivistInst.outFolder!;
+    }
+
+    setup(pipeline: Pipeline, parent?: IModule): Promise<any> {
+        return super.setup(pipeline, parent);
+
+        if(this.path == undefined){
+            this.pipeline.reportError(this, "There was no output folder definied");
+        }
     }
 
     async processDoc(doc:Content): Promise<any> {

@@ -4,19 +4,27 @@ import {Content} from "./Content.ts";
 
 import * as ink from 'https://deno.land/x/ink/mod.ts'
 
+export let archivistInst : Archivist;
+
 export class Archivist {
 
     template: string = "";
     preProcessors: Pipeline[] = [];
     pipelines: Pipeline[] = [];
 
+    outFolder?: string
+
     constructor(conf: Config) {
         this.pipelines = conf.pipelines ?? [];
         this.preProcessors = conf.preProcessors ?? [];
+
+        this.outFolder = conf.outFolder;
+
+        archivistInst = this;
     }
 
     async run(){
-
+        ink.terminal.log(`<green>Starting Archivist build</green>`)
         for (const preProcessor of this.preProcessors) {
             await preProcessor.run();
         }
@@ -56,4 +64,6 @@ export class Config{
     template?: string;
     pipelines?: Pipeline[];
     preProcessors?: Pipeline[];
+
+    outFolder?: string;
 }

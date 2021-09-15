@@ -5,6 +5,6 @@ node_modules/
 
 .vscode/
 
-template/build/
+examples/specs/template/build/
 
 out/

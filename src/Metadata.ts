@@ -40,6 +40,10 @@ export class Metadata extends Meta{
     get Authors(): Author[] {
         return  this.data.get("Author") as Author[]
     }
+
+    get Template(): string | undefined{
+        return this.getString("Template");
+    }
 }
 
 
