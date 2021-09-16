@@ -33,6 +33,7 @@ export class Meta {
 
 export class Metadata extends Meta{
 
+
     get Title(): string | undefined {
         return this.getString("Title");
     }
@@ -44,14 +45,18 @@ export class Metadata extends Meta{
     get Template(): string | undefined{
         return this.getString("Template");
     }
+
+    set Template(val){
+        this.data.set("Template",val);
+    }
 }
 
 
 
 export class Author{
-    public Company?: string
+    public company?: string
 
-    constructor(public Name:string) {
+    constructor(public name:string) {
 
     }
 }

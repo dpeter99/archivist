@@ -15,8 +15,8 @@ export let config: Config = {
     outFolder: "./out",
     preProcessors: [
         Pipeline.fromModules("build_template",
-            new WebpackModule("./template"),
-            new StaticFilesModule("./template")
+            new WebpackModule("./examples/specs/template/"),
+            new StaticFilesModule("./examples/specs/template/")
         )
     ],
     pipelines:[

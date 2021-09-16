@@ -7,7 +7,7 @@
 
   <meta name="w3c-status" content="[STATUS]">
   <meta name="abstract" content="[ABSTRACTATTR]">
-  <link href="default.css" rel=stylesheet type="text/css">
+  <link href="<%= originPath %>default.css" rel=stylesheet type="text/css">
 
 </head>
 
@@ -22,7 +22,7 @@
   <div data-fill-with="spec-metadata">
     <dl>Author:</dl>
     <%for( let data of meta.Author) { %>
-      <dd><%= data %></dd>
+      <dd><%= data.name %></dd>
     <%} %>
   </div>
   <div data-fill-with="warning"></div>

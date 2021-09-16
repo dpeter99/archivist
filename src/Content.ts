@@ -10,6 +10,10 @@ export class Content {
 
     metadata = new Metadata();
 
+    get meta(){
+        return Object.fromEntries(this.metadata.data);
+    }
+
     constructor(path:string, content:string) {
         this.name = basename(path);
         this.path = path;

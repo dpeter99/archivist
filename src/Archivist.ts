@@ -45,7 +45,8 @@ export class Archivist {
                     console.table(docs!.map((d)=> ({
                         name: d.name,
                         Title: d.metadata.Title,
-                        Editor: d.metadata.Authors.map((v)=>{return v.Name})
+                        //Editor: d.metadata.Authors.map((v)=>{return v.Name}),
+                        Template: d.metadata.Template
                     })));
                 }
 

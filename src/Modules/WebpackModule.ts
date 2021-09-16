@@ -3,8 +3,6 @@ import {Content} from "../Content.ts";
 import {SimpleModule} from "../Module/SimpleModule.ts";
 import { Pipeline } from "../Pipeline.ts";
 
-import {Deno} from "../utils/deno.d.ts";
-
 
 export class WebpackModule extends SimpleModule {
 
@@ -12,7 +10,7 @@ export class WebpackModule extends SimpleModule {
 
     constructor(path: string) {
         super();
-        this.templateFolder = path;
+        this.templateFolder = Deno.cwd() + path;
     }
 
     setup(pipeline:Pipeline, parent?:IModule): Promise<any> {
@@ -22,7 +20,7 @@ export class WebpackModule extends SimpleModule {
 
     async process(docs: Content[]): Promise<any> {
 
-        console.group("Starting build of the template")
+        console.group("Starting build of the template at: " + this.templateFolder)
 
         const p = Deno.run({
             cmd: [
@@ -32,7 +30,7 @@ export class WebpackModule extends SimpleModule {
                 "run",
                 "build"
             ],
-            cwd: "C:\\Users\\dpete\\Documents\\Programing\\Archivist\\template",
+            cwd: this.templateFolder,
             stdout: "piped",
             stderr: "piped",
 

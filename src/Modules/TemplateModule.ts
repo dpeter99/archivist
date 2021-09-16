@@ -10,9 +10,8 @@ import * as path from "https://deno.land/std@0.106.0/path/mod.ts";
 
 import {compile,render, Template} from "https://deno.land/x/deno_ejs/mod.ts";
 
-import stringInterpolation from 'https://cdn.skypack.dev/string-interpolation';
-
-
+import {interpolate} from "../utils/string-interpolator.ts";
+import {getCompiledTemplateFolder} from "../utils/project-json-helpers.ts";
 
 
 function compile_help(text:string, conf:any):Template{
@@ -56,72 +55,93 @@ export class TemplateModule extends SimpleModule{
         await super.setup(pipeline, parent);
 
         //Get the folder from the package.json
-        this.templateFolder = this.getCompiledTemplateFolder(this.templateRootFolder);
-
-        if(!fs.existsSync(this.templateFolder+"/page.html.ejs")){
-            this.pipeline.reportError(this,`Can not find template file at: ${this.templateFolder+"/page.html.ejs"}`);
-            return;
+        try{
+            this.templateFolder = getCompiledTemplateFolder(this.templateRootFolder);
         }
-
-        this.template = Deno.readTextFileSync(this.templateFolder+"/page.html.ejs");
-
-        this.compiled = compile_help(this.template, {} );
+        catch (e:any){
+            this.pipeline.reportError(this,e);
+        }
 
     }
 
-    /**
-     * extracts the data from the package.json
-     * @param path
-     */
-    getCompiledTemplateFolder(path:string):string{
-        let packagePath = path+"/package.json";
-        if(!fs.existsSync(packagePath)){
-            this.pipeline.reportError(this,`Could not find package.json for template at: \" ${packagePath} \"`);
-            return path;
-        }
 
-        let conf = JSON.parse( Deno.readTextFileSync(packagePath));
-
-        if(conf.out != undefined){
-            return path + conf.out;
-        }
-
-        return path;
-    }
 
     processDoc(doc: Content): Promise<any> {
 
         const docContent = doc.content;
 
+        const templat = this.getTemplateForDoc(doc);
+
+        if(templat == undefined){
+            this.pipeline.reportError(this, `could not find template for file: ${doc.name}`);
+            return Promise.resolve();
+        }
+
         let data = {
             content: docContent,
             meta: Object.fromEntries(doc.metadata.data),
-            StatusCodes: StatusCodes
+            StatusCodes: StatusCodes,
+            originPath: "/"
         };
 
-        doc.content = this.compiled(data)
-
+        doc.content = templat.compiled(data)
+        doc.metadata.Template = templat.file;
         return Promise.resolve();
     }
 
 
     templateMathcers = [
-        "spec-{meta.Status}.html.ejs",
+        "spec-${meta.Status}.html.ejs",
         "spec.html.ejs"
     ]
 
-    getTemplateForDoc(doc:Content){
+    getTemplateForDoc(doc:Content): CompiledTemplate | undefined{
         const temp = doc.metadata.Template;
         if(temp != undefined){
-            return "";
+            return this.findTemplate(temp);
         }
+
+        //const interpolator = new Interpolator();
+
+        for (const templateMathcer of this.templateMathcers) {
+            const parsed = interpolate(templateMathcer, doc);
+            console.log(parsed);
+
+            let res = this.findTemplate(parsed);
+            if(res != undefined){
+                return res;
+            }
+        }
+
+    }
+
+    findTemplate(name:string): CompiledTemplate | undefined{
+
+        let p = this.templateFolder+"/"+name;
+        if(fs.existsSync(p)){
+            if(this.templates.has(p)){
+                return this.templates.get(p);
+            }
+            return CompiledTemplate.from(p);
+        }
+
     }
 }
 
 
 class CompiledTemplate {
     constructor(
+        public file:string,
         public text:string,
         public compiled: any
     ) {}
+
+    static from(path: string) : CompiledTemplate {
+        let text = Deno.readTextFileSync(path);
+
+        let compiled = compile_help(text, {} );
+
+        return new CompiledTemplate(path,text,compiled);
+    }
 }
+
