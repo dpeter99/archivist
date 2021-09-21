@@ -1,9 +1,9 @@
-import {SimpleModule} from "../Module/SimpleModule.ts";
-import {Content} from "../Content.ts";
+import {SimpleModule} from "../../Module/SimpleModule.ts";
+import {Content} from "../../Content.ts";
 
 import {DOMParser, Element, Node, Document} from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";
 import {getAttribName} from "./ExtractMetadata.ts";
-import {Author} from "../Metadata.ts";
+import {Author} from "../../Metadata.ts";
 
 export class BikeshedMetadata extends SimpleModule {
 
@@ -63,7 +63,7 @@ export class BikeshedMetadata extends SimpleModule {
 
         let author = new Author(tokens[0]);
         if (tokens.length >= 2) {
-            author.Company = tokens[1];
+            author.company = tokens[1];
         }
 
         return author;

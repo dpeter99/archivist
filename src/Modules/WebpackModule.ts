@@ -2,25 +2,40 @@ import {IModule} from "../Module/IModule.ts";
 import {Content} from "../Content.ts";
 import {SimpleModule} from "../Module/SimpleModule.ts";
 import { Pipeline } from "../Pipeline.ts";
+import {archivistInst} from "../Archivist.ts";
+import {getCompiledTemplateFolder} from "../utils/project-json-helpers.ts";
+import {getTemplate} from "../utils/getTemplate.ts";
+import {Template} from "../Template.ts";
 
 
 export class WebpackModule extends SimpleModule {
 
-    templateFolder: string;
+    path?:string
 
-    constructor(path: string) {
+    template!: Template;
+
+
+    constructor(path?: string) {
         super();
-        this.templateFolder = Deno.cwd() + path;
+
+        this.path = path;
     }
 
     setup(pipeline:Pipeline, parent?:IModule): Promise<any> {
+        super.setup(pipeline, parent);
+
+        try {
+            this.template = getTemplate(this.path);
+        } catch (e: any) {
+            this.pipeline.reportError(this, e);
+        }
 
         return Promise.resolve();
     }
 
     async process(docs: Content[]): Promise<any> {
 
-        console.group("Starting build of the template at: " + this.templateFolder)
+        console.group("Starting build of the template at: " + this.template.path)
 
         const p = Deno.run({
             cmd: [
@@ -30,7 +45,7 @@ export class WebpackModule extends SimpleModule {
                 "run",
                 "build"
             ],
-            cwd: this.templateFolder,
+            cwd: this.template.path,
             stdout: "piped",
             stderr: "piped",
 

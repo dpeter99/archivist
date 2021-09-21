@@ -4,29 +4,47 @@ import * as ink from 'https://deno.land/x/ink/mod.ts'
 
 import {SimpleModule} from "../Module/SimpleModule.ts";
 import {getCompiledTemplateFolder} from "../utils/project-json-helpers.ts";
+import {Pipeline} from "../Pipeline.ts";
+import {IModule} from "../Module/IModule.ts";
+import {archivistInst} from "../Archivist.ts";
+import {getTemplate} from "../utils/getTemplate.ts";
+import {Template} from "../Template.ts";
 
 
-export class StaticFilesModule extends SimpleModule{
+export class StaticFilesModule extends SimpleModule {
 
-    templateFolder: string;
+    path?: string;
+    template!: Template;
 
-    constructor(templ:string) {
+    constructor(templ?: string) {
         super();
 
-        this.templateFolder = getCompiledTemplateFolder(templ);
+        this.path = templ;
     }
 
-    async process(){
+    setup(pipeline: Pipeline, parent?: IModule): Promise<any> {
+        super.setup(pipeline, parent);
+
+        try {
+            this.template = getTemplate(this.path);
+        } catch (e: any) {
+            this.pipeline.reportError(this, e);
+        }
+
+        return Promise.resolve();
+    }
+
+    async process() {
         fs.ensureDirSync("./out");
 
-        for await (const file of fs.expandGlob(this.templateFolder+"/**/*")) {
+        for await (const file of fs.expandGlob(this.template.compiledPath + "/**/*")) {
 
 
-            if(path.extname(file.path) != ".ejs"){
+            if (path.extname(file.path) != ".ejs") {
                 ink.terminal.log(`Starting copy of file: ${file.path}`);
-                let sub = path.relative(this.templateFolder, file.path);
+                let sub = path.relative(this.template.compiledPath, file.path);
                 let to = path.join("./out", sub);
-                await fs.copy(file.path, to, { overwrite: true });
+                await fs.copy(file.path, to, {overwrite: true});
             }
 
         }

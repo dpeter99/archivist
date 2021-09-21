@@ -21,7 +21,7 @@ function compile_help(text:string, conf:any):Template{
 export class TemplateModule extends SimpleModule{
 
     /**
-     * The root of the template where the package.json is
+     * The root of the template where the template.json is
      */
     templateRootFolder:string
 
@@ -54,7 +54,7 @@ export class TemplateModule extends SimpleModule{
     async setup(pipeline:Pipeline, parent?:IModule): Promise<any> {
         await super.setup(pipeline, parent);
 
-        //Get the folder from the package.json
+        //Get the folder from the template.json
         try{
             this.templateFolder = getCompiledTemplateFolder(this.templateRootFolder);
         }
@@ -105,7 +105,7 @@ export class TemplateModule extends SimpleModule{
 
         for (const templateMathcer of this.templateMathcers) {
             const parsed = interpolate(templateMathcer, doc);
-            console.log(parsed);
+            //console.log(parsed);
 
             let res = this.findTemplate(parsed);
             if(res != undefined){

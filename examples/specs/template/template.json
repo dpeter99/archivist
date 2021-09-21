@@ -1,0 +1,8 @@
+{
+  "$schema": "../../../src/template.schema.json",
+  "compiledPath": "./build",
+  "matchers": [
+    "spec-${meta.Status}.html.ejs",
+    "spec.html.ejs"
+  ]
+}

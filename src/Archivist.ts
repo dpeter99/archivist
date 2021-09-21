@@ -1,34 +1,70 @@
-import {Pipeline} from "./Pipeline.ts";
+import {Pipeline, Result} from "./Pipeline.ts";
 import {IModule} from "./Module/IModule.ts";
 import {Content} from "./Content.ts";
 
 import * as ink from 'https://deno.land/x/ink/mod.ts'
+import {Template} from "./Template.ts";
 
-export let archivistInst : Archivist;
+export let archivistInst: Archivist;
 
 export class Archivist {
 
-    template: string = "";
+    template?: Template | undefined;
     preProcessors: Pipeline[] = [];
     pipelines: Pipeline[] = [];
 
     outFolder?: string
+
+    detailedOutput: boolean;
 
     constructor(conf: Config) {
         this.pipelines = conf.pipelines ?? [];
         this.preProcessors = conf.preProcessors ?? [];
 
         this.outFolder = conf.outFolder;
+        if(conf.template){
+            try {
+                this.template = new Template(conf.template);
+            }
+            catch (e) {
+                ink.terminal.log(`<bg-red>Error:${e}</bg-red>`)
+            }
+
+        }
+
+
+        this.detailedOutput = conf.detailedOutput;
 
         archivistInst = this;
     }
 
-    async run(){
+    /**
+     * Runs the build process
+     * Steps:
+     * 1. It runs each preprocessor in async
+     * 2. It runs each main pipeline in async.
+     */
+    async run() {
         ink.terminal.log(`<green>Starting Archivist build</green>`)
+        let hasErrors: boolean = false;
+
+        let wait_pre: Promise<any>[] = [];
         for (const preProcessor of this.preProcessors) {
-            await preProcessor.run();
+            let pro = preProcessor.run();
+            wait_pre.push(pro);
+
+            pro.then(res => {
+                this.processPipelineRes(res, preProcessor, false);
+                if (res.error) hasErrors = true;
+            })
         }
 
+        await Promise.all(wait_pre);
+
+        if (hasErrors) {
+            ink.terminal.log(`<bg-red>There were errors running preprocessors.</bg-red>`)
+            return;
+        }
 
         let w: Promise<any>[] = [];
 
@@ -36,19 +72,7 @@ export class Archivist {
             let pro = pipeline.run();
             pro.then(res => {
 
-                if(res.error){
-                    pipeline.printErrors();
-                }
-                else {
-                    const docs = res.result;
-                    ink.terminal.log(`<green>${pipeline.name} ran successfully on the following files: </green>`)
-                    console.table(docs!.map((d)=> ({
-                        name: d.name,
-                        Title: d.metadata.Title,
-                        //Editor: d.metadata.Authors.map((v)=>{return v.Name}),
-                        Template: d.metadata.Template
-                    })));
-                }
+                this.processPipelineRes(res, pipeline);
 
             })
             w.push(pro);
@@ -59,12 +83,40 @@ export class Archivist {
 
     }
 
+    private processPipelineRes(res: Result, pipeline: Pipeline, printFilesList: boolean = true) {
+        if (res.error) {
+            pipeline.printErrors();
+        } else {
+            const docs = res.result;
+            if (printFilesList) {
+                ink.terminal.log(`<green>${pipeline.name} ran successfully on the following files: </green>`)
+                if (this.detailedOutput) {
+
+                    for (const doc of docs!) {
+                        console.log(doc);
+                    }
+
+                } else {
+                    console.table(docs!.map((d) => ({
+                        name: d.name,
+                        Title: d.metadata.Title,
+                        //Editor: d.metadata.Authors.map((v)=>{return v.Name}),
+                        Template: d.metadata.Template
+                    })));
+                }
+            } else {
+                ink.terminal.log(`<green>${pipeline.name} ran successfully</green>`)
+            }
+        }
+    }
 }
 
-export class Config{
+export class Config {
     template?: string;
     pipelines?: Pipeline[];
     preProcessors?: Pipeline[];
 
     outFolder?: string;
+
+    detailedOutput: boolean = false;
 }

@@ -27,13 +27,16 @@ export class Pipeline{
         return new Pipeline(name).addModules(...m);
     }
 
+    /**
+     * Runs the setup functions of each module
+     * This is done in sync.
+     * @private returns if it ran successfully
+     */
     private async setup():Promise<boolean>{
         for (const module of this.modules) {
             await module.setup(this);
         }
         return !this.hasErrors();
-
-
     }
 
     async run(): Promise<Result>{
@@ -54,7 +57,7 @@ export class Pipeline{
     errors: Array<string> = new Array<string>();
 
     reportError(module:IModule ,text:string){
-        this.errors.push(`Module: Y Error: ${text}`);
+        this.errors.push(`Module: ${module.constructor.name} Error: ${text}`);
     }
 
     hasErrors():boolean{
