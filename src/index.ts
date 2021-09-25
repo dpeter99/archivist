@@ -20,3 +20,5 @@ const arch: Archivist = new Archivist(conf);
 arch.run();
 
 
+export * from "./Archivist.ts";
+export * from "./Modules/modules.ts";
