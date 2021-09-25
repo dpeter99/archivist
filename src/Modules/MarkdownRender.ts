@@ -2,7 +2,7 @@ import {IModule} from "../Module/IModule.ts";
 import {Content} from "../Content.ts";
 
 import {SimpleModule} from "../Module/SimpleModule.ts";
-import {headingNumbers} from "../utils/markdown/MarkdownHeaderNumber.ts";
+import {MarkdownHeadingNumbers} from "../utils/markdown/MarkdownHeaderNumber.ts";
 
 import { createRequire } from "https://deno.land/std/node/module.ts";
 import {renderPermalink} from "../utils/markdown/MarkdownHeaderLink.ts";
@@ -35,7 +35,7 @@ export class MarkdownRender extends SimpleModule{
             rightDelimiter: '}',
             allowedAttributes: []  // empty array = all attributes are allowed
         })
-        this.markdownIt.use(headingNumbers.MarkdownHeadingNumbers,
+        this.markdownIt.use(MarkdownHeadingNumbers,
             {shiftHeadings: 1}
         );
         this.markdownIt.use(markdownItAnchors, {
