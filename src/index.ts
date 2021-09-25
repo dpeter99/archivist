@@ -19,6 +19,8 @@ const arch: Archivist = new Archivist(conf);
 
 arch.run();
 
+export let version = "0.0.0";
 
 export * from "./Archivist.ts";
+export * from "./Pipeline.ts";
 export * from "./Modules/modules.ts";
