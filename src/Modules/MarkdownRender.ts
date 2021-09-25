@@ -7,11 +7,10 @@ import {headingNumbers} from "../utils/MarkdownHeaderNumber.ts";
 import { createRequire } from "https://deno.land/std/node/module.ts";
 import {renderPermalink} from "../utils/MarkdownHeaderLink.ts";
 
-
 const require = createRequire(import.meta.url);
 var MarkdownIt = require('markdown-it')
 var shiftHeadings = require('markdown-it-shift-headings');
-var markdownItAutoParnum = require('markdown-it-auto-parnum')
+//var markdownItAutoParnum = require('markdown-it-auto-parnum')
 var markdownItAttrs = require('markdown-it-attrs');
 var markdownItAnchors = require('markdown-it-anchor');
 

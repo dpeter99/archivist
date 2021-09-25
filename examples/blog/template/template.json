@@ -1,7 +1,7 @@
 {
   "$schema": "../../../src/template.schema.json",
-  "compiledPath": "./build",
+  "compiledPath": "./dist",
   "matchers": [
-    "${type}.html.ejs"
+    "${meta.Type}.html.ejs"
   ]
 }

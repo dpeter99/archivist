@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('layouts/head.html.ejs')%>
+
+<body class="background-3">
+
+<main class="article">
+    <article class="card">
+        <div>
+            <div class="title">
+                <h2><%= meta.Title%></h2>
+                <h4 class="title__sub"><%= meta.Status%></h4>
+            </div>
+            <div>
+                <h2></h2>
+            </div>
+        </div>
+        <div>
+            <%- content %>
+        </div>
+    </article>
+</main>
+</body>
+</html>

@@ -1,0 +1,57 @@
+@use "./colors.scss";
+@use "./mixins/_flex";
+@use "./card.scss";
+
+.navbar{
+
+    color: black;
+
+    &-nav{
+        @include flex.flex(row, $align: center);
+
+        gap: 12px;
+
+        /*margin-top: 0.5em;
+        margin-bottom: 0.5em;*/
+
+        padding-inline-end: 18px;
+
+        & &--end{
+            margin-left: auto;
+        }
+
+    }
+}
+
+.nav-item{
+    &__link {
+        display: flex;
+        align-items: center;
+        /*height: 5rem;*/
+
+        color: var(--text-primary);
+        text-decoration: none;
+        filter: grayscale(100%) opacity(0.7);
+        transition: var(--transition-speed);
+
+        &:hover {
+            filter: grayscale(0%) opacity(1);
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+        }
+
+        svg {
+            width: 42px;
+            display: flex;
+            path.main-color{
+                fill: colors.$accent-color;
+            }
+        }
+
+    }
+}
+
+.i18n_picker{
+    @include flex.flex();
+    gap: 10px;
+}

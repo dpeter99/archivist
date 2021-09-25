@@ -3,6 +3,7 @@ Title: Hello World
 Author: 
     - Your Name2
     - Test writer
+Status: Active
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque quam ac libero cursus dapibus et eu dolor. Suspendisse semper porta urna ac volutpat. Donec in libero tempor tortor porta lacinia. Nunc et tortor et risus volutpat euismod eget vel odio. Morbi ut velit lobortis, pellentesque justo id, malesuada nisl. Nam gravida placerat ex non lacinia. Curabitur eleifend magna quis lacus dapibus pulvinar. Sed ornare purus non nulla volutpat molestie. Proin dignissim sapien tincidunt viverra luctus. Aenean elit tortor, ultrices at augue sit amet, dapibus sollicitudin tellus. Sed tincidunt varius commodo. Fusce vel tortor faucibus lorem condimentum efficitur.

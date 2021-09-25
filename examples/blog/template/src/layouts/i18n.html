@@ -1,0 +1,9 @@
+{{ if .IsTranslated }}
+<ul class="navbar-nav--end i18n_picker">
+    {{ range .AllTranslations }}
+    <li>
+        <a href="{{ .Permalink }}">{{ .Lang }}</a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}

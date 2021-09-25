@@ -1,4 +1,3 @@
-
 import StateCore from "markdown-it/lib/rules_core/state_core.js";
 import MarkdownIt from "markdown-it";
 import {createToken} from "./MarkdownUtils.ts";

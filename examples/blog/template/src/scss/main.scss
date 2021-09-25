@@ -1,0 +1,176 @@
+@use "@material/elevation" as elevation;
+@use "@material/shape";
+
+@use "mixins";
+
+@use "./helpers/reset";
+@use "./_colors" as colors;
+
+
+@use "./card";
+@use "./navbar";
+@use "./background";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+@import "./syntax";
+
+:root{
+    font-size: 16px;
+}
+
+main{
+
+    margin-top: 24px;
+
+    display: flex;
+    justify-content: center;
+
+    &>*{
+        width: 100%;
+    }
+}
+
+
+.content{
+    margin-top: 24px;
+
+    margin-left: 58px;
+    margin-right: 58px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &>*{
+        flex-grow: 1;
+        max-width: 1200px;
+        width: 100%;
+    }
+}
+
+.title{
+    @include mixins.flex();
+    
+    align-items: baseline;
+
+    &__sub{
+        margin: 0;
+        margin-left: 14px;
+    }
+
+}
+
+h2{
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+.profile{
+    box-sizing: border-box;
+
+    @include shape.radius(12px, true);
+
+    @include elevation.elevation(8);
+
+    width: 100%;
+
+    padding: 14px;
+
+    display: flex;
+    flex-flow: row;
+
+    &>img{
+        width: 150px;
+        margin-right: 24px;
+
+        background-color: #18191c;
+        border-radius: 50%;
+        padding: 5px;
+    }
+
+    .icons{
+
+        display: flex;
+        .icon{
+            color: black;
+            margin-right: 5px;
+            width: 28px;
+            height: 28px;
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__socials{
+        margin-left: auto;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: row;
+    }
+    
+}
+
+
+article{
+    ul{
+        list-style-type: disc;
+        padding-inline-start: 40px;
+    }
+}
+
+@include mixins.media-breakpoint-down(md) { 
+    .content{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .profile{
+        flex-direction: column;
+        align-items: center;
+
+        img{
+            margin: 0;
+        }
+    }
+}
+
+
+p>a{
+    text-decoration: underline;
+    color: colors.$accent-color;
+}
+
+article h2{
+    margin-top: 12px;
+}
+
+article img{
+    margin-bottom: 12px;
+    margin-top: 12px;
+    width: 50%;
+}
+
+article p{
+    margin-bottom: 12px;
+}
+
+
+.project-title{
+    @include mixins.flex($align:baseline);
+
+    .icons, .project_links{
+        margin-left: 12px;
+
+        .iconify{
+            $icon-height: 25px;
+
+            height: $icon-height;
+            width: $icon-height;
+        }
+    }
+
+}

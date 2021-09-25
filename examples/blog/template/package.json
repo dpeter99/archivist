@@ -1,0 +1,30 @@
+{
+  "name": "candidus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --config dev.config.js",
+    "build": "webpack --config base.config.js",
+    "start": "npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mdi/font": "^5.9.55",
+    "autoprefixer": "^10.2.6",
+    "material-components-web": "^13.0.0"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^5.2.6",
+    "webpack": "^5.42.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-merge": "^5.8.0",
+    "webpack-nano": "^1.1.1",
+    "mini-css-extract-plugin": "^2.1.0",
+    "postcss-loader": "^6.1.1",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0"
+  }
+}

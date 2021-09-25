@@ -1,9 +1,9 @@
 import {Archivist, Config} from "./Archivist.ts";
 
-import {exists, existsSync} from "https://deno.land/std@0.106.0/fs/mod.ts";
+import * as fs from "https://deno.land/std@0.106.0/fs/mod.ts";
 
 const confFile = Deno.cwd() + "/archivist.config.ts";
-if(!existsSync(confFile)){
+if(!fs.existsSync(confFile)){
     console.error("There is no config file at: '" + confFile );
 }
 

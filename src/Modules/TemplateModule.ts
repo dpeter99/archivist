@@ -3,7 +3,7 @@ import {Content} from "../Content.ts";
 import {StatusCodes} from "../StatusCodes.ts";
 import {Pipeline} from "../Pipeline.ts";
 import {IModule} from "../Module/IModule.ts";
-
+import {Template as ArcTemplate} from "../Template.ts";
 
 import * as fs from "https://deno.land/std@0.106.0/fs/mod.ts";
 import * as path from "https://deno.land/std@0.106.0/path/mod.ts";
@@ -12,6 +12,7 @@ import {compile,render, Template} from "https://deno.land/x/deno_ejs/mod.ts";
 
 import {interpolate} from "../utils/string-interpolator.ts";
 import {getCompiledTemplateFolder} from "../utils/project-json-helpers.ts";
+import {getTemplate} from "../utils/getTemplate.ts";
 
 
 function compile_help(text:string, conf:any):Template{
@@ -23,18 +24,15 @@ export class TemplateModule extends SimpleModule{
     /**
      * The root of the template where the template.json is
      */
-    templateRootFolder:string
+    path:string
 
     /**
      * The folder where the static files and
      * the template files are for the template
      */
-    templateFolder!: string;
+    template!: ArcTemplate;
 
-    template!:string;
-    compiled : any;
-
-    templates: Map<string,CompiledTemplate> = new Map();
+    templateFiles: Map<string,CompiledTemplate> = new Map();
 
     /**
      *
@@ -43,7 +41,7 @@ export class TemplateModule extends SimpleModule{
     constructor(templatePath:string){
         super();
 
-        this.templateRootFolder = templatePath;
+        this.path = templatePath;
     }
 
     /**
@@ -55,11 +53,10 @@ export class TemplateModule extends SimpleModule{
         await super.setup(pipeline, parent);
 
         //Get the folder from the template.json
-        try{
-            this.templateFolder = getCompiledTemplateFolder(this.templateRootFolder);
-        }
-        catch (e:any){
-            this.pipeline.reportError(this,e);
+        try {
+            this.template = getTemplate(this.path);
+        } catch (e: any) {
+            this.pipeline.reportError(this, e);
         }
 
     }
@@ -81,7 +78,8 @@ export class TemplateModule extends SimpleModule{
             content: docContent,
             meta: Object.fromEntries(doc.metadata.data),
             StatusCodes: StatusCodes,
-            originPath: "/"
+
+            pipeline: this.pipeline
         };
 
         doc.content = templat.compiled(data)
@@ -89,22 +87,14 @@ export class TemplateModule extends SimpleModule{
         return Promise.resolve();
     }
 
-
-    templateMathcers = [
-        "spec-${meta.Status}.html.ejs",
-        "spec.html.ejs"
-    ]
-
     getTemplateForDoc(doc:Content): CompiledTemplate | undefined{
         const temp = doc.metadata.Template;
         if(temp != undefined){
             return this.findTemplate(temp);
         }
 
-        //const interpolator = new Interpolator();
-
-        for (const templateMathcer of this.templateMathcers) {
-            const parsed = interpolate(templateMathcer, doc);
+        for (const templateMatcher of this.template.matchers) {
+            const parsed = interpolate(templateMatcher, doc);
             //console.log(parsed);
 
             let res = this.findTemplate(parsed);
@@ -117,10 +107,10 @@ export class TemplateModule extends SimpleModule{
 
     findTemplate(name:string): CompiledTemplate | undefined{
 
-        let p = this.templateFolder+"/"+name;
+        let p = this.template.compiledPath+"/"+name;
         if(fs.existsSync(p)){
-            if(this.templates.has(p)){
-                return this.templates.get(p);
+            if(this.templateFiles.has(p)){
+                return this.templateFiles.get(p);
             }
             return CompiledTemplate.from(p);
         }
@@ -139,7 +129,7 @@ class CompiledTemplate {
     static from(path: string) : CompiledTemplate {
         let text = Deno.readTextFileSync(path);
 
-        let compiled = compile_help(text, {} );
+        let compiled = compile_help(text, {filename:path} );
 
         return new CompiledTemplate(path,text,compiled);
     }

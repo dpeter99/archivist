@@ -1,0 +1,24 @@
+@use "../colors";
+
+@use "./systax.css";
+
+
+.chroma {
+
+    border-radius: 8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+    .hl {
+        background-color: #5d5d5d;
+    }
+
+}
+
+p>code{
+    background-color: var(--code-background);
+    color: white;
+    padding-inline-start: 4px;
+    padding-inline-end: 4px;
+    border-radius: 3px;
+}

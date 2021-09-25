@@ -1,0 +1,70 @@
+@use "@material/elevation" as elevation;
+@use "@material/shape";
+
+@use "./mixins";
+
+.card{
+    @include shape.radius(6px, true);
+
+    @include elevation.elevation(8);
+
+    @include mixins.flex(column);
+
+    background-color: white;
+
+    padding-bottom: 24px;
+
+    padding: 12px;
+
+    position: relative;
+
+    &__title{
+        /*margin-left: 12px;*/
+    }
+
+    &--big{
+        @include shape.radius(12px, true);
+
+        @include elevation.elevation(12);
+    }
+
+    &--800{
+        width: 800px;
+    }
+
+    &--outline{
+        @include elevation.elevation(0);
+
+        border-style: solid;
+        border-width: 1px;
+
+    }
+
+    &__link{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.cards-list{
+    
+    display: grid;
+    grid-template-columns: repeat(1, minmax(240px, 1fr));
+    gap: 18px;
+    @include mixins.media-breakpoint-up(md) { 
+        grid-template-columns: repeat(2, minmax(240px, 1fr));
+    }
+
+    @include mixins.media-breakpoint-up(lg) { 
+        grid-template-columns: repeat(3, minmax(240px, 1fr));
+    }
+
+    .card{
+        min-height: 200px;
+    }
+
+}

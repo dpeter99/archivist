@@ -11,7 +11,7 @@ export class Template{
         const data = getTemplateData(path);
 
         this.matchers = data.matchers;
-        this.compiledPath = data.compiledPath;
+        this.compiledPath = this.path + data.compiledPath;
     }
 
 }

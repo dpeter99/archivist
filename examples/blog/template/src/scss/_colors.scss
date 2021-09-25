@@ -1,0 +1,10 @@
+
+$accent-color: rgba(223, 151, 17, 1);
+
+$code-background: #272822;
+$code-color: white;
+
+:root{
+    --code-color: #{$code-color};
+    --code-background: #{$code-background};
+}

@@ -10,19 +10,22 @@ import {BikeshedMetadata} from "./src/Modules/Metadata/BikeshedMetadata.ts";
 import {Config} from "./src/Archivist.ts";
 import {StaticFilesModule} from "./src/Modules/StaticFilesModule.ts";
 import {FrontMatterMetadata} from "./src/Modules/Metadata/FrontMatterMetadata.ts";
+import {FunctionModule} from "./src/Modules/FunctionModule.ts";
 
 export let config: Config = {
     detailedOutput: false,
     template: "./examples/specs/template/",
     outFolder: "./out",
     preProcessors: [
-        Pipeline.fromModules("build_template",
+        Pipeline.fromModules({name:"build_template"},
             new WebpackModule(),
-            new StaticFilesModule()
+            new StaticFilesModule(),
+            new WebpackModule("./examples/blog/template/"),
+
         )
     ],
     pipelines:[
-        Pipeline.fromModules("spec_files",
+        Pipeline.fromModules({name:"spec_files"},
             new FileReaderModule("examples/specs/**/*.md"),
             new ExtractMetadata(
                 new BikeshedMetadata()
@@ -31,14 +34,21 @@ export let config: Config = {
             new TemplateModule("./examples/specs/template"),
             new OutputModule("./out/")
         ),
-        Pipeline.fromModules("blog_files",
+        Pipeline.fromModules({name:"blog_files",outputPath:"./examples/blog"},
             new FileReaderModule("examples/blog/**/*.md"),
             new ExtractMetadata(
                 new FrontMatterMetadata()
             ),
+            new FunctionModule((doc => {
+                if(!doc.metadata.hasData("Type")){
+                    doc.metadata.addData("Type","post");
+                }
+                return Promise.resolve();
+            })),
             new MarkdownRender(),
             new TemplateModule("./examples/blog/template/"),
-            new OutputModule("./out/")
+            new OutputModule("./out/"),
+            new StaticFilesModule("./examples/blog/template/")
         )
     ]
 }

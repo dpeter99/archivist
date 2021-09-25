@@ -9,8 +9,11 @@ export class Pipeline{
     modules: IModule[] = [];
     name:string;
 
-    constructor(name:string) {
+    outputPath?: string;
+
+    constructor(name:string, outputPath?:string) {
         this.name = name;
+        this.outputPath = outputPath;
     }
 
     addModule(m:IModule): Pipeline{
@@ -23,9 +26,11 @@ export class Pipeline{
         return this;
     }
 
-    static fromModules(name:string,...m:IModule[]):Pipeline{
-        return new Pipeline(name).addModules(...m);
+    static fromModules(opt:Options,...m:IModule[]):Pipeline{
+        return new Pipeline(opt.name, opt.outputPath).addModules(...m);
     }
+
+
 
     /**
      * Runs the setup functions of each module
@@ -48,6 +53,10 @@ export class Pipeline{
 
         for (const module of this.modules) {
             await module.process(content);
+        }
+
+        if(this.hasErrors()){
+            return new Result(true);
         }
 
         return new Result(false, content);
@@ -76,6 +85,13 @@ export class Pipeline{
 
 }
 
+class Options {
+    constructor(
+        public name:string,
+        public outputPath?:string
+    ) {
+    }
+}
 
 export class Result {
     error:boolean;
