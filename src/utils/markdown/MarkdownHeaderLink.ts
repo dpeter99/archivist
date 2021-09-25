@@ -1,6 +1,5 @@
-import StateCore from "markdown-it/lib/rules_core/state_core.js";
-import MarkdownIt from "markdown-it";
 import {createToken} from "./MarkdownUtils.ts";
+import {StateCore, Token} from "./markdown.d.ts";
 
 const position = {
     false: 'push',
@@ -23,9 +22,11 @@ export function renderAttrs (slug:string, state:StateCore) {
 
 export function renderPermalink (slug:any, opts:any, state:StateCore, idx:number) {
 
+
+
     if(state.tokens[idx].type === "heading_open"){
         //TODO: Add confing for this
-        state.tokens[idx].attrs.unshift(['class', 'heading'])
+        state.tokens[idx]?.attrs?.unshift(['class', 'heading'])
     }
 
 
@@ -42,10 +43,18 @@ export function renderPermalink (slug:any, opts:any, state:StateCore, idx:number
         new state.Token('link_close', 'a', -1)
     ]
 
-    if (opts.space) {
-        state.tokens[idx + 1].children[position["before"]](Object.assign(new state.Token('text', '', 0), { content: ' ' }))
+
+    let pos_c : any = state.tokens[idx + 1].children?[position["before"]]:null;
+
+    if(pos_c == null){
+        return;
     }
 
+    if (opts.space) {
+        pos_c(Object.assign(new state.Token('text', '', 0), {content: ' '}))
+    }
 
-    state.tokens[idx + 1].children[position["before"]](...linkTokens)
+    pos_c(...linkTokens)
+
+
 }

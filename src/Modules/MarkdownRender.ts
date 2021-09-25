@@ -2,10 +2,10 @@ import {IModule} from "../Module/IModule.ts";
 import {Content} from "../Content.ts";
 
 import {SimpleModule} from "../Module/SimpleModule.ts";
-import {headingNumbers} from "../utils/MarkdownHeaderNumber.ts";
+import {headingNumbers} from "../utils/markdown/MarkdownHeaderNumber.ts";
 
 import { createRequire } from "https://deno.land/std/node/module.ts";
-import {renderPermalink} from "../utils/MarkdownHeaderLink.ts";
+import {renderPermalink} from "../utils/markdown/MarkdownHeaderLink.ts";
 
 const require = createRequire(import.meta.url);
 var MarkdownIt = require('markdown-it')

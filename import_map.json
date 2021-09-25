@@ -1,7 +1,0 @@
-{
-  "imports": {
-    "@types/markdown-it": "./node_modules/@types/markdown-it/index.d.ts",
-    "markdown-it": "./node_modules/markdown-it/index.js",
-    "markdown-it/": "./node_modules/markdown-it/"
-  }
-}
