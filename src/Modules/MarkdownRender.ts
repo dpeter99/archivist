@@ -2,19 +2,16 @@ import {IModule} from "../Module/IModule.ts";
 import {Content} from "../Content.ts";
 
 import {SimpleModule} from "../Module/SimpleModule.ts";
-import {MarkdownHeadingNumbers} from "../utils/markdown/MarkdownHeaderNumber.ts";
 
-import { createRequire } from "https://deno.land/std/node/module.ts";
+import MarkdownIt from "https://esm.sh/markdown-it";
+import markdownItMultimdTable from "https://esm.sh/markdown-it-multimd-table";
+import shiftHeadings from "https://esm.sh/markdown-it-shift-headings";
+import markdownItAttrs from "https://esm.sh/markdown-it-attrs";
+import markdownItAnchors from "https://cdn.skypack.dev/markdown-it-anchor";
+import markdownItIB from "https://deno.land/x/markdown_it_ib@1.0.0/mod.js";
+import {MarkdownHeadingNumbers} from "../utils/markdown/MarkdownHeaderNumber.ts";
 import {renderPermalink} from "../utils/markdown/MarkdownHeaderLink.ts";
 
-const require = createRequire(import.meta.url);
-var MarkdownIt = require('markdown-it')
-var shiftHeadings = require('markdown-it-shift-headings');
-//var markdownItAutoParnum = require('markdown-it-auto-parnum')
-var markdownItAttrs = require('markdown-it-attrs');
-var markdownItAnchors = require('markdown-it-anchor');
-
-import markdownItMultimdTable from "https://esm.sh/markdown-it-multimd-table"
 import {Pipeline} from "../Pipeline.ts";
 
 

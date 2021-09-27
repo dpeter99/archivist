@@ -1,9 +1,9 @@
 import {SimpleModule} from "../Module/SimpleModule.ts";
 import {Content} from "../Content.ts";
 
-import { relative, extname, dirname } from "https://deno.land/std@0.106.0/path/mod.ts";
+import { relative, extname, dirname } from "https://deno.land/std/path/mod.ts";
 
-import {ensureDir} from "https://deno.land/std@0.106.0/fs/mod.ts";
+import {ensureDir} from "https://deno.land/std/fs/mod.ts";
 import {Archivist, archivistInst} from "../Archivist.ts";
 import {Pipeline} from "../Pipeline.ts";
 import {IModule} from "../Module/IModule.ts";

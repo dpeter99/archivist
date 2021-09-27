@@ -1,12 +1,19 @@
 import {createToken} from "./MarkdownUtils.ts";
 import {StateCore, Token} from "./markdown.d.ts";
+import {Metadata} from "../../Metadata.ts";
 
-const position = {
-    false: 'push',
-    true: 'unshift',
-    after: 'push',
-    before: 'unshift'
-}
+
+type ArrayKey = keyof Array<Token>;
+
+type ArrayFuncs = "push" | "unshift"
+
+
+const position = new Map<string,ArrayFuncs>( [
+    ['false', 'push'],
+    ['true', 'unshift'],
+    ['after', 'push'],
+    ['before', 'unshift']
+]);
 
 const permalinkSymbolMeta = {
     isPermalinkSymbol: true
@@ -43,18 +50,15 @@ export function renderPermalink (slug:any, opts:any, state:StateCore, idx:number
         new state.Token('link_close', 'a', -1)
     ]
 
-
-    let pos_c : any = state.tokens[idx + 1].children?[position["before"]]:null;
-
-    if(pos_c == null){
-        return;
-    }
+    var children : Token[] = state.tokens[idx+1].children!;
 
     if (opts.space) {
-        pos_c(Object.assign(new state.Token('text', '', 0), {content: ' '}))
+        //.@ts-ignore
+        state.tokens[idx + 1].children![position.get("before")!](Object.assign(new state.Token('text', '', 0), { content: ' ' }))
     }
 
-    pos_c(...linkTokens)
+    //@ts-ignore
+    state.tokens[idx + 1].children![position.get("before")!](...linkTokens)
 
 
 }

@@ -5,8 +5,8 @@ import {Pipeline} from "../Pipeline.ts";
 import {IModule} from "../Module/IModule.ts";
 import {Template as ArcTemplate} from "../Template.ts";
 
-import * as fs from "https://deno.land/std@0.106.0/fs/mod.ts";
-import * as path from "https://deno.land/std@0.106.0/path/mod.ts";
+import * as fs from "https://deno.land/std/fs/mod.ts";
+import * as path from "https://deno.land/std/path/mod.ts";
 
 import {compile,render, Template} from "https://deno.land/x/deno_ejs/mod.ts";
 

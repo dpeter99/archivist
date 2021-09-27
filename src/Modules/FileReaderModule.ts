@@ -1,7 +1,7 @@
 import {IModule} from "../Module/IModule.ts";
 import {Content} from "../Content.ts";
 
-import { expandGlob, WalkEntry } from "https://deno.land/std@0.106.0/fs/mod.ts";
+import { expandGlob, WalkEntry } from "https://deno.land/std/fs/mod.ts";
 
 
 export class FileReaderModule implements IModule{
