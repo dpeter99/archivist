@@ -27,9 +27,11 @@ function headingLevel(token: Token) {
 }
 
 function getNextHeadingNumber(level:number, state:number[], opts: Options){
-    state[level-1 - opts.shiftHeadings]++;
+    const acc_level = level-1 - opts.shiftHeadings;
 
-    state.fill(0,level - opts.shiftHeadings);
+    state[acc_level]++;
+
+    state.fill(0,acc_level+1);
 
     if(opts.excludeTrailingZeros){
         let a:number[] = Array.of(...state);

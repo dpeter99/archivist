@@ -24,7 +24,7 @@ export class TemplateModule extends SimpleModule{
     /**
      * The root of the template where the template.json is
      */
-    path:string
+    path?:string
 
     /**
      * The folder where the static files and
@@ -38,7 +38,7 @@ export class TemplateModule extends SimpleModule{
      *
      * @param templatePath The path to the root of the template where the project.json is
      */
-    constructor(templatePath:string){
+    constructor(templatePath?:string){
         super();
 
         this.path = templatePath;

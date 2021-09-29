@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run": "deno run --allow-read --unstable --allow-write --allow-run --allow-net ./src/index.ts",
+    "run": "deno run --allow-read --unstable --allow-write --allow-run --allow-net ./archivist.config.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

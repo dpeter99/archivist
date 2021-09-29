@@ -29,9 +29,9 @@ export class FrontMatterMetadata extends SimpleModule{
                 doc.metadata.addData(re,res.data[re]);
             }
 
-
-
         }
+
+        doc.content = res.content;
 
         return Promise.resolve();
     }

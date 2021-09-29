@@ -5,7 +5,7 @@ import {SimpleModule} from "../Module/SimpleModule.ts";
 
 import MarkdownIt from "https://esm.sh/markdown-it";
 import markdownItMultimdTable from "https://esm.sh/markdown-it-multimd-table";
-import shiftHeadings from "https://esm.sh/markdown-it-shift-headings";
+//import shiftHeadings from "https://esm.sh/markdown-it-shift-headings";
 import markdownItAttrs from "https://esm.sh/markdown-it-attrs";
 import markdownItAnchors from "https://cdn.skypack.dev/markdown-it-anchor";
 import markdownItIB from "https://deno.land/x/markdown_it_ib@1.0.0/mod.js";
@@ -14,10 +14,22 @@ import {renderPermalink} from "../utils/markdown/MarkdownHeaderLink.ts";
 
 import {Pipeline} from "../Pipeline.ts";
 
+class Options {
+    func?: ((md:typeof MarkdownIt) => typeof MarkdownIt);
+    shiftHeadersAmount: number = 1;
+}
 
 export class MarkdownRender extends SimpleModule{
 
     markdownIt:any;
+    private _props: Options;
+
+    constructor(props?:Options) {
+        super();
+        this._props = props ?? new Options();
+
+    }
+
 
     setup(pipeline:Pipeline, parent?:IModule): Promise<any> {
         super.setup(pipeline, parent);
@@ -25,7 +37,7 @@ export class MarkdownRender extends SimpleModule{
         this.markdownIt = new MarkdownIt();
         this.markdownIt.use(markdownItMultimdTable);
 
-        this.markdownIt.use(shiftHeadings);
+        //this.markdownIt.use(shiftHeadings);
         this.markdownIt.use(markdownItAttrs,{
             // optional, these are default options
             leftDelimiter: '{',
@@ -33,7 +45,7 @@ export class MarkdownRender extends SimpleModule{
             allowedAttributes: []  // empty array = all attributes are allowed
         })
         this.markdownIt.use(MarkdownHeadingNumbers,
-            {shiftHeadings: 1}
+            {shiftHeadings: this._props.shiftHeadersAmount}
         );
         this.markdownIt.use(markdownItAnchors, {
             permalink: renderPermalink

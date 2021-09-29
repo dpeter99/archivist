@@ -5,10 +5,11 @@ export class Meta {
     data: Map<string, any> = new Map()
 
     constructor() {
-        this.data.set("Author", []);
+        this.data.set("author", []);
     }
 
     addData<T>(key: string, val: T) {
+        key = key.toLowerCase();
         let a: any | undefined = this.data.get(key);
         if (a !== undefined) {
             if (Array.isArray(a)) {
@@ -35,19 +36,19 @@ export class Metadata extends Meta{
 
 
     get Title(): string | undefined {
-        return this.getString("Title");
+        return this.getString("title");
     }
 
     get Authors(): Author[] {
-        return  this.data.get("Author") as Author[]
+        return  this.data.get("author") as Author[]
     }
 
     get Template(): string | undefined{
-        return this.getString("Template");
+        return this.getString("template");
     }
 
     set Template(val){
-        this.data.set("Template",val);
+        this.data.set("template",val);
     }
 }
 
