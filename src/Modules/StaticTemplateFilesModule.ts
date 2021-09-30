@@ -15,7 +15,7 @@ import {Template} from "../Template.ts";
 import { WalkEntry } from "https://deno.land/std/fs/mod.ts";
 
 
-export class StaticFilesModule extends SimpleModule {
+export class StaticTemplateFilesModule extends SimpleModule {
 
     path?: string;
     template!: Template;

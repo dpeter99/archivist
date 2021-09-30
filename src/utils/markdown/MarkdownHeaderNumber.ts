@@ -17,6 +17,7 @@ import {StateCore, Token} from "./markdown.d.ts";
 export class Options{
     excludeTrailingZeros = true;
     shiftHeadings = 0;
+    addNumbers = true;
 }
 
 function headingLevel(token: Token) {
@@ -71,15 +72,15 @@ export function MarkdownHeadingNumbers (md:any, opts:Options) {
 
             const num = getNextHeadingNumber(level,headingState, options);
 
-
             const linkTokens = [
                 createToken(state,'span_open', 'span', 1, {}),
                 createToken(state,"text","span",0,{content:num}),
                 new state.Token('span_open', 'span', -1)
             ]
 
-            state.tokens[idx+1]?.children?.unshift(...linkTokens);
-
+            if(opts.addNumbers) {
+                state.tokens[idx + 1]?.children?.unshift(...linkTokens);
+            }
         }
 
     })

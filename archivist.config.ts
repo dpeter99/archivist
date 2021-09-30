@@ -9,7 +9,7 @@ import {Pipeline} from "./src/Pipeline.ts";
 import {WebpackModule} from "./src/Modules/WebpackModule.ts";
 import {BikeshedMetadata} from "./src/Modules/Metadata/BikeshedMetadata.ts";
 import {Config} from "./src/Archivist.ts";
-import {StaticFilesModule} from "./src/Modules/StaticFilesModule.ts";
+import {StaticTemplateFilesModule} from "./src/Modules/StaticTemplateFilesModule.ts";
 import {FrontMatterMetadata} from "./src/Modules/Metadata/FrontMatterMetadata.ts";
 import {FunctionModule} from "./src/Modules/FunctionModule.ts";
 */
@@ -23,7 +23,7 @@ export let config: archivist.Config = {
     preProcessors: [
         archivist.Pipeline.fromModules({name:"build_template"},
             new archivist.WebpackModule(),
-            new archivist.StaticFilesModule(),
+            new archivist.StaticTemplateFilesModule(),
             new archivist.WebpackModule("./examples/blog/template/"),
 
         )
@@ -52,7 +52,7 @@ export let config: archivist.Config = {
             new archivist.MarkdownRender(),
             new archivist.TemplateModule(),
             new archivist.OutputModule("./out/"),
-            new archivist.StaticFilesModule()
+            new archivist.StaticTemplateFilesModule()
         )
     ]
 }

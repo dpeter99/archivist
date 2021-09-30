@@ -17,6 +17,7 @@ import {Pipeline} from "../Pipeline.ts";
 class Options {
     func?: ((md:typeof MarkdownIt) => typeof MarkdownIt);
     shiftHeadersAmount: number = 1;
+    addHeadingNumbers:boolean = true;
 }
 
 export class MarkdownRender extends SimpleModule{
@@ -45,7 +46,10 @@ export class MarkdownRender extends SimpleModule{
             allowedAttributes: []  // empty array = all attributes are allowed
         })
         this.markdownIt.use(MarkdownHeadingNumbers,
-            {shiftHeadings: this._props.shiftHeadersAmount}
+            {
+                shiftHeadings: this._props.shiftHeadersAmount,
+                addNumbers: this._props.addHeadingNumbers
+            }
         );
         this.markdownIt.use(markdownItAnchors, {
             permalink: renderPermalink
