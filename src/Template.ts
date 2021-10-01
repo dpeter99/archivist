@@ -4,6 +4,7 @@ export class Template{
     path: string;
     matchers: string[];
     compiledPath: string;
+    ignore?: string[];
 
     constructor(path:string) {
 
@@ -12,6 +13,7 @@ export class Template{
 
         this.matchers = data.matchers;
         this.compiledPath = this.path + data.compiledPath;
+        this.ignore= data.ignore;
     }
 
 }
@@ -19,6 +21,7 @@ export class Template{
 class TemplateData {
     compiledPath!:string;
     matchers!:string[];
+    ignore?:string[];
 }
 
 /**

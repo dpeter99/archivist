@@ -2,23 +2,48 @@ import {SimpleModule} from "../Module/SimpleModule.ts";
 import {Content} from "../Content.ts";
 
 import { DOMParser, Element } from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";
+import * as fs from "https://deno.land/std@0.109.0/fs/mod.ts"
+import * as path from "https://deno.land/std@0.109.0/path/mod.ts";
 
 export class ExtractResources extends SimpleModule{
 
-    async processDoc(doc: Content): Promise<any> {
+    async process(docs: Content[]): Promise<any> {
 
-        const htmlDom = new DOMParser().parseFromString(doc.content, "text/html")!;
+        let filewait = [];
 
-        let files: string[]= [];
+        for (const doc of docs) {
+            await super.processDoc(doc);
 
-        htmlDom.querySelectorAll("img")!.forEach((e)=>{
-            //files.push(e.src)
-            if(e instanceof Element){
-                files.push(e.getAttribute("src"));
+            const htmlDom = new DOMParser().parseFromString(doc.content, "text/html")!;
+
+            let files: string[] = [];
+
+            htmlDom.querySelectorAll("img")!.forEach((e) => {
+                if (e instanceof Element) {
+                    const a: Element = <Element>e;
+                    files.push(a.getAttribute("src")!);
+                }
+                //console.log(e);
+            });
+
+            for (const file of files) {
+                const p = path.dirname(doc.path) + "/" + file;
+
+                if (fs.existsSync(p)) {
+                    const targetPath = this.getFileOutputLoc(p);
+
+                    fs.ensureDirSync(path.dirname(targetPath));
+
+                    let prom = fs.copy(p, targetPath).then(value => {
+
+                    });
+
+                    filewait.push(prom);
+                }
             }
-            console.log(e);
-        });
+        }
 
-        return super.processDoc(doc);
+        await Promise.all(filewait);
+
     }
 }

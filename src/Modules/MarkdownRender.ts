@@ -16,8 +16,8 @@ import {Pipeline} from "../Pipeline.ts";
 
 class Options {
     func?: ((md:typeof MarkdownIt) => typeof MarkdownIt);
-    shiftHeadersAmount: number = 1;
-    addHeadingNumbers:boolean = true;
+    shiftHeadersAmount?: number = 1;
+    addHeadingNumbers?:boolean = true;
 }
 
 export class MarkdownRender extends SimpleModule{

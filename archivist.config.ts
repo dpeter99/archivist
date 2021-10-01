@@ -19,7 +19,7 @@ import * as archivist from "./src/index.ts";
 export let config: archivist.Config = {
     detailedOutput: false,
     template: "./examples/specs/template/",
-    outFolder: "./out",
+    outputPath: "./out",
     preProcessors: [
         archivist.Pipeline.fromModules({name:"build_template"},
             new archivist.WebpackModule(),

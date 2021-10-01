@@ -1,40 +1,48 @@
 import {SimpleModule} from "../Module/SimpleModule.ts";
 import {Content} from "../Content.ts";
 
-import { relative, extname, dirname } from "https://deno.land/std/path/mod.ts";
+import * as Path from "https://deno.land/std/path/mod.ts";
 
 import {ensureDir} from "https://deno.land/std/fs/mod.ts";
 import {Archivist, archivistInst} from "../Archivist.ts";
 import {Pipeline} from "../Pipeline.ts";
 import {IModule} from "../Module/IModule.ts";
 
+/**
+ * The output module is responsible for writing the files to the output folder.
+ * The path is determined by the following:
+ * A. The path that is given to the constructor.
+ * B. The following pattern: {out folder of archivist}/{out folder of the pipeline}
+ */
 export class OutputModule extends SimpleModule{
 
-    path:string
+    conf_path?:string
+
+    outputPath!:string
 
     constructor(path?:string) {
         super();
-        this.path = path ?? archivistInst.outFolder!;
+        this.conf_path = path;
     }
 
     setup(pipeline: Pipeline, parent?: IModule): Promise<any> {
-        return super.setup(pipeline, parent);
+        super.setup(pipeline, parent);
 
-        if(this.path == undefined){
+        this.outputPath = this.conf_path ?? this.OutputPath;
+
+        if(this.outputPath == undefined){
             this.pipeline.reportError(this, "There was no output folder definied");
         }
+
+        return Promise.resolve();
     }
 
     async processDoc(doc:Content): Promise<any> {
 
-        let relPath = relative(Deno.cwd(),doc.path);
-        relPath = relPath.replace(extname(relPath),".html");
+        let path = this.getFileOutputLoc(doc.path);
+        path = path.replace(Path.extname(path),".html");
 
-        const path = this.path + relPath
-
-        //console.log(path + " dir: " + dirname(path))
-
-        await ensureDir(dirname(path));
+        await ensureDir(Path.dirname(path));
 
         await Deno.writeTextFile(path, doc.content);
 

@@ -2,6 +2,8 @@ import {IModule} from "./Module/IModule.ts";
 import {Content} from "./Content.ts";
 
 import * as ink from 'https://deno.land/x/ink/mod.ts'
+import * as path from "https://deno.land/std@0.109.0/path/mod.ts";
+import {archivistInst} from "./Archivist.ts";
 
 
 export class Pipeline{
@@ -9,11 +11,20 @@ export class Pipeline{
     modules: IModule[] = [];
     name:string;
 
-    outputPath?: string;
+    /**
+     * The relative output root folder path for this pipeline
+     */
+    private outputPath?: string;
 
-    constructor(name:string, outputPath?:string) {
-        this.name = name;
-        this.outputPath = outputPath;
+    /**
+     * The relative content root path for this pipeline
+     */
+    private contentRoot: string;
+
+    constructor(opt:Options) {
+        this.name = opt.name;
+        this.outputPath = opt.outputPath;
+        this.contentRoot = (opt.contentRoot ?? "");
     }
 
     addModule(m:IModule): Pipeline{
@@ -27,7 +38,7 @@ export class Pipeline{
     }
 
     static fromModules(opt:Options,...m:IModule[]):Pipeline{
-        return new Pipeline(opt.name, opt.outputPath).addModules(...m);
+        return new Pipeline(opt).addModules(...m);
     }
 
 
@@ -63,6 +74,14 @@ export class Pipeline{
     }
 
 
+    public get OutputPath(){
+        return path.normalize((archivistInst.outputPath ?? "") + "/" + (this.outputPath ?? ""));
+    }
+
+    public get ContentRoot(){
+        return Deno.cwd() + this.contentRoot;
+    }
+
     errors: Array<string> = new Array<string>();
 
     reportError(module:IModule ,text:string){
@@ -86,11 +105,10 @@ export class Pipeline{
 }
 
 class Options {
-    constructor(
-        public name:string,
-        public outputPath?:string
-    ) {
-    }
+    public name!:string;
+    public outputPath?:string;
+    public contentRoot?: string
+
 }
 
 export class Result {

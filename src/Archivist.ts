@@ -13,15 +13,21 @@ export class Archivist {
     preProcessors: Pipeline[] = [];
     pipelines: Pipeline[] = [];
 
-    outFolder?: string
+    /**
+     * The relative output path
+     */
+    outputPath?: string
 
+    /**
+     * Option to get detailed output info useful for debugging
+     */
     detailedOutput: boolean;
 
     constructor(conf: Config) {
         this.pipelines = conf.pipelines ?? [];
         this.preProcessors = conf.preProcessors ?? [];
 
-        this.outFolder = conf.outFolder;
+        this.outputPath = conf.outputPath;
         if(conf.template){
             try {
                 this.template = new Template(conf.template);
@@ -29,9 +35,7 @@ export class Archivist {
             catch (e) {
                 ink.terminal.log(`<bg-red>Error:${e}</bg-red>`)
             }
-
         }
-
 
         this.detailedOutput = conf.detailedOutput;
 
@@ -116,7 +120,7 @@ export class Config {
     pipelines?: Pipeline[];
     preProcessors?: Pipeline[];
 
-    outFolder?: string;
+    outputPath?: string;
 
     detailedOutput: boolean = false;
 }

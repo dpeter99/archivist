@@ -20,7 +20,7 @@ export class StaticTemplateFilesModule extends SimpleModule {
     path?: string;
     template!: Template;
 
-    outputPath!: string;
+    //outputPath!: string;
 
     constructor(templ?: string) {
         super();
@@ -37,16 +37,33 @@ export class StaticTemplateFilesModule extends SimpleModule {
             this.pipeline.reportError(this, e);
         }
 
-        this.outputPath = "./out" + (this.pipeline.outputPath ?? "")
+        //this.outputPath = "./out" + (this.pipeline.outputPath ?? "")
 
         return Promise.resolve();
     }
 
     async process() {
-        fs.ensureDirSync(this.outputPath);
+        fs.ensureDirSync(this.OutputPath);
 
         let files: WalkEntry[] = await toArray(fs.expandGlob(this.template.compiledPath + "/**/*"));
-        files = files.filter(file => path.extname(file.path) != ".ejs");
+
+        files = files.filter(file =>{
+            let include = !this.template.ignore?.some(i=>{
+                const reg = path.globToRegExp(i)
+
+                let m = path.relative(this.template.compiledPath, file.path).match(reg);
+                let ignore = m != null;
+
+                return ignore;
+            });
+
+            include = include && file.isFile;
+
+            //console.log( (include ? "✅" : "❌") + "File: " + file.path);
+
+            return include;
+        })
+
 
         let maxFileNameLength: number = files.map(value => path.basename(value.path).length).reduce((p, c) => Math.max(p,c));
 
@@ -63,9 +80,8 @@ export class StaticTemplateFilesModule extends SimpleModule {
 
         for (const file of files) {
 
-            if (path.extname(file.path) != ".ejs") {
                 let sub = path.relative(this.template.compiledPath, file.path);
-                let to = path.join(this.outputPath, sub);
+                let to = path.join(this.OutputPath, sub);
                 await fs.copy(file.path, to, {overwrite: true});
                 completed1++;
                 await bars.render([{
@@ -75,11 +91,8 @@ export class StaticTemplateFilesModule extends SimpleModule {
                     text: path.basename(file.path).padEnd(maxFileNameLength," "),
                 }])
             }
-            else {
-                console.log(`Hmm: ${file.path}\n`)
-            }
-        }
-        console.log("\n");
+
+
     }
 
 }
