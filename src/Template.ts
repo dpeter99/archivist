@@ -1,10 +1,12 @@
 import * as fs from "https://deno.land/std@0.106.0/fs/mod.ts";
+import * as Path from "https://deno.land/std@0.109.0/path/mod.ts";
 
 export class Template{
     path: string;
     matchers: string[];
     compiledPath: string;
     ignore?: string[];
+    rootTemplate?:string;
 
     constructor(path:string) {
 
@@ -14,6 +16,7 @@ export class Template{
         this.matchers = data.matchers;
         this.compiledPath = this.path + data.compiledPath;
         this.ignore= data.ignore;
+        this.rootTemplate = data.rootTemplate ? Path.join(this.compiledPath , data.rootTemplate) : "";
     }
 
 }
@@ -22,6 +25,7 @@ class TemplateData {
     compiledPath!:string;
     matchers!:string[];
     ignore?:string[];
+    rootTemplate?:string;
 }
 
 /**

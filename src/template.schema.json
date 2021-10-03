@@ -58,6 +58,36 @@
           }
         ]
       }
+    },
+    "ignore": {
+      "$id": "#/properties/ignore",
+      "type": "array",
+      "title": "The ignore schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          "layouts/**/*",
+          "*.ejs"
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/matchers/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/matchers/items/anyOf/0",
+            "type": "string",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "layouts/**/*",
+              "*.ejs"
+            ]
+          }
+        ]
+      }
     }
   },
   "additionalProperties": true

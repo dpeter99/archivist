@@ -21,6 +21,8 @@ export class Pipeline{
      */
     private contentRoot: string;
 
+    public files: Content[] =[];
+
     constructor(opt:Options) {
         this.name = opt.name;
         this.outputPath = opt.outputPath;
@@ -60,17 +62,18 @@ export class Pipeline{
             return new Result(true);
         }
 
-        let content: Content[] = [];
+        //let content: Content[] = [];
 
         for (const module of this.modules) {
-            await module.process(content);
+            await module.process(this.files);
+
         }
 
         if(this.hasErrors()){
             return new Result(true);
         }
 
-        return new Result(false, content);
+        return new Result(false, this.files);
     }
 
 

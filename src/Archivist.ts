@@ -2,7 +2,8 @@ import {Pipeline, Result} from "./Pipeline.ts";
 import {IModule} from "./Module/IModule.ts";
 import {Content} from "./Content.ts";
 
-import * as ink from 'https://deno.land/x/ink/mod.ts'
+import * as ink from 'https://deno.land/x/ink/mod.ts';
+import * as path from "https://deno.land/std@0.109.0/path/mod.ts";
 import {Template} from "./Template.ts";
 
 export let archivistInst: Archivist;
@@ -105,7 +106,7 @@ export class Archivist {
                         name: d.name,
                         Title: d.metadata.Title,
                         //Editor: d.metadata.Authors.map((v)=>{return v.Name}),
-                        Template: d.metadata.Template
+                        Template: path.basename(d.metadata.Template ?? "")
                     })));
                 }
             } else {

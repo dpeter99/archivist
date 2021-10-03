@@ -2,7 +2,7 @@ import * as fs from "https://deno.land/std/fs/mod.ts";
 import * as path from "https://deno.land/std/path/mod.ts";
 import * as ink from 'https://deno.land/x/ink/mod.ts'
 
-import { MultiProgressBar } from "https://deno.land/x/progress@v1.2.4/mod.ts";
+import ProgressBar from "https://deno.land/x/progress@v1.2.4/mod.ts";
 
 
 import {SimpleModule} from "../Module/SimpleModule.ts";
@@ -67,6 +67,7 @@ export class StaticTemplateFilesModule extends SimpleModule {
 
         let maxFileNameLength: number = files.map(value => path.basename(value.path).length).reduce((p, c) => Math.max(p,c));
 
+/*
         const bars = new MultiProgressBar({
             title:"Copy files",
             // clear: true,
@@ -74,6 +75,12 @@ export class StaticTemplateFilesModule extends SimpleModule {
             incomplete: '-',
             display: '[:bar] :percent :time :completed/:total :text',
             width: 150,
+        });
+*/
+
+        const progress = new ProgressBar({
+            title:"Copy files:",
+            total:files.length
         });
 
         let completed1 = 0;
@@ -84,12 +91,7 @@ export class StaticTemplateFilesModule extends SimpleModule {
                 let to = path.join(this.OutputPath, sub);
                 await fs.copy(file.path, to, {overwrite: true});
                 completed1++;
-                await bars.render([{
-                    completed: completed1,
-                    total:files.length,
-
-                    text: path.basename(file.path).padEnd(maxFileNameLength," "),
-                }])
+                await progress.render(completed1);
             }
 
 

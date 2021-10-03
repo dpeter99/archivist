@@ -13,6 +13,7 @@ import {compile,render, Template} from "https://deno.land/x/deno_ejs/mod.ts";
 import {interpolate} from "../utils/string-interpolator.ts";
 import {getCompiledTemplateFolder} from "../utils/project-json-helpers.ts";
 import {getTemplate} from "../utils/getTemplate.ts";
+import {ArticleHelper} from "../utils/ArticleHelper.ts";
 
 
 function compile_help(text:string, conf:any):Template{
@@ -33,6 +34,8 @@ export class TemplateModule extends SimpleModule{
     template!: ArcTemplate;
 
     templateFiles: Map<string,CompiledTemplate> = new Map();
+
+    rootTemplate?: CompiledTemplate;
 
     /**
      *
@@ -59,6 +62,10 @@ export class TemplateModule extends SimpleModule{
             this.pipeline.reportError(this, e);
         }
 
+        if(this.template.rootTemplate != null){
+           this.rootTemplate = CompiledTemplate.from(this.template.rootTemplate);
+        }
+
     }
 
 
@@ -70,20 +77,31 @@ export class TemplateModule extends SimpleModule{
         const templat = this.getTemplateForDoc(doc);
 
         if(templat == undefined){
-            this.pipeline.reportError(this, `could not find template for file: ${doc.name}`);
+            this.pipeline.reportError(this, `could not find template for file: ${doc.path}`);
             return Promise.resolve();
         }
 
         let data = {
             content: docContent,
             meta: Object.fromEntries(doc.metadata.data),
+
             StatusCodes: StatusCodes,
+            ArticleHelper: new ArticleHelper(doc.path),
 
             pipeline: this.pipeline
         };
 
-        doc.content = templat.compiled(data)
+        if(this.rootTemplate != null){
+            // @ts-ignore
+            data["template"] = templat.file;
+
+            doc.content = this.rootTemplate.compiled(data);
+        }
+        else {
+            doc.content = templat.compiled(data)
+        }
         doc.metadata.Template = templat.file;
+
         return Promise.resolve();
     }
 
@@ -135,3 +153,6 @@ class CompiledTemplate {
     }
 }
 
+function subFolderFiles(f:string){
+
+}
