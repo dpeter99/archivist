@@ -8,6 +8,10 @@ export class Template{
     ignore?: string[];
     rootTemplate?:string;
 
+    metadata:{
+        mustBeArray:string[]
+    }
+
     constructor(path:string) {
 
         this.path = Deno.cwd() + path;
@@ -17,6 +21,10 @@ export class Template{
         this.compiledPath = this.path + data.compiledPath;
         this.ignore= data.ignore;
         this.rootTemplate = data.rootTemplate ? Path.join(this.compiledPath , data.rootTemplate) : "";
+
+        this.metadata = {
+            mustBeArray : (data.metadata?.mustBeArray ?? [])
+        }
     }
 
 }
@@ -26,6 +34,9 @@ class TemplateData {
     matchers!:string[];
     ignore?:string[];
     rootTemplate?:string;
+    metadata?:{
+        mustBeArray?:string[]
+    };
 }
 
 /**
