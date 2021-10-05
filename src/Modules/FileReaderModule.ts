@@ -5,7 +5,11 @@ import { expandGlob, WalkEntry } from "https://deno.land/std/fs/mod.ts";
 import {SimpleModule} from "../Module/SimpleModule.ts";
 import {Pipeline} from "../Pipeline.ts";
 
-
+/**
+ * This is the input of most pipelines.
+ * It reads a set of files defined by the pattern.
+ * @example ``"./** /*.md"``
+ */
 export class FileReaderModule extends SimpleModule{
 
     pattern: string;

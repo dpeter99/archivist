@@ -5,6 +5,11 @@ import { DOMParser, Element } from "https://deno.land/x/deno_dom/deno-dom-wasm.t
 import * as fs from "https://deno.land/std@0.109.0/fs/mod.ts"
 import * as path from "https://deno.land/std@0.109.0/path/mod.ts";
 
+/**
+ * This Module extracts resources that are referenced in the doc and
+ * copies them to the output folder into the correct path
+ * Currently this only scans img tags!
+ */
 export class ExtractResources extends SimpleModule{
 
     async process(docs: Content[]): Promise<any> {
