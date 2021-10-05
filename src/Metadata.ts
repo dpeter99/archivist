@@ -30,6 +30,18 @@ export class Meta {
         const r = this.data.get(key);
         return this.data.get(key) as string;
     }
+
+    forceArray(key: string) {
+        key = key.toLowerCase();
+        let a: any | undefined = this.data.get(key);
+        if (a !== undefined) {
+            if (!Array.isArray(a)) {
+                this.data.set(key, [a])
+            }
+        } else {
+            this.data.set(key, []);
+        }
+    }
 }
 
 export class Metadata extends Meta{

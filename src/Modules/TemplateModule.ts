@@ -69,6 +69,11 @@ export class TemplateModule extends SimpleModule{
     }
 
 
+    async process(docs: Array<Content>): Promise<any> {
+        docs.forEach(d=>this.prepareData(d));
+
+        return super.process(docs);
+    }
 
     processDoc(doc: Content): Promise<any> {
 
@@ -81,12 +86,14 @@ export class TemplateModule extends SimpleModule{
             return Promise.resolve();
         }
 
+
+
         let data = {
             content: docContent,
-            meta: Object.fromEntries(doc.metadata.data),
+            meta: doc.meta,
 
             StatusCodes: StatusCodes,
-            ArticleHelper: new ArticleHelper(doc.path),
+            ArticleHelper: new ArticleHelper(doc.path, this),
 
             pipeline: this.pipeline
         };
@@ -133,6 +140,12 @@ export class TemplateModule extends SimpleModule{
             return CompiledTemplate.from(p);
         }
 
+    }
+
+    prepareData(doc:Content){
+        for (const must of this.template.metadata.mustBeArray) {
+            doc.metadata.forceArray(must);
+        }
     }
 }
 

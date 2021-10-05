@@ -4,6 +4,7 @@ import * as fs from "https://deno.land/std@0.106.0/fs/mod.ts";
 /**
  * extracts the data from the template.json
  * @param path
+ * @deprecated should not be used
  */
 export function getCompiledTemplateFolder(path:string):string{
     let packagePath = path+"/template.json";

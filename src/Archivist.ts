@@ -106,7 +106,8 @@ export class Archivist {
                         name: d.name,
                         Title: d.metadata.Title,
                         //Editor: d.metadata.Authors.map((v)=>{return v.Name}),
-                        Template: path.basename(d.metadata.Template ?? "")
+                        Template: path.basename(d.metadata.Template ?? ""),
+                        State: JSON.stringify( d.meta.state)
                     })));
                 }
             } else {
