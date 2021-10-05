@@ -5,6 +5,10 @@ import {DOMParser, Element, Node, Document} from "https://deno.land/x/deno_dom/d
 import {getAttribName} from "./ExtractMetadata.ts";
 import {Author} from "../../Metadata.ts";
 
+/**
+ * This plugin is for bikeshed compatibility
+ * It provides extraction for the bikeshed metadata xml markup ``<pre class='metadata'>``
+ */
 export class BikeshedMetadata extends SimpleModule {
 
 

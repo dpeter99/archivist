@@ -4,6 +4,14 @@ import {Content} from "../../Content.ts";
 
 import {CompositeModule} from "../../Module/CompositeModule.ts";
 
+
+/**
+ * This plugin is for extracting metadata from the documents
+ * It uses sub modules to extract different types of metadata.
+ * Possible sub modules are:
+ *  - @see FrontMatterMetadata
+ *  - @see BikeshedMetadata
+ */
 export class ExtractMetadata extends CompositeModule{
 
     async process(docs: Content[]): Promise<any> {

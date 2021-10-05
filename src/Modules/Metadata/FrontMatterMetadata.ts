@@ -6,6 +6,20 @@ import {Author} from "../../Metadata.ts";
 
 import { parse } from "https://deno.land/x/frontmatter/mod.ts";
 
+/**
+ * This plugin extracts the front matter style metadata from the documents.
+ * It gets the Yaml data between a pair of ``---``
+ *
+ * @example The following will give back a title and an array of 2 authors
+ * ```
+ * ---
+ * title: "test"
+ * authors:
+ *  - "author 1"
+ *  - "author 2"
+ * ---
+ * ```
+ */
 export class FrontMatterMetadata extends SimpleModule{
 
 
