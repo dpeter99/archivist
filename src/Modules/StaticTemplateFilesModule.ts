@@ -14,7 +14,11 @@ import {getTemplate} from "../utils/getTemplate.ts";
 import {Template} from "../Template.ts";
 import { WalkEntry } from "https://deno.land/std/fs/mod.ts";
 
-
+/**
+ * This module is responsible for copying the static files of your template
+ * It does this by copying every file in your templates "compiledPath" that
+ * isn't matched by the "ignore" list in your template.
+ */
 export class StaticTemplateFilesModule extends SimpleModule {
 
     path?: string;
