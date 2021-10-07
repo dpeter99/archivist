@@ -3,7 +3,6 @@ import {Content} from "../Content.ts";
 import {SimpleModule} from "../Module/SimpleModule.ts";
 import { Pipeline } from "../Pipeline.ts";
 import {archivistInst} from "../Archivist.ts";
-import {getCompiledTemplateFolder} from "../utils/project-json-helpers.ts";
 import {getTemplate} from "../utils/getTemplate.ts";
 import {Template} from "../Template.ts";
 

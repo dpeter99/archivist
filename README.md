@@ -13,11 +13,11 @@ And start by importing the archivist package:
 This can be a direct link or a link to a specific version.
 Be aware that if you don't include the version Deno will cache it and will not update it automatically.
 ```ts
-import * as archivist from "https://github.com/dpeter99/archivist/raw/main/src/index.ts";
+import * as archivist from "https://raw.githubusercontent.com/dpeter99/archivist/main/src/index.ts";
 ```
-
+The tagged release (0.1.0-alpha01):
 ```ts
-import * as archivist from "https://github.com/dpeter99/archivist/blob/0.1.0-alpha01/src/index.ts";
+import * as archivist from "https://raw.githubusercontent.com/dpeter99/archivist/0.1.0-alpha01/src/index.ts";
 ```
 ### 2. The config object
 Next start writing the config for archivist:

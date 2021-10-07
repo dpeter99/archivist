@@ -14,7 +14,7 @@ export class Template{
 
     constructor(path:string) {
 
-        this.path = Deno.cwd() + path;
+        this.path = Path.join( Deno.cwd() , path);
         const data = getTemplateData(path);
 
         this.matchers = data.matchers;
