@@ -158,12 +158,19 @@ class CompiledTemplate {
     ) {}
 
     static from(path: string) : CompiledTemplate {
+        if(fs.existsSync(path)) {
+            let text = Deno.readTextFileSync(path);
 
-        let text = Deno.readTextFileSync(path);
+            let compiled = compile_help(text, {filename:path} );
 
-        let compiled = compile_help(text, {filename:path} );
+            return new CompiledTemplate(path,text,compiled);
+        }
+        else {
+            console.log("Couldn't find file: " + path);
+            throw "Couldn't find file: " + path;
+        }
 
-        return new CompiledTemplate(path,text,compiled);
+
     }
 }
 

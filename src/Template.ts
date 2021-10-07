@@ -18,7 +18,7 @@ export class Template{
         const data = getTemplateData(path);
 
         this.matchers = data.matchers;
-        this.compiledPath = Path.join( this.path + data.compiledPath);
+        this.compiledPath = Path.join( this.path , data.compiledPath);
         this.ignore= data.ignore;
         this.rootTemplate = data.rootTemplate ? Path.join(this.compiledPath , data.rootTemplate) : "";
 
