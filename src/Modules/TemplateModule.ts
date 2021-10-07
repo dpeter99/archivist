@@ -158,6 +158,7 @@ class CompiledTemplate {
     ) {}
 
     static from(path: string) : CompiledTemplate {
+
         let text = Deno.readTextFileSync(path);
 
         let compiled = compile_help(text, {filename:path} );
