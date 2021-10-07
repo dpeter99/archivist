@@ -15,6 +15,10 @@ Be aware that if you don't include the version Deno will cache it and will not u
 ```ts
 import * as archivist from "https://github.com/dpeter99/archivist/raw/main/src/index.ts";
 ```
+
+```ts
+import * as archivist from "https://github.com/dpeter99/archivist/blob/0.1.0-alpha01/src/index.ts";
+```
 ### 2. The config object
 Next start writing the config for archivist:
 ```ts
