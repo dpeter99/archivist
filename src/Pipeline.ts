@@ -82,7 +82,7 @@ export class Pipeline{
     }
 
     public get ContentRoot(){
-        return Deno.cwd() + this.contentRoot;
+        return path.join( Deno.cwd() , this.contentRoot);
     }
 
     errors: Array<string> = new Array<string>();
