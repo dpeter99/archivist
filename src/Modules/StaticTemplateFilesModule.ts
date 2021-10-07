@@ -12,7 +12,7 @@ import {IModule} from "../Module/IModule.ts";
 import {archivistInst} from "../Archivist.ts";
 import {getTemplate} from "../utils/getTemplate.ts";
 import {Template} from "../Template.ts";
-import { WalkEntry } from "https://deno.land/std/fs/mod.ts";
+import {WalkEntry} from "https://deno.land/std/fs/mod.ts";
 
 /**
  * This module is responsible for copying the static files of your template
@@ -51,8 +51,8 @@ export class StaticTemplateFilesModule extends SimpleModule {
 
         let files: WalkEntry[] = await toArray(fs.expandGlob(this.template.compiledPath + "/**/*"));
 
-        files = files.filter(file =>{
-            let include = !this.template.ignore?.some(i=>{
+        files = files.filter(file => {
+            let include = !this.template.ignore?.some(i => {
                 const reg = path.globToRegExp(i)
 
                 let m = path.relative(this.template.compiledPath, file.path).match(reg);
@@ -63,48 +63,34 @@ export class StaticTemplateFilesModule extends SimpleModule {
 
             include = include && file.isFile;
 
-            //console.log( (include ? "✅" : "❌") + "File: " + file.path);
-
             return include;
         })
 
 
-        let maxFileNameLength: number = files.map(value => path.basename(value.path).length).reduce((p, c) => Math.max(p,c));
-
-/*
-        const bars = new MultiProgressBar({
-            title:"Copy files",
-            // clear: true,
-            complete: '=',
-            incomplete: '-',
-            display: '[:bar] :percent :time :completed/:total :text',
-            width: 150,
-        });
-*/
+        //let maxFileNameLength: number = files.map(value => path.basename(value.path).length).reduce((p, c) => Math.max(p, c));
 
         const progress = new ProgressBar({
-            title:"Copy files:",
-            total:files.length
+            title: "Copy files:",
+            total: files.length
         });
 
         let completed1 = 0;
 
         for (const file of files) {
 
-                let sub = path.relative(this.template.compiledPath, file.path);
-                let to = path.join(this.OutputPath, sub);
-                await fs.copy(file.path, to, {overwrite: true});
-                completed1++;
-                await progress.render(completed1);
-            }
+            let sub = path.relative(this.template.compiledPath, file.path);
+            let to = path.join(this.OutputPath, sub);
+            await fs.copy(file.path, to, {overwrite: true});
+            completed1++;
+            await progress.render(completed1);
 
-
+        }
     }
 
 }
 
-async function toArray<T>(asyncIterator:AsyncIterableIterator<T>):Promise<T[]>{
-    const arr :T[] = [];
+async function toArray<T>(asyncIterator: AsyncIterableIterator<T>): Promise<T[]> {
+    const arr: T[] = [];
     for await(const i of asyncIterator) arr.push(i);
     return arr;
 }
