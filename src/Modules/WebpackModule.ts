@@ -38,8 +38,6 @@ export class WebpackModule extends SimpleModule {
 
         const p = Deno.run({
             cmd: [
-                "cmd",
-                "/c",
                 "npm",
                 "run",
                 "build"
