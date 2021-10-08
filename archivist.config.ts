@@ -1,20 +1,8 @@
-/*
-import {FileReaderModule} from "./src/Modules/FileReaderModule.ts";
-import {Content} from "./src/Content.ts";
-import {MarkdownRender} from "./src/Modules/MarkdownRender.ts";
-import {OutputModule} from "./src/Modules/OutputModule.ts";
-import {ExtractMetadata} from "./src/Modules/Metadata/ExtractMetadata.ts";
-import {TemplateModule} from "./src/Modules/TemplateModule.ts";
-import {Pipeline} from "./src/Pipeline.ts";
-import {WebpackModule} from "./src/Modules/WebpackModule.ts";
-import {BikeshedMetadata} from "./src/Modules/Metadata/BikeshedMetadata.ts";
-import {Config} from "./src/Archivist.ts";
-import {StaticTemplateFilesModule} from "./src/Modules/StaticTemplateFilesModule.ts";
-import {FrontMatterMetadata} from "./src/Modules/Metadata/FrontMatterMetadata.ts";
-import {FunctionModule} from "./src/Modules/FunctionModule.ts";
-*/
 
 import * as archivist from "./src/index.ts";
+
+
+
 
 export let config: archivist.Config = {
     detailedOutput: false,

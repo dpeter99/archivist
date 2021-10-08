@@ -24,6 +24,8 @@ export class Archivist {
      */
     detailedOutput: boolean;
 
+    environment: "development" | "production";
+
     constructor(conf: Config) {
         this.pipelines = conf.pipelines ?? [];
         this.preProcessors = conf.preProcessors ?? [];
@@ -39,6 +41,9 @@ export class Archivist {
         }
 
         this.detailedOutput = conf.detailedOutput;
+
+        this.environment = conf.env;
+
 
         archivistInst = this;
     }
@@ -125,4 +130,6 @@ export class Config {
     outputPath?: string;
 
     detailedOutput: boolean = false;
+
+    env: "development" | "production"  = "development";
 }

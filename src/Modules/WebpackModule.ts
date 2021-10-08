@@ -42,7 +42,13 @@ export class WebpackModule extends SimpleModule {
 
         console.group("Starting build of the template at: " + this.template.path)
 
-        let cmd = ["npm" , "run", "build"];
+        let cmd = ["npm" , "run"];
+        if(archivistInst.environment == "production"){
+            cmd = [...cmd,"build:prod"];
+        }
+        else {
+            cmd = [...cmd,"build"];
+        }
         if(os.platform() == "windows")
             cmd = ["cmd", "/c", ...cmd];
 
