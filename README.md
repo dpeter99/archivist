@@ -1,7 +1,7 @@
 # Archivist
-|Version | Status |
-|---|---|
-|0.1.0-alpha01 | active |
+|Version       | Status |
+|--------------|--------|
+|0.1.0-alpha02 | active |
 
 Archivist is an un-opinionated static site generator, aimed at general sites and specifications.
 It uses the Deno runtime to avoid complex and long installation times.

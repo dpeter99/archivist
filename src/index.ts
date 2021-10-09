@@ -9,7 +9,7 @@ export function run(config:any) {
 }
 
 
-export let version = "0.1.0-alpha01";
+export let version = "0.1.0-alpha02";
 
 export * from "./Archivist.ts";
 export * from "./Pipeline.ts";
