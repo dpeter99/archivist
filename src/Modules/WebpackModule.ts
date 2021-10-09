@@ -6,6 +6,12 @@ import {archivistInst} from "../Archivist.ts";
 import {getTemplate} from "../utils/getTemplate.ts";
 import {Template} from "../Template.ts";
 
+import { delay } from "https://deno.land/std/async/mod.ts";
+import { exec, OutputMode } from "https://deno.land/x/exec/mod.ts";
+import os from "https://deno.land/x/dos@v0.11.0/mod.ts";
+
+
+
 
 export class WebpackModule extends SimpleModule {
 
@@ -36,12 +42,18 @@ export class WebpackModule extends SimpleModule {
 
         console.group("Starting build of the template at: " + this.template.path)
 
+        let cmd = ["npm" , "run"];
+        if(archivistInst.environment == "production"){
+            cmd = [...cmd,"build:prod"];
+        }
+        else {
+            cmd = [...cmd,"build"];
+        }
+        if(os.platform() == "windows")
+            cmd = ["cmd", "/c", ...cmd];
+
         const p = Deno.run({
-            cmd: [
-                "npm",
-                "run",
-                "build"
-            ],
+            cmd: cmd,
             cwd: this.template.path,
             stdout: "piped",
             stderr: "piped",
@@ -54,12 +66,22 @@ export class WebpackModule extends SimpleModule {
         const rawOutput = await p.output();
         const rawError = await p.stderrOutput();
 
+        /*
+        (async p=>{
+            delay(1000);
+            p.kill("Took too long");
+            this.pipeline.reportError(this,"Webpack took too long");
+        })(p);
+        */
+
+
         if (code === 0) {
             await Deno.stdout.write(rawOutput);
         } else {
             const errorString = new TextDecoder().decode(rawError);
             console.log(errorString);
         }
+
 
         console.groupEnd();
 

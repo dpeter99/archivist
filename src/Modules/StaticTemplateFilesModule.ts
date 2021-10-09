@@ -80,7 +80,13 @@ export class StaticTemplateFilesModule extends SimpleModule {
 
             let sub = path.relative(this.template.compiledPath, file.path);
             let to = path.join(this.OutputPath, sub);
-            await fs.copy(file.path, to, {overwrite: true});
+            try {
+                await fs.copy(file.path, to, {overwrite: true});
+            }
+            catch (e) {
+                this.pipeline.reportError(this, "Copping: " + file.path + " to: " + to)
+                console.error(e);
+            }
             completed1++;
             await progress.render(completed1);
 

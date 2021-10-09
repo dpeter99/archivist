@@ -29,7 +29,7 @@ export class CopyModule extends SimpleModule{
     async process(docs: Array<Content>): Promise<any> {
         super.process(docs);
 
-        const targ = this.target ?? this.getFileOutputLoc(Deno.cwd() + this.source);
+        const targ = this.target ?? this.getFileOutputLoc(path.join(Deno.cwd() , this.source));
 
         fs.copySync(this.source,targ);
 
