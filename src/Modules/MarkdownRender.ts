@@ -5,12 +5,16 @@ import {SimpleModule} from "../Module/SimpleModule.ts";
 
 import MarkdownIt from "https://esm.sh/markdown-it";
 import markdownItMultimdTable from "https://esm.sh/markdown-it-multimd-table";
-//import shiftHeadings from "https://esm.sh/markdown-it-shift-headings";
 import markdownItAttrs from "https://esm.sh/markdown-it-attrs";
 import markdownItAnchors from "https://cdn.skypack.dev/markdown-it-anchor";
 import markdownItIB from "https://deno.land/x/markdown_it_ib@1.0.0/mod.js";
+import markdownItCheckbox from "https://cdn.skypack.dev/@gerhobbelt/markdown-it-checkbox"
+import markdownItContainer from 'https://cdn.skypack.dev/markdown-it-container';
+
 import {MarkdownHeadingNumbers} from "../utils/markdown/MarkdownHeaderNumber.ts";
 import {renderPermalink} from "../utils/markdown/MarkdownHeaderLink.ts";
+
+
 
 import {Pipeline} from "../Pipeline.ts";
 
@@ -61,7 +65,8 @@ export class MarkdownRender extends SimpleModule{
         }
         else {
             this.markdownIt.use(markdownItMultimdTable);
-
+            this.markdownIt.use(markdownItCheckbox,{readonly: true, disabled: true});
+            this.markdownIt.use(markdownItContainer, 'warning');
             this.markdownIt.use(markdownItAttrs, {
                 // optional, these are default options
                 leftDelimiter: '{',
