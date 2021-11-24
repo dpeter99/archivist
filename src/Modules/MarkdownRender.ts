@@ -4,6 +4,9 @@ import {Content} from "../Content.ts";
 import {SimpleModule} from "../Module/SimpleModule.ts";
 
 import MarkdownIt from "https://esm.sh/markdown-it";
+//import {markdownit} from "../utils/markdown/markdown.d.ts";
+//import "https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.2.0/markdown-it.min.js";
+
 import markdownItMultimdTable from "https://esm.sh/markdown-it-multimd-table";
 import markdownItAttrs from "https://esm.sh/markdown-it-attrs";
 import markdownItAnchors from "https://cdn.skypack.dev/markdown-it-anchor";
@@ -22,7 +25,7 @@ class Options {
     /**
      * Function to return a custom MarkdownIt instance (The supplied instance is a fresh one)
      */
-    func?: ((md:typeof MarkdownIt) => typeof MarkdownIt);
+    func?: ((md:any) => any);
     /**
      * Amount to shift the heading numbers by
      */

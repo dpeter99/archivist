@@ -1,4 +1,5 @@
 
+export declare var markdownit: any;
 
 export declare class StateCore {
     constructor(src: string, md: any, env: any);

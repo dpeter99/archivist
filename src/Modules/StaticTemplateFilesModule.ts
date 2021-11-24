@@ -1,4 +1,5 @@
-import * as fs from "https://deno.land/std/fs/mod.ts";
+import * as fs from "https://deno.land/std@0.115.1/fs/mod.ts";
+import { copy, copySync } from "https://deno.land/std@0.115.1/fs/copy.ts";
 import * as path from "https://deno.land/std/path/mod.ts";
 import * as ink from 'https://deno.land/x/ink/mod.ts'
 
@@ -6,7 +7,6 @@ import ProgressBar from "https://deno.land/x/progress@v1.2.4/mod.ts";
 
 
 import {SimpleModule} from "../Module/SimpleModule.ts";
-import {getCompiledTemplateFolder} from "../utils/project-json-helpers.ts";
 import {Pipeline} from "../Pipeline.ts";
 import {IModule} from "../Module/IModule.ts";
 import {archivistInst} from "../Archivist.ts";
@@ -81,7 +81,7 @@ export class StaticTemplateFilesModule extends SimpleModule {
             let sub = path.relative(this.template.compiledPath, file.path);
             let to = path.join(this.OutputPath, sub);
             try {
-                await fs.copy(file.path, to, {overwrite: true});
+                await copy(file.path, to, {overwrite: true});
             }
             catch (e) {
                 this.pipeline.reportError(this, "Copping: " + file.path + " to: " + to)

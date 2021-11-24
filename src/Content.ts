@@ -1,4 +1,4 @@
-import { basename } from "https://deno.land/std@0.106.0/path/mod.ts";
+import { basename } from "https://deno.land/std@0.114.0/path/mod.ts";
 import {Metadata} from "./Metadata.ts";
 
 export class Content {

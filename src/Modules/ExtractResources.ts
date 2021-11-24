@@ -2,8 +2,8 @@ import {SimpleModule} from "../Module/SimpleModule.ts";
 import {Content} from "../Content.ts";
 
 import { DOMParser, Element } from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";
-import * as fs from "https://deno.land/std@0.109.0/fs/mod.ts"
-import * as path from "https://deno.land/std@0.109.0/path/mod.ts";
+import * as fs from "https://deno.land/std@0.114.0/fs/mod.ts"
+import * as path from "https://deno.land/std@0.114.0/path/mod.ts";
 
 /**
  * This Module extracts resources that are referenced in the doc and
@@ -39,9 +39,11 @@ export class ExtractResources extends SimpleModule{
 
                     fs.ensureDirSync(path.dirname(targetPath));
 
-                    let prom = fs.copy(p, targetPath).then(value => {
 
-                    });
+                    let prom = fs.copy(p, targetPath).catch((e)=>{
+                        console.log(e);
+                    })
+
 
                     filewait.push(prom);
                 }

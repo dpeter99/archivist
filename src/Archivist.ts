@@ -3,7 +3,7 @@ import {IModule} from "./Module/IModule.ts";
 import {Content} from "./Content.ts";
 
 import * as ink from 'https://deno.land/x/ink/mod.ts';
-import * as path from "https://deno.land/std@0.109.0/path/mod.ts";
+import * as path from "https://deno.land/std@0.114.0/path/mod.ts";
 import {Template} from "./Template.ts";
 
 export let archivistInst: Archivist;

@@ -1,5 +1,5 @@
-import * as fs from "https://deno.land/std@0.106.0/fs/mod.ts";
-import * as Path from "https://deno.land/std@0.109.0/path/mod.ts";
+import * as fs from "https://deno.land/std@0.114.0/fs/mod.ts";
+import * as Path from "https://deno.land/std@0.114.0/path/mod.ts";
 
 export class Template{
     path: string;

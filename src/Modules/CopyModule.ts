@@ -1,4 +1,4 @@
-import * as fs from "https://deno.land/std/fs/mod.ts";
+import { copy, copySync } from "https://deno.land/std@0.115.1/fs/copy.ts";
 import * as path from "https://deno.land/std/path/mod.ts";
 
 import {SimpleModule} from "../Module/SimpleModule.ts";
@@ -31,7 +31,12 @@ export class CopyModule extends SimpleModule{
 
         const targ = this.target ?? this.getFileOutputLoc(path.join(Deno.cwd() , this.source));
 
-        fs.copySync(this.source,targ);
+        try {
+            copySync(this.source, targ);
+        }
+        catch (e){
+          console.log(e);
+        };
 
     }
 }
