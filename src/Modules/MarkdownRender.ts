@@ -3,9 +3,14 @@ import {Content} from "../Content.ts";
 
 import {SimpleModule} from "../Module/SimpleModule.ts";
 
+//import "https://esm.sh/@types/markdown-it";
 import MarkdownIt from "https://esm.sh/markdown-it";
-//import {markdownit} from "../utils/markdown/markdown.d.ts";
+
+//import {MarkdownIt} from "../utils/markdown/markdown.d.ts";
 //import "https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.2.0/markdown-it.min.js";
+
+// @ts-ignore
+//type MarkdownIt = markdownit;
 
 import markdownItMultimdTable from "https://esm.sh/markdown-it-multimd-table";
 import markdownItAttrs from "https://esm.sh/markdown-it-attrs";
@@ -61,6 +66,7 @@ export class MarkdownRender extends SimpleModule{
     setup(pipeline:Pipeline, parent?:IModule): Promise<any> {
         super.setup(pipeline, parent);
 
+        //@ts-ignore
         this.markdownIt = new MarkdownIt();
 
         if(this._props.func != undefined){
