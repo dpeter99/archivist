@@ -1,12 +1,29 @@
 import {Archivist, Config} from "./Archivist.ts";
 
-export function run(config:any) {
+import * as fs from "https://deno.land/std@0.106.0/fs/mod.ts";
 
-    const arch: Archivist = new Archivist(config);
+export async function run(config: Config | null) : Promise<any> {
 
-    arch.run();
+    const confFile = Deno.cwd() + "/archivist.config.ts";
+    if (!fs.existsSync(confFile)) {
+        console.error("There is no config file at: '" + confFile);
+    }
+
+    let confmodule = await import("file://" + "P:\\_Projects\\Archivist\\archivist\\examples\\simple\\archivist.config.ts");
+
+    if (confmodule.config == undefined) {
+        console.error("The given config file does not export a 'config'");
+    }
+
+    config = confmodule.config;
+
+    const arch: Archivist = new Archivist(config!);
+
+    await arch.run();
 
 }
+
+await run(null);
 
 
 export let version = "0.1.0-alpha02";

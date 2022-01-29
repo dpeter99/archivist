@@ -10,7 +10,7 @@ import MarkdownIt from "https://esm.sh/markdown-it";
 //import "https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.2.0/markdown-it.min.js";
 
 // @ts-ignore
-//type MarkdownIt = markdownit;
+type MarkdownIt = markdownit;
 
 import markdownItMultimdTable from "https://esm.sh/markdown-it-multimd-table";
 import markdownItAttrs from "https://esm.sh/markdown-it-attrs";
@@ -67,7 +67,16 @@ export class MarkdownRender extends SimpleModule{
         super.setup(pipeline, parent);
 
         //@ts-ignore
-        this.markdownIt = new MarkdownIt();
+        if(typeof MarkdownIt !== 'undefined'){
+            this.markdownIt = new MarkdownIt();
+        }
+        //@ts-ignore
+        else if(typeof window.markdownIt !== 'undefined'){
+            //@ts-ignore
+            this.markdownIt = new window.markdownIt();
+        }
+
+
 
         if(this._props.func != undefined){
             this.markdownIt = this._props.func(this.markdownIt);

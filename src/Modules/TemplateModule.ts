@@ -11,7 +11,6 @@ import * as path from "https://deno.land/std/path/mod.ts";
 import {compile,render, Template} from "https://deno.land/x/deno_ejs/mod.ts";
 
 import {interpolate} from "../utils/string-interpolator.ts";
-import {getCompiledTemplateFolder} from "../utils/project-json-helpers.ts";
 import {getTemplate} from "../utils/getTemplate.ts";
 import {ArticleHelper} from "../utils/ArticleHelper.ts";
 
@@ -85,8 +84,6 @@ export class TemplateModule extends SimpleModule{
             this.pipeline.reportError(this, `could not find template for file: ${doc.path}`);
             return Promise.resolve();
         }
-
-
 
         let data = {
             content: docContent,
