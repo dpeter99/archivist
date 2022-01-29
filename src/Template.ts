@@ -20,7 +20,7 @@ export class Template{
         this.matchers = data.matchers;
         this.compiledPath = Path.join( this.path , data.compiledPath);
         this.ignore= data.ignore;
-        this.rootTemplate = data.rootTemplate ? Path.join(this.compiledPath , data.rootTemplate) : "";
+        this.rootTemplate = data.rootTemplate ? Path.join(this.compiledPath , data.rootTemplate) : undefined;
 
         this.metadata = {
             mustBeArray : (data.metadata?.mustBeArray ?? [])

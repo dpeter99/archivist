@@ -155,6 +155,7 @@ class CompiledTemplate {
     ) {}
 
     static from(path: string) : CompiledTemplate {
+
         if(fs.existsSync(path)) {
             let text = Deno.readTextFileSync(path);
 

@@ -65,6 +65,9 @@ export class Pipeline{
         //let content: Content[] = [];
 
         for (const module of this.modules) {
+            if(archivistInst.detailedOutput)
+                console.log("Running " + module.constructor.name)
+
             await module.process(this.files);
 
         }
