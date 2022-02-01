@@ -14,7 +14,7 @@
         <p></p>
         <h1>Blog posts</h1>
         <ul>
-            <% pipeline.files.filter((d)=>ArticleHelper.subArticle(d)).forEach(doc => {%>
+            <% pipeline.files.filter((d)=>ArticleHelper.filterListArticles(d)).forEach(doc => {%>
                 <li >
                     <a href="<%= ArticleHelper.getLink(doc) %>"><%=doc.meta.date %> | <%=doc.meta.title %></a>
                 </li>

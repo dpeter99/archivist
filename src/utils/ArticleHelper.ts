@@ -14,6 +14,10 @@ export class ArticleHelper {
         this.module = module;
     }
 
+    public filterListArticles(f:Content){
+        return this.subArticle(f) && !this.isDraft(f) && this.isNotOfType(f,"list");
+    }
+
     /**
      * Returns true if the given file is under this file in the folder structure
      * @param f
@@ -22,7 +26,15 @@ export class ArticleHelper {
         let common =path.common([this.dir,path.dirname(f.path)])
         common = common.replace(/[\/\\]$/, "")
 
-        return common == this.dir && f.path != this.file && ((f.meta.draft ?? false) == false);
+        return common == this.dir && f.path != this.file;
+    }
+
+    public isDraft(f:Content): boolean{
+        return ((f.meta.draft ?? false));
+    }
+
+    public isNotOfType(f:Content, type:String){
+        return f.meta.type != type;
     }
 
     public getLink(f:Content){
