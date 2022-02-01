@@ -13,6 +13,8 @@ import {archivistInst} from "../Archivist.ts";
 import {getTemplate} from "../utils/getTemplate.ts";
 import {Template} from "../Template.ts";
 import {WalkEntry} from "https://deno.land/std/fs/mod.ts";
+import {ensureDir} from "https://deno.land/std@0.115.1/fs/mod.ts";
+import {dirname} from "https://deno.land/std@0.61.0/path/mod.ts";
 
 /**
  * This module is responsible for copying the static files of your template
@@ -81,6 +83,7 @@ export class StaticTemplateFilesModule extends SimpleModule {
             let sub = path.relative(this.template.compiledPath, file.path);
             let to = path.join(this.OutputPath, sub);
             try {
+                await ensureDir(dirname(to));
                 await copy(file.path, to, {overwrite: true});
             }
             catch (e) {

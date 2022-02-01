@@ -14,6 +14,10 @@ export class ArticleHelper {
         this.module = module;
     }
 
+    /**
+     * Returns true if the given file is under this file in the folder structure
+     * @param f
+     */
     public subArticle(f:Content): boolean{
         let common =path.common([this.dir,path.dirname(f.path)])
         common = common.replace(/[\/\\]$/, "")

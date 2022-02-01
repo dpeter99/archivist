@@ -9,7 +9,7 @@ export async function run(config: Config | null) : Promise<any> {
         console.error("There is no config file at: '" + confFile);
     }
 
-    let confmodule = await import("file://" + "P:\\_Projects\\Archivist\\archivist\\examples\\simple\\archivist.config.ts");
+    let confmodule = await import("file://" + Deno.cwd() + "\\archivist.config.ts");
 
     if (confmodule.config == undefined) {
         console.error("The given config file does not export a 'config'");
