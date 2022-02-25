@@ -23,7 +23,7 @@ export async function run(config: Config | null) : Promise<any> {
 
 }
 
-await run(null);
+//await run(null);
 
 
 export let version = "0.2.0-alpha01";
