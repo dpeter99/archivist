@@ -9,9 +9,9 @@
     <div class="span9 bs-docs-sidebar">
         <hr class="soften">
         <ul>
-            <% pipeline.files.filter((d)=>ArticleHelper.filterListArticles(d)).forEach(doc => {%>
+            <% pipeline.files.filter((d)=>helper.filterListArticles(d)).forEach(doc => {%>
                 <li >
-                    <a href="<%= ArticleHelper.getLink(doc) %>"><%=doc.meta.date %> | <%=doc.meta.title %></a>
+                    <a href="<%= helper.getLink(doc) %>"><%=doc.meta.date %> | <%=doc.meta.title %></a>
                 </li>
             <% }) %>
         </ul>

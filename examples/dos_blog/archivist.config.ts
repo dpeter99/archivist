@@ -17,6 +17,7 @@ export let config: Config = {
     detailedOutput: true,
     template: "./theme",
     outputPath: "./out",
+    outputURL: "/",
     preProcessors: [
         Pipeline.fromModules({name:"build_template"},
             new StaticTemplateFilesModule(),

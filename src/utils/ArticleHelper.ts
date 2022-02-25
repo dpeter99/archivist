@@ -2,6 +2,7 @@ import * as fs from "https://deno.land/std/fs/mod.ts";
 import * as path from "https://deno.land/std/path/mod.ts";
 import {Content} from "../Content.ts";
 import {SimpleModule} from "../Module/SimpleModule.ts";
+import {Archivist, archivistInst} from "../Archivist.ts";
 
 export class ArticleHelper {
     private file: string;
@@ -44,4 +45,7 @@ export class ArticleHelper {
         return "/" + p;
     }
 
+    public getRootURL(): string | undefined{
+        return archivistInst.outputURL
+    }
 }

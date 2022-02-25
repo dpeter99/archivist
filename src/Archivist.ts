@@ -20,6 +20,12 @@ export class Archivist {
     outputPath?: string
 
     /**
+     * The top level of the output URL
+     * This is not necessary
+     */
+    outputURL?: string
+
+    /**
      * Option to get detailed output info useful for debugging
      */
     detailedOutput: boolean;
@@ -31,6 +37,8 @@ export class Archivist {
         this.preProcessors = conf.preProcessors ?? [];
 
         this.outputPath = conf.outputPath;
+        this.outputURL = conf.outputURL;
+
         if(conf.template){
             try {
                 this.template = new Template(conf.template);
@@ -128,6 +136,7 @@ export class Config {
     preProcessors?: Pipeline[];
 
     outputPath?: string;
+    outputURL?: string;
 
     detailedOutput: boolean = false;
 

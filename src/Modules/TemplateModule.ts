@@ -35,15 +35,26 @@ export class TemplateModule extends SimpleModule{
     templateFiles: Map<string,CompiledTemplate> = new Map();
 
     rootTemplate?: CompiledTemplate;
+    private _helper: (path:string, module:TemplateModule) => object;
 
     /**
      *
      * @param templatePath The path to the root of the template where the project.json is
+     * @param helper
      */
-    constructor(templatePath?:string){
+    constructor(templatePath?:string, helper?: (path:string, module:TemplateModule)=>object){
         super();
 
         this.path = templatePath;
+        if(helper == null){
+            this._helper = (path:string, module:TemplateModule)=>{
+                return new ArticleHelper(path, module);
+            };
+        }
+        else{
+            this._helper = helper;
+        }
+
     }
 
     /**
@@ -90,7 +101,8 @@ export class TemplateModule extends SimpleModule{
             meta: doc.meta,
 
             StatusCodes: StatusCodes,
-            ArticleHelper: new ArticleHelper(doc.path, this),
+
+            helper: this._helper(doc.path, this),
 
             pipeline: this.pipeline
         };

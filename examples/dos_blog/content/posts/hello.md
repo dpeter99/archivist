@@ -7,6 +7,6 @@ tags: ["intro", "index"]
 ---
 
 # HELLO WORLD!
-Oh hey. It’s a new blog.And now using [Archivist]()
+Oh hey. It’s a new blog. And now using [Archivist](https://github.com/dpeter99/archivist)
 
 Check out my [paste site]() for funsies.
