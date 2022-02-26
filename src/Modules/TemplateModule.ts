@@ -104,6 +104,7 @@ export class TemplateModule extends SimpleModule{
         }
 
         let data = {
+            doc : doc,
             content: docContent,
             meta: doc.meta,
 
