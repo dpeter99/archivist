@@ -76,6 +76,7 @@ export class WebpackModule extends SimpleModule {
         if (code === 0) {
             await Deno.stdout.write(rawOutput);
         } else {
+            await Deno.stdout.write(rawOutput);
             const errorString = new TextDecoder().decode(rawError);
             console.log(errorString);
         }
