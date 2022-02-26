@@ -19,6 +19,11 @@ function compile_help(text:string, conf:any):Template{
     return compile(text,conf)
 }
 
+interface TemplateModuleParams {
+    templatePath?:string,
+    helper?: (path:string, module:TemplateModule)=>object
+}
+
 export class TemplateModule extends SimpleModule{
 
     /**
@@ -37,12 +42,14 @@ export class TemplateModule extends SimpleModule{
     rootTemplate?: CompiledTemplate;
     private _helper: (path:string, module:TemplateModule) => object;
 
+
+
     /**
      *
      * @param templatePath The path to the root of the template where the project.json is
      * @param helper
      */
-    constructor(templatePath?:string, helper?: (path:string, module:TemplateModule)=>object){
+    constructor({templatePath, helper}:TemplateModuleParams){
         super();
 
         this.path = templatePath;
@@ -72,7 +79,7 @@ export class TemplateModule extends SimpleModule{
             this.pipeline.reportError(this, e);
         }
 
-        if(this.template.rootTemplate != null){
+        if(this.template.rootTemplate){
            this.rootTemplate = CompiledTemplate.from(this.template.rootTemplate);
         }
 

@@ -8,19 +8,33 @@ export class ArticleHelper {
     private file: string;
     private dir:string;
     private module: SimpleModule;
+    private globalFilter?: (doc: Content) => boolean;
 
-    constructor(file:string, module:SimpleModule) {
+    constructor(file:string, module:SimpleModule, globalFilter?:(doc:Content)=>boolean) {
         this.file = file;
+        this.globalFilter = globalFilter;
         this.dir = path.dirname(this.file);
         this.module = module;
     }
 
+    public subArticles(sortByDate = true):Content[]{
+        let res = this.module.pipeline.files.filter((d) => this.filterListArticles(d));
+        if(sortByDate){
+            res = res.sort((a,b)=>{
+                return +new Date(b.meta.date) -  +new Date(a.meta.date)
+            })
+        }
+        return res;
+    }
+
+
     public filterListArticles(f:Content){
-        return this.subArticle(f) && !this.isDraft(f) && this.isNotOfType(f,"list");
+        const res = this.subArticle(f) && !this.isDraft(f) && this.isNotOfType(f,"list");
+        return res && (this.globalFilter?(f) : true);
     }
 
     /**
-     * Returns true if the given file is under this file in the folder structure
+     * Returns true if the given file is under the current file in the folder structure
      * @param f
      */
     public subArticle(f:Content): boolean{

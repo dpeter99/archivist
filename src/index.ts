@@ -32,4 +32,5 @@ export let version = "0.2.0-alpha01";
 
 export * from "./Archivist.ts";
 export * from "./Pipeline.ts";
+export * from "./utils/ArticleHelper.ts"
 export * from "./Modules/modules.ts";
