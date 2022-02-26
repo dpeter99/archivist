@@ -23,7 +23,7 @@ export class WebUrlOutputResolver extends SimpleModule{
             if (file_name == parent_dir) {
                 new_path = path.dirname(doc.path) + "\\index.html";
             } else if(file_name != "index") {
-                new_path = path.dirname(doc.path) + "\\" + file_name + "/index.html";
+                new_path = path.dirname(doc.path) + "\\" + file_name + "\\index.html";
             }
             doc.metadata.addData("outputPath", new_path);
 
