@@ -47,7 +47,7 @@ export class OutputModule extends SimpleModule{
 
         path = path.replace(Path.extname(path),".html");
 
-        console.log(path);
+        //console.log(path);
 
         await ensureDir(Path.dirname(path));
 

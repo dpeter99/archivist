@@ -21,9 +21,9 @@ export class WebUrlOutputResolver extends SimpleModule{
 
             let new_path = doc.path;
             if (file_name == parent_dir) {
-                new_path = path.dirname(doc.path) + "\\index.html";
+                new_path = path.dirname(doc.path) + path.sep + "index.html";
             } else if(file_name != "index") {
-                new_path = path.dirname(doc.path) + "\\" + file_name + "\\index.html";
+                new_path = path.dirname(doc.path) + path.sep + file_name + path.sep + "index.html";
             }
             doc.metadata.addData("outputPath", new_path);
 
@@ -31,7 +31,7 @@ export class WebUrlOutputResolver extends SimpleModule{
             url = url.replace("\\", "/");
             doc.metadata.addData("url",url);
 
-            console.log(new_path);
+            //console.log(new_path);
         }
         //Domain / .. / .. / name
 
