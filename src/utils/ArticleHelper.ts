@@ -53,6 +53,10 @@ export class ArticleHelper {
     }
 
     public getLink(f:Content){
+        if(f.meta.url){
+            return f.meta.url;
+        }
+
         let p = this.module.getFileOutputLoc(f.path);
         p = path.relative(this.module.pipeline.OutputPath,p);
         p = p.replace(path.extname(p),".html");

@@ -1,15 +1,13 @@
-
-import {Config} from "../../src/Archivist.ts";
-import {Pipeline} from "../../src/Pipeline.ts";
 import {
-    StaticTemplateFilesModule,
-    FileReaderModule,
+    Config,
     ExtractMetadata,
-    FrontMatterMetadata,
-    MarkdownRender,
-    TemplateModule,
-    OutputModule
-} from "../../src/Modules/modules.ts";
+    FileReaderModule,
+    FrontMatterMetadata, MarkdownRender, OutputModule,
+    Pipeline,
+    StaticTemplateFilesModule, TemplateModule,
+    run
+} from "../../src/index.ts";
+import {WebUrlOutputResolver} from "../../src/Modules/WebUrlOutputResolver.ts";
 
 
 export let config: Config = {
@@ -17,7 +15,7 @@ export let config: Config = {
     detailedOutput: true,
     template: "./theme",
     outputPath: "./out",
-    outputURL: "/",
+    outputURL: "http://127.0.0.1:8888",
     preProcessors: [
         Pipeline.fromModules({name:"build_template"},
             new StaticTemplateFilesModule(),
@@ -30,8 +28,11 @@ export let config: Config = {
                 new FrontMatterMetadata()
             ),
             new MarkdownRender(),
-            new TemplateModule(),
+            new WebUrlOutputResolver(),
+            new TemplateModule({}),
             new OutputModule("./out/")
         )
     ]
 }
+
+run(config);

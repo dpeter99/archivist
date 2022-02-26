@@ -40,7 +40,14 @@ export class OutputModule extends SimpleModule{
     async processDoc(doc:Content): Promise<any> {
 
         let path = this.getFileOutputLoc(doc.path);
+
+        if(doc.meta.outputpath){
+            path = this.getFileOutputLoc(doc.meta.outputpath);
+        }
+
         path = path.replace(Path.extname(path),".html");
+
+        console.log(path);
 
         await ensureDir(Path.dirname(path));
 
