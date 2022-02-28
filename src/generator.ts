@@ -1,57 +1,133 @@
-import {BufReader} from "https://deno.land/std@0.125.0/io/buffer.ts";
-
-const dylib = Deno.dlopen("c:\\windows\\system32\\msvcrt.dll", {
-    "_getch": { parameters: [], result: "i32" },
-    "_getwch": { parameters: [], result: "i32" },
-    "_kbhit": { parameters: [], result: "i32" },
-});
-
-while (true){
-    //@ts-ignore
-    let char = dylib.symbols._getwch()
-    await Deno.stdout.write(new TextEncoder().encode("New Char:\n"));
-    await Deno.stdout.write(new TextEncoder().encode(char.toString()+"\n"));
-    await Deno.stdout.write(Uint8Array.of(char));
-    await Deno.stdout.write(new TextEncoder().encode("\n"));
-
-    if(char == 3)
-        Deno.exit(0);
-}
+import {goUp, hideCursor, showCursor} from "https://denopkg.com/iamnathanj/cursor@v2.2.0/mod.ts";
+import {beginListeningToKeyboard, keyboardInput, stopListeningToKeyboard, Action} from "./utils/keypress/keypress.ts";
 
 
-
-let options = [
-    "A: asaaaa",
-    "B: asaaaa",
-    "C: asaaaa",
-]
-
-let reader = new BufReader(Deno.stdin);
-
-do {
-    writeMenu(options,0);
-
-    let buffer = new Uint8Array(1);
-
-    await reader.read(buffer);
-
-    console.log(buffer);
-} while (true)
+type HitData = ({ type: "text"; text: string; shiftPressed?: boolean; controlPressed?: boolean; altPressed?: boolean } & { code: ArrayLike<number> }) | ({ type: "control"; action: Action; controlPressed?: boolean; altPressed?: boolean } & { code: ArrayLike<number> }) | ({ type: "end of input" } & { code: ArrayLike<number> }) | ({ type: "unknown" } & { code: ArrayLike<number> });
 
 
-async function writeMenu(options: string[], selected: number) {
-    //Console.Clear();
+abstract class Prompt {
 
-    for (const v of options) {
-        const i = options.indexOf(v);
-        if (i == selected) {
-            await Deno.stdout.write(new TextEncoder().encode("> "));
-            //Console.Write("> ");
-        } else {
-            await Deno.stdout.write(new TextEncoder().encode("  "));
+    running = true;
+    isDirty = false;
+
+    question="";
+
+    framebuffer = "";
+    startline = 0;
+
+    constructor(q:string) {
+        this.question = q;
+    }
+
+
+    async startPrompt() {
+        await hideCursor();
+
+        this.drawFramebuffer();
+
+        while (this.running){
+            await this.printFramebuffer();
+
+            beginListeningToKeyboard();
+
+            const hit = (await keyboardInput().next()).value!;
+
+            if ( hit.type == 'text' && hit.controlPressed && hit.text == 'c' ){
+                this.running = false;
+            }
+
+            this.processInput(hit)
+
+            stopListeningToKeyboard();
+
+            this.drawFramebuffer();
+
         }
 
-        await Deno.stdout.write(new TextEncoder().encode(v + "\n"));
+    }
+
+    async printFramebuffer(){
+        if(this.isDirty){
+            await goUp(this.framebuffer.split("\n").length-1)
+        }
+
+        await Deno.stdout.write(new TextEncoder().encode(this.framebuffer));
+        this.isDirty = true;
+    }
+
+    async finish(){
+        await showCursor();
+    }
+
+    protected drawFramebuffer():void{
+        this.framebuffer = "[?] " + this.question + "\n";
+    }
+
+    abstract processInput(hit: HitData):void;
+
+}
+
+class OptionsPrompt extends Prompt{
+
+    selected = 0;
+    get Selected() {return this.selected;}
+    set Selected(val:number) {
+        if(val > this.options.length-1){
+            this.selected = 0;
+        }
+        else if(val < 0){
+            this.selected = this.options.length-1;
+        }
+        else
+            this.selected = val;
+    }
+
+    constructor(q: string, options: string[]) {
+        super(q);
+        this.options = options;
+    }
+
+
+    options = [
+        "A options",
+        "B options",
+        "C options",
+        "D options",
+    ]
+
+    protected override drawFramebuffer():void {
+        super.drawFramebuffer();
+
+        for (const v of this.options){
+            const i = this.options.indexOf(v);
+            if (i == this.Selected) {
+                this.framebuffer += "> ";
+            } else {
+                this.framebuffer += "  ";
+            }
+            this.framebuffer += v + "\n";
+        }
+    }
+
+    override processInput(hit: HitData) {
+
+        if(hit.type == "control" && hit.action == "up"){
+            this.Selected--;
+        }
+
+        if(hit.type == "control" && hit.action == "down"){
+            this.Selected++;
+        }
+
     }
 
 }
+
+
+
+let prompt = new OptionsPrompt("What build system do you want to use for the template?",[
+    "Simple",
+    "Webpack"
+]);
+
+prompt.startPrompt();
