@@ -62,8 +62,8 @@
     "ignore": {
       "$id": "#/properties/ignore",
       "type": "array",
-      "title": "The ignore schema",
-      "description": "An explanation about the purpose of this instance.",
+      "title": "Files to ignore while copying to the output",
+      "description": "Any files definied in here will be ignored when moving the assets to the output folder.\n For example: ``` \"*.ejs\" \n \"template.json\" ",
       "default": [],
       "examples": [
         [
@@ -88,6 +88,12 @@
           }
         ]
       }
+    },
+    "rootTemplate": {
+      "$id": "#/properties/rootTemplate",
+      "type": "string",
+      "title": "The template to used for defining structure common to all pages",
+      "description": "This template will be output to the disk. You can access the output of the more specific template by using ``<%-include(template)%>``"
     }
   },
   "additionalProperties": true

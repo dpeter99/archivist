@@ -20,6 +20,12 @@ export class Archivist {
     outputPath?: string
 
     /**
+     * The top level of the output URL
+     * This is not necessary
+     */
+    outputURL?: string
+
+    /**
      * Option to get detailed output info useful for debugging
      */
     detailedOutput: boolean;
@@ -31,6 +37,8 @@ export class Archivist {
         this.preProcessors = conf.preProcessors ?? [];
 
         this.outputPath = conf.outputPath;
+        this.outputURL = conf.outputURL;
+
         if(conf.template){
             try {
                 this.template = new Template(conf.template);
@@ -110,7 +118,7 @@ export class Archivist {
                     console.table(docs!.map((d) => ({
                         name: d.name,
                         Title: d.metadata.Title,
-                        //Editor: d.metadata.Authors.map((v)=>{return v.Name}),
+                        Draft: d.meta.draft,
                         Template: path.basename(d.metadata.Template ?? ""),
                         State: JSON.stringify( d.meta.state)
                     })));
@@ -128,6 +136,7 @@ export class Config {
     preProcessors?: Pipeline[];
 
     outputPath?: string;
+    outputURL?: string;
 
     detailedOutput: boolean = false;
 

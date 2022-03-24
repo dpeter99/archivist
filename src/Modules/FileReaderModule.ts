@@ -4,6 +4,7 @@ import {Content} from "../Content.ts";
 import { expandGlob, WalkEntry } from "https://deno.land/std/fs/mod.ts";
 import {SimpleModule} from "../Module/SimpleModule.ts";
 import {Pipeline} from "../Pipeline.ts";
+import {Archivist, archivistInst} from "../Archivist.ts";
 
 /**
  * This is the input of most pipelines.
@@ -27,7 +28,13 @@ export class FileReaderModule extends SimpleModule{
 
     async process(docs: Content[]): Promise<any> {
 
+        if(archivistInst.detailedOutput)
+            console.log("Current content root is: " + this.pipeline.ContentRoot);
+
         for await (const file of expandGlob(this.pattern,{root:this.pipeline.ContentRoot})) {
+
+            if(archivistInst.detailedOutput)
+                console.log("Reading in: " + file.path);
 
             let name = String(file.path);
             if(name.indexOf("node_modules") == -1){

@@ -9,6 +9,7 @@ import {Template} from "../Template.ts";
 import { delay } from "https://deno.land/std/async/mod.ts";
 import { exec, OutputMode } from "https://deno.land/x/exec/mod.ts";
 import os from "https://deno.land/x/dos@v0.11.0/mod.ts";
+import { copy } from "https://deno.land/std@0.104.0/io/util.ts";
 
 
 export class WebpackModule extends SimpleModule {
@@ -55,31 +56,26 @@ export class WebpackModule extends SimpleModule {
             cwd: this.template.path,
             stdout: "piped",
             stderr: "piped",
-
         });
+
+        copy(p.stdout, Deno.stdout);
 
         const { code } = await p.status();
 
         // Reading the outputs closes their pipes
-        const rawOutput = await p.output();
-        const rawError = await p.stderrOutput();
-
-        /*
-        (async p=>{
-            delay(1000);
-            p.kill("Took too long");
-            this.pipeline.reportError(this,"Webpack took too long");
-        })(p);
-        */
+        //const rawOutput = await p.output();
+        //const rawError = await p.stderrOutput();
 
 
         if (code === 0) {
-            await Deno.stdout.write(rawOutput);
+            //await Deno.stdout.write(rawOutput);
         } else {
-            const errorString = new TextDecoder().decode(rawError);
-            console.log(errorString);
-        }
+            //await Deno.stdout.write(rawOutput);
+            //const errorString = new TextDecoder().decode(rawError);
+            //console.log(errorString);
 
+        }
+        p.close();
 
         console.groupEnd();
 

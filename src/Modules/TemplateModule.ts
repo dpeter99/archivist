@@ -11,13 +11,17 @@ import * as path from "https://deno.land/std/path/mod.ts";
 import {compile,render, Template} from "https://deno.land/x/deno_ejs/mod.ts";
 
 import {interpolate} from "../utils/string-interpolator.ts";
-import {getCompiledTemplateFolder} from "../utils/project-json-helpers.ts";
 import {getTemplate} from "../utils/getTemplate.ts";
 import {ArticleHelper} from "../utils/ArticleHelper.ts";
 
 
 function compile_help(text:string, conf:any):Template{
     return compile(text,conf)
+}
+
+interface TemplateModuleParams {
+    templatePath?:string,
+    helper?: (path:string, module:TemplateModule)=>object
 }
 
 export class TemplateModule extends SimpleModule{
@@ -36,15 +40,28 @@ export class TemplateModule extends SimpleModule{
     templateFiles: Map<string,CompiledTemplate> = new Map();
 
     rootTemplate?: CompiledTemplate;
+    private _helper: (path:string, module:TemplateModule) => object;
+
+
 
     /**
      *
      * @param templatePath The path to the root of the template where the project.json is
+     * @param helper
      */
-    constructor(templatePath?:string){
+    constructor({templatePath, helper}:TemplateModuleParams){
         super();
 
         this.path = templatePath;
+        if(helper == null){
+            this._helper = (path:string, module:TemplateModule)=>{
+                return new ArticleHelper(path, module);
+            };
+        }
+        else{
+            this._helper = helper;
+        }
+
     }
 
     /**
@@ -62,7 +79,7 @@ export class TemplateModule extends SimpleModule{
             this.pipeline.reportError(this, e);
         }
 
-        if(this.template.rootTemplate != null){
+        if(this.template.rootTemplate){
            this.rootTemplate = CompiledTemplate.from(this.template.rootTemplate);
         }
 
@@ -86,14 +103,14 @@ export class TemplateModule extends SimpleModule{
             return Promise.resolve();
         }
 
-
-
         let data = {
+            doc : doc,
             content: docContent,
             meta: doc.meta,
 
             StatusCodes: StatusCodes,
-            ArticleHelper: new ArticleHelper(doc.path, this),
+
+            helper: this._helper(doc.path, this),
 
             pipeline: this.pipeline
         };
@@ -158,6 +175,7 @@ class CompiledTemplate {
     ) {}
 
     static from(path: string) : CompiledTemplate {
+
         if(fs.existsSync(path)) {
             let text = Deno.readTextFileSync(path);
 

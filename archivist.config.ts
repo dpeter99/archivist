@@ -1,9 +1,6 @@
 
 import * as archivist from "./src/index.ts";
 
-
-
-
 export let config: archivist.Config = {
     env:"production",
     detailedOutput: false,

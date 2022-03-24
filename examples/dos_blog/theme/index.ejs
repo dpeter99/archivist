@@ -1,0 +1,42 @@
+<div class="row-fluid navmargin">
+    <div class="page-header">
+        <h1><%=meta.title%></h1>
+    </div>
+</div>
+
+<div class="row-fluid">
+    <div class="span9 bs-docs-sidebar">
+        <p class="lead"><%=meta.lead%></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <hr class="soften">
+        <p></p>
+        <h1>Blog posts</h1>
+        <ul>
+            <% pipeline.files.filter((d)=>helper.filterListArticles(d)).forEach(doc => {%>
+                <li >
+                    <a href="<%= helper.getLink(doc) %>"><%=doc.meta.date %> | <%=doc.meta.title %></a>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+
+    <div class="span3 bs-docs-sidebar">
+        <h1>Categories</h1>
+        <ul class="nav nav-list bs-docs-sidenav">
+
+        </ul>
+        <p></p>
+        <h1>Tags</h1>
+        <ul class="nav nav-list bs-docs-sidenav">
+            <%
+            pipeline.files.flatMap(d => d.meta.tags).filter((value, index, self) => self.indexOf(value) === index).forEach(
+                tag => {%>
+                <li>
+                    <a href="/tags/<%=tag%>/"><%=tag%></a>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</div>

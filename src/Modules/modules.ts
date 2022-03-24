@@ -5,6 +5,7 @@ export {OutputModule} from "./OutputModule.ts";
 export {StaticTemplateFilesModule} from "./StaticTemplateFilesModule.ts";
 export {TemplateModule} from "./TemplateModule.ts";
 export {WebpackModule} from "./WebpackModule.ts";
+export * from "./WebUrlOutputResolver.ts";
 
 export * from "./ExtractResources.ts";
 export * from "./CopyModule.ts";
