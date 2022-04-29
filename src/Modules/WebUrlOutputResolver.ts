@@ -12,6 +12,7 @@ export class WebUrlOutputResolver extends SimpleModule{
     }
 
 
+    // deno-lint-ignore require-await
     override async processDoc(doc: Content): Promise<any> {
 
         const file_name = doc.name.replace(path.extname(doc.name),"");
@@ -34,11 +35,6 @@ export class WebUrlOutputResolver extends SimpleModule{
             //console.log(new_path);
         }
         //Domain / .. / .. / name
-
-
-
-
-
     }
 
 }

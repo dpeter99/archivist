@@ -151,8 +151,11 @@ export class TemplateModule extends SimpleModule{
     }
 
     findTemplate(name:string): CompiledTemplate | undefined{
+        let p = name;
+        if(!path.isAbsolute(name)){
+            p = this.template.compiledPath+"/"+name;
+        }
 
-        let p = this.template.compiledPath+"/"+name;
         if(fs.existsSync(p)){
             if(this.templateFiles.has(p)){
                 return this.templateFiles.get(p);

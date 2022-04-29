@@ -39,8 +39,10 @@ export class FileReaderModule extends SimpleModule{
             let name = String(file.path);
             if(name.indexOf("node_modules") == -1){
                 //console.log(file);
+                if(docs.find(doc=>doc.path == name) == null){
+                    docs.push(await Content.load(name));
+                }
 
-                docs.push(await Content.load(name));
             }
 
         }

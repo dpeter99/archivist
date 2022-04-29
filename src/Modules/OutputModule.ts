@@ -44,7 +44,9 @@ export class OutputModule extends SimpleModule{
             path = this.getFileOutputLoc(doc.meta.outputpath);
         }
 
-        path = path.replace(Path.extname(path),".html");
+        //path = path.replace(Path.extname(path),".html");
+        if(archivistInst.detailedOutput)
+            console.log("[INFO] Outputting file to:" + path);
 
         await ensureDir(Path.dirname(path));
 

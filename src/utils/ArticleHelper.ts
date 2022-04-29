@@ -17,6 +17,12 @@ export class ArticleHelper {
         this.module = module;
     }
 
+    /**
+     * Helper function to return all articles that are (in the file hierarchy) under the current one,
+     * or at the same level.
+     * @param sortByDate If the results should be sorted by date
+     * @returns 
+     */
     public subArticles(sortByDate = true):Content[]{
         let res = this.module.pipeline.files.filter((d) => this.filterListArticles(d));
         if(sortByDate){
@@ -28,9 +34,17 @@ export class ArticleHelper {
     }
 
 
-    public filterListArticles(f:Content){
-        const res = this.subArticle(f) && !this.isDraft(f) && this.isNotOfType(f,"list");
-        return res && (this.globalFilter?(f) : true);
+    public filterListArticles(f:Content) : boolean{
+        let res : boolean = this.subArticle(f) 
+                    && !this.isDraft(f) 
+                    && this.isNotOfType(f,"list");
+        let global = true;
+        if(this.globalFilter != null){
+            global = this.globalFilter(f);
+        }
+        res = res && global;
+
+        return res;
     }
 
     /**
@@ -44,11 +58,23 @@ export class ArticleHelper {
         return common == this.dir && f.path != this.file;
     }
 
+    /**
+     * Returns weather the given article is a draft, defaults to false
+     * @param f 
+     * @returns 
+     */
     public isDraft(f:Content): boolean{
         return ((f.meta.draft ?? false));
     }
 
-    public isNotOfType(f:Content, type:String){
+    /**
+     * Checks if the given article is not of a given type.
+     * Usually used to filter types of content
+     * @param f 
+     * @param type 
+     * @returns 
+     */
+    public isNotOfType(f:Content, type:String) : boolean{
         return f.meta.type != type;
     }
 
