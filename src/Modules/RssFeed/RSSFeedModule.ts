@@ -21,10 +21,16 @@ import { ArticleHelper } from "../../utils/ArticleHelper.ts";
 
 //import template_string from "./RssTemplate.ejs" assert { type: "string" };
 
+interface SiteDetails{
+    title: string;
+    description: string;
+    language: string;
+    email: string;
+}
 
 
 interface RssFeedModuleParams {
-    
+    siteInfo: SiteDetails;
     helper?: (path:string, module:RssFeedModule)=>ArticleHelper
 }
 
@@ -40,9 +46,11 @@ export class RssFeedModule extends SimpleModule {
 
     compiled:any;
 
+    siteData: SiteDetails;
+
     private _helper: (path:string, module:RssFeedModule) => ArticleHelper;
 
-    constructor({helper}:RssFeedModuleParams) {
+    constructor({siteInfo,helper}:RssFeedModuleParams) {
         super();
 
         if(helper == null){
@@ -57,6 +65,9 @@ export class RssFeedModule extends SimpleModule {
             this._helper = helper;
         }
 
+        this.siteData = siteInfo == null ?
+                    {title: "Placeholder", description:"Site description", email:"person@place.com", language:"eng"} :
+                    siteInfo;
 
         //this.template.compile();
     }
@@ -79,8 +90,8 @@ export class RssFeedModule extends SimpleModule {
     override async process(docs:Array<Content>): Promise<any> {
         
         let data = {
-            title: "asd",
-            description: "asdasdasda",
+            siteData: this.siteData,
+            siteURL: archivistInst.outputURL,
 
             helper: this._helper(this.pipeline.ContentRoot + "rss.xml", this),
 

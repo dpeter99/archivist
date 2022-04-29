@@ -1,13 +1,13 @@
 <rss version="2.0">
     <channel>
-        <title><%= title %></title>
-        <link>http://liftoff.msfc.nasa.gov/</link>
-        <description><%= description %></description>
+        <title><%= siteData.title %></title>
+        <link><%= siteURL %></link>
+        <description><%= siteData.description %></description>
         <language>en-us</language>
         <pubDate>Tue, 10 Jun 2003 04:00:00 GMT</pubDate>
         <lastBuildDate>Tue, 10 Jun 2003 09:41:01 GMT</lastBuildDate>        
         <generator>Archivist</generator>
-        <managingEditor>editor@example.com</managingEditor>
+        <managingEditor><%= siteData.email %></managingEditor>
         <webMaster>webmaster@example.com</webMaster>
         <% helper.subArticles().forEach(doc => {%>
             <item>
