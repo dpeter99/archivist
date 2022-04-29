@@ -26,6 +26,9 @@ export class WebUrlOutputResolver extends SimpleModule{
             } else if(file_name != "index") {
                 new_path = path.dirname(doc.path) + path.sep + file_name + path.sep + "index.html";
             }
+            else{
+                new_path = doc.path.replace(path.extname(doc.path),".html");
+            }
             doc.metadata.addData("outputPath", new_path);
 
             let url = archivistInst.outputURL + "/" + this.getFileRelativePath(path.dirname(new_path))
@@ -33,6 +36,10 @@ export class WebUrlOutputResolver extends SimpleModule{
             doc.metadata.addData("url",url);
 
             //console.log(new_path);
+        }
+        else{
+            let new_path = doc.path.replace(path.extname(doc.path),".html");
+            doc.metadata.addData("outputPath", new_path);
         }
         //Domain / .. / .. / name
     }
