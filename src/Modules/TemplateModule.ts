@@ -88,7 +88,7 @@ export class TemplateModule extends SimpleModule{
 
     }
 
-
+    // deno-lint-ignore require-await
     async process(docs: Array<Content>): Promise<any> {
         docs.forEach(d=>this.prepareData(d));
 
