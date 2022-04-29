@@ -21,10 +21,7 @@ import { ArticleHelper } from "../../utils/ArticleHelper.ts";
 
 //import template_string from "./RssTemplate.ejs" assert { type: "string" };
 
-const __dirname = dirname(import.meta.url);
-const template_path = __dirname+"./RssTemplate.ejs";
-console.log(template_path);
-const template_string =  await (await fetch(template_path)).text();
+
 
 interface RssFeedModuleParams {
     
@@ -60,15 +57,22 @@ export class RssFeedModule extends SimpleModule {
             this._helper = helper;
         }
 
-        this.template = compile_help(template_string,{});
+
         //this.template.compile();
     }
 
-    setup(pipeline: Pipeline, parent?: IModule): Promise<any> {
+    async setup(pipeline: Pipeline, parent?: IModule): Promise<any> {
         super.setup(pipeline, parent);
 
-        
-        return Promise.resolve();
+        const __dirname = dirname(import.meta.url);
+        const template_path = __dirname+"/./RssTemplate.ejs";
+        console.log(template_path);
+        const template_string =  await (await fetch(template_path)).text();
+
+        this.template = compile_help(template_string,{});
+
+
+        //return Promise.resolve();
     }
 
     // deno-lint-ignore require-await
