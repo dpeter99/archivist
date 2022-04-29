@@ -1,6 +1,7 @@
 import {Archivist, Config} from "./Archivist.ts";
 
 import * as fs from "https://deno.land/std@0.106.0/fs/mod.ts";
+import {Application} from "./Application.ts";
 
 export async function run(config: Config | null) : Promise<any> {
 
@@ -19,9 +20,13 @@ export async function run(config: Config | null) : Promise<any> {
         config = confmodule.config;
     }
 
-    const arch: Archivist = new Archivist(config!);
+    //const arch: Archivist = new Archivist(config!);
 
-    await arch.run();
+    //await arch.run();
+
+    const app = new Application();
+
+    await app.startup(config);
 
 }
 

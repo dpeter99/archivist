@@ -108,6 +108,9 @@ export class Pipeline{
         console.groupEnd();
     }
 
+    reset() {
+        this.files = [];
+    }
 }
 
 class Options {

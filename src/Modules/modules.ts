@@ -14,6 +14,8 @@ export * from "./Metadata/ExtractMetadata.ts";
 export * from "./Metadata/BikeshedMetadata.ts";
 export * from "./Metadata/FrontMatterMetadata.ts";
 
+export * from "./RssFeed/RSSFeedModule.ts";
+
 
 
 

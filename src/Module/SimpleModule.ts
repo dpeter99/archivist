@@ -33,6 +33,11 @@ export class SimpleModule implements IModule{
         return this.pipeline.OutputPath;
     }
 
+    /**
+     * Returns the relative path of the file compared to the Content root
+     * @param p 
+     * @returns 
+     */
     public getFileRelativePath(p:string):string{
        return path.relative(this.pipeline.ContentRoot,p);
     }

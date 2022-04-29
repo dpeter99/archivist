@@ -89,9 +89,7 @@ export class Archivist {
         for (const pipeline of this.pipelines) {
             let pro = pipeline.run();
             pro.then(res => {
-
                 this.processPipelineRes(res, pipeline);
-
             })
             w.push(pro);
         }
@@ -101,7 +99,7 @@ export class Archivist {
 
     }
 
-    private processPipelineRes(res: Result, pipeline: Pipeline, printFilesList: boolean = true) {
+    processPipelineRes(res: Result, pipeline: Pipeline, printFilesList: boolean = true) {
         if (res.error) {
             pipeline.printErrors();
         } else {
@@ -120,7 +118,8 @@ export class Archivist {
                         Title: d.metadata.Title,
                         Draft: d.meta.draft,
                         Template: path.basename(d.metadata.Template ?? ""),
-                        State: JSON.stringify( d.meta.state)
+                        //State: JSON.stringify( d.meta.state),
+                        //outputPath: d.meta.outputpath
                     })));
                 }
             } else {
