@@ -11,7 +11,7 @@
         <webMaster>webmaster@example.com</webMaster>
         <% helper.subArticles().forEach(doc => {%>
             <item>
-                <title><%=doc.meta.title %> : <%= doc.meta.type %></title>
+                <title><%=doc.meta.title %></title>
                 <link><%= helper.getLink(doc) %></link>
                 <description><%= doc.meta.description %></description>
                 <pubDate><%=doc.meta.date %></pubDate>
