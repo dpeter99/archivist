@@ -2,7 +2,7 @@
   "$schema": "../../../src/template.schema.json",
   "compiledPath": "",
   "ignore": [
-    " *.ejs",
+    "*.ejs",
     "template.json"
   ],
   "matchers": [

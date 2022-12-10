@@ -1,10 +1,8 @@
 import {Pipeline, Result} from "./Pipeline.ts";
-import {IModule} from "./Module/IModule.ts";
-import {Content} from "./Content.ts";
+import {Template} from "./Template.ts";
 
 import * as ink from 'https://deno.land/x/ink/mod.ts';
-import * as path from "https://deno.land/std@0.114.0/path/mod.ts";
-import {Template} from "./Template.ts";
+import * as path from "https://deno.land/std@0.167.0/path/mod.ts";
 
 export let archivistInst: Archivist;
 
@@ -52,7 +50,6 @@ export class Archivist {
 
         this.environment = conf.env;
 
-
         archivistInst = this;
     }
 
@@ -64,19 +61,14 @@ export class Archivist {
      */
     async run() {
         ink.terminal.log(`<green>Starting Archivist build</green>`)
-        let hasErrors: boolean = false;
+        let hasErrors = false;
 
-        let wait_pre: Promise<any>[] = [];
-        for (const preProcessor of this.preProcessors) {
-            let pro = preProcessor.run();
-            wait_pre.push(pro);
-
-            pro.then(res => {
-                this.processPipelineRes(res, preProcessor, false);
-                if (res.error) hasErrors = true;
-            })
-        }
-
+        const wait_pre: Promise<any>[] = this.preProcessors.map(p=>{
+            return p.run().then(res => {
+                this.processPipelineRes(res, p, false);
+                if (res.error) hasErrors = true;}
+            );
+        })
         await Promise.all(wait_pre);
 
         if (hasErrors) {
@@ -84,18 +76,11 @@ export class Archivist {
             return;
         }
 
-        let w: Promise<any>[] = [];
-
-        for (const pipeline of this.pipelines) {
-            let pro = pipeline.run();
-            pro.then(res => {
-
-                this.processPipelineRes(res, pipeline);
-
+        const w: Promise<any>[] = this.pipelines.map(p=>{
+            return p.run().then(res => {
+                this.processPipelineRes(res, p);
             })
-            w.push(pro);
-        }
-
+        });
         await Promise.all(w);
 
 

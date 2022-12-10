@@ -1,5 +1,4 @@
-import * as fs from "https://deno.land/std@0.114.0/fs/mod.ts";
-import * as Path from "https://deno.land/std@0.114.0/path/mod.ts";
+import * as Path from "https://deno.land/std@0.167.0/path/mod.ts";
 
 export class Template{
     path: string;
@@ -44,13 +43,16 @@ class TemplateData {
  * @param path
  */
 export function getTemplateData(path:string):TemplateData{
-    let packagePath = path+"/template.json";
-    if(!fs.existsSync(packagePath)){
-        //this.pipeline.reportError(this,`Could not find template.json for template at: \" ${packagePath} \"`);
-        throw `Could not find template.json for template at: \"${packagePath}\"`;
+    const packagePath = path+"/template.json";
+
+    let conf: TemplateData|undefined = undefined;
+    try{
+        conf = JSON.parse( Deno.readTextFileSync(packagePath));
     }
-
-    let conf = JSON.parse( Deno.readTextFileSync(packagePath));
-
-    return conf;
+    catch (error) {
+        if (!(error instanceof Deno.errors.NotFound)) {
+            throw `Could not find template.json for template at: \"${packagePath}\"`;
+        }
+    }
+    return conf!;
 }

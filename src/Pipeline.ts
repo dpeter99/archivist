@@ -2,7 +2,7 @@ import {IModule} from "./Module/IModule.ts";
 import {Content} from "./Content.ts";
 
 import * as ink from 'https://deno.land/x/ink/mod.ts'
-import * as path from "https://deno.land/std@0.114.0/path/mod.ts";
+import * as path from "https://deno.land/std@0.167.0/path/mod.ts";
 import {archivistInst} from "./Archivist.ts";
 
 
@@ -13,11 +13,14 @@ export class Pipeline{
 
     /**
      * The relative output root folder path for this pipeline
+     * Relative to the archivist instance's output
      */
     private outputPath?: string;
 
     /**
      * The relative content root path for this pipeline
+     * Relative to the working dir
+     * TODO: change it so it is relative to a path in Archivist
      */
     private contentRoot: string;
 
@@ -62,14 +65,11 @@ export class Pipeline{
             return new Result(true);
         }
 
-        //let content: Content[] = [];
-
         for (const module of this.modules) {
             if(archivistInst.detailedOutput)
                 console.log("Running " + module.constructor.name)
 
             await module.process(this.files);
-
         }
 
         if(this.hasErrors()){

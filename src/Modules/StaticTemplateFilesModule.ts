@@ -1,15 +1,13 @@
 import * as fs from "https://deno.land/std@0.115.1/fs/mod.ts";
 import { copy, copySync } from "https://deno.land/std@0.115.1/fs/copy.ts";
-import * as path from "https://deno.land/std/path/mod.ts";
+import * as path from "https://deno.land/std@0.167.0/path/mod.ts";
+
 import * as ink from 'https://deno.land/x/ink/mod.ts'
-
 import ProgressBar from "https://deno.land/x/progress@v1.2.4/mod.ts";
-
 
 import {SimpleModule} from "../Module/SimpleModule.ts";
 import {Pipeline} from "../Pipeline.ts";
 import {IModule} from "../Module/IModule.ts";
-import {archivistInst} from "../Archivist.ts";
 import {getTemplate} from "../utils/getTemplate.ts";
 import {Template} from "../Template.ts";
 import {WalkEntry} from "https://deno.land/std/fs/mod.ts";
@@ -22,15 +20,11 @@ import {dirname} from "https://deno.land/std@0.61.0/path/mod.ts";
  * isn't matched by the "ignore" list in your template.
  */
 export class StaticTemplateFilesModule extends SimpleModule {
-
     path?: string;
     template!: Template;
 
-    //outputPath!: string;
-
     constructor(templ?: string) {
         super();
-
         this.path = templ;
     }
 
@@ -38,17 +32,17 @@ export class StaticTemplateFilesModule extends SimpleModule {
         super.setup(pipeline, parent);
 
         try {
+            //Get this or default template
             this.template = getTemplate(this.path);
         } catch (e: any) {
             this.pipeline.reportError(this, e);
         }
 
-        //this.outputPath = "./out" + (this.pipeline.outputPath ?? "")
-
         return Promise.resolve();
     }
 
     async process() {
+        //Make sure we have a place to put the files
         fs.ensureDirSync(this.OutputPath);
 
         let files: WalkEntry[] = await toArray(fs.expandGlob(this.template.compiledPath + "/**/*"));
@@ -67,9 +61,6 @@ export class StaticTemplateFilesModule extends SimpleModule {
 
             return include;
         })
-
-
-        //let maxFileNameLength: number = files.map(value => path.basename(value.path).length).reduce((p, c) => Math.max(p, c));
 
         const progress = new ProgressBar({
             title: "Copy files:",
@@ -92,7 +83,6 @@ export class StaticTemplateFilesModule extends SimpleModule {
             }
             completed1++;
             await progress.render(completed1);
-
         }
     }
 

@@ -1,12 +1,11 @@
 import {SimpleModule} from "../Module/SimpleModule.ts";
 import {Content} from "../Content.ts";
-
-import * as Path from "https://deno.land/std/path/mod.ts";
-
-import {ensureDir} from "https://deno.land/std/fs/mod.ts";
-import {Archivist, archivistInst} from "../Archivist.ts";
 import {Pipeline} from "../Pipeline.ts";
 import {IModule} from "../Module/IModule.ts";
+
+import * as Path from "https://deno.land/std@0.167.0/path/mod.ts";
+import {ensureDir} from "https://deno.land/std@0.167.0/fs/mod.ts";
+
 
 /**
  * The output module is responsible for writing the files to the output folder.
@@ -31,7 +30,7 @@ export class OutputModule extends SimpleModule{
         this.outputPath = this.conf_path ?? this.OutputPath;
 
         if(this.outputPath == undefined){
-            this.pipeline.reportError(this, "There was no output folder definied");
+            this.pipeline.reportError(this, "There was no output folder defined");
         }
 
         return Promise.resolve();
@@ -47,13 +46,9 @@ export class OutputModule extends SimpleModule{
 
         path = path.replace(Path.extname(path),".html");
 
-        //console.log(path);
-
         await ensureDir(Path.dirname(path));
 
         await Deno.writeTextFile(path, doc.content);
-
-
     }
 
 }

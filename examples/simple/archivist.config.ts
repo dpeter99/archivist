@@ -29,7 +29,7 @@ export let config: Config = {
                 new FrontMatterMetadata()
             ),
             new MarkdownRender(),
-            new TemplateModule(),
+            new TemplateModule({templatePath:"./template"}),
             new OutputModule("./out/")
         )
     ]

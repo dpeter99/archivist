@@ -4,15 +4,14 @@ import {
     FileReaderModule,
     FrontMatterMetadata, MarkdownRender, OutputModule,
     Pipeline,
-    StaticTemplateFilesModule, TemplateModule,
-    run
+    StaticTemplateFilesModule, TemplateModule
 } from "../../src/index.ts";
 import {WebUrlOutputResolver} from "../../src/Modules/WebUrlOutputResolver.ts";
 
 
 export let config: Config = {
     env:"production",
-    detailedOutput: true,
+    detailedOutput: false,
     template: "./theme",
     outputPath: "./out",
     outputURL: "http://127.0.0.1:8888",
@@ -34,5 +33,3 @@ export let config: Config = {
         )
     ]
 }
-
-run(config);
