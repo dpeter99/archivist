@@ -3,7 +3,6 @@
 export class StatusCode{
     tag: string
     name:string
-
     constructor(tag:string, name:string) {
         this.tag = tag;
         this.name = name

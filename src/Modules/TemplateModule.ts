@@ -4,15 +4,16 @@ import {StatusCodes} from "../StatusCodes.ts";
 import {Pipeline} from "../Pipeline.ts";
 import {IModule} from "../Module/IModule.ts";
 import {Template as ArcTemplate} from "../Template.ts";
-
-import * as fs from "https://deno.land/std/fs/mod.ts";
-import * as path from "https://deno.land/std/path/mod.ts";
-
-import {compile,render, Template} from "https://deno.land/x/deno_ejs/mod.ts";
-
 import {interpolate} from "../utils/string-interpolator.ts";
 import {getTemplate} from "../utils/getTemplate.ts";
 import {ArticleHelper} from "../utils/ArticleHelper.ts";
+
+import * as fs from "https://deno.land/std@0.167.0/fs/mod.ts";
+import * as path from "https://deno.land/std@0.167.0/path/mod.ts";
+
+import {compile,render, Template} from "https://deno.land/x/deno_ejs/mod.ts";
+
+
 
 
 function compile_help(text:string, conf:any):Template{
@@ -24,6 +25,10 @@ interface TemplateModuleParams {
     helper?: (path:string, module:TemplateModule)=>object
 }
 
+/**
+ * This module uses EJS template files to create the htmls
+ *
+ */
 export class TemplateModule extends SimpleModule{
 
     /**
@@ -43,7 +48,6 @@ export class TemplateModule extends SimpleModule{
     private _helper: (path:string, module:TemplateModule) => object;
 
 
-
     /**
      *
      * @param templatePath The path to the root of the template where the project.json is
@@ -61,7 +65,6 @@ export class TemplateModule extends SimpleModule{
         else{
             this._helper = helper;
         }
-
     }
 
     /**

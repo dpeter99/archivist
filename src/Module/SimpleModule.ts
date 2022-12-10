@@ -29,6 +29,10 @@ export class SimpleModule implements IModule{
         return Promise.resolve(undefined);
     }
 
+    /**
+     * The root of the output folder
+     * @constructor
+     */
     public get OutputPath(){
         return this.pipeline.OutputPath;
     }

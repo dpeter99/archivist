@@ -3,21 +3,14 @@ import {Content} from "../Content.ts";
 
 import {SimpleModule} from "../Module/SimpleModule.ts";
 
-//import "https://esm.sh/@types/markdown-it";
-import MarkdownIt from "https://esm.sh/markdown-it";
+import MarkdownIt from "npm:markdown-it";
 
-//import {MarkdownIt} from "../utils/markdown/markdown.d.ts";
-//import "https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.2.0/markdown-it.min.js";
-
-// @ts-ignore
-type MarkdownIt = markdownit;
-
-import markdownItMultimdTable from "https://esm.sh/markdown-it-multimd-table";
-import markdownItAttrs from "https://esm.sh/markdown-it-attrs";
-import markdownItAnchors from "https://cdn.skypack.dev/markdown-it-anchor";
+import markdownItMultimdTable from "npm:markdown-it-multimd-table";
+import markdownItAttrs from "npm:markdown-it-attrs";
+import markdownItAnchors from "npm:markdown-it-anchor";
 import markdownItIB from "https://deno.land/x/markdown_it_ib@1.0.0/mod.js";
-import markdownItCheckbox from "https://cdn.skypack.dev/@gerhobbelt/markdown-it-checkbox"
-import markdownItContainer from 'https://cdn.skypack.dev/markdown-it-container';
+import markdownItCheckbox from "npm:@gerhobbelt/markdown-it-checkbox"
+import markdownItContainer from 'npm:markdown-it-container';
 
 import {MarkdownHeadingNumbers} from "../utils/markdown/MarkdownHeaderNumber.ts";
 import {renderPermalink} from "../utils/markdown/MarkdownHeaderLink.ts";
@@ -66,17 +59,9 @@ export class MarkdownRender extends SimpleModule{
     setup(pipeline:Pipeline, parent?:IModule): Promise<any> {
         super.setup(pipeline, parent);
 
-        //@ts-ignore
         if(typeof MarkdownIt !== 'undefined'){
             this.markdownIt = new MarkdownIt();
         }
-        //@ts-ignore
-        else if(typeof window.markdownIt !== 'undefined'){
-            //@ts-ignore
-            this.markdownIt = new window.markdownIt();
-        }
-
-
 
         if(this._props.func != undefined){
             this.markdownIt = this._props.func(this.markdownIt);
@@ -107,8 +92,6 @@ export class MarkdownRender extends SimpleModule{
 
 
     async processDoc(doc:Content): Promise<any> {
-
-        //doc.content = marked(doc.content);
         doc.content = this.markdownIt.render(doc.content);
     }
 
