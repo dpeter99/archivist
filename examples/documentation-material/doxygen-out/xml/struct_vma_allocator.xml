@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_vma_allocator" kind="struct" language="C++" prot="public">
+    <compoundname>VmaAllocator</compoundname>
+    <includes refid="vk__mem__alloc_8h" local="no">vk_mem_alloc.h</includes>
+    <briefdescription>
+<para>Represents main object of this library initialized. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Fill structure <ref refid="struct_vma_allocator_create_info" kindref="compound">VmaAllocatorCreateInfo</ref> and call function <ref refid="group__group__init_1gaf77c946fbecfcc54d02c3d1c1e7e23e7" kindref="member">vmaCreateAllocator()</ref> to create it. Call function <ref refid="group__group__init_1ga0383c8c957625914e9b89bd165ff13f3" kindref="member">vmaDestroyAllocator()</ref> to destroy it.</para>
+<para>It is recommended to create just one object of this type per `VkDevice` object, right after Vulkan is initialized and keep it alive until before Vulkan device is destroyed. </para>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="817" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

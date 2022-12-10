@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_default_inspectors_8cpp" kind="file" language="C++">
+    <compoundname>DefaultInspectors.cpp</compoundname>
+    <includes local="yes">shpch.h</includes>
+    <includes refid="_default_inspectors_8h" local="yes">DefaultInspectors.h</includes>
+    <includes local="yes">imgui.h</includes>
+    <includes local="yes">ImGui/IconsFontAwesome5.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>shadow-engine/shadow-entity/Entities/Internal/Inspectors/DefaultInspectors.cpp</label>
+        <link refid="_default_inspectors_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DefaultInspectors.h</label>
+        <link refid="_default_inspectors_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>EntitySystem/Entity.h</label>
+      </node>
+      <node id="6">
+        <label>EntitySystem/SceneEntity.h</label>
+      </node>
+      <node id="8">
+        <label>ImGui/IconsFontAwesome5.h</label>
+      </node>
+      <node id="4">
+        <label>Inspector/InspectorSystem.h</label>
+      </node>
+      <node id="7">
+        <label>imgui.h</label>
+      </node>
+      <node id="2">
+        <label>shpch.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_default_inspectors_8cpp_1ab79b2148c1586acb15e27029b7cc281d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DrawTransformInspector</definition>
+        <argsstring>(ShadowEngine::EntitySystem::rtm_ptr&lt; ShadowEngine::EntitySystem::SceneEntity &gt; &amp;entity)</argsstring>
+        <name>DrawTransformInspector</name>
+        <param>
+          <type><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">ShadowEngine::EntitySystem::rtm_ptr</ref>&lt; <ref refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" kindref="compound">ShadowEngine::EntitySystem::SceneEntity</ref> &gt; &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/Entities/Internal/Inspectors/DefaultInspectors.cpp" line="10" column="6" bodyfile="shadow-engine/shadow-entity/Entities/Internal/Inspectors/DefaultInspectors.cpp" bodystart="10" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;shpch.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_default_inspectors_8h" kindref="compound">DefaultInspectors.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;imgui.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ImGui/IconsFontAwesome5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_default_inspectors_8cpp_1ab79b2148c1586acb15e27029b7cc281d" kindref="member">DrawTransformInspector</ref>(<ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">ShadowEngine::EntitySystem::rtm_ptr&lt;ShadowEngine::EntitySystem::SceneEntity&gt;</ref>&amp;<sp/>entity)<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ImGui::CollapsingHeader((std::string(ICON_FA_MAP_MARKER)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>Transform&quot;</highlight><highlight class="normal">).c_str(),ImGuiTreeNodeFlags_DefaultOpen))</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pos<sp/>=<sp/>entity-&gt;GetPosition();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>vec3_p[3]<sp/>=<sp/>{<sp/>pos.x,<sp/>pos.y,<sp/>pos.z};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ImGui::InputFloat3(</highlight><highlight class="stringliteral">&quot;position&quot;</highlight><highlight class="normal">,<sp/>vec3_p))<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entity-&gt;SetPosition(glm::vec3(vec3_p[0],vec3_p[1],vec3_p[2]));</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rot<sp/>=<sp/>entity-&gt;GetRotation();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>vec3_r[3]<sp/>=<sp/>{<sp/>rot.x,<sp/>rot.y,<sp/>rot.z<sp/>};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ImGui::InputFloat3(</highlight><highlight class="stringliteral">&quot;rotation&quot;</highlight><highlight class="normal">,<sp/>vec3_r))<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entity-&gt;SetRotation(glm::vec3(vec3_r[0],<sp/>vec3_r[1],<sp/>vec3_r[2]));</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>size<sp/>=<sp/>entity-&gt;GetScale();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>vec3_s[3]<sp/>=<sp/>{<sp/>size.x,<sp/>size.y,<sp/>size.z<sp/>};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ImGui::InputFloat3(</highlight><highlight class="stringliteral">&quot;size&quot;</highlight><highlight class="normal">,<sp/>vec3_s))<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entity-&gt;SetScale(glm::vec3(vec3_s[0],<sp/>vec3_s[1],<sp/>vec3_s[2]));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>forward<sp/>=<sp/>entity-&gt;GetTransform()-&gt;GetForward();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>forward_vec[3]<sp/>=<sp/>{<sp/>forward.x,<sp/>forward.y,<sp/>forward.z<sp/>};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImGui::InputFloat3(</highlight><highlight class="stringliteral">&quot;forvard&quot;</highlight><highlight class="normal">,<sp/>forward_vec);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ImGui::TreePop();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-entity/Entities/Internal/Inspectors/DefaultInspectors.cpp"/>
+  </compounddef>
+</doxygen>

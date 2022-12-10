@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_shadow_engine_1_1_entity_system_1_1_scene" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::EntitySystem::Scene</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_s_h_object" prot="public" virt="non-virtual">ShadowEngine::SHObject</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">std::enable_shared_from_this&lt; Scene &gt;</basecompoundref>
+    <includes refid="_scene_8h" local="no">Scene.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_entity_system_1_1_scene_1af3b4e75abce6ed2576cd303ab8ec8ea0" prot="private" static="no" mutable="no">
+        <type><ref refid="_s_h_object_8h_1ab6e37410b4b149b1b5cb3c4bafe8aa53" kindref="member">SHObject_Base</ref>(<ref refid="class_shadow_engine_1_1_entity_system_1_1_scene" kindref="compound">Scene</ref>) private ShadowEntity::Transform</type>
+        <definition>SHObject_Base (Scene) private ShadowEntity::Transform ShadowEngine::EntitySystem::Scene::centerTransform</definition>
+        <argsstring></argsstring>
+        <name>centerTransform</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Scene::centerTransform</qualifiedname>
+        <briefdescription>
+<para>Represents the Entities in this <ref refid="class_shadow_engine_1_1_entity_system_1_1_scene" kindref="compound">Scene</ref>  </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is a list of all the top level Entities that are in this <ref refid="class_shadow_engine_1_1_entity_system_1_1_scene" kindref="compound">Scene</ref> To add to the list use AddEntity </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Scene.h" line="32" column="25" bodyfile="shadow-engine/shadow-entity/inc/Scene.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_entity_system_1_1_scene_1ab20a1472550de79fb38de6c37e09205a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_camera" kindref="compound">Camera</ref> *</type>
+        <definition>Camera* ShadowEngine::EntitySystem::Scene::mainCamera</definition>
+        <argsstring></argsstring>
+        <name>mainCamera</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Scene::mainCamera</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Scene.h" line="35" column="8" bodyfile="shadow-engine/shadow-entity/inc/Scene.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_1aff70b59dab22cb7c353f5050a89b2d6c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EntitySystem::Scene::Scene</definition>
+        <argsstring>()</argsstring>
+        <name>Scene</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Scene::Scene</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Scene.h" line="37" column="1" bodyfile="shadow-engine/shadow-entity/inc/Scene.h" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_1a85b22696e81e0de49ceaf77d844b03a4" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ShadowEngine::EntitySystem::Scene::~Scene</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Scene</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Scene::~Scene</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Scene.h" line="40" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_1acd326d6d9d627476ec72eaa7b7dad4b2" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::Scene::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Scene::Init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Scene.h" line="43" column="14" bodyfile="shadow-engine/shadow-entity/src/Scene.cpp" bodystart="21" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_1a1564d5941f8cf1bce6760f7e6fadd3da" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::Scene::Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Scene::Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Scene.h" line="46" column="14" bodyfile="shadow-engine/shadow-entity/src/Scene.cpp" bodystart="5" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_1aafc74aa73f01d1faa1de4a6c0266af24" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::Scene::Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Scene::Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Scene.h" line="47" column="14" bodyfile="shadow-engine/shadow-entity/src/Scene.cpp" bodystart="13" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_1a4cbab0950d19e448a903867b2029bed7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>class ...</type>
+            <declname>ARGS</declname>
+            <defname>ARGS</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr</ref>&lt; T &gt;</type>
+        <definition>rtm_ptr&lt; T &gt; ShadowEngine::EntitySystem::Scene::AddEntity</definition>
+        <argsstring>(ARGS &amp;&amp;... args)</argsstring>
+        <name>AddEntity</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Scene::AddEntity</qualifiedname>
+        <param>
+          <type>ARGS &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Scene.h" line="50" column="9" bodyfile="shadow-engine/shadow-entity/inc/Scene.h" bodystart="50" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_1a89b725ce74522e7d49274a244f2f0842" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::Scene::DestroyEntity</definition>
+        <argsstring>(rtm_ptr&lt; T &gt; &amp;entity)</argsstring>
+        <name>DestroyEntity</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Scene::DestroyEntity</qualifiedname>
+        <param>
+          <type><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr</ref>&lt; T &gt; &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Scene.h" line="60" column="6" bodyfile="shadow-engine/shadow-entity/inc/Scene.h" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_1abf9ac7529f6b62509c00fba623c561d2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::Scene::DestroyScene</definition>
+        <argsstring>()</argsstring>
+        <name>DestroyScene</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Scene::DestroyScene</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Scene.h" line="65" column="6" bodyfile="shadow-engine/shadow-entity/inc/Scene.h" bodystart="65" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_1a7b6ce2d22535fd84d1009b0644f7a280" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ShadowEntity::Transform *</type>
+        <definition>ShadowEntity::Transform * ShadowEngine::EntitySystem::Scene::GetCenter</definition>
+        <argsstring>()</argsstring>
+        <name>GetCenter</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Scene::GetCenter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Scene.h" line="72" column="25" bodyfile="shadow-engine/shadow-entity/inc/Scene.h" bodystart="72" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a scene, that is composed of Entities. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ShadowEngine::EntitySystem::Scene</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_scene"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object"/>
+      </node>
+      <node id="3">
+        <label>std::enable_shared_from_this&lt; Scene &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ShadowEngine::EntitySystem::Scene</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_scene"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object"/>
+      </node>
+      <node id="3">
+        <label>std::enable_shared_from_this&lt; Scene &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-entity/inc/Scene.h" line="17" column="1" bodyfile="shadow-engine/shadow-entity/inc/Scene.h" bodystart="18" bodyend="75"/>
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_1a4cbab0950d19e448a903867b2029bed7" prot="private" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Scene</scope><name>AddEntity</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_1af3b4e75abce6ed2576cd303ab8ec8ea0" prot="private" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Scene</scope><name>centerTransform</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_1a89b725ce74522e7d49274a244f2f0842" prot="private" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Scene</scope><name>DestroyEntity</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_1abf9ac7529f6b62509c00fba623c561d2" prot="private" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Scene</scope><name>DestroyScene</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a5244bd8527763320cbef208e3a6e4860" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Scene</scope><name>GenerateId</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_1a7b6ce2d22535fd84d1009b0644f7a280" prot="private" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Scene</scope><name>GetCenter</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a3597667efd33b935a89ac11d3b47a215" prot="public" virt="pure-virtual"><scope>ShadowEngine::EntitySystem::Scene</scope><name>GetType</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" virt="pure-virtual"><scope>ShadowEngine::EntitySystem::Scene</scope><name>GetTypeId</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_1acd326d6d9d627476ec72eaa7b7dad4b2" prot="private" virt="virtual"><scope>ShadowEngine::EntitySystem::Scene</scope><name>Init</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_1ab20a1472550de79fb38de6c37e09205a" prot="private" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Scene</scope><name>mainCamera</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_1aff70b59dab22cb7c353f5050a89b2d6c" prot="private" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Scene</scope><name>Scene</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_1a1564d5941f8cf1bce6760f7e6fadd3da" prot="private" virt="virtual"><scope>ShadowEngine::EntitySystem::Scene</scope><name>Start</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_1aafc74aa73f01d1faa1de4a6c0266af24" prot="private" virt="virtual"><scope>ShadowEngine::EntitySystem::Scene</scope><name>Update</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_1a85b22696e81e0de49ceaf77d844b03a4" prot="private" virt="virtual"><scope>ShadowEngine::EntitySystem::Scene</scope><name>~Scene</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::Scene</scope><name>~SHObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

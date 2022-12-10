@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_64855983ff04cafcf8943b098cf089b0" kind="dir">
+    <compoundname>shadow-runtime</compoundname>
+    <innerdir refid="dir_31e3a40f24791a8537e1d90d73e88fa1">shadow-runtime/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-runtime/"/>
+  </compounddef>
+</doxygen>

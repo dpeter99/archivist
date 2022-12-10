@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="concept_shadow_engine_1_1_entity_system_1_1_is_entity" kind="concept">
+    <compoundname>ShadowEngine::EntitySystem::IsEntity</compoundname>
+    <includes refid="_entity_8h" local="no">Entity.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <initializer>template&lt;typename T&gt;
+concept <ref refid="concept_shadow_engine_1_1_entity_system_1_1_is_entity" kindref="compound">ShadowEngine::EntitySystem::IsEntity</ref> =  std::is_base_of&lt;Entity,T&gt;::value    </initializer>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-entity/inc/Entity.h" line="283" column="5"/>
+  </compounddef>
+</doxygen>

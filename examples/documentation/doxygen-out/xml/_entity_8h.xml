@@ -1,0 +1,384 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_entity_8h" kind="file" language="C++">
+    <compoundname>Entity.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">vector</includes>
+    <includes refid="_entity_base_8h" local="yes">EntityBase.h</includes>
+    <includes refid="_s_h_object_8h" local="yes">SHObject.h</includes>
+    <includedby refid="_entity_registry_8h" local="yes">shadow-engine/shadow-entity/inc/EntityRegistry.h</includedby>
+    <includedby refid="_scene_8h" local="yes">shadow-engine/shadow-entity/inc/Scene.h</includedby>
+    <includedby refid="_scene_entity_8h" local="yes">shadow-engine/shadow-entity/inc/SceneEntity.h</includedby>
+    <includedby refid="_default_entities_8cpp" local="yes">shadow-engine/shadow-entity/src/DefaultEntities.cpp</includedby>
+    <includedby refid="_entity_8cpp" local="yes">shadow-engine/shadow-entity/src/Entity.cpp</includedby>
+    <includedby refid="_entity_manager_8cpp" local="yes">shadow-engine/shadow-entity/src/EntityManager.cpp</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>exports.h</label>
+        <link refid="exports_8h"/>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-entity/inc/Entity.h</label>
+        <link refid="_entity_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>EntityBase.h</label>
+        <link refid="_entity_base_8h"/>
+      </node>
+      <node id="6">
+        <label>SHObject.h</label>
+        <link refid="_s_h_object_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>typeinfo</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>shadow-engine/shadow-entity/Entities/Player.cpp</label>
+        <link refid="_player_8cpp"/>
+      </node>
+      <node id="3">
+        <label>shadow-engine/shadow-entity/Entities/Player.h</label>
+        <link refid="_player_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-entity/inc/Entity.h</label>
+        <link refid="_entity_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>shadow-engine/shadow-entity/inc/EntityRegistry.h</label>
+        <link refid="_entity_registry_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>shadow-engine/shadow-entity/inc/EntitySystem.h</label>
+        <link refid="_entity_system_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>shadow-engine/shadow-entity/inc/Scene.h</label>
+        <link refid="_scene_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>shadow-engine/shadow-entity/inc/SceneEntity.h</label>
+        <link refid="_scene_entity_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>shadow-engine/shadow-entity/src/DefaultEntities.cpp</label>
+        <link refid="_default_entities_8cpp"/>
+      </node>
+      <node id="6">
+        <label>shadow-engine/shadow-entity/src/Entity.cpp</label>
+        <link refid="_entity_8cpp"/>
+      </node>
+      <node id="14">
+        <label>shadow-engine/shadow-entity/src/EntityManager.cpp</label>
+        <link refid="_entity_manager_8cpp"/>
+      </node>
+      <node id="7">
+        <label>shadow-engine/shadow-entity/src/EntityRegistry.cpp</label>
+        <link refid="_entity_registry_8cpp"/>
+      </node>
+      <node id="10">
+        <label>shadow-engine/shadow-entity/src/EntitySystem.cpp</label>
+        <link refid="_entity_system_8cpp"/>
+      </node>
+      <node id="11">
+        <label>shadow-engine/shadow-entity/src/Scene.cpp</label>
+        <link refid="_scene_8cpp"/>
+      </node>
+      <node id="13">
+        <label>shadow-engine/shadow-entity/src/SceneEntity.cpp</label>
+        <link refid="_scene_entity_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" prot="public">ShadowEngine::EntitySystem::rtm_ptr</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_entity_system_1_1_entity" prot="public">ShadowEngine::EntitySystem::Entity</innerclass>
+    <innernamespace refid="namespace_shadow_engine">ShadowEngine</innernamespace>
+    <innernamespace refid="namespace_shadow_engine_1_1_shadow_entity">ShadowEngine::ShadowEntity</innernamespace>
+    <innernamespace refid="namespace_shadow_engine_1_1_entity_system">ShadowEngine::EntitySystem</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_entity_base_8h" kindref="compound">EntityBase.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_s_h_object_8h" kindref="compound">SHObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="namespace_shadow_engine_1_1_shadow_entity" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_shadow_engine_1_1_shadow_entity" kindref="compound">ShadowEngine::ShadowEntity</ref><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Transform;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="namespace_shadow_engine_1_1_entity_system" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_shadow_engine_1_1_entity_system" kindref="compound">ShadowEngine::EntitySystem</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_shadow_engine_1_1_entity_system_1_1_system_callbacks" kindref="compound">SystemCallbacks</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_shadow_engine_1_1_entity_system_1_1_scene" kindref="compound">Scene</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_manager" kindref="compound">EntityManager</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="namespace_shadow_engine_1_1_entity_system_1a70b6222c789aa7585ac013f1f674717e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_shadow_engine_1_1_entity_system_1a70b6222c789aa7585ac013f1f674717e" kindref="member">Rtm_UUID</ref><sp/>=<sp/>int;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="26" refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Type*<sp/>m_ptr;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_shadow_engine_1_1_entity_system_1a70b6222c789aa7585ac013f1f674717e" kindref="member">Rtm_UUID</ref><sp/>m_uid;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34" refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a0e8be7b4c7c45c25c01122856b2bb372" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a0e8be7b4c7c45c25c01122856b2bb372" kindref="member">rtm_ptr</ref>(Type*<sp/>ptr)<sp/>:<sp/>m_ptr(ptr),<sp/>m_uid(ptr-&gt;m_runtimeUID)<sp/>{}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a6ba6cbdb9c5138fd89d5526c98d12da7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a6ba6cbdb9c5138fd89d5526c98d12da7" kindref="member">rtm_ptr</ref>()<sp/>:<sp/>m_ptr(nullptr)<sp/>{}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="39" refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a5f17a97b7999556a5159d08d2444def0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a5f17a97b7999556a5159d08d2444def0" kindref="member">rtm_ptr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr&lt;T&gt;</ref>&amp;<sp/>o)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_ptr<sp/>=<sp/>(Type*)o.<ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a00e593fc94065da83beb44a047123bd5" kindref="member">getInternalPointer</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_uid<sp/>=<sp/>o.<ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1ab146d080b9893a133e29b124965ec651" kindref="member">getInternalUID</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1adf7e778e2ed37fb4bbceba4232074e8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Type*<sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1adf7e778e2ed37fb4bbceba4232074e8e" kindref="member">operator-&gt;</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="45"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_ptr-&gt;m_runtimeUID<sp/>!=<sp/>m_uid)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(m_ptr-&gt;m_runtimeUID<sp/>==<sp/>m_uid);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((Type*)m_ptr);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a19dc17d42e68a32922f328cf3aea97e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>bool()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_ptr<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>m_ptr-&gt;m_runtimeUID<sp/>==<sp/>m_uid;<sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="56" refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a934c49cc2721004ea055bb400df8f4f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a934c49cc2721004ea055bb400df8f4f8" kindref="member">operator ==</ref>(<ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr&lt;T&gt;</ref><sp/>o)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_ptr<sp/>==<sp/>o.m_ptr<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_uid<sp/>==<sp/>o.m_uid;<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="62" refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a4bb3e0e68ebf5bdf922bd7dd9f1d9452" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr&lt;T&gt;</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr&lt;T&gt;</ref>(m_ptr);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1aeea100a912af1f9caf17bc0853d255e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1aeea100a912af1f9caf17bc0853d255e2" kindref="member">null</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_ptr<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_uid<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a00e593fc94065da83beb44a047123bd5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a00e593fc94065da83beb44a047123bd5" kindref="member">getInternalPointer</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)m_ptr;<sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1ab146d080b9893a133e29b124965ec651" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1ab146d080b9893a133e29b124965ec651" kindref="member">getInternalUID</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_uid;<sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="namespace_shadow_engine_1_1_entity_system_1a02582979cc3de070200b67134662911b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespace_shadow_engine_1_1_entity_system_1a02582979cc3de070200b67134662911b" kindref="member">EntityFlags</ref><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_shadow_engine_1_1_entity_system_1a02582979cc3de070200b67134662911bab50339a10e1de285ac99d4c3990b8693" kindref="member">NONE</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_shadow_engine_1_1_entity_system_1a02582979cc3de070200b67134662911ba8a544ba2099dce8d28d22fbc876dade6" kindref="member">HAS_TICK</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>0,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_shadow_engine_1_1_entity_system_1a02582979cc3de070200b67134662911ba82b116c18b589fc97d7db454ee054db5" kindref="member">HAS_LATE_TICK</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>1</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="class_shadow_engine_1_1_entity_system_1_1_entity" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_s_h_object" kindref="compound">SHObject</ref></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_s_h_object_8h_1ab6e37410b4b149b1b5cb3c4bafe8aa53" kindref="member">SHObject_Base</ref>(<ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref>)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_shadow_engine_1_1_entity_system_1a70b6222c789aa7585ac013f1f674717e" kindref="member">Rtm_UUID</ref><sp/>m_runtimeUID;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespace_shadow_engine_1_1_entity_system_1a70b6222c789aa7585ac013f1f674717e" kindref="member">Rtm_UUID</ref><sp/>INVALID_UID<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_runtimeIndex;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>name;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_scene" kindref="compound">Scene</ref>*<sp/>scene;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;rtm_ptr&lt;Entity&gt;&gt;<sp/>internalHierarchy;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;rtm_ptr&lt;Entity&gt;&gt;<sp/>hierarchy;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr&lt;Entity&gt;</ref><sp/>parent;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1acc838f644f91d02e1c88baa793f790db" kindref="member">Entity</ref>();</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1acc838f644f91d02e1c88baa793f790db" kindref="member">Entity</ref>(<ref refid="class_shadow_engine_1_1_entity_system_1_1_scene" kindref="compound">Scene</ref>*<sp/>scene);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ab83dad935ab0cdc34d088530aa4290d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ab83dad935ab0cdc34d088530aa4290d3" kindref="member">~Entity</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref>*<sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a2ce2825f04cf5a3994103d252e0a437d" kindref="member">Create</ref>(<ref refid="class_shadow_engine_1_1_entity_system_1_1_scene" kindref="compound">Scene</ref>*<sp/>scene);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a7ed91c18cd535d461d0c0bee314778b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a7ed91c18cd535d461d0c0bee314778b7" kindref="member">Build</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="174" refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ab66b3c8b723d29f36182a220ad5e4333" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ab66b3c8b723d29f36182a220ad5e4333" kindref="member">Init</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179" refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ad2ef421c23738c0b95102972405fb0ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ad2ef421c23738c0b95102972405fb0ab" kindref="member">Start</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ab9dbee0b3a70b05ed23472b94f7e5973" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ab9dbee0b3a70b05ed23472b94f7e5973" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt)<sp/>{};</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189" refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a4cffe49cb70b159efeccc3c6c3fa1535" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a4cffe49cb70b159efeccc3c6c3fa1535" kindref="member">LateUpdate</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a651807d474b385c7069d842af13469c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a651807d474b385c7069d842af13469c6" kindref="member">Render</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ae8e132ee0fe4cb70ab47237867890cfd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ae8e132ee0fe4cb70ab47237867890cfd" kindref="member">LateRender</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a06cd52aa29a540304d1fac5d81b4adc5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="namespace_shadow_engine_1_1_entity_system_1a02582979cc3de070200b67134662911b" kindref="member">EntityFlags</ref><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a06cd52aa29a540304d1fac5d81b4adc5" kindref="member">GetFlags</ref>();</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>ShadowEntity::Transform*<sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a88673e7fb3299e723c9f3742086f371e" kindref="member">GetTransform</ref>();</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Internal<sp/>call</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a5b61f357021bff0686ae651d3002871a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a5b61f357021bff0686ae651d3002871a" kindref="member">ParentTransformUpdated</ref>()</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1af98d0541f3281b0817d6ac558ce505c1" kindref="member">TransformChanged</ref>();</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Override<sp/>for<sp/>custom<sp/>behaviour<sp/>on<sp/>transform<sp/>change</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210" refid="class_shadow_engine_1_1_entity_system_1_1_entity_1af98d0541f3281b0817d6ac558ce505c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1af98d0541f3281b0817d6ac558ce505c1" kindref="member">TransformChanged</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ad5520f0873e2e6cc070d3a594cdae14b" kindref="member">SetScene</ref>(<ref refid="class_shadow_engine_1_1_entity_system_1_1_scene" kindref="compound">Scene</ref>*<sp/>se);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a467b64e41054aa1ce0a351c58a9b607c" kindref="member">SetParent</ref>(<ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr&lt;Entity&gt;</ref><sp/>e);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">T,<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">...ARGS&gt;</highlight></codeline>
+<codeline lineno="223" refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a167917321102ba2540d58b63956ce501" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr&lt;T&gt;</ref><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a167917321102ba2540d58b63956ce501" kindref="member">AddChildEntity</ref>(ARGS&amp;&amp;...<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr&lt;T&gt;</ref><sp/>ptr<sp/>=<sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_manager_1a85e368044c22d2af736ec5b585901041" kindref="member">EntityManager::Instance</ref>-&gt;<ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_manager_1a4495283d40aa613011330fc4a7fc675b" kindref="member">AddEntity</ref>&lt;T&gt;(std::forward&lt;ARGS&gt;(args)...);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;scene<sp/>=<sp/>scene;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hierarchy.push_back(ptr);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;SetParent(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">T,<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">...ARGS&gt;</highlight></codeline>
+<codeline lineno="233" refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a0631f85d7f63698d6277dab44eef0458" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr&lt;T&gt;</ref><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a0631f85d7f63698d6277dab44eef0458" kindref="member">AddInternalChildEntity</ref>(ARGS&amp;&amp;...<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr&lt;T&gt;</ref><sp/>ptr<sp/>=<sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_manager_1a85e368044c22d2af736ec5b585901041" kindref="member">EntityManager::Instance</ref>-&gt;<ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_manager_1a4495283d40aa613011330fc4a7fc675b" kindref="member">AddEntity</ref>&lt;T&gt;(std::forward&lt;ARGS&gt;(args)...);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;scene<sp/>=<sp/>scene;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>internalHierarchy.push_back(ptr);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;SetParent(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ae349cdee7f2ea586dbacf56e8ef1c4c8" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref>&amp;<sp/>dt);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="247" refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ae1e9c0d251e50e5c83017674bfda6479" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ae1e9c0d251e50e5c83017674bfda6479" kindref="member">UpdateEntities</ref>(<ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_manager" kindref="compound">EntityManager</ref>*<sp/>mgr,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt)</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_container" kindref="compound">EntityContainer&lt;T&gt;</ref>&amp;<sp/>container<sp/>=<sp/>*mgr-&gt;<ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_manager_1a9445fc4056805ee568de56dea0f791ad" kindref="member">GetContainerByType</ref>&lt;T&gt;();</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for<sp/>each</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<sp/>current<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>container)</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current.Update(dt);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="260" refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a3f3be81f16814ef82260bc17f3135abe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a3f3be81f16814ef82260bc17f3135abe" kindref="member">InitEntities</ref>(<ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_manager" kindref="compound">EntityManager</ref>*<sp/>mgr)</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>container<sp/>=<sp/>*mgr-&gt;<ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_manager_1a9445fc4056805ee568de56dea0f791ad" kindref="member">GetContainerByType</ref>&lt;T&gt;();</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for<sp/>each</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<sp/>current<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>container)</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current.Init();</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="273" refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a352e0c6d95699f06f0a427ea7c313e42" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a352e0c6d95699f06f0a427ea7c313e42" kindref="member">RegisterDefaultUpdate</ref>(<ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_manager" kindref="compound">EntityManager</ref>&amp;<sp/>mgr)<sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_shadow_engine_1_1_entity_system_1_1_system_callbacks" kindref="compound">SystemCallbacks</ref><sp/>s;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s.<ref refid="struct_shadow_engine_1_1_entity_system_1_1_system_callbacks_1a3c7efb7c8f783c672e6f4798f527e57b" kindref="member">update</ref><sp/>=<sp/>&amp;UpdateEntities&lt;T&gt;;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s.<ref refid="struct_shadow_engine_1_1_entity_system_1_1_system_callbacks_1acd39a7804165cd347b9deb4162e4572b" kindref="member">init</ref><sp/>=<sp/>&amp;InitEntities&lt;T&gt;;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mgr.<ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_manager_1af04b9e274edbf9c29e8ff7a26e236116" kindref="member">AddSystem</ref>(s);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="283" refid="concept_shadow_engine_1_1_entity_system_1_1_is_entity" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="concept_shadow_engine_1_1_entity_system_1_1_is_entity" kindref="compound">IsEntity</ref><sp/>=<sp/>std::is_base_of&lt;Entity,T&gt;::value;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-entity/inc/Entity.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_geo_1_1_vertex_color" kind="struct" language="C++" prot="public">
+    <compoundname>Geo::VertexColor</compoundname>
+    <includes refid="_geometry_8h" local="no">Geometry.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_geo_1_1_vertex_color_1aab0a413999984090386715b64f143b7b" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 Geo::VertexColor::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <qualifiedname>Geo::VertexColor::position</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" line="58" column="19" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_geo_1_1_vertex_color_1a03b9ef05f420eb22f6bcedbcf03d7bae" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 Geo::VertexColor::color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <qualifiedname>Geo::VertexColor::color</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" line="59" column="19" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="struct_geo_1_1_vertex_color_1a2db609bfd7bf9f5d8b7288b021bea02a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkVertexInputBindingDescription</type>
+        <definition>static VkVertexInputBindingDescription Geo::VertexColor::getBindingDesc</definition>
+        <argsstring>()</argsstring>
+        <name>getBindingDesc</name>
+        <qualifiedname>Geo::VertexColor::getBindingDesc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" line="62" column="48" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" bodystart="62" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_geo_1_1_vertex_color_1a707954674075321627c5e8c78895c911" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; VkVertexInputAttributeDescription &gt;</type>
+        <definition>static std::vector&lt; VkVertexInputAttributeDescription &gt; Geo::VertexColor::getAttributeDesc</definition>
+        <argsstring>()</argsstring>
+        <name>getAttributeDesc</name>
+        <qualifiedname>Geo::VertexColor::getAttributeDesc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" line="72" column="28" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" bodystart="72" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" line="57" column="5" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" bodystart="57" bodyend="78"/>
+    <listofallmembers>
+      <member refid="struct_geo_1_1_vertex_color_1a03b9ef05f420eb22f6bcedbcf03d7bae" prot="public" virt="non-virtual"><scope>Geo::VertexColor</scope><name>color</name></member>
+      <member refid="struct_geo_1_1_vertex_color_1a707954674075321627c5e8c78895c911" prot="public" virt="non-virtual"><scope>Geo::VertexColor</scope><name>getAttributeDesc</name></member>
+      <member refid="struct_geo_1_1_vertex_color_1a2db609bfd7bf9f5d8b7288b021bea02a" prot="public" virt="non-virtual"><scope>Geo::VertexColor</scope><name>getBindingDesc</name></member>
+      <member refid="struct_geo_1_1_vertex_color_1aab0a413999984090386715b64f143b7b" prot="public" virt="non-virtual"><scope>Geo::VertexColor</scope><name>position</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,8 @@
+.page{
+    display: flex;
+}
+
+.content{
+    margin-left: auto;
+    width: 75%;
+}

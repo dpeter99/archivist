@@ -1,0 +1,36 @@
+*{
+    font-family: "Roboto", sans-serif;
+}
+
+
+.page{
+    display: flex;
+}
+
+.content{
+    margin-left: auto;
+    width: 75%;
+}
+
+.member{
+    margin-top: 12px;
+}
+
+.member-header{
+    display: flex;
+    gap: 4px;
+    align-items: baseline;
+}
+
+.member p {
+    margin: 0;
+}
+
+.member__type{
+    font-size: 21px
+}
+
+.member__name{
+    font-size: 21px;
+    font-weight: bold;
+}

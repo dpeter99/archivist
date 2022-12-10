@@ -3,7 +3,7 @@ import {Content} from "../Content.ts";
 
 import {SimpleModule} from "../Module/SimpleModule.ts";
 
-import MarkdownIt from "npm:markdown-it";
+import MarkdownIt from "npm:markdown-it@13.0.1";
 
 import markdownItMultimdTable from "npm:markdown-it-multimd-table";
 import markdownItAttrs from "npm:markdown-it-attrs";
@@ -46,7 +46,7 @@ class Options {
  */
 export class MarkdownRender extends SimpleModule{
 
-    markdownIt:any;
+    public markdownIt:any;
     private _props: Options;
 
     constructor(props?:Options) {

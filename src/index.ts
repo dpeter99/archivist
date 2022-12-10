@@ -3,9 +3,9 @@ import {Archivist, Config} from "./Archivist.ts";
 import * as fs from "https://deno.land/std@0.106.0/fs/mod.ts";
 import {Application} from "./Application.ts";
 
-export async function run(config: Config | null) : Promise<any> {
+export async function run(config: Config | undefined) : Promise<any> {
 
-    if(config == null) {
+    if(config == undefined) {
         const confFile = Deno.cwd() + "/archivist.config.ts";
         if (!fs.existsSync(confFile)) {
             console.error("There is no config file at: '" + confFile);
@@ -26,7 +26,7 @@ export async function run(config: Config | null) : Promise<any> {
 
     const app = new Application();
 
-    await app.startup(config);
+    await app.startup(config!);
 
 }
 

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="union_shadow_engine_1_1_entity_system_1_1_entity_container_1_1_element" kind="union" language="C++" prot="private">
+    <compoundname>ShadowEngine::EntitySystem::EntityContainer::Element</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="union_shadow_engine_1_1_entity_system_1_1_entity_container_1_1_element_1aca5dba06be6a687d002e17f4225c3524" prot="public" static="no" mutable="no">
+        <type>Element *</type>
+        <definition>Element* ShadowEngine::EntitySystem::EntityContainer&lt; Type &gt;::Element::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <qualifiedname>ShadowEngine::EntitySystem::EntityContainer::Element::next</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/EntityContainer.h" line="28" column="9" bodyfile="shadow-engine/shadow-entity/inc/EntityContainer.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_shadow_engine_1_1_entity_system_1_1_entity_container_1_1_element_1aa9708dbe5b6834ab7fcdf44693525472" prot="public" static="no" mutable="no">
+        <type>Type</type>
+        <definition>Type ShadowEngine::EntitySystem::EntityContainer&lt; Type &gt;::Element::element</definition>
+        <argsstring></argsstring>
+        <name>element</name>
+        <qualifiedname>ShadowEngine::EntitySystem::EntityContainer::Element::element</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/EntityContainer.h" line="29" column="6" bodyfile="shadow-engine/shadow-entity/inc/EntityContainer.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This represents a single element of the memory chunks and is used for accessing the given element as either a pointer to the next free slot or as the <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref>  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>ShadowEngine::EntitySystem::EntityContainer&lt; Type &gt;::Element</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ShadowEngine::EntitySystem::EntityContainer&lt; Type &gt;::Element</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-entity/inc/EntityContainer.h" line="25" column="1" bodyfile="shadow-engine/shadow-entity/inc/EntityContainer.h" bodystart="26" bodyend="30"/>
+    <listofallmembers>
+      <member refid="union_shadow_engine_1_1_entity_system_1_1_entity_container_1_1_element_1aa9708dbe5b6834ab7fcdf44693525472" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::EntityContainer::Element</scope><name>element</name></member>
+      <member refid="union_shadow_engine_1_1_entity_system_1_1_entity_container_1_1_element_1aca5dba06be6a687d002e17f4225c3524" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::EntityContainer::Element</scope><name>next</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

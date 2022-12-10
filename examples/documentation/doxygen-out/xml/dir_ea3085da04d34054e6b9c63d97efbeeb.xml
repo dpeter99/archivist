@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_ea3085da04d34054e6b9c63d97efbeeb" kind="dir">
+    <compoundname>shadow-engine/shadow-renderer/inc/vulkan</compoundname>
+    <innerfile refid="vk__mem__alloc_8h">vk_mem_alloc.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vulkan/"/>
+  </compounddef>
+</doxygen>

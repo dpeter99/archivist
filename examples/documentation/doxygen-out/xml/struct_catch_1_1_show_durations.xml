@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_catch_1_1_show_durations" kind="struct" language="C++" prot="public">
+    <compoundname>Catch::ShowDurations</compoundname>
+    <includes refid="catch_8hpp" local="no">catch.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="struct_catch_1_1_show_durations_1a82fa0174554187220c1eda175f122ee1" prot="public" static="no" strong="no">
+        <type></type>
+        <name>OrNot</name>
+        <qualifiedname>Catch::ShowDurations::OrNot</qualifiedname>
+        <enumvalue id="struct_catch_1_1_show_durations_1a82fa0174554187220c1eda175f122ee1aba1710583107b0736c1f5f0f8dfd23c8" prot="public">
+          <name>DefaultForReporter</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_catch_1_1_show_durations_1a82fa0174554187220c1eda175f122ee1ab49682ccb55f2d6b4dfcdb027c09da9a" prot="public">
+          <name>Always</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_catch_1_1_show_durations_1a82fa0174554187220c1eda175f122ee1af1a716bc46185f561382a12a0dede9f3" prot="public">
+          <name>Never</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4488" column="24" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4488" bodyend="4492"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4488" column="5" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4488" bodyend="4492"/>
+    <listofallmembers>
+      <member refid="struct_catch_1_1_show_durations_1a82fa0174554187220c1eda175f122ee1ab49682ccb55f2d6b4dfcdb027c09da9a" prot="public" virt="non-virtual"><scope>Catch::ShowDurations</scope><name>Always</name></member>
+      <member refid="struct_catch_1_1_show_durations_1a82fa0174554187220c1eda175f122ee1aba1710583107b0736c1f5f0f8dfd23c8" prot="public" virt="non-virtual"><scope>Catch::ShowDurations</scope><name>DefaultForReporter</name></member>
+      <member refid="struct_catch_1_1_show_durations_1a82fa0174554187220c1eda175f122ee1af1a716bc46185f561382a12a0dede9f3" prot="public" virt="non-virtual"><scope>Catch::ShowDurations</scope><name>Never</name></member>
+      <member refid="struct_catch_1_1_show_durations_1a82fa0174554187220c1eda175f122ee1" prot="public" virt="non-virtual"><scope>Catch::ShowDurations</scope><name>OrNot</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structvlkx_1_1_graphics_pass_1_1_attachment_meta" kind="struct" language="C++" prot="private">
+    <compoundname>vlkx::GraphicsPass::AttachmentMeta</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvlkx_1_1_graphics_pass_1_1_attachment_meta_1a035b9e72d7e32fd7eef659ce22dda9be" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vlkx::GraphicsPass::AttachmentMeta::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <qualifiedname>vlkx::GraphicsPass::AttachmentMeta::index</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="117" column="17" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_graphics_pass_1_1_attachment_meta_1a9417e0c839ad4330ffa2bdb2c02f984b" prot="public" static="no" mutable="no">
+        <type><ref refid="classvlkx_1_1_graphics_pass_1a87376e32a032184080c13dce15655dbc" kindref="member">LocationGetter</ref></type>
+        <definition>LocationGetter vlkx::GraphicsPass::AttachmentMeta::getter</definition>
+        <argsstring></argsstring>
+        <name>getter</name>
+        <qualifiedname>vlkx::GraphicsPass::AttachmentMeta::getter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="118" column="28" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_graphics_pass_1_1_attachment_meta_1a8009d016a1c3e880fec82cf4e1fb6f3c" prot="public" static="no" mutable="no">
+        <type><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1a47807f6875527fa0d044a910cfb70a4a" kindref="member">vlkx::RenderPassBuilder::Attachment::OpsType</ref></type>
+        <definition>vlkx::RenderPassBuilder::Attachment::OpsType vlkx::GraphicsPass::AttachmentMeta::ops</definition>
+        <argsstring></argsstring>
+        <name>ops</name>
+        <qualifiedname>vlkx::GraphicsPass::AttachmentMeta::ops</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="119" column="58" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_graphics_pass_1_1_attachment_meta_1a9167da654965564cef90558bdddaf38e" prot="public" static="no" mutable="no">
+        <type>std::map&lt; int, std::string &gt;</type>
+        <definition>std::map&lt;int, std::string&gt; vlkx::GraphicsPass::AttachmentMeta::multisample</definition>
+        <argsstring></argsstring>
+        <name>multisample</name>
+        <qualifiedname>vlkx::GraphicsPass::AttachmentMeta::multisample</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="120" column="22" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="116" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="116" bodyend="121"/>
+    <listofallmembers>
+      <member refid="structvlkx_1_1_graphics_pass_1_1_attachment_meta_1a9417e0c839ad4330ffa2bdb2c02f984b" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPass::AttachmentMeta</scope><name>getter</name></member>
+      <member refid="structvlkx_1_1_graphics_pass_1_1_attachment_meta_1a035b9e72d7e32fd7eef659ce22dda9be" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPass::AttachmentMeta</scope><name>index</name></member>
+      <member refid="structvlkx_1_1_graphics_pass_1_1_attachment_meta_1a9167da654965564cef90558bdddaf38e" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPass::AttachmentMeta</scope><name>multisample</name></member>
+      <member refid="structvlkx_1_1_graphics_pass_1_1_attachment_meta_1a8009d016a1c3e880fec82cf4e1fb6f3c" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPass::AttachmentMeta</scope><name>ops</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

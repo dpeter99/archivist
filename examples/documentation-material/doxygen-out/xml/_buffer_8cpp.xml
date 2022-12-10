@@ -1,0 +1,505 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_buffer_8cpp" kind="file" language="C++">
+    <compoundname>Buffer.cpp</compoundname>
+    <includes refid="_buffer_8h" local="yes">vlkx/vulkan/abstraction/Buffer.h</includes>
+    <includes refid="_tools_8h" local="yes">vlkx/vulkan/Tools.h</includes>
+    <includes refid="_vulkan_module_8h" local="yes">vlkx/vulkan/VulkanModule.h</includes>
+    <includes local="no">memory</includes>
+    <incdepgraph>
+      <node id="18">
+        <label>core/Module.h</label>
+        <link refid="_module_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>exports.h</label>
+        <link refid="exports_8h"/>
+      </node>
+      <node id="19">
+        <label>SHObject.h</label>
+        <link refid="_s_h_object_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>SwapChain.h</label>
+        <link refid="_swap_chain_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>vlkx/vulkan/Tools.h</label>
+        <link refid="_tools_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>vlkx/vulkan/ValidationAndExtension.h</label>
+        <link refid="_validation_and_extension_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>vlkx/vulkan/VulkanDevice.h</label>
+        <link refid="_vulkan_device_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>vlkx/vulkan/VulkanModule.h</label>
+        <link refid="_vulkan_module_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vlkx/vulkan/abstraction/Buffer.h</label>
+        <link refid="_buffer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>vlkx/vulkan/abstraction/Commands.h</label>
+        <link refid="_commands_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>vlkx/vulkan/abstraction/Image.h</label>
+        <link refid="_image_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>ImageUsage.h</label>
+        <link refid="_image_usage_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>Queue.h</label>
+        <link refid="_queue_8h"/>
+      </node>
+      <node id="14">
+        <label>vulkan/vk_mem_alloc.h</label>
+        <link refid="vk__mem__alloc_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-renderer/src/vulkan/abstraction/Buffer.cpp</label>
+        <link refid="_buffer_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>shadow/util/RefCounter.h</label>
+        <link refid="_ref_counter_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>SDL.h</label>
+      </node>
+      <node id="22">
+        <label>SDL_events.h</label>
+      </node>
+      <node id="17">
+        <label>SDL_vulkan.h</label>
+      </node>
+      <node id="28">
+        <label>algorithm</label>
+      </node>
+      <node id="33">
+        <label>array</label>
+      </node>
+      <node id="13">
+        <label>functional</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="31">
+        <label>map</label>
+      </node>
+      <node id="23">
+        <label>memory</label>
+      </node>
+      <node id="26">
+        <label>optional</label>
+      </node>
+      <node id="8">
+        <label>set</label>
+      </node>
+      <node id="5">
+        <label>stdexcept</label>
+      </node>
+      <node id="20">
+        <label>string</label>
+      </node>
+      <node id="21">
+        <label>typeinfo</label>
+      </node>
+      <node id="34">
+        <label>utility</label>
+      </node>
+      <node id="11">
+        <label>variant</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+      <node id="3">
+        <label>vulkan/vulkan.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacevlkx">vlkx</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_buffer_8h" kindref="compound">vlkx/vulkan/abstraction/Buffer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_tools_8h" kindref="compound">vlkx/vulkan/Tools.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_vulkan_module_8h" kindref="compound">vlkx/vulkan/VulkanModule.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacevlkx" kindref="compound">vlkx</ref><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacevlkx_1a979c0a480e05ce4c107ff13c02efaef1" kindref="member">executeBulkCopy</ref>(<ref refid="struct_vk_tools_1_1_managed_buffer" kindref="compound">VkTools::ManagedBuffer</ref><sp/>buffer,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;vlkx::Buffer::CopyMeta&gt;&amp;<sp/>meta)<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>dst;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__alloc_1ga13b93ec0ed38ad7232300cb94931c8d2" kindref="member">vmaMapMemory</ref>(<ref refid="class_vulkan_module_1ae98fb6b5c4497288b51c9c4b860cb1bd" kindref="member">VulkanModule::getInstance</ref>()-&gt;getAllocator(),<sp/>buffer.<ref refid="struct_vk_tools_1_1_managed_buffer_1a2d7664529ca0f860a68dbb00d0b57236" kindref="member">allocation</ref>,<sp/>&amp;dst);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>GPU<sp/>memory<sp/>accessible<sp/>through<sp/>dst<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>info<sp/>:<sp/>meta)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(dst)<sp/>+<sp/>info.start,<sp/>info.data,<sp/>info.length);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Unmap<sp/>GPU<sp/>memory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__alloc_1gaec4645c1787976e2b50d2dfd31279a2b" kindref="member">vmaUnmapMemory</ref>(<ref refid="class_vulkan_module_1ae98fb6b5c4497288b51c9c4b860cb1bd" kindref="member">VulkanModule::getInstance</ref>()-&gt;getAllocator(),<sp/>buffer.<ref refid="struct_vk_tools_1_1_managed_buffer_1a2d7664529ca0f860a68dbb00d0b57236" kindref="member">allocation</ref>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_staging_buffer_1a683dc1c732c3bf22ee4e0c25e3bb9877" kindref="member">StagingBuffer::StagingBuffer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_buffer_1_1_bulk_copy_meta" kindref="compound">vlkx::Buffer::BulkCopyMeta</ref><sp/>&amp;copyMeta)<sp/>:<sp/>dataSize(copyMeta.length)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setBuffer(<ref refid="namespace_vk_tools_1a1718b928d06284297fca17ba2e738fbc" kindref="member">VkTools::createGPUBuffer</ref>(dataSize,<sp/>VK_BUFFER_USAGE_TRANSFER_SRC_BIT,<sp/>VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT<sp/>|<sp/>VK_MEMORY_PROPERTY_HOST_COHERENT_BIT,<sp/><ref refid="class_vulkan_module_1ae98fb6b5c4497288b51c9c4b860cb1bd" kindref="member">VulkanModule::getInstance</ref>()-&gt;getDevice()-&gt;logical,<sp/><ref refid="class_vulkan_module_1ae98fb6b5c4497288b51c9c4b860cb1bd" kindref="member">VulkanModule::getInstance</ref>()-&gt;getDevice()-&gt;physical));</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacevlkx_1a979c0a480e05ce4c107ff13c02efaef1" kindref="member">executeBulkCopy</ref>(get(),<sp/>copyMeta.<ref refid="structvlkx_1_1_buffer_1_1_bulk_copy_meta_1a5b166be6fdfc74aa27d2dab83eaf119f" kindref="member">metas</ref>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>StagingBuffer::copy(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkBuffer<sp/>&amp;target)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_vk_tools_1abe12b20976d43a075a62375dd8aff167" kindref="member">VkTools::copyGPUBuffer</ref>(get().buffer,<sp/>target,<sp/>dataSize,<sp/><ref refid="class_vulkan_module_1ae98fb6b5c4497288b51c9c4b860cb1bd" kindref="member">VulkanModule::getInstance</ref>()-&gt;getDevice());</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;VkVertexInputAttributeDescription&gt;<sp/>VertexBuffer::getAttrs(uint32_t<sp/>start)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;VkVertexInputAttributeDescription&gt;<sp/>descs;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>descs.reserve(attributes.size());</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>attr<sp/>:<sp/>attributes)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>descs.push_back(VkVertexInputAttributeDescription<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>start++,<sp/>0,<sp/>attr.format,<sp/>attr.offset</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>descs;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>VertexBuffer::draw(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkCommandBuffer<sp/>&amp;commands,<sp/>uint32_t<sp/>verts,<sp/>uint32_t<sp/>instances)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkCmdDraw(commands,<sp/>verts,<sp/>instances,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>VertexBuffer::create(VkDeviceSize<sp/>totalSize,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dynamic,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>indexes)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkBufferUsageFlags<sp/>usage<sp/>=<sp/>VK_BUFFER_USAGE_VERTEX_BUFFER_BIT;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkMemoryPropertyFlags<sp/>props;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dynamic)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>props<sp/>=<sp/>VK_MEMORY_PROPERTY_HOST_COHERENT_BIT;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>usage<sp/>|=<sp/>VK_BUFFER_USAGE_TRANSFER_DST_BIT;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>props<sp/>=<sp/>VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(indexes)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>usage<sp/>|=<sp/>VK_BUFFER_USAGE_INDEX_BUFFER_BIT;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setBuffer(<ref refid="namespace_vk_tools_1a1718b928d06284297fca17ba2e738fbc" kindref="member">VkTools::createGPUBuffer</ref>(totalSize,<sp/>usage,<sp/>props,<sp/><ref refid="class_vulkan_module_1ae98fb6b5c4497288b51c9c4b860cb1bd" kindref="member">VulkanModule::getInstance</ref>()-&gt;getDevice()-&gt;logical,<sp/><ref refid="class_vulkan_module_1ae98fb6b5c4497288b51c9c4b860cb1bd" kindref="member">VulkanModule::getInstance</ref>()-&gt;getDevice()-&gt;physical,<sp/>dynamic));</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>DynamicBuffer::DynamicBuffer(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>hasIndices,<sp/><ref refid="classvlkx_1_1_vertex_buffer" kindref="compound">vlkx::VertexBuffer</ref><sp/>*buffer)<sp/>:<sp/>hasIndices(hasIndices),<sp/>vertexBuffer(buffer)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resize(size);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DynamicBuffer::resize(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pSize)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pSize<sp/>&lt;=<sp/>bufferSize())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pSize<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>todo:<sp/>release<sp/>the<sp/>buffer<sp/>&amp;<sp/>device<sp/>memory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size<sp/>=<sp/>pSize;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertexBuffer-&gt;create(size,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>hasIndices);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>Buffer::BulkCopyMeta<sp/>PerVertexBuffer::NoIndexBufferMeta::prepareCopy(<ref refid="classvlkx_1_1_per_vertex_buffer" kindref="compound">vlkx::PerVertexBuffer</ref><sp/>*buffer)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>meshInfos<sp/>=<sp/>buffer-&gt;meshDataInfo.emplace&lt;MeshDataNoIndex&gt;().info;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meshInfos.reserve(perMeshVertices.size());</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Buffer::CopyMeta&gt;<sp/>copyMetas;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copyMetas.reserve(perMeshVertices.size());</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkDeviceSize<sp/>offset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>verts<sp/>:<sp/>perMeshVertices)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meshInfos.push_back(MeshDataNoIndex::Info<sp/>{<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(verts.unitsPerMesh),<sp/>offset<sp/>});</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copyMetas.push_back(Buffer::CopyMeta<sp/>{<sp/>verts.data,<sp/>verts.sizePerMesh,<sp/>offset<sp/>});</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offset<sp/>+=<sp/>verts.sizePerMesh;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Buffer::BulkCopyMeta<sp/>{<sp/>offset,<sp/>std::move(copyMetas)<sp/>};</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>Buffer::BulkCopyMeta<sp/>PerVertexBuffer::SharedIndexMeta::prepareCopy(<ref refid="classvlkx_1_1_per_vertex_buffer" kindref="compound">vlkx::PerVertexBuffer</ref><sp/>*buffer)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>meshInfos<sp/>=<sp/>buffer-&gt;meshDataInfo.emplace&lt;MeshDataIndex&gt;().info;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meshInfos.reserve(meshes);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkDeviceSize<sp/>offset<sp/>=<sp/>sharedIndices.sizePerMesh;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>meshes;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meshInfos.push_back(MeshDataIndex::Info<sp/>{<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(sharedIndices.unitsPerMesh),<sp/>0,<sp/>offset<sp/>});</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offset<sp/>+=<sp/>perMeshVertex.sizePerMesh;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Buffer::BulkCopyMeta<sp/>{<sp/>offset,<sp/>{<sp/>{<sp/>sharedIndices.data,<sp/>sharedIndices.sizePerMesh,<sp/>0<sp/>},<sp/>{<sp/>perMeshVertex.data,<sp/>perMeshVertex.sizePerMesh<sp/>*<sp/>meshes,<sp/>sharedIndices.sizePerMesh<sp/>}<sp/>}<sp/>};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>Buffer::BulkCopyMeta<sp/>PerVertexBuffer::NoShareMeta::prepareCopy(<ref refid="classvlkx_1_1_per_vertex_buffer" kindref="compound">vlkx::PerVertexBuffer</ref><sp/>*buffer)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>meshInfos<sp/>=<sp/>buffer-&gt;meshDataInfo.emplace&lt;MeshDataIndex&gt;().info;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meshInfos.reserve(perMeshMeta.size());</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Buffer::CopyMeta&gt;<sp/>copyMetas;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copyMetas.reserve(perMeshMeta.size()<sp/>*<sp/>2);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkDeviceSize<sp/>offset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>meta<sp/>:<sp/>perMeshMeta)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>indicesSize<sp/>=<sp/>meta.indices.sizePerMesh;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>verticesSize<sp/>=<sp/>meta.vertices.sizePerMesh;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkDeviceSize<sp/>verticesOffset<sp/>=<sp/>offset<sp/>+<sp/>indicesSize;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meshInfos.push_back(MeshDataIndex::Info<sp/>{<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(meta.indices.unitsPerMesh),<sp/>offset,<sp/>verticesOffset<sp/>});</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copyMetas.push_back(Buffer::CopyMeta<sp/>{<sp/>meta.indices.data,<sp/>indicesSize,<sp/>offset<sp/>});</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copyMetas.push_back(Buffer::CopyMeta<sp/>{<sp/>meta.vertices.data,<sp/>verticesSize,<sp/>verticesOffset<sp/>});</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offset<sp/>+=<sp/>indicesSize<sp/>+<sp/>verticesSize;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Buffer::BulkCopyMeta<sp/>{<sp/>offset,<sp/>std::move(copyMetas)<sp/>};</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PerVertexBuffer::draw(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkCommandBuffer<sp/>&amp;commands,<sp/>uint32_t<sp/>bind,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/>uint32_t<sp/>instances)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>meshNoIndex<sp/>=<sp/>std::get_if&lt;MeshDataNoIndex&gt;(&amp;meshDataInfo);<sp/>meshNoIndex<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>meshInfo<sp/>=<sp/>meshNoIndex-&gt;info[index];</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkCmdBindVertexBuffers(commands,<sp/>bind,<sp/>1,<sp/>&amp;getBuffer(),<sp/>&amp;meshInfo.vertexStart);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkCmdDraw(commands,<sp/>meshInfo.vertexCount,<sp/>instances,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>meshIndex<sp/>=<sp/>std::get_if&lt;MeshDataIndex&gt;(&amp;meshDataInfo);<sp/>meshIndex<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>meshInfo<sp/>=<sp/>meshIndex-&gt;info[index];</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkCmdBindIndexBuffer(commands,<sp/>getBuffer(),<sp/>meshInfo.indexStart,<sp/>VK_INDEX_TYPE_UINT32);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkCmdBindVertexBuffers(commands,<sp/>bind,<sp/>1,<sp/>&amp;getBuffer(),<sp/>&amp;meshInfo.vertexStart);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkCmdDrawIndexed(commands,<sp/>meshInfo.indexCount,<sp/>instances,<sp/>0,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>StaticPerVertexBuffer::StaticPerVertexBuffer(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta" kindref="compound">vlkx::PerVertexBuffer::BufferDataMeta</ref><sp/>&amp;info,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;VkVertexInputAttributeDescription&gt;<sp/>&amp;&amp;attrs)<sp/>:<sp/>PerVertexBuffer(std::move(attrs))<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BulkCopyMeta<sp/>copy<sp/>=<sp/>info.<ref refid="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta_1a9bfe5d7b1374f46259825fc4786bd03a" kindref="member">prepareCopy</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>create(copy.length,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>info.<ref refid="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta_1a069ecd344c42d854be14ed4b8112d4ba" kindref="member">hasIndices</ref>());</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>StagingBuffer<sp/>staging(copy);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>staging.copy(getBuffer());</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DynamicPerVertexBuffer::copyToDevice(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta" kindref="compound">vlkx::PerVertexBuffer::BufferDataMeta</ref><sp/>&amp;meta)<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BulkCopyMeta<sp/>copy<sp/>=<sp/>meta.<ref refid="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta_1a9bfe5d7b1374f46259825fc4786bd03a" kindref="member">prepareCopy</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resize(copy.length);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacevlkx_1a979c0a480e05ce4c107ff13c02efaef1" kindref="member">executeBulkCopy</ref>(get(),<sp/>copy.metas);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PerInstanceVertexBuffer::bind(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkCommandBuffer<sp/>&amp;commands,<sp/>uint32_t<sp/>bindPoint,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkDeviceSize<sp/>size<sp/>=<sp/>sizePerInstance<sp/>*<sp/>offset;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkCmdBindVertexBuffers(commands,<sp/>bindPoint,<sp/>1,<sp/>&amp;getBuffer(),<sp/>&amp;size);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>StaticPerInstanceBuffer::StaticPerInstanceBuffer(uint32_t<sp/>size,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/>uint32_t<sp/>instances,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;VkVertexInputAttributeDescription&gt;<sp/>&amp;&amp;attrs)<sp/>:<sp/>PerInstanceVertexBuffer(size,<sp/>std::move(attrs))<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>totalSize<sp/>=<sp/>size<sp/>*<sp/>instances;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>create(totalSize,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BulkCopyMeta<sp/>copy<sp/>{<sp/>totalSize,<sp/>{<sp/>{data,<sp/>totalSize,<sp/>0}<sp/>}<sp/>};</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>StagingBuffer<sp/>staging(copy);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>staging.copy(getBuffer());</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DynamicPerInstanceBuffer::copyToDevice(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/>uint32_t<sp/>instances)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>totalSize<sp/>=<sp/>getSize()<sp/>*<sp/>instances;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BulkCopyMeta<sp/>copy<sp/>{<sp/>totalSize,<sp/>{<sp/>{<sp/>data,<sp/>totalSize,<sp/>0<sp/>}<sp/>}<sp/>};</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resize(totalSize);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacevlkx_1a979c0a480e05ce4c107ff13c02efaef1" kindref="member">executeBulkCopy</ref>(get(),<sp/>copy.metas);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>UniformBuffer::UniformBuffer(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>chunkSize,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>chunks)<sp/>:<sp/>DataBuffer(),<sp/>chunkSize(chunkSize),<sp/>numChunks(chunks)<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkDeviceSize<sp/>alignment<sp/>=<sp/><ref refid="class_vulkan_module_1ae98fb6b5c4497288b51c9c4b860cb1bd" kindref="member">VulkanModule::getInstance</ref>()-&gt;<ref refid="class_vulkan_module_1acaf1d424d08049045241ce16405f60bf" kindref="member">getDevice</ref>()-&gt;<ref refid="class_vulkan_device_1a67b8b11a6ee7a8e40cbebcdebdc6e869" kindref="member">limits</ref>.minUniformBufferOffsetAlignment;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chunkLength<sp/>=<sp/>(chunkSize<sp/>+<sp/>alignment<sp/>-<sp/>1)<sp/>/<sp/>alignment<sp/>*<sp/>alignment;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">[chunkSize<sp/>*<sp/>numChunks];</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setBuffer(<ref refid="namespace_vk_tools_1a1718b928d06284297fca17ba2e738fbc" kindref="member">VkTools::createGPUBuffer</ref>(chunkLength<sp/>*<sp/>numChunks,<sp/>VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT,<sp/>VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT,<sp/><ref refid="class_vulkan_module_1ae98fb6b5c4497288b51c9c4b860cb1bd" kindref="member">VulkanModule::getInstance</ref>()-&gt;getDevice()-&gt;logical,<sp/><ref refid="class_vulkan_module_1ae98fb6b5c4497288b51c9c4b860cb1bd" kindref="member">VulkanModule::getInstance</ref>()-&gt;getDevice()-&gt;physical,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UniformBuffer::upload(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>checkIndex(index);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkDeviceSize<sp/>srcOffset<sp/>=<sp/>chunkSize<sp/>*<sp/>index;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkDeviceSize<sp/>dstOffset<sp/>=<sp/>chunkLength<sp/>*<sp/>index;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>dstoffset?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacevlkx_1a979c0a480e05ce4c107ff13c02efaef1" kindref="member">executeBulkCopy</ref>(get(),<sp/>{<sp/>{<sp/>data<sp/>+<sp/>srcOffset,<sp/>chunkSize,<sp/>0<sp/>}<sp/>}<sp/>);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UniformBuffer::upload(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/>VkDeviceSize<sp/>dataSize,<sp/>VkDeviceSize<sp/>start)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>checkIndex(index);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkDeviceSize<sp/>srcOffset<sp/>=<sp/>chunkSize<sp/>*<sp/>index<sp/>+<sp/>start;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkDeviceSize<sp/>dstOffset<sp/>=<sp/>chunkLength<sp/>*<sp/>index<sp/>+<sp/>start;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>dstoffset?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacevlkx_1a979c0a480e05ce4c107ff13c02efaef1" kindref="member">executeBulkCopy</ref>(get(),<sp/>{<sp/>{<sp/>data<sp/>+<sp/>srcOffset,<sp/>dataSize,<sp/>0<sp/>}<sp/>}<sp/>);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>VkDescriptorBufferInfo<sp/>UniformBuffer::getDescriptorInfo(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>checkIndex(index);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>VkDescriptorBufferInfo<sp/>{<sp/>getBuffer(),<sp/>chunkLength<sp/>*<sp/>index,<sp/>chunkSize};</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UniformBuffer::checkIndex(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&gt;<sp/>numChunks)</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Attempting<sp/>to<sp/>access<sp/>uniform<sp/>chunk<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(index)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>out<sp/>of<sp/>range.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>PushConstant::PushConstant(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numFrames)<sp/>:<sp/>sizePerFrame(static_cast&lt;uint32_t&gt;(size)),<sp/>numFrames(numFrames)<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>&gt;<sp/>128)</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Attempting<sp/>to<sp/>push<sp/>constant<sp/>of<sp/>size<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(size)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>max<sp/>ix<sp/>128.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">[size<sp/>*<sp/>numFrames];</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PushConstant::upload(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkCommandBuffer<sp/>&amp;commands,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkPipelineLayout<sp/>&amp;pipelineLayout,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>frame,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>offset,<sp/>VkShaderStageFlags<sp/>stage)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>checkIndex(frame);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data<sp/>=<sp/>getData&lt;void&gt;(frame);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkCmdPushConstants(commands,<sp/>pipelineLayout,<sp/>stage,<sp/>offset,<sp/>sizePerFrame,<sp/>data);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PushConstant::checkIndex(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&gt;<sp/>numFrames)</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Attempting<sp/>to<sp/>access<sp/>push<sp/>constant<sp/>for<sp/>frame<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(index)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>out<sp/>of<sp/>range.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Buffer.cpp"/>
+  </compounddef>
+</doxygen>

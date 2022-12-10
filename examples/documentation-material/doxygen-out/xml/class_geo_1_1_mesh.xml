@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_geo_1_1_mesh" kind="class" language="C++" prot="public">
+    <compoundname>Geo::Mesh</compoundname>
+    <includes refid="_geometry_8h" local="no">Geometry.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_geo_1_1_mesh_1a7ae41009cac2c8b253cdd45bd1868581" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mesh::setTriData</definition>
+        <argsstring>(std::vector&lt; VertexAll &gt; &amp;vertices, std::vector&lt; uint32_t &gt; &amp;indices)</argsstring>
+        <name>setTriData</name>
+        <qualifiedname>Geo::Mesh::setTriData</qualifiedname>
+        <param>
+          <type>std::vector&lt; <ref refid="struct_geo_1_1_vertex_all" kindref="compound">VertexAll</ref> &gt; &amp;</type>
+          <declname>vertices</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; uint32_t &gt; &amp;</type>
+          <declname>indices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" line="84" column="13" bodyfile="shadow-engine/shadow-renderer/src/render/Geometry.cpp" bodystart="4" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_geo_1_1_mesh_1aec35dbb4cc272553ee0382d44ae2772e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mesh::setQuadData</definition>
+        <argsstring>(std::vector&lt; VertexAll &gt; &amp;vertices, std::vector&lt; uint32_t &gt; &amp;indices)</argsstring>
+        <name>setQuadData</name>
+        <qualifiedname>Geo::Mesh::setQuadData</qualifiedname>
+        <param>
+          <type>std::vector&lt; <ref refid="struct_geo_1_1_vertex_all" kindref="compound">VertexAll</ref> &gt; &amp;</type>
+          <declname>vertices</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; uint32_t &gt; &amp;</type>
+          <declname>indices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" line="86" column="13" bodyfile="shadow-engine/shadow-renderer/src/render/Geometry.cpp" bodystart="21" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_geo_1_1_mesh_1a6a39cb7c9aa5fe4d905e719d6ed7026b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mesh::setCubeData</definition>
+        <argsstring>(std::vector&lt; VertexAll &gt; &amp;vertices, std::vector&lt; uint32_t &gt; &amp;indices)</argsstring>
+        <name>setCubeData</name>
+        <qualifiedname>Geo::Mesh::setCubeData</qualifiedname>
+        <param>
+          <type>std::vector&lt; <ref refid="struct_geo_1_1_vertex_all" kindref="compound">VertexAll</ref> &gt; &amp;</type>
+          <declname>vertices</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; uint32_t &gt; &amp;</type>
+          <declname>indices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" line="88" column="13" bodyfile="shadow-engine/shadow-renderer/src/render/Geometry.cpp" bodystart="40" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_geo_1_1_mesh_1a03d59fd26eca990b6c8aa3decf356402" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mesh::setSphereData</definition>
+        <argsstring>(std::vector&lt; VertexAll &gt; &amp;vertices, std::vector&lt; uint32_t &gt; &amp;indices)</argsstring>
+        <name>setSphereData</name>
+        <qualifiedname>Geo::Mesh::setSphereData</qualifiedname>
+        <param>
+          <type>std::vector&lt; <ref refid="struct_geo_1_1_vertex_all" kindref="compound">VertexAll</ref> &gt; &amp;</type>
+          <declname>vertices</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; uint32_t &gt; &amp;</type>
+          <declname>indices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" line="90" column="13" bodyfile="shadow-engine/shadow-renderer/src/render/Geometry.cpp" bodystart="100" bodyend="156"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" line="81" column="1" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" bodystart="81" bodyend="91"/>
+    <listofallmembers>
+      <member refid="class_geo_1_1_mesh_1a6a39cb7c9aa5fe4d905e719d6ed7026b" prot="public" virt="non-virtual"><scope>Geo::Mesh</scope><name>setCubeData</name></member>
+      <member refid="class_geo_1_1_mesh_1aec35dbb4cc272553ee0382d44ae2772e" prot="public" virt="non-virtual"><scope>Geo::Mesh</scope><name>setQuadData</name></member>
+      <member refid="class_geo_1_1_mesh_1a03d59fd26eca990b6c8aa3decf356402" prot="public" virt="non-virtual"><scope>Geo::Mesh</scope><name>setSphereData</name></member>
+      <member refid="class_geo_1_1_mesh_1a7ae41009cac2c8b253cdd45bd1868581" prot="public" virt="non-virtual"><scope>Geo::Mesh</scope><name>setTriData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

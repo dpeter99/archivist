@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="namespace_shadow_engine" kind="namespace" language="C++">
+    <compoundname>ShadowEngine</compoundname>
+    <innerclass refid="class_shadow_engine_1_1_module" prot="public">ShadowEngine::Module</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_module_manager" prot="public">ShadowEngine::ModuleManager</innerclass>
+    <innerclass refid="struct_shadow_engine_1_1_module_ref" prot="public">ShadowEngine::ModuleRef</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_renderer_module" prot="public">ShadowEngine::RendererModule</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_s_d_l2_module" prot="public">ShadowEngine::SDL2Module</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_shadow_application" prot="public">ShadowEngine::ShadowApplication</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_shadow_window" prot="public">ShadowEngine::ShadowWindow</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_s_h_object" prot="public">ShadowEngine::SHObject</innerclass>
+    <innernamespace refid="namespace_shadow_engine_1_1_debug">ShadowEngine::Debug</innernamespace>
+    <innernamespace refid="namespace_shadow_engine_1_1_entity_system">ShadowEngine::EntitySystem</innernamespace>
+    <innernamespace refid="namespace_shadow_engine_1_1_shadow_entity">ShadowEngine::ShadowEntity</innernamespace>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_shadow_engine_1ad4e6cb3104c2d411393c1f76a80f1d8d" prot="public" static="no" mutable="no">
+        <type>dylib *</type>
+        <definition>dylib* ShadowEngine::gameLib</definition>
+        <argsstring></argsstring>
+        <name>gameLib</name>
+        <qualifiedname>ShadowEngine::gameLib</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/src/core/ShadowApplication.cpp" line="19" column="11" bodyfile="shadow-engine/core/src/core/ShadowApplication.cpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_shadow_engine_1af3c79773e1db23668e09cce676e39ace" prot="public" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classvlkx_1_1_render_command" kindref="compound">vlkx::RenderCommand</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;vlkx::RenderCommand&gt; ShadowEngine::renderCommands</definition>
+        <argsstring></argsstring>
+        <name>renderCommands</name>
+        <qualifiedname>ShadowEngine::renderCommands</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/src/core/ShadowApplication.cpp" line="23" column="21" bodyfile="shadow-engine/core/src/core/ShadowApplication.cpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/core/inc/core/Module.h" line="9" column="1"/>
+  </compounddef>
+</doxygen>

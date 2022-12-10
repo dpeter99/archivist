@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_ref_counted_texture" kind="class" language="C++" prot="public">
+    <compoundname>vlkx::RefCountedTexture</compoundname>
+    <basecompoundref refid="classvlkx_1_1_samplable_image" prot="public" virt="non-virtual">vlkx::SamplableImage</basecompoundref>
+    <includes refid="_image_8h" local="no">Image.h</includes>
+    <innerclass refid="structvlkx_1_1_ref_counted_texture_1_1_cubemap_location" prot="public">vlkx::RefCountedTexture::CubemapLocation</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classvlkx_1_1_ref_counted_texture_1abe22da373d7c7755a32c7339f99800ab" prot="public" static="no">
+        <type>std::variant&lt; std::string, <ref refid="structvlkx_1_1_ref_counted_texture_1_1_cubemap_location" kindref="compound">CubemapLocation</ref> &gt;</type>
+        <definition>using vlkx::RefCountedTexture::ImageLocation =  std::variant&lt;std::string, CubemapLocation&gt;</definition>
+        <argsstring></argsstring>
+        <name>ImageLocation</name>
+        <qualifiedname>vlkx::RefCountedTexture::ImageLocation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="236" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classvlkx_1_1_ref_counted_texture_1ac5e39b9ea27519bdbe73bc47dac4df9a" prot="private" static="no">
+        <type><ref refid="classshadowutil_1_1_ref_counter" kindref="compound">shadowutil::RefCounter</ref>&lt; <ref refid="classvlkx_1_1_texture_image" kindref="compound">TextureImage</ref> &gt;</type>
+        <definition>using vlkx::RefCountedTexture::ReferenceCounter =  shadowutil::RefCounter&lt;TextureImage&gt;</definition>
+        <argsstring></argsstring>
+        <name>ReferenceCounter</name>
+        <qualifiedname>vlkx::RefCountedTexture::ReferenceCounter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="251" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvlkx_1_1_ref_counted_texture_1a620d4743ed234fbeb1204c4899636c16" prot="private" static="no" mutable="no">
+        <type><ref refid="classshadowutil_1_1_ref_counter" kindref="compound">ReferenceCounter</ref></type>
+        <definition>ReferenceCounter vlkx::RefCountedTexture::texture</definition>
+        <argsstring></argsstring>
+        <name>texture</name>
+        <qualifiedname>vlkx::RefCountedTexture::texture</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="255" column="26" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_ref_counted_texture_1a98dbd16903c6dc8deadbdd2b7d65017c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::RefCountedTexture::RefCountedTexture</definition>
+        <argsstring>(const ImageLocation &amp;location, std::vector&lt; ImageUsage &gt; usages, const ImageSampler::Config &amp;config)</argsstring>
+        <name>RefCountedTexture</name>
+        <qualifiedname>vlkx::RefCountedTexture::RefCountedTexture</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_ref_counted_texture_1abe22da373d7c7755a32c7339f99800ab" kindref="member">ImageLocation</ref> &amp;</type>
+          <declname>location</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref> &gt;</type>
+          <declname>usages</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structvlkx_1_1_image_sampler_1_1_config" kindref="compound">ImageSampler::Config</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="238" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="238" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_ref_counted_texture_1ab7df4b87d3648a9f71496daf1f4be6f2" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::RefCountedTexture::RefCountedTexture</definition>
+        <argsstring>(RefCountedTexture &amp;&amp;) noexcept=default</argsstring>
+        <name>RefCountedTexture</name>
+        <qualifiedname>vlkx::RefCountedTexture::RefCountedTexture</qualifiedname>
+        <param>
+          <type><ref refid="classvlkx_1_1_ref_counted_texture" kindref="compound">RefCountedTexture</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="241" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_ref_counted_texture_1a5ebc5ffa531e146a8d823bd85e138fd9" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classvlkx_1_1_ref_counted_texture" kindref="compound">RefCountedTexture</ref> &amp;</type>
+        <definition>RefCountedTexture &amp; vlkx::RefCountedTexture::operator=</definition>
+        <argsstring>(RefCountedTexture &amp;&amp;) noexcept=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>vlkx::RefCountedTexture::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classvlkx_1_1_ref_counted_texture" kindref="compound">RefCountedTexture</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="242" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_ref_counted_texture_1acb64d7a56d6471dac0535e0d99fa214b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>VkDescriptorImageInfo</type>
+        <definition>VkDescriptorImageInfo vlkx::RefCountedTexture::getInfo</definition>
+        <argsstring>(VkImageLayout layout) const override</argsstring>
+        <name>getInfo</name>
+        <qualifiedname>vlkx::RefCountedTexture::getInfo</qualifiedname>
+        <reimplements refid="classvlkx_1_1_samplable_image_1aa3d870e3c7cdd22cbc1aa0c6220a9a51">getInfo</reimplements>
+        <param>
+          <type>VkImageLayout</type>
+          <declname>layout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="244" column="31" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="244" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_ref_counted_texture_1a9c98bba2283b4eb1eb07730f071c60ef" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classvlkx_1_1_image" kindref="compound">Image</ref> *</type>
+        <definition>const Image * vlkx::RefCountedTexture::operator-&gt;</definition>
+        <argsstring>() const</argsstring>
+        <name>operator-&gt;</name>
+        <qualifiedname>vlkx::RefCountedTexture::operator-&gt;</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="248" column="21" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="248" bodyend="248"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classvlkx_1_1_ref_counted_texture_1a90ebda6c803c2f579101329698a5cda6" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classshadowutil_1_1_ref_counter" kindref="compound">ReferenceCounter</ref></type>
+        <definition>RefCountedTexture::ReferenceCounter vlkx::RefCountedTexture::get</definition>
+        <argsstring>(const ImageLocation &amp;location, const std::vector&lt; ImageUsage &gt; &amp;usages, const ImageSampler::Config &amp;config)</argsstring>
+        <name>get</name>
+        <qualifiedname>vlkx::RefCountedTexture::get</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_ref_counted_texture_1abe22da373d7c7755a32c7339f99800ab" kindref="member">ImageLocation</ref> &amp;</type>
+          <declname>location</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref> &gt; &amp;</type>
+          <declname>usages</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structvlkx_1_1_image_sampler_1_1_config" kindref="compound">ImageSampler::Config</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="253" column="33" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="352" bodyend="368"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>vlkx::RefCountedTexture</label>
+        <link refid="classvlkx_1_1_ref_counted_texture"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vlkx::SamplableImage</label>
+        <link refid="classvlkx_1_1_samplable_image"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>vlkx::RefCountedTexture</label>
+        <link refid="classvlkx_1_1_ref_counted_texture"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vlkx::SamplableImage</label>
+        <link refid="classvlkx_1_1_samplable_image"/>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="227" column="5" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="227" bodyend="256"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_ref_counted_texture_1a90ebda6c803c2f579101329698a5cda6" prot="private" virt="non-virtual"><scope>vlkx::RefCountedTexture</scope><name>get</name></member>
+      <member refid="classvlkx_1_1_ref_counted_texture_1acb64d7a56d6471dac0535e0d99fa214b" prot="public" virt="virtual"><scope>vlkx::RefCountedTexture</scope><name>getInfo</name></member>
+      <member refid="classvlkx_1_1_samplable_image_1a9c424fcea552597b5c06e2317386f110" prot="public" virt="non-virtual"><scope>vlkx::RefCountedTexture</scope><name>getInfoForLinear</name></member>
+      <member refid="classvlkx_1_1_samplable_image_1a998e6b786579af52725d8c9855420369" prot="public" virt="non-virtual"><scope>vlkx::RefCountedTexture</scope><name>getInfoForSampling</name></member>
+      <member refid="classvlkx_1_1_ref_counted_texture_1abe22da373d7c7755a32c7339f99800ab" prot="public" virt="non-virtual"><scope>vlkx::RefCountedTexture</scope><name>ImageLocation</name></member>
+      <member refid="classvlkx_1_1_ref_counted_texture_1a9c98bba2283b4eb1eb07730f071c60ef" prot="public" virt="non-virtual"><scope>vlkx::RefCountedTexture</scope><name>operator-&gt;</name></member>
+      <member refid="classvlkx_1_1_ref_counted_texture_1a5ebc5ffa531e146a8d823bd85e138fd9" prot="public" virt="non-virtual"><scope>vlkx::RefCountedTexture</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_ref_counted_texture_1a98dbd16903c6dc8deadbdd2b7d65017c" prot="public" virt="non-virtual"><scope>vlkx::RefCountedTexture</scope><name>RefCountedTexture</name></member>
+      <member refid="classvlkx_1_1_ref_counted_texture_1ab7df4b87d3648a9f71496daf1f4be6f2" prot="public" virt="non-virtual"><scope>vlkx::RefCountedTexture</scope><name>RefCountedTexture</name></member>
+      <member refid="classvlkx_1_1_ref_counted_texture_1ac5e39b9ea27519bdbe73bc47dac4df9a" prot="private" virt="non-virtual"><scope>vlkx::RefCountedTexture</scope><name>ReferenceCounter</name></member>
+      <member refid="classvlkx_1_1_ref_counted_texture_1a620d4743ed234fbeb1204c4899636c16" prot="private" virt="non-virtual"><scope>vlkx::RefCountedTexture</scope><name>texture</name></member>
+      <member refid="classvlkx_1_1_samplable_image_1ad83265d38baf32d4ee1e7f58b403c49b" prot="public" virt="virtual"><scope>vlkx::RefCountedTexture</scope><name>~SamplableImage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

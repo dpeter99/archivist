@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_s_f_f_parser_8h" kind="file" language="C++">
+    <compoundname>SFFParser.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">iostream</includes>
+    <includes refid="_s_f_f_element_8h" local="yes">SFFElement.h</includes>
+    <includes refid="_s_f_f_version_8h" local="yes">SFFVersion.h</includes>
+    <includedby refid="_s_f_f_parser_8cpp" local="yes">shadow-engine/shadow-file-format/src/SFFParser.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>SFFElement.h</label>
+        <link refid="_s_f_f_element_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-file-format/src/SFFParser.h</label>
+        <link refid="_s_f_f_parser_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>SFFVersion.h</label>
+        <link refid="_s_f_f_version_8h"/>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>list</label>
+      </node>
+      <node id="5">
+        <label>map</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>shadow-engine/shadow-file-format/src/SFFParser.cpp</label>
+        <link refid="_s_f_f_parser_8cpp"/>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-file-format/src/SFFParser.h</label>
+        <link refid="_s_f_f_parser_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_shadow_1_1_s_f_f_1_1_s_f_f_parser" prot="public">Shadow::SFF::SFFParser</innerclass>
+    <innernamespace refid="namespace_shadow">Shadow</innernamespace>
+    <innernamespace refid="namespace_shadow_1_1_s_f_f">Shadow::SFF</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_s_f_f_element_8h" kindref="compound">SFFElement.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_s_f_f_version_8h" kindref="compound">SFFVersion.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_shadow_1_1_s_f_f" kindref="compound">Shadow::SFF</ref><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_shadow_1_1_s_f_f_1_1_s_f_f_parser" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_shadow_1_1_s_f_f_1_1_s_f_f_parser" kindref="compound">SFFParser</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_shadow_1_1_s_f_f_1_1_s_f_f_element" kindref="compound">SFFElement</ref>*<sp/><ref refid="class_shadow_1_1_s_f_f_1_1_s_f_f_parser_1af483ff71c754433bd73b9463b2137d33" kindref="member">ReadFromStream</ref>(std::istream&amp;<sp/>stream);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_shadow_1_1_s_f_f_1_1_s_f_f_version" kindref="compound">SFFVersion</ref><sp/><ref refid="class_shadow_1_1_s_f_f_1_1_s_f_f_parser_1ab2e03ccef551ea03950367963f8281f1" kindref="member">ReadVersionFromHeader</ref>(std::istream&amp;<sp/>stream);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_shadow_1_1_s_f_f_1_1_s_f_f_element" kindref="compound">SFFElement</ref>*<sp/><ref refid="class_shadow_1_1_s_f_f_1_1_s_f_f_parser_1a764fa91d516b184afa182de97de6e86d" kindref="member">ReadFromFile</ref>(std::string<sp/>path);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-file-format/src/SFFParser.h"/>
+  </compounddef>
+</doxygen>

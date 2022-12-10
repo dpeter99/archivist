@@ -1,23 +1,15 @@
-import * as fs from "https://deno.land/std@0.115.1/fs/mod.ts";
-import { copy, copySync } from "https://deno.land/std@0.115.1/fs/copy.ts";
-import * as path from "https://deno.land/std/path/mod.ts";
-import {ensureDir} from "https://deno.land/std@0.115.1/fs/mod.ts";
 import {dirname} from "https://deno.land/std@0.61.0/path/mod.ts";
 
-import * as ink from 'https://deno.land/x/ink/mod.ts'
-import {compile,render, Template} from "https://deno.land/x/deno_ejs/mod.ts";
-
-import ProgressBar from "https://deno.land/x/progress@v1.2.4/mod.ts";
-
+import {compile} from "https://deno.land/x/deno_ejs/mod.ts";
 
 import {SimpleModule} from "../../Module/SimpleModule.ts";
 import {Pipeline} from "../../Pipeline.ts";
 import {IModule} from "../../Module/IModule.ts";
 import {archivistInst} from "../../Archivist.ts";
-import {getTemplate} from "../../utils/getTemplate.ts";
 
 import { Content } from "../../Content.ts";
 import { ArticleHelper } from "../../utils/ArticleHelper.ts";
+import {TemplateFunction} from "../../utils/markdown/markdown.d.ts";
 
 //import template_string from "./RssTemplate.ejs" assert { type: "string" };
 
@@ -28,23 +20,19 @@ interface SiteDetails{
     email: string;
 }
 
-
 interface RssFeedModuleParams {
     siteInfo: SiteDetails;
     helper?: (path:string, module:RssFeedModule)=>ArticleHelper
 }
 
 /**
- * This module is responsible for copying the static files of your template
- * It does this by copying every file in your templates "compiledPath" that
- * isn't matched by the "ignore" list in your template.
+ * This module is used for generating an RSS feed file from the documents in the project
+ * It uses an RSS template file and uses ejs for templating.
  */
 export class RssFeedModule extends SimpleModule {
 
     path?: string;
-    template!: Template;
-
-    compiled:any;
+    template!: TemplateFunction;
 
     siteData: SiteDetails;
 
@@ -68,12 +56,10 @@ export class RssFeedModule extends SimpleModule {
         this.siteData = siteInfo == null ?
                     {title: "Placeholder", description:"Site description", email:"person@place.com", language:"eng"} :
                     siteInfo;
-
-        //this.template.compile();
     }
 
     async setup(pipeline: Pipeline, parent?: IModule): Promise<any> {
-        super.setup(pipeline, parent);
+        await super.setup(pipeline, parent);
 
         const __dirname = dirname(import.meta.url);
         const template_path = __dirname+"/./RssTemplate.ejs";
@@ -82,14 +68,13 @@ export class RssFeedModule extends SimpleModule {
 
         this.template = compile_help(template_string,{});
 
-
         //return Promise.resolve();
     }
 
     // deno-lint-ignore require-await
     override async process(docs:Array<Content>): Promise<any> {
         
-        let data = {
+        const data = {
             siteData: this.siteData,
             siteURL: archivistInst.outputURL,
 
@@ -98,10 +83,8 @@ export class RssFeedModule extends SimpleModule {
             pipeline: this.pipeline
         };
         
-        if(archivistInst.detailedOutput){
-            //console.log(data.helper);
+        if(archivistInst.detailedOutput)
             console.log(data.helper.subArticles());
-        }
 
         const content = this.template(data);
 
@@ -115,13 +98,10 @@ export class RssFeedModule extends SimpleModule {
 
 }
 
-
 class RssHelper extends ArticleHelper{
-
-
 
 }
 
-function compile_help(text:string, conf:any):Template{
+function compile_help(text:string, conf:any):TemplateFunction{
     return compile(text,conf)
 }

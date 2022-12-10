@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_shadow_engine_1_1_entity_system_1_1_system_callbacks" kind="struct" language="C++" prot="public">
+    <compoundname>ShadowEngine::EntitySystem::SystemCallbacks</compoundname>
+    <includes refid="_entity_manager_8h" local="no">EntityManager.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="struct_shadow_engine_1_1_entity_system_1_1_system_callbacks_1aab9e9c50cd147bcd87b9fa5e3e17fa0a" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* ShadowEngine::EntitySystem::SystemCallbacks::Callback) (EntityManager *mgr)</definition>
+        <argsstring>)(EntityManager *mgr)</argsstring>
+        <name>Callback</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SystemCallbacks::Callback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/EntityManager.h" line="17" column="9" bodyfile="shadow-engine/shadow-entity/inc/EntityManager.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="struct_shadow_engine_1_1_entity_system_1_1_system_callbacks_1acb2d941f00497e9158e28d43825cfb2d" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* ShadowEngine::EntitySystem::SystemCallbacks::UpdateCallback) (EntityManager *mgr, float dt)</definition>
+        <argsstring>)(EntityManager *mgr, float dt)</argsstring>
+        <name>UpdateCallback</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SystemCallbacks::UpdateCallback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/EntityManager.h" line="18" column="9" bodyfile="shadow-engine/shadow-entity/inc/EntityManager.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_shadow_engine_1_1_entity_system_1_1_system_callbacks_1a3c7efb7c8f783c672e6f4798f527e57b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_shadow_engine_1_1_entity_system_1_1_system_callbacks_1acb2d941f00497e9158e28d43825cfb2d" kindref="member">UpdateCallback</ref></type>
+        <definition>UpdateCallback ShadowEngine::EntitySystem::SystemCallbacks::update</definition>
+        <argsstring></argsstring>
+        <name>update</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SystemCallbacks::update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/EntityManager.h" line="20" column="16" bodyfile="shadow-engine/shadow-entity/inc/EntityManager.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_shadow_engine_1_1_entity_system_1_1_system_callbacks_1acd39a7804165cd347b9deb4162e4572b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_shadow_engine_1_1_entity_system_1_1_system_callbacks_1aab9e9c50cd147bcd87b9fa5e3e17fa0a" kindref="member">Callback</ref></type>
+        <definition>Callback ShadowEngine::EntitySystem::SystemCallbacks::init</definition>
+        <argsstring></argsstring>
+        <name>init</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SystemCallbacks::init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/EntityManager.h" line="21" column="10" bodyfile="shadow-engine/shadow-entity/inc/EntityManager.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>ShadowEngine::EntitySystem::EntityManager</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_entity_manager"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>Instance</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ShadowEngine::EntitySystem::SystemCallbacks</label>
+        <link refid="struct_shadow_engine_1_1_entity_system_1_1_system_callbacks"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>init</edgelabel>
+          <edgelabel>update</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-entity/inc/EntityManager.h" line="16" column="1" bodyfile="shadow-engine/shadow-entity/inc/EntityManager.h" bodystart="16" bodyend="22"/>
+    <listofallmembers>
+      <member refid="struct_shadow_engine_1_1_entity_system_1_1_system_callbacks_1aab9e9c50cd147bcd87b9fa5e3e17fa0a" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SystemCallbacks</scope><name>Callback</name></member>
+      <member refid="struct_shadow_engine_1_1_entity_system_1_1_system_callbacks_1acd39a7804165cd347b9deb4162e4572b" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SystemCallbacks</scope><name>init</name></member>
+      <member refid="struct_shadow_engine_1_1_entity_system_1_1_system_callbacks_1a3c7efb7c8f783c672e6f4798f527e57b" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SystemCallbacks</scope><name>update</name></member>
+      <member refid="struct_shadow_engine_1_1_entity_system_1_1_system_callbacks_1acb2d941f00497e9158e28d43825cfb2d" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SystemCallbacks</scope><name>UpdateCallback</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

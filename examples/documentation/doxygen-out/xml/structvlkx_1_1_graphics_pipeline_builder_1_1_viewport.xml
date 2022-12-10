@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structvlkx_1_1_graphics_pipeline_builder_1_1_viewport" kind="struct" language="C++" prot="public">
+    <compoundname>vlkx::GraphicsPipelineBuilder::Viewport</compoundname>
+    <includes refid="_pipeline_8h" local="no">Pipeline.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvlkx_1_1_graphics_pipeline_builder_1_1_viewport_1aff9768268f4fbc7b64d9d83b7dbd0be9" prot="public" static="no" mutable="no">
+        <type>VkViewport</type>
+        <definition>VkViewport vlkx::GraphicsPipelineBuilder::Viewport::viewport</definition>
+        <argsstring></argsstring>
+        <name>viewport</name>
+        <qualifiedname>vlkx::GraphicsPipelineBuilder::Viewport::viewport</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="74" column="24" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_graphics_pipeline_builder_1_1_viewport_1aae49c8a4eae288e44fddc010aebb8ab2" prot="public" static="no" mutable="no">
+        <type>VkRect2D</type>
+        <definition>VkRect2D vlkx::GraphicsPipelineBuilder::Viewport::scissor</definition>
+        <argsstring></argsstring>
+        <name>scissor</name>
+        <qualifiedname>vlkx::GraphicsPipelineBuilder::Viewport::scissor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="75" column="22" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="73" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" bodystart="73" bodyend="76"/>
+    <listofallmembers>
+      <member refid="structvlkx_1_1_graphics_pipeline_builder_1_1_viewport_1aae49c8a4eae288e44fddc010aebb8ab2" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPipelineBuilder::Viewport</scope><name>scissor</name></member>
+      <member refid="structvlkx_1_1_graphics_pipeline_builder_1_1_viewport_1aff9768268f4fbc7b64d9d83b7dbd0be9" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPipelineBuilder::Viewport</scope><name>viewport</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

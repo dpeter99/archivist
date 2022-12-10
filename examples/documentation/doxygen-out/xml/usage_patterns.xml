@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="usage_patterns" kind="page">
+    <compoundname>usage_patterns</compoundname>
+    <title>Recommended usage patterns</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Vulkan gives great flexibility in memory allocation. This chapter shows the most common patterns.</para>
+<para>See also slides from talk: [Sawicki, Adam. Advanced Graphics Techniques Tutorial: Memory management in Vulkan and DX12. Game Developers Conference, 2018](<ulink url="https://www.gdcvault.com/play/1025458/Advanced-Graphics-Techniques-Tutorial-New">https://www.gdcvault.com/play/1025458/Advanced-Graphics-Techniques-Tutorial-New</ulink>)</para>
+<sect1 id="usage_patterns_1usage_patterns_gpu_only">
+<title>GPU-only resource</title>
+<para><bold>When:</bold> Any resources that you frequently write and read on GPU, e.g. images used as color attachments (aka &quot;render targets&quot;), depth-stencil attachments, images/buffers used as storage image/buffer (aka &quot;Unordered Access View (UAV)&quot;).</para>
+<para><bold>What to do:</bold> Let the library select the optimal memory type, which will likely have `VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT`.</para>
+<para><programlisting><codeline><highlight class="normal">VkImageCreateInfo<sp/>imgCreateInfo<sp/>=<sp/>{<sp/>VK_STRUCTURE_TYPE_IMAGE_CREATE_INFO<sp/>};</highlight></codeline>
+<codeline><highlight class="normal">imgCreateInfo.imageType<sp/>=<sp/>VK_IMAGE_TYPE_2D;</highlight></codeline>
+<codeline><highlight class="normal">imgCreateInfo.extent.width<sp/>=<sp/>3840;</highlight></codeline>
+<codeline><highlight class="normal">imgCreateInfo.extent.height<sp/>=<sp/>2160;</highlight></codeline>
+<codeline><highlight class="normal">imgCreateInfo.extent.depth<sp/>=<sp/>1;</highlight></codeline>
+<codeline><highlight class="normal">imgCreateInfo.mipLevels<sp/>=<sp/>1;</highlight></codeline>
+<codeline><highlight class="normal">imgCreateInfo.arrayLayers<sp/>=<sp/>1;</highlight></codeline>
+<codeline><highlight class="normal">imgCreateInfo.format<sp/>=<sp/>VK_FORMAT_R8G8B8A8_UNORM;</highlight></codeline>
+<codeline><highlight class="normal">imgCreateInfo.tiling<sp/>=<sp/>VK_IMAGE_TILING_OPTIMAL;</highlight></codeline>
+<codeline><highlight class="normal">imgCreateInfo.initialLayout<sp/>=<sp/>VK_IMAGE_LAYOUT_UNDEFINED;</highlight></codeline>
+<codeline><highlight class="normal">imgCreateInfo.usage<sp/>=<sp/>VK_IMAGE_USAGE_SAMPLED_BIT<sp/>|<sp/>VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT;</highlight></codeline>
+<codeline><highlight class="normal">imgCreateInfo.samples<sp/>=<sp/>VK_SAMPLE_COUNT_1_BIT;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocation_create_info" kindref="compound">VmaAllocationCreateInfo</ref><sp/>allocCreateInfo<sp/>=<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal">allocCreateInfo.<ref refid="struct_vma_allocation_create_info_1accb8b06b1f677d858cb9af20705fa910" kindref="member">usage</ref><sp/>=<sp/><ref refid="group__group__alloc_1ggaa5846affa1e9da3800e3e78fae2305cca27cde9026a84d34d525777baa41fce6e" kindref="member">VMA_MEMORY_USAGE_AUTO</ref>;</highlight></codeline>
+<codeline><highlight class="normal">allocCreateInfo.<ref refid="struct_vma_allocation_create_info_1add09658ac14fe290ace25470ddd6d41b" kindref="member">flags</ref><sp/>=<sp/><ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a3fc311d855c2ff53f1090ef5c722b38f" kindref="member">VMA_ALLOCATION_CREATE_DEDICATED_MEMORY_BIT</ref>;</highlight></codeline>
+<codeline><highlight class="normal">allocCreateInfo.<ref refid="struct_vma_allocation_create_info_1a983d39e1a2e63649d78a960aa2fdd0f7" kindref="member">priority</ref><sp/>=<sp/>1.0f;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">VkImage<sp/>img;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocation" kindref="compound">VmaAllocation</ref><sp/>alloc;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__alloc_1gaa76142ae43535c862ad9e194a6e38aaa" kindref="member">vmaCreateImage</ref>(allocator,<sp/>&amp;imgCreateInfo,<sp/>&amp;allocCreateInfo,<sp/>&amp;img,<sp/>&amp;alloc,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para>
+<para><bold>Also consider:</bold> Consider creating them as dedicated allocations using <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a3fc311d855c2ff53f1090ef5c722b38f" kindref="member">VMA_ALLOCATION_CREATE_DEDICATED_MEMORY_BIT</ref>, especially if they are large or if you plan to destroy and recreate them with different sizes e.g. when display resolution changes. Prefer to create such resources first and all other GPU resources (like textures and vertex buffers) later. When VK_EXT_memory_priority extension is enabled, it is also worth setting high priority to such allocation to decrease chances to be evicted to system memory by the operating system.</para>
+</sect1>
+<sect1 id="usage_patterns_1usage_patterns_staging_copy_upload">
+<title>Staging copy for upload</title>
+<para><bold>When:</bold> A &quot;staging&quot; buffer than you want to map and fill from CPU code, then use as a source od transfer to some GPU resource.</para>
+<para><bold>What to do:</bold> Use flag <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a9be224df3bfc1cfa06203aed689a30c5" kindref="member">VMA_ALLOCATION_CREATE_HOST_ACCESS_SEQUENTIAL_WRITE_BIT</ref>. Let the library select the optimal memory type, which will always have `VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT`.</para>
+<para><programlisting><codeline><highlight class="normal">VkBufferCreateInfo<sp/>bufCreateInfo<sp/>=<sp/>{<sp/>VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO<sp/>};</highlight></codeline>
+<codeline><highlight class="normal">bufCreateInfo.size<sp/>=<sp/>65536;</highlight></codeline>
+<codeline><highlight class="normal">bufCreateInfo.usage<sp/>=<sp/>VK_BUFFER_USAGE_TRANSFER_SRC_BIT;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocation_create_info" kindref="compound">VmaAllocationCreateInfo</ref><sp/>allocCreateInfo<sp/>=<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal">allocCreateInfo.<ref refid="struct_vma_allocation_create_info_1accb8b06b1f677d858cb9af20705fa910" kindref="member">usage</ref><sp/>=<sp/><ref refid="group__group__alloc_1ggaa5846affa1e9da3800e3e78fae2305cca27cde9026a84d34d525777baa41fce6e" kindref="member">VMA_MEMORY_USAGE_AUTO</ref>;</highlight></codeline>
+<codeline><highlight class="normal">allocCreateInfo.<ref refid="struct_vma_allocation_create_info_1add09658ac14fe290ace25470ddd6d41b" kindref="member">flags</ref><sp/>=<sp/><ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a9be224df3bfc1cfa06203aed689a30c5" kindref="member">VMA_ALLOCATION_CREATE_HOST_ACCESS_SEQUENTIAL_WRITE_BIT</ref><sp/>|</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a11da372cc3a82931c5e5d6146cd9dd1f" kindref="member">VMA_ALLOCATION_CREATE_MAPPED_BIT</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">VkBuffer<sp/>buf;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocation" kindref="compound">VmaAllocation</ref><sp/>alloc;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocation_info" kindref="compound">VmaAllocationInfo</ref><sp/>allocInfo;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__alloc_1gae9773fe0ef8582e23136d2d83c336ab9" kindref="member">vmaCreateBuffer</ref>(allocator,<sp/>&amp;bufCreateInfo,<sp/>&amp;allocCreateInfo,<sp/>&amp;buf,<sp/>&amp;alloc,<sp/>&amp;allocInfo);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">memcpy(allocInfo.<ref refid="struct_vma_allocation_info_1a17a39eb34201a610347acb91b38eca79" kindref="member">pMappedData</ref>,<sp/>myData,<sp/>myDataSize);</highlight></codeline>
+</programlisting></para>
+<para><bold>Also consider:</bold> You can map the allocation using <ref refid="group__group__alloc_1ga13b93ec0ed38ad7232300cb94931c8d2" kindref="member">vmaMapMemory()</ref> or you can create it as persistenly mapped using <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a11da372cc3a82931c5e5d6146cd9dd1f" kindref="member">VMA_ALLOCATION_CREATE_MAPPED_BIT</ref>, as in the example above.</para>
+</sect1>
+<sect1 id="usage_patterns_1usage_patterns_readback">
+<title>Readback</title>
+<para><bold>When:</bold> Buffers for data written by or transferred from the GPU that you want to read back on the CPU, e.g. results of some computations.</para>
+<para><bold>What to do:</bold> Use flag <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597add61238d98e20917b9a06c617763f492" kindref="member">VMA_ALLOCATION_CREATE_HOST_ACCESS_RANDOM_BIT</ref>. Let the library select the optimal memory type, which will always have `VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT` and `VK_MEMORY_PROPERTY_HOST_CACHED_BIT`.</para>
+<para><programlisting><codeline><highlight class="normal">VkBufferCreateInfo<sp/>bufCreateInfo<sp/>=<sp/>{<sp/>VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO<sp/>};</highlight></codeline>
+<codeline><highlight class="normal">bufCreateInfo.size<sp/>=<sp/>65536;</highlight></codeline>
+<codeline><highlight class="normal">bufCreateInfo.usage<sp/>=<sp/>VK_BUFFER_USAGE_TRANSFER_DST_BIT;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocation_create_info" kindref="compound">VmaAllocationCreateInfo</ref><sp/>allocCreateInfo<sp/>=<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal">allocCreateInfo.<ref refid="struct_vma_allocation_create_info_1accb8b06b1f677d858cb9af20705fa910" kindref="member">usage</ref><sp/>=<sp/><ref refid="group__group__alloc_1ggaa5846affa1e9da3800e3e78fae2305cca27cde9026a84d34d525777baa41fce6e" kindref="member">VMA_MEMORY_USAGE_AUTO</ref>;</highlight></codeline>
+<codeline><highlight class="normal">allocCreateInfo.<ref refid="struct_vma_allocation_create_info_1add09658ac14fe290ace25470ddd6d41b" kindref="member">flags</ref><sp/>=<sp/><ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597add61238d98e20917b9a06c617763f492" kindref="member">VMA_ALLOCATION_CREATE_HOST_ACCESS_RANDOM_BIT</ref><sp/>|</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a11da372cc3a82931c5e5d6146cd9dd1f" kindref="member">VMA_ALLOCATION_CREATE_MAPPED_BIT</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">VkBuffer<sp/>buf;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocation" kindref="compound">VmaAllocation</ref><sp/>alloc;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocation_info" kindref="compound">VmaAllocationInfo</ref><sp/>allocInfo;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__alloc_1gae9773fe0ef8582e23136d2d83c336ab9" kindref="member">vmaCreateBuffer</ref>(allocator,<sp/>&amp;bufCreateInfo,<sp/>&amp;allocCreateInfo,<sp/>&amp;buf,<sp/>&amp;alloc,<sp/>&amp;allocInfo);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">const<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>downloadedData<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*)allocInfo.<ref refid="struct_vma_allocation_info_1a17a39eb34201a610347acb91b38eca79" kindref="member">pMappedData</ref>;</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="usage_patterns_1usage_patterns_advanced_data_uploading">
+<title>Advanced data uploading</title>
+<para>For resources that you frequently write on CPU via mapped pointer and freqnently read on GPU e.g. as a uniform buffer (also called &quot;dynamic&quot;), multiple options are possible:</para>
+<para><orderedlist>
+<listitem><para>Easiest solution is to have one copy of the resource in `HOST_VISIBLE` memory, even if it means system RAM (not `DEVICE_LOCAL`) on systems with a discrete graphics card, and make the device reach out to that resource directly.<itemizedlist>
+<listitem><para>Reads performed by the device will then go through PCI Express bus. The performace of this access may be limited, but it may be fine depending on the size of this resource (whether it is small enough to quickly end up in GPU cache) and the sparsity of access.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>On systems with unified memory (e.g. AMD APU or Intel integrated graphics, mobile chips), a memory type may be available that is both `HOST_VISIBLE` (available for mapping) and `DEVICE_LOCAL` (fast to access from the GPU). Then, it is likely the best choice for such type of resource.</para>
+</listitem><listitem><para>Systems with a discrete graphics card and separate video memory may or may not expose a memory type that is both `HOST_VISIBLE` and `DEVICE_LOCAL`, also known as Base Address Register (BAR). If they do, it represents a piece of VRAM (or entire VRAM, if ReBAR is enabled in the motherboard BIOS) that is available to CPU for mapping.<itemizedlist>
+<listitem><para>Writes performed by the host to that memory go through PCI Express bus. The performance of these writes may be limited, but it may be fine, especially on PCIe 4.0, as long as rules of using uncached and write-combined memory are followed - only sequential writes and no reads.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Finally, you may need or prefer to create a separate copy of the resource in `DEVICE_LOCAL` memory, a separate &quot;staging&quot; copy in `HOST_VISIBLE` memory and perform an explicit transfer command between them.</para>
+</listitem></orderedlist>
+</para>
+<para>Thankfully, VMA offers an aid to create and use such resources in the the way optimal for the current Vulkan device. To help the library make the best choice, use flag <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a9be224df3bfc1cfa06203aed689a30c5" kindref="member">VMA_ALLOCATION_CREATE_HOST_ACCESS_SEQUENTIAL_WRITE_BIT</ref> together with <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a11337f96eacf34c1016c339eac165cad" kindref="member">VMA_ALLOCATION_CREATE_HOST_ACCESS_ALLOW_TRANSFER_INSTEAD_BIT</ref>. It will then prefer a memory type that is both `DEVICE_LOCAL` and `HOST_VISIBLE` (integrated memory or BAR), but if no such memory type is available or allocation from it fails (PC graphics cards have only 256 MB of BAR by default, unless ReBAR is supported and enabled in BIOS), it will fall back to `DEVICE_LOCAL` memory for fast GPU access. It is then up to you to detect that the allocation ended up in a memory type that is not `HOST_VISIBLE`, so you need to create another &quot;staging&quot; allocation and perform explicit transfers.</para>
+<para><programlisting><codeline><highlight class="normal">VkBufferCreateInfo<sp/>bufCreateInfo<sp/>=<sp/>{<sp/>VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO<sp/>};</highlight></codeline>
+<codeline><highlight class="normal">bufCreateInfo.size<sp/>=<sp/>65536;</highlight></codeline>
+<codeline><highlight class="normal">bufCreateInfo.usage<sp/>=<sp/>VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT<sp/>|<sp/>VK_BUFFER_USAGE_TRANSFER_DST_BIT;</highlight></codeline>
+<codeline><highlight class="normal"><sp/></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocation_create_info" kindref="compound">VmaAllocationCreateInfo</ref><sp/>allocCreateInfo<sp/>=<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal">allocCreateInfo.<ref refid="struct_vma_allocation_create_info_1accb8b06b1f677d858cb9af20705fa910" kindref="member">usage</ref><sp/>=<sp/><ref refid="group__group__alloc_1ggaa5846affa1e9da3800e3e78fae2305cca27cde9026a84d34d525777baa41fce6e" kindref="member">VMA_MEMORY_USAGE_AUTO</ref>;</highlight></codeline>
+<codeline><highlight class="normal">allocCreateInfo.<ref refid="struct_vma_allocation_create_info_1add09658ac14fe290ace25470ddd6d41b" kindref="member">flags</ref><sp/>=<sp/><ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a9be224df3bfc1cfa06203aed689a30c5" kindref="member">VMA_ALLOCATION_CREATE_HOST_ACCESS_SEQUENTIAL_WRITE_BIT</ref><sp/>|</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a11337f96eacf34c1016c339eac165cad" kindref="member">VMA_ALLOCATION_CREATE_HOST_ACCESS_ALLOW_TRANSFER_INSTEAD_BIT</ref><sp/>|</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a11da372cc3a82931c5e5d6146cd9dd1f" kindref="member">VMA_ALLOCATION_CREATE_MAPPED_BIT</ref>;</highlight></codeline>
+<codeline><highlight class="normal"><sp/></highlight></codeline>
+<codeline><highlight class="normal">VkBuffer<sp/>buf;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocation" kindref="compound">VmaAllocation</ref><sp/>alloc;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocation_info" kindref="compound">VmaAllocationInfo</ref><sp/>allocInfo;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__alloc_1gae9773fe0ef8582e23136d2d83c336ab9" kindref="member">vmaCreateBuffer</ref>(allocator,<sp/>&amp;bufCreateInfo,<sp/>&amp;allocCreateInfo,<sp/>&amp;buf,<sp/>&amp;alloc,<sp/>&amp;allocInfo);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">VkMemoryPropertyFlags<sp/>memPropFlags;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__alloc_1gaf6785483eda8b53561437e05e2177d7b" kindref="member">vmaGetAllocationMemoryProperties</ref>(allocator,<sp/>alloc,<sp/>&amp;memPropFlags);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(memPropFlags<sp/>&amp;<sp/>VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Allocation<sp/>ended<sp/>up<sp/>in<sp/>a<sp/>mappable<sp/>memory<sp/>and<sp/>is<sp/>already<sp/>mapped<sp/>-<sp/>write<sp/>to<sp/>it<sp/>directly.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>[Executed<sp/>in<sp/>runtime]:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(allocInfo.<ref refid="struct_vma_allocation_info_1a17a39eb34201a610347acb91b38eca79" kindref="member">pMappedData</ref>,<sp/>myData,<sp/>myDataSize);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Allocation<sp/>ended<sp/>up<sp/>in<sp/>a<sp/>non-mappable<sp/>memory<sp/>-<sp/>need<sp/>to<sp/>transfer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>VkBufferCreateInfo<sp/>stagingBufCreateInfo<sp/>=<sp/>{<sp/>VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO<sp/>};</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>stagingBufCreateInfo.size<sp/>=<sp/>65536;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>stagingBufCreateInfo.usage<sp/>=<sp/>VK_BUFFER_USAGE_TRANSFER_SRC_BIT;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vma_allocation_create_info" kindref="compound">VmaAllocationCreateInfo</ref><sp/>stagingAllocCreateInfo<sp/>=<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>stagingAllocCreateInfo.<ref refid="struct_vma_allocation_create_info_1accb8b06b1f677d858cb9af20705fa910" kindref="member">usage</ref><sp/>=<sp/><ref refid="group__group__alloc_1ggaa5846affa1e9da3800e3e78fae2305cca27cde9026a84d34d525777baa41fce6e" kindref="member">VMA_MEMORY_USAGE_AUTO</ref>;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>stagingAllocCreateInfo.<ref refid="struct_vma_allocation_create_info_1add09658ac14fe290ace25470ddd6d41b" kindref="member">flags</ref><sp/>=<sp/><ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a9be224df3bfc1cfa06203aed689a30c5" kindref="member">VMA_ALLOCATION_CREATE_HOST_ACCESS_SEQUENTIAL_WRITE_BIT</ref><sp/>|</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a11da372cc3a82931c5e5d6146cd9dd1f" kindref="member">VMA_ALLOCATION_CREATE_MAPPED_BIT</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>VkBuffer<sp/>stagingBuf;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vma_allocation" kindref="compound">VmaAllocation</ref><sp/>stagingAlloc;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vma_allocation_info" kindref="compound">VmaAllocationInfo</ref><sp/>stagingAllocInfo;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__alloc_1gae9773fe0ef8582e23136d2d83c336ab9" kindref="member">vmaCreateBuffer</ref>(allocator,<sp/>&amp;stagingBufCreateInfo,<sp/>&amp;stagingAllocCreateInfo,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;stagingBuf,<sp/>&amp;stagingAlloc,<sp/>stagingAllocInfo);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>[Executed<sp/>in<sp/>runtime]:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(stagingAllocInfo.<ref refid="struct_vma_allocation_info_1a17a39eb34201a610347acb91b38eca79" kindref="member">pMappedData</ref>,<sp/>myData,<sp/>myDataSize);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//vkCmdPipelineBarrier:<sp/>VK_ACCESS_HOST_WRITE_BIT<sp/>--&gt;<sp/>VK_ACCESS_TRANSFER_READ_BIT</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>VkBufferCopy<sp/>bufCopy<sp/>=<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>srcOffset</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>dstOffset,</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>myDataSize);<sp/></highlight><highlight class="comment">//<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>vkCmdCopyBuffer(cmdBuf,<sp/>stagingBuf,<sp/>buf,<sp/>1,<sp/>&amp;bufCopy);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="usage_patterns_1usage_patterns_other_use_cases">
+<title>Other use cases</title>
+<para>Here are some other, less obvious use cases and their recommended settings:</para>
+<para><itemizedlist>
+<listitem><para>An image that is used only as transfer source and destination, but it should stay on the device, as it is used to temporarily store a copy of some texture, e.g. from the current to the next frame, for temporal antialiasing or other temporal effects.<itemizedlist>
+<listitem><para>Use `VkImageCreateInfo::usage = VK_IMAGE_USAGE_TRANSFER_SRC_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT`</para>
+</listitem><listitem><para>Use <ref refid="struct_vma_allocation_create_info_1accb8b06b1f677d858cb9af20705fa910" kindref="member">VmaAllocationCreateInfo::usage</ref> = <ref refid="group__group__alloc_1ggaa5846affa1e9da3800e3e78fae2305cca27cde9026a84d34d525777baa41fce6e" kindref="member">VMA_MEMORY_USAGE_AUTO</ref></para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>An image that is used only as transfer source and destination, but it should be placed in the system RAM despite it doesn&apos;t need to be mapped, because it serves as a &quot;swap&quot; copy to evict least recently used textures from VRAM.<itemizedlist>
+<listitem><para>Use `VkImageCreateInfo::usage = VK_IMAGE_USAGE_TRANSFER_SRC_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT`</para>
+</listitem><listitem><para>Use <ref refid="struct_vma_allocation_create_info_1accb8b06b1f677d858cb9af20705fa910" kindref="member">VmaAllocationCreateInfo::usage</ref> = <ref refid="group__group__alloc_1ggaa5846affa1e9da3800e3e78fae2305cca9b422585242160b8ed3418310ee6664d" kindref="member">VMA_MEMORY_USAGE_AUTO_PREFER_HOST</ref>, as VMA needs a hint here to differentiate from the previous case.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>A buffer that you want to map and write from the CPU, directly read from the GPU (e.g. as a uniform or vertex buffer), but you have a clear preference to place it in device or host memory due to its large size.<itemizedlist>
+<listitem><para>Use `VkBufferCreateInfo::usage = VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT`</para>
+</listitem><listitem><para>Use <ref refid="struct_vma_allocation_create_info_1accb8b06b1f677d858cb9af20705fa910" kindref="member">VmaAllocationCreateInfo::usage</ref> = <ref refid="group__group__alloc_1ggaa5846affa1e9da3800e3e78fae2305ccae2adb696d6a73c18bb20c23666661327" kindref="member">VMA_MEMORY_USAGE_AUTO_PREFER_DEVICE</ref> or <ref refid="group__group__alloc_1ggaa5846affa1e9da3800e3e78fae2305cca9b422585242160b8ed3418310ee6664d" kindref="member">VMA_MEMORY_USAGE_AUTO_PREFER_HOST</ref></para>
+</listitem><listitem><para>Use <ref refid="struct_vma_allocation_create_info_1add09658ac14fe290ace25470ddd6d41b" kindref="member">VmaAllocationCreateInfo::flags</ref> = <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a9be224df3bfc1cfa06203aed689a30c5" kindref="member">VMA_ALLOCATION_CREATE_HOST_ACCESS_SEQUENTIAL_WRITE_BIT</ref> </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h"/>
+  </compounddef>
+</doxygen>

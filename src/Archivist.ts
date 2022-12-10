@@ -1,7 +1,7 @@
 import {Pipeline, Result} from "./Pipeline.ts";
 import {Template} from "./Template.ts";
 
-import * as ink from 'https://deno.land/x/ink/mod.ts';
+import * as ink from 'https://deno.land/x/ink@1.3/mod.ts';
 import * as path from "https://deno.land/std@0.167.0/path/mod.ts";
 
 export let archivistInst: Archivist;

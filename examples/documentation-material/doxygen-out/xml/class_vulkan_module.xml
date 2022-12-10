@@ -1,0 +1,763 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_vulkan_module" kind="class" language="C++" prot="public">
+    <compoundname>VulkanModule</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_renderer_module" prot="public" virt="non-virtual">ShadowEngine::RendererModule</basecompoundref>
+    <includes refid="_vulkan_module_8h" local="no">VulkanModule.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_vulkan_module_1a7bb66e55b3b9b66e4dce6358efe46e4a" prot="public" static="yes" mutable="no">
+        <type>const bool</type>
+        <definition>const bool VulkanModule::validationRequired</definition>
+        <argsstring></argsstring>
+        <name>validationRequired</name>
+        <qualifiedname>VulkanModule::validationRequired</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="25" column="19" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vulkan_module_1a93f33e8ec1dedf9fb6284a5400406bda" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_vulkan_module" kindref="compound">VulkanModule</ref> *</type>
+        <definition>VulkanModule * VulkanModule::instance</definition>
+        <argsstring></argsstring>
+        <name>instance</name>
+        <qualifiedname>VulkanModule::instance</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="57" column="21" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_vulkan_module_1a57a6e6da94029d38576e530c4faf46cf" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool VulkanModule::editorEnabled</definition>
+        <argsstring></argsstring>
+        <name>editorEnabled</name>
+        <qualifiedname>VulkanModule::editorEnabled</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="80" column="10" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vulkan_module_1a165a28b12fdbb576e8f77200eb499521" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; VkDescriptorSet &gt;</type>
+        <definition>std::vector&lt;VkDescriptorSet&gt; VulkanModule::editorRenderPlanes</definition>
+        <argsstring></argsstring>
+        <name>editorRenderPlanes</name>
+        <qualifiedname>VulkanModule::editorRenderPlanes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="81" column="17" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vulkan_module_1a77af29daf26e669de30bbd869de419f9" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::unique_ptr&lt; <ref refid="classvlkx_1_1_image" kindref="compound">vlkx::Image</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::unique_ptr&lt;vlkx::Image&gt; &gt; VulkanModule::editorContentFrames</definition>
+        <argsstring></argsstring>
+        <name>editorContentFrames</name>
+        <qualifiedname>VulkanModule::editorContentFrames</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="82" column="17" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vulkan_module_1a077677831c40455399f14f8946031127" prot="private" static="no" mutable="no">
+        <type>SDL_Window *</type>
+        <definition>SDL_Window* VulkanModule::wnd</definition>
+        <argsstring></argsstring>
+        <name>wnd</name>
+        <qualifiedname>VulkanModule::wnd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="85" column="16" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vulkan_module_1a959d64fafe0fca7468205678d9b8aff7" prot="private" static="no" mutable="no">
+        <type><ref refid="class_validation_and_extension" kindref="compound">ValidationAndExtension</ref> *</type>
+        <definition>ValidationAndExtension* VulkanModule::validators</definition>
+        <argsstring></argsstring>
+        <name>validators</name>
+        <qualifiedname>VulkanModule::validators</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="87" column="24" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vulkan_module_1adb31bc1e778a450fe57f84bb6f3b058d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_vulkan_device" kindref="compound">VulkanDevice</ref> *</type>
+        <definition>VulkanDevice* VulkanModule::device</definition>
+        <argsstring></argsstring>
+        <name>device</name>
+        <qualifiedname>VulkanModule::device</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="89" column="14" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vulkan_module_1ade66959f47ffc51329446a91b6c243f7" prot="private" static="no" mutable="no">
+        <type><ref refid="class_swap_chain" kindref="compound">SwapChain</ref> *</type>
+        <definition>SwapChain* VulkanModule::swapchain</definition>
+        <argsstring></argsstring>
+        <name>swapchain</name>
+        <qualifiedname>VulkanModule::swapchain</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="91" column="11" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vulkan_module_1a21f9c96ebf6e91cb23710716c244e9cc" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref></type>
+        <definition>VmaAllocator VulkanModule::allocator</definition>
+        <argsstring></argsstring>
+        <name>allocator</name>
+        <qualifiedname>VulkanModule::allocator</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="93" column="14" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vulkan_module_1a69494a7cabec9e125261efe722451129" prot="private" static="no" mutable="no">
+        <type>VkInstance</type>
+        <definition>VkInstance VulkanModule::vulkan</definition>
+        <argsstring></argsstring>
+        <name>vulkan</name>
+        <qualifiedname>VulkanModule::vulkan</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="95" column="12" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vulkan_module_1a1ca24eda465331335f5ad6ab57313e93" prot="private" static="no" mutable="no">
+        <type>VkSurfaceKHR</type>
+        <definition>VkSurfaceKHR VulkanModule::surface</definition>
+        <argsstring></argsstring>
+        <name>surface</name>
+        <qualifiedname>VulkanModule::surface</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="97" column="14" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_vulkan_module_1acc1655a09006f2c32aab8539d08c4723" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>VulkanModule::SHObject_Base</definition>
+        <argsstring>(VulkanModule)</argsstring>
+        <name>SHObject_Base</name>
+        <qualifiedname>VulkanModule::SHObject_Base</qualifiedname>
+        <param>
+          <type><ref refid="class_vulkan_module" kindref="compound">VulkanModule</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="16" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_vulkan_module_1ab637914aeeeaf4a4e559050642ed49e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>VulkanModule::VulkanModule</definition>
+        <argsstring>()</argsstring>
+        <name>VulkanModule</name>
+        <qualifiedname>VulkanModule::VulkanModule</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="19" column="5" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1a4b10c9900785fdcd73cc891b14b9489c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>VulkanModule::~VulkanModule</definition>
+        <argsstring>() override</argsstring>
+        <name>~VulkanModule</name>
+        <qualifiedname>VulkanModule::~VulkanModule</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="20" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1af088beee41a686d73f1eab2e1f0196c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VulkanModule::PreInit</definition>
+        <argsstring>() override</argsstring>
+        <name>PreInit</name>
+        <qualifiedname>VulkanModule::PreInit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="28" column="10" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="80" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1a75e20c8561b8132c213b871e69f1e4ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VulkanModule::Init</definition>
+        <argsstring>() override</argsstring>
+        <name>Init</name>
+        <qualifiedname>VulkanModule::Init</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_module_1a233c7fb4da2a1067b6273ce271f2f4a5">Init</reimplements>
+        <briefdescription>
+<para>Pre Init is called when the module is added to the engine  </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Init is called after all the modules are added  </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="30" column="10" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="173" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1a9327e637aeae4b6d4f2cd0232a605098" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VulkanModule::Recreate</definition>
+        <argsstring>() override</argsstring>
+        <name>Recreate</name>
+        <qualifiedname>VulkanModule::Recreate</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_module_1aeecc1fad0d8f8750538cf454244776a0">Recreate</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="32" column="10" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="54" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1a7fce46b833391e373a5858e86e977519" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VulkanModule::Update</definition>
+        <argsstring>(int frame) override</argsstring>
+        <name>Update</name>
+        <qualifiedname>VulkanModule::Update</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_module_1a560946ac942daa6a0304c4f021c1d0d4">Update</reimplements>
+        <param>
+          <type>int</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+<para>update is called each frame  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="34" column="10" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="248" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1aa549db3486d65ae7065760c5efa42871" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VulkanModule::PreRender</definition>
+        <argsstring>() override</argsstring>
+        <name>PreRender</name>
+        <qualifiedname>VulkanModule::PreRender</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_module_1a0a58076a84010e3e4f89bbc42518e4d1">PreRender</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="36" column="10" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="226" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1ab7dfb00b3005acf2f3c2c7cd45a36837" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VulkanModule::Render</definition>
+        <argsstring>(VkCommandBuffer &amp;commands, int frame) override</argsstring>
+        <name>Render</name>
+        <qualifiedname>VulkanModule::Render</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_module_1a423fc488ad29a02c20df5bff83a66a91">Render</reimplements>
+        <param>
+          <type>VkCommandBuffer &amp;</type>
+          <declname>commands</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="38" column="10" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="247" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1a38e5fd3ac3eeb1e5b193dff34646dad4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VulkanModule::OverlayRender</definition>
+        <argsstring>() override</argsstring>
+        <name>OverlayRender</name>
+        <qualifiedname>VulkanModule::OverlayRender</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_module_1a9387c1613a997a46e830646525744651">OverlayRender</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="40" column="10" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="245" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1a8dc7877220a4f2eaa08174b35fe71d5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VulkanModule::LateRender</definition>
+        <argsstring>(VkCommandBuffer &amp;commands, int frame) override</argsstring>
+        <name>LateRender</name>
+        <qualifiedname>VulkanModule::LateRender</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_module_1a1ca3193baa67853ad96690eac72948b3">LateRender</reimplements>
+        <param>
+          <type>VkCommandBuffer &amp;</type>
+          <declname>commands</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="42" column="10" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="251" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1ae6abe5f590823da8081ddb69e38acc52" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VulkanModule::AfterFrameEnd</definition>
+        <argsstring>() override</argsstring>
+        <name>AfterFrameEnd</name>
+        <qualifiedname>VulkanModule::AfterFrameEnd</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_module_1aaa4ff57c2e5c97090717860b9193dbb0">AfterFrameEnd</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="44" column="10" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="246" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1a45e861ddeb6dafa9b079feb57ce50e28" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VulkanModule::Destroy</definition>
+        <argsstring>() override</argsstring>
+        <name>Destroy</name>
+        <qualifiedname>VulkanModule::Destroy</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_module_1a28590da415b31535e1d1a166d553cff1">Destroy</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="46" column="10" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="254" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1ab78fc85fe99ac09ab1e859f0f8036df0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VulkanModule::Event</definition>
+        <argsstring>(SDL_Event *e) override</argsstring>
+        <name>Event</name>
+        <qualifiedname>VulkanModule::Event</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_module_1a70ef0a903f0cac9ea99fd5ab93753987">Event</reimplements>
+        <param>
+          <type>SDL_Event *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="48" column="10" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="249" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1a5d5b5fe704a9753199040b711c5711b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VulkanModule::BeginRenderPass</definition>
+        <argsstring>(const std::unique_ptr&lt; vlkx::RenderCommand &gt; &amp;commands) override</argsstring>
+        <name>BeginRenderPass</name>
+        <qualifiedname>VulkanModule::BeginRenderPass</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_renderer_module_1a0cf7d18f5f787139990362422c7089e1">BeginRenderPass</reimplements>
+        <param>
+          <type>const std::unique_ptr&lt; <ref refid="classvlkx_1_1_render_command" kindref="compound">vlkx::RenderCommand</ref> &gt; &amp;</type>
+          <declname>commands</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="50" column="10" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="176" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1a07dd1f95bbbcc625661f48ea48000546" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VulkanModule::EnableEditor</definition>
+        <argsstring>() override</argsstring>
+        <name>EnableEditor</name>
+        <qualifiedname>VulkanModule::EnableEditor</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_renderer_module_1abbcee2954bdeea985f42f6459693b08e">EnableEditor</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="52" column="10" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1a0f5101f7eab48da414a7203d0a891d83" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>VkExtent2D</type>
+        <definition>VkExtent2D VulkanModule::GetRenderExtent</definition>
+        <argsstring>() override</argsstring>
+        <name>GetRenderExtent</name>
+        <qualifiedname>VulkanModule::GetRenderExtent</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_renderer_module_1adacef79ee4d79d2fe087a4a367c29152">GetRenderExtent</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="54" column="16" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="44" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1a71854522b1134be7fe6d5b4f3c737772" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VulkanModule::initVulkan</definition>
+        <argsstring>(SDL_Window *window)</argsstring>
+        <name>initVulkan</name>
+        <qualifiedname>VulkanModule::initVulkan</qualifiedname>
+        <param>
+          <type>SDL_Window *</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="61" column="6" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="298" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1a6c9cfb57063b8b57b2fbdef1820876fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VulkanModule::createAppAndVulkanInstance</definition>
+        <argsstring>(bool enableValidation, ValidationAndExtension *validations)</argsstring>
+        <name>createAppAndVulkanInstance</name>
+        <qualifiedname>VulkanModule::createAppAndVulkanInstance</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>enableValidation</declname>
+        </param>
+        <param>
+          <type><ref refid="class_validation_and_extension" kindref="compound">ValidationAndExtension</ref> *</type>
+          <declname>validations</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="62" column="6" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="260" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1a6c9fcef12fcd9aae3a8ccafa024354cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VulkanModule::startDraw</definition>
+        <argsstring>()</argsstring>
+        <name>startDraw</name>
+        <qualifiedname>VulkanModule::startDraw</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="65" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1a9022e1b63e52126be59f3fae86e315ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VulkanModule::endDraw</definition>
+        <argsstring>()</argsstring>
+        <name>endDraw</name>
+        <qualifiedname>VulkanModule::endDraw</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="66" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1ae40978cff7e5968c179044057548500d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VulkanModule::cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>cleanup</name>
+        <qualifiedname>VulkanModule::cleanup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="69" column="6" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="331" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1a94dd0b8d16e08b58a6f8a336721100c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkInstance</type>
+        <definition>VkInstance VulkanModule::getVulkan</definition>
+        <argsstring>()</argsstring>
+        <name>getVulkan</name>
+        <qualifiedname>VulkanModule::getVulkan</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="71" column="12" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1acaf1d424d08049045241ce16405f60bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_vulkan_device" kindref="compound">VulkanDevice</ref> *</type>
+        <definition>VulkanDevice * VulkanModule::getDevice</definition>
+        <argsstring>()</argsstring>
+        <name>getDevice</name>
+        <qualifiedname>VulkanModule::getDevice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="72" column="14" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1ad5b31bcba629111bc9f261ec41055d82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_swap_chain" kindref="compound">SwapChain</ref> *</type>
+        <definition>SwapChain * VulkanModule::getSwapchain</definition>
+        <argsstring>()</argsstring>
+        <name>getSwapchain</name>
+        <qualifiedname>VulkanModule::getSwapchain</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="73" column="11" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1adf3a28f7a6bd0a8fb24bbfc3bf967100" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref></type>
+        <definition>VmaAllocator VulkanModule::getAllocator</definition>
+        <argsstring>()</argsstring>
+        <name>getAllocator</name>
+        <qualifiedname>VulkanModule::getAllocator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="74" column="14" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1ae0ca5bd092df45634256c61a90ac8b83" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SDL_Window *</type>
+        <definition>SDL_Window * VulkanModule::getWind</definition>
+        <argsstring>()</argsstring>
+        <name>getWind</name>
+        <qualifiedname>VulkanModule::getWind</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="75" column="16" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vulkan_module_1ac24b3b793d028e7e199f5936391a91ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::unique_ptr&lt; <ref refid="classvlkx_1_1_screen_render_pass_manager" kindref="compound">vlkx::ScreenRenderPassManager</ref> &gt; &amp;</type>
+        <definition>const std::unique_ptr&lt; vlkx::ScreenRenderPassManager &gt; &amp; VulkanModule::getRenderPass</definition>
+        <argsstring>()</argsstring>
+        <name>getRenderPass</name>
+        <qualifiedname>VulkanModule::getRenderPass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="76" column="27" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_vulkan_module_1ae98fb6b5c4497288b51c9c4b860cb1bd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_vulkan_module" kindref="compound">VulkanModule</ref> *</type>
+        <definition>VulkanModule * VulkanModule::getInstance</definition>
+        <argsstring>()</argsstring>
+        <name>getInstance</name>
+        <qualifiedname>VulkanModule::getInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="58" column="21" bodyfile="shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>ShadowEngine::Module</label>
+        <link refid="class_shadow_engine_1_1_module"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ShadowEngine::RendererModule</label>
+        <link refid="class_shadow_engine_1_1_renderer_module"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object"/>
+      </node>
+      <node id="1">
+        <label>VulkanModule</label>
+        <link refid="class_vulkan_module"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>ShadowEngine::Module</label>
+        <link refid="class_shadow_engine_1_1_module"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ShadowEngine::RendererModule</label>
+        <link refid="class_shadow_engine_1_1_renderer_module"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object"/>
+      </node>
+      <node id="1">
+        <label>VulkanModule</label>
+        <link refid="class_vulkan_module"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>instance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" line="15" column="1" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h" bodystart="15" bodyend="99"/>
+    <listofallmembers>
+      <member refid="class_vulkan_module_1ae6abe5f590823da8081ddb69e38acc52" prot="public" virt="virtual"><scope>VulkanModule</scope><name>AfterFrameEnd</name></member>
+      <member refid="class_vulkan_module_1a21f9c96ebf6e91cb23710716c244e9cc" prot="private" virt="non-virtual"><scope>VulkanModule</scope><name>allocator</name></member>
+      <member refid="class_vulkan_module_1a5d5b5fe704a9753199040b711c5711b4" prot="public" virt="virtual"><scope>VulkanModule</scope><name>BeginRenderPass</name></member>
+      <member refid="class_vulkan_module_1ae40978cff7e5968c179044057548500d" prot="public" virt="non-virtual"><scope>VulkanModule</scope><name>cleanup</name></member>
+      <member refid="class_vulkan_module_1a6c9cfb57063b8b57b2fbdef1820876fb" prot="public" virt="non-virtual"><scope>VulkanModule</scope><name>createAppAndVulkanInstance</name></member>
+      <member refid="class_vulkan_module_1a45e861ddeb6dafa9b079feb57ce50e28" prot="public" virt="virtual"><scope>VulkanModule</scope><name>Destroy</name></member>
+      <member refid="class_vulkan_module_1adb31bc1e778a450fe57f84bb6f3b058d" prot="private" virt="non-virtual"><scope>VulkanModule</scope><name>device</name></member>
+      <member refid="class_vulkan_module_1a77af29daf26e669de30bbd869de419f9" prot="private" virt="non-virtual"><scope>VulkanModule</scope><name>editorContentFrames</name></member>
+      <member refid="class_vulkan_module_1a57a6e6da94029d38576e530c4faf46cf" prot="private" virt="non-virtual"><scope>VulkanModule</scope><name>editorEnabled</name></member>
+      <member refid="class_vulkan_module_1a165a28b12fdbb576e8f77200eb499521" prot="private" virt="non-virtual"><scope>VulkanModule</scope><name>editorRenderPlanes</name></member>
+      <member refid="class_vulkan_module_1a07dd1f95bbbcc625661f48ea48000546" prot="public" virt="virtual"><scope>VulkanModule</scope><name>EnableEditor</name></member>
+      <member refid="class_vulkan_module_1a9022e1b63e52126be59f3fae86e315ee" prot="public" virt="non-virtual"><scope>VulkanModule</scope><name>endDraw</name></member>
+      <member refid="class_vulkan_module_1ab78fc85fe99ac09ab1e859f0f8036df0" prot="public" virt="virtual"><scope>VulkanModule</scope><name>Event</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a5244bd8527763320cbef208e3a6e4860" prot="public" virt="non-virtual"><scope>VulkanModule</scope><name>GenerateId</name></member>
+      <member refid="class_vulkan_module_1adf3a28f7a6bd0a8fb24bbfc3bf967100" prot="public" virt="non-virtual"><scope>VulkanModule</scope><name>getAllocator</name></member>
+      <member refid="class_vulkan_module_1acaf1d424d08049045241ce16405f60bf" prot="public" virt="non-virtual"><scope>VulkanModule</scope><name>getDevice</name></member>
+      <member refid="class_vulkan_module_1ae98fb6b5c4497288b51c9c4b860cb1bd" prot="public" virt="non-virtual"><scope>VulkanModule</scope><name>getInstance</name></member>
+      <member refid="class_vulkan_module_1a0f5101f7eab48da414a7203d0a891d83" prot="public" virt="virtual"><scope>VulkanModule</scope><name>GetRenderExtent</name></member>
+      <member refid="class_vulkan_module_1ac24b3b793d028e7e199f5936391a91ab" prot="public" virt="non-virtual"><scope>VulkanModule</scope><name>getRenderPass</name></member>
+      <member refid="class_vulkan_module_1ad5b31bcba629111bc9f261ec41055d82" prot="public" virt="non-virtual"><scope>VulkanModule</scope><name>getSwapchain</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a3597667efd33b935a89ac11d3b47a215" prot="public" virt="pure-virtual"><scope>VulkanModule</scope><name>GetType</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" virt="pure-virtual"><scope>VulkanModule</scope><name>GetTypeId</name></member>
+      <member refid="class_vulkan_module_1a94dd0b8d16e08b58a6f8a336721100c5" prot="public" virt="non-virtual"><scope>VulkanModule</scope><name>getVulkan</name></member>
+      <member refid="class_vulkan_module_1ae0ca5bd092df45634256c61a90ac8b83" prot="public" virt="non-virtual"><scope>VulkanModule</scope><name>getWind</name></member>
+      <member refid="class_vulkan_module_1a75e20c8561b8132c213b871e69f1e4ff" prot="public" virt="virtual"><scope>VulkanModule</scope><name>Init</name></member>
+      <member refid="class_vulkan_module_1a71854522b1134be7fe6d5b4f3c737772" prot="public" virt="non-virtual"><scope>VulkanModule</scope><name>initVulkan</name></member>
+      <member refid="class_vulkan_module_1a93f33e8ec1dedf9fb6284a5400406bda" prot="public" virt="non-virtual"><scope>VulkanModule</scope><name>instance</name></member>
+      <member refid="class_vulkan_module_1a8dc7877220a4f2eaa08174b35fe71d5a" prot="public" virt="virtual"><scope>VulkanModule</scope><name>LateRender</name></member>
+      <member refid="class_vulkan_module_1a38e5fd3ac3eeb1e5b193dff34646dad4" prot="public" virt="virtual"><scope>VulkanModule</scope><name>OverlayRender</name></member>
+      <member refid="class_vulkan_module_1af088beee41a686d73f1eab2e1f0196c5" prot="public" virt="non-virtual"><scope>VulkanModule</scope><name>PreInit</name></member>
+      <member refid="class_vulkan_module_1aa549db3486d65ae7065760c5efa42871" prot="public" virt="virtual"><scope>VulkanModule</scope><name>PreRender</name></member>
+      <member refid="class_vulkan_module_1a9327e637aeae4b6d4f2cd0232a605098" prot="public" virt="virtual"><scope>VulkanModule</scope><name>Recreate</name></member>
+      <member refid="class_vulkan_module_1ab7dfb00b3005acf2f3c2c7cd45a36837" prot="public" virt="virtual"><scope>VulkanModule</scope><name>Render</name></member>
+      <member refid="class_vulkan_module_1acc1655a09006f2c32aab8539d08c4723" prot="private" virt="non-virtual"><scope>VulkanModule</scope><name>SHObject_Base</name></member>
+      <member refid="class_vulkan_module_1a6c9fcef12fcd9aae3a8ccafa024354cd" prot="public" virt="non-virtual"><scope>VulkanModule</scope><name>startDraw</name></member>
+      <member refid="class_vulkan_module_1a1ca24eda465331335f5ad6ab57313e93" prot="private" virt="non-virtual"><scope>VulkanModule</scope><name>surface</name></member>
+      <member refid="class_vulkan_module_1ade66959f47ffc51329446a91b6c243f7" prot="private" virt="non-virtual"><scope>VulkanModule</scope><name>swapchain</name></member>
+      <member refid="class_vulkan_module_1a7fce46b833391e373a5858e86e977519" prot="public" virt="virtual"><scope>VulkanModule</scope><name>Update</name></member>
+      <member refid="class_vulkan_module_1a7bb66e55b3b9b66e4dce6358efe46e4a" prot="public" virt="non-virtual"><scope>VulkanModule</scope><name>validationRequired</name></member>
+      <member refid="class_vulkan_module_1a959d64fafe0fca7468205678d9b8aff7" prot="private" virt="non-virtual"><scope>VulkanModule</scope><name>validators</name></member>
+      <member refid="class_vulkan_module_1a69494a7cabec9e125261efe722451129" prot="private" virt="non-virtual"><scope>VulkanModule</scope><name>vulkan</name></member>
+      <member refid="class_vulkan_module_1ab637914aeeeaf4a4e559050642ed49e4" prot="public" virt="non-virtual"><scope>VulkanModule</scope><name>VulkanModule</name></member>
+      <member refid="class_vulkan_module_1a077677831c40455399f14f8946031127" prot="private" virt="non-virtual"><scope>VulkanModule</scope><name>wnd</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" virt="virtual"><scope>VulkanModule</scope><name>~SHObject</name></member>
+      <member refid="class_vulkan_module_1a4b10c9900785fdcd73cc891b14b9489c" prot="public" virt="non-virtual"><scope>VulkanModule</scope><name>~VulkanModule</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

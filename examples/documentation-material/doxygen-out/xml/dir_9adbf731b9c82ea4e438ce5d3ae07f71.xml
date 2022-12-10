@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_9adbf731b9c82ea4e438ce5d3ae07f71" kind="dir">
+    <compoundname>shadow-engine/core/inc/core</compoundname>
+    <innerfile refid="_module_8h">Module.h</innerfile>
+    <innerfile refid="_module_manager_8h">ModuleManager.h</innerfile>
+    <innerfile refid="_s_d_l2_module_8h">SDL2Module.h</innerfile>
+    <innerfile refid="_shadow_application_8h">ShadowApplication.h</innerfile>
+    <innerfile refid="_shadow_window_8h">ShadowWindow.h</innerfile>
+    <innerfile refid="_time_8h">Time.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/core/inc/core/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,569 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkxtemp_1_1_model_builder" kind="class" language="C++" prot="public">
+    <compoundname>vlkxtemp::ModelBuilder</compoundname>
+    <includes refid="_builder_8h" local="no">Builder.h</includes>
+    <innerclass refid="structvlkxtemp_1_1_model_builder_1_1_model_push_constant" prot="public">vlkxtemp::ModelBuilder::ModelPushConstant</innerclass>
+    <innerclass refid="classvlkxtemp_1_1_model_builder_1_1_model_resource" prot="public">vlkxtemp::ModelBuilder::ModelResource</innerclass>
+    <innerclass refid="classvlkxtemp_1_1_model_builder_1_1_multi_mesh_model" prot="public">vlkxtemp::ModelBuilder::MultiMeshModel</innerclass>
+    <innerclass refid="classvlkxtemp_1_1_model_builder_1_1_single_mesh_model" prot="public">vlkxtemp::ModelBuilder::SingleMeshModel</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classvlkxtemp_1_1_model_builder_1a84882aee091002dd6c62db8ba38470f3" prot="public" static="no">
+        <type><ref refid="classvlkx_1_1_shader_module_1a7f874a822b8a748d033e5e9d66c83246" kindref="member">vlkx::ShaderModule::ReleasePool</ref></type>
+        <definition>using vlkxtemp::ModelBuilder::ShaderPool =  vlkx::ShaderModule::ReleasePool</definition>
+        <argsstring></argsstring>
+        <name>ShaderPool</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::ShaderPool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="15" column="9" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classvlkxtemp_1_1_model_builder_1ac729f1fa732342a53d933b8fb52347ef" prot="public" static="no">
+        <type><ref refid="classvlkxtemp_1_1_model_loader_1a514055e13e1d8132ae485d6d6b11f2d3" kindref="member">ModelLoader::TextureType</ref></type>
+        <definition>using vlkxtemp::ModelBuilder::TextureType =  ModelLoader::TextureType</definition>
+        <argsstring></argsstring>
+        <name>TextureType</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::TextureType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="16" column="9" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classvlkxtemp_1_1_model_builder_1a6f9efb7520fe2d499e296b1cd1b1f754" prot="public" static="no">
+        <type>std::array&lt; std::vector&lt; std::unique_ptr&lt; <ref refid="classvlkx_1_1_samplable_image" kindref="compound">vlkx::SamplableImage</ref> &gt; &gt;, static_cast&lt; int &gt;(TextureType::Count)&gt;</type>
+        <definition>using vlkxtemp::ModelBuilder::TexturePerMesh =  std::array&lt;std::vector&lt;std::unique_ptr&lt;vlkx::SamplableImage&gt; &gt;, static_cast&lt;int&gt;(TextureType::Count)&gt;</definition>
+        <argsstring></argsstring>
+        <name>TexturePerMesh</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::TexturePerMesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="17" column="9" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classvlkxtemp_1_1_model_builder_1a129ba88f65b8da8d86db1cec5f66a05c" prot="public" static="no">
+        <type>std::map&lt; <ref refid="classvlkxtemp_1_1_model_loader_1a514055e13e1d8132ae485d6d6b11f2d3" kindref="member">TextureType</ref>, uint32_t &gt;</type>
+        <definition>using vlkxtemp::ModelBuilder::BindingPoints =  std::map&lt;TextureType, uint32_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>BindingPoints</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::BindingPoints</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="18" column="9" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classvlkxtemp_1_1_model_builder_1abdb3e5a4d714eeeaed51c6d427c2f24a" prot="public" static="no">
+        <type><ref refid="classvlkx_1_1_ref_counted_texture_1abe22da373d7c7755a32c7339f99800ab" kindref="member">vlkx::RefCountedTexture::ImageLocation</ref></type>
+        <definition>using vlkxtemp::ModelBuilder::TextureSource =  vlkx::RefCountedTexture::ImageLocation</definition>
+        <argsstring></argsstring>
+        <name>TextureSource</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::TextureSource</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="19" column="9" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classvlkxtemp_1_1_model_builder_1a2adfcbf62a85e02440bc2cf0540417e1" prot="public" static="no">
+        <type>std::map&lt; <ref refid="classvlkxtemp_1_1_model_loader_1a514055e13e1d8132ae485d6d6b11f2d3" kindref="member">TextureType</ref>, std::vector&lt; <ref refid="classvlkxtemp_1_1_model_builder_1abdb3e5a4d714eeeaed51c6d427c2f24a" kindref="member">TextureSource</ref> &gt; &gt;</type>
+        <definition>using vlkxtemp::ModelBuilder::TextureSources =  std::map&lt;TextureType, std::vector&lt;TextureSource&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>TextureSources</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::TextureSources</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="20" column="9" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classvlkxtemp_1_1_model_builder_1a93fee06b531f57b5eba9a049f80d2699" prot="public" static="no">
+        <type>std::vector&lt; std::unique_ptr&lt; <ref refid="classvlkx_1_1_static_descriptor" kindref="compound">vlkx::StaticDescriptor</ref> &gt; &gt;</type>
+        <definition>using vlkxtemp::ModelBuilder::Descriptors =  std::vector&lt;std::unique_ptr&lt;vlkx::StaticDescriptor&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>Descriptors</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::Descriptors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="62" column="9" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvlkxtemp_1_1_model_builder_1a86930cf9bae9e4437da01e1b5236be26" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int vlkxtemp::ModelBuilder::frames</definition>
+        <argsstring></argsstring>
+        <name>frames</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::frames</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="83" column="19" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkxtemp_1_1_model_builder_1a269aaf48b4f074536354e07b7c2b8457" prot="private" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float vlkxtemp::ModelBuilder::aspectRatio</definition>
+        <argsstring></argsstring>
+        <name>aspectRatio</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::aspectRatio</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="84" column="21" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkxtemp_1_1_model_builder_1aca30bd01266d563a9af59a7fe1169f3b" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classvlkx_1_1_static_per_vertex_buffer" kindref="compound">vlkx::StaticPerVertexBuffer</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;vlkx::StaticPerVertexBuffer&gt; vlkxtemp::ModelBuilder::vertexBuffer</definition>
+        <argsstring></argsstring>
+        <name>vertexBuffer</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::vertexBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="86" column="25" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkxtemp_1_1_model_builder_1a4a745100a0c76352eab606d4f84add32" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classvlkxtemp_1_1_model_builder_1a6f9efb7520fe2d499e296b1cd1b1f754" kindref="member">TexturePerMesh</ref> &gt;</type>
+        <definition>std::vector&lt;TexturePerMesh&gt; vlkxtemp::ModelBuilder::textures</definition>
+        <argsstring></argsstring>
+        <name>textures</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::textures</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="87" column="21" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkxtemp_1_1_model_builder_1a3985348e613fd2d52d33e2e280649e1f" prot="private" static="no" mutable="no">
+        <type><ref refid="classvlkxtemp_1_1_model_builder_1a6f9efb7520fe2d499e296b1cd1b1f754" kindref="member">TexturePerMesh</ref></type>
+        <definition>TexturePerMesh vlkxtemp::ModelBuilder::sharedTextures</definition>
+        <argsstring></argsstring>
+        <name>sharedTextures</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::sharedTextures</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="88" column="24" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkxtemp_1_1_model_builder_1ab7c446848e509fa9ad67c7ca7c6c5d2a" prot="private" static="no" mutable="no">
+        <type><ref refid="classvlkxtemp_1_1_model_builder_1a129ba88f65b8da8d86db1cec5f66a05c" kindref="member">BindingPoints</ref></type>
+        <definition>BindingPoints vlkxtemp::ModelBuilder::bindPoints</definition>
+        <argsstring></argsstring>
+        <name>bindPoints</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::bindPoints</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="89" column="23" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkxtemp_1_1_model_builder_1a59be5b8b35c8d69ed944243cab5834f0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classvlkx_1_1_per_instance_vertex_buffer" kindref="compound">vlkx::PerInstanceVertexBuffer</ref> * &gt;</type>
+        <definition>std::vector&lt;vlkx::PerInstanceVertexBuffer*&gt; vlkxtemp::ModelBuilder::instanceBuffers</definition>
+        <argsstring></argsstring>
+        <name>instanceBuffers</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::instanceBuffers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="91" column="21" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkxtemp_1_1_model_builder_1a4f7b971b7ef74d7e762c61cddff785bc" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structvlkx_1_1_descriptor_1_1_meta" kindref="compound">vlkx::Descriptor::Meta</ref> &gt;</type>
+        <definition>std::vector&lt;vlkx::Descriptor::Meta&gt; vlkxtemp::ModelBuilder::uniformMeta</definition>
+        <argsstring></argsstring>
+        <name>uniformMeta</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::uniformMeta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="92" column="21" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkxtemp_1_1_model_builder_1a6dbac3c3fa0ecd8ffc75c28c1b5386d0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classvlkx_1_1_descriptor_1a3294c51c009d0ac9de4f5c133ad852c8" kindref="member">vlkx::Descriptor::BufferInfos</ref> &gt;</type>
+        <definition>std::vector&lt;vlkx::Descriptor::BufferInfos&gt; vlkxtemp::ModelBuilder::uniformBufferMeta</definition>
+        <argsstring></argsstring>
+        <name>uniformBufferMeta</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::uniformBufferMeta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="93" column="21" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkxtemp_1_1_model_builder_1ace9d65a173817e38cc9c2d32de84c9d3" prot="private" static="no" mutable="no">
+        <type>std::optional&lt; <ref refid="structvlkxtemp_1_1_model_builder_1_1_model_push_constant" kindref="compound">ModelPushConstant</ref> &gt;</type>
+        <definition>std::optional&lt;ModelPushConstant&gt; vlkxtemp::ModelBuilder::pushConstants</definition>
+        <argsstring></argsstring>
+        <name>pushConstants</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::pushConstants</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="95" column="23" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkxtemp_1_1_model_builder_1a3279b541f6b01bd6bacd01c44f2f6734" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classvlkx_1_1_graphics_pipeline_builder" kindref="compound">vlkx::GraphicsPipelineBuilder</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;vlkx::GraphicsPipelineBuilder&gt; vlkxtemp::ModelBuilder::pipelineBuilder</definition>
+        <argsstring></argsstring>
+        <name>pipelineBuilder</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::pipelineBuilder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="96" column="25" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkxtemp_1_1_model_builder_1aadd54cbb8359b70548f2fd63a5c70d80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkxtemp::ModelBuilder::ModelBuilder</definition>
+        <argsstring>(std::string &amp;&amp;name, int frames, float aspect, const ModelResource &amp;resource)</argsstring>
+        <name>ModelBuilder</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::ModelBuilder</qualifiedname>
+        <param>
+          <type>std::string &amp;&amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>frames</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>aspect</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classvlkxtemp_1_1_model_builder_1_1_model_resource" kindref="compound">ModelResource</ref> &amp;</type>
+          <declname>resource</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="64" column="9" bodyfile="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" bodystart="110" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkxtemp_1_1_model_builder_1a19e87c6946c6d17ef2d9f95c567f1bbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkxtemp::ModelBuilder::ModelBuilder</definition>
+        <argsstring>(const ModelBuilder &amp;)=delete</argsstring>
+        <name>ModelBuilder</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::ModelBuilder</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkxtemp_1_1_model_builder" kindref="compound">ModelBuilder</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="66" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkxtemp_1_1_model_builder_1ab5177507c9214a7d1b662caeac6eed1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkxtemp_1_1_model_builder" kindref="compound">ModelBuilder</ref> &amp;</type>
+        <definition>ModelBuilder &amp; vlkxtemp::ModelBuilder::operator=</definition>
+        <argsstring>(const ModelBuilder &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkxtemp_1_1_model_builder" kindref="compound">ModelBuilder</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="67" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkxtemp_1_1_model_builder_1ad02b90518e889094a3d5dafe3e58df8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkxtemp_1_1_model_builder" kindref="compound">ModelBuilder</ref> &amp;</type>
+        <definition>ModelBuilder &amp; vlkxtemp::ModelBuilder::texture</definition>
+        <argsstring>(TextureType type, const TextureSource &amp;source)</argsstring>
+        <name>texture</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::texture</qualifiedname>
+        <param>
+          <type><ref refid="classvlkxtemp_1_1_model_loader_1a514055e13e1d8132ae485d6d6b11f2d3" kindref="member">TextureType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classvlkxtemp_1_1_model_builder_1abdb3e5a4d714eeeaed51c6d427c2f24a" kindref="member">TextureSource</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="69" column="22" bodyfile="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkxtemp_1_1_model_builder_1a207cca9e26a5cb2f70077b6d59b9abf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkxtemp_1_1_model_builder" kindref="compound">ModelBuilder</ref> &amp;</type>
+        <definition>ModelBuilder &amp; vlkxtemp::ModelBuilder::bindTextures</definition>
+        <argsstring>(TextureType type, uint32_t point)</argsstring>
+        <name>bindTextures</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::bindTextures</qualifiedname>
+        <param>
+          <type><ref refid="classvlkxtemp_1_1_model_loader_1a514055e13e1d8132ae485d6d6b11f2d3" kindref="member">TextureType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="70" column="22" bodyfile="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" bodystart="121" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkxtemp_1_1_model_builder_1aae5f148c85d7ed29eb4344e9ec58a1b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkxtemp_1_1_model_builder" kindref="compound">ModelBuilder</ref> &amp;</type>
+        <definition>ModelBuilder &amp; vlkxtemp::ModelBuilder::instanceBuffer</definition>
+        <argsstring>(vlkx::PerInstanceVertexBuffer *buffer)</argsstring>
+        <name>instanceBuffer</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::instanceBuffer</qualifiedname>
+        <param>
+          <type><ref refid="classvlkx_1_1_per_instance_vertex_buffer" kindref="compound">vlkx::PerInstanceVertexBuffer</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="71" column="22" bodyfile="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" bodystart="126" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkxtemp_1_1_model_builder_1a9357345e8831bcc95f6b1eda88d5012a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkxtemp_1_1_model_builder" kindref="compound">ModelBuilder</ref> &amp;</type>
+        <definition>ModelBuilder &amp; vlkxtemp::ModelBuilder::uniform</definition>
+        <argsstring>(VkShaderStageFlags stage, std::vector&lt; vlkx::Descriptor::Meta::Binding &gt; &amp;&amp;bindings)</argsstring>
+        <name>uniform</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::uniform</qualifiedname>
+        <param>
+          <type>VkShaderStageFlags</type>
+          <declname>stage</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="structvlkx_1_1_descriptor_1_1_meta_1_1_binding" kindref="compound">vlkx::Descriptor::Meta::Binding</ref> &gt; &amp;&amp;</type>
+          <declname>bindings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="72" column="22" bodyfile="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" bodystart="131" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkxtemp_1_1_model_builder_1ae0188dedecb79076bcc100e82d1ee8f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkxtemp_1_1_model_builder" kindref="compound">ModelBuilder</ref> &amp;</type>
+        <definition>ModelBuilder &amp; vlkxtemp::ModelBuilder::uniformBuffer</definition>
+        <argsstring>(uint32_t point, const vlkx::UniformBuffer &amp;buffer)</argsstring>
+        <name>uniformBuffer</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::uniformBuffer</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_uniform_buffer" kindref="compound">vlkx::UniformBuffer</ref> &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="73" column="22" bodyfile="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" bodystart="136" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkxtemp_1_1_model_builder_1a84f1a17efddd657ba778cbd83d5fa324" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkxtemp_1_1_model_builder" kindref="compound">ModelBuilder</ref> &amp;</type>
+        <definition>ModelBuilder &amp; vlkxtemp::ModelBuilder::pushStage</definition>
+        <argsstring>(VkShaderStageFlags stage)</argsstring>
+        <name>pushStage</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::pushStage</qualifiedname>
+        <param>
+          <type>VkShaderStageFlags</type>
+          <declname>stage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="74" column="22" bodyfile="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" bodystart="145" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkxtemp_1_1_model_builder_1a78b2acbe1fb6e5d82a5004bc5472c89c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkxtemp_1_1_model_builder" kindref="compound">ModelBuilder</ref> &amp;</type>
+        <definition>ModelBuilder &amp; vlkxtemp::ModelBuilder::pushConstant</definition>
+        <argsstring>(const vlkx::PushConstant *constant, uint32_t offset)</argsstring>
+        <name>pushConstant</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::pushConstant</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_push_constant" kindref="compound">vlkx::PushConstant</ref> *</type>
+          <declname>constant</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="75" column="22" bodyfile="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" bodystart="153" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkxtemp_1_1_model_builder_1a829578e2d3cefecb60bd699a31d2cd47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkxtemp_1_1_model_builder" kindref="compound">ModelBuilder</ref> &amp;</type>
+        <definition>ModelBuilder &amp; vlkxtemp::ModelBuilder::shader</definition>
+        <argsstring>(VkShaderStageFlagBits stage, std::string &amp;&amp;file)</argsstring>
+        <name>shader</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::shader</qualifiedname>
+        <param>
+          <type>VkShaderStageFlagBits</type>
+          <declname>stage</declname>
+        </param>
+        <param>
+          <type>std::string &amp;&amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="76" column="22" bodyfile="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" bodystart="161" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkxtemp_1_1_model_builder_1a3896bcfc7686261f54bc79775db0db23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classvlkxtemp_1_1_model" kindref="compound">Model</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; Model &gt; vlkxtemp::ModelBuilder::build</definition>
+        <argsstring>()</argsstring>
+        <name>build</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::build</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="78" column="25" bodyfile="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" bodystart="187" bodyend="209"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classvlkxtemp_1_1_model_builder_1acf6dcff52dc9b2f61ccdd26c7b840fee" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classvlkxtemp_1_1_model_builder_1a93fee06b531f57b5eba9a049f80d2699" kindref="member">Descriptors</ref> &gt;</type>
+        <definition>std::vector&lt; ModelBuilder::Descriptors &gt; vlkxtemp::ModelBuilder::createDescs</definition>
+        <argsstring>() const</argsstring>
+        <name>createDescs</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::createDescs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="81" column="21" bodyfile="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" bodystart="166" bodyend="185"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="12" column="5" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="12" bodyend="97"/>
+    <listofallmembers>
+      <member refid="classvlkxtemp_1_1_model_builder_1a269aaf48b4f074536354e07b7c2b8457" prot="private" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>aspectRatio</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1a129ba88f65b8da8d86db1cec5f66a05c" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>BindingPoints</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1ab7c446848e509fa9ad67c7ca7c6c5d2a" prot="private" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>bindPoints</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1a207cca9e26a5cb2f70077b6d59b9abf8" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>bindTextures</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1a3896bcfc7686261f54bc79775db0db23" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>build</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1acf6dcff52dc9b2f61ccdd26c7b840fee" prot="private" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>createDescs</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1a93fee06b531f57b5eba9a049f80d2699" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>Descriptors</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1a86930cf9bae9e4437da01e1b5236be26" prot="private" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>frames</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1aae5f148c85d7ed29eb4344e9ec58a1b6" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>instanceBuffer</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1a59be5b8b35c8d69ed944243cab5834f0" prot="private" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>instanceBuffers</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1aadd54cbb8359b70548f2fd63a5c70d80" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>ModelBuilder</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1a19e87c6946c6d17ef2d9f95c567f1bbd" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>ModelBuilder</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1ab5177507c9214a7d1b662caeac6eed1b" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>operator=</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1a3279b541f6b01bd6bacd01c44f2f6734" prot="private" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>pipelineBuilder</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1a78b2acbe1fb6e5d82a5004bc5472c89c" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>pushConstant</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1ace9d65a173817e38cc9c2d32de84c9d3" prot="private" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>pushConstants</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1a84f1a17efddd657ba778cbd83d5fa324" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>pushStage</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1a829578e2d3cefecb60bd699a31d2cd47" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>shader</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1a84882aee091002dd6c62db8ba38470f3" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>ShaderPool</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1a3985348e613fd2d52d33e2e280649e1f" prot="private" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>sharedTextures</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1ad02b90518e889094a3d5dafe3e58df8f" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>texture</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1a6f9efb7520fe2d499e296b1cd1b1f754" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>TexturePerMesh</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1a4a745100a0c76352eab606d4f84add32" prot="private" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>textures</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1abdb3e5a4d714eeeaed51c6d427c2f24a" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>TextureSource</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1a2adfcbf62a85e02440bc2cf0540417e1" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>TextureSources</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1ac729f1fa732342a53d933b8fb52347ef" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>TextureType</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1a9357345e8831bcc95f6b1eda88d5012a" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>uniform</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1ae0188dedecb79076bcc100e82d1ee8f2" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>uniformBuffer</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1a6dbac3c3fa0ecd8ffc75c28c1b5386d0" prot="private" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>uniformBufferMeta</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1a4f7b971b7ef74d7e762c61cddff785bc" prot="private" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>uniformMeta</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1aca30bd01266d563a9af59a7fe1169f3b" prot="private" virt="non-virtual"><scope>vlkxtemp::ModelBuilder</scope><name>vertexBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

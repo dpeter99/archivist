@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_directional_light_inspector" kind="class" language="C++" prot="public">
+    <compoundname>DirectionalLightInspector</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ShadowEngine::Debug::EntityInspector</basecompoundref>
+    <includes refid="_directional_light_8h" local="no">DirectionalLight.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_directional_light_inspector_1a17b9a9f12f4f75c55778b4ac08efca60" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DirectionalLightInspector::Draw</definition>
+        <argsstring>(ShadowEngine::EntitySystem::rtm_ptr&lt; ShadowEngine::EntitySystem::Entity &gt; &amp;obj) override</argsstring>
+        <name>Draw</name>
+        <qualifiedname>DirectionalLightInspector::Draw</qualifiedname>
+        <param>
+          <type><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">ShadowEngine::EntitySystem::rtm_ptr</ref>&lt; <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">ShadowEngine::EntitySystem::Entity</ref> &gt; &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/Entities/DirectionalLight.h" line="30" column="6" bodyfile="shadow-engine/shadow-entity/Entities/DirectionalLight.h" bodystart="30" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DirectionalLightInspector</label>
+        <link refid="class_directional_light_inspector"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ShadowEngine::Debug::EntityInspector</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DirectionalLightInspector</label>
+        <link refid="class_directional_light_inspector"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ShadowEngine::Debug::EntityInspector</label>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-entity/Entities/DirectionalLight.h" line="27" column="1" bodyfile="shadow-engine/shadow-entity/Entities/DirectionalLight.h" bodystart="27" bodyend="42"/>
+    <listofallmembers>
+      <member refid="class_directional_light_inspector_1a17b9a9f12f4f75c55778b4ac08efca60" prot="public" virt="non-virtual"><scope>DirectionalLightInspector</scope><name>Draw</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

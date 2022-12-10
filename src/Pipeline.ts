@@ -1,7 +1,7 @@
 import {IModule} from "./Module/IModule.ts";
 import {Content} from "./Content.ts";
 
-import * as ink from 'https://deno.land/x/ink/mod.ts'
+import * as ink from 'https://deno.land/x/ink@1.3/mod.ts'
 import * as path from "https://deno.land/std@0.167.0/path/mod.ts";
 import {archivistInst} from "./Archivist.ts";
 

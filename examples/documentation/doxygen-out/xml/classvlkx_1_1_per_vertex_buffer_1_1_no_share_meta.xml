@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_per_vertex_buffer_1_1_no_share_meta" kind="class" language="C++" prot="public">
+    <compoundname>vlkx::PerVertexBuffer::NoShareMeta</compoundname>
+    <basecompoundref refid="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta" prot="public" virt="non-virtual">vlkx::PerVertexBuffer::BufferDataMeta</basecompoundref>
+    <includes refid="_buffer_8h" local="no">Buffer.h</includes>
+    <innerclass refid="structvlkx_1_1_per_vertex_buffer_1_1_no_share_meta_1_1_per_mesh" prot="public">vlkx::PerVertexBuffer::NoShareMeta::PerMesh</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvlkx_1_1_per_vertex_buffer_1_1_no_share_meta_1af65d5d061bf937f5ed0fab1ea45e6e68" prot="private" static="no" mutable="no">
+        <type>const std::vector&lt; <ref refid="structvlkx_1_1_per_vertex_buffer_1_1_no_share_meta_1_1_per_mesh" kindref="compound">PerMesh</ref> &gt;</type>
+        <definition>const std::vector&lt;PerMesh&gt; vlkx::PerVertexBuffer::NoShareMeta::perMeshMeta</definition>
+        <argsstring></argsstring>
+        <name>perMeshMeta</name>
+        <qualifiedname>vlkx::PerVertexBuffer::NoShareMeta::perMeshMeta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="215" column="31" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_per_vertex_buffer_1_1_no_share_meta_1ac1bab92ce6e4cf6213d9bc42dfa0faab" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::PerVertexBuffer::NoShareMeta::NoShareMeta</definition>
+        <argsstring>(std::vector&lt; PerMesh &gt; &amp;&amp;perMesh)</argsstring>
+        <name>NoShareMeta</name>
+        <qualifiedname>vlkx::PerVertexBuffer::NoShareMeta::NoShareMeta</qualifiedname>
+        <param>
+          <type>std::vector&lt; <ref refid="structvlkx_1_1_per_vertex_buffer_1_1_no_share_meta_1_1_per_mesh" kindref="compound">PerMesh</ref> &gt; &amp;&amp;</type>
+          <declname>perMesh</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="210" column="22" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="210" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_per_vertex_buffer_1_1_no_share_meta_1ab7125acf0bbbc2114b77fefde6cdfde1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="structvlkx_1_1_buffer_1_1_bulk_copy_meta" kindref="compound">BulkCopyMeta</ref></type>
+        <definition>Buffer::BulkCopyMeta vlkx::PerVertexBuffer::NoShareMeta::prepareCopy</definition>
+        <argsstring>(PerVertexBuffer *buffer) const override</argsstring>
+        <name>prepareCopy</name>
+        <qualifiedname>vlkx::PerVertexBuffer::NoShareMeta::prepareCopy</qualifiedname>
+        <reimplements refid="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta_1a9bfe5d7b1374f46259825fc4786bd03a">prepareCopy</reimplements>
+        <param>
+          <type><ref refid="classvlkx_1_1_per_vertex_buffer" kindref="compound">PerVertexBuffer</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="212" column="26" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Buffer.cpp" bodystart="111" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_per_vertex_buffer_1_1_no_share_meta_1a406e48420305c6edc9f542246830ce4f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool vlkx::PerVertexBuffer::NoShareMeta::hasIndices</definition>
+        <argsstring>() const override</argsstring>
+        <name>hasIndices</name>
+        <qualifiedname>vlkx::PerVertexBuffer::NoShareMeta::hasIndices</qualifiedname>
+        <reimplements refid="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta_1a069ecd344c42d854be14ed4b8112d4ba">hasIndices</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="213" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="213" bodyend="213"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>vlkx::PerVertexBuffer::BufferDataMeta</label>
+        <link refid="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta"/>
+      </node>
+      <node id="1">
+        <label>vlkx::PerVertexBuffer::NoShareMeta</label>
+        <link refid="classvlkx_1_1_per_vertex_buffer_1_1_no_share_meta"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>vlkx::PerVertexBuffer::BufferDataMeta</label>
+        <link refid="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta"/>
+      </node>
+      <node id="1">
+        <label>vlkx::PerVertexBuffer::NoShareMeta</label>
+        <link refid="classvlkx_1_1_per_vertex_buffer_1_1_no_share_meta"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="203" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="203" bodyend="216"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_per_vertex_buffer_1_1_no_share_meta_1a406e48420305c6edc9f542246830ce4f" prot="public" virt="virtual"><scope>vlkx::PerVertexBuffer::NoShareMeta</scope><name>hasIndices</name></member>
+      <member refid="classvlkx_1_1_per_vertex_buffer_1_1_no_share_meta_1ac1bab92ce6e4cf6213d9bc42dfa0faab" prot="public" virt="non-virtual"><scope>vlkx::PerVertexBuffer::NoShareMeta</scope><name>NoShareMeta</name></member>
+      <member refid="classvlkx_1_1_per_vertex_buffer_1_1_no_share_meta_1af65d5d061bf937f5ed0fab1ea45e6e68" prot="private" virt="non-virtual"><scope>vlkx::PerVertexBuffer::NoShareMeta</scope><name>perMeshMeta</name></member>
+      <member refid="classvlkx_1_1_per_vertex_buffer_1_1_no_share_meta_1ab7125acf0bbbc2114b77fefde6cdfde1" prot="public" virt="virtual"><scope>vlkx::PerVertexBuffer::NoShareMeta</scope><name>prepareCopy</name></member>
+      <member refid="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta_1ab87f45d5f8c1e9e552b31affa690428d" prot="public" virt="virtual"><scope>vlkx::PerVertexBuffer::NoShareMeta</scope><name>~BufferDataMeta</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

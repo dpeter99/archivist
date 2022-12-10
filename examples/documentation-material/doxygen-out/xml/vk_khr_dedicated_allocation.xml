@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="vk_khr_dedicated_allocation" kind="page">
+    <compoundname>vk_khr_dedicated_allocation</compoundname>
+    <title>VK_KHR_dedicated_allocation</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>VK_KHR_dedicated_allocation is a Vulkan extension which can be used to improve performance on some GPUs. It augments Vulkan API with possibility to query driver whether it prefers particular buffer or image to have its own, dedicated allocation (separate `VkDeviceMemory` block) for better efficiency - to be able to do some internal optimizations. The extension is supported by this library. It will be used automatically when enabled.</para>
+<para>It has been promoted to core Vulkan 1.1, so if you use eligible Vulkan version and inform VMA about it by setting <ref refid="struct_vma_allocator_create_info_1ae0ffc55139b54520a6bb704b29ffc285" kindref="member">VmaAllocatorCreateInfo::vulkanApiVersion</ref>, you are all set.</para>
+<para>Otherwise, if you want to use it as an extension:</para>
+<para>1 . When creating Vulkan device, check if following 2 device extensions are supported (call `vkEnumerateDeviceExtensionProperties()`). If yes, enable them (fill `VkDeviceCreateInfo::ppEnabledExtensionNames`).</para>
+<para><itemizedlist>
+<listitem><para>VK_KHR_get_memory_requirements2</para>
+</listitem><listitem><para>VK_KHR_dedicated_allocation</para>
+</listitem></itemizedlist>
+</para>
+<para>If you enabled these extensions:</para>
+<para>2 . Use <ref refid="group__group__init_1gga4f87c9100d154a65a4ad495f7763cf7cace7da7cc6e71a625dfa763c55a597878" kindref="member">VMA_ALLOCATOR_CREATE_KHR_DEDICATED_ALLOCATION_BIT</ref> flag when creating your <ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> to inform the library that you enabled required extensions and you want the library to use them.</para>
+<para><programlisting><codeline><highlight class="normal">allocatorInfo.flags<sp/>|=<sp/><ref refid="group__group__init_1gga4f87c9100d154a65a4ad495f7763cf7cace7da7cc6e71a625dfa763c55a597878" kindref="member">VMA_ALLOCATOR_CREATE_KHR_DEDICATED_ALLOCATION_BIT</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__init_1gaf77c946fbecfcc54d02c3d1c1e7e23e7" kindref="member">vmaCreateAllocator</ref>(&amp;allocatorInfo,<sp/>&amp;allocator);</highlight></codeline>
+</programlisting></para>
+<para>That is all. The extension will be automatically used whenever you create a buffer using <ref refid="group__group__alloc_1gae9773fe0ef8582e23136d2d83c336ab9" kindref="member">vmaCreateBuffer()</ref> or image using <ref refid="group__group__alloc_1gaa76142ae43535c862ad9e194a6e38aaa" kindref="member">vmaCreateImage()</ref>.</para>
+<para>When using the extension together with Vulkan Validation Layer, you will receive warnings like this:</para>
+<para>_vkBindBufferMemory(): Binding memory to buffer 0x33 but vkGetBufferMemoryRequirements() has not been called on that buffer._</para>
+<para>It is OK, you should just ignore it. It happens because you use function `vkGetBufferMemoryRequirements2KHR()` instead of standard `vkGetBufferMemoryRequirements()`, while the validation layer seems to be unaware of it.</para>
+<para>To learn more about this extension, see:</para>
+<para><itemizedlist>
+<listitem><para>[VK_KHR_dedicated_allocation in Vulkan specification](<ulink url="https://www.khronos.org/registry/vulkan/specs/1.2-extensions/html/chap50.html#VK_KHR_dedicated_allocation">https://www.khronos.org/registry/vulkan/specs/1.2-extensions/html/chap50.html#VK_KHR_dedicated_allocation</ulink>)</para>
+</listitem><listitem><para>[VK_KHR_dedicated_allocation unofficial manual](<ulink url="http://asawicki.info/articles/VK_KHR_dedicated_allocation.php5">http://asawicki.info/articles/VK_KHR_dedicated_allocation.php5</ulink>) </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h"/>
+  </compounddef>
+</doxygen>

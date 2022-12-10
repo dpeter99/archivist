@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_time_8cpp" kind="file" language="C++">
+    <compoundname>Time.cpp</compoundname>
+    <includes refid="_time_8h" local="yes">core/Time.h</includes>
+    <includes local="no">chrono</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>core/Time.h</label>
+        <link refid="_time_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>exports.h</label>
+        <link refid="exports_8h"/>
+      </node>
+      <node id="1">
+        <label>shadow-engine/core/src/core/Time.cpp</label>
+        <link refid="_time_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>chrono</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_time_8cpp_1a567ceac4d993fcc028f2e7497550eb2c" prot="public" static="no" mutable="no">
+        <type>API double</type>
+        <definition>API double lastFrame</definition>
+        <argsstring></argsstring>
+        <name>lastFrame</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/src/core/Time.cpp" line="6" column="12" bodyfile="shadow-engine/core/src/core/Time.cpp" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_time_8h" kindref="compound">core/Time.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_time_1aab1127cad64019b26561fd4b577cc960" kindref="member">Time::NOW</ref><sp/>=<sp/>0;</highlight><highlight class="comment">//SDL_GetPerformanceCounter();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_time_1a256e81de6e7385b69284e603b88e5976" kindref="member">Time::LAST</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">API<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="_time_8cpp_1a567ceac4d993fcc028f2e7497550eb2c" kindref="member">lastFrame</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">API<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_time_1a13e60b9305f3162f5384895e350bb9bc" kindref="member">Time::deltaTime_ms</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">API<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_time_1a7f1377f328530c350011cb68f09d6ded" kindref="member">Time::deltaTime</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">API<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_time_1a7039a8b88c5740983779e0d28ceedd76" kindref="member">Time::startTime</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">API<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_time_1af846d8bbdf2dece532b5da78c9cd5e48" kindref="member">Time::timeSinceStart</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_time_1a91e25ccface4140293a492a410071acf" kindref="member">Time::UpdateTime</ref>()</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std::chrono;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>now<sp/>=<sp/>system_clock::now();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>now_ms<sp/>=<sp/>time_point_cast&lt;milliseconds&gt;(now);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespace_catch_1_1_generators_1a3b2efc97978cf37951b75394aae1a3fb" kindref="member">value</ref><sp/>=<sp/>now_ms.time_since_epoch();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>duration<sp/>=<sp/><ref refid="namespace_catch_1_1_generators_1a3b2efc97978cf37951b75394aae1a3fb" kindref="member">value</ref>.count();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_time_1a7f1377f328530c350011cb68f09d6ded" kindref="member">deltaTime</ref><sp/>=<sp/>duration<sp/>-<sp/><ref refid="_time_8cpp_1a567ceac4d993fcc028f2e7497550eb2c" kindref="member">lastFrame</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_time_1a7039a8b88c5740983779e0d28ceedd76" kindref="member">startTime</ref><sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_time_1a7039a8b88c5740983779e0d28ceedd76" kindref="member">startTime</ref><sp/>=<sp/>duration;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_time_1af846d8bbdf2dece532b5da78c9cd5e48" kindref="member">timeSinceStart</ref><sp/>=<sp/>duration<sp/>-<sp/><ref refid="class_time_1a7039a8b88c5740983779e0d28ceedd76" kindref="member">startTime</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_time_8cpp_1a567ceac4d993fcc028f2e7497550eb2c" kindref="member">lastFrame</ref><sp/>=<sp/>duration;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/core/src/core/Time.cpp"/>
+  </compounddef>
+</doxygen>

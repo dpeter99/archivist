@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_shadow_engine_1_1_shadow_window" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::ShadowWindow</compoundname>
+    <includes refid="_shadow_window_8h" local="no">ShadowWindow.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_window_1acd9e7262ec2a1c727f7297bd5e1e2d8a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ShadowEngine::ShadowWindow::Height</definition>
+        <argsstring></argsstring>
+        <name>Height</name>
+        <qualifiedname>ShadowEngine::ShadowWindow::Height</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowWindow.h" line="10" column="13" bodyfile="shadow-engine/core/inc/core/ShadowWindow.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_window_1a2f6ef0fea2b0ad688bf5a77f9d51245d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ShadowEngine::ShadowWindow::Width</definition>
+        <argsstring></argsstring>
+        <name>Width</name>
+        <qualifiedname>ShadowEngine::ShadowWindow::Width</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowWindow.h" line="11" column="13" bodyfile="shadow-engine/core/inc/core/ShadowWindow.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_window_1a9ae3614d9cfca60d5131b6c55489bd2e" prot="public" static="no" mutable="no">
+        <type>SDL_Window *</type>
+        <definition>SDL_Window* ShadowEngine::ShadowWindow::sdlWindowPtr</definition>
+        <argsstring></argsstring>
+        <name>sdlWindowPtr</name>
+        <qualifiedname>ShadowEngine::ShadowWindow::sdlWindowPtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowWindow.h" line="13" column="20" bodyfile="shadow-engine/core/inc/core/ShadowWindow.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_window_1a991504f0686c3fc7354afff2ea586ae9" prot="public" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface* ShadowEngine::ShadowWindow::sdlSurface</definition>
+        <argsstring></argsstring>
+        <name>sdlSurface</name>
+        <qualifiedname>ShadowEngine::ShadowWindow::sdlSurface</qualifiedname>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowWindow.h" line="15" column="21" bodyfile="shadow-engine/core/inc/core/ShadowWindow.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_window_1aabe3216f6291f1df60f56076ce0935df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::ShadowWindow::ShadowWindow</definition>
+        <argsstring>(int W, int H)</argsstring>
+        <name>ShadowWindow</name>
+        <qualifiedname>ShadowEngine::ShadowWindow::ShadowWindow</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>W</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>H</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowWindow.h" line="20" column="9" bodyfile="shadow-engine/core/src/core/ShadowWindow.cpp" bodystart="6" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_window_1ab536413e3af4e3d8dbe78d668615a47d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::ShadowWindow::~ShadowWindow</definition>
+        <argsstring>()</argsstring>
+        <name>~ShadowWindow</name>
+        <qualifiedname>ShadowEngine::ShadowWindow::~ShadowWindow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowWindow.h" line="22" column="9" bodyfile="shadow-engine/core/src/core/ShadowWindow.cpp" bodystart="19" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/core/inc/core/ShadowWindow.h" line="7" column="5" bodyfile="shadow-engine/core/inc/core/ShadowWindow.h" bodystart="7" bodyend="23"/>
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_shadow_window_1acd9e7262ec2a1c727f7297bd5e1e2d8a" prot="public" virt="non-virtual"><scope>ShadowEngine::ShadowWindow</scope><name>Height</name></member>
+      <member refid="class_shadow_engine_1_1_shadow_window_1a991504f0686c3fc7354afff2ea586ae9" prot="public" virt="non-virtual"><scope>ShadowEngine::ShadowWindow</scope><name>sdlSurface</name></member>
+      <member refid="class_shadow_engine_1_1_shadow_window_1a9ae3614d9cfca60d5131b6c55489bd2e" prot="public" virt="non-virtual"><scope>ShadowEngine::ShadowWindow</scope><name>sdlWindowPtr</name></member>
+      <member refid="class_shadow_engine_1_1_shadow_window_1aabe3216f6291f1df60f56076ce0935df" prot="public" virt="non-virtual"><scope>ShadowEngine::ShadowWindow</scope><name>ShadowWindow</name></member>
+      <member refid="class_shadow_engine_1_1_shadow_window_1a2f6ef0fea2b0ad688bf5a77f9d51245d" prot="public" virt="non-virtual"><scope>ShadowEngine::ShadowWindow</scope><name>Width</name></member>
+      <member refid="class_shadow_engine_1_1_shadow_window_1ab536413e3af4e3d8dbe78d668615a47d" prot="public" virt="non-virtual"><scope>ShadowEngine::ShadowWindow</scope><name>~ShadowWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

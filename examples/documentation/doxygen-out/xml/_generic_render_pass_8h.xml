@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_generic_render_pass_8h" kind="file" language="C++">
+    <compoundname>GenericRenderPass.h</compoundname>
+    <includes local="no">vulkan/vulkan.h</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">variant</includes>
+    <includes local="no">optional</includes>
+    <includes refid="_tools_8h" local="yes">vlkx/vulkan/Tools.h</includes>
+    <includes refid="_image_8h" local="yes">vlkx/vulkan/abstraction/Image.h</includes>
+    <includedby refid="_builder_8h" local="yes">shadow-engine/shadow-renderer/inc/temp/model/Builder.h</includedby>
+    <includedby refid="_g_p_u_pass_8h" local="yes">shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h</includedby>
+    <includedby refid="_screen_render_pass_8h" local="yes">shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h</includedby>
+    <includedby refid="_generic_render_pass_8cpp" local="yes">shadow-engine/shadow-renderer/src/render/render_pass/GenericRenderPass.cpp</includedby>
+    <incdepgraph>
+      <node id="16">
+        <label>exports.h</label>
+        <link refid="exports_8h"/>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GenericRenderPass.h</label>
+        <link refid="_generic_render_pass_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>vlkx/vulkan/Tools.h</label>
+        <link refid="_tools_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>vlkx/vulkan/ValidationAndExtension.h</label>
+        <link refid="_validation_and_extension_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>VulkanDevice.h</label>
+        <link refid="_vulkan_device_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>Buffer.h</label>
+        <link refid="_buffer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>vlkx/vulkan/abstraction/Image.h</label>
+        <link refid="_image_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>ImageUsage.h</label>
+        <link refid="_image_usage_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>vulkan/vk_mem_alloc.h</label>
+        <link refid="vk__mem__alloc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>shadow/util/RefCounter.h</label>
+        <link refid="_ref_counter_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>SDL.h</label>
+      </node>
+      <node id="24">
+        <label>array</label>
+      </node>
+      <node id="5">
+        <label>functional</label>
+      </node>
+      <node id="12">
+        <label>iostream</label>
+      </node>
+      <node id="19">
+        <label>map</label>
+      </node>
+      <node id="22">
+        <label>memory</label>
+      </node>
+      <node id="7">
+        <label>optional</label>
+      </node>
+      <node id="13">
+        <label>set</label>
+      </node>
+      <node id="9">
+        <label>stdexcept</label>
+      </node>
+      <node id="20">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>utility</label>
+      </node>
+      <node id="6">
+        <label>variant</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="2">
+        <label>vulkan/vulkan.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>shadow-engine/shadow-renderer/inc/temp/model/Builder.h</label>
+        <link refid="_builder_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h</label>
+        <link refid="_g_p_u_pass_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GenericRenderPass.h</label>
+        <link refid="_generic_render_pass_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h</label>
+        <link refid="_screen_render_pass_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp</label>
+        <link refid="_g_p_u_pass_8cpp"/>
+      </node>
+      <node id="9">
+        <label>shadow-engine/shadow-renderer/src/render/render_pass/GenericRenderPass.cpp</label>
+        <link refid="_generic_render_pass_8cpp"/>
+      </node>
+      <node id="6">
+        <label>shadow-engine/shadow-renderer/src/render/render_pass/ScreenRenderPass.cpp</label>
+        <link refid="_screen_render_pass_8cpp"/>
+      </node>
+      <node id="3">
+        <label>shadow-engine/shadow-renderer/src/temp/model/Builder.cpp</label>
+        <link refid="_builder_8cpp"/>
+      </node>
+      <node id="8">
+        <label>shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp</label>
+        <link refid="_vulkan_module_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classvlkx_1_1_render_pass" prot="public">vlkx::RenderPass</innerclass>
+    <innerclass refid="classvlkx_1_1_render_pass_builder" prot="public">vlkx::RenderPassBuilder</innerclass>
+    <innerclass refid="structvlkx_1_1_render_pass_builder_1_1_attachment" prot="public">vlkx::RenderPassBuilder::Attachment</innerclass>
+    <innerclass refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_color_ops" prot="public">vlkx::RenderPassBuilder::Attachment::ColorOps</innerclass>
+    <innerclass refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_stencil_depth_ops" prot="public">vlkx::RenderPassBuilder::Attachment::StencilDepthOps</innerclass>
+    <innerclass refid="structvlkx_1_1_render_pass_builder_1_1_subpass_attachments" prot="public">vlkx::RenderPassBuilder::SubpassAttachments</innerclass>
+    <innerclass refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency" prot="public">vlkx::RenderPassBuilder::SubpassDependency</innerclass>
+    <innerclass refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency_1_1_subpass_meta" prot="public">vlkx::RenderPassBuilder::SubpassDependency::SubpassMeta</innerclass>
+    <innerclass refid="structvlkx_1_1_render_pass_builder_1_1_color_attachment_meta" prot="public">vlkx::RenderPassBuilder::ColorAttachmentMeta</innerclass>
+    <innernamespace refid="namespacevlkx">vlkx</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" prot="public" static="no">
+        <name>fluent</name>
+        <initializer>RenderPassBuilder&amp;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fluent API Features; chain calls to set data on the render pass. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GenericRenderPass.h" line="207" column="17" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GenericRenderPass.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vulkan/vulkan.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;variant&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;optional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_tools_8h" kindref="compound">vlkx/vulkan/Tools.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_image_8h" kindref="compound">vlkx/vulkan/abstraction/Image.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacevlkx" kindref="compound">vlkx</ref><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classvlkx_1_1_render_pass" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_render_pass" kindref="compound">RenderPass</ref><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21" refid="classvlkx_1_1_render_pass_1addfea4b39d1bcadab6a6d8df5dc85957" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_render_pass_1addfea4b39d1bcadab6a6d8df5dc85957" kindref="member">RenderFunc</ref><sp/>=<sp/>std::function&lt;void(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkCommandBuffer&amp;<sp/>buffer)&gt;;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Delete<sp/>copy<sp/>and<sp/>move<sp/>constructors<sp/>to<sp/>prevent<sp/>the<sp/>GPU<sp/>getting<sp/>confused<sp/>with<sp/>what<sp/>we&apos;re<sp/>trying<sp/>to<sp/>do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classvlkx_1_1_render_pass_1a756bfdf0ea9bcac053fff81ada2ff53e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_render_pass_1a756bfdf0ea9bcac053fff81ada2ff53e" kindref="member">RenderPass</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_render_pass" kindref="compound">RenderPass</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25" refid="classvlkx_1_1_render_pass_1a4019d3d9c90a11ba2190b188c1663208" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_render_pass" kindref="compound">RenderPass</ref>&amp;<sp/><ref refid="classvlkx_1_1_render_pass_1a4019d3d9c90a11ba2190b188c1663208" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_render_pass" kindref="compound">RenderPass</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_render_pass_1a2f0579b2c071510061467512248f0918" kindref="member">~RenderPass</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classvlkx_1_1_render_pass_1acbb254aef1f24e48880e4dd082f042c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_render_pass_1acbb254aef1f24e48880e4dd082f042c8" kindref="member">RenderPass</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>subpasses,<sp/>VkRenderPass<sp/>pass,<sp/>std::vector&lt;VkClearValue&gt;<sp/>clear,<sp/>VkExtent2D<sp/>ext,<sp/>std::vector&lt;VkFramebuffer&gt;<sp/>fbs,<sp/>std::vector&lt;int&gt;<sp/>attachs)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>subpassCount(subpasses),<sp/>renderPass(pass),<sp/>clearValues(std::move(clear)),<sp/>extent(ext),<sp/>framebuffers(std::move(fbs)),<sp/>attachments(std::move(attachs))<sp/>{}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classvlkx_1_1_render_pass_1afb9b0367734044a224bdcb28fd335d4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkRenderPass&amp;<sp/><ref refid="classvlkx_1_1_render_pass_1afb9b0367734044a224bdcb28fd335d4c" kindref="member">operator*</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>renderPass;<sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classvlkx_1_1_render_pass_1aa0536cd727e000f21285e9a086d52607" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_render_pass_1aa0536cd727e000f21285e9a086d52607" kindref="member">getAttachsInSubpass</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>subpass)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>attachments[subpass];</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_render_pass_1a1c6d2924c6f59a3a58ea160d12a1c553" kindref="member">execute</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkCommandBuffer&amp;<sp/>commands,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>imageIndex,<sp/>std::vector&lt;RenderFunc&gt;<sp/>ops)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>number<sp/>of<sp/>sub-render-passes<sp/>in<sp/>this<sp/>pass.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>subpassCount;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>VkRenderPass<sp/>that<sp/>this<sp/>class<sp/>wraps.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkRenderPass<sp/>renderPass;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>clear<sp/>values<sp/>that<sp/>will<sp/>wipe<sp/>all<sp/>framebuffers<sp/>to<sp/>their<sp/>empty<sp/>states.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;VkClearValue&gt;<sp/>clearValues;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>size<sp/>of<sp/>the<sp/>framebuffers<sp/>(all<sp/>are<sp/>the<sp/>same<sp/>size)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkExtent2D<sp/>extent;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>framebuffers<sp/>that<sp/>we<sp/>can<sp/>render<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;VkFramebuffer&gt;<sp/>framebuffers;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>number<sp/>of<sp/>color<sp/>attachments<sp/>(sampled<sp/>color<sp/>images)<sp/>in<sp/>each<sp/>subpass,<sp/>by<sp/>subpass<sp/>index.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/>attachments;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classvlkx_1_1_render_pass_builder" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_render_pass_builder" kindref="compound">RenderPassBuilder</ref><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="structvlkx_1_1_render_pass_builder_1_1_attachment" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment" kindref="compound">Attachment</ref><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Operations<sp/>to<sp/>use<sp/>on<sp/>color<sp/>attachments.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_color_ops" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_color_ops" kindref="compound">ColorOps</ref><sp/>{</highlight></codeline>
+<codeline lineno="78" refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_color_ops_1acf79af05459443e59a021c9b96872edb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkAttachmentLoadOp<sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_color_ops_1acf79af05459443e59a021c9b96872edb" kindref="member">LOAD</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>data<sp/>in<sp/>the<sp/>color<sp/>attachment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_color_ops_1ad3093880423ebf89bcd9ec9f4e61be10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkAttachmentStoreOp<sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_color_ops_1ad3093880423ebf89bcd9ec9f4e61be10" kindref="member">STORE</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Store<sp/>data<sp/>into<sp/>the<sp/>color<sp/>attachment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Operations<sp/>to<sp/>use<sp/>on<sp/>depth<sp/>and<sp/>stencil<sp/>buffers.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_stencil_depth_ops" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_stencil_depth_ops" kindref="compound">StencilDepthOps</ref><sp/>{</highlight></codeline>
+<codeline lineno="84" refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_stencil_depth_ops_1a45d7b280fbb861f1efa4e9d3dd24823c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkAttachmentLoadOp<sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_stencil_depth_ops_1a45d7b280fbb861f1efa4e9d3dd24823c" kindref="member">DEPTH_LOAD</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>data<sp/>in<sp/>the<sp/>depth<sp/>attachment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_stencil_depth_ops_1a08bdd78e4273e2f655fe02d0e1ae2f6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkAttachmentStoreOp<sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_stencil_depth_ops_1a08bdd78e4273e2f655fe02d0e1ae2f6a" kindref="member">DEPTH_STORE</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Store<sp/>data<sp/>in<sp/>the<sp/>depth<sp/>attachment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_stencil_depth_ops_1a50595d1bcf35c2d4187aac9153b1b981" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkAttachmentLoadOp<sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_stencil_depth_ops_1a50595d1bcf35c2d4187aac9153b1b981" kindref="member">STENCIL_LOAD</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>data<sp/>in<sp/>the<sp/>stencil<sp/>attachment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_stencil_depth_ops_1a413270b241d0682a2a187898c2f4737b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkAttachmentStoreOp<sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_stencil_depth_ops_1a413270b241d0682a2a187898c2f4737b" kindref="member">STENCIL_STORE</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>Store<sp/>data<sp/>in<sp/>the<sp/>stencil<sp/>attachment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1a47807f6875527fa0d044a910cfb70a4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1a47807f6875527fa0d044a910cfb70a4a" kindref="member">OpsType</ref><sp/>=<sp/>std::variant&lt;ColorOps,<sp/>StencilDepthOps&gt;;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>operations<sp/>that<sp/>can<sp/>be<sp/>performed<sp/>on<sp/>this<sp/>attachment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1a87d470a278d32b90e7b2b1054e66d2d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1a47807f6875527fa0d044a910cfb70a4a" kindref="member">OpsType</ref><sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1a87d470a278d32b90e7b2b1054e66d2d6" kindref="member">ops</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>initial<sp/>layout<sp/>of<sp/>an<sp/>image<sp/>in<sp/>this<sp/>attachment<sp/>(pre-GPU<sp/>upload)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1afd6e9c8a099c6042fb323e5da0159519" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkImageLayout<sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1afd6e9c8a099c6042fb323e5da0159519" kindref="member">layoutInitial</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>final<sp/>layout<sp/>of<sp/>an<sp/>image<sp/>in<sp/>this<sp/>attachment<sp/>(as<sp/>seen<sp/>by<sp/>the<sp/>shader)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1a4b209665eed624bec0f238b1bbf55a20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkImageLayout<sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1a4b209665eed624bec0f238b1bbf55a20" kindref="member">layoutFinal</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="structvlkx_1_1_render_pass_builder_1_1_subpass_attachments" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvlkx_1_1_render_pass_builder_1_1_subpass_attachments" kindref="compound">SubpassAttachments</ref><sp/>{</highlight></codeline>
+<codeline lineno="110" refid="structvlkx_1_1_render_pass_builder_1_1_subpass_attachments_1a9ed32f51a640e2cefd7c651691bb8ce8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;VkAttachmentReference&gt;<sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_subpass_attachments_1a9ed32f51a640e2cefd7c651691bb8ce8" kindref="member">colorReferences</ref>;</highlight></codeline>
+<codeline lineno="111" refid="structvlkx_1_1_render_pass_builder_1_1_subpass_attachments_1a3e00e8a0b15b32bc149aef4512440c51" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;VkAttachmentReference&gt;<sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_subpass_attachments_1a3e00e8a0b15b32bc149aef4512440c51" kindref="member">multisampleReferences</ref>;</highlight></codeline>
+<codeline lineno="112" refid="structvlkx_1_1_render_pass_builder_1_1_subpass_attachments_1ae0ffea7ead4e7eae67ef6c02ce62e2cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::optional&lt;VkAttachmentReference&gt;<sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_subpass_attachments_1ae0ffea7ead4e7eae67ef6c02ce62e2cb" kindref="member">stencilDepthReference</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency" kindref="compound">SubpassDependency</ref><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency_1_1_subpass_meta" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency_1_1_subpass_meta" kindref="compound">SubpassMeta</ref><sp/>{</highlight></codeline>
+<codeline lineno="131" refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency_1_1_subpass_meta_1aa44ef61cba9adabcc126eccb70c753f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency_1_1_subpass_meta_1aa44ef61cba9adabcc126eccb70c753f5" kindref="member">index</ref>;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency_1_1_subpass_meta_1af4943ff5f708674a5bfd4d96b44976ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkPipelineStageFlags<sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency_1_1_subpass_meta_1af4943ff5f708674a5bfd4d96b44976ac" kindref="member">stage</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency_1_1_subpass_meta_1a65e641cab42afd4e6eb7e114a1edb82c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkAccessFlags<sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency_1_1_subpass_meta_1a65e641cab42afd4e6eb7e114a1edb82c" kindref="member">access</ref>;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency_1af7345260e004aeaf94d72e76d5a5b412" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency_1_1_subpass_meta" kindref="compound">SubpassMeta</ref><sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency_1af7345260e004aeaf94d72e76d5a5b412" kindref="member">source</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>source<sp/>subpass<sp/>of<sp/>this<sp/>dependency<sp/>(will<sp/>take<sp/>effect<sp/>after<sp/>this<sp/>pass<sp/>completes)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency_1a7368fe98852ee0a4e6d6689634338908" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency_1_1_subpass_meta" kindref="compound">SubpassMeta</ref><sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency_1a7368fe98852ee0a4e6d6689634338908" kindref="member">destination</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>destination<sp/>subpass<sp/>of<sp/>this<sp/>dependency<sp/>(will<sp/>take<sp/>effect<sp/>before<sp/>this<sp/>pass)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency_1a3d1344a632ab41207d06159e16874931" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkDependencyFlags<sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency_1a3d1344a632ab41207d06159e16874931" kindref="member">flags</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Other<sp/>information<sp/>that<sp/>Vulkan<sp/>needs<sp/>to<sp/>know<sp/>about<sp/>this<sp/>dependency;<sp/>for<sp/>example,<sp/>if<sp/>we<sp/>use<sp/>an<sp/>inputAttachment.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="structvlkx_1_1_render_pass_builder_1_1_color_attachment_meta" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvlkx_1_1_render_pass_builder_1_1_color_attachment_meta" kindref="compound">ColorAttachmentMeta</ref><sp/>{</highlight></codeline>
+<codeline lineno="186" refid="structvlkx_1_1_render_pass_builder_1_1_color_attachment_meta_1a9497598f7b51bfeb74a0e9fc99a416c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_color_attachment_meta_1a9497598f7b51bfeb74a0e9fc99a416c4" kindref="member">location</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Where<sp/>the<sp/>GPU<sp/>shaders<sp/>expect<sp/>this<sp/>attachment<sp/>to<sp/>be<sp/>available.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="structvlkx_1_1_render_pass_builder_1_1_color_attachment_meta_1a807aedc1859249b192088720384a95a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_color_attachment_meta_1a807aedc1859249b192088720384a95a6" kindref="member">descriptionIdx</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Index<sp/>of<sp/>this<sp/>attachment<sp/>in<sp/>the<sp/>VkAttachmentDescription<sp/>data.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="structvlkx_1_1_render_pass_builder_1_1_color_attachment_meta_1aa3fbe0979ba037a292dcf892e4865797" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkImageLayout<sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_color_attachment_meta_1aa3fbe0979ba037a292dcf892e4865797" kindref="member">layout</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Vulkan<sp/>image<sp/>layout.<sp/>Shader<sp/>optimized<sp/>or<sp/>host<sp/>readable.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;VkAttachmentReference&gt;<sp/><ref refid="classvlkx_1_1_render_pass_builder_1ae41b9e71f5e769e12bfe76876b6c9007" kindref="member">parseColorReferences</ref>(std::vector&lt;ColorAttachmentMeta&gt;<sp/>meta);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;VkAttachmentReference&gt;<sp/><ref refid="classvlkx_1_1_render_pass_builder_1a3f0a64b9a4868accc1a473850fb98fa2" kindref="member">parseMutisampling</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>colorReferencesCount,<sp/>std::vector&lt;ColorAttachmentMeta&gt;<sp/>meta);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="classvlkx_1_1_render_pass_builder_1a81f78bd807664b2f3cef2349198f48c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_render_pass_builder_1a81f78bd807664b2f3cef2349198f48c1" kindref="member">RenderPassBuilder</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_render_pass_builder" kindref="compound">RenderPassBuilder</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="202" refid="classvlkx_1_1_render_pass_builder_1a98b2bbb3e27c8061aab816fdb43ce888" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_render_pass_builder" kindref="compound">RenderPassBuilder</ref>&amp;<sp/><ref refid="classvlkx_1_1_render_pass_builder_1a98b2bbb3e27c8061aab816fdb43ce888" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_render_pass_builder" kindref="compound">RenderPassBuilder</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="203" refid="classvlkx_1_1_render_pass_builder_1a7a35ea16eb93c848d05b965d0cfb3b0a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_render_pass_builder_1a7a35ea16eb93c848d05b965d0cfb3b0a" kindref="member">~RenderPassBuilder</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="204" refid="classvlkx_1_1_render_pass_builder_1a83c5bf76abeb50caeae8b3454bde8145" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_render_pass_builder_1a83c5bf76abeb50caeae8b3454bde8145" kindref="member">RenderPassBuilder</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>fluent<sp/>RenderPassBuilder&amp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>number<sp/>of<sp/>framebuffers<sp/>in<sp/>the<sp/>render<sp/>pass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/><ref refid="classvlkx_1_1_render_pass_builder_1a7fed138282032b34097abc92fbbcc3f1" kindref="member">setFramebufferCount</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>an<sp/>attachment<sp/>description<sp/>in<sp/>the<sp/>render<sp/>pass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/><ref refid="classvlkx_1_1_render_pass_builder_1a866a9ede38c67cf8efea5b4bac976f3a" kindref="member">setAttachment</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Attachment&amp;<sp/>attachment);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>the<sp/>image<sp/>backing<sp/>an<sp/>attachment.<sp/>The<sp/>function<sp/>must<sp/>be<sp/>executable<sp/>during<sp/>execute()<sp/>later<sp/>on.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/><ref refid="classvlkx_1_1_render_pass_builder_1adceffa91ec46c04e6e26cc987aa1c883" kindref="member">updateAttachmentBacking</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx,<sp/>std::function&lt;</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Image&amp;(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx)&gt;&amp;&amp;<sp/>getBacking);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>a<sp/>specific<sp/>subpass.<sp/>Use<sp/>the<sp/>static<sp/>parse<sp/>methods<sp/>to<sp/>create<sp/>these<sp/>vectors.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/><ref refid="classvlkx_1_1_render_pass_builder_1a222d0bb88b3877f613e55cc8718bb0e6" kindref="member">setSubpass</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx,<sp/>std::vector&lt;VkAttachmentReference&gt;&amp;&amp;<sp/>color,<sp/>std::vector&lt;VkAttachmentReference&gt;&amp;&amp;<sp/>multisample,<sp/>VkAttachmentReference&amp;<sp/>depthStencil);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>a<sp/>dependency<sp/>between<sp/>two<sp/>subpasses.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/><ref refid="classvlkx_1_1_render_pass_builder_1a8532c71be2c6c6177c726bb37849409c" kindref="member">addDependency</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SubpassDependency&amp;<sp/>dep);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Build<sp/>the<sp/>Render<sp/>Pass<sp/>with<sp/>all<sp/>the<sp/>information<sp/>given.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Can<sp/>be<sp/>called<sp/>multiple<sp/>times<sp/>with<sp/>the<sp/>same<sp/>Builder.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>std::unique_ptr&lt;vlkx::RenderPass&gt;<sp/><ref refid="classvlkx_1_1_render_pass_builder_1aceadb00171315c3e3f29d41d5acea81e" kindref="member">build</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>framebuffers<sp/>in<sp/>the<sp/>render<sp/>pass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::optional&lt;int&gt;<sp/>framebufferCount;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Descriptions<sp/>of<sp/>used<sp/>attachments</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;VkAttachmentDescription&gt;<sp/>attachmentDescriptors;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions<sp/>to<sp/>return<sp/>attachment<sp/>images.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::function&lt;</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Image&amp;(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx)&gt;&gt;<sp/>attachmentGetters;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Values<sp/>to<sp/>clear<sp/>all<sp/>attachments</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;VkClearValue&gt;<sp/>clearValues;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Descriptions<sp/>of<sp/>subpasses.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;SubpassAttachments&gt;<sp/>subpassAttachments;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Descriptions<sp/>of<sp/>subpass<sp/>dependencies.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;VkSubpassDependency&gt;<sp/>subpassDependencies;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="238"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GenericRenderPass.h"/>
+  </compounddef>
+</doxygen>

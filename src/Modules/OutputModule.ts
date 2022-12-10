@@ -5,6 +5,7 @@ import {IModule} from "../Module/IModule.ts";
 
 import * as Path from "https://deno.land/std@0.167.0/path/mod.ts";
 import {ensureDir} from "https://deno.land/std@0.167.0/fs/mod.ts";
+import {archivistInst} from "../Archivist.ts";
 
 
 /**
@@ -44,11 +45,11 @@ export class OutputModule extends SimpleModule{
             path = this.getFileOutputLoc(doc.meta.outputpath);
         }
 
-        //path = path.replace(Path.extname(path),".html");
+        const dir = Path.dirname(path);
         if(archivistInst.detailedOutput)
-            console.log("[INFO] Outputting file to:" + path);
+            console.log("[INFO] Outputting file to:" + path + " in dir: "+ dir);
 
-        await ensureDir(Path.dirname(path));
+        await ensureDir(dir);
 
         await Deno.writeTextFile(path, doc.content);
     }

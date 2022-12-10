@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_catch_1_1_i_exception_translator" kind="struct" language="C++" prot="public" abstract="yes">
+    <compoundname>Catch::IExceptionTranslator</compoundname>
+    <includes refid="catch_8hpp" local="no">catch.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_catch_1_1_i_exception_translator_1afa00bb6258c07591df472aadae05783f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual Catch::IExceptionTranslator::~IExceptionTranslator</definition>
+        <argsstring>()</argsstring>
+        <name>~IExceptionTranslator</name>
+        <qualifiedname>Catch::IExceptionTranslator::~IExceptionTranslator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="3011" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_i_exception_translator_1a2a554b96ed5ed411e7c796b6b42837a5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string Catch::IExceptionTranslator::translate</definition>
+        <argsstring>(ExceptionTranslators::const_iterator it, ExceptionTranslators::const_iterator itEnd) const =0</argsstring>
+        <name>translate</name>
+        <qualifiedname>Catch::IExceptionTranslator::translate</qualifiedname>
+        <param>
+          <type>ExceptionTranslators::const_iterator</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>ExceptionTranslators::const_iterator</type>
+          <declname>itEnd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="3012" column="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="3010" column="5" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="3010" bodyend="3013"/>
+    <listofallmembers>
+      <member refid="struct_catch_1_1_i_exception_translator_1a2a554b96ed5ed411e7c796b6b42837a5" prot="public" virt="pure-virtual"><scope>Catch::IExceptionTranslator</scope><name>translate</name></member>
+      <member refid="struct_catch_1_1_i_exception_translator_1afa00bb6258c07591df472aadae05783f" prot="public" virt="virtual"><scope>Catch::IExceptionTranslator</scope><name>~IExceptionTranslator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

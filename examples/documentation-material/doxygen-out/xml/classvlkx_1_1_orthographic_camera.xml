@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_orthographic_camera" kind="class" language="C++" prot="public">
+    <compoundname>vlkx::OrthographicCamera</compoundname>
+    <basecompoundref refid="classvlkx_1_1_camera" prot="public" virt="non-virtual">vlkx::Camera</basecompoundref>
+    <includes refid="shadow-renderer_2inc_2vlkx_2render_2_camera_8h" local="no">Camera.h</includes>
+    <innerclass refid="structvlkx_1_1_orthographic_camera_1_1_ortho_config" prot="public">vlkx::OrthographicCamera::OrthoConfig</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvlkx_1_1_orthographic_camera_1a540efca805b6208ceedc17b663d7f1b0" prot="private" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float vlkx::OrthographicCamera::aspectRatio</definition>
+        <argsstring></argsstring>
+        <name>aspectRatio</name>
+        <qualifiedname>vlkx::OrthographicCamera::aspectRatio</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" line="142" column="21" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_orthographic_camera_1a2fb7a13edc493dd2a8147769dcc5dd86" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float vlkx::OrthographicCamera::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <qualifiedname>vlkx::OrthographicCamera::width</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" line="143" column="15" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classvlkx_1_1_orthographic_camera_1a56daad6605174777a1e47324f6efdc13" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structvlkx_1_1_orthographic_camera_1_1_ortho_config" kindref="compound">OrthoConfig</ref></type>
+        <definition>static OrthoConfig vlkx::OrthographicCamera::getFullscreenConfig</definition>
+        <argsstring>()</argsstring>
+        <name>getFullscreenConfig</name>
+        <qualifiedname>vlkx::OrthographicCamera::getFullscreenConfig</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" line="123" column="28" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" bodystart="123" bodyend="125"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_orthographic_camera_1a954b9cfd949a7fb96b107b3905021e92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::OrthographicCamera::OrthographicCamera</definition>
+        <argsstring>(const Camera::Config &amp;config, const OrthoConfig &amp;ortho)</argsstring>
+        <name>OrthographicCamera</name>
+        <qualifiedname>vlkx::OrthographicCamera::OrthographicCamera</qualifiedname>
+        <param>
+          <type>const <ref refid="structvlkx_1_1_camera_1_1_config" kindref="compound">Camera::Config</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structvlkx_1_1_orthographic_camera_1_1_ortho_config" kindref="compound">OrthoConfig</ref> &amp;</type>
+          <declname>ortho</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" line="127" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" bodystart="127" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_orthographic_camera_1a5981e890c26286d60b80aba40c980b52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::OrthographicCamera::OrthographicCamera</definition>
+        <argsstring>(const OrthographicCamera &amp;)=delete</argsstring>
+        <name>OrthographicCamera</name>
+        <qualifiedname>vlkx::OrthographicCamera::OrthographicCamera</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_orthographic_camera" kindref="compound">OrthographicCamera</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" line="130" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_orthographic_camera_1ae6e6105556c07a8f1e41ce000eda1825" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkx_1_1_orthographic_camera" kindref="compound">OrthographicCamera</ref> &amp;</type>
+        <definition>OrthographicCamera &amp; vlkx::OrthographicCamera::operator=</definition>
+        <argsstring>(const OrthographicCamera &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>vlkx::OrthographicCamera::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_orthographic_camera" kindref="compound">OrthographicCamera</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" line="132" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_orthographic_camera_1a1c73adc3a50b092028f071e5ca1c5d00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkx_1_1_orthographic_camera" kindref="compound">OrthographicCamera</ref> &amp;</type>
+        <definition>OrthographicCamera &amp; OrthographicCamera::setWidth</definition>
+        <argsstring>(float width)</argsstring>
+        <name>setWidth</name>
+        <qualifiedname>vlkx::OrthographicCamera::setWidth</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" line="134" column="28" bodyfile="shadow-engine/shadow-renderer/src/render/Camera.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_orthographic_camera_1a5e47650b9762b05df79d93f475d9e041" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>glm::mat4</type>
+        <definition>glm::mat4 OrthographicCamera::getProjMatrix</definition>
+        <argsstring>() const override</argsstring>
+        <name>getProjMatrix</name>
+        <qualifiedname>vlkx::OrthographicCamera::getProjMatrix</qualifiedname>
+        <reimplements refid="classvlkx_1_1_camera_1aa0f49fc843f21ec69b8a27fb817d52df">getProjMatrix</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" line="136" column="19" bodyfile="shadow-engine/shadow-renderer/src/render/Camera.cpp" bodystart="52" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_orthographic_camera_1aeea851d341898cb5c4c5e6b00739c394" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float vlkx::OrthographicCamera::getWidth</definition>
+        <argsstring>() const</argsstring>
+        <name>getWidth</name>
+        <qualifiedname>vlkx::OrthographicCamera::getWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" line="138" column="15" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" bodystart="138" bodyend="138"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>vlkx::Camera</label>
+        <link refid="classvlkx_1_1_camera"/>
+      </node>
+      <node id="1">
+        <label>vlkx::OrthographicCamera</label>
+        <link refid="classvlkx_1_1_orthographic_camera"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>vlkx::Camera</label>
+        <link refid="classvlkx_1_1_camera"/>
+      </node>
+      <node id="1">
+        <label>vlkx::OrthographicCamera</label>
+        <link refid="classvlkx_1_1_orthographic_camera"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" line="116" column="5" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" bodystart="116" bodyend="144"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_orthographic_camera_1a540efca805b6208ceedc17b663d7f1b0" prot="private" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>aspectRatio</name></member>
+      <member refid="classvlkx_1_1_camera_1a4d718ec9313b70a5bc3c9290cf0cd83f" prot="public" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>Camera</name></member>
+      <member refid="classvlkx_1_1_camera_1a7fdf27d382964ec0d41561429b20a84d" prot="protected" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>Camera</name></member>
+      <member refid="classvlkx_1_1_camera_1ac7526461c9ef4be09239aca76c60e739" prot="protected" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>farPlane</name></member>
+      <member refid="classvlkx_1_1_camera_1a7eabeef04606e9dc81ead43f675f6bd7" prot="public" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>forward</name></member>
+      <member refid="classvlkx_1_1_camera_1a4c011c4dd2972d0a7d1a79393538094d" prot="public" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>getForward</name></member>
+      <member refid="classvlkx_1_1_orthographic_camera_1a56daad6605174777a1e47324f6efdc13" prot="public" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>getFullscreenConfig</name></member>
+      <member refid="classvlkx_1_1_camera_1a32c578778e789483f5ab441b4570ce97" prot="public" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>getPosition</name></member>
+      <member refid="classvlkx_1_1_orthographic_camera_1a5e47650b9762b05df79d93f475d9e041" prot="public" virt="virtual"><scope>vlkx::OrthographicCamera</scope><name>getProjMatrix</name></member>
+      <member refid="classvlkx_1_1_camera_1a0208d1f7a9eb5bf46f4e6531959932a9" prot="public" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>getRight</name></member>
+      <member refid="classvlkx_1_1_camera_1af99c6a2151a75c59f2933ce8a78db8c4" prot="public" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>getSkyboxView</name></member>
+      <member refid="classvlkx_1_1_camera_1a86f8e0b82d57c8fa8118d86ee7738627" prot="public" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>getUp</name></member>
+      <member refid="classvlkx_1_1_camera_1a2f90e661a78172675ca06ea69667b531" prot="public" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>getViewMatrix</name></member>
+      <member refid="classvlkx_1_1_orthographic_camera_1aeea851d341898cb5c4c5e6b00739c394" prot="public" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>getWidth</name></member>
+      <member refid="classvlkx_1_1_camera_1ad0d52aa641344b1ab74a43517b266385" prot="public" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>Input</name></member>
+      <member refid="classvlkx_1_1_camera_1a0c76c5136aa07784ffc49409b7954c2e" prot="public" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>move</name></member>
+      <member refid="classvlkx_1_1_camera_1a8dd3ebb158d9c112661c11a83d50bc0e" prot="protected" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>nearPlane</name></member>
+      <member refid="classvlkx_1_1_orthographic_camera_1ae6e6105556c07a8f1e41ce000eda1825" prot="public" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_camera_1a5e4b6375ceb7930a7fc3ae8bb81be165" prot="public" virt="non-virtual" ambiguityscope="vlkx::Camera::"><scope>vlkx::OrthographicCamera</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_orthographic_camera_1a954b9cfd949a7fb96b107b3905021e92" prot="public" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>OrthographicCamera</name></member>
+      <member refid="classvlkx_1_1_orthographic_camera_1a5981e890c26286d60b80aba40c980b52" prot="public" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>OrthographicCamera</name></member>
+      <member refid="classvlkx_1_1_camera_1a8a715618dac86bf5500d4a5fa5e2ace8" prot="public" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>setPos</name></member>
+      <member refid="classvlkx_1_1_orthographic_camera_1a1c73adc3a50b092028f071e5ca1c5d00" prot="public" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>setWidth</name></member>
+      <member refid="classvlkx_1_1_camera_1afaf7b5be27efeda96a8a1bde643a7d85" prot="public" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>up</name></member>
+      <member refid="classvlkx_1_1_orthographic_camera_1a2fb7a13edc493dd2a8147769dcc5dd86" prot="private" virt="non-virtual"><scope>vlkx::OrthographicCamera</scope><name>width</name></member>
+      <member refid="classvlkx_1_1_camera_1acfbf078cb45abeec8f3dcf70d5e08ae2" prot="public" virt="virtual"><scope>vlkx::OrthographicCamera</scope><name>~Camera</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

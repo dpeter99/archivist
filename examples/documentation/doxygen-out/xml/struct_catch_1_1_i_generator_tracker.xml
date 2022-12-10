@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_catch_1_1_i_generator_tracker" kind="struct" language="C++" prot="public" abstract="yes">
+    <compoundname>Catch::IGeneratorTracker</compoundname>
+    <includes refid="catch_8hpp" local="no">catch.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_catch_1_1_i_generator_tracker_1a20b3c82baa68f821c180d6dac1234eb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual Catch::IGeneratorTracker::~IGeneratorTracker</definition>
+        <argsstring>()</argsstring>
+        <name>~IGeneratorTracker</name>
+        <qualifiedname>Catch::IGeneratorTracker::~IGeneratorTracker</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="3860" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_i_generator_tracker_1ae88084f9af27c8b9a5d5775b9c148498" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto Catch::IGeneratorTracker::hasGenerator</definition>
+        <argsstring>() const -&gt; bool=0</argsstring>
+        <name>hasGenerator</name>
+        <qualifiedname>Catch::IGeneratorTracker::hasGenerator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="3861" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_i_generator_tracker_1a23be942fc51672598bfa02c678c3078a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto Catch::IGeneratorTracker::getGenerator</definition>
+        <argsstring>() const -&gt; Generators::GeneratorBasePtr const &amp;=0</argsstring>
+        <name>getGenerator</name>
+        <qualifiedname>Catch::IGeneratorTracker::getGenerator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="3862" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_i_generator_tracker_1a9945eff42219edc5a7071eebd8b0419e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Catch::IGeneratorTracker::setGenerator</definition>
+        <argsstring>(Generators::GeneratorBasePtr &amp;&amp;generator)=0</argsstring>
+        <name>setGenerator</name>
+        <qualifiedname>Catch::IGeneratorTracker::setGenerator</qualifiedname>
+        <param>
+          <type><ref refid="namespace_catch_1_1_generators_1a1519f304113619d7d18670e2f08276c0" kindref="member">Generators::GeneratorBasePtr</ref> &amp;&amp;</type>
+          <declname>generator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="3863" column="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="3859" column="5" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="3859" bodyend="3864"/>
+    <listofallmembers>
+      <member refid="struct_catch_1_1_i_generator_tracker_1a23be942fc51672598bfa02c678c3078a" prot="public" virt="pure-virtual"><scope>Catch::IGeneratorTracker</scope><name>getGenerator</name></member>
+      <member refid="struct_catch_1_1_i_generator_tracker_1ae88084f9af27c8b9a5d5775b9c148498" prot="public" virt="pure-virtual"><scope>Catch::IGeneratorTracker</scope><name>hasGenerator</name></member>
+      <member refid="struct_catch_1_1_i_generator_tracker_1a9945eff42219edc5a7071eebd8b0419e" prot="public" virt="pure-virtual"><scope>Catch::IGeneratorTracker</scope><name>setGenerator</name></member>
+      <member refid="struct_catch_1_1_i_generator_tracker_1a20b3c82baa68f821c180d6dac1234eb1" prot="public" virt="virtual"><scope>Catch::IGeneratorTracker</scope><name>~IGeneratorTracker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

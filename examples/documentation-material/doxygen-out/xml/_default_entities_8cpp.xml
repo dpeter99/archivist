@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_default_entities_8cpp" kind="file" language="C++">
+    <compoundname>DefaultEntities.cpp</compoundname>
+    <includes refid="_entity_registry_8h" local="yes">../inc/EntityRegistry.h</includes>
+    <includes refid="_entity_8h" local="yes">../inc/Entity.h</includes>
+    <includes refid="_player_8h" local="yes">../Entities/Player.h</includes>
+    <includes refid="_directional_light_8h" local="yes">../Entities/DirectionalLight.h</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>exports.h</label>
+        <link refid="exports_8h"/>
+      </node>
+      <node id="20">
+        <label>../Entities/DirectionalLight.h</label>
+        <link refid="_directional_light_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>../Entities/Player.h</label>
+        <link refid="_player_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Entity.h</label>
+        <link refid="_entity_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>EntityBase.h</label>
+        <link refid="_entity_base_8h"/>
+      </node>
+      <node id="2">
+        <label>../inc/EntityRegistry.h</label>
+        <link refid="_entity_registry_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>../inc/SceneEntity.h</label>
+        <link refid="_scene_entity_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-entity/src/DefaultEntities.cpp</label>
+        <link refid="_default_entities_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>SHObject.h</label>
+        <link refid="_s_h_object_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>EntitySystem/SceneEntity.h</label>
+      </node>
+      <node id="23">
+        <label>EntitySystem\Entities\Internal\Inspectors\DefaultInspectors.h</label>
+      </node>
+      <node id="18">
+        <label>EntitySystem\EntityBase.h</label>
+      </node>
+      <node id="19">
+        <label>EntitySystem\Scene.h</label>
+      </node>
+      <node id="22">
+        <label>Inspector\EntityInspector.h</label>
+      </node>
+      <node id="17">
+        <label>ShadowMath/Transform.h</label>
+      </node>
+      <node id="24">
+        <label>ShadowRenderer\RenderScene.h</label>
+      </node>
+      <node id="15">
+        <label>glm/glm.hpp</label>
+      </node>
+      <node id="16">
+        <label>glm/gtx/quaternion.hpp</label>
+      </node>
+      <node id="25">
+        <label>imgui.h</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>list</label>
+      </node>
+      <node id="4">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>typeinfo</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_shadow_engine">ShadowEngine</innernamespace>
+    <innernamespace refid="namespace_shadow_engine_1_1_entity_system">ShadowEngine::EntitySystem</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;../inc/EntityRegistry.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../inc/Entity.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Entities/Player.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Entities/DirectionalLight.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_shadow_engine_1_1_entity_system" kindref="compound">ShadowEngine::EntitySystem</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_registry_1aa7102f47765c3bcb2c2db05e5ff981dc" kindref="member">EntityRegistry::PreRegisterDefaults</ref>()</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//this-&gt;RegisterEntity(&quot;info_player_start&quot;,<sp/>new<sp/>Player());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//this-&gt;RegisterEntity(&quot;camera&quot;,<sp/>new<sp/>Camera());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//this-&gt;RegisterEntity(&quot;light&quot;,<sp/>new<sp/>DirectionalLight());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-entity/src/DefaultEntities.cpp"/>
+  </compounddef>
+</doxygen>

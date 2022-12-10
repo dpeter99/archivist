@@ -1,4 +1,4 @@
-export {FileReaderModule} from "./FileReaderModule.ts";
+export {FileReaderModule} from "./Input/FileReaderModule.ts";
 export {FunctionModule} from "./FunctionModule.ts";
 export {MarkdownRender} from "./MarkdownRender.ts";
 export {OutputModule} from "./OutputModule.ts";

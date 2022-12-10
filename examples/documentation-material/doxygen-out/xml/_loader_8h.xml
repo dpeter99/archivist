@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_loader_8h" kind="file" language="C++">
+    <compoundname>Loader.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes refid="_geometry_8h" local="yes">vlkx/render/Geometry.h</includes>
+    <includedby refid="_builder_8h" local="yes">shadow-engine/shadow-renderer/inc/temp/model/Builder.h</includedby>
+    <includedby refid="_descriptor_8h" local="no">shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Descriptor.h</includedby>
+    <includedby refid="_loader_8cpp" local="yes">shadow-engine/shadow-renderer/src/temp/model/Loader.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>shadow-engine/shadow-renderer/inc/temp/model/Loader.h</label>
+        <link refid="_loader_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>vlkx/render/Geometry.h</label>
+        <link refid="_geometry_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>array</label>
+      </node>
+      <node id="7">
+        <label>glm/glm.hpp</label>
+      </node>
+      <node id="8">
+        <label>glm/gtc/matrix_transform.hpp</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="5">
+        <label>vulkan/vulkan.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>shadow-engine/shadow-renderer/inc/temp/model/Builder.h</label>
+        <link refid="_builder_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-renderer/inc/temp/model/Loader.h</label>
+        <link refid="_loader_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Descriptor.h</label>
+        <link refid="_descriptor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>shadow-engine/shadow-renderer/src/temp/model/Builder.cpp</label>
+        <link refid="_builder_8cpp"/>
+      </node>
+      <node id="6">
+        <label>shadow-engine/shadow-renderer/src/temp/model/Loader.cpp</label>
+        <link refid="_loader_8cpp"/>
+      </node>
+      <node id="5">
+        <label>shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp</label>
+        <link refid="_descriptor_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structvlkxtemp_1_1_wavefront" prot="public">vlkxtemp::Wavefront</innerclass>
+    <innerclass refid="classvlkxtemp_1_1_model_loader" prot="public">vlkxtemp::ModelLoader</innerclass>
+    <innerclass refid="structvlkxtemp_1_1_model_loader_1_1_texture_data" prot="public">vlkxtemp::ModelLoader::TextureData</innerclass>
+    <innerclass refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data" prot="public">vlkxtemp::ModelLoader::MeshData</innerclass>
+    <innernamespace refid="namespacevlkxtemp">vlkxtemp</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_geometry_8h" kindref="compound">vlkx/render/Geometry.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacevlkxtemp" kindref="compound">vlkxtemp</ref><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="structvlkxtemp_1_1_wavefront" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvlkxtemp_1_1_wavefront" kindref="compound">Wavefront</ref><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvlkxtemp_1_1_wavefront" kindref="compound">Wavefront</ref>(std::string_view<sp/>path,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>base);</highlight></codeline>
+<codeline lineno="10" refid="structvlkxtemp_1_1_wavefront_1ae1fc9bea55b86340598ab2f40cc4e76c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvlkxtemp_1_1_wavefront_1ae1fc9bea55b86340598ab2f40cc4e76c" kindref="member">Wavefront</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structvlkxtemp_1_1_wavefront" kindref="compound">Wavefront</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="structvlkxtemp_1_1_wavefront_1a9d524ebba20709d5f1d9cbf9256df8df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvlkxtemp_1_1_wavefront" kindref="compound">Wavefront</ref>&amp;<sp/><ref refid="structvlkxtemp_1_1_wavefront_1a9d524ebba20709d5f1d9cbf9256df8df" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structvlkxtemp_1_1_wavefront" kindref="compound">Wavefront</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="structvlkxtemp_1_1_wavefront_1ae7e11c9862803d6f63e5ebc0fe882c92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;uint32_t&gt;<sp/><ref refid="structvlkxtemp_1_1_wavefront_1ae7e11c9862803d6f63e5ebc0fe882c92" kindref="member">indices</ref>;</highlight></codeline>
+<codeline lineno="15" refid="structvlkxtemp_1_1_wavefront_1ab78fafa85f34d419758cc1f573f92bc6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Geo::VertexAll&gt;<sp/><ref refid="structvlkxtemp_1_1_wavefront_1ab78fafa85f34d419758cc1f573f92bc6" kindref="member">vertices</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classvlkxtemp_1_1_model_loader" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkxtemp_1_1_model_loader" kindref="compound">ModelLoader</ref><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20" refid="classvlkxtemp_1_1_model_loader_1a514055e13e1d8132ae485d6d6b11f2d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classvlkxtemp_1_1_model_loader_1a514055e13e1d8132ae485d6d6b11f2d3" kindref="member">TextureType</ref><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkxtemp_1_1_model_loader_1a514055e13e1d8132ae485d6d6b11f2d3a41178642cae095a6bdb909119b4d16e8" kindref="member">Diffuse</ref>,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkxtemp_1_1_model_loader_1a514055e13e1d8132ae485d6d6b11f2d3a39b0044dd8789d333e7794f359406740" kindref="member">Specular</ref>,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkxtemp_1_1_model_loader_1a514055e13e1d8132ae485d6d6b11f2d3aaea1e492943ccbad7ee270ec1e064758" kindref="member">Reflection</ref>,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkxtemp_1_1_model_loader_1a514055e13e1d8132ae485d6d6b11f2d3a29b142520cd0349c9f7375be4aa848c0" kindref="member">Cubemap</ref>,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkxtemp_1_1_model_loader_1a514055e13e1d8132ae485d6d6b11f2d3ae93f994f01c537c4e2f7d8528c3eb5e9" kindref="member">Count</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="structvlkxtemp_1_1_model_loader_1_1_texture_data" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvlkxtemp_1_1_model_loader_1_1_texture_data" kindref="compound">TextureData</ref><sp/>{</highlight></codeline>
+<codeline lineno="29" refid="structvlkxtemp_1_1_model_loader_1_1_texture_data_1a8702dd12618bca585f0327e4864bbe23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvlkxtemp_1_1_model_loader_1_1_texture_data_1a8702dd12618bca585f0327e4864bbe23" kindref="member">TextureData</ref>(<ref refid="structvlkxtemp_1_1_model_loader_1_1_texture_data" kindref="compound">TextureData</ref>&amp;&amp;)<sp/>noexcept<sp/>=<sp/>default;</highlight></codeline>
+<codeline lineno="30" refid="structvlkxtemp_1_1_model_loader_1_1_texture_data_1a6305ce4b079fd652d19ed923b60be134" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvlkxtemp_1_1_model_loader_1_1_texture_data" kindref="compound">TextureData</ref>&amp;<sp/>operator=(<ref refid="structvlkxtemp_1_1_model_loader_1_1_texture_data" kindref="compound">TextureData</ref>&amp;&amp;)<sp/>noexcept<sp/>=<sp/>default;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="structvlkxtemp_1_1_model_loader_1_1_texture_data_1a9c8e695c91d74f9ba7621a558193fed0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="structvlkxtemp_1_1_model_loader_1_1_texture_data_1a9c8e695c91d74f9ba7621a558193fed0" kindref="member">path</ref>;</highlight></codeline>
+<codeline lineno="33" refid="structvlkxtemp_1_1_model_loader_1_1_texture_data_1ac9153b997a6c435de9cfb9ba6fb8f882" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkxtemp_1_1_model_loader_1a514055e13e1d8132ae485d6d6b11f2d3" kindref="member">TextureType</ref><sp/><ref refid="structvlkxtemp_1_1_model_loader_1_1_texture_data_1ac9153b997a6c435de9cfb9ba6fb8f882" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>struct<sp/><ref refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data" kindref="compound">MeshData</ref><sp/>{</highlight></codeline>
+<codeline lineno="37" refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1aad3509d5353d65b54d255dfe1a43e90a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1aad3509d5353d65b54d255dfe1a43e90a" kindref="member">MeshData</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38" refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1a28e4e1c3d30b9607f8f1bd4844ffb5d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1a28e4e1c3d30b9607f8f1bd4844ffb5d2" kindref="member">MeshData</ref>(<ref refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data" kindref="compound">MeshData</ref>&amp;&amp;)<sp/>noexcept<sp/>=<sp/>default;</highlight></codeline>
+<codeline lineno="39" refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1a62e68837d5b4cd5610d9721a68f620b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data" kindref="compound">MeshData</ref>&amp;<sp/>operator=(<ref refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data" kindref="compound">MeshData</ref>&amp;&amp;)<sp/>noexcept<sp/>=<sp/>default;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1a66f8cde06c1c52ac4f652ba4a204f7f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;<ref refid="namespace_geo" kindref="compound">Geo</ref>::<ref refid="struct_geo_1_1_vertex_all" kindref="compound">VertexAll</ref>&gt;<sp/>vertices;</highlight></codeline>
+<codeline lineno="42" refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1a26b94bb2ec1da5a698308f09782037b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;uint32_t&gt;<sp/>indices;</highlight></codeline>
+<codeline lineno="43" refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1abf37abca41f20e3b73fc81993a0d9c9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;<ref refid="structvlkxtemp_1_1_model_loader_1_1_texture_data" kindref="compound">TextureData</ref>&gt;<sp/>textures;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkxtemp_1_1_model_loader" kindref="compound">ModelLoader</ref>(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>model,<sp/>const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>textures);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classvlkxtemp_1_1_model_loader_1a7f6873bfcc259f6ce7e5b3a5927dc736" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkxtemp_1_1_model_loader" kindref="compound">ModelLoader</ref>(const<sp/><ref refid="classvlkxtemp_1_1_model_loader" kindref="compound">ModelLoader</ref>&amp;)<sp/>=<sp/>delete;</highlight></codeline>
+<codeline lineno="49" refid="classvlkxtemp_1_1_model_loader_1a8587bd2a719ab8e74e580677d654d04e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkxtemp_1_1_model_loader" kindref="compound">ModelLoader</ref>&amp;<sp/>operator=(const<sp/><ref refid="classvlkxtemp_1_1_model_loader" kindref="compound">ModelLoader</ref>&amp;)<sp/>=<sp/>delete;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classvlkxtemp_1_1_model_loader_1ae0ab47fae5035de0c395a0e2e96c5b5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>std::vector&lt;<ref refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data" kindref="compound">MeshData</ref>&gt;&amp;<sp/><ref refid="classvlkxtemp_1_1_model_loader_1ae0ab47fae5035de0c395a0e2e96c5b5c" kindref="member">getMeshes</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>meshes;<sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;MeshData&gt;<sp/>meshes;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-renderer/inc/temp/model/Loader.h"/>
+  </compounddef>
+</doxygen>

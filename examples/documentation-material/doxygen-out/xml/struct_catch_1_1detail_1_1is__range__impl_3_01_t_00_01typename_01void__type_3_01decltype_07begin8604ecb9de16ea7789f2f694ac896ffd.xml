@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_catch_1_1detail_1_1is__range__impl_3_01_t_00_01typename_01void__type_3_01decltype_07begin8604ecb9de16ea7789f2f694ac896ffd" kind="struct" language="C++" prot="public">
+    <compoundname>Catch::detail::is_range_impl&lt; T, typename void_type&lt; decltype(begin(std::declval&lt; T &gt;()))&gt;::type &gt;</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::true_type</basecompoundref>
+    <includes refid="catch_8hpp" local="no">catch.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Catch::detail::is_range_impl&lt; T, typename void_type&lt; decltype(begin(std::declval&lt; T &gt;()))&gt;::type &gt;</label>
+        <link refid="struct_catch_1_1detail_1_1is__range__impl_3_01_t_00_01typename_01void__type_3_01decltype_07begin8604ecb9de16ea7789f2f694ac896ffd"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::true_type</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Catch::detail::is_range_impl&lt; T, typename void_type&lt; decltype(begin(std::declval&lt; T &gt;()))&gt;::type &gt;</label>
+        <link refid="struct_catch_1_1detail_1_1is__range__impl_3_01_t_00_01typename_01void__type_3_01decltype_07begin8604ecb9de16ea7789f2f694ac896ffd"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::true_type</label>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="2002" column="9" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="2002" bodyend="2003"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

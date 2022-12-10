@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structvlkx_1_1_buffer_1_1_copy_meta" kind="struct" language="C++" prot="public">
+    <compoundname>vlkx::Buffer::CopyMeta</compoundname>
+    <includes refid="_buffer_8h" local="no">Buffer.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvlkx_1_1_buffer_1_1_copy_meta_1a73a083b5ff75be2a9b6715317ab06a8d" prot="public" static="no" mutable="no">
+        <type>const void *</type>
+        <definition>const void* vlkx::Buffer::CopyMeta::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <qualifiedname>vlkx::Buffer::CopyMeta::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="18" column="24" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_buffer_1_1_copy_meta_1a2e0c8f5906e114ab568593448f709092" prot="public" static="no" mutable="no">
+        <type>VkDeviceSize</type>
+        <definition>VkDeviceSize vlkx::Buffer::CopyMeta::length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <qualifiedname>vlkx::Buffer::CopyMeta::length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="19" column="26" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_buffer_1_1_copy_meta_1ac12a0cb06c0503fa3fd678d684412e35" prot="public" static="no" mutable="no">
+        <type>VkDeviceSize</type>
+        <definition>VkDeviceSize vlkx::Buffer::CopyMeta::start</definition>
+        <argsstring></argsstring>
+        <name>start</name>
+        <qualifiedname>vlkx::Buffer::CopyMeta::start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="20" column="26" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="17" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="17" bodyend="21"/>
+    <listofallmembers>
+      <member refid="structvlkx_1_1_buffer_1_1_copy_meta_1a73a083b5ff75be2a9b6715317ab06a8d" prot="public" virt="non-virtual"><scope>vlkx::Buffer::CopyMeta</scope><name>data</name></member>
+      <member refid="structvlkx_1_1_buffer_1_1_copy_meta_1a2e0c8f5906e114ab568593448f709092" prot="public" virt="non-virtual"><scope>vlkx::Buffer::CopyMeta</scope><name>length</name></member>
+      <member refid="structvlkx_1_1_buffer_1_1_copy_meta_1ac12a0cb06c0503fa3fd678d684412e35" prot="public" virt="non-virtual"><scope>vlkx::Buffer::CopyMeta</scope><name>start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

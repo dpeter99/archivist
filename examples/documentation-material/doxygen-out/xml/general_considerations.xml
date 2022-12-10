@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="general_considerations" kind="page">
+    <compoundname>general_considerations</compoundname>
+    <title>General considerations</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="general_considerations_1general_considerations_thread_safety">
+<title>Thread safety</title>
+<para><itemizedlist>
+<listitem><para>The library has no global state, so separate <ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> objects can be used independently. There should be no need to create multiple such objects though - one per `VkDevice` is enough.</para>
+</listitem><listitem><para>By default, all calls to functions that take <ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> as first parameter are safe to call from multiple threads simultaneously because they are synchronized internally when needed. This includes allocation and deallocation from default memory pool, as well as custom <ref refid="struct_vma_pool" kindref="compound">VmaPool</ref>.</para>
+</listitem><listitem><para>When the allocator is created with <ref refid="group__group__init_1gga4f87c9100d154a65a4ad495f7763cf7ca4816ddaed324ba110172ca608a20f29d" kindref="member">VMA_ALLOCATOR_CREATE_EXTERNALLY_SYNCHRONIZED_BIT</ref> flag, calls to functions that take such <ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> object must be synchronized externally.</para>
+</listitem><listitem><para>Access to a <ref refid="struct_vma_allocation" kindref="compound">VmaAllocation</ref> object must be externally synchronized. For example, you must not call <ref refid="group__group__alloc_1gab9c96ca6bb55ad9069829fe8355bbb79" kindref="member">vmaGetAllocationInfo()</ref> and <ref refid="group__group__alloc_1ga13b93ec0ed38ad7232300cb94931c8d2" kindref="member">vmaMapMemory()</ref> from different threads at the same time if you pass the same <ref refid="struct_vma_allocation" kindref="compound">VmaAllocation</ref> object to these functions.</para>
+</listitem><listitem><para><ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> is not safe to be used from multiple threads simultaneously.</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="general_considerations_1general_considerations_versioning_and_compatibility">
+<title>Versioning and compatibility</title>
+<para>The library uses [**Semantic Versioning**](<ulink url="https://semver.org/">https://semver.org/</ulink>), which means version numbers follow convention: Major.Minor.Patch (e.g. 2.3.0), where:</para>
+<para><itemizedlist>
+<listitem><para>Incremented Patch version means a release is backward- and forward-compatible, introducing only some internal improvements, bug fixes, optimizations etc. or changes that are out of scope of the official API described in this documentation.</para>
+</listitem><listitem><para>Incremented Minor version means a release is backward-compatible, so existing code that uses the library should continue to work, while some new symbols could have been added: new structures, functions, new values in existing enums and bit flags, new structure members, but not new function parameters.</para>
+</listitem><listitem><para>Incrementing Major version means a release could break some backward compatibility.</para>
+</listitem></itemizedlist>
+</para>
+<para>All changes between official releases are documented in file &quot;CHANGELOG.md&quot;.</para>
+<para><simplesect kind="warning"><para>Backward compatiblity is considered on the level of C++ source code, not binary linkage. Adding new members to existing structures is treated as backward compatible if initializing the new members to binary zero results in the old behavior. You should always fully initialize all library structures to zeros and not rely on their exact binary size.</para>
+</simplesect>
+</para>
+</sect1>
+<sect1 id="general_considerations_1general_considerations_validation_layer_warnings">
+<title>Validation layer warnings</title>
+<para>When using this library, you can meet following types of warnings issued by Vulkan validation layer. They don&apos;t necessarily indicate a bug, so you may need to just ignore them.</para>
+<para><itemizedlist>
+<listitem><para>*vkBindBufferMemory(): Binding memory to buffer 0xeb8e4 but vkGetBufferMemoryRequirements() has not been called on that buffer.*<itemizedlist>
+<listitem><para>It happens when VK_KHR_dedicated_allocation extension is enabled. `vkGetBufferMemoryRequirements2KHR` function is used instead, while validation layer seems to be unaware of it.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>*Mapping an image with layout VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL can result in undefined behavior if this memory is used by the device. Only GENERAL or PREINITIALIZED should be used.*<itemizedlist>
+<listitem><para>It happens when you map a buffer or image, because the library maps entire `VkDeviceMemory` block, where different types of images and buffers may end up together, especially on GPUs with unified memory like Intel.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>*Non-linear image 0xebc91 is aliased with linear buffer 0xeb8e4 which may indicate a bug.*<itemizedlist>
+<listitem><para>It may happen when you use [defragmentation](<ref refid="defragmentation" kindref="compound">Defragmentation</ref>).</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="general_considerations_1general_considerations_allocation_algorithm">
+<title>Allocation algorithm</title>
+<para>The library uses following algorithm for allocation, in order:</para>
+<para><orderedlist>
+<listitem><para>Try to find free range of memory in existing blocks.</para>
+</listitem><listitem><para>If failed, try to create a new block of `VkDeviceMemory`, with preferred block size.</para>
+</listitem><listitem><para>If failed, try to create such block with size / 2, size / 4, size / 8.</para>
+</listitem><listitem><para>If failed, try to allocate separate `VkDeviceMemory` for this allocation, just like when you use <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a3fc311d855c2ff53f1090ef5c722b38f" kindref="member">VMA_ALLOCATION_CREATE_DEDICATED_MEMORY_BIT</ref>.</para>
+</listitem><listitem><para>If failed, choose other memory type that meets the requirements specified in <ref refid="struct_vma_allocation_create_info" kindref="compound">VmaAllocationCreateInfo</ref> and go to point 1.</para>
+</listitem><listitem><para>If failed, return `VK_ERROR_OUT_OF_DEVICE_MEMORY`.</para>
+</listitem></orderedlist>
+</para>
+</sect1>
+<sect1 id="general_considerations_1general_considerations_features_not_supported">
+<title>Features not supported</title>
+<para>Features deliberately excluded from the scope of this library:</para>
+<para><orderedlist>
+<listitem><para>**Data transfer.** Uploading (streaming) and downloading data of buffers and images between CPU and GPU memory and related synchronization is responsibility of the user. Defining some &quot;texture&quot; object that would automatically stream its data from a staging copy in CPU memory to GPU memory would rather be a feature of another, higher-level library implemented on top of VMA. VMA doesn&apos;t record any commands to a `VkCommandBuffer`. It just allocates memory.</para>
+</listitem><listitem><para>**Recreation of buffers and images.** Although the library has functions for buffer and image creation: <ref refid="group__group__alloc_1gae9773fe0ef8582e23136d2d83c336ab9" kindref="member">vmaCreateBuffer()</ref>, <ref refid="group__group__alloc_1gaa76142ae43535c862ad9e194a6e38aaa" kindref="member">vmaCreateImage()</ref>, you need to recreate these objects yourself after defragmentation. That is because the big structures `VkBufferCreateInfo`, `VkImageCreateInfo` are not stored in <ref refid="struct_vma_allocation" kindref="compound">VmaAllocation</ref> object.</para>
+</listitem><listitem><para>**Handling CPU memory allocation failures.** When dynamically creating small C++ objects in CPU memory (not Vulkan memory), allocation failures are not checked and handled gracefully, because that would complicate code significantly and is usually not needed in desktop PC applications anyway. Success of an allocation is just checked with an assert.</para>
+</listitem><listitem><para>**Code free of any compiler warnings.** Maintaining the library to compile and work correctly on so many different platforms is hard enough. Being free of any warnings, on any version of any compiler, is simply not feasible. There are many preprocessor macros that make some variables unused, function parameters unreferenced, or conditional expressions constant in some configurations. The code of this library should not be bigger or more complicated just to silence these warnings. It is recommended to disable such warnings instead.</para>
+</listitem><listitem><para>This is a C++ library with C interface. **Bindings or ports to any other programming languages** are welcome as external projects but are not going to be included into this repository. </para>
+</listitem></orderedlist>
+</para>
+</sect1>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h"/>
+  </compounddef>
+</doxygen>

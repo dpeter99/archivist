@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_vma_device_memory_callbacks" kind="struct" language="C++" prot="public">
+    <compoundname>VmaDeviceMemoryCallbacks</compoundname>
+    <includes refid="vk__mem__alloc_8h" local="no">vk_mem_alloc.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_vma_device_memory_callbacks_1ac02066cbe29d1f2f97c68c8c462ee3d5" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__init_1gaaf884ddf34d1bb3be8365594d3882a0b" kindref="member">PFN_vmaAllocateDeviceMemoryFunction</ref> <ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref></type>
+        <definition>PFN_vmaAllocateDeviceMemoryFunction VMA_NULLABLE VmaDeviceMemoryCallbacks::pfnAllocate</definition>
+        <argsstring></argsstring>
+        <name>pfnAllocate</name>
+        <qualifiedname>VmaDeviceMemoryCallbacks::pfnAllocate</qualifiedname>
+        <briefdescription>
+<para>Optional, can be null. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="942" column="54" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="942" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_device_memory_callbacks_1a74348a8b9bdb165535e010ed195bfdb9" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__init_1ga786c0d8679f6fd36ce796a19cc80afbe" kindref="member">PFN_vmaFreeDeviceMemoryFunction</ref> <ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref></type>
+        <definition>PFN_vmaFreeDeviceMemoryFunction VMA_NULLABLE VmaDeviceMemoryCallbacks::pfnFree</definition>
+        <argsstring></argsstring>
+        <name>pfnFree</name>
+        <qualifiedname>VmaDeviceMemoryCallbacks::pfnFree</qualifiedname>
+        <briefdescription>
+<para>Optional, can be null. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="944" column="50" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="944" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_device_memory_callbacks_1a84102b94fa445b59a8b02b44e7dcb43f" prot="public" static="no" mutable="no">
+        <type>void *<ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref></type>
+        <definition>void* VMA_NULLABLE VmaDeviceMemoryCallbacks::pUserData</definition>
+        <argsstring></argsstring>
+        <name>pUserData</name>
+        <qualifiedname>VmaDeviceMemoryCallbacks::pUserData</qualifiedname>
+        <briefdescription>
+<para>Optional, can be null. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="946" column="23" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="946" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Set of callbacks that the library will call for `vkAllocateMemory` and `vkFreeMemory`. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Provided for informative purpose, e.g. to gather statistics about number of allocations or total amount of memory allocated in Vulkan.</para>
+<para>Used in <ref refid="struct_vma_allocator_create_info_1afbb24551124b16bdaa29f92eb96b8c56" kindref="member">VmaAllocatorCreateInfo::pDeviceMemoryCallbacks</ref>. </para>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="939" column="1" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="940" bodyend="947"/>
+    <listofallmembers>
+      <member refid="struct_vma_device_memory_callbacks_1ac02066cbe29d1f2f97c68c8c462ee3d5" prot="public" virt="non-virtual"><scope>VmaDeviceMemoryCallbacks</scope><name>pfnAllocate</name></member>
+      <member refid="struct_vma_device_memory_callbacks_1a74348a8b9bdb165535e010ed195bfdb9" prot="public" virt="non-virtual"><scope>VmaDeviceMemoryCallbacks</scope><name>pfnFree</name></member>
+      <member refid="struct_vma_device_memory_callbacks_1a84102b94fa445b59a8b02b44e7dcb43f" prot="public" virt="non-virtual"><scope>VmaDeviceMemoryCallbacks</scope><name>pUserData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

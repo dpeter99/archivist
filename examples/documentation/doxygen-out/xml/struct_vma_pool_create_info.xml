@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_vma_pool_create_info" kind="struct" language="C++" prot="public">
+    <compoundname>VmaPoolCreateInfo</compoundname>
+    <includes refid="vk__mem__alloc_8h" local="no">vk_mem_alloc.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_vma_pool_create_info_1a596fa76b685d3f1f688f84a709a5b319" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t VmaPoolCreateInfo::memoryTypeIndex</definition>
+        <argsstring></argsstring>
+        <name>memoryTypeIndex</name>
+        <qualifiedname>VmaPoolCreateInfo::memoryTypeIndex</qualifiedname>
+        <briefdescription>
+<para>Vulkan memory type index to allocate this pool from. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1276" column="14" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_pool_create_info_1a8405139f63d078340ae74513a59f5446" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__alloc_1ga2770e325ea42e087c1b91fdf46d0292a" kindref="member">VmaPoolCreateFlags</ref></type>
+        <definition>VmaPoolCreateFlags VmaPoolCreateInfo::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <qualifiedname>VmaPoolCreateInfo::flags</qualifiedname>
+        <briefdescription>
+<para>Use combination of <ref refid="group__group__alloc_1ga9a7c45f9c863695d98c83fa5ac940fe7" kindref="member">VmaPoolCreateFlagBits</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1279" column="24" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_pool_create_info_1aa4265160536cdb9be821b7686c16c676" prot="public" static="no" mutable="no">
+        <type>VkDeviceSize</type>
+        <definition>VkDeviceSize VmaPoolCreateInfo::blockSize</definition>
+        <argsstring></argsstring>
+        <name>blockSize</name>
+        <qualifiedname>VmaPoolCreateInfo::blockSize</qualifiedname>
+        <briefdescription>
+<para>Size of a single `VkDeviceMemory` block to be allocated as part of this pool, in bytes. Optional. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Specify nonzero to set explicit, constant size of memory blocks used by this pool.</para>
+<para>Leave 0 to use default and let the library manage block sizes automatically. Sizes of particular blocks may vary. In this case, the pool will also support dedicated allocations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1289" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_pool_create_info_1ad8006fb803185c0a699d30f3e9a865ae" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t VmaPoolCreateInfo::minBlockCount</definition>
+        <argsstring></argsstring>
+        <name>minBlockCount</name>
+        <qualifiedname>VmaPoolCreateInfo::minBlockCount</qualifiedname>
+        <briefdescription>
+<para>Minimum number of blocks to be always allocated in this pool, even if they stay empty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set to 0 to have no preallocated blocks and allow the pool be completely empty. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1294" column="12" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_pool_create_info_1ae41142f2834fcdc82baa4883c187b75c" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t VmaPoolCreateInfo::maxBlockCount</definition>
+        <argsstring></argsstring>
+        <name>maxBlockCount</name>
+        <qualifiedname>VmaPoolCreateInfo::maxBlockCount</qualifiedname>
+        <briefdescription>
+<para>Maximum number of blocks that can be allocated in this pool. Optional. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set to 0 to use default, which is `SIZE_MAX`, which means no limit.</para>
+<para>Set to same value as <ref refid="struct_vma_pool_create_info_1ad8006fb803185c0a699d30f3e9a865ae" kindref="member">VmaPoolCreateInfo::minBlockCount</ref> to have fixed amount of memory allocated throughout whole lifetime of this pool. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1302" column="12" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_pool_create_info_1a16e686c688f6725f119ebf6e24ab5274" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float VmaPoolCreateInfo::priority</definition>
+        <argsstring></argsstring>
+        <name>priority</name>
+        <qualifiedname>VmaPoolCreateInfo::priority</qualifiedname>
+        <briefdescription>
+<para>A floating-point value between 0 and 1, indicating the priority of the allocations in this pool relative to other memory allocations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It is used only when <ref refid="group__group__init_1gga4f87c9100d154a65a4ad495f7763cf7caffdd7a5169be3dbd7cbf6b3619e4f78a" kindref="member">VMA_ALLOCATOR_CREATE_EXT_MEMORY_PRIORITY_BIT</ref> flag was used during creation of the <ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> object. Otherwise, this variable is ignored. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1308" column="11" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_pool_create_info_1ade3eca546f0c6ab4e8fbf20eb6d854cb" prot="public" static="no" mutable="no">
+        <type>VkDeviceSize</type>
+        <definition>VkDeviceSize VmaPoolCreateInfo::minAllocationAlignment</definition>
+        <argsstring></argsstring>
+        <name>minAllocationAlignment</name>
+        <qualifiedname>VmaPoolCreateInfo::minAllocationAlignment</qualifiedname>
+        <briefdescription>
+<para>Additional minimum alignment to be used for all allocations created from this pool. Can be 0. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Leave 0 (default) not to impose any additional alignment. If not 0, it must be a power of two. It can be useful in cases where alignment returned by Vulkan by functions like `vkGetBufferMemoryRequirements` is not enough, e.g. when doing interop with OpenGL. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1315" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_pool_create_info_1a4e264310c10272ba393c0ba2111ce416" prot="public" static="no" mutable="no">
+        <type>void *<ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref></type>
+        <definition>void* VMA_NULLABLE VmaPoolCreateInfo::pMemoryAllocateNext</definition>
+        <argsstring></argsstring>
+        <name>pMemoryAllocateNext</name>
+        <qualifiedname>VmaPoolCreateInfo::pMemoryAllocateNext</qualifiedname>
+        <briefdescription>
+<para>Additional `pNext` chain to be attached to `VkMemoryAllocateInfo` used for every allocation made by this pool. Optional. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional, can be null. If not null, it must point to a `pNext` chain of structures that can be attached to `VkMemoryAllocateInfo`. It can be useful for special needs such as adding `VkExportMemoryAllocateInfoKHR`. Structures pointed by this member must remain alive and unchanged for the whole lifetime of the custom pool.</para>
+<para>Please note that some structures, e.g. `VkMemoryPriorityAllocateInfoEXT`, `VkMemoryDedicatedAllocateInfoKHR`, can be attached automatically by this library when using other, more convenient of its features. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1325" column="23" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1325" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Describes parameter of created <ref refid="struct_vma_pool" kindref="compound">VmaPool</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1272" column="1" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1273" bodyend="1326"/>
+    <listofallmembers>
+      <member refid="struct_vma_pool_create_info_1aa4265160536cdb9be821b7686c16c676" prot="public" virt="non-virtual"><scope>VmaPoolCreateInfo</scope><name>blockSize</name></member>
+      <member refid="struct_vma_pool_create_info_1a8405139f63d078340ae74513a59f5446" prot="public" virt="non-virtual"><scope>VmaPoolCreateInfo</scope><name>flags</name></member>
+      <member refid="struct_vma_pool_create_info_1ae41142f2834fcdc82baa4883c187b75c" prot="public" virt="non-virtual"><scope>VmaPoolCreateInfo</scope><name>maxBlockCount</name></member>
+      <member refid="struct_vma_pool_create_info_1a596fa76b685d3f1f688f84a709a5b319" prot="public" virt="non-virtual"><scope>VmaPoolCreateInfo</scope><name>memoryTypeIndex</name></member>
+      <member refid="struct_vma_pool_create_info_1ade3eca546f0c6ab4e8fbf20eb6d854cb" prot="public" virt="non-virtual"><scope>VmaPoolCreateInfo</scope><name>minAllocationAlignment</name></member>
+      <member refid="struct_vma_pool_create_info_1ad8006fb803185c0a699d30f3e9a865ae" prot="public" virt="non-virtual"><scope>VmaPoolCreateInfo</scope><name>minBlockCount</name></member>
+      <member refid="struct_vma_pool_create_info_1a4e264310c10272ba393c0ba2111ce416" prot="public" virt="non-virtual"><scope>VmaPoolCreateInfo</scope><name>pMemoryAllocateNext</name></member>
+      <member refid="struct_vma_pool_create_info_1a16e686c688f6725f119ebf6e24ab5274" prot="public" virt="non-virtual"><scope>VmaPoolCreateInfo</scope><name>priority</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

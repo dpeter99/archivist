@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_immediate_command" kind="class" language="C++" prot="public">
+    <compoundname>vlkx::ImmediateCommand</compoundname>
+    <basecompoundref refid="classvlkx_1_1_command_buffer" prot="public" virt="non-virtual">vlkx::CommandBuffer</basecompoundref>
+    <includes refid="_commands_8h" local="no">Commands.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvlkx_1_1_immediate_command_1a523bb38d5938e4d26d934786f47f2cf6" prot="private" static="no" mutable="no">
+        <type>const <ref refid="structvlkx_1_1_queue" kindref="compound">Queue</ref></type>
+        <definition>const Queue vlkx::ImmediateCommand::queue</definition>
+        <argsstring></argsstring>
+        <name>queue</name>
+        <qualifiedname>vlkx::ImmediateCommand::queue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="42" column="21" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_immediate_command_1aa481b5406f342055eb9835acf83369d8" prot="private" static="no" mutable="no">
+        <type>VkCommandBuffer</type>
+        <definition>VkCommandBuffer vlkx::ImmediateCommand::commands</definition>
+        <argsstring></argsstring>
+        <name>commands</name>
+        <qualifiedname>vlkx::ImmediateCommand::commands</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="43" column="25" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_immediate_command_1ace403d69239bb64d7b57019581a74cef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::ImmediateCommand::ImmediateCommand</definition>
+        <argsstring>(Queue queue)</argsstring>
+        <name>ImmediateCommand</name>
+        <qualifiedname>vlkx::ImmediateCommand::ImmediateCommand</qualifiedname>
+        <param>
+          <type><ref refid="structvlkx_1_1_queue" kindref="compound">Queue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="34" column="9" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Commands.cpp" bodystart="62" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_immediate_command_1a8b0a5b292c6edd8ba8ec8c5bf2cd5f6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::ImmediateCommand::ImmediateCommand</definition>
+        <argsstring>(const ImmediateCommand &amp;)=delete</argsstring>
+        <name>ImmediateCommand</name>
+        <qualifiedname>vlkx::ImmediateCommand::ImmediateCommand</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_immediate_command" kindref="compound">ImmediateCommand</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="36" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_immediate_command_1afd9c49e57c4337512dead18a177613f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkx_1_1_immediate_command" kindref="compound">ImmediateCommand</ref> &amp;</type>
+        <definition>ImmediateCommand &amp; vlkx::ImmediateCommand::operator=</definition>
+        <argsstring>(const ImmediateCommand &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>vlkx::ImmediateCommand::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_immediate_command" kindref="compound">ImmediateCommand</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="37" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_immediate_command_1aff73ac980b4e9de4ba0078a23b9cebf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::ImmediateCommand::run</definition>
+        <argsstring>(const Command &amp;cmd)</argsstring>
+        <name>run</name>
+        <qualifiedname>vlkx::ImmediateCommand::run</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_command_buffer_1a89dd25d41ce895e7506227880b18b39c" kindref="member">Command</ref> &amp;</type>
+          <declname>cmd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="39" column="14" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Commands.cpp" bodystart="68" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>vlkx::CommandBuffer</label>
+        <link refid="classvlkx_1_1_command_buffer"/>
+      </node>
+      <node id="1">
+        <label>vlkx::ImmediateCommand</label>
+        <link refid="classvlkx_1_1_immediate_command"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>QueueFamilies</label>
+        <link refid="struct_queue_families"/>
+      </node>
+      <node id="4">
+        <label>SwapChainMeta</label>
+        <link refid="struct_swap_chain_meta"/>
+      </node>
+      <node id="3">
+        <label>VulkanDevice</label>
+        <link refid="class_vulkan_device"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>swapChain</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>queueData</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vlkx::CommandBuffer</label>
+        <link refid="classvlkx_1_1_command_buffer"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>dev</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>vlkx::ImmediateCommand</label>
+        <link refid="classvlkx_1_1_immediate_command"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="32" column="5" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="32" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_command_buffer_1a89dd25d41ce895e7506227880b18b39c" prot="public" virt="non-virtual"><scope>vlkx::ImmediateCommand</scope><name>Command</name></member>
+      <member refid="classvlkx_1_1_command_buffer_1a44d89415c68f53839bed9a500e9e9c28" prot="public" virt="non-virtual"><scope>vlkx::ImmediateCommand</scope><name>CommandBuffer</name></member>
+      <member refid="classvlkx_1_1_command_buffer_1a31dd9faba1742793714a6cfb85dadea9" prot="protected" virt="non-virtual"><scope>vlkx::ImmediateCommand</scope><name>CommandBuffer</name></member>
+      <member refid="classvlkx_1_1_immediate_command_1aa481b5406f342055eb9835acf83369d8" prot="private" virt="non-virtual"><scope>vlkx::ImmediateCommand</scope><name>commands</name></member>
+      <member refid="classvlkx_1_1_command_buffer_1a913b667da1ec1e3bb83753ed30c9cf9a" prot="protected" virt="non-virtual"><scope>vlkx::ImmediateCommand</scope><name>dev</name></member>
+      <member refid="classvlkx_1_1_immediate_command_1ace403d69239bb64d7b57019581a74cef" prot="public" virt="non-virtual"><scope>vlkx::ImmediateCommand</scope><name>ImmediateCommand</name></member>
+      <member refid="classvlkx_1_1_immediate_command_1a8b0a5b292c6edd8ba8ec8c5bf2cd5f6e" prot="public" virt="non-virtual"><scope>vlkx::ImmediateCommand</scope><name>ImmediateCommand</name></member>
+      <member refid="classvlkx_1_1_immediate_command_1afd9c49e57c4337512dead18a177613f2" prot="public" virt="non-virtual"><scope>vlkx::ImmediateCommand</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_command_buffer_1a5d1e3c8f4e1125c23a7c6b0308bc0ccd" prot="public" virt="non-virtual" ambiguityscope="vlkx::CommandBuffer::"><scope>vlkx::ImmediateCommand</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_immediate_command_1a523bb38d5938e4d26d934786f47f2cf6" prot="private" virt="non-virtual"><scope>vlkx::ImmediateCommand</scope><name>queue</name></member>
+      <member refid="classvlkx_1_1_immediate_command_1aff73ac980b4e9de4ba0078a23b9cebf7" prot="public" virt="non-virtual"><scope>vlkx::ImmediateCommand</scope><name>run</name></member>
+      <member refid="classvlkx_1_1_command_buffer_1a9431b9fa33c651adb2dd8752d054f66a" prot="protected" virt="non-virtual"><scope>vlkx::ImmediateCommand</scope><name>setPool</name></member>
+      <member refid="classvlkx_1_1_command_buffer_1aff399355ff561d9db85e3363188a51f3" prot="public" virt="virtual"><scope>vlkx::ImmediateCommand</scope><name>~CommandBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

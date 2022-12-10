@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_usage_tracker" kind="class" language="C++" prot="public">
+    <compoundname>vlkx::UsageTracker</compoundname>
+    <includes refid="_image_usage_8h" local="no">ImageUsage.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvlkx_1_1_usage_tracker_1ab41ca1143da90264fc41f61541a12663" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, <ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref> &gt;</type>
+        <definition>std::map&lt;int, ImageUsage&gt; vlkx::UsageTracker::usageAtSubpass</definition>
+        <argsstring></argsstring>
+        <name>usageAtSubpass</name>
+        <qualifiedname>vlkx::UsageTracker::usageAtSubpass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" line="250" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_usage_tracker_1ad0dd850fbf005372d8c99e2c0e9dbf0f" prot="private" static="no" mutable="no">
+        <type><ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref></type>
+        <definition>ImageUsage vlkx::UsageTracker::initialUsage</definition>
+        <argsstring></argsstring>
+        <name>initialUsage</name>
+        <qualifiedname>vlkx::UsageTracker::initialUsage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" line="251" column="20" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_usage_tracker_1a6d4fe718906cc55435dbe4dcc3cea434" prot="private" static="no" mutable="no">
+        <type>std::optional&lt; <ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref> &gt;</type>
+        <definition>std::optional&lt;ImageUsage&gt; vlkx::UsageTracker::finalUsage</definition>
+        <argsstring></argsstring>
+        <name>finalUsage</name>
+        <qualifiedname>vlkx::UsageTracker::finalUsage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" line="252" column="23" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_usage_tracker_1ad8d3efc39290d8ba84b76c1d17a83bbd" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, std::string &gt;</type>
+        <definition>std::map&lt;int, std::string&gt; vlkx::UsageTracker::multisamples</definition>
+        <argsstring></argsstring>
+        <name>multisamples</name>
+        <qualifiedname>vlkx::UsageTracker::multisamples</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" line="253" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_usage_tracker_1a9b8c4ae04d36cb7a4e2b9344c0a7842b" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::UsageTracker::UsageTracker</definition>
+        <argsstring>(const ImageUsage &amp;initial)</argsstring>
+        <name>UsageTracker</name>
+        <qualifiedname>vlkx::UsageTracker::UsageTracker</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref> &amp;</type>
+          <declname>initial</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" line="191" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" bodystart="191" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_usage_tracker_1ace5f0fbfe1d221ba9e3b5cf41ad3e4a3" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::UsageTracker::UsageTracker</definition>
+        <argsstring>()=default</argsstring>
+        <name>UsageTracker</name>
+        <qualifiedname>vlkx::UsageTracker::UsageTracker</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" line="192" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_usage_tracker_1ae69277b75724ad2e889f209b942d36f4" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::UsageTracker::UsageTracker</definition>
+        <argsstring>(UsageTracker &amp;&amp;) noexcept=default</argsstring>
+        <name>UsageTracker</name>
+        <qualifiedname>vlkx::UsageTracker::UsageTracker</qualifiedname>
+        <param>
+          <type><ref refid="classvlkx_1_1_usage_tracker" kindref="compound">UsageTracker</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" line="194" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_usage_tracker_1ada0c70baa77ef850338fa7211682a8f3" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classvlkx_1_1_usage_tracker" kindref="compound">UsageTracker</ref> &amp;</type>
+        <definition>UsageTracker &amp; vlkx::UsageTracker::operator=</definition>
+        <argsstring>(UsageTracker &amp;&amp;) noexcept=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>vlkx::UsageTracker::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classvlkx_1_1_usage_tracker" kindref="compound">UsageTracker</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" line="195" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_usage_tracker_1acab4745a7cb417bd8faca9f41717bf49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref></type>
+        <definition>fluent vlkx::UsageTracker::add</definition>
+        <argsstring>(int pass, const ImageUsage &amp;usage)</argsstring>
+        <name>add</name>
+        <qualifiedname>vlkx::UsageTracker::add</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>pass</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref> &amp;</type>
+          <declname>usage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" line="200" column="16" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" bodystart="200" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_usage_tracker_1acfdaf14a2e113d17382fc151565760fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref></type>
+        <definition>fluent vlkx::UsageTracker::add</definition>
+        <argsstring>(int start, int end, const ImageUsage &amp;usage)</argsstring>
+        <name>add</name>
+        <qualifiedname>vlkx::UsageTracker::add</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref> &amp;</type>
+          <declname>usage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" line="206" column="16" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" bodystart="206" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_usage_tracker_1a66211af27a7f552ab1c23433066c17a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref></type>
+        <definition>fluent vlkx::UsageTracker::addMultisample</definition>
+        <argsstring>(int pass, std::string_view name)</argsstring>
+        <name>addMultisample</name>
+        <qualifiedname>vlkx::UsageTracker::addMultisample</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>pass</declname>
+        </param>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" line="213" column="16" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" bodystart="213" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_usage_tracker_1a5c3a371e467667d652e735fa3ddf38fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref></type>
+        <definition>fluent vlkx::UsageTracker::setFinal</definition>
+        <argsstring>(const ImageUsage &amp;usage)</argsstring>
+        <name>setFinal</name>
+        <qualifiedname>vlkx::UsageTracker::setFinal</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref> &amp;</type>
+          <declname>usage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" line="218" column="16" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" bodystart="218" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_usage_tracker_1ad6b90ad190d66200106749bd5c39e2a5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref> &gt;</type>
+        <definition>std::vector&lt; ImageUsage &gt; vlkx::UsageTracker::getUsages</definition>
+        <argsstring>() const</argsstring>
+        <name>getUsages</name>
+        <qualifiedname>vlkx::UsageTracker::getUsages</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" line="223" column="22" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" bodystart="223" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_usage_tracker_1a8ae025da2c4f8c7f644ec888e2331a75" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::map&lt; int, <ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref> &gt; &amp;</type>
+        <definition>const std::map&lt; int, ImageUsage &gt; &amp; vlkx::UsageTracker::getUsageMap</definition>
+        <argsstring>() const</argsstring>
+        <name>getUsageMap</name>
+        <qualifiedname>vlkx::UsageTracker::getUsageMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" line="239" column="25" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" bodystart="239" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_usage_tracker_1ae852cdb275d8b16ef0656b98bce89e86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref> &amp;</type>
+        <definition>ImageUsage &amp; vlkx::UsageTracker::getInitialUsage</definition>
+        <argsstring>()</argsstring>
+        <name>getInitialUsage</name>
+        <qualifiedname>vlkx::UsageTracker::getInitialUsage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" line="243" column="20" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" bodystart="243" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_usage_tracker_1aa4a556fc4f0cc5cbebeaea1721eea618" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::optional&lt; <ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref> &gt;</type>
+        <definition>std::optional&lt; ImageUsage &gt; vlkx::UsageTracker::getFinalUsage</definition>
+        <argsstring>()</argsstring>
+        <name>getFinalUsage</name>
+        <qualifiedname>vlkx::UsageTracker::getFinalUsage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" line="244" column="23" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" bodystart="244" bodyend="244"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Describes how a single image will be used in each stage of a render pass. Allows a single image to be written to during one pass, read in a second, and presented in the final, and tracked. Helps figure out the optimizations that Vulkan can do to this image and the render passes that use it. </para>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" line="188" column="5" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/ImageUsage.h" bodystart="188" bodyend="254"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_usage_tracker_1acab4745a7cb417bd8faca9f41717bf49" prot="public" virt="non-virtual"><scope>vlkx::UsageTracker</scope><name>add</name></member>
+      <member refid="classvlkx_1_1_usage_tracker_1acfdaf14a2e113d17382fc151565760fb" prot="public" virt="non-virtual"><scope>vlkx::UsageTracker</scope><name>add</name></member>
+      <member refid="classvlkx_1_1_usage_tracker_1a66211af27a7f552ab1c23433066c17a3" prot="public" virt="non-virtual"><scope>vlkx::UsageTracker</scope><name>addMultisample</name></member>
+      <member refid="classvlkx_1_1_usage_tracker_1a6d4fe718906cc55435dbe4dcc3cea434" prot="private" virt="non-virtual"><scope>vlkx::UsageTracker</scope><name>finalUsage</name></member>
+      <member refid="classvlkx_1_1_usage_tracker_1aa4a556fc4f0cc5cbebeaea1721eea618" prot="public" virt="non-virtual"><scope>vlkx::UsageTracker</scope><name>getFinalUsage</name></member>
+      <member refid="classvlkx_1_1_usage_tracker_1ae852cdb275d8b16ef0656b98bce89e86" prot="public" virt="non-virtual"><scope>vlkx::UsageTracker</scope><name>getInitialUsage</name></member>
+      <member refid="classvlkx_1_1_usage_tracker_1a8ae025da2c4f8c7f644ec888e2331a75" prot="public" virt="non-virtual"><scope>vlkx::UsageTracker</scope><name>getUsageMap</name></member>
+      <member refid="classvlkx_1_1_usage_tracker_1ad6b90ad190d66200106749bd5c39e2a5" prot="public" virt="non-virtual"><scope>vlkx::UsageTracker</scope><name>getUsages</name></member>
+      <member refid="classvlkx_1_1_usage_tracker_1ad0dd850fbf005372d8c99e2c0e9dbf0f" prot="private" virt="non-virtual"><scope>vlkx::UsageTracker</scope><name>initialUsage</name></member>
+      <member refid="classvlkx_1_1_usage_tracker_1ad8d3efc39290d8ba84b76c1d17a83bbd" prot="private" virt="non-virtual"><scope>vlkx::UsageTracker</scope><name>multisamples</name></member>
+      <member refid="classvlkx_1_1_usage_tracker_1ada0c70baa77ef850338fa7211682a8f3" prot="public" virt="non-virtual"><scope>vlkx::UsageTracker</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_usage_tracker_1a5c3a371e467667d652e735fa3ddf38fb" prot="public" virt="non-virtual"><scope>vlkx::UsageTracker</scope><name>setFinal</name></member>
+      <member refid="classvlkx_1_1_usage_tracker_1ab41ca1143da90264fc41f61541a12663" prot="private" virt="non-virtual"><scope>vlkx::UsageTracker</scope><name>usageAtSubpass</name></member>
+      <member refid="classvlkx_1_1_usage_tracker_1a9b8c4ae04d36cb7a4e2b9344c0a7842b" prot="public" virt="non-virtual"><scope>vlkx::UsageTracker</scope><name>UsageTracker</name></member>
+      <member refid="classvlkx_1_1_usage_tracker_1ace5f0fbfe1d221ba9e3b5cf41ad3e4a3" prot="public" virt="non-virtual"><scope>vlkx::UsageTracker</scope><name>UsageTracker</name></member>
+      <member refid="classvlkx_1_1_usage_tracker_1ae69277b75724ad2e889f209b942d36f4" prot="public" virt="non-virtual"><scope>vlkx::UsageTracker</scope><name>UsageTracker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

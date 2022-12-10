@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="virtual_allocator" kind="page">
+    <compoundname>virtual_allocator</compoundname>
+    <title>Virtual allocator</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>As an extra feature, the core allocation algorithm of the library is exposed through a simple and convenient API of &quot;virtual allocator&quot;. It doesn&apos;t allocate any real GPU memory. It just keeps track of used and free regions of a &quot;virtual block&quot;. You can use it to allocate your own memory or other objects, even completely unrelated to Vulkan. A common use case is sub-allocation of pieces of one large GPU buffer.</para>
+<sect1 id="virtual_allocator_1virtual_allocator_creating_virtual_block">
+<title>Creating virtual block</title>
+<para>To use this functionality, there is no main &quot;allocator&quot; object. You don&apos;t need to have <ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> object created. All you need to do is to create a separate <ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> object for each block of memory you want to be managed by the allocator:</para>
+<para><orderedlist>
+<listitem><para>Fill in <ref refid="struct_vma_virtual_block_create_info" kindref="compound">VmaVirtualBlockCreateInfo</ref> structure.</para>
+</listitem><listitem><para>Call <ref refid="group__group__virtual_1ga869baad02bf3b5fb012d61e1a43f92c5" kindref="member">vmaCreateVirtualBlock()</ref>. Get new <ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> object.</para>
+</listitem></orderedlist>
+</para>
+<para>Example:</para>
+<para><programlisting><codeline><highlight class="normal"><ref refid="struct_vma_virtual_block_create_info" kindref="compound">VmaVirtualBlockCreateInfo</ref><sp/>blockCreateInfo<sp/>=<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal">blockCreateInfo.<ref refid="struct_vma_virtual_block_create_info_1a670ab8c6a6e822f3c36781d79e8824e9" kindref="member">size</ref><sp/>=<sp/>1048576;<sp/></highlight><highlight class="comment">//<sp/>1<sp/>MB</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref><sp/>block;</highlight></codeline>
+<codeline><highlight class="normal">VkResult<sp/>res<sp/>=<sp/><ref refid="group__group__virtual_1ga869baad02bf3b5fb012d61e1a43f92c5" kindref="member">vmaCreateVirtualBlock</ref>(&amp;blockCreateInfo,<sp/>&amp;block);</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="virtual_allocator_1virtual_allocator_making_virtual_allocations">
+<title>Making virtual allocations</title>
+<para><ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> object contains internal data structure that keeps track of free and occupied regions using the same code as the main Vulkan memory allocator. Similarly to <ref refid="struct_vma_allocation" kindref="compound">VmaAllocation</ref> for standard GPU allocations, there is <ref refid="struct_vma_virtual_allocation" kindref="compound">VmaVirtualAllocation</ref> type that represents an opaque handle to an allocation withing the virtual block.</para>
+<para>In order to make such allocation:</para>
+<para><orderedlist>
+<listitem><para>Fill in <ref refid="struct_vma_virtual_allocation_create_info" kindref="compound">VmaVirtualAllocationCreateInfo</ref> structure.</para>
+</listitem><listitem><para>Call <ref refid="group__group__virtual_1ga2f6cd8f6b98e754be7016b5860d02dac" kindref="member">vmaVirtualAllocate()</ref>. Get new <ref refid="struct_vma_virtual_allocation" kindref="compound">VmaVirtualAllocation</ref> object that represents the allocation. You can also receive `VkDeviceSize offset` that was assigned to the allocation.</para>
+</listitem></orderedlist>
+</para>
+<para>Example:</para>
+<para><programlisting><codeline><highlight class="normal"><ref refid="struct_vma_virtual_allocation_create_info" kindref="compound">VmaVirtualAllocationCreateInfo</ref><sp/>allocCreateInfo<sp/>=<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal">allocCreateInfo.<ref refid="struct_vma_virtual_allocation_create_info_1aae08752b86817abd0d944c6025dc603e" kindref="member">size</ref><sp/>=<sp/>4096;<sp/></highlight><highlight class="comment">//<sp/>4<sp/>KB</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_virtual_allocation" kindref="compound">VmaVirtualAllocation</ref><sp/>alloc;</highlight></codeline>
+<codeline><highlight class="normal">VkDeviceSize<sp/>offset;</highlight></codeline>
+<codeline><highlight class="normal">res<sp/>=<sp/><ref refid="group__group__virtual_1ga2f6cd8f6b98e754be7016b5860d02dac" kindref="member">vmaVirtualAllocate</ref>(block,<sp/>&amp;allocCreateInfo,<sp/>&amp;alloc,<sp/>&amp;offset);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(res<sp/>==<sp/>VK_SUCCESS)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>the<sp/>4<sp/>KB<sp/>of<sp/>your<sp/>memory<sp/>starting<sp/>at<sp/>offset.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Allocation<sp/>failed<sp/>-<sp/>no<sp/>space<sp/>for<sp/>it<sp/>could<sp/>be<sp/>found.<sp/>Handle<sp/>this<sp/>error!</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="virtual_allocator_1virtual_allocator_deallocation">
+<title>Deallocation</title>
+<para>When no longer needed, an allocation can be freed by calling <ref refid="group__group__virtual_1ga9f82fb8b8160d10bb469ae06b90134d2" kindref="member">vmaVirtualFree()</ref>. You can only pass to this function an allocation that was previously returned by <ref refid="group__group__virtual_1ga2f6cd8f6b98e754be7016b5860d02dac" kindref="member">vmaVirtualAllocate()</ref> called for the same <ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref>.</para>
+<para>When whole block is no longer needed, the block object can be released by calling <ref refid="group__group__virtual_1ga1a464943809fb27dd3b78d1cd6e3d534" kindref="member">vmaDestroyVirtualBlock()</ref>. All allocations must be freed before the block is destroyed, which is checked internally by an assert. However, if you don&apos;t want to call <ref refid="group__group__virtual_1ga9f82fb8b8160d10bb469ae06b90134d2" kindref="member">vmaVirtualFree()</ref> for each allocation, you can use <ref refid="group__group__virtual_1ga3114a4b34e1225b3d0a246b219d29d9d" kindref="member">vmaClearVirtualBlock()</ref> to free them all at once - a feature not available in normal Vulkan memory allocator. Example:</para>
+<para><programlisting><codeline><highlight class="normal"><ref refid="group__group__virtual_1ga9f82fb8b8160d10bb469ae06b90134d2" kindref="member">vmaVirtualFree</ref>(block,<sp/>alloc);</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__virtual_1ga1a464943809fb27dd3b78d1cd6e3d534" kindref="member">vmaDestroyVirtualBlock</ref>(block);</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="virtual_allocator_1virtual_allocator_allocation_parameters">
+<title>Allocation parameters</title>
+<para>You can attach a custom pointer to each allocation by using <ref refid="group__group__virtual_1ga9e697c001a3750c3bf1a081ee15f6b10" kindref="member">vmaSetVirtualAllocationUserData()</ref>. Its default value is null. It can be used to store any data that needs to be associated with that allocation - e.g. an index, a handle, or a pointer to some larger data structure containing more information. Example:</para>
+<para><programlisting><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal">CustomAllocData</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>m_AllocName;</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline><highlight class="normal">CustomAllocData*<sp/>allocData<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CustomAllocData();</highlight></codeline>
+<codeline><highlight class="normal">allocData-&gt;m_AllocName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;My<sp/>allocation<sp/>1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__virtual_1ga9e697c001a3750c3bf1a081ee15f6b10" kindref="member">vmaSetVirtualAllocationUserData</ref>(block,<sp/>alloc,<sp/>allocData);</highlight></codeline>
+</programlisting></para>
+<para>The pointer can later be fetched, along with allocation offset and size, by passing the allocation handle to function <ref refid="group__group__virtual_1ga64b8c2939b82f83fbec507f29a43307b" kindref="member">vmaGetVirtualAllocationInfo()</ref> and inspecting returned structure <ref refid="struct_vma_virtual_allocation_info" kindref="compound">VmaVirtualAllocationInfo</ref>. If you allocated a new object to be used as the custom pointer, don&apos;t forget to delete that object before freeing the allocation! Example:</para>
+<para><programlisting><codeline><highlight class="normal"><ref refid="struct_vma_virtual_allocation_info" kindref="compound">VmaVirtualAllocationInfo</ref><sp/>allocInfo;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__virtual_1ga64b8c2939b82f83fbec507f29a43307b" kindref="member">vmaGetVirtualAllocationInfo</ref>(block,<sp/>alloc,<sp/>&amp;allocInfo);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>(CustomAllocData*)allocInfo.<ref refid="struct_vma_virtual_allocation_info_1a224aa08739618d27066a16b7f60a2bbc" kindref="member">pUserData</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__virtual_1ga9f82fb8b8160d10bb469ae06b90134d2" kindref="member">vmaVirtualFree</ref>(block,<sp/>alloc);</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="virtual_allocator_1virtual_allocator_alignment_and_units">
+<title>Alignment and units</title>
+<para>It feels natural to express sizes and offsets in bytes. If an offset of an allocation needs to be aligned to a multiply of some number (e.g. 4 bytes), you can fill optional member <ref refid="struct_vma_virtual_allocation_create_info_1a9d19709872fc1904a105079e1c885821" kindref="member">VmaVirtualAllocationCreateInfo::alignment</ref> to request it. Example:</para>
+<para><programlisting><codeline><highlight class="normal"><ref refid="struct_vma_virtual_allocation_create_info" kindref="compound">VmaVirtualAllocationCreateInfo</ref><sp/>allocCreateInfo<sp/>=<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal">allocCreateInfo.<ref refid="struct_vma_virtual_allocation_create_info_1aae08752b86817abd0d944c6025dc603e" kindref="member">size</ref><sp/>=<sp/>4096;<sp/></highlight><highlight class="comment">//<sp/>4<sp/>KB</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">allocCreateInfo.<ref refid="struct_vma_virtual_allocation_create_info_1a9d19709872fc1904a105079e1c885821" kindref="member">alignment</ref><sp/>=<sp/>4;<sp/></highlight><highlight class="comment">//<sp/>Returned<sp/>offset<sp/>must<sp/>be<sp/>a<sp/>multiply<sp/>of<sp/>4<sp/>B</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_virtual_allocation" kindref="compound">VmaVirtualAllocation</ref><sp/>alloc;</highlight></codeline>
+<codeline><highlight class="normal">res<sp/>=<sp/><ref refid="group__group__virtual_1ga2f6cd8f6b98e754be7016b5860d02dac" kindref="member">vmaVirtualAllocate</ref>(block,<sp/>&amp;allocCreateInfo,<sp/>&amp;alloc,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para>
+<para>Alignments of different allocations made from one block may vary. However, if all alignments and sizes are always multiply of some size e.g. 4 B or `sizeof(MyDataStruct)`, you can express all sizes, alignments, and offsets in multiples of that size instead of individual bytes. It might be more convenient, but you need to make sure to use this new unit consistently in all the places:</para>
+<para><itemizedlist>
+<listitem><para><ref refid="struct_vma_virtual_block_create_info_1a670ab8c6a6e822f3c36781d79e8824e9" kindref="member">VmaVirtualBlockCreateInfo::size</ref></para>
+</listitem><listitem><para><ref refid="struct_vma_virtual_allocation_create_info_1aae08752b86817abd0d944c6025dc603e" kindref="member">VmaVirtualAllocationCreateInfo::size</ref> and <ref refid="struct_vma_virtual_allocation_create_info_1a9d19709872fc1904a105079e1c885821" kindref="member">VmaVirtualAllocationCreateInfo::alignment</ref></para>
+</listitem><listitem><para>Using offset returned by <ref refid="group__group__virtual_1ga2f6cd8f6b98e754be7016b5860d02dac" kindref="member">vmaVirtualAllocate()</ref> or in <ref refid="struct_vma_virtual_allocation_info_1accb40a8205f49ccca3de975da7d1a2b5" kindref="member">VmaVirtualAllocationInfo::offset</ref></para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="virtual_allocator_1virtual_allocator_statistics">
+<title>Statistics</title>
+<para>You can obtain statistics of a virtual block using <ref refid="group__group__virtual_1gac63bab2c8ae8e74451a11ef6dab48a5d" kindref="member">vmaGetVirtualBlockStatistics()</ref> (to get brief statistics that are fast to calculate) or <ref refid="group__group__virtual_1ga87017b57fb0e9623573f07c236c37566" kindref="member">vmaCalculateVirtualBlockStatistics()</ref> (to get more detailed statistics, slower to calculate). The functions fill structures <ref refid="struct_vma_statistics" kindref="compound">VmaStatistics</ref>, <ref refid="struct_vma_detailed_statistics" kindref="compound">VmaDetailedStatistics</ref> respectively - same as used by the normal Vulkan memory allocator. Example:</para>
+<para><programlisting><codeline><highlight class="normal"><ref refid="struct_vma_statistics" kindref="compound">VmaStatistics</ref><sp/>stats;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__virtual_1gac63bab2c8ae8e74451a11ef6dab48a5d" kindref="member">vmaGetVirtualBlockStatistics</ref>(block,<sp/>&amp;stats);</highlight></codeline>
+<codeline><highlight class="normal">printf(</highlight><highlight class="stringliteral">&quot;My<sp/>virtual<sp/>block<sp/>has<sp/>%llu<sp/>bytes<sp/>used<sp/>by<sp/>%u<sp/>virtual<sp/>allocations\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>stats.<ref refid="struct_vma_statistics_1a21db06eba3422f87a2b4b4703d879c16" kindref="member">allocationBytes</ref>,<sp/>stats.<ref refid="struct_vma_statistics_1ab0ff76e50f58f9f54b6f265e5bf5dde2" kindref="member">allocationCount</ref>);</highlight></codeline>
+</programlisting></para>
+<para>You can also request a full list of allocations and free regions as a string in JSON format by calling <ref refid="group__group__stats_1ga874ef8790380b6643ee5c1144ae5b32b" kindref="member">vmaBuildVirtualBlockStatsString()</ref>. Returned string must be later freed using <ref refid="group__group__stats_1ga5b3acd266c1f20d0b360d4259ff411bf" kindref="member">vmaFreeVirtualBlockStatsString()</ref>. The format of this string differs from the one returned by the main Vulkan allocator, but it is similar.</para>
+</sect1>
+<sect1 id="virtual_allocator_1virtual_allocator_additional_considerations">
+<title>Additional considerations</title>
+<para>The &quot;virtual allocator&quot; functionality is implemented on a level of individual memory blocks. Keeping track of a whole collection of blocks, allocating new ones when out of free space, deleting empty ones, and deciding which one to try first for a new allocation must be implemented by the user.</para>
+<para>Alternative allocation algorithms are supported, just like in custom pools of the real GPU memory. See enum <ref refid="group__group__virtual_1ga88bcf8c1cd3bb1610ff7343811c65bca" kindref="member">VmaVirtualBlockCreateFlagBits</ref> to learn how to specify them (e.g. <ref refid="group__group__virtual_1gga88bcf8c1cd3bb1610ff7343811c65bcaae6423e2fa2f3c9211b21c819e3f10f96" kindref="member">VMA_VIRTUAL_BLOCK_CREATE_LINEAR_ALGORITHM_BIT</ref>). You can find their description in chapter <ref refid="custom_memory_pools" kindref="compound">Custom memory pools</ref>. Allocation strategies are also supported. See enum <ref refid="group__group__virtual_1ga2e9c64d405b14156fea7e10c4ad06cb6" kindref="member">VmaVirtualAllocationCreateFlagBits</ref> to learn how to specify them (e.g. <ref refid="group__group__virtual_1gga2e9c64d405b14156fea7e10c4ad06cb6a562d10a46012719d33167d3dc5dbbf9b" kindref="member">VMA_VIRTUAL_ALLOCATION_CREATE_STRATEGY_MIN_TIME_BIT</ref>).</para>
+<para>Following features are supported only by the allocator of the real GPU memory and not by virtual allocations: buffer-image granularity, `VMA_DEBUG_MARGIN`, `VMA_MIN_ALIGNMENT`. </para>
+</sect1>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h"/>
+  </compounddef>
+</doxygen>

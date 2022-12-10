@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="string-helpers_8h" kind="file" language="C++">
+    <compoundname>string-helpers.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="_s_f_f_parser_8cpp" local="yes">shadow-engine/shadow-file-format/src/SFFParser.cpp</includedby>
+    <includedby refid="string-helpers_8cpp" local="yes">shadow-engine/shadow-utility/src/string-helpers.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>shadow-engine/shadow-utility/inc/string-helpers.h</label>
+        <link refid="string-helpers_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>shadow-engine/shadow-file-format/src/SFFParser.cpp</label>
+        <link refid="_s_f_f_parser_8cpp"/>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-utility/inc/string-helpers.h</label>
+        <link refid="string-helpers_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>shadow-engine/shadow-utility/src/string-helpers.cpp</label>
+        <link refid="string-helpers_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="string-helpers_8h_1a630bf71ada5f83ab4f89075a976d56ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; explode</definition>
+        <argsstring>(const std::string &amp;s, const char &amp;c)</argsstring>
+        <name>explode</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const char &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-utility/inc/string-helpers.h" line="6" column="13" bodyfile="shadow-engine/shadow-utility/src/string-helpers.cpp" bodystart="4" bodyend="17" declfile="shadow-engine/shadow-utility/inc/string-helpers.h" declline="6" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">std::vector&lt;std::string&gt;<sp/><ref refid="string-helpers_8h_1a630bf71ada5f83ab4f89075a976d56ce" kindref="member">explode</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>s,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">&amp;<sp/>c);</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-utility/inc/string-helpers.h"/>
+  </compounddef>
+</doxygen>

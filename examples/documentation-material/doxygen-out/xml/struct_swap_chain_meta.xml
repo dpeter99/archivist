@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_swap_chain_meta" kind="struct" language="C++" prot="public">
+    <compoundname>SwapChainMeta</compoundname>
+    <includes refid="_vulkan_device_8h" local="no">VulkanDevice.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_swap_chain_meta_1a8ae5a9457f5477f6cdc810605356dd57" prot="public" static="no" mutable="no">
+        <type>VkSurfaceCapabilitiesKHR</type>
+        <definition>VkSurfaceCapabilitiesKHR SwapChainMeta::capabilities</definition>
+        <argsstring></argsstring>
+        <name>capabilities</name>
+        <qualifiedname>SwapChainMeta::capabilities</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanDevice.h" line="12" column="26" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanDevice.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_swap_chain_meta_1a9823f90cd333076c3e2cc9196730ff3d" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; VkSurfaceFormatKHR &gt;</type>
+        <definition>std::vector&lt;VkSurfaceFormatKHR&gt; SwapChainMeta::formats</definition>
+        <argsstring></argsstring>
+        <name>formats</name>
+        <qualifiedname>SwapChainMeta::formats</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanDevice.h" line="13" column="13" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanDevice.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_swap_chain_meta_1adc1c717be016e6119704a6f0d38075d0" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; VkPresentModeKHR &gt;</type>
+        <definition>std::vector&lt;VkPresentModeKHR&gt; SwapChainMeta::modes</definition>
+        <argsstring></argsstring>
+        <name>modes</name>
+        <qualifiedname>SwapChainMeta::modes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanDevice.h" line="14" column="13" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanDevice.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanDevice.h" line="11" column="1" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanDevice.h" bodystart="11" bodyend="15"/>
+    <listofallmembers>
+      <member refid="struct_swap_chain_meta_1a8ae5a9457f5477f6cdc810605356dd57" prot="public" virt="non-virtual"><scope>SwapChainMeta</scope><name>capabilities</name></member>
+      <member refid="struct_swap_chain_meta_1a9823f90cd333076c3e2cc9196730ff3d" prot="public" virt="non-virtual"><scope>SwapChainMeta</scope><name>formats</name></member>
+      <member refid="struct_swap_chain_meta_1adc1c717be016e6119704a6f0d38075d0" prot="public" virt="non-virtual"><scope>SwapChainMeta</scope><name>modes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structvlkx_1_1_attachment" kind="struct" language="C++" prot="public">
+    <compoundname>vlkx::Attachment</compoundname>
+    <includes refid="_screen_render_pass_8h" local="no">ScreenRenderPass.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvlkx_1_1_attachment_1ad7949cd696c2ade220c75916b91ab184" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string vlkx::Attachment::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>vlkx::Attachment::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="88" column="27" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_attachment_1a0aa726278b173d415f71d087dbcf1e20" prot="public" static="no" mutable="no">
+        <type>std::optional&lt; int &gt;</type>
+        <definition>std::optional&lt;int&gt; vlkx::Attachment::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <qualifiedname>vlkx::Attachment::index</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="89" column="23" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structvlkx_1_1_attachment_1ada5d98246548d087fd936b4a1f47f1c0" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::Attachment::Attachment</definition>
+        <argsstring>(std::string_view image)</argsstring>
+        <name>Attachment</name>
+        <qualifiedname>vlkx::Attachment::Attachment</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>image</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="79" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="structvlkx_1_1_attachment_1aee1dad9747c17453d542f7eb424ed1a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::Attachment::add</definition>
+        <argsstring>(MultiImageTracker &amp;tracker, const Image &amp;image)</argsstring>
+        <name>add</name>
+        <qualifiedname>vlkx::Attachment::add</qualifiedname>
+        <param>
+          <type><ref refid="classvlkx_1_1_multi_image_tracker" kindref="compound">MultiImageTracker</ref> &amp;</type>
+          <declname>tracker</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>image</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="82" column="14" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" bodystart="82" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="structvlkx_1_1_attachment_1a31fd8620c090e29bbf30282d88aca3c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structvlkx_1_1_attachment_config" kindref="compound">AttachmentConfig</ref></type>
+        <definition>AttachmentConfig vlkx::Attachment::makeConfig</definition>
+        <argsstring>()</argsstring>
+        <name>makeConfig</name>
+        <qualifiedname>vlkx::Attachment::makeConfig</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="86" column="26" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" bodystart="86" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A lighter version of the <ref refid="structvlkx_1_1_attachment" kindref="compound">Attachment</ref>, used primarily in the On-Screen Pass Manager. </para>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="78" column="5" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" bodystart="78" bodyend="90"/>
+    <listofallmembers>
+      <member refid="structvlkx_1_1_attachment_1aee1dad9747c17453d542f7eb424ed1a8" prot="public" virt="non-virtual"><scope>vlkx::Attachment</scope><name>add</name></member>
+      <member refid="structvlkx_1_1_attachment_1ada5d98246548d087fd936b4a1f47f1c0" prot="public" virt="non-virtual"><scope>vlkx::Attachment</scope><name>Attachment</name></member>
+      <member refid="structvlkx_1_1_attachment_1a0aa726278b173d415f71d087dbcf1e20" prot="public" virt="non-virtual"><scope>vlkx::Attachment</scope><name>index</name></member>
+      <member refid="structvlkx_1_1_attachment_1a31fd8620c090e29bbf30282d88aca3c0" prot="public" virt="non-virtual"><scope>vlkx::Attachment</scope><name>makeConfig</name></member>
+      <member refid="structvlkx_1_1_attachment_1ad7949cd696c2ade220c75916b91ab184" prot="public" virt="non-virtual"><scope>vlkx::Attachment</scope><name>name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

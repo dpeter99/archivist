@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_render_command" kind="class" language="C++" prot="public">
+    <compoundname>vlkx::RenderCommand</compoundname>
+    <basecompoundref refid="classvlkx_1_1_command_buffer" prot="public" virt="non-virtual">vlkx::CommandBuffer</basecompoundref>
+    <includes refid="_commands_8h" local="no">Commands.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classvlkx_1_1_render_command_1a034e5a7c839967dab511e39f8ebc5f28" prot="public" static="no">
+        <type>std::function&lt; void(const VkCommandBuffer &amp;commands, uint32_t framebuffer)&gt;</type>
+        <definition>using vlkx::RenderCommand::Command =  std::function&lt;void(const VkCommandBuffer&amp; commands, uint32_t framebuffer)&gt;</definition>
+        <argsstring></argsstring>
+        <name>Command</name>
+        <qualifiedname>vlkx::RenderCommand::Command</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="49" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classvlkx_1_1_render_command_1a76562bcc16cd1c839916dd66722e5998" prot="public" static="no">
+        <type>std::function&lt; void(int frame)&gt;</type>
+        <definition>using vlkx::RenderCommand::Update =  std::function&lt;void(int frame)&gt;</definition>
+        <argsstring></argsstring>
+        <name>Update</name>
+        <qualifiedname>vlkx::RenderCommand::Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="50" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvlkx_1_1_render_command_1abc1c2428410385342fde91117b292391" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; VkCommandBuffer &gt;</type>
+        <definition>std::vector&lt;VkCommandBuffer&gt; vlkx::RenderCommand::commands</definition>
+        <argsstring></argsstring>
+        <name>commands</name>
+        <qualifiedname>vlkx::RenderCommand::commands</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="76" column="21" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_render_command_1a13b1ac65d7f71ba9441b28d8f5773e6a" prot="private" static="no" mutable="no">
+        <type>VkSemaphore</type>
+        <definition>VkSemaphore vlkx::RenderCommand::newImageSem</definition>
+        <argsstring></argsstring>
+        <name>newImageSem</name>
+        <qualifiedname>vlkx::RenderCommand::newImageSem</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="78" column="21" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_render_command_1aab4779ee4ed556d6d91a95f80ffde411" prot="private" static="no" mutable="no">
+        <type>VkSemaphore</type>
+        <definition>VkSemaphore vlkx::RenderCommand::renderDoneSem</definition>
+        <argsstring></argsstring>
+        <name>renderDoneSem</name>
+        <qualifiedname>vlkx::RenderCommand::renderDoneSem</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="80" column="21" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_render_command_1a540ded74e803a2d1aac921f2bf440dda" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; VkFence &gt;</type>
+        <definition>std::vector&lt;VkFence&gt; vlkx::RenderCommand::inFlight</definition>
+        <argsstring></argsstring>
+        <name>inFlight</name>
+        <qualifiedname>vlkx::RenderCommand::inFlight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="82" column="21" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_render_command_1a4ebed3a27d7faaee10c3c5d5fbcfd21a" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t vlkx::RenderCommand::imageIndex</definition>
+        <argsstring></argsstring>
+        <name>imageIndex</name>
+        <qualifiedname>vlkx::RenderCommand::imageIndex</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="85" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_render_command_1a92e3a81557751519ebf17d9b138232d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::RenderCommand::~RenderCommand</definition>
+        <argsstring>() override</argsstring>
+        <name>~RenderCommand</name>
+        <qualifiedname>vlkx::RenderCommand::~RenderCommand</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="52" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="52" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_render_command_1a3aa9039fc97119723172492b9cd935e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::RenderCommand::RenderCommand</definition>
+        <argsstring>(int frames)</argsstring>
+        <name>RenderCommand</name>
+        <qualifiedname>vlkx::RenderCommand::RenderCommand</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>frames</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="62" column="9" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Commands.cpp" bodystart="80" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_render_command_1abb281128d8fbef931af839d8da23070b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::RenderCommand::RenderCommand</definition>
+        <argsstring>(const RenderCommand &amp;)=delete</argsstring>
+        <name>RenderCommand</name>
+        <qualifiedname>vlkx::RenderCommand::RenderCommand</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_render_command" kindref="compound">RenderCommand</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="64" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_render_command_1a51b9a3e6f0721fb1be2c25c2f9f9f22a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkx_1_1_render_command" kindref="compound">RenderCommand</ref> &amp;</type>
+        <definition>RenderCommand &amp; vlkx::RenderCommand::operator=</definition>
+        <argsstring>(const RenderCommand &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>vlkx::RenderCommand::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_render_command" kindref="compound">RenderCommand</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="65" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_render_command_1a4c8f5635011dc7b81c5fd2208c7020de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t vlkx::RenderCommand::getFrame</definition>
+        <argsstring>()</argsstring>
+        <name>getFrame</name>
+        <qualifiedname>vlkx::RenderCommand::getFrame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="67" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_render_command_1aab606c788bd7da1f4b253e8a4f166c3d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::RenderCommand::nextFrame</definition>
+        <argsstring>()</argsstring>
+        <name>nextFrame</name>
+        <qualifiedname>vlkx::RenderCommand::nextFrame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="69" column="14" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_render_command_1ab67b33b39ff4ebd42ff6c179899bc8ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; VkResult &gt;</type>
+        <definition>std::optional&lt; VkResult &gt; vlkx::RenderCommand::execute</definition>
+        <argsstring>(int frame, const VkSwapchainKHR &amp;swapchain, const Update &amp;update, const Command &amp;cmd)</argsstring>
+        <name>execute</name>
+        <qualifiedname>vlkx::RenderCommand::execute</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type>const VkSwapchainKHR &amp;</type>
+          <declname>swapchain</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_render_command_1a76562bcc16cd1c839916dd66722e5998" kindref="member">Update</ref> &amp;</type>
+          <declname>update</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_render_command_1a034e5a7c839967dab511e39f8ebc5f28" kindref="member">Command</ref> &amp;</type>
+          <declname>cmd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="71" column="23" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Commands.cpp" bodystart="105" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_render_command_1ae15509ece3fec404d3117ffa13a7498d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; VkResult &gt;</type>
+        <definition>std::optional&lt; VkResult &gt; vlkx::RenderCommand::executeSimple</definition>
+        <argsstring>(int frame, const Update &amp;update, const Command &amp;cmd)</argsstring>
+        <name>executeSimple</name>
+        <qualifiedname>vlkx::RenderCommand::executeSimple</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_render_command_1a76562bcc16cd1c839916dd66722e5998" kindref="member">Update</ref> &amp;</type>
+          <declname>update</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_render_command_1a034e5a7c839967dab511e39f8ebc5f28" kindref="member">Command</ref> &amp;</type>
+          <declname>cmd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="73" column="23" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Commands.cpp" bodystart="151" bodyend="176"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>vlkx::CommandBuffer</label>
+        <link refid="classvlkx_1_1_command_buffer"/>
+      </node>
+      <node id="1">
+        <label>vlkx::RenderCommand</label>
+        <link refid="classvlkx_1_1_render_command"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>QueueFamilies</label>
+        <link refid="struct_queue_families"/>
+      </node>
+      <node id="4">
+        <label>SwapChainMeta</label>
+        <link refid="struct_swap_chain_meta"/>
+      </node>
+      <node id="3">
+        <label>VulkanDevice</label>
+        <link refid="class_vulkan_device"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>swapChain</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>queueData</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vlkx::CommandBuffer</label>
+        <link refid="classvlkx_1_1_command_buffer"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>dev</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>vlkx::RenderCommand</label>
+        <link refid="classvlkx_1_1_render_command"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="47" column="5" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="47" bodyend="86"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_render_command_1a034e5a7c839967dab511e39f8ebc5f28" prot="public" virt="non-virtual"><scope>vlkx::RenderCommand</scope><name>Command</name></member>
+      <member refid="classvlkx_1_1_command_buffer_1a44d89415c68f53839bed9a500e9e9c28" prot="public" virt="non-virtual"><scope>vlkx::RenderCommand</scope><name>CommandBuffer</name></member>
+      <member refid="classvlkx_1_1_command_buffer_1a31dd9faba1742793714a6cfb85dadea9" prot="protected" virt="non-virtual"><scope>vlkx::RenderCommand</scope><name>CommandBuffer</name></member>
+      <member refid="classvlkx_1_1_render_command_1abc1c2428410385342fde91117b292391" prot="private" virt="non-virtual"><scope>vlkx::RenderCommand</scope><name>commands</name></member>
+      <member refid="classvlkx_1_1_command_buffer_1a913b667da1ec1e3bb83753ed30c9cf9a" prot="protected" virt="non-virtual"><scope>vlkx::RenderCommand</scope><name>dev</name></member>
+      <member refid="classvlkx_1_1_render_command_1ab67b33b39ff4ebd42ff6c179899bc8ad" prot="public" virt="non-virtual"><scope>vlkx::RenderCommand</scope><name>execute</name></member>
+      <member refid="classvlkx_1_1_render_command_1ae15509ece3fec404d3117ffa13a7498d" prot="public" virt="non-virtual"><scope>vlkx::RenderCommand</scope><name>executeSimple</name></member>
+      <member refid="classvlkx_1_1_render_command_1a4c8f5635011dc7b81c5fd2208c7020de" prot="public" virt="non-virtual"><scope>vlkx::RenderCommand</scope><name>getFrame</name></member>
+      <member refid="classvlkx_1_1_render_command_1a4ebed3a27d7faaee10c3c5d5fbcfd21a" prot="private" virt="non-virtual"><scope>vlkx::RenderCommand</scope><name>imageIndex</name></member>
+      <member refid="classvlkx_1_1_render_command_1a540ded74e803a2d1aac921f2bf440dda" prot="private" virt="non-virtual"><scope>vlkx::RenderCommand</scope><name>inFlight</name></member>
+      <member refid="classvlkx_1_1_render_command_1a13b1ac65d7f71ba9441b28d8f5773e6a" prot="private" virt="non-virtual"><scope>vlkx::RenderCommand</scope><name>newImageSem</name></member>
+      <member refid="classvlkx_1_1_render_command_1aab606c788bd7da1f4b253e8a4f166c3d" prot="public" virt="non-virtual"><scope>vlkx::RenderCommand</scope><name>nextFrame</name></member>
+      <member refid="classvlkx_1_1_render_command_1a51b9a3e6f0721fb1be2c25c2f9f9f22a" prot="public" virt="non-virtual"><scope>vlkx::RenderCommand</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_command_buffer_1a5d1e3c8f4e1125c23a7c6b0308bc0ccd" prot="public" virt="non-virtual" ambiguityscope="vlkx::CommandBuffer::"><scope>vlkx::RenderCommand</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_render_command_1a3aa9039fc97119723172492b9cd935e7" prot="public" virt="non-virtual"><scope>vlkx::RenderCommand</scope><name>RenderCommand</name></member>
+      <member refid="classvlkx_1_1_render_command_1abb281128d8fbef931af839d8da23070b" prot="public" virt="non-virtual"><scope>vlkx::RenderCommand</scope><name>RenderCommand</name></member>
+      <member refid="classvlkx_1_1_render_command_1aab4779ee4ed556d6d91a95f80ffde411" prot="private" virt="non-virtual"><scope>vlkx::RenderCommand</scope><name>renderDoneSem</name></member>
+      <member refid="classvlkx_1_1_command_buffer_1a9431b9fa33c651adb2dd8752d054f66a" prot="protected" virt="non-virtual"><scope>vlkx::RenderCommand</scope><name>setPool</name></member>
+      <member refid="classvlkx_1_1_render_command_1a76562bcc16cd1c839916dd66722e5998" prot="public" virt="non-virtual"><scope>vlkx::RenderCommand</scope><name>Update</name></member>
+      <member refid="classvlkx_1_1_command_buffer_1aff399355ff561d9db85e3363188a51f3" prot="public" virt="virtual"><scope>vlkx::RenderCommand</scope><name>~CommandBuffer</name></member>
+      <member refid="classvlkx_1_1_render_command_1a92e3a81557751519ebf17d9b138232d7" prot="public" virt="non-virtual"><scope>vlkx::RenderCommand</scope><name>~RenderCommand</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

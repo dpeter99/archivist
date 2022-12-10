@@ -3,6 +3,10 @@ import * as path from "https://deno.land/std/path/mod.ts";
 import {Content} from "../Content.ts";
 import {SimpleModule} from "../Module/SimpleModule.ts";
 import {Archivist, archivistInst} from "../Archivist.ts";
+import {models} from "https://esm.sh/v99/entities@3.0.1/deno/lib/maps/entities.json.js";
+import {MarkdownRender} from "../Modules/MarkdownRender.ts";
+import {IModule} from "../Module/IModule.ts";
+import {Mark} from "https://deno.land/std@0.134.0/encoding/_yaml/mark.ts";
 
 export class ArticleHelper {
     private file: string;
@@ -92,4 +96,14 @@ export class ArticleHelper {
     public getRootURL(): string | undefined{
         return archivistInst.outputURL
     }
+
+    public md(text:string){
+        if(text === undefined)
+            return "";
+        return this.module.pipeline.modules.find<MarkdownRender>(isMarkdownRender)?.markdownIt.render(text) ?? text;
+    }
+}
+
+function isMarkdownRender(animal: IModule): animal is MarkdownRender {
+    return animal instanceof MarkdownRender
 }

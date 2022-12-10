@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_catch_1_1_run_tests" kind="struct" language="C++" prot="public">
+    <compoundname>Catch::RunTests</compoundname>
+    <includes refid="catch_8hpp" local="no">catch.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="struct_catch_1_1_run_tests_1ab56bd851b1dd085869992d1a9d73dc5d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>InWhatOrder</name>
+        <qualifiedname>Catch::RunTests::InWhatOrder</qualifiedname>
+        <enumvalue id="struct_catch_1_1_run_tests_1ab56bd851b1dd085869992d1a9d73dc5da732a98670b4661d80d8c392784a14f09" prot="public">
+          <name>InDeclarationOrder</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_catch_1_1_run_tests_1ab56bd851b1dd085869992d1a9d73dc5da8c62a42e94d867c708b421322b1c386f" prot="public">
+          <name>InLexicographicalOrder</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_catch_1_1_run_tests_1ab56bd851b1dd085869992d1a9d73dc5da262441c5b5391b628ca6930c3ba028a5" prot="public">
+          <name>InRandomOrder</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4493" column="19" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4493" bodyend="4497"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4493" column="5" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4493" bodyend="4497"/>
+    <listofallmembers>
+      <member refid="struct_catch_1_1_run_tests_1ab56bd851b1dd085869992d1a9d73dc5da732a98670b4661d80d8c392784a14f09" prot="public" virt="non-virtual"><scope>Catch::RunTests</scope><name>InDeclarationOrder</name></member>
+      <member refid="struct_catch_1_1_run_tests_1ab56bd851b1dd085869992d1a9d73dc5da8c62a42e94d867c708b421322b1c386f" prot="public" virt="non-virtual"><scope>Catch::RunTests</scope><name>InLexicographicalOrder</name></member>
+      <member refid="struct_catch_1_1_run_tests_1ab56bd851b1dd085869992d1a9d73dc5da262441c5b5391b628ca6930c3ba028a5" prot="public" virt="non-virtual"><scope>Catch::RunTests</scope><name>InRandomOrder</name></member>
+      <member refid="struct_catch_1_1_run_tests_1ab56bd851b1dd085869992d1a9d73dc5d" prot="public" virt="non-virtual"><scope>Catch::RunTests</scope><name>InWhatOrder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

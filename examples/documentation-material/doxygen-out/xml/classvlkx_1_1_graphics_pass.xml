@@ -1,0 +1,578 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_graphics_pass" kind="class" language="C++" prot="public">
+    <compoundname>vlkx::GraphicsPass</compoundname>
+    <basecompoundref refid="classvlkx_1_1_common_pass" prot="public" virt="non-virtual">vlkx::CommonPass</basecompoundref>
+    <includes refid="_g_p_u_pass_8h" local="no">GPUPass.h</includes>
+    <innerclass refid="structvlkx_1_1_graphics_pass_1_1_attachment_meta" prot="private">vlkx::GraphicsPass::AttachmentMeta</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classvlkx_1_1_graphics_pass_1a87376e32a032184080c13dce15655dbc" prot="public" static="no">
+        <type>std::function&lt; int(int pass)&gt;</type>
+        <definition>using vlkx::GraphicsPass::LocationGetter =  std::function&lt;int(int pass)&gt;</definition>
+        <argsstring></argsstring>
+        <name>LocationGetter</name>
+        <qualifiedname>vlkx::GraphicsPass::LocationGetter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="80" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvlkx_1_1_graphics_pass_1a85b94c2a40bdff3b6be15b13d9322972" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, AttachmentMeta &gt;</type>
+        <definition>std::map&lt;std::string, AttachmentMeta&gt; vlkx::GraphicsPass::metas</definition>
+        <argsstring></argsstring>
+        <name>metas</name>
+        <qualifiedname>vlkx::GraphicsPass::metas</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="180" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_graphics_pass_1aab32940613c2aec3da2b71b2dc7ce148" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classvlkx_1_1_render_pass_builder" kindref="compound">vlkx::RenderPassBuilder</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;vlkx::RenderPassBuilder&gt; vlkx::GraphicsPass::builder</definition>
+        <argsstring></argsstring>
+        <name>builder</name>
+        <qualifiedname>vlkx::GraphicsPass::builder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="181" column="25" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_graphics_pass_1a2e1dee7da792df7b2f7ff2dbf5c9f118" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::GraphicsPass::GraphicsPass</definition>
+        <argsstring>(int passes)</argsstring>
+        <name>GraphicsPass</name>
+        <qualifiedname>vlkx::GraphicsPass::GraphicsPass</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>passes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="82" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_graphics_pass_1a5887519b0e9b87745f52667d19cf60e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::GraphicsPass::GraphicsPass</definition>
+        <argsstring>(const GraphicsPass &amp;)=delete</argsstring>
+        <name>GraphicsPass</name>
+        <qualifiedname>vlkx::GraphicsPass::GraphicsPass</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_graphics_pass" kindref="compound">GraphicsPass</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="84" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_graphics_pass_1a90a6e82d4633e0fa1114185a851825f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkx_1_1_graphics_pass" kindref="compound">GraphicsPass</ref> &amp;</type>
+        <definition>GraphicsPass &amp; vlkx::GraphicsPass::operator=</definition>
+        <argsstring>(const GraphicsPass &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>vlkx::GraphicsPass::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_graphics_pass" kindref="compound">GraphicsPass</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="85" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_graphics_pass_1aae7c60de3b7089b532efb235a128a1ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vlkx::GraphicsPass::add</definition>
+        <argsstring>(const std::string &amp;name, UsageTracker &amp;&amp;history, LocationGetter &amp;&amp;getter, const std::optional&lt; RenderPassBuilder::Attachment::OpsType &gt; ops=std::nullopt)</argsstring>
+        <name>add</name>
+        <qualifiedname>vlkx::GraphicsPass::add</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classvlkx_1_1_usage_tracker" kindref="compound">UsageTracker</ref> &amp;&amp;</type>
+          <declname>history</declname>
+        </param>
+        <param>
+          <type><ref refid="classvlkx_1_1_graphics_pass_1a87376e32a032184080c13dce15655dbc" kindref="member">LocationGetter</ref> &amp;&amp;</type>
+          <declname>getter</declname>
+        </param>
+        <param>
+          <type>const std::optional&lt; <ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1a47807f6875527fa0d044a910cfb70a4a" kindref="member">RenderPassBuilder::Attachment::OpsType</ref> &gt;</type>
+          <declname>ops</declname>
+          <defval>std::nullopt</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add an image reference that is used in this render pass. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the image used </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>history</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the usage history of the image, for tracking purposes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>getter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a function to get the location of the image, only if the image is used as a render target. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ops</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>optional; uses the static defaults if not present. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the index into the VkAttachmentDescriptions. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="105" column="13" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="83" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_graphics_pass_1a339caaefb9ec18c17c77d83de4543bca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref></type>
+        <definition>GraphicsPass &amp; vlkx::GraphicsPass::addMultisample</definition>
+        <argsstring>(const std::string &amp;source, const std::string &amp;dest, int pass)</argsstring>
+        <name>addMultisample</name>
+        <qualifiedname>vlkx::GraphicsPass::addMultisample</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="110" column="16" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="112" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_graphics_pass_1ace731c078569ff50a8d980047918b6d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classvlkx_1_1_render_pass_builder" kindref="compound">RenderPassBuilder</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; RenderPassBuilder &gt; vlkx::GraphicsPass::build</definition>
+        <argsstring>(int framebuffers)</argsstring>
+        <name>build</name>
+        <qualifiedname>vlkx::GraphicsPass::build</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>framebuffers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="113" column="25" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="238" bodyend="246"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classvlkx_1_1_graphics_pass_1aff29eba83630fe5f624ea4732a5a65a3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1a47807f6875527fa0d044a910cfb70a4a" kindref="member">RenderPassBuilder::Attachment::OpsType</ref></type>
+        <definition>static RenderPassBuilder::Attachment::OpsType vlkx::GraphicsPass::getDefaultOps</definition>
+        <argsstring>()</argsstring>
+        <name>getDefaultOps</name>
+        <qualifiedname>vlkx::GraphicsPass::getDefaultOps</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="88" column="55" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="88" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_graphics_pass_1a2b9628622dcde0cd729ef56d5029d4cc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1a47807f6875527fa0d044a910cfb70a4a" kindref="member">RenderPassBuilder::Attachment::OpsType</ref></type>
+        <definition>static RenderPassBuilder::Attachment::OpsType vlkx::GraphicsPass::getStencilOps</definition>
+        <argsstring>()</argsstring>
+        <name>getStencilOps</name>
+        <qualifiedname>vlkx::GraphicsPass::getStencilOps</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="93" column="55" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="93" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classvlkx_1_1_graphics_pass_1a1a4097e6b96b57972ad318024170c781" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::GraphicsPass::setAttachments</definition>
+        <argsstring>()</argsstring>
+        <name>setAttachments</name>
+        <qualifiedname>vlkx::GraphicsPass::setAttachments</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="123" column="14" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="140" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_graphics_pass_1a95bd4e5fc89beb7e6c830d5220cd0738" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::GraphicsPass::setSubpasses</definition>
+        <argsstring>()</argsstring>
+        <name>setSubpasses</name>
+        <qualifiedname>vlkx::GraphicsPass::setSubpasses</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="124" column="14" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="148" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_graphics_pass_1aba01d54fd3de00b1dd2119edcb725881" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::GraphicsPass::setDependencies</definition>
+        <argsstring>()</argsstring>
+        <name>setDependencies</name>
+        <qualifiedname>vlkx::GraphicsPass::setDependencies</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="125" column="14" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="202" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_graphics_pass_1ab5abeb0d398b3ef4da6b04ad4ccf1c01" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; int &gt;</type>
+        <definition>std::optional&lt; int &gt; vlkx::GraphicsPass::getFirstRenderTarget</definition>
+        <argsstring>(const UsageTracker &amp;history) const</argsstring>
+        <name>getFirstRenderTarget</name>
+        <qualifiedname>vlkx::GraphicsPass::getFirstRenderTarget</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_usage_tracker" kindref="compound">UsageTracker</ref> &amp;</type>
+          <declname>history</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Find the first subpass where the given image is used as a render target. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>history</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the usage history of the image; what it was used at at each subpass. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>nullopt if the image was not used as a render target, the index of the subpass where it was, if not. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="132" column="23" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="248" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_graphics_pass_1a79d2fe7721dc7018b4d7320afacb4589" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1a47807f6875527fa0d044a910cfb70a4a" kindref="member">RenderPassBuilder::Attachment::OpsType</ref></type>
+        <definition>RenderPassBuilder::Attachment::OpsType vlkx::GraphicsPass::getOps</definition>
+        <argsstring>(const std::string &amp;name, const UsageTracker &amp;history, const std::optional&lt; RenderPassBuilder::Attachment::OpsType &gt; &amp;userOps) const</argsstring>
+        <name>getOps</name>
+        <qualifiedname>vlkx::GraphicsPass::getOps</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_usage_tracker" kindref="compound">UsageTracker</ref> &amp;</type>
+          <declname>history</declname>
+        </param>
+        <param>
+          <type>const std::optional&lt; <ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1a47807f6875527fa0d044a910cfb70a4a" kindref="member">RenderPassBuilder::Attachment::OpsType</ref> &gt; &amp;</type>
+          <declname>userOps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the operations that should be used for the given image attachment. If the user specified ops, it will be checekd against the history. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the image to use as the attachment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>history</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the usage history of the attachment, for internal checks </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userOps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>operations to use for the image, as an optional override. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the ColorOps to use for the given attachment. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="142" column="48" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="259" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_graphics_pass_1a211dd8f7c159290bacd930ccff42e121" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkx_1_1_image_usage_1a3d92ffb531311014d34527a7096adc40" kindref="member">ImageUsage::Type</ref></type>
+        <definition>ImageUsage::Type vlkx::GraphicsPass::getUsageType</definition>
+        <argsstring>(const std::string &amp;name, const UsageTracker &amp;history) const</argsstring>
+        <name>getUsageType</name>
+        <qualifiedname>vlkx::GraphicsPass::getUsageType</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_usage_tracker" kindref="compound">UsageTracker</ref> &amp;</type>
+          <declname>history</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the usage type of the image. Assumption: an image is only ever used as a color OR depth stencil. Never both. Assumption: Multisample == RenderTarget <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the image to check </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>history</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the history of the image&apos;s usages in the GPU. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>whether the image is a RenderTarget or a DepthStencil buffer. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="152" column="26" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="282" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_graphics_pass_1a3f7be6c3111d05fc8282870eb0ab9e48" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool vlkx::GraphicsPass::verifyImageUsage</definition>
+        <argsstring>(const UsageTracker &amp;history, int subpass, ImageUsage::Type type) const</argsstring>
+        <name>verifyImageUsage</name>
+        <qualifiedname>vlkx::GraphicsPass::verifyImageUsage</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_usage_tracker" kindref="compound">UsageTracker</ref> &amp;</type>
+          <declname>history</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>subpass</declname>
+        </param>
+        <param>
+          <type><ref refid="classvlkx_1_1_image_usage_1a3d92ffb531311014d34527a7096adc40" kindref="member">ImageUsage::Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ensure that the image is used as type at subpass in its&apos; history. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="157" column="14" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="305" bodyend="308"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_graphics_pass_1a1473bb27744fd73ba3a48bf49c123dab" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool vlkx::GraphicsPass::isVirtual</definition>
+        <argsstring>(int subpass) const</argsstring>
+        <name>isVirtual</name>
+        <qualifiedname>vlkx::GraphicsPass::isVirtual</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>subpass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return whether the subpass is virtual. For a Render Pass, virtual means it is a preprocessing step. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="163" column="14" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="163" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_graphics_pass_1a1135f0f9eca984b6549949d113821586" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t vlkx::GraphicsPass::checkSubpass</definition>
+        <argsstring>(int subpass) const</argsstring>
+        <name>checkSubpass</name>
+        <qualifiedname>vlkx::GraphicsPass::checkSubpass</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>subpass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the subpass index; for virtual passes, it uses an EXTERNAL subpass. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="170" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="170" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_graphics_pass_1a292e3a5de4b84b6ecbb7e5945eb7dade" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::GraphicsPass::verifyHistory</definition>
+        <argsstring>(const std::string &amp;image, const UsageTracker &amp;history) const</argsstring>
+        <name>verifyHistory</name>
+        <qualifiedname>vlkx::GraphicsPass::verifyHistory</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_usage_tracker" kindref="compound">UsageTracker</ref> &amp;</type>
+          <declname>history</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ensure that the image&apos;s usages are compatible with a render pass. For example, compute shader linear buffers cannot be used as render targets, etc. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="178" column="14" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="310" bodyend="316"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The Common Pass implementation for Graphics passes; that is, render passes that output to color buffers for presentation to the screen, or to be used as textures in such. The instance of the <ref refid="classvlkx_1_1_graphics_pass" kindref="compound">GraphicsPass</ref> can be stored and reused to create multiple RenderPassBuilders. In this way it is essentially a RenderPassBuilderFactory. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>vlkx::CommonPass</label>
+        <link refid="classvlkx_1_1_common_pass"/>
+      </node>
+      <node id="1">
+        <label>vlkx::GraphicsPass</label>
+        <link refid="classvlkx_1_1_graphics_pass"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>vlkx::CommonPass</label>
+        <link refid="classvlkx_1_1_common_pass"/>
+      </node>
+      <node id="1">
+        <label>vlkx::GraphicsPass</label>
+        <link refid="classvlkx_1_1_graphics_pass"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="77" column="5" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="77" bodyend="183"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_graphics_pass_1aae7c60de3b7089b532efb235a128a1ef" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>add</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1a339caaefb9ec18c17c77d83de4543bca" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>addMultisample</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a363fdb3c8cd8a0be814d1e2cc4e86188" prot="protected" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>addUsage</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1ace731c078569ff50a8d980047918b6d0" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>build</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1aab32940613c2aec3da2b71b2dc7ce148" prot="private" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>builder</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a9572aa2ed2e03b85484940ebf584a993" prot="protected" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>checkForSync</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1a1135f0f9eca984b6549949d113821586" prot="private" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>checkSubpass</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a2f96fb205a65ec563552172cba691771" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>CommonPass</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a1b9262c051f528437e8f2bade6513003" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>CommonPass</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1aff29eba83630fe5f624ea4732a5a65a3" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>getDefaultOps</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a27b43bff62d86ad2d8b1a38ee5246ef5" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>getFinalLayout</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1ab5abeb0d398b3ef4da6b04ad4ccf1c01" prot="private" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>getFirstRenderTarget</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a28959152e1f9a81700128fcf8570406a" prot="protected" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>getHistory</name></member>
+      <member refid="classvlkx_1_1_common_pass_1ab40583b5b09c3ae7cc3e84fab1ad3f8f" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>getInitialLayout</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1a79d2fe7721dc7018b4d7320afacb4589" prot="private" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>getOps</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1a2b9628622dcde0cd729ef56d5029d4cc" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>getStencilOps</name></member>
+      <member refid="classvlkx_1_1_common_pass_1ae1ddc45b5a13dcaeefb9fd90e1a01286" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>getSubpassLayout</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a104cdcade852ddfc74291114405ba66f" prot="protected" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>getUsage</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1a211dd8f7c159290bacd930ccff42e121" prot="private" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>getUsageType</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a44de9972c147e804118ca37681b7294c" prot="protected" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>getVirtualFinal</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a9d60fbdc2f45846f581db953ec819ca6" prot="protected" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>getVirtualInitial</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1a2e1dee7da792df7b2f7ff2dbf5c9f118" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>GraphicsPass</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1a5887519b0e9b87745f52667d19cf60e0" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>GraphicsPass</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1a1473bb27744fd73ba3a48bf49c123dab" prot="private" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>isVirtual</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1a87376e32a032184080c13dce15655dbc" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>LocationGetter</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1a85b94c2a40bdff3b6be15b13d9322972" prot="private" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>metas</name></member>
+      <member refid="classvlkx_1_1_common_pass_1aa01ec8a7f632c2cff2e895cba1381095" prot="protected" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>numPasses</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1a90a6e82d4633e0fa1114185a851825f3" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a1a4f5ebf18a784a25dbbc466dd07d379" prot="public" virt="non-virtual" ambiguityscope="vlkx::CommonPass::"><scope>vlkx::GraphicsPass</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1a1a4097e6b96b57972ad318024170c781" prot="private" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>setAttachments</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1aba01d54fd3de00b1dd2119edcb725881" prot="private" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>setDependencies</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1a95bd4e5fc89beb7e6c830d5220cd0738" prot="private" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>setSubpasses</name></member>
+      <member refid="classvlkx_1_1_common_pass_1afd8a13333e01d84ef27def5865537b57" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>update</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a25f432298ae391eb70749f70545e0210" prot="protected" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>usageHistory</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a14d528c3da5a00363d332c8c6f3752bc" prot="protected" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>validate</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1a292e3a5de4b84b6ecbb7e5945eb7dade" prot="private" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>verifyHistory</name></member>
+      <member refid="classvlkx_1_1_graphics_pass_1a3f7be6c3111d05fc8282870eb0ab9e48" prot="private" virt="non-virtual"><scope>vlkx::GraphicsPass</scope><name>verifyImageUsage</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a2ec068fa399c81062e5127c0ea219776" prot="public" virt="virtual"><scope>vlkx::GraphicsPass</scope><name>~CommonPass</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

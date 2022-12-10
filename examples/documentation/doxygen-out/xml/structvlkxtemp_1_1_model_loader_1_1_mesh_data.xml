@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structvlkxtemp_1_1_model_loader_1_1_mesh_data" kind="struct" language="C++" prot="public">
+    <compoundname>vlkxtemp::ModelLoader::MeshData</compoundname>
+    <includes refid="_loader_8h" local="no">Loader.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1a66f8cde06c1c52ac4f652ba4a204f7f3" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_geo_1_1_vertex_all" kindref="compound">Geo::VertexAll</ref> &gt;</type>
+        <definition>std::vector&lt;Geo::VertexAll&gt; vlkxtemp::ModelLoader::MeshData::vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <qualifiedname>vlkxtemp::ModelLoader::MeshData::vertices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Loader.h" line="41" column="25" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Loader.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1a26b94bb2ec1da5a698308f09782037b3" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; uint32_t &gt;</type>
+        <definition>std::vector&lt;uint32_t&gt; vlkxtemp::ModelLoader::MeshData::indices</definition>
+        <argsstring></argsstring>
+        <name>indices</name>
+        <qualifiedname>vlkxtemp::ModelLoader::MeshData::indices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Loader.h" line="42" column="25" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Loader.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1abf37abca41f20e3b73fc81993a0d9c9a" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structvlkxtemp_1_1_model_loader_1_1_texture_data" kindref="compound">TextureData</ref> &gt;</type>
+        <definition>std::vector&lt;TextureData&gt; vlkxtemp::ModelLoader::MeshData::textures</definition>
+        <argsstring></argsstring>
+        <name>textures</name>
+        <qualifiedname>vlkxtemp::ModelLoader::MeshData::textures</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Loader.h" line="43" column="25" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Loader.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1aad3509d5353d65b54d255dfe1a43e90a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkxtemp::ModelLoader::MeshData::MeshData</definition>
+        <argsstring>()=default</argsstring>
+        <name>MeshData</name>
+        <qualifiedname>vlkxtemp::ModelLoader::MeshData::MeshData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Loader.h" line="37" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1a28e4e1c3d30b9607f8f1bd4844ffb5d2" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>vlkxtemp::ModelLoader::MeshData::MeshData</definition>
+        <argsstring>(MeshData &amp;&amp;) noexcept=default</argsstring>
+        <name>MeshData</name>
+        <qualifiedname>vlkxtemp::ModelLoader::MeshData::MeshData</qualifiedname>
+        <param>
+          <type><ref refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data" kindref="compound">MeshData</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Loader.h" line="38" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1a62e68837d5b4cd5610d9721a68f620b6" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data" kindref="compound">MeshData</ref> &amp;</type>
+        <definition>MeshData &amp; vlkxtemp::ModelLoader::MeshData::operator=</definition>
+        <argsstring>(MeshData &amp;&amp;) noexcept=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>vlkxtemp::ModelLoader::MeshData::operator=</qualifiedname>
+        <param>
+          <type><ref refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data" kindref="compound">MeshData</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Loader.h" line="39" column="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/temp/model/Loader.h" line="36" column="9" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Loader.h" bodystart="36" bodyend="44"/>
+    <listofallmembers>
+      <member refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1a26b94bb2ec1da5a698308f09782037b3" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelLoader::MeshData</scope><name>indices</name></member>
+      <member refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1aad3509d5353d65b54d255dfe1a43e90a" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelLoader::MeshData</scope><name>MeshData</name></member>
+      <member refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1a28e4e1c3d30b9607f8f1bd4844ffb5d2" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelLoader::MeshData</scope><name>MeshData</name></member>
+      <member refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1a62e68837d5b4cd5610d9721a68f620b6" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelLoader::MeshData</scope><name>operator=</name></member>
+      <member refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1abf37abca41f20e3b73fc81993a0d9c9a" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelLoader::MeshData</scope><name>textures</name></member>
+      <member refid="structvlkxtemp_1_1_model_loader_1_1_mesh_data_1a66f8cde06c1c52ac4f652ba4a204f7f3" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelLoader::MeshData</scope><name>vertices</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

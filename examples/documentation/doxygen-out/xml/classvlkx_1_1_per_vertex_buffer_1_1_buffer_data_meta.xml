@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>vlkx::PerVertexBuffer::BufferDataMeta</compoundname>
+    <derivedcompoundref refid="classvlkx_1_1_per_vertex_buffer_1_1_no_index_buffer_meta" prot="public" virt="non-virtual">vlkx::PerVertexBuffer::NoIndexBufferMeta</derivedcompoundref>
+    <derivedcompoundref refid="classvlkx_1_1_per_vertex_buffer_1_1_no_share_meta" prot="public" virt="non-virtual">vlkx::PerVertexBuffer::NoShareMeta</derivedcompoundref>
+    <derivedcompoundref refid="classvlkx_1_1_per_vertex_buffer_1_1_shared_index_meta" prot="public" virt="non-virtual">vlkx::PerVertexBuffer::SharedIndexMeta</derivedcompoundref>
+    <includes refid="_buffer_8h" local="no">Buffer.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta_1ab87f45d5f8c1e9e552b31affa690428d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual vlkx::PerVertexBuffer::BufferDataMeta::~BufferDataMeta</definition>
+        <argsstring>()=default</argsstring>
+        <name>~BufferDataMeta</name>
+        <qualifiedname>vlkx::PerVertexBuffer::BufferDataMeta::~BufferDataMeta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="170" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta_1a9bfe5d7b1374f46259825fc4786bd03a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="structvlkx_1_1_buffer_1_1_bulk_copy_meta" kindref="compound">BulkCopyMeta</ref></type>
+        <definition>virtual BulkCopyMeta vlkx::PerVertexBuffer::BufferDataMeta::prepareCopy</definition>
+        <argsstring>(PerVertexBuffer *buffer) const =0</argsstring>
+        <name>prepareCopy</name>
+        <qualifiedname>vlkx::PerVertexBuffer::BufferDataMeta::prepareCopy</qualifiedname>
+        <reimplementedby refid="classvlkx_1_1_per_vertex_buffer_1_1_no_index_buffer_meta_1a20043bf43b895493db4f1b28b01ae616">prepareCopy</reimplementedby>
+        <reimplementedby refid="classvlkx_1_1_per_vertex_buffer_1_1_shared_index_meta_1a78b66a1c0940298d8138c52fb9519e6f">prepareCopy</reimplementedby>
+        <reimplementedby refid="classvlkx_1_1_per_vertex_buffer_1_1_no_share_meta_1ab7125acf0bbbc2114b77fefde6cdfde1">prepareCopy</reimplementedby>
+        <param>
+          <type><ref refid="classvlkx_1_1_per_vertex_buffer" kindref="compound">PerVertexBuffer</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="172" column="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta_1a069ecd344c42d854be14ed4b8112d4ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool vlkx::PerVertexBuffer::BufferDataMeta::hasIndices</definition>
+        <argsstring>() const =0</argsstring>
+        <name>hasIndices</name>
+        <qualifiedname>vlkx::PerVertexBuffer::BufferDataMeta::hasIndices</qualifiedname>
+        <reimplementedby refid="classvlkx_1_1_per_vertex_buffer_1_1_no_index_buffer_meta_1a4e65239e8d6ac202c2176474174f106c">hasIndices</reimplementedby>
+        <reimplementedby refid="classvlkx_1_1_per_vertex_buffer_1_1_shared_index_meta_1a979aa4a533f36e862ee128f2ca3a85c8">hasIndices</reimplementedby>
+        <reimplementedby refid="classvlkx_1_1_per_vertex_buffer_1_1_no_share_meta_1a406e48420305c6edc9f542246830ce4f">hasIndices</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="174" column="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>vlkx::PerVertexBuffer::BufferDataMeta</label>
+        <link refid="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta"/>
+      </node>
+      <node id="2">
+        <label>vlkx::PerVertexBuffer::NoIndexBufferMeta</label>
+        <link refid="classvlkx_1_1_per_vertex_buffer_1_1_no_index_buffer_meta"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>vlkx::PerVertexBuffer::NoShareMeta</label>
+        <link refid="classvlkx_1_1_per_vertex_buffer_1_1_no_share_meta"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>vlkx::PerVertexBuffer::SharedIndexMeta</label>
+        <link refid="classvlkx_1_1_per_vertex_buffer_1_1_shared_index_meta"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="168" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="168" bodyend="175"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta_1a069ecd344c42d854be14ed4b8112d4ba" prot="public" virt="pure-virtual"><scope>vlkx::PerVertexBuffer::BufferDataMeta</scope><name>hasIndices</name></member>
+      <member refid="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta_1a9bfe5d7b1374f46259825fc4786bd03a" prot="public" virt="pure-virtual"><scope>vlkx::PerVertexBuffer::BufferDataMeta</scope><name>prepareCopy</name></member>
+      <member refid="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta_1ab87f45d5f8c1e9e552b31affa690428d" prot="public" virt="virtual"><scope>vlkx::PerVertexBuffer::BufferDataMeta</scope><name>~BufferDataMeta</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

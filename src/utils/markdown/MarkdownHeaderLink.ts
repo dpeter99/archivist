@@ -1,6 +1,5 @@
 import {createToken} from "./MarkdownUtils.ts";
 import {StateCore, Token} from "./markdown.d.ts";
-import {Metadata} from "../../Metadata.ts";
 
 
 type ArrayKey = keyof Array<Token>;

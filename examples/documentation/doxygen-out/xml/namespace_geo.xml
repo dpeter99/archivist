@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="namespace_geo" kind="namespace" language="C++">
+    <compoundname>Geo</compoundname>
+    <innerclass refid="class_geo_1_1_mesh" prot="public">Geo::Mesh</innerclass>
+    <innerclass refid="struct_geo_1_1_uniform_buffer_object" prot="public">Geo::UniformBufferObject</innerclass>
+    <innerclass refid="struct_geo_1_1_vertex_all" prot="public">Geo::VertexAll</innerclass>
+    <innerclass refid="struct_geo_1_1_vertex_color" prot="public">Geo::VertexColor</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_geo_1abc7e7b81f9cebc67c094594693602550" prot="public" static="no" strong="no">
+        <type></type>
+        <name>MeshType</name>
+        <qualifiedname>Geo::MeshType</qualifiedname>
+        <enumvalue id="namespace_geo_1abc7e7b81f9cebc67c094594693602550a01d37c01307fc577ef17af58b922e9ba" prot="public">
+          <name>Triangle</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_geo_1abc7e7b81f9cebc67c094594693602550af445184c507491f6bfc67744dc3002c3" prot="public">
+          <name>Quad</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_geo_1abc7e7b81f9cebc67c094594693602550ab5be39bf2ebfa78a1206936a61b7a647" prot="public">
+          <name>Cube</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_geo_1abc7e7b81f9cebc67c094594693602550a9fd15fd306c8e217c986bde08280e24f" prot="public">
+          <name>Sphere</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" line="16" column="1" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" bodystart="16" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" line="13" column="1"/>
+  </compounddef>
+</doxygen>

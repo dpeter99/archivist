@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_shadow_engine_1_1_s_h_object" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ShadowEngine::SHObject</compoundname>
+    <derivedcompoundref refid="class_shadow_engine_1_1_entity_system_1_1_entity" prot="public" virt="non-virtual">ShadowEngine::EntitySystem::Entity</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_entity_system_1_1_scene" prot="public" virt="non-virtual">ShadowEngine::EntitySystem::Scene</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_module" prot="public" virt="non-virtual">ShadowEngine::Module</derivedcompoundref>
+    <includes refid="_s_h_object_8h" local="no">SHObject.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_s_h_object_1a5244bd8527763320cbef208e3a6e4860" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>API uint64_t</type>
+        <definition>uint64_t ShadowEngine::SHObject::GenerateId</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>GenerateId</name>
+        <qualifiedname>ShadowEngine::SHObject::GenerateId</qualifiedname>
+        <briefdescription>
+<para>Generates a new UID for each call. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the next Unique ID that was just generated </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-reflection/inc/SHObject.h" line="28" column="21" bodyfile="shadow-engine/shadow-reflection/src/SHObject.cpp" bodystart="3" bodyend="6"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_s_h_object_1a3597667efd33b935a89ac11d3b47a215" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const std::string &amp;</type>
+        <definition>virtual const std::string &amp; ShadowEngine::SHObject::GetType</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetType</name>
+        <qualifiedname>ShadowEngine::SHObject::GetType</qualifiedname>
+        <briefdescription>
+<para>Returns the top level class type name of the object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The class Class name as a string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-reflection/inc/SHObject.h" line="35" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const uint64_t</type>
+        <definition>virtual const uint64_t ShadowEngine::SHObject::GetTypeId</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetTypeId</name>
+        <qualifiedname>ShadowEngine::SHObject::GetTypeId</qualifiedname>
+        <briefdescription>
+<para>Gets the top level type ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>UID of the class </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-reflection/inc/SHObject.h" line="40" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ShadowEngine::SHObject::~SHObject</definition>
+        <argsstring>()=default</argsstring>
+        <name>~SHObject</name>
+        <qualifiedname>ShadowEngine::SHObject::~SHObject</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-reflection/inc/SHObject.h" line="42" column="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is the base class for every class in the Engine that uses runtime reflection. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Currently it provides a runtime TypeID and TypeName witch can be accesed as static and as class memebers. The ID is a int type number witch is generated incramently, on the first call to get a type.</para>
+<para>Each class that inherits from this or it&apos;s parent inheris form it must implement the <ref refid="class_shadow_engine_1_1_s_h_object_1a3597667efd33b935a89ac11d3b47a215" kindref="member">SHObject::GetType</ref> and <ref refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" kindref="member">SHObject::GetTypeId</ref> methodes and make it&apos;s own static methodes. To make it easier a standard implementation of these can be used with the <ref refid="_s_h_object_8h_1ab6e37410b4b149b1b5cb3c4bafe8aa53" kindref="member">SHObject_Base()</ref> macro witch implements all of these functions. It uses the typeid().name of the class. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>Camera</label>
+        <link refid="class_camera"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DirectionalLight</label>
+        <link refid="class_directional_light"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>FirstPersonCamera</label>
+        <link refid="class_first_person_camera"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>MeshRenderer</label>
+        <link refid="class_mesh_renderer"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Player</label>
+        <link refid="class_player"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>PointLight</label>
+        <link refid="class_point_light"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ShadowEngine::Debug::DebugModule</label>
+        <link refid="class_shadow_engine_1_1_debug_1_1_debug_module"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ShadowEngine::EntitySystem::Entity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_entity"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>ShadowEngine::EntitySystem::EntitySystem</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_entity_system"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ShadowEngine::EntitySystem::Scene</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_scene"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ShadowEngine::EntitySystem::SceneEntity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>ShadowEngine::Module</label>
+        <link refid="class_shadow_engine_1_1_module"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>ShadowEngine::RendererModule</label>
+        <link refid="class_shadow_engine_1_1_renderer_module"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>ShadowEngine::SDL2Module</label>
+        <link refid="class_shadow_engine_1_1_s_d_l2_module"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object"/>
+      </node>
+      <node id="10">
+        <label>SkySphere</label>
+        <link refid="class_sky_sphere"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>VulkanModule</label>
+        <link refid="class_vulkan_module"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="shadow-engine/shadow-reflection/inc/SHObject.h" line="21" column="1" bodyfile="shadow-engine/shadow-reflection/inc/SHObject.h" bodystart="22" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a5244bd8527763320cbef208e3a6e4860" prot="public" virt="non-virtual"><scope>ShadowEngine::SHObject</scope><name>GenerateId</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a3597667efd33b935a89ac11d3b47a215" prot="public" virt="pure-virtual"><scope>ShadowEngine::SHObject</scope><name>GetType</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" virt="pure-virtual"><scope>ShadowEngine::SHObject</scope><name>GetTypeId</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" virt="virtual"><scope>ShadowEngine::SHObject</scope><name>~SHObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,5 +1,5 @@
 
-//export declare val MarkdownIt{};
+export declare type TemplateFunction = (data:any)=>string;
 
 export declare class StateCore {
     constructor(src: string, md: any, env: any);

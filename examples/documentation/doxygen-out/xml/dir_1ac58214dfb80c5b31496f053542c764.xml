@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_1ac58214dfb80c5b31496f053542c764" kind="dir">
+    <compoundname>shadow-engine/shadow-utility/inc/shadow/util</compoundname>
+    <innerfile refid="_file_8h">File.h</innerfile>
+    <innerfile refid="_ref_counter_8h">RefCounter.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-utility/inc/shadow/util/"/>
+  </compounddef>
+</doxygen>

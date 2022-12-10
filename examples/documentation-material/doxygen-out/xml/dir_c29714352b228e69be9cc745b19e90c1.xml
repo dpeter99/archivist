@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_c29714352b228e69be9cc745b19e90c1" kind="dir">
+    <compoundname>shadow-engine/shadow-renderer/inc/vlkx</compoundname>
+    <innerdir refid="dir_332408286ed7dc0b392691a9eb492f14">shadow-engine/shadow-renderer/inc/vlkx/render</innerdir>
+    <innerdir refid="dir_f33c86364dee5226829de7b73d23be3b">shadow-engine/shadow-renderer/inc/vlkx/vulkan</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/"/>
+  </compounddef>
+</doxygen>

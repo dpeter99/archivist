@@ -1,0 +1,614 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_descriptor_8cpp" kind="file" language="C++">
+    <compoundname>Descriptor.cpp</compoundname>
+    <includes refid="_descriptor_8h" local="yes">vlkx/vulkan/abstraction/Descriptor.h</includes>
+    <includes local="no">vulkan/vulkan.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">map</includes>
+    <incdepgraph>
+      <node id="21">
+        <label>core/Module.h</label>
+        <link refid="_module_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>exports.h</label>
+        <link refid="exports_8h"/>
+      </node>
+      <node id="22">
+        <label>SHObject.h</label>
+        <link refid="_s_h_object_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>temp/model/Loader.h</label>
+        <link refid="_loader_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>vlkx/render/Geometry.h</label>
+        <link refid="_geometry_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>SwapChain.h</label>
+        <link refid="_swap_chain_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>vlkx/vulkan/Tools.h</label>
+        <link refid="_tools_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>vlkx/vulkan/ValidationAndExtension.h</label>
+        <link refid="_validation_and_extension_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>vlkx/vulkan/VulkanDevice.h</label>
+        <link refid="_vulkan_device_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>vlkx/vulkan/VulkanModule.h</label>
+        <link refid="_vulkan_module_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>Buffer.h</label>
+        <link refid="_buffer_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>vlkx/vulkan/abstraction/Commands.h</label>
+        <link refid="_commands_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vlkx/vulkan/abstraction/Descriptor.h</label>
+        <link refid="_descriptor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>vlkx/vulkan/abstraction/Image.h</label>
+        <link refid="_image_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>ImageUsage.h</label>
+        <link refid="_image_usage_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>Queue.h</label>
+        <link refid="_queue_8h"/>
+      </node>
+      <node id="19">
+        <label>vulkan/vk_mem_alloc.h</label>
+        <link refid="vk__mem__alloc_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp</label>
+        <link refid="_descriptor_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>shadow/util/RefCounter.h</label>
+        <link refid="_ref_counter_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>SDL.h</label>
+      </node>
+      <node id="25">
+        <label>SDL_events.h</label>
+      </node>
+      <node id="20">
+        <label>SDL_vulkan.h</label>
+      </node>
+      <node id="32">
+        <label>algorithm</label>
+      </node>
+      <node id="9">
+        <label>array</label>
+      </node>
+      <node id="29">
+        <label>functional</label>
+      </node>
+      <node id="10">
+        <label>glm/glm.hpp</label>
+      </node>
+      <node id="11">
+        <label>glm/gtc/matrix_transform.hpp</label>
+      </node>
+      <node id="14">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>map</label>
+      </node>
+      <node id="26">
+        <label>memory</label>
+      </node>
+      <node id="30">
+        <label>optional</label>
+      </node>
+      <node id="18">
+        <label>set</label>
+      </node>
+      <node id="17">
+        <label>stdexcept</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="23">
+        <label>typeinfo</label>
+      </node>
+      <node id="39">
+        <label>utility</label>
+      </node>
+      <node id="38">
+        <label>variant</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="5">
+        <label>vulkan/vulkan.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_descriptor_8cpp_1a0f9636d5ed9863da230e4d47592f806e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExpectedType</type>
+          </param>
+          <param>
+            <type>typename ActualType</type>
+          </param>
+        </templateparamlist>
+        <type>const ExpectedType *</type>
+        <definition>const ExpectedType * getPtr</definition>
+        <argsstring>(const ActualType *pointer, std::true_type)</argsstring>
+        <name>getPtr</name>
+        <param>
+          <type>const ActualType *</type>
+          <declname>pointer</declname>
+        </param>
+        <param>
+          <type>std::true_type</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp" line="9" column="27" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp" bodystart="9" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="_descriptor_8cpp_1ab24514f0c438ed2a61158afacdf14127" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExpectedType</type>
+          </param>
+          <param>
+            <type>typename ActualType</type>
+          </param>
+        </templateparamlist>
+        <type>const ExpectedType *</type>
+        <definition>const ExpectedType * getPtr</definition>
+        <argsstring>(const ActualType *pointer, std::false_type)</argsstring>
+        <name>getPtr</name>
+        <param>
+          <type>const ActualType *</type>
+          <declname>pointer</declname>
+        </param>
+        <param>
+          <type>std::false_type</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp" line="15" column="27" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_descriptor_8cpp_1a010530a8716cd497bce86974b58a4670" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExpectedType</type>
+          </param>
+          <param>
+            <type>typename ValueType</type>
+          </param>
+        </templateparamlist>
+        <type>const ExpectedType *</type>
+        <definition>const ExpectedType * getPointer</definition>
+        <argsstring>(const std::vector&lt; ValueType &gt; &amp;container)</argsstring>
+        <name>getPointer</name>
+        <param>
+          <type>const std::vector&lt; ValueType &gt; &amp;</type>
+          <declname>container</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp" line="20" column="20" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="_descriptor_8cpp_1a453a934a3705a2cd76f109f42d0164ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkDescriptorPool</type>
+        <definition>VkDescriptorPool createPool</definition>
+        <argsstring>(std::vector&lt; Descriptor::Meta &gt; metas)</argsstring>
+        <name>createPool</name>
+        <param>
+          <type>std::vector&lt; <ref refid="structvlkx_1_1_descriptor_1_1_meta" kindref="compound">Descriptor::Meta</ref> &gt;</type>
+          <declname>metas</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp" line="25" column="18" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp" bodystart="25" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="_descriptor_8cpp_1a2279d10b75632ae81986035045fe8af5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkDescriptorSetLayout</type>
+        <definition>VkDescriptorSetLayout createLayout</definition>
+        <argsstring>(std::vector&lt; Descriptor::Meta &gt; metas, bool dynamic)</argsstring>
+        <name>createLayout</name>
+        <param>
+          <type>std::vector&lt; <ref refid="structvlkx_1_1_descriptor_1_1_meta" kindref="compound">Descriptor::Meta</ref> &gt;</type>
+          <declname>metas</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>dynamic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp" line="51" column="23" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp" bodystart="51" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="_descriptor_8cpp_1ab3f8743c3ebbea33fd89de6d51a3d7ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkDescriptorSet</type>
+        <definition>VkDescriptorSet allocateSet</definition>
+        <argsstring>(const VkDescriptorPool &amp;pool, const VkDescriptorSetLayout &amp;layout)</argsstring>
+        <name>allocateSet</name>
+        <param>
+          <type>const VkDescriptorPool &amp;</type>
+          <declname>pool</declname>
+        </param>
+        <param>
+          <type>const VkDescriptorSetLayout &amp;</type>
+          <declname>layout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp" line="75" column="17" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp" bodystart="75" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="_descriptor_8cpp_1a84d310dd131a8e3ef24a3abaa0c33493" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; VkWriteDescriptorSet &gt;</type>
+        <definition>std::vector&lt; VkWriteDescriptorSet &gt; createWrites</definition>
+        <argsstring>(const VkDescriptorSet &amp;set, VkDescriptorType type, const std::map&lt; uint32_t, std::vector&lt; Type &gt; &gt; &amp;map)</argsstring>
+        <name>createWrites</name>
+        <param>
+          <type>const VkDescriptorSet &amp;</type>
+          <declname>set</declname>
+        </param>
+        <param>
+          <type>VkDescriptorType</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; uint32_t, std::vector&lt; Type &gt; &gt; &amp;</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp" line="89" column="13" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp" bodystart="89" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_descriptor_8h" kindref="compound">vlkx/vulkan/abstraction/Descriptor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vulkan/vulkan.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacevlkx" kindref="compound">vlkx</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>&apos;pointer&apos;,<sp/>assuming<sp/>&apos;ExpectedType&apos;<sp/>and<sp/>&apos;ActualType&apos;<sp/>are<sp/>the<sp/>same.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExpectedType,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ActualType&gt;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ExpectedType*<sp/><ref refid="_descriptor_8cpp_1a0f9636d5ed9863da230e4d47592f806e" kindref="member">getPtr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ActualType*<sp/>pointer,<sp/>std::true_type)<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pointer;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>nullptr,<sp/>assuming<sp/>&apos;ExpectedType&apos;<sp/>and<sp/>&apos;ActualType&apos;<sp/>are<sp/>different.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExpectedType,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ActualType&gt;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ExpectedType*<sp/><ref refid="_descriptor_8cpp_1a0f9636d5ed9863da230e4d47592f806e" kindref="member">getPtr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ActualType*<sp/>pointer,<sp/>std::false_type)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExpectedType,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ValueType&gt;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ExpectedType*<sp/><ref refid="_descriptor_8cpp_1a010530a8716cd497bce86974b58a4670" kindref="member">getPointer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;ValueType&gt;&amp;<sp/>container)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>getPtr&lt;ExpectedType,<sp/>ValueType&gt;(container.data(),<sp/>std::is_same&lt;ExpectedType,<sp/>ValueType&gt;());</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">VkDescriptorPool<sp/><ref refid="_descriptor_8cpp_1a453a934a3705a2cd76f109f42d0164ac" kindref="member">createPool</ref>(std::vector&lt;Descriptor::Meta&gt;<sp/>metas)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;VkDescriptorType,<sp/>uint32_t&gt;<sp/>sizes;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>meta<sp/>:<sp/>metas)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>length<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>binding<sp/>:<sp/>meta.bindings)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>length<sp/>+=<sp/>binding.length;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizes[meta.type]<sp/>+=<sp/>length;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;VkDescriptorPoolSize&gt;<sp/>poolSizes;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>pair<sp/>:<sp/>sizes)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>poolSizes.push_back({<sp/>pair.first,<sp/>pair.second<sp/>});</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkDescriptorPoolCreateInfo<sp/>create<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>0,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(poolSizes.size()),<sp/>poolSizes.data()</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>VkDescriptorPool<sp/>pool;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vkCreateDescriptorPool(<ref refid="class_vulkan_module_1ae98fb6b5c4497288b51c9c4b860cb1bd" kindref="member">VulkanModule::getInstance</ref>()-&gt;getDevice()-&gt;logical,<sp/>&amp;create,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;pool)<sp/>!=<sp/>VK_SUCCESS)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>create<sp/>Descriptor<sp/>Pool&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pool;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">VkDescriptorSetLayout<sp/><ref refid="_descriptor_8cpp_1a2279d10b75632ae81986035045fe8af5" kindref="member">createLayout</ref>(std::vector&lt;Descriptor::Meta&gt;<sp/>metas,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dynamic)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bindings<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>meta<sp/>:<sp/>metas)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bindings<sp/>+=<sp/>meta.bindings.size();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;VkDescriptorSetLayoutBinding&gt;<sp/>layoutBindings;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>layoutBindings.reserve(bindings);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>meta<sp/>:<sp/>metas)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>binding<sp/>:<sp/>meta.bindings)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>layoutBindings.push_back({<sp/>binding.bindPoint,<sp/>meta.type,<sp/>binding.length,<sp/>meta.stage,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>});</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkDescriptorSetLayoutCreateInfo<sp/>create<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_CREATE_INFO,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">VkDescriptorSetLayoutCreateFlags</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(dynamic<sp/>?<sp/>VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR<sp/>:<sp/>0),</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(layoutBindings.size()),<sp/>layoutBindings.data()</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>VkDescriptorSetLayout<sp/>layout;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vkCreateDescriptorSetLayout(<ref refid="class_vulkan_module_1ae98fb6b5c4497288b51c9c4b860cb1bd" kindref="member">VulkanModule::getInstance</ref>()-&gt;getDevice()-&gt;logical,<sp/>&amp;create,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;layout)<sp/>!=<sp/>VK_SUCCESS)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>create<sp/>Descriptor<sp/>Set<sp/>Layout&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>layout;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">VkDescriptorSet<sp/><ref refid="_descriptor_8cpp_1ab3f8743c3ebbea33fd89de6d51a3d7ea" kindref="member">allocateSet</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkDescriptorPool&amp;<sp/>pool,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkDescriptorSetLayout&amp;<sp/>layout)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkDescriptorSetAllocateInfo<sp/>allocate<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_STRUCTURE_TYPE_DESCRIPTOR_SET_ALLOCATE_INFO,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>pool,<sp/>1,<sp/>&amp;layout</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>VkDescriptorSet<sp/>set;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vkAllocateDescriptorSets(<ref refid="class_vulkan_module_1ae98fb6b5c4497288b51c9c4b860cb1bd" kindref="member">VulkanModule::getInstance</ref>()-&gt;getDevice()-&gt;logical,<sp/>&amp;allocate,<sp/>&amp;set)<sp/>!=<sp/>VK_SUCCESS)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>allocate<sp/>descriptor<sp/>set&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">std::vector&lt;VkWriteDescriptorSet&gt;<sp/><ref refid="_descriptor_8cpp_1a84d310dd131a8e3ef24a3abaa0c33493" kindref="member">createWrites</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkDescriptorSet&amp;<sp/>set,<sp/>VkDescriptorType<sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;uint32_t,<sp/>std::vector&lt;Type&gt;&gt;&amp;<sp/>map)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;VkWriteDescriptorSet&gt;<sp/>sets;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>sets.reserve(<ref refid="namespace_catch_1_1_generators_1af33fd06c51ac9173c3bee2ddee2559a6" kindref="member">map</ref>.size());</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>pair<sp/>:<sp/>map)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>info<sp/>=<sp/>pair.second;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sets.push_back(VkWriteDescriptorSet<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>set,<sp/>pair.first,<sp/>0,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(info.size()),<sp/>type,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>getPointer&lt;VkDescriptorImageInfo&gt;(info),</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>getPointer&lt;VkDescriptorBufferInfo&gt;(info),</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>getPointer&lt;VkBufferView&gt;(info)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sets;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><ref refid="classvlkx_1_1_static_descriptor_1a1a1c26e339b250cf491e45844accf295" kindref="member">StaticDescriptor::StaticDescriptor</ref>(std::vector&lt;Meta&gt;<sp/>metas)<sp/>:<sp/><ref refid="classvlkx_1_1_descriptor" kindref="compound">Descriptor</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>pool<sp/>=<sp/><ref refid="_descriptor_8cpp_1a453a934a3705a2cd76f109f42d0164ac" kindref="member">createPool</ref>(metas);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>layout<sp/>=<sp/><ref refid="_descriptor_8cpp_1a2279d10b75632ae81986035045fe8af5" kindref="member">createLayout</ref>(metas,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>setLayout(layout);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>set<sp/>=<sp/><ref refid="_descriptor_8cpp_1ab3f8743c3ebbea33fd89de6d51a3d7ea" kindref="member">allocateSet</ref>(pool,<sp/>layout);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_static_descriptor" kindref="compound">StaticDescriptor</ref>&amp;<sp/><ref refid="classvlkx_1_1_static_descriptor_1a8878ff41efb3ce526ba056468b7555e1" kindref="member">StaticDescriptor::buffers</ref>(VkDescriptorType<sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BufferInfos<sp/>&amp;infos)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>updateSet(<ref refid="_descriptor_8cpp_1a84d310dd131a8e3ef24a3abaa0c33493" kindref="member">createWrites</ref>(set,<sp/>type,<sp/>infos));</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_static_descriptor" kindref="compound">StaticDescriptor</ref>&amp;<sp/><ref refid="classvlkx_1_1_static_descriptor_1a1afc662a43b00a2e43433cc39e925d7c" kindref="member">StaticDescriptor::images</ref>(VkDescriptorType<sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ImageInfos<sp/>&amp;infos)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>updateSet(<ref refid="_descriptor_8cpp_1a84d310dd131a8e3ef24a3abaa0c33493" kindref="member">createWrites</ref>(set,<sp/>type,<sp/>infos));</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_static_descriptor" kindref="compound">StaticDescriptor</ref>&amp;<sp/>StaticDescriptor::updateSet(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;VkWriteDescriptorSet&gt;<sp/>&amp;write)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>vkUpdateDescriptorSets(<ref refid="class_vulkan_module_1ae98fb6b5c4497288b51c9c4b860cb1bd" kindref="member">VulkanModule::getInstance</ref>()-&gt;getDevice()-&gt;logical,<sp/>write.size(),<sp/>write.data(),<sp/>0,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_static_descriptor_1abaab86211fa7c59b681eb4a590613bd4" kindref="member">StaticDescriptor::bind</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkCommandBuffer<sp/>&amp;commands,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkPipelineLayout<sp/>&amp;layout,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkPipelineBindPoint<sp/>bindPoint)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>vkCmdBindDescriptorSets(commands,<sp/>bindPoint,<sp/>layout,<sp/>0,<sp/>1,<sp/>&amp;set,<sp/>0,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp"/>
+  </compounddef>
+</doxygen>

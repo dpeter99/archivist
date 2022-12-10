@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structvlkx_1_1_per_vertex_buffer_1_1_mesh_data_no_index" kind="struct" language="C++" prot="protected">
+    <compoundname>vlkx::PerVertexBuffer::MeshDataNoIndex</compoundname>
+    <includes refid="_buffer_8h" local="no">Buffer.h</includes>
+    <innerclass refid="structvlkx_1_1_per_vertex_buffer_1_1_mesh_data_no_index_1_1_info" prot="public">vlkx::PerVertexBuffer::MeshDataNoIndex::Info</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvlkx_1_1_per_vertex_buffer_1_1_mesh_data_no_index_1a9cc004d44d34d2d4e3ad92eaea13cbe6" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structvlkx_1_1_per_vertex_buffer_1_1_mesh_data_no_index_1_1_info" kindref="compound">Info</ref> &gt;</type>
+        <definition>std::vector&lt;Info&gt; vlkx::PerVertexBuffer::MeshDataNoIndex::info</definition>
+        <argsstring></argsstring>
+        <name>info</name>
+        <qualifiedname>vlkx::PerVertexBuffer::MeshDataNoIndex::info</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="234" column="25" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="228" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="228" bodyend="235"/>
+    <listofallmembers>
+      <member refid="structvlkx_1_1_per_vertex_buffer_1_1_mesh_data_no_index_1a9cc004d44d34d2d4e3ad92eaea13cbe6" prot="public" virt="non-virtual"><scope>vlkx::PerVertexBuffer::MeshDataNoIndex</scope><name>info</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

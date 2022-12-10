@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_343b3f5ad4e927c7d5a5cc1d4c21e7e7" kind="dir">
+    <compoundname>shadow-engine/core/src</compoundname>
+    <innerdir refid="dir_048027e74ff2391b4a71f78383461f8b">shadow-engine/core/src/core</innerdir>
+    <innerdir refid="dir_61d1deb06d89178d07391f065de395fe">shadow-engine/core/src/debug</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/core/src/"/>
+  </compounddef>
+</doxygen>

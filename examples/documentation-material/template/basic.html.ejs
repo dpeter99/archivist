@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+
+<h1><%- meta.name %></h1>
+
+<%= meta["code:data"].desc%>
+
+<% meta["code:data"].members.forEach(member => { %>
+<div style="margin-top: 12px">
+<%- helper.md(member.kind) %>
+    <%- helper.md(member.visibility)%>
+    <span style="font-size: 21px"><%- helper.md(member.type) %></span>
+    <span style="font-size: 21px; font-weight: bold"><%- member.name %></span>
+<%- helper.md(member.brief)%>
+</div>
+<% });%>
+</body>
+
+</html>

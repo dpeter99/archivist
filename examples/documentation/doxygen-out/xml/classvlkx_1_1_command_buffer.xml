@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_command_buffer" kind="class" language="C++" prot="public">
+    <compoundname>vlkx::CommandBuffer</compoundname>
+    <derivedcompoundref refid="classvlkx_1_1_immediate_command" prot="public" virt="non-virtual">vlkx::ImmediateCommand</derivedcompoundref>
+    <derivedcompoundref refid="classvlkx_1_1_render_command" prot="public" virt="non-virtual">vlkx::RenderCommand</derivedcompoundref>
+    <includes refid="_commands_8h" local="no">Commands.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classvlkx_1_1_command_buffer_1a89dd25d41ce895e7506227880b18b39c" prot="public" static="no">
+        <type>std::function&lt; void(const VkCommandBuffer &amp;buffer)&gt;</type>
+        <definition>using vlkx::CommandBuffer::Command =  std::function&lt;void(const VkCommandBuffer&amp; buffer)&gt;</definition>
+        <argsstring></argsstring>
+        <name>Command</name>
+        <qualifiedname>vlkx::CommandBuffer::Command</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="14" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classvlkx_1_1_command_buffer_1a913b667da1ec1e3bb83753ed30c9cf9a" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_vulkan_device" kindref="compound">VulkanDevice</ref> *</type>
+        <definition>VulkanDevice* vlkx::CommandBuffer::dev</definition>
+        <argsstring></argsstring>
+        <name>dev</name>
+        <qualifiedname>vlkx::CommandBuffer::dev</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="26" column="22" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvlkx_1_1_command_buffer_1a9aa6e18ba965d6d87307edea78cb0ce6" prot="private" static="no" mutable="no">
+        <type>VkCommandPool</type>
+        <definition>VkCommandPool vlkx::CommandBuffer::pool</definition>
+        <argsstring></argsstring>
+        <name>pool</name>
+        <qualifiedname>vlkx::CommandBuffer::pool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="28" column="23" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_command_buffer_1a44d89415c68f53839bed9a500e9e9c28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::CommandBuffer::CommandBuffer</definition>
+        <argsstring>(const CommandBuffer &amp;)=delete</argsstring>
+        <name>CommandBuffer</name>
+        <qualifiedname>vlkx::CommandBuffer::CommandBuffer</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_command_buffer" kindref="compound">CommandBuffer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="16" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_command_buffer_1a5d1e3c8f4e1125c23a7c6b0308bc0ccd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkx_1_1_command_buffer" kindref="compound">CommandBuffer</ref> &amp;</type>
+        <definition>CommandBuffer &amp; vlkx::CommandBuffer::operator=</definition>
+        <argsstring>(const CommandBuffer &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>vlkx::CommandBuffer::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_command_buffer" kindref="compound">CommandBuffer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="17" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_command_buffer_1aff399355ff561d9db85e3363188a51f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual vlkx::CommandBuffer::~CommandBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>~CommandBuffer</name>
+        <qualifiedname>vlkx::CommandBuffer::~CommandBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="19" column="17" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="19" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classvlkx_1_1_command_buffer_1a31dd9faba1742793714a6cfb85dadea9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::CommandBuffer::CommandBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>CommandBuffer</name>
+        <qualifiedname>vlkx::CommandBuffer::CommandBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="23" column="9" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Commands.cpp" bodystart="6" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_command_buffer_1a9431b9fa33c651adb2dd8752d054f66a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::CommandBuffer::setPool</definition>
+        <argsstring>(const VkCommandPool &amp;newPool)</argsstring>
+        <name>setPool</name>
+        <qualifiedname>vlkx::CommandBuffer::setPool</qualifiedname>
+        <param>
+          <type>const VkCommandPool &amp;</type>
+          <declname>newPool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="25" column="14" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="25" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>vlkx::CommandBuffer</label>
+        <link refid="classvlkx_1_1_command_buffer"/>
+      </node>
+      <node id="2">
+        <label>vlkx::ImmediateCommand</label>
+        <link refid="classvlkx_1_1_immediate_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>vlkx::RenderCommand</label>
+        <link refid="classvlkx_1_1_render_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>QueueFamilies</label>
+        <link refid="struct_queue_families"/>
+      </node>
+      <node id="3">
+        <label>SwapChainMeta</label>
+        <link refid="struct_swap_chain_meta"/>
+      </node>
+      <node id="2">
+        <label>VulkanDevice</label>
+        <link refid="class_vulkan_device"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>swapChain</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>queueData</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>vlkx::CommandBuffer</label>
+        <link refid="classvlkx_1_1_command_buffer"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>dev</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" line="12" column="5" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Commands.h" bodystart="12" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_command_buffer_1a89dd25d41ce895e7506227880b18b39c" prot="public" virt="non-virtual"><scope>vlkx::CommandBuffer</scope><name>Command</name></member>
+      <member refid="classvlkx_1_1_command_buffer_1a44d89415c68f53839bed9a500e9e9c28" prot="public" virt="non-virtual"><scope>vlkx::CommandBuffer</scope><name>CommandBuffer</name></member>
+      <member refid="classvlkx_1_1_command_buffer_1a31dd9faba1742793714a6cfb85dadea9" prot="protected" virt="non-virtual"><scope>vlkx::CommandBuffer</scope><name>CommandBuffer</name></member>
+      <member refid="classvlkx_1_1_command_buffer_1a913b667da1ec1e3bb83753ed30c9cf9a" prot="protected" virt="non-virtual"><scope>vlkx::CommandBuffer</scope><name>dev</name></member>
+      <member refid="classvlkx_1_1_command_buffer_1a5d1e3c8f4e1125c23a7c6b0308bc0ccd" prot="public" virt="non-virtual"><scope>vlkx::CommandBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_command_buffer_1a9aa6e18ba965d6d87307edea78cb0ce6" prot="private" virt="non-virtual"><scope>vlkx::CommandBuffer</scope><name>pool</name></member>
+      <member refid="classvlkx_1_1_command_buffer_1a9431b9fa33c651adb2dd8752d054f66a" prot="protected" virt="non-virtual"><scope>vlkx::CommandBuffer</scope><name>setPool</name></member>
+      <member refid="classvlkx_1_1_command_buffer_1aff399355ff561d9db85e3363188a51f3" prot="public" virt="virtual"><scope>vlkx::CommandBuffer</scope><name>~CommandBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

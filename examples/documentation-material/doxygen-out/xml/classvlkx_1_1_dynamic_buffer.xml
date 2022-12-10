@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_dynamic_buffer" kind="class" language="C++" prot="public">
+    <compoundname>vlkx::DynamicBuffer</compoundname>
+    <derivedcompoundref refid="classvlkx_1_1_dynamic_per_instance_buffer" prot="public" virt="non-virtual">vlkx::DynamicPerInstanceBuffer</derivedcompoundref>
+    <derivedcompoundref refid="classvlkx_1_1_dynamic_per_vertex_buffer" prot="public" virt="non-virtual">vlkx::DynamicPerVertexBuffer</derivedcompoundref>
+    <includes refid="_buffer_8h" local="no">Buffer.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvlkx_1_1_dynamic_buffer_1accbd00785873b8c8f64badba49f13a9a" prot="private" static="no" mutable="no">
+        <type>const bool</type>
+        <definition>const bool vlkx::DynamicBuffer::hasIndices</definition>
+        <argsstring></argsstring>
+        <name>hasIndices</name>
+        <qualifiedname>vlkx::DynamicBuffer::hasIndices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="139" column="20" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_dynamic_buffer_1abad0875769b50b6fc36f144e2e43bb8f" prot="private" static="no" mutable="no">
+        <type><ref refid="classvlkx_1_1_vertex_buffer" kindref="compound">VertexBuffer</ref> *</type>
+        <definition>VertexBuffer* vlkx::DynamicBuffer::vertexBuffer</definition>
+        <argsstring></argsstring>
+        <name>vertexBuffer</name>
+        <qualifiedname>vlkx::DynamicBuffer::vertexBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="140" column="22" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_dynamic_buffer_1a85c7b11931d0312da81a8eec4d643bbc" prot="private" static="no" mutable="no">
+        <type>VkDeviceSize</type>
+        <definition>VkDeviceSize vlkx::DynamicBuffer::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>vlkx::DynamicBuffer::size</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="141" column="22" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_dynamic_buffer_1ae154564533d70ba373c1ea10a555c84b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::DynamicBuffer::DynamicBuffer</definition>
+        <argsstring>(const DynamicBuffer &amp;)=delete</argsstring>
+        <name>DynamicBuffer</name>
+        <qualifiedname>vlkx::DynamicBuffer::DynamicBuffer</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_dynamic_buffer" kindref="compound">DynamicBuffer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="123" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_dynamic_buffer_1a3464c563bd9bb7cde9c24ce445b8baeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkx_1_1_dynamic_buffer" kindref="compound">DynamicBuffer</ref> &amp;</type>
+        <definition>DynamicBuffer &amp; vlkx::DynamicBuffer::operator=</definition>
+        <argsstring>(const DynamicBuffer &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>vlkx::DynamicBuffer::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_dynamic_buffer" kindref="compound">DynamicBuffer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="124" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_dynamic_buffer_1a36e307aced2e98f70a97f038e976362c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::DynamicBuffer::~DynamicBuffer</definition>
+        <argsstring>()=default</argsstring>
+        <name>~DynamicBuffer</name>
+        <qualifiedname>vlkx::DynamicBuffer::~DynamicBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="126" column="9"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classvlkx_1_1_dynamic_buffer_1ab01e783bb5fd7be88af1bc6ca406ef10" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::DynamicBuffer::DynamicBuffer</definition>
+        <argsstring>(size_t size, bool hasIndices, VertexBuffer *buffer)</argsstring>
+        <name>DynamicBuffer</name>
+        <qualifiedname>vlkx::DynamicBuffer::DynamicBuffer</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>hasIndices</declname>
+        </param>
+        <param>
+          <type><ref refid="classvlkx_1_1_vertex_buffer" kindref="compound">VertexBuffer</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="130" column="9" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Buffer.cpp" bodystart="65" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_dynamic_buffer_1a79af7656c5731942ab9c1dac6fac28d3" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::DynamicBuffer::resize</definition>
+        <argsstring>(size_t pSize)</argsstring>
+        <name>resize</name>
+        <qualifiedname>vlkx::DynamicBuffer::resize</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>pSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="133" column="14" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Buffer.cpp" bodystart="69" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_dynamic_buffer_1a44ede5c75c9deee8f3b1b9326b172901" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkDeviceSize</type>
+        <definition>VkDeviceSize vlkx::DynamicBuffer::bufferSize</definition>
+        <argsstring>() const</argsstring>
+        <name>bufferSize</name>
+        <qualifiedname>vlkx::DynamicBuffer::bufferSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="135" column="22" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="135" bodyend="135"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>END OF DATA BUFFERS </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>vlkx::DynamicBuffer</label>
+        <link refid="classvlkx_1_1_dynamic_buffer"/>
+      </node>
+      <node id="2">
+        <label>vlkx::DynamicPerInstanceBuffer</label>
+        <link refid="classvlkx_1_1_dynamic_per_instance_buffer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>vlkx::DynamicPerVertexBuffer</label>
+        <link refid="classvlkx_1_1_dynamic_per_vertex_buffer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="121" column="5" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="121" bodyend="142"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_dynamic_buffer_1a44ede5c75c9deee8f3b1b9326b172901" prot="protected" virt="non-virtual"><scope>vlkx::DynamicBuffer</scope><name>bufferSize</name></member>
+      <member refid="classvlkx_1_1_dynamic_buffer_1ae154564533d70ba373c1ea10a555c84b" prot="public" virt="non-virtual"><scope>vlkx::DynamicBuffer</scope><name>DynamicBuffer</name></member>
+      <member refid="classvlkx_1_1_dynamic_buffer_1ab01e783bb5fd7be88af1bc6ca406ef10" prot="protected" virt="non-virtual"><scope>vlkx::DynamicBuffer</scope><name>DynamicBuffer</name></member>
+      <member refid="classvlkx_1_1_dynamic_buffer_1accbd00785873b8c8f64badba49f13a9a" prot="private" virt="non-virtual"><scope>vlkx::DynamicBuffer</scope><name>hasIndices</name></member>
+      <member refid="classvlkx_1_1_dynamic_buffer_1a3464c563bd9bb7cde9c24ce445b8baeb" prot="public" virt="non-virtual"><scope>vlkx::DynamicBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_dynamic_buffer_1a79af7656c5731942ab9c1dac6fac28d3" prot="protected" virt="non-virtual"><scope>vlkx::DynamicBuffer</scope><name>resize</name></member>
+      <member refid="classvlkx_1_1_dynamic_buffer_1a85c7b11931d0312da81a8eec4d643bbc" prot="private" virt="non-virtual"><scope>vlkx::DynamicBuffer</scope><name>size</name></member>
+      <member refid="classvlkx_1_1_dynamic_buffer_1abad0875769b50b6fc36f144e2e43bb8f" prot="private" virt="non-virtual"><scope>vlkx::DynamicBuffer</scope><name>vertexBuffer</name></member>
+      <member refid="classvlkx_1_1_dynamic_buffer_1a36e307aced2e98f70a97f038e976362c" prot="public" virt="non-virtual"><scope>vlkx::DynamicBuffer</scope><name>~DynamicBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

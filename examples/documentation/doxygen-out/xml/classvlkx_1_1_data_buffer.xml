@@ -1,0 +1,274 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_data_buffer" kind="class" language="C++" prot="public">
+    <compoundname>vlkx::DataBuffer</compoundname>
+    <basecompoundref refid="classvlkx_1_1_buffer" prot="public" virt="non-virtual">vlkx::Buffer</basecompoundref>
+    <derivedcompoundref refid="classvlkx_1_1_staging_buffer" prot="public" virt="non-virtual">vlkx::StagingBuffer</derivedcompoundref>
+    <derivedcompoundref refid="classvlkx_1_1_uniform_buffer" prot="public" virt="non-virtual">vlkx::UniformBuffer</derivedcompoundref>
+    <derivedcompoundref refid="classvlkx_1_1_vertex_buffer" prot="public" virt="non-virtual">vlkx::VertexBuffer</derivedcompoundref>
+    <includes refid="_buffer_8h" local="no">Buffer.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvlkx_1_1_data_buffer_1a4e9bc7b64e13fac03bd0b63fac22f01e" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_vk_tools_1_1_managed_buffer" kindref="compound">VkTools::ManagedBuffer</ref></type>
+        <definition>VkTools::ManagedBuffer vlkx::DataBuffer::managed</definition>
+        <argsstring></argsstring>
+        <name>managed</name>
+        <qualifiedname>vlkx::DataBuffer::managed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="67" column="32" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_data_buffer_1ad6b6ba2e5dd942b42f66a3f5c04e87a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::DataBuffer::DataBuffer</definition>
+        <argsstring>(const DataBuffer &amp;)=delete</argsstring>
+        <name>DataBuffer</name>
+        <qualifiedname>vlkx::DataBuffer::DataBuffer</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_data_buffer" kindref="compound">DataBuffer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="50" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_data_buffer_1a0caf832cd047de702e77433a3e97dc8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkx_1_1_data_buffer" kindref="compound">DataBuffer</ref> &amp;</type>
+        <definition>DataBuffer &amp; vlkx::DataBuffer::operator=</definition>
+        <argsstring>(const DataBuffer &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>vlkx::DataBuffer::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_data_buffer" kindref="compound">DataBuffer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="51" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_data_buffer_1a3abb23c2d7be5c18b266478202796c9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::DataBuffer::DataBuffer</definition>
+        <argsstring>()=default</argsstring>
+        <name>DataBuffer</name>
+        <qualifiedname>vlkx::DataBuffer::DataBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="53" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_data_buffer_1abe2a28ce8e68a76cda222d51bfca0ac0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::DataBuffer::~DataBuffer</definition>
+        <argsstring>() override</argsstring>
+        <name>~DataBuffer</name>
+        <qualifiedname>vlkx::DataBuffer::~DataBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="55" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="55" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classvlkx_1_1_data_buffer_1ab4e03d32dd898176c66e13d19d7d2fa8" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::DataBuffer::setBuffer</definition>
+        <argsstring>(const VkTools::ManagedBuffer &amp;buffer)</argsstring>
+        <name>setBuffer</name>
+        <qualifiedname>vlkx::DataBuffer::setBuffer</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_vk_tools_1_1_managed_buffer" kindref="compound">VkTools::ManagedBuffer</ref> &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="62" column="14" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_data_buffer_1a0b3ac1c5f2d714165c994f65e18b6604" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_vk_tools_1_1_managed_buffer" kindref="compound">VkTools::ManagedBuffer</ref></type>
+        <definition>VkTools::ManagedBuffer vlkx::DataBuffer::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <qualifiedname>vlkx::DataBuffer::get</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="63" column="32" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_data_buffer_1a9e10436c90954e0f4e213af704e10707" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const VkBuffer &amp;</type>
+        <definition>const VkBuffer &amp; vlkx::DataBuffer::getBuffer</definition>
+        <argsstring>() const</argsstring>
+        <name>getBuffer</name>
+        <qualifiedname>vlkx::DataBuffer::getBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="64" column="24" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_data_buffer_1a8ad640258cbc9aa645ed68e3c320af99" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::Buffer::Buffer</definition>
+        <argsstring>(const Buffer &amp;)=delete</argsstring>
+        <name>Buffer</name>
+        <qualifiedname>vlkx::DataBuffer::Buffer</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_buffer" kindref="compound">Buffer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="60" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_data_buffer_1a055bf8f2da8b0c7084493579a2f27ccb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::Buffer::Buffer</definition>
+        <argsstring>()</argsstring>
+        <name>Buffer</name>
+        <qualifiedname>vlkx::DataBuffer::Buffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="60" column="9" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="115" bodyend="116"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>START OF DATA BUFFERS </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>vlkx::Buffer</label>
+        <link refid="classvlkx_1_1_buffer"/>
+      </node>
+      <node id="1">
+        <label>vlkx::DataBuffer</label>
+        <link refid="classvlkx_1_1_data_buffer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>vlkx::DynamicPerInstanceBuffer</label>
+        <link refid="classvlkx_1_1_dynamic_per_instance_buffer"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>vlkx::DynamicPerVertexBuffer</label>
+        <link refid="classvlkx_1_1_dynamic_per_vertex_buffer"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>vlkx::ImageStagingBuffer</label>
+        <link refid="classvlkx_1_1_image_staging_buffer"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>vlkx::PerInstanceVertexBuffer</label>
+        <link refid="classvlkx_1_1_per_instance_vertex_buffer"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>vlkx::PerVertexBuffer</label>
+        <link refid="classvlkx_1_1_per_vertex_buffer"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>vlkx::StagingBuffer</label>
+        <link refid="classvlkx_1_1_staging_buffer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>vlkx::StaticPerInstanceBuffer</label>
+        <link refid="classvlkx_1_1_static_per_instance_buffer"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>vlkx::StaticPerVertexBuffer</label>
+        <link refid="classvlkx_1_1_static_per_vertex_buffer"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>vlkx::UniformBuffer</label>
+        <link refid="classvlkx_1_1_uniform_buffer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>vlkx::VertexBuffer</label>
+        <link refid="classvlkx_1_1_vertex_buffer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>vlkx::Buffer</label>
+        <link refid="classvlkx_1_1_buffer"/>
+      </node>
+      <node id="1">
+        <label>vlkx::DataBuffer</label>
+        <link refid="classvlkx_1_1_data_buffer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="48" column="5" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="48" bodyend="68"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_data_buffer_1a8ad640258cbc9aa645ed68e3c320af99" prot="protected" virt="non-virtual"><scope>vlkx::DataBuffer</scope><name>Buffer</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1a055bf8f2da8b0c7084493579a2f27ccb" prot="protected" virt="non-virtual"><scope>vlkx::DataBuffer</scope><name>Buffer</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1ad6b6ba2e5dd942b42f66a3f5c04e87a3" prot="public" virt="non-virtual"><scope>vlkx::DataBuffer</scope><name>DataBuffer</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1a3abb23c2d7be5c18b266478202796c9b" prot="public" virt="non-virtual"><scope>vlkx::DataBuffer</scope><name>DataBuffer</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1a0b3ac1c5f2d714165c994f65e18b6604" prot="protected" virt="non-virtual"><scope>vlkx::DataBuffer</scope><name>get</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1a9e10436c90954e0f4e213af704e10707" prot="protected" virt="non-virtual"><scope>vlkx::DataBuffer</scope><name>getBuffer</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1a4e9bc7b64e13fac03bd0b63fac22f01e" prot="private" virt="non-virtual"><scope>vlkx::DataBuffer</scope><name>managed</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1a0caf832cd047de702e77433a3e97dc8d" prot="public" virt="non-virtual"><scope>vlkx::DataBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_buffer_1a9971cfc28a88cebf00d2642baa5cd72e" prot="public" virt="non-virtual" ambiguityscope="vlkx::Buffer::"><scope>vlkx::DataBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1ab4e03d32dd898176c66e13d19d7d2fa8" prot="protected" virt="non-virtual"><scope>vlkx::DataBuffer</scope><name>setBuffer</name></member>
+      <member refid="classvlkx_1_1_buffer_1a5ad6564545b79d1ce612ebf2b6fc44f7" prot="public" virt="virtual"><scope>vlkx::DataBuffer</scope><name>~Buffer</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1abe2a28ce8e68a76cda222d51bfca0ac0" prot="public" virt="non-virtual"><scope>vlkx::DataBuffer</scope><name>~DataBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

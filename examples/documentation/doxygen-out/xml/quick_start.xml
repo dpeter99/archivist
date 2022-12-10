@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="quick_start" kind="page">
+    <compoundname>quick_start</compoundname>
+    <title>Quick start</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="quick_start_1quick_start_project_setup">
+<title>Project setup</title>
+<para>Vulkan Memory Allocator comes in form of a &quot;stb-style&quot; single header file. You don&apos;t need to build it as a separate library project. You can add this file directly to your project and submit it to code repository next to your other source files.</para>
+<para>&quot;Single header&quot; doesn&apos;t mean that everything is contained in C/C++ declarations, like it tends to be in case of inline functions or C++ templates. It means that implementation is bundled with interface in a single file and needs to be extracted using preprocessor macro. If you don&apos;t do it properly, you will get linker errors.</para>
+<para>To do it properly:</para>
+<para><orderedlist>
+<listitem><para>Include &quot;vk_mem_alloc.h&quot; file in each CPP file where you want to use the library. This includes declarations of all members of the library.</para>
+</listitem><listitem><para>In exactly one CPP file define following macro before this include. It enables also internal definitions.</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting><codeline><highlight class="preprocessor">#define<sp/>VMA_IMPLEMENTATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="vk__mem__alloc_8h" kindref="compound">vk_mem_alloc.h</ref>&quot;</highlight></codeline>
+</programlisting></para>
+<para>It may be a good idea to create dedicated CPP file just for this purpose.</para>
+<para>This library includes header `&lt;vulkan/vulkan.h&gt;`, which in turn includes `&lt;windows.h&gt;` on Windows. If you need some specific macros defined before including these headers (like `WIN32_LEAN_AND_MEAN` or `WINVER` for Windows, `VK_USE_PLATFORM_WIN32_KHR` for Vulkan), you must define them before every `#include` of this library.</para>
+<para><simplesect kind="note"><para>This library is written in C++, but has C-compatible interface. Thus you can include and use <ref refid="vk__mem__alloc_8h" kindref="compound">vk_mem_alloc.h</ref> in C or C++ code, but full implementation with `VMA_IMPLEMENTATION` macro must be compiled as C++, NOT as C.</para>
+</simplesect>
+</para>
+</sect1>
+<sect1 id="quick_start_1quick_start_initialization">
+<title>Initialization</title>
+<para>At program startup:</para>
+<para><orderedlist>
+<listitem><para>Initialize Vulkan to have `VkPhysicalDevice`, `VkDevice` and `VkInstance` object.</para>
+</listitem><listitem><para>Fill <ref refid="struct_vma_allocator_create_info" kindref="compound">VmaAllocatorCreateInfo</ref> structure and create <ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> object by calling <ref refid="group__group__init_1gaf77c946fbecfcc54d02c3d1c1e7e23e7" kindref="member">vmaCreateAllocator()</ref>.</para>
+</listitem></orderedlist>
+</para>
+<para>Only members `physicalDevice`, `device`, `instance` are required. However, you should inform the library which Vulkan version do you use by setting <ref refid="struct_vma_allocator_create_info_1ae0ffc55139b54520a6bb704b29ffc285" kindref="member">VmaAllocatorCreateInfo::vulkanApiVersion</ref> and which extensions did you enable by setting <ref refid="struct_vma_allocator_create_info_1a392ea2ecbaff93f91a7c49f735ad4346" kindref="member">VmaAllocatorCreateInfo::flags</ref> (like <ref refid="group__group__init_1gga4f87c9100d154a65a4ad495f7763cf7ca5f1b28b0414319d1687e1f2b30ab0089" kindref="member">VMA_ALLOCATOR_CREATE_BUFFER_DEVICE_ADDRESS_BIT</ref> for VK_KHR_buffer_device_address). Otherwise, VMA would use only features of Vulkan 1.0 core with no extensions.</para>
+<para>You may need to configure importing Vulkan functions. There are 3 ways to do this:</para>
+<para><orderedlist>
+<listitem><para>**If you link with Vulkan static library** (e.g. &quot;vulkan-1.lib&quot; on Windows):<itemizedlist>
+<listitem><para>You don&apos;t need to do anything.</para>
+</listitem><listitem><para>VMA will use these, as macro `VMA_STATIC_VULKAN_FUNCTIONS` is defined to 1 by default.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>**If you want VMA to fetch pointers to Vulkan functions dynamically** using `vkGetInstanceProcAddr`, `vkGetDeviceProcAddr` (this is the option presented in the example below):<itemizedlist>
+<listitem><para>Define `VMA_STATIC_VULKAN_FUNCTIONS` to 0, `VMA_DYNAMIC_VULKAN_FUNCTIONS` to 1.</para>
+</listitem><listitem><para>Provide pointers to these two functions via <ref refid="struct_vma_vulkan_functions_1a2ee50e592de96365bd2a56885d04a20e" kindref="member">VmaVulkanFunctions::vkGetInstanceProcAddr</ref>, <ref refid="struct_vma_vulkan_functions_1a5619d8409f652f337efd902a9f5470df" kindref="member">VmaVulkanFunctions::vkGetDeviceProcAddr</ref>.</para>
+</listitem><listitem><para>The library will fetch pointers to all other functions it needs internally.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>**If you fetch pointers to all Vulkan functions in a custom way**, e.g. using some loader like [Volk](<ulink url="https://github.com/zeux/volk">https://github.com/zeux/volk</ulink>):<itemizedlist>
+<listitem><para>Define `VMA_STATIC_VULKAN_FUNCTIONS` and `VMA_DYNAMIC_VULKAN_FUNCTIONS` to 0.</para>
+</listitem><listitem><para>Pass these pointers via structure <ref refid="struct_vma_vulkan_functions" kindref="compound">VmaVulkanFunctions</ref>.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting><codeline><highlight class="normal"><ref refid="struct_vma_vulkan_functions" kindref="compound">VmaVulkanFunctions</ref><sp/>vulkanFunctions<sp/>=<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal">vulkanFunctions.<ref refid="struct_vma_vulkan_functions_1a2ee50e592de96365bd2a56885d04a20e" kindref="member">vkGetInstanceProcAddr</ref><sp/>=<sp/>&amp;vkGetInstanceProcAddr;</highlight></codeline>
+<codeline><highlight class="normal">vulkanFunctions.<ref refid="struct_vma_vulkan_functions_1a5619d8409f652f337efd902a9f5470df" kindref="member">vkGetDeviceProcAddr</ref><sp/>=<sp/>&amp;vkGetDeviceProcAddr;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocator_create_info" kindref="compound">VmaAllocatorCreateInfo</ref><sp/>allocatorCreateInfo<sp/>=<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal">allocatorCreateInfo.<ref refid="struct_vma_allocator_create_info_1ae0ffc55139b54520a6bb704b29ffc285" kindref="member">vulkanApiVersion</ref><sp/>=<sp/>VK_API_VERSION_1_2;</highlight></codeline>
+<codeline><highlight class="normal">allocatorCreateInfo.<ref refid="struct_vma_allocator_create_info_1ad09ce637aa92cb7c8c2a742943668087" kindref="member">physicalDevice</ref><sp/>=<sp/>physicalDevice;</highlight></codeline>
+<codeline><highlight class="normal">allocatorCreateInfo.<ref refid="struct_vma_allocator_create_info_1ac35aa355d3bfcbf6bb2eb88ccf68125c" kindref="member">device</ref><sp/>=<sp/>device;</highlight></codeline>
+<codeline><highlight class="normal">allocatorCreateInfo.<ref refid="struct_vma_allocator_create_info_1aa2d4e3d86e6828834a56cf9f9406149a" kindref="member">instance</ref><sp/>=<sp/>instance;</highlight></codeline>
+<codeline><highlight class="normal">allocatorCreateInfo.<ref refid="struct_vma_allocator_create_info_1a5e45da0879451e58bee2f3a975f228f5" kindref="member">pVulkanFunctions</ref><sp/>=<sp/>&amp;vulkanFunctions;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref><sp/><ref refid="namespace_vk_tools_1a7195f698aad36f4aa2a4a9e977991486" kindref="member">allocator</ref>;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__init_1gaf77c946fbecfcc54d02c3d1c1e7e23e7" kindref="member">vmaCreateAllocator</ref>(&amp;allocatorCreateInfo,<sp/>&amp;allocator);</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="quick_start_1quick_start_resource_allocation">
+<title>Resource allocation</title>
+<para>When you want to create a buffer or image:</para>
+<para><orderedlist>
+<listitem><para>Fill `VkBufferCreateInfo` / `VkImageCreateInfo` structure.</para>
+</listitem><listitem><para>Fill <ref refid="struct_vma_allocation_create_info" kindref="compound">VmaAllocationCreateInfo</ref> structure.</para>
+</listitem><listitem><para>Call <ref refid="group__group__alloc_1gae9773fe0ef8582e23136d2d83c336ab9" kindref="member">vmaCreateBuffer()</ref> / <ref refid="group__group__alloc_1gaa76142ae43535c862ad9e194a6e38aaa" kindref="member">vmaCreateImage()</ref> to get `VkBuffer`/`VkImage` with memory already allocated and bound to it, plus <ref refid="struct_vma_allocation" kindref="compound">VmaAllocation</ref> objects that represents its underlying memory.</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting><codeline><highlight class="normal">VkBufferCreateInfo<sp/>bufferInfo<sp/>=<sp/>{<sp/>VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO<sp/>};</highlight></codeline>
+<codeline><highlight class="normal">bufferInfo.size<sp/>=<sp/>65536;</highlight></codeline>
+<codeline><highlight class="normal">bufferInfo.usage<sp/>=<sp/>VK_BUFFER_USAGE_VERTEX_BUFFER_BIT<sp/>|<sp/>VK_BUFFER_USAGE_TRANSFER_DST_BIT;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocation_create_info" kindref="compound">VmaAllocationCreateInfo</ref><sp/>allocInfo<sp/>=<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal">allocInfo.<ref refid="struct_vma_allocation_create_info_1accb8b06b1f677d858cb9af20705fa910" kindref="member">usage</ref><sp/>=<sp/><ref refid="group__group__alloc_1ggaa5846affa1e9da3800e3e78fae2305cca27cde9026a84d34d525777baa41fce6e" kindref="member">VMA_MEMORY_USAGE_AUTO</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">VkBuffer<sp/>buffer;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocation" kindref="compound">VmaAllocation</ref><sp/>allocation;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__alloc_1gae9773fe0ef8582e23136d2d83c336ab9" kindref="member">vmaCreateBuffer</ref>(allocator,<sp/>&amp;bufferInfo,<sp/>&amp;allocInfo,<sp/>&amp;buffer,<sp/>&amp;allocation,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para>
+<para>Don&apos;t forget to destroy your objects when no longer needed:</para>
+<para><programlisting><codeline><highlight class="normal"><ref refid="group__group__alloc_1gafcc45e5a6388ab35daa9a46688baee20" kindref="member">vmaDestroyBuffer</ref>(allocator,<sp/>buffer,<sp/>allocation);</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__init_1ga0383c8c957625914e9b89bd165ff13f3" kindref="member">vmaDestroyAllocator</ref>(allocator);</highlight></codeline>
+</programlisting> </para>
+</sect1>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h"/>
+  </compounddef>
+</doxygen>

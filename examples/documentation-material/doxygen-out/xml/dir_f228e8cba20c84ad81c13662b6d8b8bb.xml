@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_f228e8cba20c84ad81c13662b6d8b8bb" kind="dir">
+    <compoundname>shadow-engine/shadow-entity/Entities</compoundname>
+    <innerdir refid="dir_e7424726fc8caaee73b2ae074bcb9c26">shadow-engine/shadow-entity/Entities/Internal</innerdir>
+    <innerfile refid="shadow-entity_2_entities_2_camera_8cpp">Camera.cpp</innerfile>
+    <innerfile refid="shadow-entity_2_entities_2_camera_8h">Camera.h</innerfile>
+    <innerfile refid="_directional_light_8cpp">DirectionalLight.cpp</innerfile>
+    <innerfile refid="_directional_light_8h">DirectionalLight.h</innerfile>
+    <innerfile refid="_first_person_camera_8cpp">FirstPersonCamera.cpp</innerfile>
+    <innerfile refid="_first_person_camera_8h">FirstPersonCamera.h</innerfile>
+    <innerfile refid="_mesh_renderer_8cpp">MeshRenderer.cpp</innerfile>
+    <innerfile refid="_mesh_renderer_8h">MeshRenderer.h</innerfile>
+    <innerfile refid="_player_8cpp">Player.cpp</innerfile>
+    <innerfile refid="_player_8h">Player.h</innerfile>
+    <innerfile refid="_point_light_8cpp">PointLight.cpp</innerfile>
+    <innerfile refid="_point_light_8h">PointLight.h</innerfile>
+    <innerfile refid="_sky_sphere_8cpp">SkySphere.cpp</innerfile>
+    <innerfile refid="_sky_sphere_8h">SkySphere.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-entity/Entities/"/>
+  </compounddef>
+</doxygen>

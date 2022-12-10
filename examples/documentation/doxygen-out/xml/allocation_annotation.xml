@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="allocation_annotation" kind="page">
+    <compoundname>allocation_annotation</compoundname>
+    <title>Allocation names and user data</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="allocation_annotation_1allocation_user_data">
+<title>Allocation user data</title>
+<para>You can annotate allocations with your own information, e.g. for debugging purposes. To do that, fill <ref refid="struct_vma_allocation_create_info_1a74e2eb74b3772b657c59473ce605058a" kindref="member">VmaAllocationCreateInfo::pUserData</ref> field when creating an allocation. It is an opaque `void*` pointer. You can use it e.g. as a pointer, some handle, index, key, ordinal number or any other value that would associate the allocation with your custom metadata. It it useful to identify appropriate data structures in your engine given <ref refid="struct_vma_allocation" kindref="compound">VmaAllocation</ref>, e.g. when doing <ref refid="defragmentation" kindref="compound">Defragmentation</ref>.</para>
+<para><programlisting><codeline><highlight class="normal">VkBufferCreateInfo<sp/>bufCreateInfo<sp/>=<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">MyBufferMetadata*<sp/>pMetadata<sp/>=<sp/>CreateBufferMetadata();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocation_create_info" kindref="compound">VmaAllocationCreateInfo</ref><sp/>allocCreateInfo<sp/>=<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal">allocCreateInfo.<ref refid="struct_vma_allocation_create_info_1accb8b06b1f677d858cb9af20705fa910" kindref="member">usage</ref><sp/>=<sp/><ref refid="group__group__alloc_1ggaa5846affa1e9da3800e3e78fae2305cca27cde9026a84d34d525777baa41fce6e" kindref="member">VMA_MEMORY_USAGE_AUTO</ref>;</highlight></codeline>
+<codeline><highlight class="normal">allocCreateInfo.<ref refid="struct_vma_allocation_create_info_1a74e2eb74b3772b657c59473ce605058a" kindref="member">pUserData</ref><sp/>=<sp/>pMetadata;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">VkBuffer<sp/>buffer;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocation" kindref="compound">VmaAllocation</ref><sp/>allocation;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__alloc_1gae9773fe0ef8582e23136d2d83c336ab9" kindref="member">vmaCreateBuffer</ref>(allocator,<sp/>&amp;bufCreateInfo,<sp/>&amp;allocCreateInfo,<sp/>&amp;buffer,<sp/>&amp;allocation,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para>
+<para>The pointer may be later retrieved as <ref refid="struct_vma_allocation_info_1ad0ea9d64dd733ffd7beff7af6d289ad0" kindref="member">VmaAllocationInfo::pUserData</ref>:</para>
+<para><programlisting><codeline><highlight class="normal"><ref refid="struct_vma_allocation_info" kindref="compound">VmaAllocationInfo</ref><sp/>allocInfo;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__alloc_1gab9c96ca6bb55ad9069829fe8355bbb79" kindref="member">vmaGetAllocationInfo</ref>(allocator,<sp/>allocation,<sp/>&amp;allocInfo);</highlight></codeline>
+<codeline><highlight class="normal">MyBufferMetadata*<sp/>pMetadata<sp/>=<sp/>(MyBufferMetadata*)allocInfo.<ref refid="struct_vma_allocation_info_1ad0ea9d64dd733ffd7beff7af6d289ad0" kindref="member">pUserData</ref>;</highlight></codeline>
+</programlisting></para>
+<para>It can also be changed using function <ref refid="group__group__alloc_1gac1f392a3c70a647f0c53a9ddaa7a6f14" kindref="member">vmaSetAllocationUserData()</ref>.</para>
+<para>Values of (non-zero) allocations&apos; `pUserData` are printed in JSON report created by <ref refid="group__group__stats_1ga9326cba3c64929b59a15c3ca9cdc8cdb" kindref="member">vmaBuildStatsString()</ref> in hexadecimal form.</para>
+</sect1>
+<sect1 id="allocation_annotation_1allocation_names">
+<title>Allocation names</title>
+<para>An allocation can also carry a null-terminated string, giving a name to the allocation. To set it, call <ref refid="group__group__alloc_1ga29b210b1f39e49de844fc7b6944736d7" kindref="member">vmaSetAllocationName()</ref>. The library creates internal copy of the string, so the pointer you pass doesn&apos;t need to be valid for whole lifetime of the allocation. You can free it after the call.</para>
+<para><programlisting><codeline><highlight class="normal">std::string<sp/>imageName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Texture:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal">imageName<sp/>+=<sp/>fileName;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__alloc_1ga29b210b1f39e49de844fc7b6944736d7" kindref="member">vmaSetAllocationName</ref>(allocator,<sp/>allocation,<sp/>imageName.c_str());</highlight></codeline>
+</programlisting></para>
+<para>The string can be later retrieved by inspecting <ref refid="struct_vma_allocation_info_1ad82b9dfb58e5415da0ee8521c1fbf429" kindref="member">VmaAllocationInfo::pName</ref>. It is also printed in JSON report created by <ref refid="group__group__stats_1ga9326cba3c64929b59a15c3ca9cdc8cdb" kindref="member">vmaBuildStatsString()</ref>.</para>
+<para><simplesect kind="note"><para>Setting string name to VMA allocation doesn&apos;t automatically set it to the Vulkan buffer or image created with it. You must do it manually using an extension like VK_EXT_debug_utils, which is independent of this library. </para>
+</simplesect>
+</para>
+</sect1>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h"/>
+  </compounddef>
+</doxygen>

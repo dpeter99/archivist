@@ -1,0 +1,676 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_image_8h" kind="file" language="C++">
+    <compoundname>Image.h</compoundname>
+    <includes refid="_tools_8h" local="yes">vlkx/vulkan/Tools.h</includes>
+    <includes refid="_image_usage_8h" local="yes">ImageUsage.h</includes>
+    <includes refid="_ref_counter_8h" local="no">shadow/util/RefCounter.h</includes>
+    <includes refid="_buffer_8h" local="yes">Buffer.h</includes>
+    <includes local="no">array</includes>
+    <includes local="no">utility</includes>
+    <includedby refid="_generic_render_pass_8h" local="yes">shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GenericRenderPass.h</includedby>
+    <includedby refid="_screen_render_pass_8h" local="yes">shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h</includedby>
+    <includedby refid="_swap_chain_8h" local="yes">shadow-engine/shadow-renderer/inc/vlkx/vulkan/SwapChain.h</includedby>
+    <includedby refid="_screen_render_pass_8cpp" local="yes">shadow-engine/shadow-renderer/src/render/render_pass/ScreenRenderPass.cpp</includedby>
+    <includedby refid="_image_8cpp" local="yes">shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp</includedby>
+    <incdepgraph>
+      <node id="13">
+        <label>exports.h</label>
+        <link refid="exports_8h"/>
+      </node>
+      <node id="2">
+        <label>vlkx/vulkan/Tools.h</label>
+        <link refid="_tools_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>vlkx/vulkan/ValidationAndExtension.h</label>
+        <link refid="_validation_and_extension_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>VulkanDevice.h</label>
+        <link refid="_vulkan_device_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>Buffer.h</label>
+        <link refid="_buffer_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h</label>
+        <link refid="_image_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>ImageUsage.h</label>
+        <link refid="_image_usage_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>vulkan/vk_mem_alloc.h</label>
+        <link refid="vk__mem__alloc_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>shadow/util/RefCounter.h</label>
+        <link refid="_ref_counter_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>SDL.h</label>
+      </node>
+      <node id="22">
+        <label>array</label>
+      </node>
+      <node id="4">
+        <label>functional</label>
+      </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="16">
+        <label>map</label>
+      </node>
+      <node id="19">
+        <label>memory</label>
+      </node>
+      <node id="15">
+        <label>optional</label>
+      </node>
+      <node id="10">
+        <label>set</label>
+      </node>
+      <node id="3">
+        <label>stdexcept</label>
+      </node>
+      <node id="17">
+        <label>string</label>
+      </node>
+      <node id="23">
+        <label>utility</label>
+      </node>
+      <node id="21">
+        <label>variant</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+      <node id="5">
+        <label>vulkan/vulkan.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="13">
+        <label>shadow-engine/core/src/core/ShadowApplication.cpp</label>
+        <link refid="_shadow_application_8cpp"/>
+      </node>
+      <node id="3">
+        <label>shadow-engine/shadow-renderer/inc/temp/model/Builder.h</label>
+        <link refid="_builder_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h</label>
+        <link refid="_g_p_u_pass_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GenericRenderPass.h</label>
+        <link refid="_generic_render_pass_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h</label>
+        <link refid="_screen_render_pass_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h</label>
+        <link refid="_pipeline_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/vulkan/SwapChain.h</label>
+        <link refid="_swap_chain_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h</label>
+        <link refid="_vulkan_module_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Descriptor.h</label>
+        <link refid="_descriptor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h</label>
+        <link refid="_image_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp</label>
+        <link refid="_pipeline_8cpp"/>
+      </node>
+      <node id="6">
+        <label>shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp</label>
+        <link refid="_g_p_u_pass_8cpp"/>
+      </node>
+      <node id="10">
+        <label>shadow-engine/shadow-renderer/src/render/render_pass/GenericRenderPass.cpp</label>
+        <link refid="_generic_render_pass_8cpp"/>
+      </node>
+      <node id="7">
+        <label>shadow-engine/shadow-renderer/src/render/render_pass/ScreenRenderPass.cpp</label>
+        <link refid="_screen_render_pass_8cpp"/>
+      </node>
+      <node id="4">
+        <label>shadow-engine/shadow-renderer/src/temp/model/Builder.cpp</label>
+        <link refid="_builder_8cpp"/>
+      </node>
+      <node id="18">
+        <label>shadow-engine/shadow-renderer/src/vulkan/SwapChain.cpp</label>
+        <link refid="_swap_chain_8cpp"/>
+      </node>
+      <node id="9">
+        <label>shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp</label>
+        <link refid="_vulkan_module_8cpp"/>
+      </node>
+      <node id="19">
+        <label>shadow-engine/shadow-renderer/src/vulkan/abstraction/Buffer.cpp</label>
+        <link refid="_buffer_8cpp"/>
+      </node>
+      <node id="20">
+        <label>shadow-engine/shadow-renderer/src/vulkan/abstraction/Commands.cpp</label>
+        <link refid="_commands_8cpp"/>
+      </node>
+      <node id="17">
+        <label>shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp</label>
+        <link refid="_descriptor_8cpp"/>
+      </node>
+      <node id="21">
+        <label>shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp</label>
+        <link refid="_image_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classvlkx_1_1_image_descriptor" prot="public">vlkx::ImageDescriptor</innerclass>
+    <innerclass refid="structvlkx_1_1_image_descriptor_1_1_dimension" prot="public">vlkx::ImageDescriptor::Dimension</innerclass>
+    <innerclass refid="classvlkx_1_1_image_staging_buffer" prot="public">vlkx::ImageStagingBuffer</innerclass>
+    <innerclass refid="classvlkx_1_1_image_buffer" prot="public">vlkx::ImageBuffer</innerclass>
+    <innerclass refid="classvlkx_1_1_image" prot="public">vlkx::Image</innerclass>
+    <innerclass refid="classvlkx_1_1_image_sampler" prot="public">vlkx::ImageSampler</innerclass>
+    <innerclass refid="structvlkx_1_1_image_sampler_1_1_config" prot="public">vlkx::ImageSampler::Config</innerclass>
+    <innerclass refid="classvlkx_1_1_samplable_image" prot="public">vlkx::SamplableImage</innerclass>
+    <innerclass refid="classvlkx_1_1_texture_image" prot="public">vlkx::TextureImage</innerclass>
+    <innerclass refid="structvlkx_1_1_texture_image_1_1_meta" prot="public">vlkx::TextureImage::Meta</innerclass>
+    <innerclass refid="classvlkx_1_1_texture_image_1_1_texture_buffer" prot="private">vlkx::TextureImage::TextureBuffer</innerclass>
+    <innerclass refid="classvlkx_1_1_ref_counted_texture" prot="public">vlkx::RefCountedTexture</innerclass>
+    <innerclass refid="structvlkx_1_1_ref_counted_texture_1_1_cubemap_location" prot="public">vlkx::RefCountedTexture::CubemapLocation</innerclass>
+    <innerclass refid="classvlkx_1_1_depth_stencil_image" prot="public">vlkx::DepthStencilImage</innerclass>
+    <innerclass refid="classvlkx_1_1_depth_stencil_image_1_1_depth_stencil_buffer" prot="private">vlkx::DepthStencilImage::DepthStencilBuffer</innerclass>
+    <innerclass refid="classvlkx_1_1_swapchain_image" prot="public">vlkx::SwapchainImage</innerclass>
+    <innerclass refid="classvlkx_1_1_multisample_image" prot="public">vlkx::MultisampleImage</innerclass>
+    <innerclass refid="classvlkx_1_1_multisample_image_1_1_multisample_buffer" prot="private">vlkx::MultisampleImage::MultisampleBuffer</innerclass>
+    <innernamespace refid="namespacevlkx">vlkx</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_tools_8h" kindref="compound">vlkx/vulkan/Tools.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_image_usage_8h" kindref="compound">ImageUsage.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_ref_counter_8h" kindref="compound">shadow/util/RefCounter.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_buffer_8h" kindref="compound">Buffer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacevlkx" kindref="compound">vlkx</ref><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Describes<sp/>an<sp/>image<sp/>without<sp/>initializing<sp/>or<sp/>storing<sp/>any<sp/>heavy<sp/>data.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classvlkx_1_1_image_descriptor" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_image_descriptor" kindref="compound">ImageDescriptor</ref><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16" refid="classvlkx_1_1_image_descriptor_1a6e183c614c5b0aa6ee0a1e37e414e0c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_descriptor_1a6e183c614c5b0aa6ee0a1e37e414e0c8" kindref="member">Type</ref><sp/>{<sp/><ref refid="classvlkx_1_1_image_descriptor_1a6e183c614c5b0aa6ee0a1e37e414e0c8a66ba162102bbf6ae31b522aec561735e" kindref="member">Single</ref>,<sp/><ref refid="classvlkx_1_1_image_descriptor_1a6e183c614c5b0aa6ee0a1e37e414e0c8a29b142520cd0349c9f7375be4aa848c0" kindref="member">Cubemap</ref><sp/>};</highlight></codeline>
+<codeline lineno="17" refid="structvlkx_1_1_image_descriptor_1_1_dimension" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvlkx_1_1_image_descriptor_1_1_dimension" kindref="compound">Dimension</ref><sp/>{</highlight></codeline>
+<codeline lineno="18" refid="structvlkx_1_1_image_descriptor_1_1_dimension_1ae9f71856b368176f3e260b7b3d8da8b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structvlkx_1_1_image_descriptor_1_1_dimension_1ae9f71856b368176f3e260b7b3d8da8b8" kindref="member">width</ref>;</highlight></codeline>
+<codeline lineno="19" refid="structvlkx_1_1_image_descriptor_1_1_dimension_1a5246fa0ea30b223d0ead465bfba5473a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structvlkx_1_1_image_descriptor_1_1_dimension_1a5246fa0ea30b223d0ead465bfba5473a" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="20" refid="structvlkx_1_1_image_descriptor_1_1_dimension_1a4f5d4d3b3eb8a5c4a6ad1750da79e46f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structvlkx_1_1_image_descriptor_1_1_dimension_1a4f5d4d3b3eb8a5c4a6ad1750da79e46f" kindref="member">channels</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="structvlkx_1_1_image_descriptor_1_1_dimension_1ab2e2ceb5210340680a66213153405c46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkExtent2D<sp/><ref refid="structvlkx_1_1_image_descriptor_1_1_dimension_1ab2e2ceb5210340680a66213153405c46" kindref="member">getExtent</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<sp/><ref refid="structvlkx_1_1_image_descriptor_1_1_dimension_1ae9f71856b368176f3e260b7b3d8da8b8" kindref="member">width</ref>,<sp/><ref refid="structvlkx_1_1_image_descriptor_1_1_dimension_1a5246fa0ea30b223d0ead465bfba5473a" kindref="member">height</ref><sp/>};<sp/>}</highlight></codeline>
+<codeline lineno="23" refid="structvlkx_1_1_image_descriptor_1_1_dimension_1a382fcebd738dd011ca623f95f4592431" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_image_descriptor_1_1_dimension_1a382fcebd738dd011ca623f95f4592431" kindref="member">getSize</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_image_descriptor_1_1_dimension_1ae9f71856b368176f3e260b7b3d8da8b8" kindref="member">width</ref><sp/>*<sp/><ref refid="structvlkx_1_1_image_descriptor_1_1_dimension_1a5246fa0ea30b223d0ead465bfba5473a" kindref="member">height</ref><sp/>*<sp/><ref refid="structvlkx_1_1_image_descriptor_1_1_dimension_1a4f5d4d3b3eb8a5c4a6ad1750da79e46f" kindref="member">channels</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classvlkx_1_1_image_descriptor_1a66550c634edcdf9996a8a7f15912eb52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_image_descriptor_1a6e183c614c5b0aa6ee0a1e37e414e0c8" kindref="member">Type</ref><sp/><ref refid="classvlkx_1_1_image_descriptor_1a66550c634edcdf9996a8a7f15912eb52" kindref="member">getType</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type;<sp/>}</highlight></codeline>
+<codeline lineno="27" refid="classvlkx_1_1_image_descriptor_1a9d78e1245db294ed5d4a90be69839801" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkExtent2D<sp/><ref refid="classvlkx_1_1_image_descriptor_1a9d78e1245db294ed5d4a90be69839801" kindref="member">getExtent</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dimensions.<ref refid="structvlkx_1_1_image_descriptor_1_1_dimension_1ab2e2ceb5210340680a66213153405c46" kindref="member">getExtent</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="28" refid="classvlkx_1_1_image_descriptor_1a364026059da04edbc8092aa41132dad5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classvlkx_1_1_image_descriptor_1a364026059da04edbc8092aa41132dad5" kindref="member">getWidth</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dimensions.<ref refid="structvlkx_1_1_image_descriptor_1_1_dimension_1ae9f71856b368176f3e260b7b3d8da8b8" kindref="member">width</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="29" refid="classvlkx_1_1_image_descriptor_1af5bac38365ca952a15cc052c3b03bb57" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classvlkx_1_1_image_descriptor_1af5bac38365ca952a15cc052c3b03bb57" kindref="member">getHeight</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dimensions.<ref refid="structvlkx_1_1_image_descriptor_1_1_dimension_1a5246fa0ea30b223d0ead465bfba5473a" kindref="member">height</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="30" refid="classvlkx_1_1_image_descriptor_1a72260b8ebbb6d6b4e1984f79892627d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classvlkx_1_1_image_descriptor_1a72260b8ebbb6d6b4e1984f79892627d8" kindref="member">getChannels</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dimensions.<ref refid="structvlkx_1_1_image_descriptor_1_1_dimension_1a4f5d4d3b3eb8a5c4a6ad1750da79e46f" kindref="member">channels</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classvlkx_1_1_image_descriptor_1a1d46a869dc88dd4df380c8dfa2cc942b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;void*&gt;<sp/><ref refid="classvlkx_1_1_image_descriptor_1a1d46a869dc88dd4df380c8dfa2cc942b" kindref="member">getData</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type<sp/>==<sp/><ref refid="classvlkx_1_1_image_descriptor_1a6e183c614c5b0aa6ee0a1e37e414e0c8a66ba162102bbf6ae31b522aec561735e" kindref="member">Type::Single</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)<sp/>data<sp/>};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;void*&gt;<sp/>dataPtrs;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dataPtrs.reserve(6);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>offset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>6;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dataPtrs.emplace_back((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>data<sp/>+<sp/>offset);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offset<sp/>+=<sp/>dimensions.<ref refid="structvlkx_1_1_image_descriptor_1_1_dimension_1a382fcebd738dd011ca623f95f4592431" kindref="member">getSize</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dataPtrs;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classvlkx_1_1_image_descriptor_1aecf77455db73611d183f007dd3b3d9b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_descriptor_1aecf77455db73611d183f007dd3b3d9b9" kindref="member">getLayers</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type<sp/>==<sp/><ref refid="classvlkx_1_1_image_descriptor_1a6e183c614c5b0aa6ee0a1e37e414e0c8a66ba162102bbf6ae31b522aec561735e" kindref="member">Type::Single</ref><sp/>?<sp/>1<sp/>:<sp/>6;<sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classvlkx_1_1_image_descriptor_1afc74870a2543eb54792a4e05d762b38e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_image_descriptor_1afc74870a2543eb54792a4e05d762b38e" kindref="member">ImageDescriptor</ref>(<ref refid="classvlkx_1_1_image_descriptor_1a6e183c614c5b0aa6ee0a1e37e414e0c8" kindref="member">Type</ref><sp/>t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_image_descriptor_1_1_dimension" kindref="compound">Dimension</ref>&amp;<sp/>d,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>ptr)<sp/>:<sp/>type(t),<sp/>dimensions(d),<sp/>data(ptr)<sp/>{}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_image_descriptor_1a6e183c614c5b0aa6ee0a1e37e414e0c8" kindref="member">Type</ref><sp/>type;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dimension<sp/>dimensions;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>staging<sp/>buffer<sp/>specialized<sp/>for<sp/>uploading<sp/>images.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classvlkx_1_1_image_staging_buffer" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_image_staging_buffer" kindref="compound">ImageStagingBuffer</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_staging_buffer" kindref="compound">StagingBuffer</ref><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_staging_buffer_1a683dc1c732c3bf22ee4e0c25e3bb9877" kindref="member">StagingBuffer::StagingBuffer</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classvlkx_1_1_image_staging_buffer_1a3cd423118c62e29470c354dc236911e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_image_staging_buffer_1a3cd423118c62e29470c354dc236911e6" kindref="member">ImageStagingBuffer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_staging_buffer" kindref="compound">ImageStagingBuffer</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63" refid="classvlkx_1_1_image_staging_buffer_1ad9b662adef19fab19dd5626b4f055eaa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_image_staging_buffer" kindref="compound">ImageStagingBuffer</ref>&amp;<sp/><ref refid="classvlkx_1_1_image_staging_buffer_1ad9b662adef19fab19dd5626b4f055eaa" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_staging_buffer" kindref="compound">ImageStagingBuffer</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_staging_buffer_1a0c6f5888796d7817a6e21bd92e7290df" kindref="member">copy</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkImage&amp;<sp/>target,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkExtent3D&amp;<sp/>extent,<sp/>uint32_t<sp/>layers)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Root<sp/>class<sp/>that<sp/>stores<sp/>image<sp/>data<sp/>on<sp/>GPU<sp/>buffers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classvlkx_1_1_image_buffer" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_image_buffer" kindref="compound">ImageBuffer</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_buffer" kindref="compound">Buffer</ref><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="71" refid="classvlkx_1_1_image_buffer_1a7e8c4a3cdc9fff6cbbac10ca387f96f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_image_buffer_1a7e8c4a3cdc9fff6cbbac10ca387f96f4" kindref="member">ImageBuffer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_buffer" kindref="compound">ImageBuffer</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72" refid="classvlkx_1_1_image_buffer_1af504fd2db1c92a93dd16717a71c77d4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_image_buffer" kindref="compound">ImageBuffer</ref>&amp;<sp/><ref refid="classvlkx_1_1_image_buffer_1af504fd2db1c92a93dd16717a71c77d4c" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_buffer" kindref="compound">ImageBuffer</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classvlkx_1_1_image_buffer_1aae7932a11b4cb26b6579c68425043b7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_image_buffer_1aae7932a11b4cb26b6579c68425043b7c" kindref="member">~ImageBuffer</ref>()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__alloc_1ga2f6367e612daace5c5ecd7ef9e47c3fd" kindref="member">vmaDestroyImage</ref>(<ref refid="namespace_vk_tools_1a7195f698aad36f4aa2a4a9e977991486" kindref="member">VkTools::allocator</ref>,<sp/>image.<ref refid="struct_vk_tools_1_1_managed_image_1a73d0711b937a6a5f66d86c67c82d43ab" kindref="member">image</ref>,<sp/>image.<ref refid="struct_vk_tools_1_1_managed_image_1a227e2f36e2909fae4291e1298b1d5efa" kindref="member">allocation</ref>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classvlkx_1_1_image_buffer_1a1225bb009adc667e09e2de733c532b4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_vk_tools_1_1_managed_image" kindref="compound">VkTools::ManagedImage</ref>&amp;<sp/><ref refid="classvlkx_1_1_image_buffer_1a1225bb009adc667e09e2de733c532b4b" kindref="member">get</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>image;<sp/>}</highlight></codeline>
+<codeline lineno="79" refid="classvlkx_1_1_image_buffer_1a8af69d019a352c47d1a9ceee8da5bbd8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkImage&amp;<sp/><ref refid="classvlkx_1_1_image_buffer_1a8af69d019a352c47d1a9ceee8da5bbd8" kindref="member">getImage</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>image.<ref refid="struct_vk_tools_1_1_managed_image_1a73d0711b937a6a5f66d86c67c82d43ab" kindref="member">image</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_buffer_1a055bf8f2da8b0c7084493579a2f27ccb" kindref="member">Buffer::Buffer</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classvlkx_1_1_image_buffer_1ad35569abbda03b3d34685fe5fe0397c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_buffer_1ad35569abbda03b3d34685fe5fe0397c1" kindref="member">setImage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_vk_tools_1_1_managed_image" kindref="compound">VkTools::ManagedImage</ref><sp/>newImg)<sp/>{<sp/>image<sp/>=<sp/>newImg;<sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_vk_tools_1_1_managed_image" kindref="compound">VkTools::ManagedImage</ref><sp/>image;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Base<sp/>class<sp/>of<sp/>all<sp/>images;<sp/>stores<sp/>the<sp/>common<sp/>data.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="classvlkx_1_1_image" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_image" kindref="compound">Image</ref><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="94" refid="classvlkx_1_1_image_1a86105309cd906795ab8f49b565bc5cd5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_image_1a86105309cd906795ab8f49b565bc5cd5" kindref="member">Image</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image" kindref="compound">Image</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95" refid="classvlkx_1_1_image_1a61ede908c89b0a10c655949808581e46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_image" kindref="compound">Image</ref>&amp;<sp/><ref refid="classvlkx_1_1_image_1a61ede908c89b0a10c655949808581e46" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image" kindref="compound">Image</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="classvlkx_1_1_image_1a4e2c195d40a4b560443dd1bbb143fe0e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_1a4e2c195d40a4b560443dd1bbb143fe0e" kindref="member">~Image</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkDestroyImageView(<ref refid="classvlkx_1_1_image_1ad3c9f7725c0326b3a6ed15af0e5b3311" kindref="member">dev</ref>-&gt;<ref refid="class_vulkan_device_1a7ae557d71031d0212e50beba8b976d4b" kindref="member">logical</ref>,<sp/><ref refid="classvlkx_1_1_image_1aeca0538721261dcfd4c18597db16e569" kindref="member">view</ref>,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="classvlkx_1_1_image_1a4c75d7018b0881c19382ec7805ff06a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>VkDescriptorType<sp/><ref refid="classvlkx_1_1_image_1a4c75d7018b0881c19382ec7805ff06a2" kindref="member">getSampleType</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;<sp/>}</highlight></codeline>
+<codeline lineno="102" refid="classvlkx_1_1_image_1aea109b1d894c87e2f9ef160f9164df94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>VkDescriptorType<sp/><ref refid="classvlkx_1_1_image_1aea109b1d894c87e2f9ef160f9164df94" kindref="member">getLinearType</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>VK_DESCRIPTOR_TYPE_STORAGE_IMAGE;<sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_descriptor" kindref="compound">ImageDescriptor</ref><sp/><ref refid="classvlkx_1_1_image_1ace0107e2305fa465e515452f3763cc42" kindref="member">loadSingleFromDisk</ref>(std::string<sp/>path,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>flipY);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>following<sp/>are<sp/>left<sp/>unimplemented<sp/>intentionally.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//static<sp/>ImageDescriptor<sp/>loadSingleFromVFS(std::string<sp/>path,<sp/>bool<sp/>flipY);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_descriptor" kindref="compound">ImageDescriptor</ref><sp/><ref refid="classvlkx_1_1_image_1a84cae485afc47224352f4a45d8c1d323" kindref="member">loadCubeFromDisk</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>directory,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::array&lt;std::string,<sp/>6&gt;&amp;<sp/>files,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>flipY);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//static<sp/>ImageDescriptor<sp/>loadCubeFromVFS(std::string<sp/>directory,<sp/>const<sp/>std::array&lt;std::string,<sp/>6&gt;&amp;<sp/>files,<sp/>bool<sp/>flipY);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="classvlkx_1_1_image_1a6f83af709998b8b943bd7eb2f256ccb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref><sp/><ref refid="classvlkx_1_1_image_1a6f83af709998b8b943bd7eb2f256ccb3" kindref="member">getUsage</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref><sp/>{};<sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="classvlkx_1_1_image_1aa6e80385448248ebf72c1f1b324fb3ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_vk_tools_1_1_managed_image" kindref="compound">VkTools::ManagedImage</ref>&amp;<sp/><ref refid="classvlkx_1_1_image_1aa6e80385448248ebf72c1f1b324fb3ea" kindref="member">operator*</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_1a63fd9adffc756b6dfaf1f6c450d48b7f" kindref="member">get</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="classvlkx_1_1_image_1a63fd9adffc756b6dfaf1f6c450d48b7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_vk_tools_1_1_managed_image" kindref="compound">VkTools::ManagedImage</ref>&amp;<sp/><ref refid="classvlkx_1_1_image_1a63fd9adffc756b6dfaf1f6c450d48b7f" kindref="member">get</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="115" refid="classvlkx_1_1_image_1a6c8bc5ea401cb84fdd42f83df5e73c49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkImage&amp;<sp/><ref refid="classvlkx_1_1_image_1a6c8bc5ea401cb84fdd42f83df5e73c49" kindref="member">getImage</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="classvlkx_1_1_image_1ab434a1c52c416a7c98a49c94695499d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkImageView&amp;<sp/><ref refid="classvlkx_1_1_image_1ab434a1c52c416a7c98a49c94695499d7" kindref="member">getView</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_1aeca0538721261dcfd4c18597db16e569" kindref="member">view</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="118" refid="classvlkx_1_1_image_1aa6692fe8203c2f1f886b6442849c1d20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkExtent2D&amp;<sp/><ref refid="classvlkx_1_1_image_1aa6692fe8203c2f1f886b6442849c1d20" kindref="member">getExtent</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_1af8b5b8edcc1c31e433636f8df7a8cd65" kindref="member">extent</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="119" refid="classvlkx_1_1_image_1ac9068c38b75bbc202a4613957cbc2b07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkFormat<sp/><ref refid="classvlkx_1_1_image_1ac9068c38b75bbc202a4613957cbc2b07" kindref="member">getFormat</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_1a99d4d8aea8bc079e8f6100d781c491fb" kindref="member">format</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="120" refid="classvlkx_1_1_image_1aed5769c2d20163af3ec2410ea914c8b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>VkSampleCountFlagBits<sp/><ref refid="classvlkx_1_1_image_1aed5769c2d20163af3ec2410ea914c8b1" kindref="member">getSamples</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>VK_SAMPLE_COUNT_1_BIT;<sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_image" kindref="compound">Image</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkExtent2D&amp;<sp/>ext,<sp/>VkFormat<sp/>form);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="classvlkx_1_1_image_1a754306e09548155a57273fd32b3a9638" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_1a754306e09548155a57273fd32b3a9638" kindref="member">setView</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkImageView&amp;<sp/>imgView)<sp/>{<sp/><ref refid="classvlkx_1_1_image_1aeca0538721261dcfd4c18597db16e569" kindref="member">view</ref><sp/>=<sp/>imgView;<sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="classvlkx_1_1_image_1ad3c9f7725c0326b3a6ed15af0e5b3311" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_vulkan_device" kindref="compound">VulkanDevice</ref>*<sp/><ref refid="classvlkx_1_1_image_1ad3c9f7725c0326b3a6ed15af0e5b3311" kindref="member">dev</ref>;</highlight></codeline>
+<codeline lineno="129" refid="classvlkx_1_1_image_1aeca0538721261dcfd4c18597db16e569" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkImageView<sp/><ref refid="classvlkx_1_1_image_1aeca0538721261dcfd4c18597db16e569" kindref="member">view</ref>;</highlight></codeline>
+<codeline lineno="130" refid="classvlkx_1_1_image_1af8b5b8edcc1c31e433636f8df7a8cd65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkExtent2D<sp/><ref refid="classvlkx_1_1_image_1af8b5b8edcc1c31e433636f8df7a8cd65" kindref="member">extent</ref>;</highlight></codeline>
+<codeline lineno="131" refid="classvlkx_1_1_image_1a99d4d8aea8bc079e8f6100d781c491fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkFormat<sp/><ref refid="classvlkx_1_1_image_1a99d4d8aea8bc079e8f6100d781c491fb" kindref="member">format</ref>;</highlight></codeline>
+<codeline lineno="132" refid="classvlkx_1_1_image_1a68cef640edb4ead7111bf6adc1ba60ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkSampleCountFlagBits<sp/><ref refid="classvlkx_1_1_image_1a68cef640edb4ead7111bf6adc1ba60ed" kindref="member">sampleCount</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Configures<sp/>image<sp/>sampling<sp/>in<sp/>a<sp/>sensible<sp/>and<sp/>extensible<sp/>way</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="classvlkx_1_1_image_sampler" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_image_sampler" kindref="compound">ImageSampler</ref><sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="138" refid="structvlkx_1_1_image_sampler_1_1_config" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvlkx_1_1_image_sampler_1_1_config" kindref="compound">Config</ref><sp/>{</highlight></codeline>
+<codeline lineno="139" refid="structvlkx_1_1_image_sampler_1_1_config_1a119363505dfd676da34e4d234f98b344" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_image_sampler_1_1_config_1a119363505dfd676da34e4d234f98b344" kindref="member">Config</ref>(VkFilter<sp/><ref refid="structvlkx_1_1_image_sampler_1_1_config_1a973c98081a55f12867073d6655ab32fa" kindref="member">filter</ref><sp/>=<sp/>VK_FILTER_LINEAR,<sp/>VkSamplerAddressMode<sp/><ref refid="structvlkx_1_1_image_sampler_1_1_config_1adb2885c25bf9bd87788f75c1eb39e0f3" kindref="member">mode</ref><sp/>=<sp/>VK_SAMPLER_ADDRESS_MODE_REPEAT)<sp/>:<sp/><ref refid="structvlkx_1_1_image_sampler_1_1_config_1a973c98081a55f12867073d6655ab32fa" kindref="member">filter</ref>(<ref refid="structvlkx_1_1_image_sampler_1_1_config_1a973c98081a55f12867073d6655ab32fa" kindref="member">filter</ref>),<sp/><ref refid="structvlkx_1_1_image_sampler_1_1_config_1adb2885c25bf9bd87788f75c1eb39e0f3" kindref="member">mode</ref>(<ref refid="structvlkx_1_1_image_sampler_1_1_config_1adb2885c25bf9bd87788f75c1eb39e0f3" kindref="member">mode</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="structvlkx_1_1_image_sampler_1_1_config_1a973c98081a55f12867073d6655ab32fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkFilter<sp/><ref refid="structvlkx_1_1_image_sampler_1_1_config_1a973c98081a55f12867073d6655ab32fa" kindref="member">filter</ref>;</highlight></codeline>
+<codeline lineno="142" refid="structvlkx_1_1_image_sampler_1_1_config_1adb2885c25bf9bd87788f75c1eb39e0f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkSamplerAddressMode<sp/><ref refid="structvlkx_1_1_image_sampler_1_1_config_1adb2885c25bf9bd87788f75c1eb39e0f3" kindref="member">mode</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_image_sampler" kindref="compound">ImageSampler</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mipLevels,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_image_sampler_1_1_config" kindref="compound">Config</ref>&amp;<sp/>config);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="classvlkx_1_1_image_sampler_1a9d11d9fa5dd3e8c62d2e715bd45de109" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_image_sampler_1a9d11d9fa5dd3e8c62d2e715bd45de109" kindref="member">ImageSampler</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_sampler" kindref="compound">ImageSampler</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="148" refid="classvlkx_1_1_image_sampler_1a4ec32f4c689f4d6982e4577e7d69d3cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_image_sampler" kindref="compound">ImageSampler</ref>&amp;<sp/><ref refid="classvlkx_1_1_image_sampler_1a4ec32f4c689f4d6982e4577e7d69d3cb" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_sampler" kindref="compound">ImageSampler</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="classvlkx_1_1_image_sampler_1a4611fb2f9e99a39dfc2d61fec2b58417" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_image_sampler_1a4611fb2f9e99a39dfc2d61fec2b58417" kindref="member">~ImageSampler</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkDestroySampler(dev-&gt;<ref refid="class_vulkan_device_1a7ae557d71031d0212e50beba8b976d4b" kindref="member">logical</ref>,<sp/>sampler,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="classvlkx_1_1_image_sampler_1a6618109bbd07684916b81e83f79b69cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkSampler&amp;<sp/><ref refid="classvlkx_1_1_image_sampler_1a6618109bbd07684916b81e83f79b69cc" kindref="member">operator*</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sampler;<sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkSampler<sp/>sampler;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_vulkan_device" kindref="compound">VulkanDevice</ref>*<sp/>dev;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Root<sp/>of<sp/>images<sp/>which<sp/>can<sp/>be<sp/>sampled.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="classvlkx_1_1_samplable_image" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_samplable_image" kindref="compound">SamplableImage</ref><sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="164" refid="classvlkx_1_1_samplable_image_1ad83265d38baf32d4ee1e7f58b403c49b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_samplable_image_1ad83265d38baf32d4ee1e7f58b403c49b" kindref="member">~SamplableImage</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>a<sp/>VkDescriptorImageInfo<sp/>we<sp/>can<sp/>use<sp/>to<sp/>update<sp/>sets.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="classvlkx_1_1_samplable_image_1aa3d870e3c7cdd22cbc1aa0c6220a9a51" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>VkDescriptorImageInfo<sp/><ref refid="classvlkx_1_1_samplable_image_1aa3d870e3c7cdd22cbc1aa0c6220a9a51" kindref="member">getInfo</ref>(VkImageLayout<sp/>layout)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="168" refid="classvlkx_1_1_samplable_image_1a998e6b786579af52725d8c9855420369" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkDescriptorImageInfo<sp/><ref refid="classvlkx_1_1_samplable_image_1a998e6b786579af52725d8c9855420369" kindref="member">getInfoForSampling</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_samplable_image_1aa3d870e3c7cdd22cbc1aa0c6220a9a51" kindref="member">getInfo</ref>(VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);<sp/>}</highlight></codeline>
+<codeline lineno="169" refid="classvlkx_1_1_samplable_image_1a9c424fcea552597b5c06e2317386f110" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkDescriptorImageInfo<sp/><ref refid="classvlkx_1_1_samplable_image_1a9c424fcea552597b5c06e2317386f110" kindref="member">getInfoForLinear</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_samplable_image_1aa3d870e3c7cdd22cbc1aa0c6220a9a51" kindref="member">getInfo</ref>(VK_IMAGE_LAYOUT_GENERAL);<sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>samplable<sp/>image<sp/>that<sp/>lives<sp/>on<sp/>the<sp/>GPU,<sp/>with<sp/>optional<sp/>mipmapping.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>a<sp/>RefCountedTexture<sp/>when<sp/>loading<sp/>from<sp/>files.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="classvlkx_1_1_texture_image" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_texture_image" kindref="compound">TextureImage</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image" kindref="compound">Image</ref>,<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_samplable_image" kindref="compound">SamplableImage</ref><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Image<sp/>metadata</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="structvlkx_1_1_texture_image_1_1_meta" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvlkx_1_1_texture_image_1_1_meta" kindref="compound">Meta</ref><sp/>{</highlight></codeline>
+<codeline lineno="178" refid="structvlkx_1_1_texture_image_1_1_meta_1ace31206b2ef7302e4ef091270b88a5d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkExtent2D<sp/><ref refid="structvlkx_1_1_texture_image_1_1_meta_1ace31206b2ef7302e4ef091270b88a5d0" kindref="member">getExtent</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<sp/><ref refid="structvlkx_1_1_texture_image_1_1_meta_1af712a22c3366024952417043582e6d5b" kindref="member">width</ref>,<sp/><ref refid="structvlkx_1_1_texture_image_1_1_meta_1a21151ea5a87618cf6edc0bf8e02da1ec" kindref="member">height</ref><sp/>};<sp/>}</highlight></codeline>
+<codeline lineno="179" refid="structvlkx_1_1_texture_image_1_1_meta_1a89af770b55649343d041fe58ed8fe397" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkExtent3D<sp/><ref refid="structvlkx_1_1_texture_image_1_1_meta_1a89af770b55649343d041fe58ed8fe397" kindref="member">get3DExtent</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<sp/><ref refid="structvlkx_1_1_texture_image_1_1_meta_1af712a22c3366024952417043582e6d5b" kindref="member">width</ref>,<sp/><ref refid="structvlkx_1_1_texture_image_1_1_meta_1a21151ea5a87618cf6edc0bf8e02da1ec" kindref="member">height</ref>,<sp/><ref refid="structvlkx_1_1_texture_image_1_1_meta_1a5d40e9e31aac47d346a546545cea0be0" kindref="member">channels</ref><sp/>};<sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvlkx_1_1_buffer_1_1_bulk_copy_meta" kindref="compound">Buffer::BulkCopyMeta</ref><sp/><ref refid="structvlkx_1_1_texture_image_1_1_meta_1adf0bf111bf896c7377fbac55b55edccc" kindref="member">getCopyMeta</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="structvlkx_1_1_texture_image_1_1_meta_1aabc1464055a33b71518ef684785d1379" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;void*&gt;<sp/><ref refid="structvlkx_1_1_texture_image_1_1_meta_1aabc1464055a33b71518ef684785d1379" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="184" refid="structvlkx_1_1_texture_image_1_1_meta_1ac1707a6895a6af2ed92658cb2e46a665" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;ImageUsage&gt;<sp/><ref refid="structvlkx_1_1_texture_image_1_1_meta_1ac1707a6895a6af2ed92658cb2e46a665" kindref="member">usages</ref>;</highlight></codeline>
+<codeline lineno="185" refid="structvlkx_1_1_texture_image_1_1_meta_1aa4fb9980c820ee39880283470d6878b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkFormat<sp/><ref refid="structvlkx_1_1_texture_image_1_1_meta_1aa4fb9980c820ee39880283470d6878b0" kindref="member">format</ref>;</highlight></codeline>
+<codeline lineno="186" refid="structvlkx_1_1_texture_image_1_1_meta_1af712a22c3366024952417043582e6d5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structvlkx_1_1_texture_image_1_1_meta_1af712a22c3366024952417043582e6d5b" kindref="member">width</ref>;</highlight></codeline>
+<codeline lineno="187" refid="structvlkx_1_1_texture_image_1_1_meta_1a21151ea5a87618cf6edc0bf8e02da1ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structvlkx_1_1_texture_image_1_1_meta_1a21151ea5a87618cf6edc0bf8e02da1ec" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="188" refid="structvlkx_1_1_texture_image_1_1_meta_1a5d40e9e31aac47d346a546545cea0be0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structvlkx_1_1_texture_image_1_1_meta_1a5d40e9e31aac47d346a546545cea0be0" kindref="member">channels</ref>;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_texture_image" kindref="compound">TextureImage</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>mipmapping,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_image_sampler_1_1_config" kindref="compound">ImageSampler::Config</ref>&amp;<sp/>samplerConfig,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_texture_image_1_1_meta" kindref="compound">Meta</ref>&amp;<sp/>meta);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_texture_image" kindref="compound">TextureImage</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>mipmapping,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_descriptor" kindref="compound">ImageDescriptor</ref>&amp;<sp/>image,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;ImageUsage&gt;&amp;<sp/>usages,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_image_sampler_1_1_config" kindref="compound">ImageSampler::Config</ref>&amp;<sp/>config);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194" refid="classvlkx_1_1_texture_image_1a5d680edd9e1cb6e84927809f463f760c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_texture_image_1a5d680edd9e1cb6e84927809f463f760c" kindref="member">TextureImage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_texture_image" kindref="compound">TextureImage</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="195" refid="classvlkx_1_1_texture_image_1a3ea418a21c7abc5371592567091eb939" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_texture_image" kindref="compound">TextureImage</ref>&amp;<sp/><ref refid="classvlkx_1_1_texture_image_1a3ea418a21c7abc5371592567091eb939" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_texture_image" kindref="compound">TextureImage</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="classvlkx_1_1_texture_image_1a70071b1b5b50374cce613aa39f187d41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_vk_tools_1_1_managed_image" kindref="compound">VkTools::ManagedImage</ref>&amp;<sp/><ref refid="classvlkx_1_1_texture_image_1a70071b1b5b50374cce613aa39f187d41" kindref="member">get</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buffer.get();<sp/>}</highlight></codeline>
+<codeline lineno="198" refid="classvlkx_1_1_texture_image_1a0ae62428fb6855079e2ce30ba2cbd994" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkImage&amp;<sp/><ref refid="classvlkx_1_1_texture_image_1a0ae62428fb6855079e2ce30ba2cbd994" kindref="member">getImage</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buffer.getImage();<sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="classvlkx_1_1_texture_image_1a5cf677ad4ed749effba8d2d8d624b148" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkDescriptorImageInfo<sp/><ref refid="classvlkx_1_1_texture_image_1a5cf677ad4ed749effba8d2d8d624b148" kindref="member">getInfo</ref>(VkImageLayout<sp/>layout)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<sp/>*sampler,<sp/><ref refid="classvlkx_1_1_image_1ab434a1c52c416a7c98a49c94695499d7" kindref="member">getView</ref>(),<sp/>layout<sp/>};</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Textures<sp/>are<sp/>sampled<sp/>in<sp/>fragment<sp/>shaders.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204" refid="classvlkx_1_1_texture_image_1a634a588b5fb346d72333b41f42832a31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref><sp/><ref refid="classvlkx_1_1_texture_image_1a634a588b5fb346d72333b41f42832a31" kindref="member">getUsage</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_usage_1a50446ec78cd0d2cf41d74b467349fb0d" kindref="member">ImageUsage::sampledFragment</ref>();</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">TextureBuffer<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_buffer" kindref="compound">ImageBuffer</ref><sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TextureBuffer(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>mipmaps,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Meta&amp;<sp/>meta);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TextureBuffer(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TextureBuffer&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TextureBuffer&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TextureBuffer&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getMipping()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mipLevels;<sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mipLevels<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TextureBuffer<sp/>buffer;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ImageSampler<sp/>sampler;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>texture<sp/>image<sp/>that<sp/>lives<sp/>on<sp/>GPU<sp/>that<sp/>is<sp/>reference<sp/>counted.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>allows<sp/>it<sp/>to<sp/>be<sp/>reused<sp/>multiple<sp/>times<sp/>without<sp/>reading<sp/>the<sp/>file<sp/>in<sp/>more<sp/>than<sp/>once.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>It<sp/>also<sp/>allows<sp/>the<sp/>texture<sp/>to<sp/>be<sp/>destructed<sp/>automatically<sp/>once<sp/>nothing<sp/>in<sp/>the<sp/>scene<sp/>uses<sp/>it,<sp/>for<sp/>eg.<sp/>level<sp/>changes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="classvlkx_1_1_ref_counted_texture" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_ref_counted_texture" kindref="compound">RefCountedTexture</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_samplable_image" kindref="compound">SamplableImage</ref><sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cubemaps<sp/>are<sp/>simply<sp/>6<sp/>textures,<sp/>so<sp/>we<sp/>include<sp/>them<sp/>here<sp/>for<sp/>easy<sp/>instantiation.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230" refid="structvlkx_1_1_ref_counted_texture_1_1_cubemap_location" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvlkx_1_1_ref_counted_texture_1_1_cubemap_location" kindref="compound">CubemapLocation</ref><sp/>{</highlight></codeline>
+<codeline lineno="231" refid="structvlkx_1_1_ref_counted_texture_1_1_cubemap_location_1a5d61050f90514c89463e1d095d6d2d80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structvlkx_1_1_ref_counted_texture_1_1_cubemap_location_1a5d61050f90514c89463e1d095d6d2d80" kindref="member">directory</ref>;</highlight></codeline>
+<codeline lineno="232" refid="structvlkx_1_1_ref_counted_texture_1_1_cubemap_location_1a7a361ec30f93d6dd10eec5be6f9b5d17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::array&lt;std::string,<sp/>6&gt;<sp/><ref refid="structvlkx_1_1_ref_counted_texture_1_1_cubemap_location_1a7a361ec30f93d6dd10eec5be6f9b5d17" kindref="member">files</ref>;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reference<sp/>Counting<sp/>works<sp/>on<sp/>both<sp/>individual<sp/>files<sp/>and<sp/>cubemaps,<sp/>so<sp/>we<sp/>put<sp/>them<sp/>together.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236" refid="classvlkx_1_1_ref_counted_texture_1abe22da373d7c7755a32c7339f99800ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_ref_counted_texture_1abe22da373d7c7755a32c7339f99800ab" kindref="member">ImageLocation</ref><sp/>=<sp/>std::variant&lt;std::string,<sp/>CubemapLocation&gt;;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="classvlkx_1_1_ref_counted_texture_1a98dbd16903c6dc8deadbdd2b7d65017c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_ref_counted_texture_1a98dbd16903c6dc8deadbdd2b7d65017c" kindref="member">RefCountedTexture</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_ref_counted_texture_1abe22da373d7c7755a32c7339f99800ab" kindref="member">ImageLocation</ref>&amp;<sp/>location,<sp/>std::vector&lt;ImageUsage&gt;<sp/>usages,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_image_sampler_1_1_config" kindref="compound">ImageSampler::Config</ref>&amp;<sp/>config)</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>texture(get(location,<sp/>std::move(usages),<sp/>config))<sp/>{}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241" refid="classvlkx_1_1_ref_counted_texture_1ab7df4b87d3648a9f71496daf1f4be6f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_ref_counted_texture_1ab7df4b87d3648a9f71496daf1f4be6f2" kindref="member">RefCountedTexture</ref>(<ref refid="classvlkx_1_1_ref_counted_texture" kindref="compound">RefCountedTexture</ref>&amp;&amp;)<sp/>noexcept<sp/>=<sp/>default;</highlight></codeline>
+<codeline lineno="242" refid="classvlkx_1_1_ref_counted_texture_1a5ebc5ffa531e146a8d823bd85e138fd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_ref_counted_texture" kindref="compound">RefCountedTexture</ref>&amp;<sp/>operator=(<ref refid="classvlkx_1_1_ref_counted_texture" kindref="compound">RefCountedTexture</ref>&amp;&amp;)<sp/>noexcept<sp/>=<sp/>default;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244" refid="classvlkx_1_1_ref_counted_texture_1acb64d7a56d6471dac0535e0d99fa214b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkDescriptorImageInfo<sp/><ref refid="classvlkx_1_1_ref_counted_texture_1acb64d7a56d6471dac0535e0d99fa214b" kindref="member">getInfo</ref>(VkImageLayout<sp/>layout)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>texture-&gt;getInfo(layout);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248" refid="classvlkx_1_1_ref_counted_texture_1a9c98bba2283b4eb1eb07730f071c60ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image" kindref="compound">Image</ref>*<sp/><ref refid="classvlkx_1_1_ref_counted_texture_1a9c98bba2283b4eb1eb07730f071c60ef" kindref="member">operator-&gt;</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>texture.operator-&gt;();<sp/>}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">ReferenceCounter<sp/>=<sp/><ref refid="classshadowutil_1_1_ref_counter" kindref="compound">shadowutil::RefCounter&lt;TextureImage&gt;</ref>;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>or<sp/>load<sp/>the<sp/>specified<sp/>image.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ReferenceCounter<sp/>get(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_ref_counted_texture_1abe22da373d7c7755a32c7339f99800ab" kindref="member">ImageLocation</ref>&amp;<sp/>location,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;ImageUsage&gt;&amp;<sp/>usages,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_image_sampler_1_1_config" kindref="compound">ImageSampler::Config</ref>&amp;<sp/>config);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ReferenceCounter<sp/>texture;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>unowned,<sp/>offscreen<sp/>images.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Image<sp/>that<sp/>can<sp/>be<sp/>used<sp/>as<sp/>a<sp/>depth<sp/>/<sp/>stencil<sp/>buffer<sp/>attachment.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261" refid="classvlkx_1_1_depth_stencil_image" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_depth_stencil_image" kindref="compound">DepthStencilImage</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image" kindref="compound">Image</ref><sp/>{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="263" refid="classvlkx_1_1_depth_stencil_image_1a2238077741430cd7b5b1d746bbfa83c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_depth_stencil_image_1a2238077741430cd7b5b1d746bbfa83c5" kindref="member">DepthStencilImage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_depth_stencil_image" kindref="compound">DepthStencilImage</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="264" refid="classvlkx_1_1_depth_stencil_image_1ac455a72eb4e49825f2b211b00cb97f70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_depth_stencil_image" kindref="compound">DepthStencilImage</ref>&amp;<sp/><ref refid="classvlkx_1_1_depth_stencil_image_1ac455a72eb4e49825f2b211b00cb97f70" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_depth_stencil_image" kindref="compound">DepthStencilImage</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_depth_stencil_image" kindref="compound">DepthStencilImage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkExtent2D&amp;<sp/><ref refid="classvlkx_1_1_image_1af8b5b8edcc1c31e433636f8df7a8cd65" kindref="member">extent</ref>);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268" refid="classvlkx_1_1_depth_stencil_image_1a29d9e774aa7c9d3849b3e730e8eb1328" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_vk_tools_1_1_managed_image" kindref="compound">VkTools::ManagedImage</ref>&amp;<sp/><ref refid="classvlkx_1_1_depth_stencil_image_1a29d9e774aa7c9d3849b3e730e8eb1328" kindref="member">get</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buffer.get();<sp/>}</highlight></codeline>
+<codeline lineno="269" refid="classvlkx_1_1_depth_stencil_image_1aa7931467cceeb979e17fda3bb7381112" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkImage&amp;<sp/><ref refid="classvlkx_1_1_depth_stencil_image_1aa7931467cceeb979e17fda3bb7381112" kindref="member">getImage</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buffer.getImage();<sp/>}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">DepthStencilBuffer<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_buffer" kindref="compound">ImageBuffer</ref><sp/>{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DepthStencilBuffer(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkExtent2D&amp;<sp/><ref refid="classvlkx_1_1_image_1af8b5b8edcc1c31e433636f8df7a8cd65" kindref="member">extent</ref>,<sp/>VkFormat<sp/><ref refid="classvlkx_1_1_image_1a99d4d8aea8bc079e8f6100d781c491fb" kindref="member">format</ref>);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DepthStencilBuffer(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>DepthStencilBuffer&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DepthStencilBuffer&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>DepthStencilBuffer&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>DepthStencilBuffer<sp/>buffer;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Image<sp/>that<sp/>references<sp/>an<sp/>existing<sp/>image<sp/>on<sp/>the<sp/>swapchain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283" refid="classvlkx_1_1_swapchain_image" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_swapchain_image" kindref="compound">SwapchainImage</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image" kindref="compound">Image</ref><sp/>{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="285" refid="classvlkx_1_1_swapchain_image_1aa7d9b73807945014b6620b55aef6e75f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_swapchain_image_1aa7d9b73807945014b6620b55aef6e75f" kindref="member">SwapchainImage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_swapchain_image" kindref="compound">SwapchainImage</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="286" refid="classvlkx_1_1_swapchain_image_1ae5078f564d7424d97e57c9c41143a6df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_swapchain_image" kindref="compound">SwapchainImage</ref>&amp;<sp/><ref refid="classvlkx_1_1_swapchain_image_1ae5078f564d7424d97e57c9c41143a6df" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_swapchain_image" kindref="compound">SwapchainImage</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_swapchain_image" kindref="compound">SwapchainImage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkImage&amp;<sp/>image,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkExtent2D&amp;<sp/><ref refid="classvlkx_1_1_image_1af8b5b8edcc1c31e433636f8df7a8cd65" kindref="member">extent</ref>,<sp/>VkFormat<sp/><ref refid="classvlkx_1_1_image_1a99d4d8aea8bc079e8f6100d781c491fb" kindref="member">format</ref>);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290" refid="classvlkx_1_1_swapchain_image_1a8d58902d6a1e5f5d919cb3148fb721af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_vk_tools_1_1_managed_image" kindref="compound">VkTools::ManagedImage</ref>&amp;<sp/><ref refid="classvlkx_1_1_swapchain_image_1a8d58902d6a1e5f5d919cb3148fb721af" kindref="member">get</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>managed;<sp/>}</highlight></codeline>
+<codeline lineno="291" refid="classvlkx_1_1_swapchain_image_1afac6984a971bba2a04b0f534054c2e80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkImage&amp;<sp/><ref refid="classvlkx_1_1_swapchain_image_1afac6984a971bba2a04b0f534054c2e80" kindref="member">getImage</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>image;<sp/>}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkImage<sp/>image;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_vk_tools_1_1_managed_image" kindref="compound">VkTools::ManagedImage</ref><sp/>managed;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298" refid="classvlkx_1_1_multisample_image" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_multisample_image" kindref="compound">MultisampleImage</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image" kindref="compound">Image</ref><sp/>{</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="300" refid="classvlkx_1_1_multisample_image_1a9b2c3f2efa1f49fd9712795b62ded862" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_multisample_image_1a9b2c3f2efa1f49fd9712795b62ded862" kindref="member">Mode</ref><sp/>{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_multisample_image_1a9b2c3f2efa1f49fd9712795b62ded862a6a359aa1c4e1153f6ea99d91e841e3d7" kindref="member">MostEfficient</ref>,</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_multisample_image_1a9b2c3f2efa1f49fd9712795b62ded862a582996407922dab08d5cf2b3d2a7c1c9" kindref="member">Highest</ref></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::unique_ptr&lt;Image&gt;<sp/><ref refid="classvlkx_1_1_multisample_image_1ab32ee609ec5423f57ec86c6721b06913" kindref="member">createColor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image" kindref="compound">Image</ref>&amp;<sp/>targetImage,<sp/><ref refid="classvlkx_1_1_multisample_image_1a9b2c3f2efa1f49fd9712795b62ded862" kindref="member">Mode</ref><sp/>mode);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::unique_ptr&lt;Image&gt;<sp/><ref refid="classvlkx_1_1_multisample_image_1adc90ba9237ecaca67b5179766e1b3972" kindref="member">createDepthStencilMS</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkExtent2D&amp;<sp/><ref refid="classvlkx_1_1_image_1af8b5b8edcc1c31e433636f8df7a8cd65" kindref="member">extent</ref>,<sp/><ref refid="classvlkx_1_1_multisample_image_1a9b2c3f2efa1f49fd9712795b62ded862" kindref="member">Mode</ref><sp/>mode);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::unique_ptr&lt;Image&gt;<sp/><ref refid="classvlkx_1_1_multisample_image_1a7b981961ac602c9c4e81d2a49f84e3f1" kindref="member">createDepthStencil</ref>(VkExtent2D&amp;<sp/><ref refid="classvlkx_1_1_image_1af8b5b8edcc1c31e433636f8df7a8cd65" kindref="member">extent</ref>,<sp/>std::optional&lt;Mode&gt;<sp/>mode);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309" refid="classvlkx_1_1_multisample_image_1a41bd6f313ab388ded5167cb09ff84ab9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_vk_tools_1_1_managed_image" kindref="compound">VkTools::ManagedImage</ref>&amp;<sp/><ref refid="classvlkx_1_1_multisample_image_1a41bd6f313ab388ded5167cb09ff84ab9" kindref="member">get</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buffer.get();<sp/>}</highlight></codeline>
+<codeline lineno="310" refid="classvlkx_1_1_multisample_image_1a9e9dc8b0fcf7d6cf38da754de6193950" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkImage&amp;<sp/><ref refid="classvlkx_1_1_multisample_image_1a9e9dc8b0fcf7d6cf38da754de6193950" kindref="member">getImage</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buffer.getImage();<sp/>}</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312" refid="classvlkx_1_1_multisample_image_1af7834462c9ebd8f53ade4ed2dd476724" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkSampleCountFlagBits<sp/><ref refid="classvlkx_1_1_multisample_image_1af7834462c9ebd8f53ade4ed2dd476724" kindref="member">getSamples</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>samples;<sp/>}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MultisampleBuffer<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_buffer" kindref="compound">ImageBuffer</ref><sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>Type<sp/>{<sp/>Color,<sp/>DepthStencil<sp/>};</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MultisampleBuffer(Type<sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkExtent2D&amp;<sp/><ref refid="classvlkx_1_1_image_1af8b5b8edcc1c31e433636f8df7a8cd65" kindref="member">extent</ref>,<sp/>VkFormat<sp/><ref refid="classvlkx_1_1_image_1a99d4d8aea8bc079e8f6100d781c491fb" kindref="member">format</ref>,<sp/>VkSampleCountFlagBits<sp/>samples);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MultisampleBuffer(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MultisampleBuffer&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MultisampleBuffer&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MultisampleBuffer&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MultisampleImage(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkExtent2D&amp;<sp/><ref refid="classvlkx_1_1_image_1af8b5b8edcc1c31e433636f8df7a8cd65" kindref="member">extent</ref>,<sp/>VkFormat<sp/><ref refid="classvlkx_1_1_image_1a99d4d8aea8bc079e8f6100d781c491fb" kindref="member">format</ref>,<sp/><ref refid="classvlkx_1_1_multisample_image_1a9b2c3f2efa1f49fd9712795b62ded862" kindref="member">Mode</ref><sp/>mode,<sp/>MultisampleBuffer::Type<sp/>type);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkSampleCountFlagBits<sp/>chooseSamples(<ref refid="classvlkx_1_1_multisample_image_1a9b2c3f2efa1f49fd9712795b62ded862" kindref="member">Mode</ref><sp/>mode);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkSampleCountFlagBits<sp/>samples;</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MultisampleBuffer<sp/>buffer;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h"/>
+  </compounddef>
+</doxygen>

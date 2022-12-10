@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_sky_sphere" kind="class" language="C++" prot="public">
+    <compoundname>SkySphere</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_entity_system_1_1_entity" prot="public" virt="non-virtual">ShadowEngine::EntitySystem::Entity</basecompoundref>
+    <includes refid="_sky_sphere_8h" local="no">SkySphere.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sky_sphere_1a6236510405e611442bffa2e7d485ff6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SkySphere::Build</definition>
+        <argsstring>() override</argsstring>
+        <name>Build</name>
+        <qualifiedname>SkySphere::Build</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a7ed91c18cd535d461d0c0bee314778b7">Build</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/Entities/SkySphere.h" line="12" column="6" bodyfile="shadow-engine/shadow-entity/Entities/SkySphere.cpp" bodystart="7" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sky_sphere_1ae87222510a2a3eca1e9d046028b15e42" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SkySphere::Init</definition>
+        <argsstring>() override</argsstring>
+        <name>Init</name>
+        <qualifiedname>SkySphere::Init</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ab66b3c8b723d29f36182a220ad5e4333">Init</reimplements>
+        <briefdescription>
+<para>Called when the Entity needs to be initialised.  </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when the Entity needs to be initialised. Should be used as a constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/Entities/SkySphere.h" line="14" column="6" bodyfile="shadow-engine/shadow-entity/Entities/SkySphere.cpp" bodystart="13" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sky_sphere_1abb300c484e0514ac0954630e1ee50a96" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SkySphere::Update</definition>
+        <argsstring>(float dt) override</argsstring>
+        <name>Update</name>
+        <qualifiedname>SkySphere::Update</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ab9dbee0b3a70b05ed23472b94f7e5973">Update</reimplements>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Called every tick  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/Entities/SkySphere.h" line="16" column="6" bodyfile="shadow-engine/shadow-entity/Entities/SkySphere.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ShadowEngine::EntitySystem::Entity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object"/>
+      </node>
+      <node id="1">
+        <label>SkySphere</label>
+        <link refid="class_sky_sphere"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ShadowEngine::EntitySystem::Entity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object"/>
+      </node>
+      <node id="1">
+        <label>SkySphere</label>
+        <link refid="class_sky_sphere"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-entity/Entities/SkySphere.h" line="6" column="1" bodyfile="shadow-engine/shadow-entity/Entities/SkySphere.h" bodystart="7" bodyend="17"/>
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a167917321102ba2540d58b63956ce501" prot="public" virt="non-virtual"><scope>SkySphere</scope><name>AddChildEntity</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a0631f85d7f63698d6277dab44eef0458" prot="public" virt="non-virtual"><scope>SkySphere</scope><name>AddInternalChildEntity</name></member>
+      <member refid="class_sky_sphere_1a6236510405e611442bffa2e7d485ff6c" prot="public" virt="virtual"><scope>SkySphere</scope><name>Build</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a2ce2825f04cf5a3994103d252e0a437d" prot="public" virt="virtual"><scope>SkySphere</scope><name>Create</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1acc838f644f91d02e1c88baa793f790db" prot="public" virt="non-virtual"><scope>SkySphere</scope><name>Entity</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a56a49e9e0ebd81f6e2960a9a9f3163d8" prot="public" virt="non-virtual"><scope>SkySphere</scope><name>Entity</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a5244bd8527763320cbef208e3a6e4860" prot="public" virt="non-virtual"><scope>SkySphere</scope><name>GenerateId</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a06cd52aa29a540304d1fac5d81b4adc5" prot="public" virt="virtual"><scope>SkySphere</scope><name>GetFlags</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a88673e7fb3299e723c9f3742086f371e" prot="public" virt="virtual"><scope>SkySphere</scope><name>GetTransform</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a3597667efd33b935a89ac11d3b47a215" prot="public" virt="pure-virtual"><scope>SkySphere</scope><name>GetType</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" virt="pure-virtual"><scope>SkySphere</scope><name>GetTypeId</name></member>
+      <member refid="class_sky_sphere_1ae87222510a2a3eca1e9d046028b15e42" prot="public" virt="virtual"><scope>SkySphere</scope><name>Init</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a3f3be81f16814ef82260bc17f3135abe" prot="public" virt="non-virtual"><scope>SkySphere</scope><name>InitEntities</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ae8e132ee0fe4cb70ab47237867890cfd" prot="public" virt="virtual"><scope>SkySphere</scope><name>LateRender</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a4cffe49cb70b159efeccc3c6c3fa1535" prot="public" virt="virtual"><scope>SkySphere</scope><name>LateUpdate</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a5b61f357021bff0686ae651d3002871a" prot="public" virt="virtual"><scope>SkySphere</scope><name>ParentTransformUpdated</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a352e0c6d95699f06f0a427ea7c313e42" prot="public" virt="non-virtual"><scope>SkySphere</scope><name>RegisterDefaultUpdate</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a651807d474b385c7069d842af13469c6" prot="public" virt="virtual"><scope>SkySphere</scope><name>Render</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a467b64e41054aa1ce0a351c58a9b607c" prot="public" virt="virtual"><scope>SkySphere</scope><name>SetParent</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ad5520f0873e2e6cc070d3a594cdae14b" prot="public" virt="non-virtual"><scope>SkySphere</scope><name>SetScene</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ad2ef421c23738c0b95102972405fb0ab" prot="public" virt="virtual"><scope>SkySphere</scope><name>Start</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1af98d0541f3281b0817d6ac558ce505c1" prot="public" virt="virtual"><scope>SkySphere</scope><name>TransformChanged</name></member>
+      <member refid="class_sky_sphere_1abb300c484e0514ac0954630e1ee50a96" prot="public" virt="virtual"><scope>SkySphere</scope><name>Update</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ae1e9c0d251e50e5c83017674bfda6479" prot="public" virt="non-virtual"><scope>SkySphere</scope><name>UpdateEntities</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ab83dad935ab0cdc34d088530aa4290d3" prot="public" virt="virtual"><scope>SkySphere</scope><name>~Entity</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" virt="virtual"><scope>SkySphere</scope><name>~SHObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
