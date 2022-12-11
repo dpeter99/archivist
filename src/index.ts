@@ -32,6 +32,7 @@ export async function run(config: Config | undefined) : Promise<any> {
 
 export let version = "0.2.0-alpha02";
 
+export * from "./Module/SimpleModule.ts";
 export * from "./Archivist.ts";
 export * from "./Pipeline.ts";
 export * from "./utils/ArticleHelper.ts"

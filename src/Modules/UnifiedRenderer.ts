@@ -1,4 +1,4 @@
-import {unified} from 'npm:unified'
+import {unified} from 'npm:unified@10.1.2'
 import {reporter} from 'npm:vfile-reporter'
 import remarkParse from 'npm:remark-parse'
 import remarkRehype from 'npm:remark-rehype'
