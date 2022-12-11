@@ -2,6 +2,7 @@ import "../../src/index.ts";
 import {DoxygenReader} from "../../src/Modules/Input/doxygen/DoxygenReader.ts";
 import * as Arch from "../../src/index.ts";
 import {Pipeline, StaticTemplateFilesModule, WebUrlOutputResolver} from "../../src/index.ts";
+import {UnifiedRenderer} from "../../src/Modules/UnifiedRenderer.ts";
 
 
 export let config: Arch.Config = {
@@ -20,8 +21,9 @@ export let config: Arch.Config = {
             new Arch.ExtractMetadata(
                 new Arch.FrontMatterMetadata()
             ),
-            new Arch.MarkdownRender(),
             new WebUrlOutputResolver(),
+            new UnifiedRenderer(),
+
             new Arch.TemplateModule({templatePath:"./template"}),
             new Arch.OutputModule("./out/")
         )

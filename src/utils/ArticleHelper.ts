@@ -7,6 +7,7 @@ import {models} from "https://esm.sh/v99/entities@3.0.1/deno/lib/maps/entities.j
 import {MarkdownRender} from "../Modules/MarkdownRender.ts";
 import {IModule} from "../Module/IModule.ts";
 import {Mark} from "https://deno.land/std@0.134.0/encoding/_yaml/mark.ts";
+import {UnifiedRenderer} from "../Modules/UnifiedRenderer.ts";
 
 export class ArticleHelper {
     private file: string;
@@ -97,13 +98,45 @@ export class ArticleHelper {
         return archivistInst.outputURL
     }
 
-    public md(text:string){
+    public async md(text:string){
         if(text === undefined)
             return "";
-        return this.module.pipeline.modules.find<MarkdownRender>(isMarkdownRender)?.markdownIt.render(text) ?? text;
+        let renderer = this.module.pipeline.modules.find<UnifiedRenderer>(isMarkdownRender);
+        if(!renderer)
+            return "";
+        return await renderer.inlineParse(text);
+    }
+
+    /**
+     * @description
+     * Takes an Array<V>, and a grouping function,
+     * and returns a Map of the array grouped by the grouping function.
+     *
+     * @param list An array of type V.
+     * @param keyGetter A Function that takes the the Array type V as an input, and returns a value of type K.
+     *                  K is generally intended to be a property key of V.
+     *
+     * @returns Map of the array grouped by the grouping function.
+     */
+    groupBy<K, V>(list: Array<V>, keyGetter: (input: V) => K): Map<K, Array<V>> {
+        const map = new Map<K, Array<V>>();
+        list.forEach((item) => {
+            const key = keyGetter(item);
+            const collection = map.get(key);
+            if (!collection) {
+                map.set(key, [item]);
+            } else {
+                collection.push(item);
+            }
+        });
+        return map;
+    }
+
+    toFirstUpper(text:string){
+        return text[0].toUpperCase() + text.slice(1);
     }
 }
 
-function isMarkdownRender(animal: IModule): animal is MarkdownRender {
-    return animal instanceof MarkdownRender
+function isMarkdownRender(animal: IModule): animal is UnifiedRenderer {
+    return animal instanceof UnifiedRenderer
 }

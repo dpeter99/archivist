@@ -60,7 +60,9 @@ export class MarkdownRender extends SimpleModule{
         super.setup(pipeline, parent);
 
         if(typeof MarkdownIt !== 'undefined'){
-            this.markdownIt = new MarkdownIt();
+            this.markdownIt = new MarkdownIt({
+                html:         true
+            });
         }
 
         if(this._props.func != undefined){
@@ -92,7 +94,15 @@ export class MarkdownRender extends SimpleModule{
 
 
     async processDoc(doc:Content): Promise<any> {
-        doc.content = this.markdownIt.render(doc.content);
+        doc.content = await this.markdownIt.render(doc.content);
+    }
+
+    resolveLink(link:string, env:any){
+        return this.pipeline.files.find(c=>c.path == link)?.meta.url ?? "<NOT FOUND>";
+    }
+
+    inlineParse(text:string){
+        return this.markdownIt.render(text);
     }
 
 }

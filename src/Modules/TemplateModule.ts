@@ -95,7 +95,7 @@ export class TemplateModule extends SimpleModule{
         return super.process(docs);
     }
 
-    processDoc(doc: Content): Promise<any> {
+    async processDoc(doc: Content): Promise<any> {
 
         const docContent = doc.content;
 
@@ -122,10 +122,10 @@ export class TemplateModule extends SimpleModule{
             // @ts-ignore
             data["template"] = templat.file;
 
-            doc.content = this.rootTemplate.compiled(data);
+            doc.content = await this.rootTemplate.compiled(data);
         }
         else {
-            doc.content = templat.compiled(data)
+            doc.content = await templat.compiled(data)
         }
         doc.metadata.Template = templat.file;
 
@@ -185,7 +185,7 @@ class CompiledTemplate {
         if(fs.existsSync(path)) {
             let text = Deno.readTextFileSync(path);
 
-            let compiled = compile_help(text, {filename:path} );
+            let compiled = compile_help(text, {filename:path, async: true} );
 
             return new CompiledTemplate(path,text,compiled);
         }

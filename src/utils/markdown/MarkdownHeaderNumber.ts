@@ -1,18 +1,6 @@
-//import StateCore from "../../node_modules/markdown-it/lib/rules_core/state_core.js";
-//import Token from "../../node_modules/markdown-it/lib/token.js";
-
-//import {StateCore} from "markdown-it";
-
-//import StateCore from '@types/markdown-it'
-
-//import Token from "markdown-it/lib/token.js";
-//import StateCore from "markdown-it/lib/rules_core/state_core.js";
-//import MarkdownIt from "markdown-it";
-
-//import type M from "https://cdn.skypack.dev/@types/markdown-it";
 import {createToken} from "./MarkdownUtils.ts";
 import {StateCore, Token} from "./markdown.d.ts";
-
+import MarkdownIt from "npm:markdown-it@13.0.1";
 
 export class Options{
     excludeTrailingZeros = true;

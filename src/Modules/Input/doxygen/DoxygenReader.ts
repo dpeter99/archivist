@@ -1,6 +1,6 @@
 import { expandGlob } from "https://deno.land/std@0.167.0/fs/mod.ts";
 import * as Path from "https://deno.land/std@0.167.0/path/mod.ts";
-import { Parser, Node } from 'https://deno.land/x/xmlparser@v0.2.0/mod.ts'
+import { Parser, Node, unescapeEntity } from 'https://deno.land/x/xmlparser@v0.2.0/mod.ts'
 
 import {IModule} from "../../../Module/IModule.ts";
 import {Content} from "../../../Content.ts";
@@ -54,11 +54,9 @@ export class DoxygenReader extends SimpleModule{
 
             let text = await Deno.readTextFile(name);
 
-            const patter = /<briefdescription>([\S\s]*?)<\/briefdescription>/gm
-            text = text.replaceAll(patter,(match, text)=>"<briefdescription><![CDATA[" + text + "]]></briefdescription>" );
-
-            const patter2 = /<type>([\S\s]*?)<\/type>/gm
-            text = text.replaceAll(patter2,(match, text)=>"<type><![CDATA[" + text + "]]></type>" );
+            text = this.addCdataToTag(text, "briefdescription");
+            text = this.addCdataToTag(text, "detaileddescription");
+            text = this.addCdataToTag(text, "type");
 
 
             const data = arser.parse(text);
@@ -80,6 +78,13 @@ export class DoxygenReader extends SimpleModule{
             })
         })
 
+    }
+
+    private addCdataToTag(text: string, tag:string) {
+        const patter2 = "<"+tag+">([\\S\\s]*?)<\\/"+tag+">";
+
+        const regex = new RegExp(patter2,"gm");
+        return text.replaceAll(regex, (_match, text) => "<"+tag+"><![CDATA[" + text + "]]></"+tag+">");
     }
 
     eachRecursive(obj:any, clk:(obj:any,key:string)=>void)
@@ -106,33 +111,29 @@ export class DoxygenReader extends SimpleModule{
             const name :string = <string> node.getChildren("compoundname")[0].value;
 
             const doc = new Content("doc/"+name.replaceAll("::","/")+".class", "");
-            this.addRef(node, "/"+doc.path);
-
-            const desc :string = <string> node.getChildren("briefdescription")[0].value;
+            this.addRef(node, doc.path);
 
             const members = node.getChildren("sectiondef").flatMap(sec=>sec.getChildren("memberdef")).map(n=>{
                 return {
-                    name: n.getChildren("name")[0]?.value ?? "",
+                    name: this.getChildData(n,"name"),
                     kind: n.getAttr("kind"),
                     visibility: n.getAttr("prot"),
                     static: n.getAttr("static"),
-                    brief: n.getChildren("briefdescription")[0].value != 0 ? n.getChildren("briefdescription")[0].value : "",
-                    type: n.getChildren("type")[0]?.value,
+                    brief: this.getChildData(n, "briefdescription"),
+                    detail: this.getChildData(n, "detaileddescription"),
+                    type: this.getChildData(n, "type"),
                 }
             })
 
             const data = {
                 kind: "class",
-                desc,
+                brief: this.getChildData(node, "briefdescription"),
+                detail: this.getChildData(node, "detaileddescription"),
                 members,
             };
 
-            //console.log(data);
-
             doc.metadata.addData("name", name);
             doc.metadata.addData("code:data", data);
-
-
 
             docs.push(doc);
         }
@@ -144,4 +145,24 @@ export class DoxygenReader extends SimpleModule{
         this.refMap.set(<string>node.getAttr("id"),value);
     }
 
+    getChildData(node:Node, tag:string, removeWhitspace=false, ifNull = ""){
+        let val = <string>node.getChildren(tag)[0]?.value ?? ifNull;
+        return this.sanitize(val, removeWhitspace);
+    }
+
+    getAttribData(node:Node, attr:string, removeWhitspace=false, ifNull = ""){
+        let val = <string>node.getAttr(attr) ?? ifNull;
+        return this.sanitize(val, removeWhitspace);
+    }
+
+    private sanitize(val: string, removeWhitspace: boolean) {
+        //val = unescapeEntity(val, {});
+        if (removeWhitspace)
+            val = val.replaceAll(" ", "");
+
+        val = val.replace(/<para>/gm, "");
+        val = val.replace(/<\/para>/gm, "\n\n");
+
+        return val;
+    }
 }
