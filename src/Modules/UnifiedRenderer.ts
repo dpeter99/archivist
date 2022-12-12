@@ -69,7 +69,7 @@ export class UnifiedRenderer extends SimpleModule{
 
     async processDoc(doc:Content): Promise<any> {
         const res = await this.parser.process(doc.content);
-        console.error(reporter(res))
+        //console.error(reporter(res))
         doc.content = res;
     }
 
