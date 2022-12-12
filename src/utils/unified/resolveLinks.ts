@@ -13,7 +13,6 @@ export default function myRemarkPluginToIncreaseHeadings(config: Config) {
         visit(tree, (node:any) => {
             //console.log(node);
             if (node.type === 'link') {
-                debugger;
                 node.url = config.pipeline.files.find(c=>c.path == node.url)?.meta.url ?? node.url;
 
             }
