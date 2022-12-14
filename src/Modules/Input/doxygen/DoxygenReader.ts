@@ -15,9 +15,12 @@ export type Declaration = {
 }
 
 export type Class = Declaration & {
+    $kind: "class",
     kind: "class",
     members: Declaration[],
 }
+
+export type MemberKind = "function" | "variable";
 
 export type MemberBase = Declaration & {
     name: string,
@@ -27,19 +30,22 @@ export type MemberBase = Declaration & {
 }
 
 export type Varaible = MemberBase & {
+    $kind: "variable",
     kind: "variable",
 };
 
 export type Function = MemberBase & {
+    $kind: "function",
     kind: "function",
     argsstring: string,
 }
 
-export type Friend = MemberBase & {
-    kind: "friend",
+export type Other = MemberBase & {
+    $kind: "other",
+    kind: Exclude<string, MemberKind>
 }
 
-export type Member = Function | Varaible | Friend;
+export type Member = Function | Varaible | Other;
 
 /**
  * This module reader in code documentation from a folder containing Doxygen XML files.
@@ -157,7 +163,8 @@ export class DoxygenReader extends SimpleModule{
                 if(base.kind === "function"){
                     return {
                         ...base,
-                        kind:"function",
+                        kind: "function",
+                        $kind:"function",
                         argsstring: this.getChildData(n, "argsstring"),
                     }
                 }
@@ -165,19 +172,19 @@ export class DoxygenReader extends SimpleModule{
                     return {
                         ...base,
                         kind:"variable",
+                        $kind:"variable",
                     }
                 }
-                if(base.kind === "friend"){
-                    return {
-                        ...base,
-                        kind:"friend",
-                    }
-                }
+                return {
+                    ...base,
+                    $kind: "other",
+                };
 
                 throw new Error("Unknown class sub declaration: " + base.kind);
             })
 
             const data : Class = {
+                $kind: "class",
                 kind: "class",
                 brief: this.getChildData(node, "briefdescription"),
                 detail: this.getChildData(node, "detaileddescription"),
