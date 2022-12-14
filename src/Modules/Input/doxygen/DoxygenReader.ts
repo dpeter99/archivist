@@ -20,13 +20,15 @@ type Class = Declaration & {
 }
 
 type Member = Declaration & {
-    kind: "variable"|"function",
+    kind: "variable"|"function"|string,
 
     name: string,
     visibility: string,
     static: string,
     type: string,
 }
+
+
 
 type Function = Member & {
     kind: "function",
@@ -159,6 +161,10 @@ export class DoxygenReader extends SimpleModule{
                         ...base,
                         kind:"variable",
                     }
+                }
+
+                return {
+                    ...base,
                 }
 
                 throw new Error("Unknown class sub declaration: " + base.kind);
