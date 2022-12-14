@@ -19,22 +19,27 @@ export type Class = Declaration & {
     members: Declaration[],
 }
 
-export type Member = Declaration & {
-    kind: "variable"|"function"|string,
-
+export type MemberBase = Declaration & {
     name: string,
     visibility: string,
     static: string,
     type: string,
 }
 
+export type Varaible = MemberBase & {
+    kind: "variable",
+};
 
-
-export type Function = Member & {
+export type Function = MemberBase & {
     kind: "function",
     argsstring: string,
 }
 
+export type Friend = MemberBase & {
+    kind: "friend",
+}
+
+export type Member = Function | Varaible | Friend;
 
 /**
  * This module reader in code documentation from a folder containing Doxygen XML files.
@@ -162,9 +167,11 @@ export class DoxygenReader extends SimpleModule{
                         kind:"variable",
                     }
                 }
-
-                return {
-                    ...base,
+                if(base.kind === "friend"){
+                    return {
+                        ...base,
+                        kind:"friend",
+                    }
                 }
 
                 throw new Error("Unknown class sub declaration: " + base.kind);
