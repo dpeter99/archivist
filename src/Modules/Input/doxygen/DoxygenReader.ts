@@ -8,9 +8,29 @@ import {SimpleModule} from "../../../Module/SimpleModule.ts";
 import {Pipeline} from "../../../Pipeline.ts";
 import {archivistInst} from "../../../Archivist.ts";
 
+type Declaration = {
+    kind: string,
+    brief: string,
+    detail: string,
+}
 
-type Member = {
-    name: string
+type Class = Declaration & {
+    kind: "class",
+    members: Declaration[],
+}
+
+type Member = Declaration & {
+    kind: "variable"|"function",
+
+    name: string,
+    visibility: string,
+    static: string,
+    type: string,
+}
+
+type Function = Member & {
+    kind: "function",
+    argsstring: string,
 }
 
 
@@ -117,19 +137,34 @@ export class DoxygenReader extends SimpleModule{
             const doc = new Content("doc/"+name.replaceAll("::","/")+".class", "");
             this.addRef(node, doc.path);
 
-            const members = node.getChildren("sectiondef").flatMap(sec=>sec.getChildren("memberdef")).map(n=>{
-                return {
+            const members: Member[] = node.getChildren("sectiondef").flatMap(sec=>sec.getChildren("memberdef")).map(n=>{
+                const base = {
+                    kind: this.getAttribData(n, "kind"),
                     name: this.getChildData(n,"name"),
-                    kind: n.getAttr("kind"),
-                    visibility: n.getAttr("prot"),
-                    static: n.getAttr("static"),
                     brief: this.getChildData(n, "briefdescription"),
                     detail: this.getChildData(n, "detaileddescription"),
+                    visibility: this.getAttribData(n, "prot"),
+                    static: this.getAttribData(n, "static"),
                     type: this.getChildData(n, "type"),
                 }
+                if(base.kind === "function"){
+                    return {
+                        ...base,
+                        kind:"function",
+                        argsstring: this.getChildData(n, "argsstring"),
+                    }
+                }
+                if(base.kind === "variable"){
+                    return {
+                        ...base,
+                        kind:"variable",
+                    }
+                }
+
+                throw new Error("Unknown class sub declaration: " + base.kind);
             })
 
-            const data = {
+            const data : Class = {
                 kind: "class",
                 brief: this.getChildData(node, "briefdescription"),
                 detail: this.getChildData(node, "detaileddescription"),
