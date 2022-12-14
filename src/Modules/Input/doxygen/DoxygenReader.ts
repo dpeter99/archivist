@@ -9,6 +9,11 @@ import {Pipeline} from "../../../Pipeline.ts";
 import {archivistInst} from "../../../Archivist.ts";
 
 
+type Member = {
+    name: string
+}
+
+
 /**
  * This module reader in code documentation from a folder containing Doxygen XML files.
  */
@@ -87,8 +92,7 @@ export class DoxygenReader extends SimpleModule{
         return text.replaceAll(regex, (_match, text) => "<"+tag+"><![CDATA[" + text + "]]></"+tag+">");
     }
 
-    eachRecursive(obj:any, clk:(obj:any,key:string)=>void)
-    {
+    eachRecursive(obj:any, clk:(obj:any,key:string)=>void) {
         for (var k in obj) {
             if (typeof obj[k] == "object" && obj[k] !== null)
                 this.eachRecursive(obj[k], clk);

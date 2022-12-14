@@ -10,10 +10,10 @@ import {Mark} from "https://deno.land/std@0.134.0/encoding/_yaml/mark.ts";
 import {UnifiedRenderer} from "../Modules/UnifiedRenderer.ts";
 
 export class ArticleHelper {
-    private file: string;
-    private dir:string;
-    private module: SimpleModule;
-    private globalFilter?: (doc: Content) => boolean;
+    protected file: string;
+    protected dir:string;
+    protected module: SimpleModule;
+    protected globalFilter?: (doc: Content) => boolean;
 
     constructor(file:string, module:SimpleModule, globalFilter?:(doc:Content)=>boolean) {
         this.file = file;
@@ -62,6 +62,7 @@ export class ArticleHelper {
 
         return common == this.dir && f.path != this.file;
     }
+
 
     /**
      * Returns weather the given article is a draft, defaults to false
@@ -127,6 +128,36 @@ export class ArticleHelper {
                 map.set(key, [item]);
             } else {
                 collection.push(item);
+            }
+        });
+        return map;
+    }
+
+
+    /**
+     * @description
+     * Takes an Array<V>, and a grouping function,
+     * and returns a Map of the array grouped by the grouping function.
+     *
+     * @param list An array of type V.
+     * @param keyGetter A Function that takes the the Array type V as an input, and returns a value of type K.
+     *                  K is generally intended to be a property key of V.
+     *
+     * @returns An array of key, value objects.
+     */
+    groupByInObjects<K, V>(list: Array<V>, keyGetter: (input: V) => K) {
+        const map: {
+            key: K,
+            values: V[]
+        }[] = [];
+
+        list.forEach((item) => {
+            const key = keyGetter(item);
+            const collection = map.find(c=>c.key == key);
+            if (!collection) {
+                map.push({key, values:[item]});
+            } else {
+                collection.values.push(item);
             }
         });
         return map;
