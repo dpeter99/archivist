@@ -8,18 +8,18 @@ import {SimpleModule} from "../../../Module/SimpleModule.ts";
 import {Pipeline} from "../../../Pipeline.ts";
 import {archivistInst} from "../../../Archivist.ts";
 
-type Declaration = {
+export type Declaration = {
     kind: string,
     brief: string,
     detail: string,
 }
 
-type Class = Declaration & {
+export type Class = Declaration & {
     kind: "class",
     members: Declaration[],
 }
 
-type Member = Declaration & {
+export type Member = Declaration & {
     kind: "variable"|"function"|string,
 
     name: string,
@@ -30,7 +30,7 @@ type Member = Declaration & {
 
 
 
-type Function = Member & {
+export type Function = Member & {
     kind: "function",
     argsstring: string,
 }
