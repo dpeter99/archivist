@@ -78,7 +78,7 @@ export class UnifiedRenderer extends SimpleModule{
     }
 
     public async inlineParse(text:string){
-        return await this.parser.process(text).value;
+        return (await this.parser.process(text)).value;
     }
 
 }
