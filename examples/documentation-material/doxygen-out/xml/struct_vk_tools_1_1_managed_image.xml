@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_vk_tools_1_1_managed_image" kind="struct" language="C++" prot="public">
+    <compoundname>VkTools::ManagedImage</compoundname>
+    <includes refid="_tools_8h" local="no">Tools.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_vk_tools_1_1_managed_image_1a73d0711b937a6a5f66d86c67c82d43ab" prot="public" static="no" mutable="no">
+        <type>VkImage</type>
+        <definition>VkImage VkTools::ManagedImage::image</definition>
+        <argsstring></argsstring>
+        <name>image</name>
+        <qualifiedname>VkTools::ManagedImage::image</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/Tools.h" line="14" column="17" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/Tools.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vk_tools_1_1_managed_image_1a227e2f36e2909fae4291e1298b1d5efa" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_vma_allocation" kindref="compound">VmaAllocation</ref></type>
+        <definition>VmaAllocation VkTools::ManagedImage::allocation</definition>
+        <argsstring></argsstring>
+        <name>allocation</name>
+        <qualifiedname>VkTools::ManagedImage::allocation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/Tools.h" line="15" column="23" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/Tools.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>VkTools::ManagedImage</label>
+        <link refid="struct_vk_tools_1_1_managed_image"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>allocation</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>VmaAllocation</label>
+        <link refid="struct_vma_allocation"/>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/Tools.h" line="13" column="5" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/Tools.h" bodystart="13" bodyend="16"/>
+    <listofallmembers>
+      <member refid="struct_vk_tools_1_1_managed_image_1a227e2f36e2909fae4291e1298b1d5efa" prot="public" virt="non-virtual"><scope>VkTools::ManagedImage</scope><name>allocation</name></member>
+      <member refid="struct_vk_tools_1_1_managed_image_1a73d0711b937a6a5f66d86c67c82d43ab" prot="public" virt="non-virtual"><scope>VkTools::ManagedImage</scope><name>image</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

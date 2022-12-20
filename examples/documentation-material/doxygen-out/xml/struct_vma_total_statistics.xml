@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_vma_total_statistics" kind="struct" language="C++" prot="public">
+    <compoundname>VmaTotalStatistics</compoundname>
+    <includes refid="vk__mem__alloc_8h" local="no">vk_mem_alloc.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_vma_total_statistics_1acb70e5b7fe543813ed8ba9282640969d" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_vma_detailed_statistics" kindref="compound">VmaDetailedStatistics</ref></type>
+        <definition>VmaDetailedStatistics VmaTotalStatistics::memoryType[VK_MAX_MEMORY_TYPES]</definition>
+        <argsstring>[VK_MAX_MEMORY_TYPES]</argsstring>
+        <name>memoryType</name>
+        <qualifiedname>VmaTotalStatistics::memoryType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1174" column="27" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_total_statistics_1a39beeba5b3a2e7cfe5f5e2331a2705ce" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_vma_detailed_statistics" kindref="compound">VmaDetailedStatistics</ref></type>
+        <definition>VmaDetailedStatistics VmaTotalStatistics::memoryHeap[VK_MAX_MEMORY_HEAPS]</definition>
+        <argsstring>[VK_MAX_MEMORY_HEAPS]</argsstring>
+        <name>memoryHeap</name>
+        <qualifiedname>VmaTotalStatistics::memoryHeap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1175" column="27" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_total_statistics_1a76f1935f7101883f5bb2a03b6c5649d2" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_vma_detailed_statistics" kindref="compound">VmaDetailedStatistics</ref></type>
+        <definition>VmaDetailedStatistics VmaTotalStatistics::total</definition>
+        <argsstring></argsstring>
+        <name>total</name>
+        <qualifiedname>VmaTotalStatistics::total</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1176" column="27" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1176" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>General statistics from current state of the Allocator - total memory usage across all memory heaps and types. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>These are slower to calculate. Use for debugging purposes. See function <ref refid="group__group__stats_1gad176279c8da8f50399674b2ef03ca866" kindref="member">vmaCalculateStatistics()</ref>. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>VmaDetailedStatistics</label>
+        <link refid="struct_vma_detailed_statistics"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>statistics</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>VmaStatistics</label>
+        <link refid="struct_vma_statistics"/>
+      </node>
+      <node id="1">
+        <label>VmaTotalStatistics</label>
+        <link refid="struct_vma_total_statistics"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>memoryHeap</edgelabel>
+          <edgelabel>memoryType</edgelabel>
+          <edgelabel>total</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1172" column="1" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1173" bodyend="1177"/>
+    <listofallmembers>
+      <member refid="struct_vma_total_statistics_1a39beeba5b3a2e7cfe5f5e2331a2705ce" prot="public" virt="non-virtual"><scope>VmaTotalStatistics</scope><name>memoryHeap</name></member>
+      <member refid="struct_vma_total_statistics_1acb70e5b7fe543813ed8ba9282640969d" prot="public" virt="non-virtual"><scope>VmaTotalStatistics</scope><name>memoryType</name></member>
+      <member refid="struct_vma_total_statistics_1a76f1935f7101883f5bb2a03b6c5649d2" prot="public" virt="non-virtual"><scope>VmaTotalStatistics</scope><name>total</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

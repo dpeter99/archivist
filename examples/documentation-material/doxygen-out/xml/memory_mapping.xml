@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="memory_mapping" kind="page">
+    <compoundname>memory_mapping</compoundname>
+    <title>Memory mapping</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>To &quot;map memory&quot; in Vulkan means to obtain a CPU pointer to `VkDeviceMemory`, to be able to read from it or write to it in CPU code. Mapping is possible only of memory allocated from a memory type that has `VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT` flag. Functions `vkMapMemory()`, `vkUnmapMemory()` are designed for this purpose. You can use them directly with memory allocated by this library, but it is not recommended because of following issue: Mapping the same `VkDeviceMemory` block multiple times is illegal - only one mapping at a time is allowed. This includes mapping disjoint regions. Mapping is not reference-counted internally by Vulkan. Because of this, Vulkan Memory Allocator provides following facilities:</para>
+<para><simplesect kind="note"><para>If you want to be able to map an allocation, you need to specify one of the flags <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a9be224df3bfc1cfa06203aed689a30c5" kindref="member">VMA_ALLOCATION_CREATE_HOST_ACCESS_SEQUENTIAL_WRITE_BIT</ref> or <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597add61238d98e20917b9a06c617763f492" kindref="member">VMA_ALLOCATION_CREATE_HOST_ACCESS_RANDOM_BIT</ref> in <ref refid="struct_vma_allocation_create_info_1add09658ac14fe290ace25470ddd6d41b" kindref="member">VmaAllocationCreateInfo::flags</ref>. These flags are required for an allocation to be mappable when using <ref refid="group__group__alloc_1ggaa5846affa1e9da3800e3e78fae2305cca27cde9026a84d34d525777baa41fce6e" kindref="member">VMA_MEMORY_USAGE_AUTO</ref> or other `VMA_MEMORY_USAGE_AUTO*` enum values. For other usage values they are ignored and every such allocation made in `HOST_VISIBLE` memory type is mappable, but they can still be used for consistency.</para>
+</simplesect>
+</para>
+<sect1 id="memory_mapping_1memory_mapping_mapping_functions">
+<title>Mapping functions</title>
+<para>The library provides following functions for mapping of a specific <ref refid="struct_vma_allocation" kindref="compound">VmaAllocation</ref>: <ref refid="group__group__alloc_1ga13b93ec0ed38ad7232300cb94931c8d2" kindref="member">vmaMapMemory()</ref>, <ref refid="group__group__alloc_1gaec4645c1787976e2b50d2dfd31279a2b" kindref="member">vmaUnmapMemory()</ref>. They are safer and more convenient to use than standard Vulkan functions. You can map an allocation multiple times simultaneously - mapping is reference-counted internally. You can also map different allocations simultaneously regardless of whether they use the same `VkDeviceMemory` block. The way it is implemented is that the library always maps entire memory block, not just region of the allocation. For further details, see description of <ref refid="group__group__alloc_1ga13b93ec0ed38ad7232300cb94931c8d2" kindref="member">vmaMapMemory()</ref> function. Example:</para>
+<para><programlisting><codeline><highlight class="comment">//<sp/>Having<sp/>these<sp/>objects<sp/>initialized:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ConstantBuffer</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline><highlight class="normal">ConstantBuffer<sp/>constantBufferData<sp/>=<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">VmaAllocator<sp/><ref refid="namespace_vk_tools_1a7195f698aad36f4aa2a4a9e977991486" kindref="member">allocator</ref><sp/>=<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">VkBuffer<sp/>constantBuffer<sp/>=<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">VmaAllocation<sp/>constantBufferAllocation<sp/>=<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>can<sp/>map<sp/>and<sp/>fill<sp/>your<sp/>buffer<sp/>using<sp/>following<sp/>code:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">void*<sp/>mappedData;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__alloc_1ga13b93ec0ed38ad7232300cb94931c8d2" kindref="member">vmaMapMemory</ref>(allocator,<sp/>constantBufferAllocation,<sp/>&amp;mappedData);</highlight></codeline>
+<codeline><highlight class="normal">memcpy(mappedData,<sp/>&amp;constantBufferData,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(constantBufferData));</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__alloc_1gaec4645c1787976e2b50d2dfd31279a2b" kindref="member">vmaUnmapMemory</ref>(allocator,<sp/>constantBufferAllocation);</highlight></codeline>
+</programlisting></para>
+<para>When mapping, you may see a warning from Vulkan validation layer similar to this one:</para>
+<para><emphasis>Mapping an image with layout VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL can result in undefined behavior if this memory is used by the device. Only GENERAL or PREINITIALIZED should be used.</emphasis></para>
+<para>It happens because the library maps entire `VkDeviceMemory` block, where different types of images and buffers may end up together, especially on GPUs with unified memory like Intel. You can safely ignore it if you are sure you access only memory of the intended object that you wanted to map.</para>
+</sect1>
+<sect1 id="memory_mapping_1memory_mapping_persistently_mapped_memory">
+<title>Persistently mapped memory</title>
+<para>Kepping your memory persistently mapped is generally OK in Vulkan. You don&apos;t need to unmap it before using its data on the GPU. The library provides a special feature designed for that: Allocations made with <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a11da372cc3a82931c5e5d6146cd9dd1f" kindref="member">VMA_ALLOCATION_CREATE_MAPPED_BIT</ref> flag set in <ref refid="struct_vma_allocation_create_info_1add09658ac14fe290ace25470ddd6d41b" kindref="member">VmaAllocationCreateInfo::flags</ref> stay mapped all the time, so you can just access CPU pointer to it any time without a need to call any &quot;map&quot; or &quot;unmap&quot; function. Example:</para>
+<para><programlisting><codeline><highlight class="normal">VkBufferCreateInfo<sp/>bufCreateInfo<sp/>=<sp/>{<sp/>VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO<sp/>};</highlight></codeline>
+<codeline><highlight class="normal">bufCreateInfo.size<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(ConstantBuffer);</highlight></codeline>
+<codeline><highlight class="normal">bufCreateInfo.usage<sp/>=<sp/>VK_BUFFER_USAGE_TRANSFER_SRC_BIT;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocation_create_info" kindref="compound">VmaAllocationCreateInfo</ref><sp/>allocCreateInfo<sp/>=<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal">allocCreateInfo.<ref refid="struct_vma_allocation_create_info_1accb8b06b1f677d858cb9af20705fa910" kindref="member">usage</ref><sp/>=<sp/><ref refid="group__group__alloc_1ggaa5846affa1e9da3800e3e78fae2305cca27cde9026a84d34d525777baa41fce6e" kindref="member">VMA_MEMORY_USAGE_AUTO</ref>;</highlight></codeline>
+<codeline><highlight class="normal">allocCreateInfo.<ref refid="struct_vma_allocation_create_info_1add09658ac14fe290ace25470ddd6d41b" kindref="member">flags</ref><sp/>=<sp/><ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a9be224df3bfc1cfa06203aed689a30c5" kindref="member">VMA_ALLOCATION_CREATE_HOST_ACCESS_SEQUENTIAL_WRITE_BIT</ref><sp/>|</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a11da372cc3a82931c5e5d6146cd9dd1f" kindref="member">VMA_ALLOCATION_CREATE_MAPPED_BIT</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">VkBuffer<sp/>buf;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocation" kindref="compound">VmaAllocation</ref><sp/>alloc;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="struct_vma_allocation_info" kindref="compound">VmaAllocationInfo</ref><sp/>allocInfo;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__group__alloc_1gae9773fe0ef8582e23136d2d83c336ab9" kindref="member">vmaCreateBuffer</ref>(allocator,<sp/>&amp;bufCreateInfo,<sp/>&amp;allocCreateInfo,<sp/>&amp;buf,<sp/>&amp;alloc,<sp/>&amp;allocInfo);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Buffer<sp/>is<sp/>already<sp/>mapped.<sp/>You<sp/>can<sp/>access<sp/>its<sp/>memory.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">memcpy(allocInfo.<ref refid="struct_vma_allocation_info_1a17a39eb34201a610347acb91b38eca79" kindref="member">pMappedData</ref>,<sp/>&amp;constantBufferData,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(constantBufferData));</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="note"><para><ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a11da372cc3a82931c5e5d6146cd9dd1f" kindref="member">VMA_ALLOCATION_CREATE_MAPPED_BIT</ref> by itself doesn&apos;t guarantee that the allocation will end up in a mappable memory type. For this, you need to also specify <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a9be224df3bfc1cfa06203aed689a30c5" kindref="member">VMA_ALLOCATION_CREATE_HOST_ACCESS_SEQUENTIAL_WRITE_BIT</ref> or <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597add61238d98e20917b9a06c617763f492" kindref="member">VMA_ALLOCATION_CREATE_HOST_ACCESS_RANDOM_BIT</ref>. <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a11da372cc3a82931c5e5d6146cd9dd1f" kindref="member">VMA_ALLOCATION_CREATE_MAPPED_BIT</ref> only guarantees that if the memory is `HOST_VISIBLE`, the allocation will be mapped on creation. For an example of how to make use of this fact, see section <ref refid="usage_patterns_1usage_patterns_advanced_data_uploading" kindref="member">Advanced data uploading</ref>.</para>
+</simplesect>
+</para>
+</sect1>
+<sect1 id="memory_mapping_1memory_mapping_cache_control">
+<title>Cache flush and invalidate</title>
+<para>Memory in Vulkan doesn&apos;t need to be unmapped before using it on GPU, but unless a memory types has `VK_MEMORY_PROPERTY_HOST_COHERENT_BIT` flag set, you need to manually **invalidate** cache before reading of mapped pointer and **flush** cache after writing to mapped pointer. Map/unmap operations don&apos;t do that automatically. Vulkan provides following functions for this purpose `vkFlushMappedMemoryRanges()`, `vkInvalidateMappedMemoryRanges()`, but this library provides more convenient functions that refer to given allocation object: <ref refid="group__group__alloc_1gab8093faf3afb114596d964d4bd24cb4a" kindref="member">vmaFlushAllocation()</ref>, <ref refid="group__group__alloc_1ga1059764930e85ac377a92b5237b5b919" kindref="member">vmaInvalidateAllocation()</ref>, or multiple objects at once: <ref refid="group__group__alloc_1ga09b0a57c5c45949a324ac7c0a4ec42d5" kindref="member">vmaFlushAllocations()</ref>, <ref refid="group__group__alloc_1ga693a1ae5faed72fac89f12685e1d366f" kindref="member">vmaInvalidateAllocations()</ref>.</para>
+<para>Regions of memory specified for flush/invalidate must be aligned to `VkPhysicalDeviceLimits::nonCoherentAtomSize`. This is automatically ensured by the library. In any memory type that is `HOST_VISIBLE` but not `HOST_COHERENT`, all allocations within blocks are aligned to this value, so their offsets are always multiply of `nonCoherentAtomSize` and two different allocations never share same &quot;line&quot; of this size.</para>
+<para>Also, Windows drivers from all 3 PC GPU vendors (AMD, Intel, NVIDIA) currently provide `HOST_COHERENT` flag on all memory types that are `HOST_VISIBLE`, so on PC you may not need to bother. </para>
+</sect1>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h"/>
+  </compounddef>
+</doxygen>

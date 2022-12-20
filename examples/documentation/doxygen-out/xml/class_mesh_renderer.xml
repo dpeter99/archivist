@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_mesh_renderer" kind="class" language="C++" prot="public">
+    <compoundname>MeshRenderer</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" prot="public" virt="non-virtual">ShadowEngine::EntitySystem::SceneEntity</basecompoundref>
+    <includes refid="_mesh_renderer_8h" local="no">MeshRenderer.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mesh_renderer_1a29e28200be10b7177fc825259af42218" prot="private" static="no" mutable="no">
+        <type>ShadowEngine::Ref&lt; ShadowEngine::Assets::Mesh &gt;</type>
+        <definition>ShadowEngine::Ref&lt;ShadowEngine::Assets::Mesh&gt; MeshRenderer::mesh</definition>
+        <argsstring></argsstring>
+        <name>mesh</name>
+        <qualifiedname>MeshRenderer::mesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/Entities/MeshRenderer.h" line="16" column="19" bodyfile="shadow-engine/shadow-entity/Entities/MeshRenderer.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mesh_renderer_1abf8134462a42e8641614025d7874a892" prot="private" static="no" mutable="no">
+        <type>ShadowEngine::Ref&lt; ShadowEngine::Assets::Material &gt;</type>
+        <definition>ShadowEngine::Ref&lt;ShadowEngine::Assets::Material&gt; MeshRenderer::mat</definition>
+        <argsstring></argsstring>
+        <name>mat</name>
+        <qualifiedname>MeshRenderer::mat</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/Entities/MeshRenderer.h" line="17" column="19" bodyfile="shadow-engine/shadow-entity/Entities/MeshRenderer.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mesh_renderer_1a3667f16dd3f59aaa00d78b502e0bda22" prot="private" static="no" mutable="no">
+        <type>ShadowEngine::Ref&lt; ShadowEngine::Rendering::RenderNode &gt;</type>
+        <definition>ShadowEngine::Ref&lt;ShadowEngine::Rendering::RenderNode&gt; MeshRenderer::node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <qualifiedname>MeshRenderer::node</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/Entities/MeshRenderer.h" line="19" column="19" bodyfile="shadow-engine/shadow-entity/Entities/MeshRenderer.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_mesh_renderer_1a7a6c80dcd0f3d1f750987dc92938f6cc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MeshRenderer::SHObject_Base</definition>
+        <argsstring>(MeshRenderer) Entity_Base(MeshRenderer</argsstring>
+        <name>SHObject_Base</name>
+        <qualifiedname>MeshRenderer::SHObject_Base</qualifiedname>
+        <param>
+          <type><ref refid="class_mesh_renderer" kindref="compound">MeshRenderer</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/Entities/MeshRenderer.h" line="12" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_renderer_1a3653bc27a79020e5f02a1dfb9db1bef1" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MeshRenderer::TransformChanged</definition>
+        <argsstring>() override</argsstring>
+        <name>TransformChanged</name>
+        <qualifiedname>MeshRenderer::TransformChanged</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_entity_system_1_1_entity_1af98d0541f3281b0817d6ac558ce505c1">TransformChanged</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/Entities/MeshRenderer.h" line="32" column="6" bodyfile="shadow-engine/shadow-entity/Entities/MeshRenderer.cpp" bodystart="12" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_renderer_1a79bc481707e03ee614d6073143a15eac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MeshRenderer::UpdateRenderNode</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateRenderNode</name>
+        <qualifiedname>MeshRenderer::UpdateRenderNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/Entities/MeshRenderer.h" line="34" column="6" bodyfile="shadow-engine/shadow-entity/Entities/MeshRenderer.cpp" bodystart="18" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mesh_renderer_1a4815504cfaa41b46e8a4f8d9b1297bc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MeshRenderer::Init</definition>
+        <argsstring>() override</argsstring>
+        <name>Init</name>
+        <qualifiedname>MeshRenderer::Init</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ab66b3c8b723d29f36182a220ad5e4333">Init</reimplements>
+        <briefdescription>
+<para>Called when the Entity needs to be initialised.  </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when the Entity needs to be initialised. Should be used as a constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/Entities/MeshRenderer.h" line="22" column="6" bodyfile="shadow-engine/shadow-entity/Entities/MeshRenderer.cpp" bodystart="5" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_renderer_1a7b730cacaaefa7d11111540fcbe5ab5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespace_shadow_engine_1_1_entity_system_1a02582979cc3de070200b67134662911b" kindref="member">ShadowEngine::EntitySystem::EntityFlags</ref></type>
+        <definition>ShadowEngine::EntitySystem::EntityFlags MeshRenderer::GetFlags</definition>
+        <argsstring>() override</argsstring>
+        <name>GetFlags</name>
+        <qualifiedname>MeshRenderer::GetFlags</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a06cd52aa29a540304d1fac5d81b4adc5">GetFlags</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/Entities/MeshRenderer.h" line="23" column="41" bodyfile="shadow-engine/shadow-entity/Entities/MeshRenderer.h" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_renderer_1af03c188619ac2d4933fdfc281ed9648c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MeshRenderer::SetMesh</definition>
+        <argsstring>(ShadowEngine::Ref&lt; ShadowEngine::Assets::Mesh &gt; m)</argsstring>
+        <name>SetMesh</name>
+        <qualifiedname>MeshRenderer::SetMesh</qualifiedname>
+        <param>
+          <type>ShadowEngine::Ref&lt; ShadowEngine::Assets::Mesh &gt;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/Entities/MeshRenderer.h" line="25" column="6" bodyfile="shadow-engine/shadow-entity/Entities/MeshRenderer.h" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_renderer_1ab90cf7f33b7bc3385dee6918093f60d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ShadowEngine::Ref&lt; ShadowEngine::Assets::Mesh &gt;</type>
+        <definition>ShadowEngine::Ref&lt; ShadowEngine::Assets::Mesh &gt; MeshRenderer::GetMesh</definition>
+        <argsstring>()</argsstring>
+        <name>GetMesh</name>
+        <qualifiedname>MeshRenderer::GetMesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/Entities/MeshRenderer.h" line="26" column="19" bodyfile="shadow-engine/shadow-entity/Entities/MeshRenderer.h" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_renderer_1af958341241065fae0143b03e5a9f38d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MeshRenderer::SetMaterial</definition>
+        <argsstring>(ShadowEngine::Ref&lt; ShadowEngine::Assets::Material &gt; m)</argsstring>
+        <name>SetMaterial</name>
+        <qualifiedname>MeshRenderer::SetMaterial</qualifiedname>
+        <param>
+          <type>ShadowEngine::Ref&lt; ShadowEngine::Assets::Material &gt;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/Entities/MeshRenderer.h" line="28" column="6" bodyfile="shadow-engine/shadow-entity/Entities/MeshRenderer.h" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_renderer_1aa500e6d62422e3f5749eeb96d3fac136" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ShadowEngine::Ref&lt; ShadowEngine::Assets::Material &gt;</type>
+        <definition>ShadowEngine::Ref&lt; ShadowEngine::Assets::Material &gt; MeshRenderer::SetMaterial</definition>
+        <argsstring>()</argsstring>
+        <name>SetMaterial</name>
+        <qualifiedname>MeshRenderer::SetMaterial</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/Entities/MeshRenderer.h" line="29" column="19" bodyfile="shadow-engine/shadow-entity/Entities/MeshRenderer.h" bodystart="29" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MeshRenderer</label>
+        <link refid="class_mesh_renderer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ShadowEngine::EntitySystem::Entity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_entity"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ShadowEngine::EntitySystem::SceneEntity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MeshRenderer</label>
+        <link refid="class_mesh_renderer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ShadowEngine::EntitySystem::Entity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_entity"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ShadowEngine::EntitySystem::SceneEntity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object"/>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-entity/Entities/MeshRenderer.h" line="9" column="1" bodyfile="shadow-engine/shadow-entity/Entities/MeshRenderer.h" bodystart="11" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a167917321102ba2540d58b63956ce501" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>AddChildEntity</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a0631f85d7f63698d6277dab44eef0458" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>AddInternalChildEntity</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a7ed91c18cd535d461d0c0bee314778b7" prot="public" virt="virtual"><scope>MeshRenderer</scope><name>Build</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a98081b1308805a8e8c9ae9c3c90bc337" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>CalcNewComponentToWorld</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a2ce2825f04cf5a3994103d252e0a437d" prot="public" virt="virtual"><scope>MeshRenderer</scope><name>Create</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1acc838f644f91d02e1c88baa793f790db" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>Entity</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a56a49e9e0ebd81f6e2960a9a9f3163d8" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>Entity</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a5244bd8527763320cbef208e3a6e4860" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>GenerateId</name></member>
+      <member refid="class_mesh_renderer_1a7b730cacaaefa7d11111540fcbe5ab5a" prot="public" virt="virtual"><scope>MeshRenderer</scope><name>GetFlags</name></member>
+      <member refid="class_mesh_renderer_1ab90cf7f33b7bc3385dee6918093f60d1" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>GetMesh</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1aff5bd414ca017b2af014f9833979134e" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>GetPosition</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1af6519f8bac9f06a797ebaef63e8d8fb7" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>GetRotation</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1accc7861cb4e2c62055583f9e7603ecb1" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>GetScale</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a973bfe0c2c49579e235fb9602f836f94" prot="public" virt="virtual"><scope>MeshRenderer</scope><name>GetTransform</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a3597667efd33b935a89ac11d3b47a215" prot="public" virt="pure-virtual"><scope>MeshRenderer</scope><name>GetType</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" virt="pure-virtual"><scope>MeshRenderer</scope><name>GetTypeId</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a8cb7b39d2d519ee2aeb4f0d1b37e3da8" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>GetWorldTransformMatrix</name></member>
+      <member refid="class_mesh_renderer_1a4815504cfaa41b46e8a4f8d9b1297bc6" prot="public" virt="virtual"><scope>MeshRenderer</scope><name>Init</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a3f3be81f16814ef82260bc17f3135abe" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>InitEntities</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ae8e132ee0fe4cb70ab47237867890cfd" prot="public" virt="virtual"><scope>MeshRenderer</scope><name>LateRender</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a4cffe49cb70b159efeccc3c6c3fa1535" prot="public" virt="virtual"><scope>MeshRenderer</scope><name>LateUpdate</name></member>
+      <member refid="class_mesh_renderer_1abf8134462a42e8641614025d7874a892" prot="private" virt="non-virtual"><scope>MeshRenderer</scope><name>mat</name></member>
+      <member refid="class_mesh_renderer_1a29e28200be10b7177fc825259af42218" prot="private" virt="non-virtual"><scope>MeshRenderer</scope><name>mesh</name></member>
+      <member refid="class_mesh_renderer_1a3667f16dd3f59aaa00d78b502e0bda22" prot="private" virt="non-virtual"><scope>MeshRenderer</scope><name>node</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a6c1dac32de915b3137de87563144beee" prot="protected" virt="virtual"><scope>MeshRenderer</scope><name>ParentTransformUpdated</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a352e0c6d95699f06f0a427ea7c313e42" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>RegisterDefaultUpdate</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a651807d474b385c7069d842af13469c6" prot="public" virt="virtual"><scope>MeshRenderer</scope><name>Render</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1ad5430e82cc9d17537dc280e7fb78ea2f" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>RotateBy</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1afc8c3004bc7d6c473f9a6faaeac6abad" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>SceneEntity</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1afcb3f642ea758da760051b955494498a" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>SceneEntity</name></member>
+      <member refid="class_mesh_renderer_1af958341241065fae0143b03e5a9f38d7" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>SetMaterial</name></member>
+      <member refid="class_mesh_renderer_1aa500e6d62422e3f5749eeb96d3fac136" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>SetMaterial</name></member>
+      <member refid="class_mesh_renderer_1af03c188619ac2d4933fdfc281ed9648c" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>SetMesh</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a1fa641bdc27235315d094ea17e3ebcb2" prot="public" virt="virtual"><scope>MeshRenderer</scope><name>SetParent</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a5151f51958ca52567922bb5fdb9318ec" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>SetPosition</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a3df7a3c65c3bd545031fc0920baadff9" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>SetRelativeTransform</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a763933eb5b5d71b57abed584ae502c4c" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>SetRotation</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a908955742b391a18977cfaaf5a0921ad" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>SetScale</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ad5520f0873e2e6cc070d3a594cdae14b" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>SetScene</name></member>
+      <member refid="class_mesh_renderer_1a7a6c80dcd0f3d1f750987dc92938f6cc" prot="private" virt="non-virtual"><scope>MeshRenderer</scope><name>SHObject_Base</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ad2ef421c23738c0b95102972405fb0ab" prot="public" virt="virtual"><scope>MeshRenderer</scope><name>Start</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a843f7ccc0e2bd01702aed0f8b50c8c6a" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>transform</name></member>
+      <member refid="class_mesh_renderer_1a3653bc27a79020e5f02a1dfb9db1bef1" prot="private" virt="virtual"><scope>MeshRenderer</scope><name>TransformChanged</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1ad82f619114c4b651493946926be322cd" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>TransformUpdated</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ab9dbee0b3a70b05ed23472b94f7e5973" prot="public" virt="virtual"><scope>MeshRenderer</scope><name>Update</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ae1e9c0d251e50e5c83017674bfda6479" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>UpdateEntities</name></member>
+      <member refid="class_mesh_renderer_1a79bc481707e03ee614d6073143a15eac" prot="private" virt="non-virtual"><scope>MeshRenderer</scope><name>UpdateRenderNode</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a55d955d5d2ccbd122518abadd4380722" prot="public" virt="non-virtual"><scope>MeshRenderer</scope><name>w_transform</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ab83dad935ab0cdc34d088530aa4290d3" prot="public" virt="virtual"><scope>MeshRenderer</scope><name>~Entity</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" virt="virtual"><scope>MeshRenderer</scope><name>~SHObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

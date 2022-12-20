@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_tools_8h" kind="file" language="C++">
+    <compoundname>Tools.h</compoundname>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">vulkan/vulkan.h</includes>
+    <includes refid="vk__mem__alloc_8h" local="no">vulkan/vk_mem_alloc.h</includes>
+    <includes refid="_vulkan_device_8h" local="yes">VulkanDevice.h</includes>
+    <includes refid="exports_8h" local="yes">exports.h</includes>
+    <includedby refid="_generic_render_pass_8h" local="yes">shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GenericRenderPass.h</includedby>
+    <includedby refid="_buffer_8h" local="yes">shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h</includedby>
+    <includedby refid="_image_8h" local="yes">shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h</includedby>
+    <includedby refid="_tools_8cpp" local="no">shadow-engine/shadow-renderer/src/vulkan/Tools.cpp</includedby>
+    <includedby refid="_vulkan_module_8cpp" local="no">shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp</includedby>
+    <includedby refid="_buffer_8cpp" local="yes">shadow-engine/shadow-renderer/src/vulkan/abstraction/Buffer.cpp</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>exports.h</label>
+        <link refid="exports_8h"/>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/vulkan/Tools.h</label>
+        <link refid="_tools_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>vlkx/vulkan/ValidationAndExtension.h</label>
+        <link refid="_validation_and_extension_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>VulkanDevice.h</label>
+        <link refid="_vulkan_device_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>vulkan/vk_mem_alloc.h</label>
+        <link refid="vk__mem__alloc_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>SDL.h</label>
+      </node>
+      <node id="3">
+        <label>functional</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="9">
+        <label>set</label>
+      </node>
+      <node id="2">
+        <label>stdexcept</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="4">
+        <label>vulkan/vulkan.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="15">
+        <label>shadow-engine/core/src/core/ShadowApplication.cpp</label>
+        <link refid="_shadow_application_8cpp"/>
+      </node>
+      <node id="3">
+        <label>shadow-engine/shadow-renderer/inc/temp/model/Builder.h</label>
+        <link refid="_builder_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h</label>
+        <link refid="_g_p_u_pass_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GenericRenderPass.h</label>
+        <link refid="_generic_render_pass_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h</label>
+        <link refid="_screen_render_pass_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h</label>
+        <link refid="_pipeline_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/vulkan/SwapChain.h</label>
+        <link refid="_swap_chain_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/vulkan/Tools.h</label>
+        <link refid="_tools_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h</label>
+        <link refid="_vulkan_module_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h</label>
+        <link refid="_buffer_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Descriptor.h</label>
+        <link refid="_descriptor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h</label>
+        <link refid="_image_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp</label>
+        <link refid="_pipeline_8cpp"/>
+      </node>
+      <node id="6">
+        <label>shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp</label>
+        <link refid="_g_p_u_pass_8cpp"/>
+      </node>
+      <node id="10">
+        <label>shadow-engine/shadow-renderer/src/render/render_pass/GenericRenderPass.cpp</label>
+        <link refid="_generic_render_pass_8cpp"/>
+      </node>
+      <node id="7">
+        <label>shadow-engine/shadow-renderer/src/render/render_pass/ScreenRenderPass.cpp</label>
+        <link refid="_screen_render_pass_8cpp"/>
+      </node>
+      <node id="4">
+        <label>shadow-engine/shadow-renderer/src/temp/model/Builder.cpp</label>
+        <link refid="_builder_8cpp"/>
+      </node>
+      <node id="20">
+        <label>shadow-engine/shadow-renderer/src/vulkan/SwapChain.cpp</label>
+        <link refid="_swap_chain_8cpp"/>
+      </node>
+      <node id="24">
+        <label>shadow-engine/shadow-renderer/src/vulkan/Tools.cpp</label>
+        <link refid="_tools_8cpp"/>
+      </node>
+      <node id="9">
+        <label>shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp</label>
+        <link refid="_vulkan_module_8cpp"/>
+      </node>
+      <node id="21">
+        <label>shadow-engine/shadow-renderer/src/vulkan/abstraction/Buffer.cpp</label>
+        <link refid="_buffer_8cpp"/>
+      </node>
+      <node id="22">
+        <label>shadow-engine/shadow-renderer/src/vulkan/abstraction/Commands.cpp</label>
+        <link refid="_commands_8cpp"/>
+      </node>
+      <node id="19">
+        <label>shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp</label>
+        <link refid="_descriptor_8cpp"/>
+      </node>
+      <node id="23">
+        <label>shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp</label>
+        <link refid="_image_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_vk_tools_1_1_managed_image" prot="public">VkTools::ManagedImage</innerclass>
+    <innerclass refid="struct_vk_tools_1_1_managed_buffer" prot="public">VkTools::ManagedBuffer</innerclass>
+    <innernamespace refid="namespace_vk_tools">VkTools</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vulkan/vulkan.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="vk__mem__alloc_8h" kindref="compound">vulkan/vk_mem_alloc.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_vulkan_device_8h" kindref="compound">VulkanDevice.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="exports_8h" kindref="compound">exports.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="namespace_vk_tools" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_vk_tools" kindref="compound">VkTools</ref><sp/>{</highlight></codeline>
+<codeline lineno="13" refid="struct_vk_tools_1_1_managed_image" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_vk_tools_1_1_managed_image" kindref="compound">ManagedImage</ref><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="struct_vk_tools_1_1_managed_image_1a73d0711b937a6a5f66d86c67c82d43ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkImage<sp/><ref refid="struct_vk_tools_1_1_managed_image_1a73d0711b937a6a5f66d86c67c82d43ab" kindref="member">image</ref>;</highlight></codeline>
+<codeline lineno="15" refid="struct_vk_tools_1_1_managed_image_1a227e2f36e2909fae4291e1298b1d5efa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_vma_allocation" kindref="compound">VmaAllocation</ref><sp/><ref refid="struct_vk_tools_1_1_managed_image_1a227e2f36e2909fae4291e1298b1d5efa" kindref="member">allocation</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="struct_vk_tools_1_1_managed_buffer" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_vk_tools_1_1_managed_buffer" kindref="compound">ManagedBuffer</ref><sp/>{</highlight></codeline>
+<codeline lineno="19" refid="struct_vk_tools_1_1_managed_buffer_1a4a63e43746b5713e791a312c9589c45b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkBuffer<sp/><ref refid="struct_vk_tools_1_1_managed_buffer_1a4a63e43746b5713e791a312c9589c45b" kindref="member">buffer</ref>;</highlight></codeline>
+<codeline lineno="20" refid="struct_vk_tools_1_1_managed_buffer_1a2d7664529ca0f860a68dbb00d0b57236" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_vma_allocation" kindref="compound">VmaAllocation</ref><sp/><ref refid="struct_vk_tools_1_1_managed_buffer_1a2d7664529ca0f860a68dbb00d0b57236" kindref="member">allocation</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>API<sp/><ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref><sp/><ref refid="namespace_vk_tools_1a7195f698aad36f4aa2a4a9e977991486" kindref="member">allocator</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vk_tools_1_1_managed_image" kindref="compound">ManagedImage</ref><sp/><ref refid="namespace_vk_tools_1a18c7eeeafe29e6742235b8a56b630159" kindref="member">createImage</ref>(VkFormat<sp/>format,<sp/>VkImageUsageFlags<sp/>flags,<sp/>VkExtent3D<sp/>extent);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>VkSampler<sp/><ref refid="namespace_vk_tools_1a01591839c97bb49c4c9fc43b78eea78f" kindref="member">createSampler</ref>(VkFilter<sp/>filters,<sp/>VkSamplerAddressMode<sp/>mode,<sp/>uint32_t<sp/>mipping,<sp/>VkDevice<sp/>device);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>VkImageView<sp/><ref refid="namespace_vk_tools_1aa0fd9328ea74f6134b4726e48fcc038a" kindref="member">createImageView</ref>(VkImage<sp/>image,<sp/>VkFormat<sp/>format,<sp/>VkImageAspectFlags<sp/>flags,<sp/>uint32_t<sp/>mipping,<sp/>uint32_t<sp/>layers,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkDevice<sp/>device);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vk_tools_1_1_managed_buffer" kindref="compound">ManagedBuffer</ref><sp/><ref refid="namespace_vk_tools_1a1718b928d06284297fca17ba2e738fbc" kindref="member">createGPUBuffer</ref>(VkDeviceSize<sp/>size,<sp/>VkBufferUsageFlags<sp/>usage,<sp/>VkMemoryPropertyFlags<sp/>properties,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkDevice<sp/>logicalDevice,<sp/>VkPhysicalDevice<sp/>physicalDevice,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>hostVisible<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_vk_tools_1a41960289749cf0bdb6da01f44aabaf77" kindref="member">immediateExecute</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkCommandBuffer<sp/>&amp;)&gt;<sp/>&amp;execute,<sp/><ref refid="class_vulkan_device" kindref="compound">VulkanDevice</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_vk_tools_1abe12b20976d43a075a62375dd8aff167" kindref="member">copyGPUBuffer</ref>(VkBuffer<sp/>source,<sp/>VkBuffer<sp/>dest,<sp/>VkDeviceSize<sp/>length,<sp/><ref refid="class_vulkan_device" kindref="compound">VulkanDevice</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/Tools.h"/>
+  </compounddef>
+</doxygen>

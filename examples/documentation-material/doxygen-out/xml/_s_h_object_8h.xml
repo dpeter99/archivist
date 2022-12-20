@@ -1,0 +1,402 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_s_h_object_8h" kind="file" language="C++">
+    <compoundname>SHObject.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">typeinfo</includes>
+    <includes refid="exports_8h" local="yes">exports.h</includes>
+    <includedby refid="_module_8h" local="yes">shadow-engine/core/inc/core/Module.h</includedby>
+    <includedby refid="_entity_8h" local="yes">shadow-engine/shadow-entity/inc/Entity.h</includedby>
+    <includedby refid="_scene_8h" local="yes">shadow-engine/shadow-entity/inc/Scene.h</includedby>
+    <includedby refid="_s_h_object_8cpp" local="yes">shadow-engine/shadow-reflection/src/SHObject.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>exports.h</label>
+        <link refid="exports_8h"/>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-reflection/inc/SHObject.h</label>
+        <link refid="_s_h_object_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>typeinfo</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>shadow-engine/core/inc/core/Module.h</label>
+        <link refid="_module_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>shadow-engine/core/inc/core/ModuleManager.h</label>
+        <link refid="_module_manager_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>shadow-engine/core/inc/core/SDL2Module.h</label>
+        <link refid="_s_d_l2_module_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>shadow-engine/core/inc/core/ShadowApplication.h</label>
+        <link refid="_shadow_application_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>shadow-engine/core/inc/debug/DebugModule.h</label>
+        <link refid="_debug_module_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>shadow-engine/core/src/core/Module.cpp</label>
+        <link refid="_module_8cpp"/>
+      </node>
+      <node id="9">
+        <label>shadow-engine/core/src/core/ModuleManager.cpp</label>
+        <link refid="_module_manager_8cpp"/>
+      </node>
+      <node id="12">
+        <label>shadow-engine/core/src/core/SDL2Module.cpp</label>
+        <link refid="_s_d_l2_module_8cpp"/>
+      </node>
+      <node id="5">
+        <label>shadow-engine/core/src/core/ShadowApplication.cpp</label>
+        <link refid="_shadow_application_8cpp"/>
+      </node>
+      <node id="10">
+        <label>shadow-engine/core/src/debug/DebugModule.cpp</label>
+        <link refid="_debug_module_8cpp"/>
+      </node>
+      <node id="6">
+        <label>shadow-engine/shadow-entity/Entities/Camera.cpp</label>
+        <link refid="shadow-entity_2_entities_2_camera_8cpp"/>
+      </node>
+      <node id="33">
+        <label>shadow-engine/shadow-entity/Entities/Player.cpp</label>
+        <link refid="_player_8cpp"/>
+      </node>
+      <node id="32">
+        <label>shadow-engine/shadow-entity/Entities/Player.h</label>
+        <link refid="_player_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>shadow-engine/shadow-entity/inc/Entity.h</label>
+        <link refid="_entity_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>shadow-engine/shadow-entity/inc/EntityRegistry.h</label>
+        <link refid="_entity_registry_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>shadow-engine/shadow-entity/inc/EntitySystem.h</label>
+        <link refid="_entity_system_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>shadow-engine/shadow-entity/inc/Scene.h</label>
+        <link refid="_scene_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>shadow-engine/shadow-entity/inc/SceneEntity.h</label>
+        <link refid="_scene_entity_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>shadow-engine/shadow-entity/src/DefaultEntities.cpp</label>
+        <link refid="_default_entities_8cpp"/>
+      </node>
+      <node id="35">
+        <label>shadow-engine/shadow-entity/src/Entity.cpp</label>
+        <link refid="_entity_8cpp"/>
+      </node>
+      <node id="41">
+        <label>shadow-engine/shadow-entity/src/EntityManager.cpp</label>
+        <link refid="_entity_manager_8cpp"/>
+      </node>
+      <node id="36">
+        <label>shadow-engine/shadow-entity/src/EntityRegistry.cpp</label>
+        <link refid="_entity_registry_8cpp"/>
+      </node>
+      <node id="16">
+        <label>shadow-engine/shadow-entity/src/EntitySystem.cpp</label>
+        <link refid="_entity_system_8cpp"/>
+      </node>
+      <node id="38">
+        <label>shadow-engine/shadow-entity/src/Scene.cpp</label>
+        <link refid="_scene_8cpp"/>
+      </node>
+      <node id="40">
+        <label>shadow-engine/shadow-entity/src/SceneEntity.cpp</label>
+        <link refid="_scene_entity_8cpp"/>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-reflection/inc/SHObject.h</label>
+        <link refid="_s_h_object_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>shadow-engine/shadow-reflection/src/SHObject.cpp</label>
+        <link refid="_s_h_object_8cpp"/>
+      </node>
+      <node id="19">
+        <label>shadow-engine/shadow-renderer/inc/temp/model/Builder.h</label>
+        <link refid="_builder_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h</label>
+        <link refid="_pipeline_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/vulkan/VulkanModule.h</label>
+        <link refid="_vulkan_module_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Descriptor.h</label>
+        <link refid="_descriptor_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp</label>
+        <link refid="_pipeline_8cpp"/>
+      </node>
+      <node id="24">
+        <label>shadow-engine/shadow-renderer/src/render/render_pass/GenericRenderPass.cpp</label>
+        <link refid="_generic_render_pass_8cpp"/>
+      </node>
+      <node id="25">
+        <label>shadow-engine/shadow-renderer/src/render/render_pass/ScreenRenderPass.cpp</label>
+        <link refid="_screen_render_pass_8cpp"/>
+      </node>
+      <node id="20">
+        <label>shadow-engine/shadow-renderer/src/temp/model/Builder.cpp</label>
+        <link refid="_builder_8cpp"/>
+      </node>
+      <node id="26">
+        <label>shadow-engine/shadow-renderer/src/vulkan/SwapChain.cpp</label>
+        <link refid="_swap_chain_8cpp"/>
+      </node>
+      <node id="7">
+        <label>shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp</label>
+        <link refid="_vulkan_module_8cpp"/>
+      </node>
+      <node id="27">
+        <label>shadow-engine/shadow-renderer/src/vulkan/abstraction/Buffer.cpp</label>
+        <link refid="_buffer_8cpp"/>
+      </node>
+      <node id="28">
+        <label>shadow-engine/shadow-renderer/src/vulkan/abstraction/Commands.cpp</label>
+        <link refid="_commands_8cpp"/>
+      </node>
+      <node id="23">
+        <label>shadow-engine/shadow-renderer/src/vulkan/abstraction/Descriptor.cpp</label>
+        <link refid="_descriptor_8cpp"/>
+      </node>
+      <node id="29">
+        <label>shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp</label>
+        <link refid="_image_8cpp"/>
+      </node>
+      <node id="8">
+        <label>shadow-runtime/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_shadow_engine_1_1_s_h_object" prot="public">ShadowEngine::SHObject</innerclass>
+    <innernamespace refid="namespace_shadow_engine">ShadowEngine</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_s_h_object_8h_1ab6e37410b4b149b1b5cb3c4bafe8aa53" prot="public" static="no">
+        <name>SHObject_Base</name>
+        <param><defname>type</defname></param>
+        <initializer>public: \
+	static const std::string&amp; Type();				 \
+	static uint64_t TypeId();						 \
+	const std::string&amp; GetType() const override		{ return Type();  } \
+	const uint64_t GetTypeId() const override		{ return  type::TypeId(); } \
+private:</initializer>
+        <briefdescription>
+<para>Macro to make the override functions of SHObject. This should be added in each derived class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the class </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-reflection/inc/SHObject.h" line="50" column="9" bodyfile="shadow-engine/shadow-reflection/inc/SHObject.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_s_h_object_8h_1a140fffa6eb414a66bee4b353fae1c6b1" prot="public" static="no">
+        <name>SHObject_Base_Impl</name>
+        <param><defname>type</defname></param>
+        <initializer>	const std::string&amp; type::Type()				{ static const std::string t = typeid(type).name(); return t; } \
+	uint64_t type::TypeId()						{ static const uint64_t id = GenerateId(); return id; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-reflection/inc/SHObject.h" line="58" column="9" bodyfile="shadow-engine/shadow-reflection/inc/SHObject.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;typeinfo&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="exports_8h" kindref="compound">exports.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_shadow_engine" kindref="compound">ShadowEngine</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_shadow_engine_1_1_s_h_object" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_shadow_engine_1_1_s_h_object" kindref="compound">SHObject</ref></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>API<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="class_shadow_engine_1_1_s_h_object_1a5244bd8527763320cbef208e3a6e4860" kindref="member">GenerateId</ref>()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35" refid="class_shadow_engine_1_1_s_h_object_1a3597667efd33b935a89ac11d3b47a215" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="class_shadow_engine_1_1_s_h_object_1a3597667efd33b935a89ac11d3b47a215" kindref="member">GetType</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="40" refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" kindref="member">GetTypeId</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" kindref="member">~SHObject</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="_s_h_object_8h_1ab6e37410b4b149b1b5cb3c4bafe8aa53" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHObject_Base(type)<sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor">public:<sp/>\</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>const<sp/>std::string&amp;<sp/>Type();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>uint64_t<sp/>TypeId();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>const<sp/>std::string&amp;<sp/>GetType()<sp/>const<sp/>override<sp/><sp/><sp/><sp/><sp/>{<sp/>return<sp/>Type();<sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>const<sp/>uint64_t<sp/>GetTypeId()<sp/>const<sp/>override<sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>return<sp/><sp/>type::TypeId();<sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor">private:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="_s_h_object_8h_1a140fffa6eb414a66bee4b353fae1c6b1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHObject_Base_Impl(type)<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>const<sp/>std::string&amp;<sp/>type::Type()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>static<sp/>const<sp/>std::string<sp/>t<sp/>=<sp/>typeid(type).name();<sp/>return<sp/>t;<sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>uint64_t<sp/>type::TypeId()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>static<sp/>const<sp/>uint64_t<sp/>id<sp/>=<sp/>GenerateId();<sp/>return<sp/>id;<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-reflection/inc/SHObject.h"/>
+  </compounddef>
+</doxygen>

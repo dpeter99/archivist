@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_catch_1_1_i_stream" kind="struct" language="C++" prot="public" abstract="yes">
+    <compoundname>Catch::IStream</compoundname>
+    <includes refid="catch_8hpp" local="no">catch.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_catch_1_1_i_stream_1a344a88d0e5fc1f727f5801c72b4a4e2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual Catch::IStream::~IStream</definition>
+        <argsstring>()</argsstring>
+        <name>~IStream</name>
+        <qualifiedname>Catch::IStream::~IStream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="1434" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_i_stream_1ad1cee80a31407d09aa0627a531f26b07" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>virtual std::ostream &amp; Catch::IStream::stream</definition>
+        <argsstring>() const =0</argsstring>
+        <name>stream</name>
+        <qualifiedname>Catch::IStream::stream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="1435" column="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="1433" column="5" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="1433" bodyend="1436"/>
+    <listofallmembers>
+      <member refid="struct_catch_1_1_i_stream_1ad1cee80a31407d09aa0627a531f26b07" prot="public" virt="pure-virtual"><scope>Catch::IStream</scope><name>stream</name></member>
+      <member refid="struct_catch_1_1_i_stream_1a344a88d0e5fc1f727f5801c72b4a4e2a" prot="public" virt="virtual"><scope>Catch::IStream</scope><name>~IStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

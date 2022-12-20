@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structvlkx_1_1_image_sampler_1_1_config" kind="struct" language="C++" prot="public">
+    <compoundname>vlkx::ImageSampler::Config</compoundname>
+    <includes refid="_image_8h" local="no">Image.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvlkx_1_1_image_sampler_1_1_config_1a973c98081a55f12867073d6655ab32fa" prot="public" static="no" mutable="no">
+        <type>VkFilter</type>
+        <definition>VkFilter vlkx::ImageSampler::Config::filter</definition>
+        <argsstring></argsstring>
+        <name>filter</name>
+        <qualifiedname>vlkx::ImageSampler::Config::filter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="141" column="22" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_image_sampler_1_1_config_1adb2885c25bf9bd87788f75c1eb39e0f3" prot="public" static="no" mutable="no">
+        <type>VkSamplerAddressMode</type>
+        <definition>VkSamplerAddressMode vlkx::ImageSampler::Config::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <qualifiedname>vlkx::ImageSampler::Config::mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="142" column="34" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structvlkx_1_1_image_sampler_1_1_config_1a119363505dfd676da34e4d234f98b344" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::ImageSampler::Config::Config</definition>
+        <argsstring>(VkFilter filter=VK_FILTER_LINEAR, VkSamplerAddressMode mode=VK_SAMPLER_ADDRESS_MODE_REPEAT)</argsstring>
+        <name>Config</name>
+        <qualifiedname>vlkx::ImageSampler::Config::Config</qualifiedname>
+        <param>
+          <type>VkFilter</type>
+          <declname>filter</declname>
+          <defval>VK_FILTER_LINEAR</defval>
+        </param>
+        <param>
+          <type>VkSamplerAddressMode</type>
+          <declname>mode</declname>
+          <defval>VK_SAMPLER_ADDRESS_MODE_REPEAT</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="139" column="22" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="139" bodyend="139"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="138" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="138" bodyend="143"/>
+    <listofallmembers>
+      <member refid="structvlkx_1_1_image_sampler_1_1_config_1a119363505dfd676da34e4d234f98b344" prot="public" virt="non-virtual"><scope>vlkx::ImageSampler::Config</scope><name>Config</name></member>
+      <member refid="structvlkx_1_1_image_sampler_1_1_config_1a973c98081a55f12867073d6655ab32fa" prot="public" virt="non-virtual"><scope>vlkx::ImageSampler::Config</scope><name>filter</name></member>
+      <member refid="structvlkx_1_1_image_sampler_1_1_config_1adb2885c25bf9bd87788f75c1eb39e0f3" prot="public" virt="non-virtual"><scope>vlkx::ImageSampler::Config</scope><name>mode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

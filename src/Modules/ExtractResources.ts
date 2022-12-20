@@ -4,6 +4,7 @@ import {Content} from "../Content.ts";
 import { DOMParser, Element } from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";
 import * as fs from "https://deno.land/std@0.114.0/fs/mod.ts"
 import * as path from "https://deno.land/std@0.114.0/path/mod.ts";
+import {archivistInst} from "../Archivist.ts";
 
 /**
  * This Module extracts resources that are referenced in the doc and
@@ -34,19 +35,22 @@ export class ExtractResources extends SimpleModule{
             for (const file of files) {
                 const p = path.dirname(doc.path) + "/" + file;
 
-                if (fs.existsSync(p)) {
+
                     const targetPath = this.getFileOutputLoc(p);
+
+
 
                     fs.ensureDirSync(path.dirname(targetPath));
 
-
+                    //TODO: check file modified date or better hash them
                     let prom = fs.copy(p, targetPath).catch((e)=>{
-                        console.log(e);
+                        if(archivistInst.detailedOutput)
+                            console.log(e);
                     })
 
 
                     filewait.push(prom);
-                }
+
             }
         }
 

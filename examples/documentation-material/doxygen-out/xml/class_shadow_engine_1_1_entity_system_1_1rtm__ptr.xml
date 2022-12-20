@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kind="struct" language="C++" prot="public">
+    <compoundname>ShadowEngine::EntitySystem::rtm_ptr</compoundname>
+    <includes refid="_entity_8h" local="no">Entity.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class Type</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a7813d09bb02ca6f5719d2e824a108b4c" prot="private" static="no" mutable="no">
+        <type>Type *</type>
+        <definition>Type* ShadowEngine::EntitySystem::rtm_ptr&lt; Type &gt;::m_ptr</definition>
+        <argsstring></argsstring>
+        <name>m_ptr</name>
+        <qualifiedname>ShadowEngine::EntitySystem::rtm_ptr::m_ptr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="29" column="6" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a0bf40813c200ba8d07c3bbe9fd1e7858" prot="private" static="no" mutable="no">
+        <type><ref refid="namespace_shadow_engine_1_1_entity_system_1a70b6222c789aa7585ac013f1f674717e" kindref="member">Rtm_UUID</ref></type>
+        <definition>Rtm_UUID ShadowEngine::EntitySystem::rtm_ptr&lt; Type &gt;::m_uid</definition>
+        <argsstring></argsstring>
+        <name>m_uid</name>
+        <qualifiedname>ShadowEngine::EntitySystem::rtm_ptr::m_uid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="31" column="18" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a0e8be7b4c7c45c25c01122856b2bb372" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EntitySystem::rtm_ptr&lt; Type &gt;::rtm_ptr</definition>
+        <argsstring>(Type *ptr)</argsstring>
+        <name>rtm_ptr</name>
+        <qualifiedname>ShadowEngine::EntitySystem::rtm_ptr::rtm_ptr</qualifiedname>
+        <param>
+          <type>Type *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="34" column="1" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a6ba6cbdb9c5138fd89d5526c98d12da7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EntitySystem::rtm_ptr&lt; Type &gt;::rtm_ptr</definition>
+        <argsstring>()</argsstring>
+        <name>rtm_ptr</name>
+        <qualifiedname>ShadowEngine::EntitySystem::rtm_ptr::rtm_ptr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="36" column="1" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a5f17a97b7999556a5159d08d2444def0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ShadowEngine::EntitySystem::rtm_ptr&lt; Type &gt;::rtm_ptr</definition>
+        <argsstring>(const rtm_ptr&lt; T &gt; &amp;o)</argsstring>
+        <name>rtm_ptr</name>
+        <qualifiedname>ShadowEngine::EntitySystem::rtm_ptr::rtm_ptr</qualifiedname>
+        <param>
+          <type>const <ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr</ref>&lt; T &gt; &amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="39" column="1" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1adf7e778e2ed37fb4bbceba4232074e8e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type *</type>
+        <definition>Type * ShadowEngine::EntitySystem::rtm_ptr&lt; Type &gt;::operator-&gt;</definition>
+        <argsstring>() const</argsstring>
+        <name>operator-&gt;</name>
+        <qualifiedname>ShadowEngine::EntitySystem::rtm_ptr::operator-&gt;</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="44" column="6" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="44" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a19dc17d42e68a32922f328cf3aea97e2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EntitySystem::rtm_ptr&lt; Type &gt;::operator bool</definition>
+        <argsstring>() const</argsstring>
+        <name>operator bool</name>
+        <qualifiedname>ShadowEngine::EntitySystem::rtm_ptr::operator bool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="53" column="8" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a934c49cc2721004ea055bb400df8f4f8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool ShadowEngine::EntitySystem::rtm_ptr&lt; Type &gt;::operator==</definition>
+        <argsstring>(rtm_ptr&lt; T &gt; o) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>ShadowEngine::EntitySystem::rtm_ptr::operator==</qualifiedname>
+        <param>
+          <type><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr</ref>&lt; T &gt;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="56" column="13" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a4bb3e0e68ebf5bdf922bd7dd9f1d9452" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ShadowEngine::EntitySystem::rtm_ptr&lt; Type &gt;::operator rtm_ptr&lt; T &gt;</definition>
+        <argsstring>() const</argsstring>
+        <name>operator rtm_ptr&lt; T &gt;</name>
+        <qualifiedname>ShadowEngine::EntitySystem::rtm_ptr::operator rtm_ptr&lt; T &gt;</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="62" column="8" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1aeea100a912af1f9caf17bc0853d255e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::rtm_ptr&lt; Type &gt;::null</definition>
+        <argsstring>()</argsstring>
+        <name>null</name>
+        <qualifiedname>ShadowEngine::EntitySystem::rtm_ptr::null</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="66" column="6" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a00e593fc94065da83beb44a047123bd5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * ShadowEngine::EntitySystem::rtm_ptr&lt; Type &gt;::getInternalPointer</definition>
+        <argsstring>() const</argsstring>
+        <name>getInternalPointer</name>
+        <qualifiedname>ShadowEngine::EntitySystem::rtm_ptr::getInternalPointer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="71" column="6" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1ab146d080b9893a133e29b124965ec651" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ShadowEngine::EntitySystem::rtm_ptr&lt; Type &gt;::getInternalUID</definition>
+        <argsstring>() const</argsstring>
+        <name>getInternalUID</name>
+        <qualifiedname>ShadowEngine::EntitySystem::rtm_ptr::getInternalUID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="75" column="5" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-entity/inc/Entity.h" line="26" column="1" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="27" bodyend="77"/>
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a00e593fc94065da83beb44a047123bd5" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::rtm_ptr</scope><name>getInternalPointer</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1ab146d080b9893a133e29b124965ec651" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::rtm_ptr</scope><name>getInternalUID</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a7813d09bb02ca6f5719d2e824a108b4c" prot="private" virt="non-virtual"><scope>ShadowEngine::EntitySystem::rtm_ptr</scope><name>m_ptr</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a0bf40813c200ba8d07c3bbe9fd1e7858" prot="private" virt="non-virtual"><scope>ShadowEngine::EntitySystem::rtm_ptr</scope><name>m_uid</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1aeea100a912af1f9caf17bc0853d255e2" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::rtm_ptr</scope><name>null</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a19dc17d42e68a32922f328cf3aea97e2" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::rtm_ptr</scope><name>operator bool</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a4bb3e0e68ebf5bdf922bd7dd9f1d9452" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::rtm_ptr</scope><name>operator rtm_ptr&lt; T &gt;</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1adf7e778e2ed37fb4bbceba4232074e8e" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::rtm_ptr</scope><name>operator-&gt;</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a934c49cc2721004ea055bb400df8f4f8" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::rtm_ptr</scope><name>operator==</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a0e8be7b4c7c45c25c01122856b2bb372" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::rtm_ptr</scope><name>rtm_ptr</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a6ba6cbdb9c5138fd89d5526c98d12da7" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::rtm_ptr</scope><name>rtm_ptr</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr_1a5f17a97b7999556a5159d08d2444def0" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::rtm_ptr</scope><name>rtm_ptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

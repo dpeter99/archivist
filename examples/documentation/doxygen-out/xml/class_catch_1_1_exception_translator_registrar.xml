@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_catch_1_1_exception_translator_registrar" kind="class" language="C++" prot="public">
+    <compoundname>Catch::ExceptionTranslatorRegistrar</compoundname>
+    <includes refid="catch_8hpp" local="no">catch.hpp</includes>
+    <innerclass refid="class_catch_1_1_exception_translator_registrar_1_1_exception_translator" prot="private">Catch::ExceptionTranslatorRegistrar::ExceptionTranslator</innerclass>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_catch_1_1_exception_translator_registrar_1aa73229de911f26b1df6c6c87c4d9e04e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>Catch::ExceptionTranslatorRegistrar::ExceptionTranslatorRegistrar</definition>
+        <argsstring>(std::string(*translateFunction)(T &amp;))</argsstring>
+        <name>ExceptionTranslatorRegistrar</name>
+        <qualifiedname>Catch::ExceptionTranslatorRegistrar::ExceptionTranslatorRegistrar</qualifiedname>
+        <param>
+          <type>std::string(*)(T &amp;)</type>
+          <declname>translateFunction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="3052" column="9" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="3052" bodyend="3055"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="3021" column="5" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="3021" bodyend="3056"/>
+    <listofallmembers>
+      <member refid="class_catch_1_1_exception_translator_registrar_1aa73229de911f26b1df6c6c87c4d9e04e" prot="public" virt="non-virtual"><scope>Catch::ExceptionTranslatorRegistrar</scope><name>ExceptionTranslatorRegistrar</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

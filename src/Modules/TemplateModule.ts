@@ -88,14 +88,14 @@ export class TemplateModule extends SimpleModule{
 
     }
 
-
+    // deno-lint-ignore require-await
     async process(docs: Array<Content>): Promise<any> {
         docs.forEach(d=>this.prepareData(d));
 
         return super.process(docs);
     }
 
-    processDoc(doc: Content): Promise<any> {
+    async processDoc(doc: Content): Promise<any> {
 
         const docContent = doc.content;
 
@@ -122,10 +122,10 @@ export class TemplateModule extends SimpleModule{
             // @ts-ignore
             data["template"] = templat.file;
 
-            doc.content = this.rootTemplate.compiled(data);
+            doc.content = await this.rootTemplate.compiled(data);
         }
         else {
-            doc.content = templat.compiled(data)
+            doc.content = await templat.compiled(data)
         }
         doc.metadata.Template = templat.file;
 
@@ -151,8 +151,11 @@ export class TemplateModule extends SimpleModule{
     }
 
     findTemplate(name:string): CompiledTemplate | undefined{
+        let p = name;
+        if(!path.isAbsolute(name)){
+            p = this.template.compiledPath+"/"+name;
+        }
 
-        let p = this.template.compiledPath+"/"+name;
         if(fs.existsSync(p)){
             if(this.templateFiles.has(p)){
                 return this.templateFiles.get(p);
@@ -182,7 +185,7 @@ class CompiledTemplate {
         if(fs.existsSync(path)) {
             let text = Deno.readTextFileSync(path);
 
-            let compiled = compile_help(text, {filename:path} );
+            let compiled = compile_help(text, {filename:path, async: true} );
 
             return new CompiledTemplate(path,text,compiled);
         }

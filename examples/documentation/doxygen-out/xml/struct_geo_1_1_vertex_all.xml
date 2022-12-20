@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_geo_1_1_vertex_all" kind="struct" language="C++" prot="public">
+    <compoundname>Geo::VertexAll</compoundname>
+    <includes refid="_geometry_8h" local="no">Geometry.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_geo_1_1_vertex_all_1ae2b1c4d1f7af407c3d3380efa68e55df" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 Geo::VertexAll::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <qualifiedname>Geo::VertexAll::position</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" line="32" column="11" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_geo_1_1_vertex_all_1a6ada83f408d4b12db7375617d428c25e" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 Geo::VertexAll::normal</definition>
+        <argsstring></argsstring>
+        <name>normal</name>
+        <qualifiedname>Geo::VertexAll::normal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" line="33" column="11" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_geo_1_1_vertex_all_1a6d00aa9a5cf6d1d7008a289743d3c9b2" prot="public" static="no" mutable="no">
+        <type>glm::vec2</type>
+        <definition>glm::vec2 Geo::VertexAll::texture</definition>
+        <argsstring></argsstring>
+        <name>texture</name>
+        <qualifiedname>Geo::VertexAll::texture</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" line="34" column="11" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="struct_geo_1_1_vertex_all_1ae57010dac9bf65e80d9bc51efc36c00c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkVertexInputBindingDescription</type>
+        <definition>static VkVertexInputBindingDescription Geo::VertexAll::getBindingDesc</definition>
+        <argsstring>()</argsstring>
+        <name>getBindingDesc</name>
+        <qualifiedname>Geo::VertexAll::getBindingDesc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" line="37" column="40" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" bodystart="37" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_geo_1_1_vertex_all_1a3ebd5565c0f7525b558e20950579ea6b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; VkVertexInputAttributeDescription &gt;</type>
+        <definition>static std::vector&lt; VkVertexInputAttributeDescription &gt; Geo::VertexAll::getAttributeDesc</definition>
+        <argsstring>()</argsstring>
+        <name>getAttributeDesc</name>
+        <qualifiedname>Geo::VertexAll::getAttributeDesc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" line="47" column="20" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" bodystart="47" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" line="31" column="1" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Geometry.h" bodystart="31" bodyend="54"/>
+    <listofallmembers>
+      <member refid="struct_geo_1_1_vertex_all_1a3ebd5565c0f7525b558e20950579ea6b" prot="public" virt="non-virtual"><scope>Geo::VertexAll</scope><name>getAttributeDesc</name></member>
+      <member refid="struct_geo_1_1_vertex_all_1ae57010dac9bf65e80d9bc51efc36c00c" prot="public" virt="non-virtual"><scope>Geo::VertexAll</scope><name>getBindingDesc</name></member>
+      <member refid="struct_geo_1_1_vertex_all_1a6ada83f408d4b12db7375617d428c25e" prot="public" virt="non-virtual"><scope>Geo::VertexAll</scope><name>normal</name></member>
+      <member refid="struct_geo_1_1_vertex_all_1ae2b1c4d1f7af407c3d3380efa68e55df" prot="public" virt="non-virtual"><scope>Geo::VertexAll</scope><name>position</name></member>
+      <member refid="struct_geo_1_1_vertex_all_1a6d00aa9a5cf6d1d7008a289743d3c9b2" prot="public" virt="non-virtual"><scope>Geo::VertexAll</scope><name>texture</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structvlkx_1_1_ref_counted_texture_1_1_cubemap_location" kind="struct" language="C++" prot="public">
+    <compoundname>vlkx::RefCountedTexture::CubemapLocation</compoundname>
+    <includes refid="_image_8h" local="no">Image.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvlkx_1_1_ref_counted_texture_1_1_cubemap_location_1a5d61050f90514c89463e1d095d6d2d80" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string vlkx::RefCountedTexture::CubemapLocation::directory</definition>
+        <argsstring></argsstring>
+        <name>directory</name>
+        <qualifiedname>vlkx::RefCountedTexture::CubemapLocation::directory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="231" column="25" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_ref_counted_texture_1_1_cubemap_location_1a7a361ec30f93d6dd10eec5be6f9b5d17" prot="public" static="no" mutable="no">
+        <type>std::array&lt; std::string, 6 &gt;</type>
+        <definition>std::array&lt;std::string, 6&gt; vlkx::RefCountedTexture::CubemapLocation::files</definition>
+        <argsstring></argsstring>
+        <name>files</name>
+        <qualifiedname>vlkx::RefCountedTexture::CubemapLocation::files</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="232" column="24" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="230" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="230" bodyend="233"/>
+    <listofallmembers>
+      <member refid="structvlkx_1_1_ref_counted_texture_1_1_cubemap_location_1a5d61050f90514c89463e1d095d6d2d80" prot="public" virt="non-virtual"><scope>vlkx::RefCountedTexture::CubemapLocation</scope><name>directory</name></member>
+      <member refid="structvlkx_1_1_ref_counted_texture_1_1_cubemap_location_1a7a361ec30f93d6dd10eec5be6f9b5d17" prot="public" virt="non-virtual"><scope>vlkx::RefCountedTexture::CubemapLocation</scope><name>files</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

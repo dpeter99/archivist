@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="group__group__stats" kind="group">
+    <compoundname>group_stats</compoundname>
+    <title>Statistics</title>
+    <innerclass refid="struct_vma_statistics" prot="public">VmaStatistics</innerclass>
+    <innerclass refid="struct_vma_detailed_statistics" prot="public">VmaDetailedStatistics</innerclass>
+    <innerclass refid="struct_vma_total_statistics" prot="public">VmaTotalStatistics</innerclass>
+    <innerclass refid="struct_vma_budget" prot="public">VmaBudget</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__group__stats_1gac94bd1a382a3922ddc8de3af4d3ddd06" prot="public" static="no">
+        <type>struct <ref refid="struct_vma_statistics" kindref="compound">VmaStatistics</ref></type>
+        <definition>typedef struct VmaStatistics VmaStatistics</definition>
+        <argsstring></argsstring>
+        <name>VmaStatistics</name>
+        <briefdescription>
+<para>Calculated statistics of memory usage e.g. in a specific memory type, heap, custom pool, or total. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>These are fast to calculate. See functions: <ref refid="group__group__stats_1ga620eaa8a9d919860f7deaf4d0148b2a1" kindref="member">vmaGetHeapBudgets()</ref>, <ref refid="group__group__stats_1ga7e489a68f893dbefc78a6ac9413c4220" kindref="member">vmaGetPoolStatistics()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1134" column="15"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__group__stats_1ga9ab0c535a6ca655dc63b8609ab4b8394" prot="public" static="no">
+        <type>struct <ref refid="struct_vma_detailed_statistics" kindref="compound">VmaDetailedStatistics</ref></type>
+        <definition>typedef struct VmaDetailedStatistics VmaDetailedStatistics</definition>
+        <argsstring></argsstring>
+        <name>VmaDetailedStatistics</name>
+        <briefdescription>
+<para>More detailed statistics than <ref refid="struct_vma_statistics" kindref="compound">VmaStatistics</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>These are slower to calculate. Use for debugging purposes. See functions: <ref refid="group__group__stats_1gad176279c8da8f50399674b2ef03ca866" kindref="member">vmaCalculateStatistics()</ref>, <ref refid="group__group__stats_1ga54b57aa8f511406711f4b918028d8f60" kindref="member">vmaCalculatePoolStatistics()</ref>.</para>
+<para>Previous version of the statistics API provided averages, but they have been removed because they can be easily calculated as:</para>
+<para><programlisting><codeline><highlight class="normal">VkDeviceSize<sp/>allocationSizeAvg<sp/>=<sp/>detailedStats.statistics.allocationBytes<sp/>/<sp/>detailedStats.statistics.allocationCount;</highlight></codeline>
+<codeline><highlight class="normal">VkDeviceSize<sp/>unusedBytes<sp/>=<sp/>detailedStats.statistics.blockBytes<sp/>-<sp/>detailedStats.statistics.allocationBytes;</highlight></codeline>
+<codeline><highlight class="normal">VkDeviceSize<sp/>unusedRangeSizeAvg<sp/>=<sp/>unusedBytes<sp/>/<sp/>detailedStats.unusedRangeCount;</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1164" column="23"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__group__stats_1ga68916e729e55d513f88ffafbadddb770" prot="public" static="no">
+        <type>struct <ref refid="struct_vma_total_statistics" kindref="compound">VmaTotalStatistics</ref></type>
+        <definition>typedef struct VmaTotalStatistics VmaTotalStatistics</definition>
+        <argsstring></argsstring>
+        <name>VmaTotalStatistics</name>
+        <briefdescription>
+<para>General statistics from current state of the Allocator - total memory usage across all memory heaps and types. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>These are slower to calculate. Use for debugging purposes. See function <ref refid="group__group__stats_1gad176279c8da8f50399674b2ef03ca866" kindref="member">vmaCalculateStatistics()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1177" column="20"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__group__stats_1gaa078667e71b1ef24e87a6a30d128381d" prot="public" static="no">
+        <type>struct <ref refid="struct_vma_budget" kindref="compound">VmaBudget</ref></type>
+        <definition>typedef struct VmaBudget VmaBudget</definition>
+        <argsstring></argsstring>
+        <name>VmaBudget</name>
+        <briefdescription>
+<para>Statistics of current memory usage and available budget for a specific memory heap. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>These are fast to calculate. See function <ref refid="group__group__stats_1ga620eaa8a9d919860f7deaf4d0148b2a1" kindref="member">vmaGetHeapBudgets()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1208" column="11"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__stats_1gad176279c8da8f50399674b2ef03ca866" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaCalculateStatistics</definition>
+        <argsstring>(VmaAllocator VMA_NOT_NULL allocator, VmaTotalStatistics *VMA_NOT_NULL pStats)</argsstring>
+        <name>vmaCalculateStatistics</name>
+        <param>
+          <type><ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>allocator</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vma_total_statistics" kindref="compound">VmaTotalStatistics</ref> *<ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>pStats</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves statistics from current state of the Allocator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is called &quot;calculate&quot; not &quot;get&quot; because it has to traverse all internal data structures, so it may be quite slow. Use it for debugging purposes. For faster but more brief statistics suitable to be called every frame or every allocation, use <ref refid="group__group__stats_1ga620eaa8a9d919860f7deaf4d0148b2a1" kindref="member">vmaGetHeapBudgets()</ref>.</para>
+<para>Note that when using allocator from multiple threads, returned information may immediately become outdated. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1633" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="1633" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__stats_1ga620eaa8a9d919860f7deaf4d0148b2a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaGetHeapBudgets</definition>
+        <argsstring>(VmaAllocator VMA_NOT_NULL allocator, VmaBudget *VMA_NOT_NULL VMA_LEN_IF_NOT_NULL(&quot;VkPhysicalDeviceMemoryProperties::memoryHeapCount&quot;) pBudgets)</argsstring>
+        <name>vmaGetHeapBudgets</name>
+        <param>
+          <type><ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>allocator</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vma_budget" kindref="compound">VmaBudget</ref> *<ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref> <ref refid="vk__mem__alloc_8h_1a46eb2044bea3404c06b76c961a126e6a" kindref="member">VMA_LEN_IF_NOT_NULL</ref>(&quot;VkPhysicalDeviceMemoryProperties::memoryHeapCount&quot;)</type>
+          <declname>pBudgets</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves information about current memory usage and budget for all memory heaps. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>allocator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pBudgets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Must point to array with number of elements at least equal to number of memory heaps in physical device used.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function is called &quot;get&quot; not &quot;calculate&quot; because it is very fast, suitable to be called every frame or every allocation. For more detailed statistics use <ref refid="group__group__stats_1gad176279c8da8f50399674b2ef03ca866" kindref="member">vmaCalculateStatistics()</ref>.</para>
+<para>Note that when using allocator from multiple threads, returned information may immediately become outdated. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1648" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="1648" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__stats_1ga7e489a68f893dbefc78a6ac9413c4220" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaGetPoolStatistics</definition>
+        <argsstring>(VmaAllocator VMA_NOT_NULL allocator, VmaPool VMA_NOT_NULL pool, VmaStatistics *VMA_NOT_NULL pPoolStats)</argsstring>
+        <name>vmaGetPoolStatistics</name>
+        <param>
+          <type><ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>allocator</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vma_pool" kindref="compound">VmaPool</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>pool</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vma_statistics" kindref="compound">VmaStatistics</ref> *<ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>pPoolStats</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves statistics of existing <ref refid="struct_vma_pool" kindref="compound">VmaPool</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>allocator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Allocator object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pool object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pPoolStats</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Statistics of specified pool. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1735" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="1735" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__stats_1ga54b57aa8f511406711f4b918028d8f60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaCalculatePoolStatistics</definition>
+        <argsstring>(VmaAllocator VMA_NOT_NULL allocator, VmaPool VMA_NOT_NULL pool, VmaDetailedStatistics *VMA_NOT_NULL pPoolStats)</argsstring>
+        <name>vmaCalculatePoolStatistics</name>
+        <param>
+          <type><ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>allocator</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vma_pool" kindref="compound">VmaPool</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>pool</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vma_detailed_statistics" kindref="compound">VmaDetailedStatistics</ref> *<ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>pPoolStats</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves detailed statistics of existing <ref refid="struct_vma_pool" kindref="compound">VmaPool</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>allocator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Allocator object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pool object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pPoolStats</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Statistics of specified pool. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1746" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="1746" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__stats_1ga874ef8790380b6643ee5c1144ae5b32b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaBuildVirtualBlockStatsString</definition>
+        <argsstring>(VmaVirtualBlock VMA_NOT_NULL virtualBlock, char *VMA_NULLABLE *VMA_NOT_NULL ppStatsString, VkBool32 detailedMap)</argsstring>
+        <name>vmaBuildVirtualBlockStatsString</name>
+        <param>
+          <type><ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>virtualBlock</declname>
+        </param>
+        <param>
+          <type>char *<ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref> *<ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>ppStatsString</declname>
+        </param>
+        <param>
+          <type>VkBool32</type>
+          <declname>detailedMap</declname>
+        </param>
+        <briefdescription>
+<para>Builds and returns a null-terminated string in JSON format with information about given <ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>virtualBlock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Virtual block. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">ppStatsString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Returned string. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>detailedMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pass `VK_FALSE` to only obtain statistics as returned by <ref refid="group__group__virtual_1ga87017b57fb0e9623573f07c236c37566" kindref="member">vmaCalculateVirtualBlockStatistics()</ref>. Pass `VK_TRUE` to also obtain full list of allocations and free spaces.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Returned string must be freed using <ref refid="group__group__stats_1ga5b3acd266c1f20d0b360d4259ff411bf" kindref="member">vmaFreeVirtualBlockStatsString()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="2516" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="2516" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__stats_1ga5b3acd266c1f20d0b360d4259ff411bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaFreeVirtualBlockStatsString</definition>
+        <argsstring>(VmaVirtualBlock VMA_NOT_NULL virtualBlock, char *VMA_NULLABLE pStatsString)</argsstring>
+        <name>vmaFreeVirtualBlockStatsString</name>
+        <param>
+          <type><ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>virtualBlock</declname>
+        </param>
+        <param>
+          <type>char *<ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref></type>
+          <declname>pStatsString</declname>
+        </param>
+        <briefdescription>
+<para>Frees a string returned by <ref refid="group__group__stats_1ga874ef8790380b6643ee5c1144ae5b32b" kindref="member">vmaBuildVirtualBlockStatsString()</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="2522" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="2522" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__stats_1ga9326cba3c64929b59a15c3ca9cdc8cdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaBuildStatsString</definition>
+        <argsstring>(VmaAllocator VMA_NOT_NULL allocator, char *VMA_NULLABLE *VMA_NOT_NULL ppStatsString, VkBool32 detailedMap)</argsstring>
+        <name>vmaBuildStatsString</name>
+        <param>
+          <type><ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>allocator</declname>
+        </param>
+        <param>
+          <type>char *<ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref> *<ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>ppStatsString</declname>
+        </param>
+        <param>
+          <type>VkBool32</type>
+          <declname>detailedMap</declname>
+        </param>
+        <briefdescription>
+<para>Builds and returns statistics as a null-terminated string in JSON format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>allocator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">ppStatsString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Must be freed using <ref refid="group__group__stats_1gad9b3c6a5dce6aea00719ccb2d3a780f3" kindref="member">vmaFreeStatsString()</ref> function. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>detailedMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="2531" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="2531" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__stats_1gad9b3c6a5dce6aea00719ccb2d3a780f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaFreeStatsString</definition>
+        <argsstring>(VmaAllocator VMA_NOT_NULL allocator, char *VMA_NULLABLE pStatsString)</argsstring>
+        <name>vmaFreeStatsString</name>
+        <param>
+          <type><ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>allocator</declname>
+        </param>
+        <param>
+          <type>char *<ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref></type>
+          <declname>pStatsString</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="2536" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="2536" declcolumn="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>API elements that query current status of the allocator, from memory usage, budget, to full dump of the internal state in JSON format. See documentation chapter: <ref refid="statistics" kindref="compound">Statistics</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

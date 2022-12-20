@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="deprecated" kind="page">
+    <compoundname>deprecated</compoundname>
+    <title>Deprecated List</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term>Member <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597aa6f24f821cd6a7c5e4a443f7bf59c520" kindref="member">VMA_ALLOCATION_CREATE_USER_DATA_COPY_STRING_BIT</ref>  </term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000006"/>Preserved for backward compatibility. Consider using <ref refid="group__group__alloc_1ga29b210b1f39e49de844fc7b6944736d7" kindref="member">vmaSetAllocationName()</ref> instead. </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__group__alloc_1ggaa5846affa1e9da3800e3e78fae2305cca416a444d4d0fc20067c3f76f32ff2500" kindref="member">VMA_MEMORY_USAGE_CPU_COPY</ref>  </term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000005"/>Obsolete, preserved for backward compatibility. Prefers not `VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT`.  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__group__alloc_1ggaa5846affa1e9da3800e3e78fae2305cca40bdf4cddeffeb12f43d45ca1286e0a5" kindref="member">VMA_MEMORY_USAGE_CPU_ONLY</ref>  </term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000002"/>Obsolete, preserved for backward compatibility. Guarantees `VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT` and `VK_MEMORY_PROPERTY_HOST_COHERENT_BIT`.  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__group__alloc_1ggaa5846affa1e9da3800e3e78fae2305cca9066b52c5a7079bb74a69aaf8b92ff67" kindref="member">VMA_MEMORY_USAGE_CPU_TO_GPU</ref>  </term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000003"/>Obsolete, preserved for backward compatibility. Guarantees `VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT`, prefers `VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT`.  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__group__alloc_1ggaa5846affa1e9da3800e3e78fae2305ccac6b5dc1432d88647aa4cd456246eadf7" kindref="member">VMA_MEMORY_USAGE_GPU_ONLY</ref>  </term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000001"/>Obsolete, preserved for backward compatibility. Prefers `VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT`.  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__group__alloc_1ggaa5846affa1e9da3800e3e78fae2305cca7b586d2fdaf82a463b58f581ed72be27" kindref="member">VMA_MEMORY_USAGE_GPU_TO_CPU</ref>  </term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000004"/>Obsolete, preserved for backward compatibility. Guarantees `VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT`, prefers `VK_MEMORY_PROPERTY_HOST_CACHED_BIT`. </para>
+</listitem>
+</variablelist>
+</para>
+    </detaileddescription>
+    <location file="deprecated"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="namespace_shadow_1_1_s_f_f" kind="namespace" language="C++">
+    <compoundname>Shadow::SFF</compoundname>
+    <innerclass refid="class_shadow_1_1_s_f_f_1_1_s_f_f_element" prot="public">Shadow::SFF::SFFElement</innerclass>
+    <innerclass refid="class_shadow_1_1_s_f_f_1_1_s_f_f_parser" prot="public">Shadow::SFF::SFFParser</innerclass>
+    <innerclass refid="struct_shadow_1_1_s_f_f_1_1_s_f_f_version" prot="public">Shadow::SFF::SFFVersion</innerclass>
+    <innerclass refid="class_shadow_1_1_s_f_f_1_1_s_f_f_writer" prot="public">Shadow::SFF::SFFWriter</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-file-format/src/SFFElement.cpp" line="4" column="2"/>
+  </compounddef>
+</doxygen>

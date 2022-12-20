@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_vulkan_device_8cpp" kind="file" language="C++">
+    <compoundname>VulkanDevice.cpp</compoundname>
+    <includes refid="_vulkan_device_8h" local="no">vlkx/vulkan/VulkanDevice.h</includes>
+    <includes local="yes">spdlog/spdlog.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>vlkx/vulkan/ValidationAndExtension.h</label>
+        <link refid="_validation_and_extension_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vlkx/vulkan/VulkanDevice.h</label>
+        <link refid="_vulkan_device_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-renderer/src/vulkan/VulkanDevice.cpp</label>
+        <link refid="_vulkan_device_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SDL.h</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="7">
+        <label>set</label>
+      </node>
+      <node id="10">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="4">
+        <label>stdexcept</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+      <node id="3">
+        <label>vulkan/vulkan.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_vulkan_device_8h" kindref="compound">vlkx/vulkan/VulkanDevice.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;spdlog/spdlog.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><ref refid="class_vulkan_device_1aa96ea77a6479faacce164f870dbf5c52" kindref="member">VulkanDevice::VulkanDevice</ref>()<sp/>:<sp/>physical(VK_NULL_HANDLE),<sp/>logical(VK_NULL_HANDLE),<sp/>graphicsQueue(VK_NULL_HANDLE),<sp/>presentationQueue(VK_NULL_HANDLE)<sp/>{}</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><ref refid="class_vulkan_device_1ab1ebe200e9906eeb5a144efc3af29712" kindref="member">VulkanDevice::~VulkanDevice</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_vulkan_device_1a1e0489ece83a5a20b153a5e8c6716a0a" kindref="member">VulkanDevice::choosePhysicalDevice</ref>(VkInstance*<sp/>vulkan,<sp/>VkSurfaceKHR<sp/>surface)<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Count<sp/>devices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>deviceCount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>vkEnumeratePhysicalDevices(*vulkan,<sp/>&amp;deviceCount,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sanity<sp/>check</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(deviceCount<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Vulkan<sp/>not<sp/>supported<sp/>on<sp/>this<sp/>system.<sp/>No<sp/>Devices<sp/>available&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::debug(</highlight><highlight class="stringliteral">&quot;Found<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(deviceCount)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>devices<sp/>that<sp/>are<sp/>Vulkan-compatible.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Gather<sp/>devices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;VkPhysicalDevice&gt;<sp/>physicals(deviceCount);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>vkEnumeratePhysicalDevices(*vulkan,<sp/>&amp;deviceCount,<sp/>physicals.data());</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Enumerate<sp/>devices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>finalDeviceName;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::debug(</highlight><highlight class="stringliteral">&quot;Device<sp/>List&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>device<sp/>:<sp/>physicals)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkPhysicalDeviceProperties<sp/>props;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkGetPhysicalDeviceProperties(device,<sp/>&amp;props);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_vulkan_device_1a67b8b11a6ee7a8e40cbebcdebdc6e869" kindref="member">limits</ref><sp/>=<sp/>props.limits;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dedicated<sp/>=<sp/>props.deviceType<sp/>==<sp/>VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::debug(std::string(</highlight><highlight class="stringliteral">&quot;Device:<sp/>&quot;</highlight><highlight class="normal">)<sp/>+<sp/>props.deviceName<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>discrete:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>(dedicated<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;yes&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;no&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_vulkan_device_1ab69ae359dff8b58a416c59782831fe91" kindref="member">physical</ref><sp/>==<sp/>VK_NULL_HANDLE<sp/>&amp;&amp;<sp/><ref refid="class_vulkan_device_1aa0626094dc754ebd7bff7405df8468d4" kindref="member">isSuitable</ref>(device,<sp/>surface)<sp/>||<sp/>dedicated<sp/>&amp;&amp;<sp/><ref refid="class_vulkan_device_1aa0626094dc754ebd7bff7405df8468d4" kindref="member">isSuitable</ref>(device,<sp/>surface))<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>finalDeviceName<sp/>=<sp/>props.deviceName;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_vulkan_device_1ab69ae359dff8b58a416c59782831fe91" kindref="member">physical</ref><sp/>=<sp/>device;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::debug(</highlight><highlight class="stringliteral">&quot;Using<sp/>device<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::string(finalDeviceName)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sanity<sp/>check<sp/>that<sp/>at<sp/>least<sp/>one<sp/>was<sp/>found.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_vulkan_device_1ab69ae359dff8b58a416c59782831fe91" kindref="member">physical</ref><sp/>==<sp/>VK_NULL_HANDLE)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;No<sp/>suitable<sp/>GPU<sp/>found&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_vulkan_device_1aa0626094dc754ebd7bff7405df8468d4" kindref="member">VulkanDevice::isSuitable</ref>(VkPhysicalDevice<sp/>device,<sp/>VkSurfaceKHR<sp/>surface)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Find<sp/>queues</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_queue_families" kindref="compound">QueueFamilies</ref><sp/>families<sp/>=<sp/><ref refid="class_vulkan_device_1a74803762a32a529c44f6e7a77289ef1c" kindref="member">checkQueues</ref>(device,<sp/>surface);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>supported<sp/>=<sp/><ref refid="class_vulkan_device_1a071837b3969fcb91a463fa5fcc0500b6" kindref="member">isSupported</ref>(device);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>swapChainWorks<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(supported)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_vulkan_device_1a586c899219c65739d352c9cbfb254555" kindref="member">swapChain</ref><sp/>=<sp/><ref refid="class_vulkan_device_1a41e5ace4383646af174805037e883847" kindref="member">checkSwapchain</ref>(device,<sp/>surface);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapChainWorks<sp/>=<sp/>!<ref refid="class_vulkan_device_1a586c899219c65739d352c9cbfb254555" kindref="member">swapChain</ref>.<ref refid="struct_swap_chain_meta_1a9823f90cd333076c3e2cc9196730ff3d" kindref="member">formats</ref>.empty()<sp/>&amp;&amp;<sp/>!<ref refid="class_vulkan_device_1a586c899219c65739d352c9cbfb254555" kindref="member">swapChain</ref>.<ref refid="struct_swap_chain_meta_1adc1c717be016e6119704a6f0d38075d0" kindref="member">modes</ref>.empty();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPhysicalDeviceFeatures<sp/>supportedFeatures;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>vkGetPhysicalDeviceFeatures(device,<sp/>&amp;supportedFeatures);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>families.<ref refid="struct_queue_families_1a6e59c2d1569bd69e335198069b15b27f" kindref="member">present</ref>()<sp/>&amp;&amp;<sp/>supported<sp/>&amp;&amp;<sp/>swapChainWorks<sp/>&amp;&amp;<sp/>supportedFeatures.samplerAnisotropy;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><ref refid="struct_queue_families" kindref="compound">QueueFamilies</ref><sp/><ref refid="class_vulkan_device_1a74803762a32a529c44f6e7a77289ef1c" kindref="member">VulkanDevice::checkQueues</ref>(VkPhysicalDevice<sp/>device,<sp/>VkSurfaceKHR<sp/>surface)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_queue_families" kindref="compound">QueueFamilies</ref><sp/>families;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Enumerate<sp/>queues</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>queueCount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>vkGetPhysicalDeviceQueueFamilyProperties(device,<sp/>&amp;queueCount,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;VkQueueFamilyProperties&gt;<sp/>queues(queueCount);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>vkGetPhysicalDeviceQueueFamilyProperties(device,<sp/>&amp;queueCount,<sp/>queues.data());</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Find<sp/>a<sp/>valid<sp/>graphics<sp/>(drawing)<sp/>and<sp/>presentation<sp/>(display)<sp/>queue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>family<sp/>:<sp/>queues)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>graphics<sp/>bit<sp/>is<sp/>set,<sp/>this<sp/>is<sp/>a<sp/>valid<sp/>graphics<sp/>queue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(family.queueCount<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>family.queueFlags<sp/>&amp;<sp/>VK_QUEUE_GRAPHICS_BIT)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>families.<ref refid="struct_queue_families_1af657ef9f0339098cb1aaa38c47b16a04" kindref="member">graphics</ref><sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Ask<sp/>Vulkan<sp/>if<sp/>this<sp/>family<sp/>suppots<sp/>displaying<sp/>to<sp/>the<sp/>surface<sp/>from<sp/>this<sp/>device</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkBool32<sp/>presentationSupport<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkGetPhysicalDeviceSurfaceSupportKHR(device,<sp/>i,<sp/>surface,<sp/>&amp;presentationSupport);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(family.queueCount<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>presentationSupport)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>families.<ref refid="struct_queue_families_1ad4857beda478527d0454e960636af458" kindref="member">presentation</ref><sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>have<sp/>a<sp/>valid<sp/>graphics<sp/>and<sp/>presentation<sp/>queue,<sp/>we<sp/>can<sp/>stop<sp/>searching</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(families.<ref refid="struct_queue_families_1a6e59c2d1569bd69e335198069b15b27f" kindref="member">present</ref>())</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i++;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>families;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_vulkan_device_1a071837b3969fcb91a463fa5fcc0500b6" kindref="member">VulkanDevice::isSupported</ref>(VkPhysicalDevice<sp/>device)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Enumerate<sp/>extensions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>extensionCount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>vkEnumerateDeviceExtensionProperties(device,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;extensionCount,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;VkExtensionProperties&gt;<sp/>extensions(extensionCount);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>vkEnumerateDeviceExtensionProperties(device,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;extensionCount,<sp/>extensions.data());</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Filter<sp/>for<sp/>the<sp/>ones<sp/>we<sp/>have</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>std::set&lt;std::string&gt;<sp/>requiredExtensions(<ref refid="class_vulkan_device_1a9ac7a88a50e3f59dd7af21b0cc07e122" kindref="member">deviceExtensions</ref>.begin(),<sp/><ref refid="class_vulkan_device_1a9ac7a88a50e3f59dd7af21b0cc07e122" kindref="member">deviceExtensions</ref>.end());</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>extension<sp/>:<sp/>extensions)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>the<sp/>ones<sp/>we<sp/>have<sp/>from<sp/>the<sp/>ones<sp/>we<sp/>need</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requiredExtensions.erase(extension.extensionName);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>have<sp/>every<sp/>needed<sp/>extension,<sp/>then<sp/>we&apos;re<sp/>good<sp/>to<sp/>go</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>requiredExtensions.empty();</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><ref refid="struct_swap_chain_meta" kindref="compound">SwapChainMeta</ref><sp/><ref refid="class_vulkan_device_1a41e5ace4383646af174805037e883847" kindref="member">VulkanDevice::checkSwapchain</ref>(VkPhysicalDevice<sp/>device,<sp/>VkSurfaceKHR<sp/>surface)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_swap_chain_meta" kindref="compound">SwapChainMeta</ref><sp/>meta;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>vkGetPhysicalDeviceSurfaceCapabilitiesKHR(device,<sp/>surface,<sp/>&amp;meta.<ref refid="struct_swap_chain_meta_1a8ae5a9457f5477f6cdc810605356dd57" kindref="member">capabilities</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>display<sp/>formats<sp/>(ARGB,<sp/>RBGA,<sp/>etc)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>formatCount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>vkGetPhysicalDeviceSurfaceFormatsKHR(device,<sp/>surface,<sp/>&amp;formatCount,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(formatCount<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meta.<ref refid="struct_swap_chain_meta_1a9823f90cd333076c3e2cc9196730ff3d" kindref="member">formats</ref>.resize(formatCount);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkGetPhysicalDeviceSurfaceFormatsKHR(device,<sp/>surface,<sp/>&amp;formatCount,<sp/>meta.<ref refid="struct_swap_chain_meta_1a9823f90cd333076c3e2cc9196730ff3d" kindref="member">formats</ref>.data());</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>Presentation<sp/>modes<sp/>(bit<sp/>depth,<sp/>etc)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>modeCount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>vkGetPhysicalDeviceSurfacePresentModesKHR(device,<sp/>surface,<sp/>&amp;modeCount,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(modeCount<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meta.<ref refid="struct_swap_chain_meta_1adc1c717be016e6119704a6f0d38075d0" kindref="member">modes</ref>.resize(modeCount);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkGetPhysicalDeviceSurfacePresentModesKHR(device,<sp/>surface,<sp/>&amp;modeCount,<sp/>meta.<ref refid="struct_swap_chain_meta_1adc1c717be016e6119704a6f0d38075d0" kindref="member">modes</ref>.data());</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>meta;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_vulkan_device_1ab128ebdc96db42d01d2e16704b84ff2e" kindref="member">VulkanDevice::createLogicalDevice</ref>(VkSurfaceKHR<sp/>surface,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>validationRequired,<sp/><ref refid="class_validation_and_extension" kindref="compound">ValidationAndExtension</ref>*<sp/>validator)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>queue<sp/>data,<sp/>prepare<sp/>it<sp/>for<sp/>the<sp/>logical<sp/>device</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_queue_families" kindref="compound">QueueFamilies</ref><sp/>families<sp/>=<sp/><ref refid="class_vulkan_device_1a74803762a32a529c44f6e7a77289ef1c" kindref="member">checkQueues</ref>(<ref refid="class_vulkan_device_1ab69ae359dff8b58a416c59782831fe91" kindref="member">physical</ref>,<sp/>surface);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;VkDeviceQueueCreateInfo&gt;<sp/>queueCreation;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>std::set&lt;int&gt;<sp/>queues<sp/>=<sp/>{<sp/>families.<ref refid="struct_queue_families_1af657ef9f0339098cb1aaa38c47b16a04" kindref="member">graphics</ref>,<sp/>families.<ref refid="struct_queue_families_1ad4857beda478527d0454e960636af458" kindref="member">presentation</ref><sp/>};</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>priority<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>family<sp/>:<sp/>queues)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkDeviceQueueCreateInfo<sp/>createInfo<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>createInfo.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>createInfo.queueFamilyIndex<sp/>=<sp/>family;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>createInfo.queueCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>createInfo.pQueuePriorities<sp/>=<sp/>&amp;priority;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queueCreation.push_back(createInfo);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Prepare<sp/>the<sp/>characteristics<sp/>of<sp/>the<sp/>device<sp/>we<sp/>want</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>VkPhysicalDeviceFeatures<sp/>features<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>features.samplerAnisotropy<sp/>=<sp/>VK_TRUE;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Prepare<sp/>the<sp/>device<sp/>for<sp/>construction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>VkDeviceCreateInfo<sp/>device<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>device.sType<sp/>=<sp/>VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>device.pQueueCreateInfos<sp/>=<sp/>queueCreation.data();</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>device.queueCreateInfoCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(queueCreation.size());</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>device.pEnabledFeatures<sp/>=<sp/>&amp;features;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>device.enabledExtensionCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_vulkan_device_1a9ac7a88a50e3f59dd7af21b0cc07e122" kindref="member">deviceExtensions</ref>.size());</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>device.ppEnabledExtensionNames<sp/>=<sp/><ref refid="class_vulkan_device_1a9ac7a88a50e3f59dd7af21b0cc07e122" kindref="member">deviceExtensions</ref>.data();</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(validationRequired)<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>device.enabledLayerCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(validator-&gt;<ref refid="class_validation_and_extension_1a36e54174e9371e66622855b5dc6243ae" kindref="member">requiredValidations</ref>.size());</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>device.ppEnabledLayerNames<sp/>=<sp/>validator-&gt;<ref refid="class_validation_and_extension_1a36e54174e9371e66622855b5dc6243ae" kindref="member">requiredValidations</ref>.data();</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>device.enabledLayerCount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>the<sp/>device</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vkCreateDevice(<ref refid="class_vulkan_device_1ab69ae359dff8b58a416c59782831fe91" kindref="member">physical</ref>,<sp/>&amp;device,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_vulkan_device_1a7ae557d71031d0212e50beba8b976d4b" kindref="member">logical</ref>)<sp/>!=<sp/>VK_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>create<sp/>logical<sp/>device&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fetch<sp/>the<sp/>proper<sp/>queue<sp/>metadata<sp/>from<sp/>the<sp/>GPU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_vulkan_device_1a61181a11767a514c8eac6e2cb0bdb7cf" kindref="member">queueData</ref><sp/>=<sp/>families;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>vkGetDeviceQueue(<ref refid="class_vulkan_device_1a7ae557d71031d0212e50beba8b976d4b" kindref="member">logical</ref>,<sp/>families.<ref refid="struct_queue_families_1af657ef9f0339098cb1aaa38c47b16a04" kindref="member">graphics</ref>,<sp/>0,<sp/>&amp;<ref refid="class_vulkan_device_1a762990556775a6d7507d1f8a067e5718" kindref="member">graphicsQueue</ref>);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>vkGetDeviceQueue(<ref refid="class_vulkan_device_1a7ae557d71031d0212e50beba8b976d4b" kindref="member">logical</ref>,<sp/>families.<ref refid="struct_queue_families_1ad4857beda478527d0454e960636af458" kindref="member">presentation</ref>,<sp/>0,<sp/>&amp;<ref refid="class_vulkan_device_1a28749c6e9035499d0b9970e44b89cc1c" kindref="member">presentationQueue</ref>);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_vulkan_device_1a64e445c2e7052a32cd753941eef89cf8" kindref="member">VulkanDevice::destroy</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>vkDestroyDevice(<ref refid="class_vulkan_device_1a7ae557d71031d0212e50beba8b976d4b" kindref="member">logical</ref>,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-renderer/src/vulkan/VulkanDevice.cpp"/>
+  </compounddef>
+</doxygen>

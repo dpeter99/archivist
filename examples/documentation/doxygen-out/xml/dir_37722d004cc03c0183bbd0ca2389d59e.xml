@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_37722d004cc03c0183bbd0ca2389d59e" kind="dir">
+    <compoundname>shadow-engine/shadow-renderer</compoundname>
+    <innerdir refid="dir_417539c742e9292f75b0f110f226883c">shadow-engine/shadow-renderer/inc</innerdir>
+    <innerdir refid="dir_14b663eea348d6881eb7c257987b1f08">shadow-engine/shadow-renderer/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_61d1deb06d89178d07391f065de395fe" kind="dir">
+    <compoundname>shadow-engine/core/src/debug</compoundname>
+    <innerfile refid="_debug_module_8cpp">DebugModule.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/core/src/debug/"/>
+  </compounddef>
+</doxygen>

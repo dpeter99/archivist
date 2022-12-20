@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structvlkx_1_1_image_config" kind="struct" language="C++" prot="public">
+    <compoundname>vlkx::ImageConfig</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvlkx_1_1_image_config_1a3fe17e0f0f28551942444c691fa9238b" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t vlkx::ImageConfig::mipping</definition>
+        <argsstring></argsstring>
+        <name>mipping</name>
+        <qualifiedname>vlkx::ImageConfig::mipping</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="23" column="18" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_image_config_1aec14fd9c251a4b6f0706721afa12fc96" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t vlkx::ImageConfig::layers</definition>
+        <argsstring></argsstring>
+        <name>layers</name>
+        <qualifiedname>vlkx::ImageConfig::layers</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="24" column="18" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_image_config_1ad0d6788815b650e830a209f8b6d97221" prot="public" static="no" mutable="no">
+        <type>VkSampleCountFlagBits</type>
+        <definition>VkSampleCountFlagBits vlkx::ImageConfig::samples</definition>
+        <argsstring></argsstring>
+        <name>samples</name>
+        <qualifiedname>vlkx::ImageConfig::samples</qualifiedname>
+        <initializer>= VK_SAMPLE_COUNT_1_BIT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="25" column="31" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_image_config_1a013cbd4e9acec1e0989572fe6114f9b8" prot="public" static="no" mutable="no">
+        <type>VkImageTiling</type>
+        <definition>VkImageTiling vlkx::ImageConfig::tiling</definition>
+        <argsstring></argsstring>
+        <name>tiling</name>
+        <qualifiedname>vlkx::ImageConfig::tiling</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="26" column="23" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_image_config_1a1e2c7b370c61c5624c6173f140fff16d" prot="public" static="no" mutable="no">
+        <type>VkImageLayout</type>
+        <definition>VkImageLayout vlkx::ImageConfig::layout</definition>
+        <argsstring></argsstring>
+        <name>layout</name>
+        <qualifiedname>vlkx::ImageConfig::layout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="27" column="23" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structvlkx_1_1_image_config_1a6ad2d541ad2536f697fa7941d719ba3e" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::ImageConfig::ImageConfig</definition>
+        <argsstring>(bool readable=false)</argsstring>
+        <name>ImageConfig</name>
+        <qualifiedname>vlkx::ImageConfig::ImageConfig</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>readable</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="13" column="18" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="13" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="12" column="5" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="12" bodyend="28"/>
+    <listofallmembers>
+      <member refid="structvlkx_1_1_image_config_1a6ad2d541ad2536f697fa7941d719ba3e" prot="public" virt="non-virtual"><scope>vlkx::ImageConfig</scope><name>ImageConfig</name></member>
+      <member refid="structvlkx_1_1_image_config_1aec14fd9c251a4b6f0706721afa12fc96" prot="public" virt="non-virtual"><scope>vlkx::ImageConfig</scope><name>layers</name></member>
+      <member refid="structvlkx_1_1_image_config_1a1e2c7b370c61c5624c6173f140fff16d" prot="public" virt="non-virtual"><scope>vlkx::ImageConfig</scope><name>layout</name></member>
+      <member refid="structvlkx_1_1_image_config_1a3fe17e0f0f28551942444c691fa9238b" prot="public" virt="non-virtual"><scope>vlkx::ImageConfig</scope><name>mipping</name></member>
+      <member refid="structvlkx_1_1_image_config_1ad0d6788815b650e830a209f8b6d97221" prot="public" virt="non-virtual"><scope>vlkx::ImageConfig</scope><name>samples</name></member>
+      <member refid="structvlkx_1_1_image_config_1a013cbd4e9acec1e0989572fe6114f9b8" prot="public" virt="non-virtual"><scope>vlkx::ImageConfig</scope><name>tiling</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

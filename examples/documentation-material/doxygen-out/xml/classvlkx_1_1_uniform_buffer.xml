@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_uniform_buffer" kind="class" language="C++" prot="public">
+    <compoundname>vlkx::UniformBuffer</compoundname>
+    <basecompoundref refid="classvlkx_1_1_data_buffer" prot="public" virt="non-virtual">vlkx::DataBuffer</basecompoundref>
+    <includes refid="_buffer_8h" local="no">Buffer.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvlkx_1_1_uniform_buffer_1a407f04b1b338e13ae6322dd37836c816" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* vlkx::UniformBuffer::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <qualifiedname>vlkx::UniformBuffer::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="365" column="14" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_uniform_buffer_1aa671eb3797e55f79ceec135d1d80c703" prot="private" static="no" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t vlkx::UniformBuffer::chunkSize</definition>
+        <argsstring></argsstring>
+        <name>chunkSize</name>
+        <qualifiedname>vlkx::UniformBuffer::chunkSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="366" column="22" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_uniform_buffer_1a055c994145ae4eaf96092317338905aa" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int vlkx::UniformBuffer::numChunks</definition>
+        <argsstring></argsstring>
+        <name>numChunks</name>
+        <qualifiedname>vlkx::UniformBuffer::numChunks</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="367" column="19" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="367" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_uniform_buffer_1ac4937e758f7316725c4ef14ffd72df34" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t vlkx::UniformBuffer::chunkLength</definition>
+        <argsstring></argsstring>
+        <name>chunkLength</name>
+        <qualifiedname>vlkx::UniformBuffer::chunkLength</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="369" column="16" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="369" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_uniform_buffer_1a64939a7f66d201b85e80cf12c299ff3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::UniformBuffer::UniformBuffer</definition>
+        <argsstring>(size_t chunkSize, int chunks)</argsstring>
+        <name>UniformBuffer</name>
+        <qualifiedname>vlkx::UniformBuffer::UniformBuffer</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>chunkSize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>chunks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="336" column="9" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Buffer.cpp" bodystart="183" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_uniform_buffer_1a648821dbea6b0ffbbd3f13a41053e3ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::UniformBuffer::UniformBuffer</definition>
+        <argsstring>(const UniformBuffer &amp;)=delete</argsstring>
+        <name>UniformBuffer</name>
+        <qualifiedname>vlkx::UniformBuffer::UniformBuffer</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_uniform_buffer" kindref="compound">UniformBuffer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="338" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_uniform_buffer_1a3e256cf500ccf981f215406ed33842a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkx_1_1_uniform_buffer" kindref="compound">UniformBuffer</ref> &amp;</type>
+        <definition>UniformBuffer &amp; vlkx::UniformBuffer::operator=</definition>
+        <argsstring>(const UniformBuffer &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>vlkx::UniformBuffer::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_uniform_buffer" kindref="compound">UniformBuffer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="339" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_uniform_buffer_1a44193bf3984a80445be46070ad5d8dc7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::UniformBuffer::~UniformBuffer</definition>
+        <argsstring>() override</argsstring>
+        <name>~UniformBuffer</name>
+        <qualifiedname>vlkx::UniformBuffer::~UniformBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="341" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="341" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_uniform_buffer_1ad773538c0bba60aabb36cda4c5c77953" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool vlkx::UniformBuffer::isSingle</definition>
+        <argsstring>() const</argsstring>
+        <name>isSingle</name>
+        <qualifiedname>vlkx::UniformBuffer::isSingle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="345" column="14" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="345" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_uniform_buffer_1a2f21434a116f6c471c2599043ef83e61" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename DataType</type>
+          </param>
+        </templateparamlist>
+        <type>DataType *</type>
+        <definition>DataType * vlkx::UniformBuffer::getData</definition>
+        <argsstring>(int index) const</argsstring>
+        <name>getData</name>
+        <qualifiedname>vlkx::UniformBuffer::getData</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="349" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="349" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_uniform_buffer_1a82e0cff12712a2d5bde1e43825b93a90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::UniformBuffer::upload</definition>
+        <argsstring>(int index) const</argsstring>
+        <name>upload</name>
+        <qualifiedname>vlkx::UniformBuffer::upload</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="355" column="14" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Buffer.cpp" bodystart="191" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_uniform_buffer_1a636185d785d9beaf24cf084291aab420" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::UniformBuffer::upload</definition>
+        <argsstring>(int index, VkDeviceSize dataSize, VkDeviceSize start) const</argsstring>
+        <name>upload</name>
+        <qualifiedname>vlkx::UniformBuffer::upload</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>VkDeviceSize</type>
+          <declname>dataSize</declname>
+        </param>
+        <param>
+          <type>VkDeviceSize</type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="356" column="14" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Buffer.cpp" bodystart="200" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_uniform_buffer_1a1bfe9ab3765d15b0def77d23c908bdc4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>VkDescriptorBufferInfo</type>
+        <definition>VkDescriptorBufferInfo vlkx::UniformBuffer::getDescriptorInfo</definition>
+        <argsstring>(int index) const</argsstring>
+        <name>getDescriptorInfo</name>
+        <qualifiedname>vlkx::UniformBuffer::getDescriptorInfo</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="360" column="32" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Buffer.cpp" bodystart="209" bodyend="212"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classvlkx_1_1_uniform_buffer_1a3ceb7d90af28f4566f1f3ae70b6f9625" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkDescriptorType</type>
+        <definition>static VkDescriptorType vlkx::UniformBuffer::getDescriptorType</definition>
+        <argsstring>()</argsstring>
+        <name>getDescriptorType</name>
+        <qualifiedname>vlkx::UniformBuffer::getDescriptorType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="358" column="33" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="358" bodyend="358"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classvlkx_1_1_uniform_buffer_1a59bc27d3b3092ec0881e77a771cc3c38" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::UniformBuffer::checkIndex</definition>
+        <argsstring>(int index) const</argsstring>
+        <name>checkIndex</name>
+        <qualifiedname>vlkx::UniformBuffer::checkIndex</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="363" column="14" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Buffer.cpp" bodystart="214" bodyend="218"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>END OF PER-INSTANCE BUFFERS </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>vlkx::Buffer</label>
+        <link refid="classvlkx_1_1_buffer"/>
+      </node>
+      <node id="2">
+        <label>vlkx::DataBuffer</label>
+        <link refid="classvlkx_1_1_data_buffer"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>vlkx::UniformBuffer</label>
+        <link refid="classvlkx_1_1_uniform_buffer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>vlkx::Buffer</label>
+        <link refid="classvlkx_1_1_buffer"/>
+      </node>
+      <node id="2">
+        <label>vlkx::DataBuffer</label>
+        <link refid="classvlkx_1_1_data_buffer"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>vlkx::UniformBuffer</label>
+        <link refid="classvlkx_1_1_uniform_buffer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="334" column="5" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="334" bodyend="370"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_data_buffer_1a8ad640258cbc9aa645ed68e3c320af99" prot="protected" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>Buffer</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1a055bf8f2da8b0c7084493579a2f27ccb" prot="protected" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>Buffer</name></member>
+      <member refid="classvlkx_1_1_uniform_buffer_1a59bc27d3b3092ec0881e77a771cc3c38" prot="private" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>checkIndex</name></member>
+      <member refid="classvlkx_1_1_uniform_buffer_1ac4937e758f7316725c4ef14ffd72df34" prot="private" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>chunkLength</name></member>
+      <member refid="classvlkx_1_1_uniform_buffer_1aa671eb3797e55f79ceec135d1d80c703" prot="private" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>chunkSize</name></member>
+      <member refid="classvlkx_1_1_uniform_buffer_1a407f04b1b338e13ae6322dd37836c816" prot="private" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>data</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1ad6b6ba2e5dd942b42f66a3f5c04e87a3" prot="public" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>DataBuffer</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1a3abb23c2d7be5c18b266478202796c9b" prot="public" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>DataBuffer</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1a0b3ac1c5f2d714165c994f65e18b6604" prot="protected" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>get</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1a9e10436c90954e0f4e213af704e10707" prot="protected" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>getBuffer</name></member>
+      <member refid="classvlkx_1_1_uniform_buffer_1a2f21434a116f6c471c2599043ef83e61" prot="public" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>getData</name></member>
+      <member refid="classvlkx_1_1_uniform_buffer_1a1bfe9ab3765d15b0def77d23c908bdc4" prot="public" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>getDescriptorInfo</name></member>
+      <member refid="classvlkx_1_1_uniform_buffer_1a3ceb7d90af28f4566f1f3ae70b6f9625" prot="public" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>getDescriptorType</name></member>
+      <member refid="classvlkx_1_1_uniform_buffer_1ad773538c0bba60aabb36cda4c5c77953" prot="public" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>isSingle</name></member>
+      <member refid="classvlkx_1_1_uniform_buffer_1a055c994145ae4eaf96092317338905aa" prot="private" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>numChunks</name></member>
+      <member refid="classvlkx_1_1_uniform_buffer_1a3e256cf500ccf981f215406ed33842a1" prot="public" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1a0caf832cd047de702e77433a3e97dc8d" prot="public" virt="non-virtual" ambiguityscope="vlkx::DataBuffer::"><scope>vlkx::UniformBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_buffer_1a9971cfc28a88cebf00d2642baa5cd72e" prot="public" virt="non-virtual" ambiguityscope="vlkx::Buffer::"><scope>vlkx::UniformBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1ab4e03d32dd898176c66e13d19d7d2fa8" prot="protected" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>setBuffer</name></member>
+      <member refid="classvlkx_1_1_uniform_buffer_1a64939a7f66d201b85e80cf12c299ff3b" prot="public" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>UniformBuffer</name></member>
+      <member refid="classvlkx_1_1_uniform_buffer_1a648821dbea6b0ffbbd3f13a41053e3ab" prot="public" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>UniformBuffer</name></member>
+      <member refid="classvlkx_1_1_uniform_buffer_1a82e0cff12712a2d5bde1e43825b93a90" prot="public" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>upload</name></member>
+      <member refid="classvlkx_1_1_uniform_buffer_1a636185d785d9beaf24cf084291aab420" prot="public" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>upload</name></member>
+      <member refid="classvlkx_1_1_buffer_1a5ad6564545b79d1ce612ebf2b6fc44f7" prot="public" virt="virtual"><scope>vlkx::UniformBuffer</scope><name>~Buffer</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1abe2a28ce8e68a76cda222d51bfca0ac0" prot="public" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>~DataBuffer</name></member>
+      <member refid="classvlkx_1_1_uniform_buffer_1a44193bf3984a80445be46070ad5d8dc7" prot="public" virt="non-virtual"><scope>vlkx::UniformBuffer</scope><name>~UniformBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

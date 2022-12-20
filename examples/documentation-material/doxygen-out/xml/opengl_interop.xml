@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="opengl_interop" kind="page">
+    <compoundname>opengl_interop</compoundname>
+    <title>OpenGL Interop</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>VMA provides some features that help with interoperability with OpenGL.</para>
+<sect1 id="opengl_interop_1opengl_interop_exporting_memory">
+<title>Exporting memory</title>
+<para>If you want to attach `VkExportMemoryAllocateInfoKHR` structure to `pNext` chain of memory allocations made by the library:</para>
+<para>It is recommended to create <ref refid="custom_memory_pools" kindref="compound">Custom memory pools</ref> for such allocations. Define and fill in your `VkExportMemoryAllocateInfoKHR` structure and attach it to <ref refid="struct_vma_pool_create_info_1a4e264310c10272ba393c0ba2111ce416" kindref="member">VmaPoolCreateInfo::pMemoryAllocateNext</ref> while creating the custom pool. Please note that the structure must remain alive and unchanged for the whole lifetime of the <ref refid="struct_vma_pool" kindref="compound">VmaPool</ref>, not only while creating it, as no copy of the structure is made, but its original pointer is used for each allocation instead.</para>
+<para>If you want to export all memory allocated by the library from certain memory types, also dedicated allocations or other allocations made from default pools, an alternative solution is to fill in VmaAllocatorCreateInfo::pTypeExternalMemoryHandleTypes. It should point to an array with `VkExternalMemoryHandleTypeFlagsKHR` to be automatically passed by the library through `VkExportMemoryAllocateInfoKHR` on each allocation made from a specific memory type. Please note that new versions of the library also support dedicated allocations created in custom pools.</para>
+<para>You should not mix these two methods in a way that allows to apply both to the same memory type. Otherwise, `VkExportMemoryAllocateInfoKHR` structure would be attached twice to the `pNext` chain of `VkMemoryAllocateInfo`.</para>
+</sect1>
+<sect1 id="opengl_interop_1opengl_interop_custom_alignment">
+<title>Custom alignment</title>
+<para>Buffers or images exported to a different API like OpenGL may require a different alignment, higher than the one used by the library automatically, queried from functions like `vkGetBufferMemoryRequirements`. To impose such alignment:</para>
+<para>It is recommended to create <ref refid="custom_memory_pools" kindref="compound">Custom memory pools</ref> for such allocations. Set <ref refid="struct_vma_pool_create_info_1ade3eca546f0c6ab4e8fbf20eb6d854cb" kindref="member">VmaPoolCreateInfo::minAllocationAlignment</ref> member to the minimum alignment required for each allocation to be made out of this pool. The alignment actually used will be the maximum of this member and the alignment returned for the specific buffer or image from a function like `vkGetBufferMemoryRequirements`, which is called by VMA automatically.</para>
+<para>If you want to create a buffer with a specific minimum alignment out of default pools, use special function <ref refid="group__group__alloc_1ga0a4d6890fe94cf4d234ca1d78af91229" kindref="member">vmaCreateBufferWithAlignment()</ref>, which takes additional parameter `minAlignment`.</para>
+<para>Note the problem of alignment affects only resources placed inside bigger `VkDeviceMemory` blocks and not dedicated allocations, as these, by definition, always have alignment = 0 because the resource is bound to the beginning of its dedicated block. Contrary to Direct3D 12, Vulkan doesn&apos;t have a concept of alignment of the entire memory block passed on its allocation. </para>
+</sect1>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h"/>
+  </compounddef>
+</doxygen>

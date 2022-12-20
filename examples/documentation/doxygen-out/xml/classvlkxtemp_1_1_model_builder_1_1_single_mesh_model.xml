@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkxtemp_1_1_model_builder_1_1_single_mesh_model" kind="class" language="C++" prot="public">
+    <compoundname>vlkxtemp::ModelBuilder::SingleMeshModel</compoundname>
+    <basecompoundref refid="classvlkxtemp_1_1_model_builder_1_1_model_resource" prot="public" virt="non-virtual">vlkxtemp::ModelBuilder::ModelResource</basecompoundref>
+    <includes refid="_builder_8h" local="no">Builder.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvlkxtemp_1_1_model_builder_1_1_single_mesh_model_1a6bc1a17aed1f962fe5ce87eb1e2937ad" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string vlkxtemp::ModelBuilder::SingleMeshModel::objFile</definition>
+        <argsstring></argsstring>
+        <name>objFile</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::SingleMeshModel::objFile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="35" column="31" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkxtemp_1_1_model_builder_1_1_single_mesh_model_1a65a9916aa00d63323deddb109443a275" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int vlkxtemp::ModelBuilder::SingleMeshModel::objIndexBase</definition>
+        <argsstring></argsstring>
+        <name>objIndexBase</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::SingleMeshModel::objIndexBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="36" column="23" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkxtemp_1_1_model_builder_1_1_single_mesh_model_1aa4d2cfae9a3d48f8b799d465388e2d84" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classvlkxtemp_1_1_model_builder_1a2adfcbf62a85e02440bc2cf0540417e1" kindref="member">TextureSources</ref></type>
+        <definition>const TextureSources vlkxtemp::ModelBuilder::SingleMeshModel::textureSources</definition>
+        <argsstring></argsstring>
+        <name>textureSources</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::SingleMeshModel::textureSources</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="37" column="34" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkxtemp_1_1_model_builder_1_1_single_mesh_model_1a8ede4872881e6410530281c000ed85ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>vlkxtemp::ModelBuilder::SingleMeshModel::SingleMeshModel</definition>
+        <argsstring>(std::string &amp;&amp;path, int indexBase, TextureSources &amp;&amp;sources)</argsstring>
+        <name>SingleMeshModel</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::SingleMeshModel::SingleMeshModel</qualifiedname>
+        <param>
+          <type>std::string &amp;&amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>indexBase</declname>
+        </param>
+        <param>
+          <type><ref refid="classvlkxtemp_1_1_model_builder_1a2adfcbf62a85e02440bc2cf0540417e1" kindref="member">TextureSources</ref> &amp;&amp;</type>
+          <declname>sources</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="30" column="13" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="30" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkxtemp_1_1_model_builder_1_1_single_mesh_model_1a6c5e3e49315ea018225b49907eec47c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void vlkxtemp::ModelBuilder::SingleMeshModel::load</definition>
+        <argsstring>(ModelBuilder *builder) const override</argsstring>
+        <name>load</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::SingleMeshModel::load</qualifiedname>
+        <reimplements refid="classvlkxtemp_1_1_model_builder_1_1_model_resource_1a93258f32c23ece5b5294e09988a6ad3b">load</reimplements>
+        <param>
+          <type><ref refid="classvlkxtemp_1_1_model_builder" kindref="compound">ModelBuilder</ref> *</type>
+          <declname>builder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="33" column="18" bodyfile="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" bodystart="67" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>vlkxtemp::ModelBuilder::ModelResource</label>
+        <link refid="classvlkxtemp_1_1_model_builder_1_1_model_resource"/>
+      </node>
+      <node id="1">
+        <label>vlkxtemp::ModelBuilder::SingleMeshModel</label>
+        <link refid="classvlkxtemp_1_1_model_builder_1_1_single_mesh_model"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>vlkxtemp::ModelBuilder::ModelResource</label>
+        <link refid="classvlkxtemp_1_1_model_builder_1_1_model_resource"/>
+      </node>
+      <node id="1">
+        <label>vlkxtemp::ModelBuilder::SingleMeshModel</label>
+        <link refid="classvlkxtemp_1_1_model_builder_1_1_single_mesh_model"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="28" column="9" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="28" bodyend="38"/>
+    <listofallmembers>
+      <member refid="classvlkxtemp_1_1_model_builder_1_1_single_mesh_model_1a6c5e3e49315ea018225b49907eec47c4" prot="public" virt="virtual"><scope>vlkxtemp::ModelBuilder::SingleMeshModel</scope><name>load</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1_1_single_mesh_model_1a6bc1a17aed1f962fe5ce87eb1e2937ad" prot="private" virt="non-virtual"><scope>vlkxtemp::ModelBuilder::SingleMeshModel</scope><name>objFile</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1_1_single_mesh_model_1a65a9916aa00d63323deddb109443a275" prot="private" virt="non-virtual"><scope>vlkxtemp::ModelBuilder::SingleMeshModel</scope><name>objIndexBase</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1_1_single_mesh_model_1a8ede4872881e6410530281c000ed85ab" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder::SingleMeshModel</scope><name>SingleMeshModel</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1_1_single_mesh_model_1aa4d2cfae9a3d48f8b799d465388e2d84" prot="private" virt="non-virtual"><scope>vlkxtemp::ModelBuilder::SingleMeshModel</scope><name>textureSources</name></member>
+      <member refid="classvlkxtemp_1_1_model_builder_1_1_model_resource_1a0c0c33533fc6dfce2f535308b81f1965" prot="public" virt="virtual"><scope>vlkxtemp::ModelBuilder::SingleMeshModel</scope><name>~ModelResource</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_332408286ed7dc0b392691a9eb492f14" kind="dir">
+    <compoundname>shadow-engine/shadow-renderer/inc/vlkx/render</compoundname>
+    <innerdir refid="dir_32d2d46f0f5792aeeb30f33b9ed65f37">shadow-engine/shadow-renderer/inc/vlkx/render/render_pass</innerdir>
+    <innerdir refid="dir_9aca37d73e6c3e0121cee4350d0f769e">shadow-engine/shadow-renderer/inc/vlkx/render/shader</innerdir>
+    <innerfile refid="shadow-renderer_2inc_2vlkx_2render_2_camera_8h">Camera.h</innerfile>
+    <innerfile refid="_geometry_8h">Geometry.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/"/>
+  </compounddef>
+</doxygen>

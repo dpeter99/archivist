@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="page">
+    <div class="content">
+
+        <h1 id="{{id}}" data-uid="{{uid}}" class="text-break"><%- meta.name %></h1>
+        <div class="markdown level0 summary">
+            <%- await helper.md(meta["code:data"].brief) %>
+        </div>
+        <div class="markdown level0 summary">
+            <%- await helper.md(meta["code:data"].detail) %>
+        </div>
+
+        <% for(const [key, members] of helper.groupBy(meta["code:data"].members, m=>m.kind)){ %>
+            <h3><%- helper.toFirstUpper(key) %></h3>
+            <% for(const member of members){ %>
+                    <div class="member">
+                        <div class="member-header">
+                            <div class="visibility">
+                                <%- await helper.md(member.visibility)%>
+                            </div>
+                            <div class="member__type">
+                                <%- await helper.md(member.type) %>
+                            </div>
+                            <div class="member__name">
+                                 <h4><%- member.name %></h4>
+                            </div>
+                        </div>
+                        <div class="member-description">
+                            <%- await helper.md(member.brief)%>
+                        </div>
+                    </div>
+            <% }%>
+        <% }%>
+    </div>
+</div>
+
+</body>
+
+</html>

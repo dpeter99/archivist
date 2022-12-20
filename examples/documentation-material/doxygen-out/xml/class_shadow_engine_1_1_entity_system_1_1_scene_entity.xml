@@ -1,0 +1,541 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_shadow_engine_1_1_entity_system_1_1_scene_entity" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::EntitySystem::SceneEntity</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_entity_system_1_1_entity" prot="public" virt="non-virtual">ShadowEngine::EntitySystem::Entity</basecompoundref>
+    <derivedcompoundref refid="class_camera" prot="public" virt="non-virtual">Camera</derivedcompoundref>
+    <derivedcompoundref refid="class_first_person_camera" prot="public" virt="non-virtual">FirstPersonCamera</derivedcompoundref>
+    <derivedcompoundref refid="class_mesh_renderer" prot="public" virt="non-virtual">MeshRenderer</derivedcompoundref>
+    <derivedcompoundref refid="class_player" prot="public" virt="non-virtual">Player</derivedcompoundref>
+    <derivedcompoundref refid="class_point_light" prot="public" virt="non-virtual">PointLight</derivedcompoundref>
+    <includes refid="_scene_entity_8h" local="no">SceneEntity.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a843f7ccc0e2bd01702aed0f8b50c8c6a" prot="public" static="no" mutable="no">
+        <type>ShadowEntity::Transform</type>
+        <definition>ShadowEntity::Transform ShadowEngine::EntitySystem::SceneEntity::transform</definition>
+        <argsstring></argsstring>
+        <name>transform</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::transform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="27" column="25" bodyfile="shadow-engine/shadow-entity/inc/SceneEntity.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a55d955d5d2ccbd122518abadd4380722" prot="public" static="no" mutable="no">
+        <type>ShadowEntity::Transform</type>
+        <definition>ShadowEntity::Transform ShadowEngine::EntitySystem::SceneEntity::w_transform</definition>
+        <argsstring></argsstring>
+        <name>w_transform</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::w_transform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="28" column="25" bodyfile="shadow-engine/shadow-entity/inc/SceneEntity.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1acd96855a570e0c37bd55fc061e1a88cd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EntitySystem::SceneEntity::SHObject_Base</definition>
+        <argsstring>(SceneEntity)</argsstring>
+        <name>SHObject_Base</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::SHObject_Base</qualifiedname>
+        <param>
+          <type><ref refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" kindref="compound">SceneEntity</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a2640daca3e183f8762f0960d22aab1b7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EntitySystem::SceneEntity::Entity_Base_NoCtor</definition>
+        <argsstring>(SceneEntity, Entity)</argsstring>
+        <name>Entity_Base_NoCtor</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::Entity_Base_NoCtor</qualifiedname>
+        <param>
+          <type><ref refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" kindref="compound">SceneEntity</ref></type>
+        </param>
+        <param>
+          <type><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="24" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1afc8c3004bc7d6c473f9a6faaeac6abad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EntitySystem::SceneEntity::SceneEntity</definition>
+        <argsstring>()</argsstring>
+        <name>SceneEntity</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::SceneEntity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="31" column="1" bodyfile="shadow-engine/shadow-entity/inc/SceneEntity.h" bodystart="31" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1afcb3f642ea758da760051b955494498a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EntitySystem::SceneEntity::SceneEntity</definition>
+        <argsstring>(Scene *scene)</argsstring>
+        <name>SceneEntity</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::SceneEntity</qualifiedname>
+        <param>
+          <type><ref refid="class_shadow_engine_1_1_entity_system_1_1_scene" kindref="compound">Scene</ref> *</type>
+          <declname>scene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="38" column="1" bodyfile="shadow-engine/shadow-entity/inc/SceneEntity.h" bodystart="38" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a1fa641bdc27235315d094ea17e3ebcb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::SceneEntity::SetParent</definition>
+        <argsstring>(rtm_ptr&lt; Entity &gt; e) override</argsstring>
+        <name>SetParent</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::SetParent</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a467b64e41054aa1ce0a351c58a9b607c">SetParent</reimplements>
+        <param>
+          <type><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr</ref>&lt; <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> &gt;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="46" column="6" bodyfile="shadow-engine/shadow-entity/src/SceneEntity.cpp" bodystart="6" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a973bfe0c2c49579e235fb9602f836f94" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>ShadowEntity::Transform *</type>
+        <definition>ShadowEntity::Transform * ShadowEngine::EntitySystem::SceneEntity::GetTransform</definition>
+        <argsstring>()</argsstring>
+        <name>GetTransform</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::GetTransform</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a88673e7fb3299e723c9f3742086f371e">GetTransform</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="48" column="33" bodyfile="shadow-engine/shadow-entity/src/SceneEntity.cpp" bodystart="11" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a98081b1308805a8e8c9ae9c3c90bc337" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>ShadowEntity::Transform</type>
+        <definition>ShadowEntity::Transform ShadowEngine::EntitySystem::SceneEntity::CalcNewComponentToWorld</definition>
+        <argsstring>(const ShadowEntity::Transform &amp;NewRelativeTransform) const</argsstring>
+        <name>CalcNewComponentToWorld</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::CalcNewComponentToWorld</qualifiedname>
+        <param>
+          <type>const ShadowEntity::Transform &amp;</type>
+          <declname>NewRelativeTransform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="50" column="25" bodyfile="shadow-engine/shadow-entity/src/SceneEntity.cpp" bodystart="17" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a5151f51958ca52567922bb5fdb9318ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::SceneEntity::SetPosition</definition>
+        <argsstring>(glm::vec3 Position)</argsstring>
+        <name>SetPosition</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::SetPosition</qualifiedname>
+        <param>
+          <type>glm::vec3</type>
+          <declname>Position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the position of the entity relative to it&apos;s parent or the world.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new position of this entity </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="59" column="6" bodyfile="shadow-engine/shadow-entity/src/SceneEntity.cpp" bodystart="33" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a763933eb5b5d71b57abed584ae502c4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::SceneEntity::SetRotation</definition>
+        <argsstring>(glm::vec3 Rotation)</argsstring>
+        <name>SetRotation</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::SetRotation</qualifiedname>
+        <param>
+          <type>glm::vec3</type>
+          <declname>Rotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the Rotation of the entity relative to it&apos;s parent or the world.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new Rotation of this entity </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="67" column="6" bodyfile="shadow-engine/shadow-entity/src/SceneEntity.cpp" bodystart="42" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a908955742b391a18977cfaaf5a0921ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::SceneEntity::SetScale</definition>
+        <argsstring>(glm::vec3 Size)</argsstring>
+        <name>SetScale</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::SetScale</qualifiedname>
+        <param>
+          <type>glm::vec3</type>
+          <declname>Size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the Size of the entity relative to it&apos;s parent or the world.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new Size of this entity </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="75" column="6" bodyfile="shadow-engine/shadow-entity/src/SceneEntity.cpp" bodystart="59" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a3df7a3c65c3bd545031fc0920baadff9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::SceneEntity::SetRelativeTransform</definition>
+        <argsstring>(const ShadowEntity::Transform &amp;Transform)</argsstring>
+        <name>SetRelativeTransform</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::SetRelativeTransform</qualifiedname>
+        <param>
+          <type>const ShadowEntity::Transform &amp;</type>
+          <declname>Transform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the transform of the entity relative to it&apos;s parent or the world.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new Transform of this entity </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="83" column="6" bodyfile="shadow-engine/shadow-entity/src/SceneEntity.cpp" bodystart="68" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1aff5bd414ca017b2af014f9833979134e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 ShadowEngine::EntitySystem::SceneEntity::GetPosition</definition>
+        <argsstring>()</argsstring>
+        <name>GetPosition</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::GetPosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the position of the entity relative to it&apos;s parent or the world.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new position of this entity </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="92" column="11" bodyfile="shadow-engine/shadow-entity/src/SceneEntity.cpp" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1af6519f8bac9f06a797ebaef63e8d8fb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 ShadowEngine::EntitySystem::SceneEntity::GetRotation</definition>
+        <argsstring>()</argsstring>
+        <name>GetRotation</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::GetRotation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the Rotation of the entity relative to it&apos;s parent or the world.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new Rotation of this entity </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="100" column="11" bodyfile="shadow-engine/shadow-entity/src/SceneEntity.cpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1accc7861cb4e2c62055583f9e7603ecb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 ShadowEngine::EntitySystem::SceneEntity::GetScale</definition>
+        <argsstring>()</argsstring>
+        <name>GetScale</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::GetScale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the Size of the entity relative to it&apos;s parent or the world.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new Size of this entity </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="108" column="11" bodyfile="shadow-engine/shadow-entity/src/SceneEntity.cpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1ad5430e82cc9d17537dc280e7fb78ea2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::SceneEntity::RotateBy</definition>
+        <argsstring>(glm::vec3 rotation)</argsstring>
+        <name>RotateBy</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::RotateBy</qualifiedname>
+        <param>
+          <type>glm::vec3</type>
+          <declname>rotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="110" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a8cb7b39d2d519ee2aeb4f0d1b37e3da8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>glm::mat4</type>
+        <definition>glm::mat4 ShadowEngine::EntitySystem::SceneEntity::GetWorldTransformMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>GetWorldTransformMatrix</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::GetWorldTransformMatrix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="112" column="11" bodyfile="shadow-engine/shadow-entity/src/SceneEntity.cpp" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1ad82f619114c4b651493946926be322cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::SceneEntity::TransformUpdated</definition>
+        <argsstring>()</argsstring>
+        <name>TransformUpdated</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::TransformUpdated</qualifiedname>
+        <briefdescription>
+<para>Called after the transform of this was updated manually. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="115" column="6" bodyfile="shadow-engine/shadow-entity/src/SceneEntity.cpp" bodystart="95" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a6c1dac32de915b3137de87563144beee" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::SceneEntity::ParentTransformUpdated</definition>
+        <argsstring>() override</argsstring>
+        <name>ParentTransformUpdated</name>
+        <qualifiedname>ShadowEngine::EntitySystem::SceneEntity::ParentTransformUpdated</qualifiedname>
+        <reimplements refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a5b61f357021bff0686ae651d3002871a">ParentTransformUpdated</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="117" column="6" bodyfile="shadow-engine/shadow-entity/src/SceneEntity.cpp" bodystart="112" bodyend="118"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> that has a position.  </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Inherit from this class if your <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> needs to have it&apos;s own position. This position can be relative to the parent. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>Camera</label>
+        <link refid="class_camera"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>FirstPersonCamera</label>
+        <link refid="class_first_person_camera"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>MeshRenderer</label>
+        <link refid="class_mesh_renderer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Player</label>
+        <link refid="class_player"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>PointLight</label>
+        <link refid="class_point_light"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ShadowEngine::EntitySystem::Entity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ShadowEngine::EntitySystem::SceneEntity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ShadowEngine::EntitySystem::Entity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ShadowEngine::EntitySystem::SceneEntity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object"/>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-entity/inc/SceneEntity.h" line="19" column="1" bodyfile="shadow-engine/shadow-entity/inc/SceneEntity.h" bodystart="21" bodyend="118"/>
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a167917321102ba2540d58b63956ce501" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>AddChildEntity</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a0631f85d7f63698d6277dab44eef0458" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>AddInternalChildEntity</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a7ed91c18cd535d461d0c0bee314778b7" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>Build</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a98081b1308805a8e8c9ae9c3c90bc337" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>CalcNewComponentToWorld</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a2ce2825f04cf5a3994103d252e0a437d" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>Create</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1acc838f644f91d02e1c88baa793f790db" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>Entity</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a56a49e9e0ebd81f6e2960a9a9f3163d8" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>Entity</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a2640daca3e183f8762f0960d22aab1b7" prot="private" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>Entity_Base_NoCtor</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a5244bd8527763320cbef208e3a6e4860" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>GenerateId</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a06cd52aa29a540304d1fac5d81b4adc5" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>GetFlags</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1aff5bd414ca017b2af014f9833979134e" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>GetPosition</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1af6519f8bac9f06a797ebaef63e8d8fb7" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>GetRotation</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1accc7861cb4e2c62055583f9e7603ecb1" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>GetScale</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a973bfe0c2c49579e235fb9602f836f94" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>GetTransform</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a3597667efd33b935a89ac11d3b47a215" prot="public" virt="pure-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>GetType</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" virt="pure-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>GetTypeId</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a8cb7b39d2d519ee2aeb4f0d1b37e3da8" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>GetWorldTransformMatrix</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ab66b3c8b723d29f36182a220ad5e4333" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>Init</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a3f3be81f16814ef82260bc17f3135abe" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>InitEntities</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ae8e132ee0fe4cb70ab47237867890cfd" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>LateRender</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a4cffe49cb70b159efeccc3c6c3fa1535" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>LateUpdate</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a6c1dac32de915b3137de87563144beee" prot="protected" virt="virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>ParentTransformUpdated</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a352e0c6d95699f06f0a427ea7c313e42" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>RegisterDefaultUpdate</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a651807d474b385c7069d842af13469c6" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>Render</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1ad5430e82cc9d17537dc280e7fb78ea2f" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>RotateBy</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1afc8c3004bc7d6c473f9a6faaeac6abad" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>SceneEntity</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1afcb3f642ea758da760051b955494498a" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>SceneEntity</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a1fa641bdc27235315d094ea17e3ebcb2" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>SetParent</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a5151f51958ca52567922bb5fdb9318ec" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>SetPosition</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a3df7a3c65c3bd545031fc0920baadff9" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>SetRelativeTransform</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a763933eb5b5d71b57abed584ae502c4c" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>SetRotation</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a908955742b391a18977cfaaf5a0921ad" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>SetScale</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ad5520f0873e2e6cc070d3a594cdae14b" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>SetScene</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1acd96855a570e0c37bd55fc061e1a88cd" prot="private" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>SHObject_Base</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ad2ef421c23738c0b95102972405fb0ab" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>Start</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a843f7ccc0e2bd01702aed0f8b50c8c6a" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>transform</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1af98d0541f3281b0817d6ac558ce505c1" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>TransformChanged</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1ad82f619114c4b651493946926be322cd" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>TransformUpdated</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ab9dbee0b3a70b05ed23472b94f7e5973" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>Update</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ae1e9c0d251e50e5c83017674bfda6479" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>UpdateEntities</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a55d955d5d2ccbd122518abadd4380722" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>w_transform</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ab83dad935ab0cdc34d088530aa4290d3" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>~Entity</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::SceneEntity</scope><name>~SHObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

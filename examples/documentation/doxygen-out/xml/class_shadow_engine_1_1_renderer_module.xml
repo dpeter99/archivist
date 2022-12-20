@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_shadow_engine_1_1_renderer_module" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ShadowEngine::RendererModule</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_module" prot="public" virt="non-virtual">ShadowEngine::Module</basecompoundref>
+    <derivedcompoundref refid="class_vulkan_module" prot="public" virt="non-virtual">VulkanModule</derivedcompoundref>
+    <includes refid="_module_8h" local="no">Module.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_renderer_module_1a0cf7d18f5f787139990362422c7089e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::RendererModule::BeginRenderPass</definition>
+        <argsstring>(const std::unique_ptr&lt; vlkx::RenderCommand &gt; &amp;commands)=0</argsstring>
+        <name>BeginRenderPass</name>
+        <qualifiedname>ShadowEngine::RendererModule::BeginRenderPass</qualifiedname>
+        <reimplementedby refid="class_vulkan_module_1a5d5b5fe704a9753199040b711c5711b4">BeginRenderPass</reimplementedby>
+        <param>
+          <type>const std::unique_ptr&lt; <ref refid="classvlkx_1_1_render_command" kindref="compound">vlkx::RenderCommand</ref> &gt; &amp;</type>
+          <declname>commands</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/Module.h" line="69" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_renderer_module_1abbcee2954bdeea985f42f6459693b08e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::RendererModule::EnableEditor</definition>
+        <argsstring>()=0</argsstring>
+        <name>EnableEditor</name>
+        <qualifiedname>ShadowEngine::RendererModule::EnableEditor</qualifiedname>
+        <reimplementedby refid="class_vulkan_module_1a07dd1f95bbbcc625661f48ea48000546">EnableEditor</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/Module.h" line="71" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_renderer_module_1adacef79ee4d79d2fe087a4a367c29152" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>VkExtent2D</type>
+        <definition>virtual VkExtent2D ShadowEngine::RendererModule::GetRenderExtent</definition>
+        <argsstring>()=0</argsstring>
+        <name>GetRenderExtent</name>
+        <qualifiedname>ShadowEngine::RendererModule::GetRenderExtent</qualifiedname>
+        <reimplementedby refid="class_vulkan_module_1a0f5101f7eab48da414a7203d0a891d83">GetRenderExtent</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/Module.h" line="73" column="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A class especially for modules that are renderers. Allows the engine to access state from the renderer independent of implementation. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ShadowEngine::Module</label>
+        <link refid="class_shadow_engine_1_1_module"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ShadowEngine::RendererModule</label>
+        <link refid="class_shadow_engine_1_1_renderer_module"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object"/>
+      </node>
+      <node id="4">
+        <label>VulkanModule</label>
+        <link refid="class_vulkan_module"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ShadowEngine::Module</label>
+        <link refid="class_shadow_engine_1_1_module"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ShadowEngine::RendererModule</label>
+        <link refid="class_shadow_engine_1_1_renderer_module"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object"/>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/core/inc/core/Module.h" line="65" column="5" bodyfile="shadow-engine/core/inc/core/Module.h" bodystart="65" bodyend="74"/>
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_renderer_module_1a0cf7d18f5f787139990362422c7089e1" prot="public" virt="pure-virtual"><scope>ShadowEngine::RendererModule</scope><name>BeginRenderPass</name></member>
+      <member refid="class_shadow_engine_1_1_renderer_module_1abbcee2954bdeea985f42f6459693b08e" prot="public" virt="pure-virtual"><scope>ShadowEngine::RendererModule</scope><name>EnableEditor</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a5244bd8527763320cbef208e3a6e4860" prot="public" virt="non-virtual"><scope>ShadowEngine::RendererModule</scope><name>GenerateId</name></member>
+      <member refid="class_shadow_engine_1_1_renderer_module_1adacef79ee4d79d2fe087a4a367c29152" prot="public" virt="pure-virtual"><scope>ShadowEngine::RendererModule</scope><name>GetRenderExtent</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a3597667efd33b935a89ac11d3b47a215" prot="public" virt="pure-virtual"><scope>ShadowEngine::RendererModule</scope><name>GetType</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" virt="pure-virtual"><scope>ShadowEngine::RendererModule</scope><name>GetTypeId</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" virt="virtual"><scope>ShadowEngine::RendererModule</scope><name>~SHObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

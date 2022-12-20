@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_pipeline_builder" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>vlkx::PipelineBuilder</compoundname>
+    <derivedcompoundref refid="classvlkx_1_1_compute_pipeline_builder" prot="public" virt="non-virtual">vlkx::ComputePipelineBuilder</derivedcompoundref>
+    <derivedcompoundref refid="classvlkx_1_1_graphics_pipeline_builder" prot="public" virt="non-virtual">vlkx::GraphicsPipelineBuilder</derivedcompoundref>
+    <includes refid="_pipeline_8h" local="no">Pipeline.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvlkx_1_1_pipeline_builder_1a4faed4a6ef10517acb54e23c7a8abc1f" prot="private" static="no" mutable="no">
+        <type>VkPipelineCache</type>
+        <definition>VkPipelineCache vlkx::PipelineBuilder::cache</definition>
+        <argsstring></argsstring>
+        <name>cache</name>
+        <qualifiedname>vlkx::PipelineBuilder::cache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="57" column="25" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_pipeline_builder_1a694380fd281dc7a54c1e5e3ec25ca516" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string vlkx::PipelineBuilder::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>vlkx::PipelineBuilder::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="58" column="21" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_pipeline_builder_1a9c635aa9b41c148a03502a4c38d04d33" prot="private" static="no" mutable="no">
+        <type>std::optional&lt; VkPipelineLayoutCreateInfo &gt;</type>
+        <definition>std::optional&lt;VkPipelineLayoutCreateInfo&gt; vlkx::PipelineBuilder::layoutInfo</definition>
+        <argsstring></argsstring>
+        <name>layoutInfo</name>
+        <qualifiedname>vlkx::PipelineBuilder::layoutInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="60" column="23" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_pipeline_builder_1af1cad114e854228db456070330b38fb4" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; VkDescriptorSetLayout &gt;</type>
+        <definition>std::vector&lt;VkDescriptorSetLayout&gt; vlkx::PipelineBuilder::descLayouts</definition>
+        <argsstring></argsstring>
+        <name>descLayouts</name>
+        <qualifiedname>vlkx::PipelineBuilder::descLayouts</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="61" column="21" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_pipeline_builder_1aed7930861875ab587c68a030335160e7" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; VkPushConstantRange &gt;</type>
+        <definition>std::vector&lt;VkPushConstantRange&gt; vlkx::PipelineBuilder::constants</definition>
+        <argsstring></argsstring>
+        <name>constants</name>
+        <qualifiedname>vlkx::PipelineBuilder::constants</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="62" column="21" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_pipeline_builder_1a68fd2d6f6f7ffc45a9a4021577c191e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::PipelineBuilder::PipelineBuilder</definition>
+        <argsstring>(const PipelineBuilder &amp;)=delete</argsstring>
+        <name>PipelineBuilder</name>
+        <qualifiedname>vlkx::PipelineBuilder::PipelineBuilder</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_pipeline_builder" kindref="compound">PipelineBuilder</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="35" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_pipeline_builder_1a81582cacf02c2f3d9a4cb8870acc7d8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkx_1_1_pipeline_builder" kindref="compound">PipelineBuilder</ref> &amp;</type>
+        <definition>PipelineBuilder &amp; vlkx::PipelineBuilder::operator=</definition>
+        <argsstring>(const PipelineBuilder &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>vlkx::PipelineBuilder::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_pipeline_builder" kindref="compound">PipelineBuilder</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="36" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_pipeline_builder_1a4ec90bc8f54b7c2df3020fdcb832e627" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual vlkx::PipelineBuilder::~PipelineBuilder</definition>
+        <argsstring>()</argsstring>
+        <name>~PipelineBuilder</name>
+        <qualifiedname>vlkx::PipelineBuilder::~PipelineBuilder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="38" column="17" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_pipeline_builder_1ad3942e094ce70b2ba93b574768302bea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classvlkx_1_1_pipeline" kindref="compound">Pipeline</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt; Pipeline &gt; vlkx::PipelineBuilder::build</definition>
+        <argsstring>() const =0</argsstring>
+        <name>build</name>
+        <qualifiedname>vlkx::PipelineBuilder::build</qualifiedname>
+        <reimplementedby refid="classvlkx_1_1_graphics_pipeline_builder_1ae7bb74db7f81a53ff825d4a3788955ee">build</reimplementedby>
+        <reimplementedby refid="classvlkx_1_1_compute_pipeline_builder_1a7b608ca529ebb8969ade3a36b9a7ea22">build</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="42" column="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classvlkx_1_1_pipeline_builder_1a4a40f7781e10cd8024ad370ba1c4049b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::PipelineBuilder::PipelineBuilder</definition>
+        <argsstring>(std::optional&lt; int &gt; maxCache)</argsstring>
+        <name>PipelineBuilder</name>
+        <qualifiedname>vlkx::PipelineBuilder::PipelineBuilder</qualifiedname>
+        <param>
+          <type>std::optional&lt; int &gt;</type>
+          <declname>maxCache</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="45" column="9" bodyfile="shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp" bodystart="73" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_pipeline_builder_1a608297e8fd73ce118c96f3e1488df455" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::PipelineBuilder::setName</definition>
+        <argsstring>(std::string &amp;&amp;n)</argsstring>
+        <name>setName</name>
+        <qualifiedname>vlkx::PipelineBuilder::setName</qualifiedname>
+        <param>
+          <type>std::string &amp;&amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="47" column="14" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_pipeline_builder_1ab2d07a03863810149b799d0c091711b0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::PipelineBuilder::setLayout</definition>
+        <argsstring>(std::vector&lt; VkDescriptorSetLayout &gt; &amp;&amp;descLayouts, std::vector&lt; VkPushConstantRange &gt; &amp;&amp;constants)</argsstring>
+        <name>setLayout</name>
+        <qualifiedname>vlkx::PipelineBuilder::setLayout</qualifiedname>
+        <param>
+          <type>std::vector&lt; VkDescriptorSetLayout &gt; &amp;&amp;</type>
+          <declname>descLayouts</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; VkPushConstantRange &gt; &amp;&amp;</type>
+          <declname>constants</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="49" column="14" bodyfile="shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp" bodystart="83" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_pipeline_builder_1a75fd7368111f0304716e4d93df0addfe" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; vlkx::PipelineBuilder::getName</definition>
+        <argsstring>() const</argsstring>
+        <name>getName</name>
+        <qualifiedname>vlkx::PipelineBuilder::getName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="51" column="27" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_pipeline_builder_1af56031e253ed578425b016c9ec007c7b" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool vlkx::PipelineBuilder::hasLayout</definition>
+        <argsstring>() const</argsstring>
+        <name>hasLayout</name>
+        <qualifiedname>vlkx::PipelineBuilder::hasLayout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="53" column="14" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_pipeline_builder_1a65fd212125818c0f96c064b8b13cf069" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const VkPipelineLayoutCreateInfo &amp;</type>
+        <definition>const VkPipelineLayoutCreateInfo &amp; vlkx::PipelineBuilder::getLayout</definition>
+        <argsstring>() const</argsstring>
+        <name>getLayout</name>
+        <qualifiedname>vlkx::PipelineBuilder::getLayout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="54" column="42" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>vlkx::ComputePipelineBuilder</label>
+        <link refid="classvlkx_1_1_compute_pipeline_builder"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>vlkx::GraphicsPipelineBuilder</label>
+        <link refid="classvlkx_1_1_graphics_pipeline_builder"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>vlkx::PipelineBuilder</label>
+        <link refid="classvlkx_1_1_pipeline_builder"/>
+      </node>
+    </inheritancegraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="33" column="5" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" bodystart="33" bodyend="63"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_pipeline_builder_1ad3942e094ce70b2ba93b574768302bea" prot="public" virt="pure-virtual"><scope>vlkx::PipelineBuilder</scope><name>build</name></member>
+      <member refid="classvlkx_1_1_pipeline_builder_1a4faed4a6ef10517acb54e23c7a8abc1f" prot="private" virt="non-virtual"><scope>vlkx::PipelineBuilder</scope><name>cache</name></member>
+      <member refid="classvlkx_1_1_pipeline_builder_1aed7930861875ab587c68a030335160e7" prot="private" virt="non-virtual"><scope>vlkx::PipelineBuilder</scope><name>constants</name></member>
+      <member refid="classvlkx_1_1_pipeline_builder_1af1cad114e854228db456070330b38fb4" prot="private" virt="non-virtual"><scope>vlkx::PipelineBuilder</scope><name>descLayouts</name></member>
+      <member refid="classvlkx_1_1_pipeline_builder_1a65fd212125818c0f96c064b8b13cf069" prot="protected" virt="non-virtual"><scope>vlkx::PipelineBuilder</scope><name>getLayout</name></member>
+      <member refid="classvlkx_1_1_pipeline_builder_1a75fd7368111f0304716e4d93df0addfe" prot="protected" virt="non-virtual"><scope>vlkx::PipelineBuilder</scope><name>getName</name></member>
+      <member refid="classvlkx_1_1_pipeline_builder_1af56031e253ed578425b016c9ec007c7b" prot="protected" virt="non-virtual"><scope>vlkx::PipelineBuilder</scope><name>hasLayout</name></member>
+      <member refid="classvlkx_1_1_pipeline_builder_1a9c635aa9b41c148a03502a4c38d04d33" prot="private" virt="non-virtual"><scope>vlkx::PipelineBuilder</scope><name>layoutInfo</name></member>
+      <member refid="classvlkx_1_1_pipeline_builder_1a694380fd281dc7a54c1e5e3ec25ca516" prot="private" virt="non-virtual"><scope>vlkx::PipelineBuilder</scope><name>name</name></member>
+      <member refid="classvlkx_1_1_pipeline_builder_1a81582cacf02c2f3d9a4cb8870acc7d8e" prot="public" virt="non-virtual"><scope>vlkx::PipelineBuilder</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_pipeline_builder_1a68fd2d6f6f7ffc45a9a4021577c191e5" prot="public" virt="non-virtual"><scope>vlkx::PipelineBuilder</scope><name>PipelineBuilder</name></member>
+      <member refid="classvlkx_1_1_pipeline_builder_1a4a40f7781e10cd8024ad370ba1c4049b" prot="protected" virt="non-virtual"><scope>vlkx::PipelineBuilder</scope><name>PipelineBuilder</name></member>
+      <member refid="classvlkx_1_1_pipeline_builder_1ab2d07a03863810149b799d0c091711b0" prot="protected" virt="non-virtual"><scope>vlkx::PipelineBuilder</scope><name>setLayout</name></member>
+      <member refid="classvlkx_1_1_pipeline_builder_1a608297e8fd73ce118c96f3e1488df455" prot="protected" virt="non-virtual"><scope>vlkx::PipelineBuilder</scope><name>setName</name></member>
+      <member refid="classvlkx_1_1_pipeline_builder_1a4ec90bc8f54b7c2df3020fdcb832e627" prot="public" virt="virtual"><scope>vlkx::PipelineBuilder</scope><name>~PipelineBuilder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

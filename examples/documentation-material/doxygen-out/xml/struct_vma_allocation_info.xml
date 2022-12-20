@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_vma_allocation_info" kind="struct" language="C++" prot="public">
+    <compoundname>VmaAllocationInfo</compoundname>
+    <includes refid="vk__mem__alloc_8h" local="no">vk_mem_alloc.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_vma_allocation_info_1a7f6b0aa58c135e488e6b40a388dad9d5" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t VmaAllocationInfo::memoryType</definition>
+        <argsstring></argsstring>
+        <name>memoryType</name>
+        <qualifiedname>VmaAllocationInfo::memoryType</qualifiedname>
+        <briefdescription>
+<para>Memory type index that this allocation was allocated from. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It never changes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1342" column="14" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1342" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_allocation_info_1abaf12cc4e13fbe5208ca6e5bb1a21c19" prot="public" static="no" mutable="no">
+        <type>VkDeviceMemory <ref refid="vk__mem__alloc_8h_1ab2073c76e8756145dd9426345e13b57e" kindref="member">VMA_NULLABLE_NON_DISPATCHABLE</ref></type>
+        <definition>VkDeviceMemory VMA_NULLABLE_NON_DISPATCHABLE VmaAllocationInfo::deviceMemory</definition>
+        <argsstring></argsstring>
+        <name>deviceMemory</name>
+        <qualifiedname>VmaAllocationInfo::deviceMemory</qualifiedname>
+        <briefdescription>
+<para>Handle to Vulkan memory object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Same memory object can be shared by multiple allocations.</para>
+<para>It can change after the allocation is moved during <ref refid="defragmentation" kindref="compound">Defragmentation</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1349" column="50" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_allocation_info_1a4a3c732388dbdc7a23f9365b00825268" prot="public" static="no" mutable="no">
+        <type>VkDeviceSize</type>
+        <definition>VkDeviceSize VmaAllocationInfo::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <qualifiedname>VmaAllocationInfo::offset</qualifiedname>
+        <briefdescription>
+<para>Offset in `VkDeviceMemory` object to the beginning of this allocation, in bytes. `(deviceMemory, offset)` pair is unique to this allocation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>You usually don&apos;t need to use this offset. If you create a buffer or an image together with the allocation using e.g. function <ref refid="group__group__alloc_1gae9773fe0ef8582e23136d2d83c336ab9" kindref="member">vmaCreateBuffer()</ref>, <ref refid="group__group__alloc_1gaa76142ae43535c862ad9e194a6e38aaa" kindref="member">vmaCreateImage()</ref>, functions that operate on these resources refer to the beginning of the buffer or image, not entire device memory block. Functions like <ref refid="group__group__alloc_1ga13b93ec0ed38ad7232300cb94931c8d2" kindref="member">vmaMapMemory()</ref>, <ref refid="group__group__alloc_1ga7748e60ccc54e240777a848cb260bb19" kindref="member">vmaBindBufferMemory()</ref> also refer to the beginning of the allocation and apply this offset automatically.</para>
+<para>It can change after the allocation is moved during <ref refid="defragmentation" kindref="compound">Defragmentation</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1359" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1359" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_allocation_info_1aac76d113a6a5ccbb09fea00fb25fd18f" prot="public" static="no" mutable="no">
+        <type>VkDeviceSize</type>
+        <definition>VkDeviceSize VmaAllocationInfo::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>VmaAllocationInfo::size</qualifiedname>
+        <briefdescription>
+<para>Size of this allocation, in bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It never changes.</para>
+<para><simplesect kind="note"><para>Allocation size returned in this variable may be greater than the size requested for the resource e.g. as `VkBufferCreateInfo<ref refid="struct_vma_allocation_info_1aac76d113a6a5ccbb09fea00fb25fd18f" kindref="member">size</ref>`. Whole size of the allocation is accessible for operations on memory e.g. using a pointer after mapping with <ref refid="group__group__alloc_1ga13b93ec0ed38ad7232300cb94931c8d2" kindref="member">vmaMapMemory()</ref>, but operations on the resource e.g. using `vkCmdCopyBuffer` must be limited to the size of the resource. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1370" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1370" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_allocation_info_1a17a39eb34201a610347acb91b38eca79" prot="public" static="no" mutable="no">
+        <type>void *<ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref></type>
+        <definition>void* VMA_NULLABLE VmaAllocationInfo::pMappedData</definition>
+        <argsstring></argsstring>
+        <name>pMappedData</name>
+        <qualifiedname>VmaAllocationInfo::pMappedData</qualifiedname>
+        <briefdescription>
+<para>Pointer to the beginning of this allocation as mapped data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the allocation hasn&apos;t been mapped using <ref refid="group__group__alloc_1ga13b93ec0ed38ad7232300cb94931c8d2" kindref="member">vmaMapMemory()</ref> and hasn&apos;t been created with <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a11da372cc3a82931c5e5d6146cd9dd1f" kindref="member">VMA_ALLOCATION_CREATE_MAPPED_BIT</ref> flag, this value is null.</para>
+<para>It can change after call to <ref refid="group__group__alloc_1ga13b93ec0ed38ad7232300cb94931c8d2" kindref="member">vmaMapMemory()</ref>, <ref refid="group__group__alloc_1gaec4645c1787976e2b50d2dfd31279a2b" kindref="member">vmaUnmapMemory()</ref>. It can also change after the allocation is moved during <ref refid="defragmentation" kindref="compound">Defragmentation</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1379" column="23" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1379" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_allocation_info_1ad0ea9d64dd733ffd7beff7af6d289ad0" prot="public" static="no" mutable="no">
+        <type>void *<ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref></type>
+        <definition>void* VMA_NULLABLE VmaAllocationInfo::pUserData</definition>
+        <argsstring></argsstring>
+        <name>pUserData</name>
+        <qualifiedname>VmaAllocationInfo::pUserData</qualifiedname>
+        <briefdescription>
+<para>Custom general-purpose pointer that was passed as <ref refid="struct_vma_allocation_create_info_1a74e2eb74b3772b657c59473ce605058a" kindref="member">VmaAllocationCreateInfo::pUserData</ref> or set using <ref refid="group__group__alloc_1gac1f392a3c70a647f0c53a9ddaa7a6f14" kindref="member">vmaSetAllocationUserData()</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It can change after call to <ref refid="group__group__alloc_1gac1f392a3c70a647f0c53a9ddaa7a6f14" kindref="member">vmaSetAllocationUserData()</ref> for this allocation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1384" column="23" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1384" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_allocation_info_1ad82b9dfb58e5415da0ee8521c1fbf429" prot="public" static="no" mutable="no">
+        <type>const char *<ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref></type>
+        <definition>const char* VMA_NULLABLE VmaAllocationInfo::pName</definition>
+        <argsstring></argsstring>
+        <name>pName</name>
+        <qualifiedname>VmaAllocationInfo::pName</qualifiedname>
+        <briefdescription>
+<para>Custom allocation name that was set with <ref refid="group__group__alloc_1ga29b210b1f39e49de844fc7b6944736d7" kindref="member">vmaSetAllocationName()</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It can change after call to <ref refid="group__group__alloc_1ga29b210b1f39e49de844fc7b6944736d7" kindref="member">vmaSetAllocationName()</ref> for this allocation.</para>
+<para>Another way to set custom name is to pass it in <ref refid="struct_vma_allocation_create_info_1a74e2eb74b3772b657c59473ce605058a" kindref="member">VmaAllocationCreateInfo::pUserData</ref> with additional flag <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597aa6f24f821cd6a7c5e4a443f7bf59c520" kindref="member">VMA_ALLOCATION_CREATE_USER_DATA_COPY_STRING_BIT</ref> set [DEPRECATED]. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1392" column="29" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1392" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Parameters of <ref refid="struct_vma_allocation" kindref="compound">VmaAllocation</ref> objects, that can be retrieved using function <ref refid="group__group__alloc_1gab9c96ca6bb55ad9069829fe8355bbb79" kindref="member">vmaGetAllocationInfo()</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1336" column="1" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1337" bodyend="1393"/>
+    <listofallmembers>
+      <member refid="struct_vma_allocation_info_1abaf12cc4e13fbe5208ca6e5bb1a21c19" prot="public" virt="non-virtual"><scope>VmaAllocationInfo</scope><name>deviceMemory</name></member>
+      <member refid="struct_vma_allocation_info_1a7f6b0aa58c135e488e6b40a388dad9d5" prot="public" virt="non-virtual"><scope>VmaAllocationInfo</scope><name>memoryType</name></member>
+      <member refid="struct_vma_allocation_info_1a4a3c732388dbdc7a23f9365b00825268" prot="public" virt="non-virtual"><scope>VmaAllocationInfo</scope><name>offset</name></member>
+      <member refid="struct_vma_allocation_info_1a17a39eb34201a610347acb91b38eca79" prot="public" virt="non-virtual"><scope>VmaAllocationInfo</scope><name>pMappedData</name></member>
+      <member refid="struct_vma_allocation_info_1ad82b9dfb58e5415da0ee8521c1fbf429" prot="public" virt="non-virtual"><scope>VmaAllocationInfo</scope><name>pName</name></member>
+      <member refid="struct_vma_allocation_info_1ad0ea9d64dd733ffd7beff7af6d289ad0" prot="public" virt="non-virtual"><scope>VmaAllocationInfo</scope><name>pUserData</name></member>
+      <member refid="struct_vma_allocation_info_1aac76d113a6a5ccbb09fea00fb25fd18f" prot="public" virt="non-virtual"><scope>VmaAllocationInfo</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

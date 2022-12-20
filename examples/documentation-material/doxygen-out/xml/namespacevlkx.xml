@@ -1,0 +1,726 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="namespacevlkx" kind="namespace" language="C++">
+    <compoundname>vlkx</compoundname>
+    <innerclass refid="structvlkx_1_1_attachment" prot="public">vlkx::Attachment</innerclass>
+    <innerclass refid="structvlkx_1_1_attachment_config" prot="public">vlkx::AttachmentConfig</innerclass>
+    <innerclass refid="classvlkx_1_1_buffer" prot="public">vlkx::Buffer</innerclass>
+    <innerclass refid="classvlkx_1_1_camera" prot="public">vlkx::Camera</innerclass>
+    <innerclass refid="classvlkx_1_1_command_buffer" prot="public">vlkx::CommandBuffer</innerclass>
+    <innerclass refid="classvlkx_1_1_common_pass" prot="public">vlkx::CommonPass</innerclass>
+    <innerclass refid="classvlkx_1_1_compute_pass" prot="public">vlkx::ComputePass</innerclass>
+    <innerclass refid="classvlkx_1_1_compute_pipeline_builder" prot="public">vlkx::ComputePipelineBuilder</innerclass>
+    <innerclass refid="classvlkx_1_1_data_buffer" prot="public">vlkx::DataBuffer</innerclass>
+    <innerclass refid="classvlkx_1_1_depth_stencil_image" prot="public">vlkx::DepthStencilImage</innerclass>
+    <innerclass refid="classvlkx_1_1_descriptor" prot="public">vlkx::Descriptor</innerclass>
+    <innerclass refid="classvlkx_1_1_dynamic_buffer" prot="public">vlkx::DynamicBuffer</innerclass>
+    <innerclass refid="classvlkx_1_1_dynamic_per_instance_buffer" prot="public">vlkx::DynamicPerInstanceBuffer</innerclass>
+    <innerclass refid="classvlkx_1_1_dynamic_per_vertex_buffer" prot="public">vlkx::DynamicPerVertexBuffer</innerclass>
+    <innerclass refid="classvlkx_1_1_graphics_pass" prot="public">vlkx::GraphicsPass</innerclass>
+    <innerclass refid="classvlkx_1_1_graphics_pipeline_builder" prot="public">vlkx::GraphicsPipelineBuilder</innerclass>
+    <innerclass refid="classvlkx_1_1_image" prot="public">vlkx::Image</innerclass>
+    <innerclass refid="classvlkx_1_1_image_buffer" prot="public">vlkx::ImageBuffer</innerclass>
+    <innerclass refid="structvlkx_1_1_image_config" prot="public">vlkx::ImageConfig</innerclass>
+    <innerclass refid="structvlkx_1_1_image_data" prot="public">vlkx::ImageData</innerclass>
+    <innerclass refid="classvlkx_1_1_image_descriptor" prot="public">vlkx::ImageDescriptor</innerclass>
+    <innerclass refid="classvlkx_1_1_image_sampler" prot="public">vlkx::ImageSampler</innerclass>
+    <innerclass refid="classvlkx_1_1_image_staging_buffer" prot="public">vlkx::ImageStagingBuffer</innerclass>
+    <innerclass refid="classvlkx_1_1_image_usage" prot="public">vlkx::ImageUsage</innerclass>
+    <innerclass refid="classvlkx_1_1_immediate_command" prot="public">vlkx::ImmediateCommand</innerclass>
+    <innerclass refid="classvlkx_1_1_multi_image_tracker" prot="public">vlkx::MultiImageTracker</innerclass>
+    <innerclass refid="classvlkx_1_1_multisample_image" prot="public">vlkx::MultisampleImage</innerclass>
+    <innerclass refid="classvlkx_1_1_orthographic_camera" prot="public">vlkx::OrthographicCamera</innerclass>
+    <innerclass refid="classvlkx_1_1_per_instance_vertex_buffer" prot="public">vlkx::PerInstanceVertexBuffer</innerclass>
+    <innerclass refid="classvlkx_1_1_perspective_camera" prot="public">vlkx::PerspectiveCamera</innerclass>
+    <innerclass refid="classvlkx_1_1_per_vertex_buffer" prot="public">vlkx::PerVertexBuffer</innerclass>
+    <innerclass refid="classvlkx_1_1_pipeline" prot="public">vlkx::Pipeline</innerclass>
+    <innerclass refid="classvlkx_1_1_pipeline_builder" prot="public">vlkx::PipelineBuilder</innerclass>
+    <innerclass refid="classvlkx_1_1_push_constant" prot="public">vlkx::PushConstant</innerclass>
+    <innerclass refid="structvlkx_1_1_queue" prot="public">vlkx::Queue</innerclass>
+    <innerclass refid="classvlkx_1_1_ref_counted_texture" prot="public">vlkx::RefCountedTexture</innerclass>
+    <innerclass refid="classvlkx_1_1_render_command" prot="public">vlkx::RenderCommand</innerclass>
+    <innerclass refid="classvlkx_1_1_renderer_config" prot="public">vlkx::RendererConfig</innerclass>
+    <innerclass refid="classvlkx_1_1_render_pass" prot="public">vlkx::RenderPass</innerclass>
+    <innerclass refid="classvlkx_1_1_render_pass_builder" prot="public">vlkx::RenderPassBuilder</innerclass>
+    <innerclass refid="classvlkx_1_1_samplable_image" prot="public">vlkx::SamplableImage</innerclass>
+    <innerclass refid="classvlkx_1_1_screen_render_pass_manager" prot="public">vlkx::ScreenRenderPassManager</innerclass>
+    <innerclass refid="classvlkx_1_1_shader_module" prot="public">vlkx::ShaderModule</innerclass>
+    <innerclass refid="structvlkx_1_1_shader_stage" prot="public">vlkx::ShaderStage</innerclass>
+    <innerclass refid="classvlkx_1_1_staging_buffer" prot="public">vlkx::StagingBuffer</innerclass>
+    <innerclass refid="classvlkx_1_1_static_descriptor" prot="public">vlkx::StaticDescriptor</innerclass>
+    <innerclass refid="classvlkx_1_1_static_per_instance_buffer" prot="public">vlkx::StaticPerInstanceBuffer</innerclass>
+    <innerclass refid="classvlkx_1_1_static_per_vertex_buffer" prot="public">vlkx::StaticPerVertexBuffer</innerclass>
+    <innerclass refid="classvlkx_1_1_swapchain_image" prot="public">vlkx::SwapchainImage</innerclass>
+    <innerclass refid="classvlkx_1_1_texture_image" prot="public">vlkx::TextureImage</innerclass>
+    <innerclass refid="classvlkx_1_1_uniform_buffer" prot="public">vlkx::UniformBuffer</innerclass>
+    <innerclass refid="classvlkx_1_1_usage_tracker" prot="public">vlkx::UsageTracker</innerclass>
+    <innerclass refid="classvlkx_1_1_user_camera" prot="public">vlkx::UserCamera</innerclass>
+    <innerclass refid="classvlkx_1_1_user_ortho_camera" prot="public">vlkx::UserOrthoCamera</innerclass>
+    <innerclass refid="classvlkx_1_1_user_perspective_camera" prot="public">vlkx::UserPerspectiveCamera</innerclass>
+    <innerclass refid="classvlkx_1_1_vertex_buffer" prot="public">vlkx::VertexBuffer</innerclass>
+    <innernamespace refid="namespacevlkx_1_1_simple_render_pass">vlkx::SimpleRenderPass</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacevlkx_1abd551790e62be2b24965b416f7abf327" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkPipelineViewportStateCreateInfo</type>
+        <definition>VkPipelineViewportStateCreateInfo vlkx::createViewport</definition>
+        <argsstring>(const GraphicsPipelineBuilder::Viewport &amp;port)</argsstring>
+        <name>createViewport</name>
+        <qualifiedname>vlkx::createViewport</qualifiedname>
+        <param>
+          <type>const <ref refid="structvlkx_1_1_graphics_pipeline_builder_1_1_viewport" kindref="compound">GraphicsPipelineBuilder::Viewport</ref> &amp;</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp" line="13" column="39" bodyfile="shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp" bodystart="13" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1a354f18e303e45abd95d1850f88562da6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkPipelineColorBlendStateCreateInfo</type>
+        <definition>VkPipelineColorBlendStateCreateInfo vlkx::createBlend</definition>
+        <argsstring>(const std::vector&lt; VkPipelineColorBlendAttachmentState &gt; &amp;states)</argsstring>
+        <name>createBlend</name>
+        <qualifiedname>vlkx::createBlend</qualifiedname>
+        <param>
+          <type>const std::vector&lt; VkPipelineColorBlendAttachmentState &gt; &amp;</type>
+          <declname>states</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp" line="20" column="41" bodyfile="shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp" bodystart="20" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1a303a26865566c161632fab9445727b2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkPipelineVertexInputStateCreateInfo</type>
+        <definition>VkPipelineVertexInputStateCreateInfo vlkx::createVertexInput</definition>
+        <argsstring>(const std::vector&lt; VkVertexInputBindingDescription &gt; &amp;bindingDescs, const std::vector&lt; VkVertexInputAttributeDescription &gt; &amp;attrDescs)</argsstring>
+        <name>createVertexInput</name>
+        <qualifiedname>vlkx::createVertexInput</qualifiedname>
+        <param>
+          <type>const std::vector&lt; VkVertexInputBindingDescription &gt; &amp;</type>
+          <declname>bindingDescs</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; VkVertexInputAttributeDescription &gt; &amp;</type>
+          <declname>attrDescs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp" line="28" column="42" bodyfile="shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp" bodystart="28" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1a0c9d24a874c2487c10461bdaeba23a1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="structvlkx_1_1_shader_stage" kindref="compound">ShaderStage</ref> &gt;</type>
+        <definition>std::vector&lt; ShaderStage &gt; vlkx::createShader</definition>
+        <argsstring>(const std::map&lt; VkShaderStageFlagBits, std::string &gt; &amp;shaderMap)</argsstring>
+        <name>createShader</name>
+        <qualifiedname>vlkx::createShader</qualifiedname>
+        <param>
+          <type>const std::map&lt; VkShaderStageFlagBits, std::string &gt; &amp;</type>
+          <declname>shaderMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp" line="38" column="17" bodyfile="shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp" bodystart="38" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1a7cf920e749447ba12240737bbc538cb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; VkPipelineShaderStageCreateInfo &gt;</type>
+        <definition>std::vector&lt; VkPipelineShaderStageCreateInfo &gt; vlkx::createShaderStage</definition>
+        <argsstring>(const std::vector&lt; ShaderStage &gt; &amp;stages)</argsstring>
+        <name>createShaderStage</name>
+        <qualifiedname>vlkx::createShaderStage</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="structvlkx_1_1_shader_stage" kindref="compound">ShaderStage</ref> &gt; &amp;</type>
+          <declname>stages</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp" line="48" column="17" bodyfile="shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp" bodystart="48" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1aca0c27bc801d3a32b1a7e67999e6e6df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkClearValue</type>
+        <definition>VkClearValue vlkx::createClearFor</definition>
+        <argsstring>(const RenderPassBuilder::Attachment &amp;attachment)</argsstring>
+        <name>createClearFor</name>
+        <qualifiedname>vlkx::createClearFor</qualifiedname>
+        <param>
+          <type>const <ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment" kindref="compound">RenderPassBuilder::Attachment</ref> &amp;</type>
+          <declname>attachment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates the necessary Clear Value struct to erase the given attachment. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attachment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the attachment metadata </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the Clear Value that will erase the attachment&apos;s data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/render/render_pass/GenericRenderPass.cpp" line="14" column="18" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GenericRenderPass.cpp" bodystart="14" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1ad25aed48998d8fce863f39e56d40e0e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkAttachmentDescription</type>
+        <definition>VkAttachmentDescription vlkx::buildAttachment</definition>
+        <argsstring>(const RenderPassBuilder::Attachment &amp;attachment)</argsstring>
+        <name>buildAttachment</name>
+        <qualifiedname>vlkx::buildAttachment</qualifiedname>
+        <param>
+          <type>const <ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment" kindref="compound">RenderPassBuilder::Attachment</ref> &amp;</type>
+          <declname>attachment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert a <ref refid="classvlkx_1_1_render_pass_builder" kindref="compound">RenderPassBuilder</ref> attachment to a VkAttachmentDescription. Format will be UNDEFINED. Sample count will be 1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/render/render_pass/GenericRenderPass.cpp" line="31" column="29" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GenericRenderPass.cpp" bodystart="31" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1afad317dcd0f3866ed39b5c2d002fdcfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; VkSubpassDescription &gt;</type>
+        <definition>std::vector&lt; VkSubpassDescription &gt; vlkx::buildSubpassDescriptors</definition>
+        <argsstring>(const std::vector&lt; RenderPassBuilder::SubpassAttachments &gt; &amp;attachments)</argsstring>
+        <name>buildSubpassDescriptors</name>
+        <qualifiedname>vlkx::buildSubpassDescriptors</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="structvlkx_1_1_render_pass_builder_1_1_subpass_attachments" kindref="compound">RenderPassBuilder::SubpassAttachments</ref> &gt; &amp;</type>
+          <declname>attachments</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/render/render_pass/GenericRenderPass.cpp" line="57" column="17" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GenericRenderPass.cpp" bodystart="57" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1ac10699824d1c6c6bf1532a0a32ce8559" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkSubpassDependency</type>
+        <definition>VkSubpassDependency vlkx::buildSubpassDependency</definition>
+        <argsstring>(const RenderPassBuilder::SubpassDependency &amp;dep)</argsstring>
+        <name>buildSubpassDependency</name>
+        <qualifiedname>vlkx::buildSubpassDependency</qualifiedname>
+        <param>
+          <type>const <ref refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency" kindref="compound">RenderPassBuilder::SubpassDependency</ref> &amp;</type>
+          <declname>dep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/render/render_pass/GenericRenderPass.cpp" line="80" column="25" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GenericRenderPass.cpp" bodystart="80" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1a0ffa5331c5b92ebfc2287fd8d6bbaa7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt; int &gt; vlkx::countColorAttachments</definition>
+        <argsstring>(const std::vector&lt; RenderPassBuilder::SubpassAttachments &gt; &amp;attachments)</argsstring>
+        <name>countColorAttachments</name>
+        <qualifiedname>vlkx::countColorAttachments</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="structvlkx_1_1_render_pass_builder_1_1_subpass_attachments" kindref="compound">RenderPassBuilder::SubpassAttachments</ref> &gt; &amp;</type>
+          <declname>attachments</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/render/render_pass/GenericRenderPass.cpp" line="92" column="17" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GenericRenderPass.cpp" bodystart="92" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1a0584ec8611e11f8ba362f53f6dbd4b26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; VkFramebuffer &gt;</type>
+        <definition>std::vector&lt; VkFramebuffer &gt; vlkx::createFramebuffers</definition>
+        <argsstring>(const VkRenderPass &amp;renderPass, const std::vector&lt; std::function&lt; const Image &amp;(int idx)&gt; &gt; getters, int count, const VkExtent2D &amp;extent)</argsstring>
+        <name>createFramebuffers</name>
+        <qualifiedname>vlkx::createFramebuffers</qualifiedname>
+        <param>
+          <type>const VkRenderPass &amp;</type>
+          <declname>renderPass</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::function&lt; const <ref refid="classvlkx_1_1_image" kindref="compound">Image</ref> &amp;(int idx)&gt; &gt;</type>
+          <declname>getters</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>const VkExtent2D &amp;</type>
+          <declname>extent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/render/render_pass/GenericRenderPass.cpp" line="102" column="17" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GenericRenderPass.cpp" bodystart="102" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1aed71e148b626f36a0869a95799b9bf67" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool vlkx::needsSynchronization</definition>
+        <argsstring>(const ImageUsage &amp;prev, const ImageUsage &amp;curr)</argsstring>
+        <name>needsSynchronization</name>
+        <qualifiedname>vlkx::needsSynchronization</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref> &amp;</type>
+          <declname>prev</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref> &amp;</type>
+          <declname>curr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" line="5" column="17" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="5" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1ac07e0a49f4f80bec1e17cafd65fbd80b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::addUsageToSubpass</definition>
+        <argsstring>(const ImageUsage &amp;usage, RenderPassBuilder::SubpassDependency::SubpassMeta *pass)</argsstring>
+        <name>addUsageToSubpass</name>
+        <qualifiedname>vlkx::addUsageToSubpass</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref> &amp;</type>
+          <declname>usage</declname>
+        </param>
+        <param>
+          <type><ref refid="structvlkx_1_1_render_pass_builder_1_1_subpass_dependency_1_1_subpass_meta" kindref="compound">RenderPassBuilder::SubpassDependency::SubpassMeta</ref> *</type>
+          <declname>pass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" line="11" column="10" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="11" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1ab7ec4660eff64aa039dff78a763a791c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::checkSubpass</definition>
+        <argsstring>(int pass, int high)</argsstring>
+        <name>checkSubpass</name>
+        <qualifiedname>vlkx::checkSubpass</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>pass</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>high</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/render/render_pass/ScreenRenderPass.cpp" line="8" column="10" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/ScreenRenderPass.cpp" bodystart="8" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1ae7cd7fad3e69447525a6d8ee207113ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::addAttachment</definition>
+        <argsstring>(const AttachmentConfig &amp;config, GraphicsPass &amp;pass, MultiImageTracker &amp;tracker, GraphicsPass::LocationGetter &amp;&amp;getter, const std::function&lt; void(UsageTracker &amp;)&gt; &amp;populateHistory)</argsstring>
+        <name>addAttachment</name>
+        <qualifiedname>vlkx::addAttachment</qualifiedname>
+        <param>
+          <type>const <ref refid="structvlkx_1_1_attachment_config" kindref="compound">AttachmentConfig</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type><ref refid="classvlkx_1_1_graphics_pass" kindref="compound">GraphicsPass</ref> &amp;</type>
+          <declname>pass</declname>
+        </param>
+        <param>
+          <type><ref refid="classvlkx_1_1_multi_image_tracker" kindref="compound">MultiImageTracker</ref> &amp;</type>
+          <declname>tracker</declname>
+        </param>
+        <param>
+          <type><ref refid="classvlkx_1_1_graphics_pass_1a87376e32a032184080c13dce15655dbc" kindref="member">GraphicsPass::LocationGetter</ref> &amp;&amp;</type>
+          <declname>getter</declname>
+        </param>
+        <param>
+          <type>const std::function&lt; void(<ref refid="classvlkx_1_1_usage_tracker" kindref="compound">UsageTracker</ref> &amp;)&gt; &amp;</type>
+          <declname>populateHistory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/render/render_pass/ScreenRenderPass.cpp" line="10" column="10" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/ScreenRenderPass.cpp" bodystart="10" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1a979c0a480e05ce4c107ff13c02efaef1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::executeBulkCopy</definition>
+        <argsstring>(VkTools::ManagedBuffer buffer, const std::vector&lt; vlkx::Buffer::CopyMeta &gt; &amp;meta)</argsstring>
+        <name>executeBulkCopy</name>
+        <qualifiedname>vlkx::executeBulkCopy</qualifiedname>
+        <param>
+          <type><ref refid="struct_vk_tools_1_1_managed_buffer" kindref="compound">VkTools::ManagedBuffer</ref></type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="structvlkx_1_1_buffer_1_1_copy_meta" kindref="compound">vlkx::Buffer::CopyMeta</ref> &gt; &amp;</type>
+          <declname>meta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Buffer.cpp" line="8" column="10" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Buffer.cpp" bodystart="8" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1a8540388de027d35bdf8e4d6342890b79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structvlkx_1_1_image_data" kindref="compound">ImageData</ref></type>
+        <definition>ImageData vlkx::loadImage</definition>
+        <argsstring>(const std::string &amp;path, int wantedChannels)</argsstring>
+        <name>loadImage</name>
+        <qualifiedname>vlkx::loadImage</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>wantedChannels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="35" column="15" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="35" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1a1b39c75e3a1b072a9836900786032787" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; VkFormat &gt;</type>
+        <definition>std::optional&lt; VkFormat &gt; vlkx::findFormatWith</definition>
+        <argsstring>(const std::vector&lt; VkFormat &gt; &amp;formats, VkFormatFeatureFlags feature)</argsstring>
+        <name>findFormatWith</name>
+        <qualifiedname>vlkx::findFormatWith</qualifiedname>
+        <param>
+          <type>const std::vector&lt; VkFormat &gt; &amp;</type>
+          <declname>formats</declname>
+        </param>
+        <param>
+          <type>VkFormatFeatureFlags</type>
+          <declname>feature</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="61" column="19" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="61" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1a79b0b8b70a77c2f54b0e42eb2ee7516d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkFormat</type>
+        <definition>VkFormat vlkx::findFormatForChannels</definition>
+        <argsstring>(int channels, const std::vector&lt; ImageUsage &gt; &amp;usages, bool highPrecision=false)</argsstring>
+        <name>findFormatForChannels</name>
+        <qualifiedname>vlkx::findFormatForChannels</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>channels</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref> &gt; &amp;</type>
+          <declname>usages</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>highPrecision</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="71" column="14" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="71" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1a958db039d21c9675888808273bafbcf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkFormat</type>
+        <definition>VkFormat vlkx::findFormatForDepthStencil</definition>
+        <argsstring>()</argsstring>
+        <name>findFormatForDepthStencil</name>
+        <qualifiedname>vlkx::findFormatForDepthStencil</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="99" column="14" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="99" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1a52b895fbb821ce233cc675a40347eb54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkSampleCountFlagBits</type>
+        <definition>VkSampleCountFlagBits vlkx::getMaxSamples</definition>
+        <argsstring>(VkSampleCountFlags samples)</argsstring>
+        <name>getMaxSamples</name>
+        <qualifiedname>vlkx::getMaxSamples</qualifiedname>
+        <param>
+          <type>VkSampleCountFlags</type>
+          <declname>samples</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="106" column="27" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="106" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1a2ff9b98198083579d0a6086ff5b21460" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structvlkx_1_1_texture_image_1_1_meta" kindref="compound">TextureImage::Meta</ref></type>
+        <definition>TextureImage::Meta vlkx::createTextureMeta</definition>
+        <argsstring>(const ImageDescriptor &amp;image, const std::vector&lt; ImageUsage &gt; &amp;usages)</argsstring>
+        <name>createTextureMeta</name>
+        <qualifiedname>vlkx::createTextureMeta</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_image_descriptor" kindref="compound">ImageDescriptor</ref> &amp;</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref> &gt; &amp;</type>
+          <declname>usages</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="145" column="24" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="145" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1a5e870bdd3676a5f45a88d398c3fd6788" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_vk_tools_1_1_managed_image" kindref="compound">VkTools::ManagedImage</ref></type>
+        <definition>VkTools::ManagedImage vlkx::createImage</definition>
+        <argsstring>(const ImageConfig &amp;config, VkImageCreateFlags flags, VkFormat format, const VkExtent3D &amp;extent, VkImageUsageFlags usage)</argsstring>
+        <name>createImage</name>
+        <qualifiedname>vlkx::createImage</qualifiedname>
+        <param>
+          <type>const <ref refid="structvlkx_1_1_image_config" kindref="compound">ImageConfig</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>VkImageCreateFlags</type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>VkFormat</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>const VkExtent3D &amp;</type>
+          <declname>extent</declname>
+        </param>
+        <param>
+          <type>VkImageUsageFlags</type>
+          <declname>usage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="153" column="27" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="153" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1afc48f0f920ad0208f0e183915ac6dc8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::waitForBarrier</definition>
+        <argsstring>(const VkCommandBuffer &amp;commands, const VkImageMemoryBarrier &amp;barrier, const std::array&lt; VkPipelineStageFlags, 2 &gt; &amp;stages)</argsstring>
+        <name>waitForBarrier</name>
+        <qualifiedname>vlkx::waitForBarrier</qualifiedname>
+        <param>
+          <type>const VkCommandBuffer &amp;</type>
+          <declname>commands</declname>
+        </param>
+        <param>
+          <type>const VkImageMemoryBarrier &amp;</type>
+          <declname>barrier</declname>
+        </param>
+        <param>
+          <type>const std::array&lt; VkPipelineStageFlags, 2 &gt; &amp;</type>
+          <declname>stages</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="178" column="10" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="178" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1a3c1f3cd12d2240ab6712f4098d8467ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::transitionImage</definition>
+        <argsstring>(const VkImage &amp;image, const ImageConfig &amp;config, VkImageAspectFlags aspect, const std::array&lt; VkImageLayout, 2 &gt; &amp;layouts, const std::array&lt; VkAccessFlags, 2 &gt; &amp;access, const std::array&lt; VkPipelineStageFlags, 2 &gt; &amp;stages)</argsstring>
+        <name>transitionImage</name>
+        <qualifiedname>vlkx::transitionImage</qualifiedname>
+        <param>
+          <type>const VkImage &amp;</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structvlkx_1_1_image_config" kindref="compound">ImageConfig</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>VkImageAspectFlags</type>
+          <declname>aspect</declname>
+        </param>
+        <param>
+          <type>const std::array&lt; VkImageLayout, 2 &gt; &amp;</type>
+          <declname>layouts</declname>
+        </param>
+        <param>
+          <type>const std::array&lt; VkAccessFlags, 2 &gt; &amp;</type>
+          <declname>access</declname>
+        </param>
+        <param>
+          <type>const std::array&lt; VkPipelineStageFlags, 2 &gt; &amp;</type>
+          <declname>stages</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="182" column="10" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="182" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1a0a05fa50c0139e53ae9dd04a57561472" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkOffset3D</type>
+        <definition>VkOffset3D vlkx::convertExtent</definition>
+        <argsstring>(const VkExtent2D &amp;extent)</argsstring>
+        <name>convertExtent</name>
+        <qualifiedname>vlkx::convertExtent</qualifiedname>
+        <param>
+          <type>const VkExtent2D &amp;</type>
+          <declname>extent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="197" column="23" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="197" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1afda8a2a9ff5905b53cc11b46a443cb52" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkExtent3D</type>
+        <definition>VkExtent3D vlkx::expandExtent</definition>
+        <argsstring>(const VkExtent2D &amp;extent)</argsstring>
+        <name>expandExtent</name>
+        <qualifiedname>vlkx::expandExtent</qualifiedname>
+        <param>
+          <type>const VkExtent2D &amp;</type>
+          <declname>extent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="201" column="23" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="201" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1a7caad33af38679d1f56fcf7cd4ad6cb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; VkExtent2D &gt;</type>
+        <definition>std::vector&lt; VkExtent2D &gt; vlkx::getExtentForMipmaps</definition>
+        <argsstring>(const VkExtent3D &amp;extent)</argsstring>
+        <name>getExtentForMipmaps</name>
+        <qualifiedname>vlkx::getExtentForMipmaps</qualifiedname>
+        <param>
+          <type>const VkExtent3D &amp;</type>
+          <declname>extent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="205" column="17" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="205" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkx_1a44a080d4e3a2f24537b089f3334ce2b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::generateMipmaps</definition>
+        <argsstring>(const VkImage &amp;image, VkFormat format, const VkExtent3D &amp;extent, const std::vector&lt; VkExtent2D &gt; &amp;mipExtents)</argsstring>
+        <name>generateMipmaps</name>
+        <qualifiedname>vlkx::generateMipmaps</qualifiedname>
+        <param>
+          <type>const VkImage &amp;</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>VkFormat</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>const VkExtent3D &amp;</type>
+          <declname>extent</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; VkExtent2D &gt; &amp;</type>
+          <declname>mipExtents</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="219" column="10" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="219" bodyend="268"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" line="10" column="1"/>
+  </compounddef>
+</doxygen>

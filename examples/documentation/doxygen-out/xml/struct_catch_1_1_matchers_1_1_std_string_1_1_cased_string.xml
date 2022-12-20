@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_catch_1_1_matchers_1_1_std_string_1_1_cased_string" kind="struct" language="C++" prot="public">
+    <compoundname>Catch::Matchers::StdString::CasedString</compoundname>
+    <includes refid="catch_8hpp" local="no">catch.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_catch_1_1_matchers_1_1_std_string_1_1_cased_string_1ae1c2864c986941536a6e94cca0528f92" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_catch_1_1_case_sensitive_1aad49d3aee2d97066642fffa919685c6a" kindref="member">CaseSensitive::Choice</ref></type>
+        <definition>CaseSensitive::Choice Catch::Matchers::StdString::CasedString::m_caseSensitivity</definition>
+        <argsstring></argsstring>
+        <name>m_caseSensitivity</name>
+        <qualifiedname>Catch::Matchers::StdString::CasedString::m_caseSensitivity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="3544" column="35" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="3544" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_catch_1_1_matchers_1_1_std_string_1_1_cased_string_1ad05dbc99aba3c3c386d6b856b213f911" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Catch::Matchers::StdString::CasedString::m_str</definition>
+        <argsstring></argsstring>
+        <name>m_str</name>
+        <qualifiedname>Catch::Matchers::StdString::CasedString::m_str</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="3545" column="25" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="3545" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_catch_1_1_matchers_1_1_std_string_1_1_cased_string_1aa88bbc5acd2bff22351d8d4b1816b561" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Catch::Matchers::StdString::CasedString::CasedString</definition>
+        <argsstring>(std::string const &amp;str, CaseSensitive::Choice caseSensitivity)</argsstring>
+        <name>CasedString</name>
+        <qualifiedname>Catch::Matchers::StdString::CasedString::CasedString</qualifiedname>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_catch_1_1_case_sensitive_1aad49d3aee2d97066642fffa919685c6a" kindref="member">CaseSensitive::Choice</ref></type>
+          <declname>caseSensitivity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="3540" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_matchers_1_1_std_string_1_1_cased_string_1a77639b1165c01f424ee0e96f53335010" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Catch::Matchers::StdString::CasedString::adjustString</definition>
+        <argsstring>(std::string const &amp;str) const</argsstring>
+        <name>adjustString</name>
+        <qualifiedname>Catch::Matchers::StdString::CasedString::adjustString</qualifiedname>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="3541" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_matchers_1_1_std_string_1_1_cased_string_1a9759155344d696b2476d764a1d95fcc9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Catch::Matchers::StdString::CasedString::caseSensitivitySuffix</definition>
+        <argsstring>() const</argsstring>
+        <name>caseSensitivitySuffix</name>
+        <qualifiedname>Catch::Matchers::StdString::CasedString::caseSensitivitySuffix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="3542" column="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="3538" column="9" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="3539" bodyend="3546"/>
+    <listofallmembers>
+      <member refid="struct_catch_1_1_matchers_1_1_std_string_1_1_cased_string_1a77639b1165c01f424ee0e96f53335010" prot="public" virt="non-virtual"><scope>Catch::Matchers::StdString::CasedString</scope><name>adjustString</name></member>
+      <member refid="struct_catch_1_1_matchers_1_1_std_string_1_1_cased_string_1aa88bbc5acd2bff22351d8d4b1816b561" prot="public" virt="non-virtual"><scope>Catch::Matchers::StdString::CasedString</scope><name>CasedString</name></member>
+      <member refid="struct_catch_1_1_matchers_1_1_std_string_1_1_cased_string_1a9759155344d696b2476d764a1d95fcc9" prot="public" virt="non-virtual"><scope>Catch::Matchers::StdString::CasedString</scope><name>caseSensitivitySuffix</name></member>
+      <member refid="struct_catch_1_1_matchers_1_1_std_string_1_1_cased_string_1ae1c2864c986941536a6e94cca0528f92" prot="public" virt="non-virtual"><scope>Catch::Matchers::StdString::CasedString</scope><name>m_caseSensitivity</name></member>
+      <member refid="struct_catch_1_1_matchers_1_1_std_string_1_1_cased_string_1ad05dbc99aba3c3c386d6b856b213f911" prot="public" virt="non-virtual"><scope>Catch::Matchers::StdString::CasedString</scope><name>m_str</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../src/template.schema.json",
+  "compiledPath": "",
+  "ignore": [
+    "*.ejs",
+    "template.json"
+  ],
+  "matchers": [
+    "basic.html.ejs"
+  ]
+}

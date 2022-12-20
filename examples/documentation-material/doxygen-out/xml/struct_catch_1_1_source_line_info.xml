@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_catch_1_1_source_line_info" kind="struct" language="C++" prot="public">
+    <compoundname>Catch::SourceLineInfo</compoundname>
+    <includes refid="catch_8hpp" local="no">catch.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_catch_1_1_source_line_info_1ad65537703e9f08c1fa7777fbc3f0c617" prot="public" static="no" mutable="no">
+        <type>char const  *</type>
+        <definition>char const* Catch::SourceLineInfo::file</definition>
+        <argsstring></argsstring>
+        <name>file</name>
+        <qualifiedname>Catch::SourceLineInfo::file</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="519" column="20" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="519" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_catch_1_1_source_line_info_1a841e5d696c7b9cde24e45e61dd979c77" prot="public" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t Catch::SourceLineInfo::line</definition>
+        <argsstring></argsstring>
+        <name>line</name>
+        <qualifiedname>Catch::SourceLineInfo::line</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="520" column="21" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="520" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_catch_1_1_source_line_info_1a2d80932bb4129b1606d1924a5c44be2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Catch::SourceLineInfo::SourceLineInfo</definition>
+        <argsstring>()=delete</argsstring>
+        <name>SourceLineInfo</name>
+        <qualifiedname>Catch::SourceLineInfo::SourceLineInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="504" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_source_line_info_1a48510b82a39a042ab370ed143dd30c10" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>Catch::SourceLineInfo::SourceLineInfo</definition>
+        <argsstring>(char const *_file, std::size_t _line) noexcept</argsstring>
+        <name>SourceLineInfo</name>
+        <qualifiedname>Catch::SourceLineInfo::SourceLineInfo</qualifiedname>
+        <param>
+          <type>char const *</type>
+          <declname>_file</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>_line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="505" column="9" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="505" bodyend="508"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_source_line_info_1a7c44c9986c33a9cf842b791374332d41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Catch::SourceLineInfo::SourceLineInfo</definition>
+        <argsstring>(SourceLineInfo const &amp;other)=default</argsstring>
+        <name>SourceLineInfo</name>
+        <qualifiedname>Catch::SourceLineInfo::SourceLineInfo</qualifiedname>
+        <param>
+          <type><ref refid="struct_catch_1_1_source_line_info" kindref="compound">SourceLineInfo</ref> const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="510" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_source_line_info_1ab9891ccc4e7fa7c1ab747cd013341482" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_catch_1_1_source_line_info" kindref="compound">SourceLineInfo</ref> &amp;</type>
+        <definition>SourceLineInfo &amp; Catch::SourceLineInfo::operator=</definition>
+        <argsstring>(SourceLineInfo const &amp;)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Catch::SourceLineInfo::operator=</qualifiedname>
+        <param>
+          <type><ref refid="struct_catch_1_1_source_line_info" kindref="compound">SourceLineInfo</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="511" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_source_line_info_1a5ea6179645457b8ec961aec9ca4c5588" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>Catch::SourceLineInfo::SourceLineInfo</definition>
+        <argsstring>(SourceLineInfo &amp;&amp;) noexcept=default</argsstring>
+        <name>SourceLineInfo</name>
+        <qualifiedname>Catch::SourceLineInfo::SourceLineInfo</qualifiedname>
+        <param>
+          <type><ref refid="struct_catch_1_1_source_line_info" kindref="compound">SourceLineInfo</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="512" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_source_line_info_1a1efc6194265495c99bb455c69fb1c904" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="struct_catch_1_1_source_line_info" kindref="compound">SourceLineInfo</ref> &amp;</type>
+        <definition>SourceLineInfo &amp; Catch::SourceLineInfo::operator=</definition>
+        <argsstring>(SourceLineInfo &amp;&amp;) noexcept=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Catch::SourceLineInfo::operator=</qualifiedname>
+        <param>
+          <type><ref refid="struct_catch_1_1_source_line_info" kindref="compound">SourceLineInfo</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="513" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_source_line_info_1a10a5b5b7dff82971879c2eb8d83f9b3b" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Catch::SourceLineInfo::empty</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>empty</name>
+        <qualifiedname>Catch::SourceLineInfo::empty</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="515" column="14" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="515" bodyend="515"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_source_line_info_1af07e4fdeddf8409b91e4f842f6264cf8" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Catch::SourceLineInfo::operator==</definition>
+        <argsstring>(SourceLineInfo const &amp;other) const noexcept</argsstring>
+        <name>operator==</name>
+        <qualifiedname>Catch::SourceLineInfo::operator==</qualifiedname>
+        <param>
+          <type><ref refid="struct_catch_1_1_source_line_info" kindref="compound">SourceLineInfo</ref> const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="516" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_source_line_info_1af77415416919d2d6030b4be085b92f7a" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Catch::SourceLineInfo::operator&lt;</definition>
+        <argsstring>(SourceLineInfo const &amp;other) const noexcept</argsstring>
+        <name>operator&lt;</name>
+        <qualifiedname>Catch::SourceLineInfo::operator&lt;</qualifiedname>
+        <param>
+          <type><ref refid="struct_catch_1_1_source_line_info" kindref="compound">SourceLineInfo</ref> const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="517" column="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="502" column="5" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="502" bodyend="521"/>
+    <listofallmembers>
+      <member refid="struct_catch_1_1_source_line_info_1a10a5b5b7dff82971879c2eb8d83f9b3b" prot="public" virt="non-virtual"><scope>Catch::SourceLineInfo</scope><name>empty</name></member>
+      <member refid="struct_catch_1_1_source_line_info_1ad65537703e9f08c1fa7777fbc3f0c617" prot="public" virt="non-virtual"><scope>Catch::SourceLineInfo</scope><name>file</name></member>
+      <member refid="struct_catch_1_1_source_line_info_1a841e5d696c7b9cde24e45e61dd979c77" prot="public" virt="non-virtual"><scope>Catch::SourceLineInfo</scope><name>line</name></member>
+      <member refid="struct_catch_1_1_source_line_info_1af77415416919d2d6030b4be085b92f7a" prot="public" virt="non-virtual"><scope>Catch::SourceLineInfo</scope><name>operator&lt;</name></member>
+      <member refid="struct_catch_1_1_source_line_info_1ab9891ccc4e7fa7c1ab747cd013341482" prot="public" virt="non-virtual"><scope>Catch::SourceLineInfo</scope><name>operator=</name></member>
+      <member refid="struct_catch_1_1_source_line_info_1a1efc6194265495c99bb455c69fb1c904" prot="public" virt="non-virtual"><scope>Catch::SourceLineInfo</scope><name>operator=</name></member>
+      <member refid="struct_catch_1_1_source_line_info_1af07e4fdeddf8409b91e4f842f6264cf8" prot="public" virt="non-virtual"><scope>Catch::SourceLineInfo</scope><name>operator==</name></member>
+      <member refid="struct_catch_1_1_source_line_info_1a2d80932bb4129b1606d1924a5c44be2f" prot="public" virt="non-virtual"><scope>Catch::SourceLineInfo</scope><name>SourceLineInfo</name></member>
+      <member refid="struct_catch_1_1_source_line_info_1a48510b82a39a042ab370ed143dd30c10" prot="public" virt="non-virtual"><scope>Catch::SourceLineInfo</scope><name>SourceLineInfo</name></member>
+      <member refid="struct_catch_1_1_source_line_info_1a7c44c9986c33a9cf842b791374332d41" prot="public" virt="non-virtual"><scope>Catch::SourceLineInfo</scope><name>SourceLineInfo</name></member>
+      <member refid="struct_catch_1_1_source_line_info_1a5ea6179645457b8ec961aec9ca4c5588" prot="public" virt="non-virtual"><scope>Catch::SourceLineInfo</scope><name>SourceLineInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

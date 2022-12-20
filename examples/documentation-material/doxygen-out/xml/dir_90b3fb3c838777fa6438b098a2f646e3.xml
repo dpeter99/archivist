@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_90b3fb3c838777fa6438b098a2f646e3" kind="dir">
+    <compoundname>shadow-engine/shadow-entity/src</compoundname>
+    <innerfile refid="_default_entities_8cpp">DefaultEntities.cpp</innerfile>
+    <innerfile refid="_entity_8cpp">Entity.cpp</innerfile>
+    <innerfile refid="_entity_manager_8cpp">EntityManager.cpp</innerfile>
+    <innerfile refid="_entity_registry_8cpp">EntityRegistry.cpp</innerfile>
+    <innerfile refid="_entity_system_8cpp">EntitySystem.cpp</innerfile>
+    <innerfile refid="_scene_8cpp">Scene.cpp</innerfile>
+    <innerfile refid="_scene_entity_8cpp">SceneEntity.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-entity/src/"/>
+  </compounddef>
+</doxygen>

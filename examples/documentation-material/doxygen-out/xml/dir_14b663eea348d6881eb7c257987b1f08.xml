@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_14b663eea348d6881eb7c257987b1f08" kind="dir">
+    <compoundname>shadow-engine/shadow-renderer/src</compoundname>
+    <innerdir refid="dir_d96d4ad7772d0b62395550d5ffc906f6">shadow-engine/shadow-renderer/src/render</innerdir>
+    <innerdir refid="dir_6b4de597d170085f0a2706121a8a8dd1">shadow-engine/shadow-renderer/src/temp</innerdir>
+    <innerdir refid="dir_44d65ee234395fb21773de435df6084b">shadow-engine/shadow-renderer/src/vulkan</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/src/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_catch_1_1_string_maker_3_01_t_01_5_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>Catch::StringMaker&lt; T * &gt;</compoundname>
+    <includes refid="catch_8hpp" local="no">catch.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="struct_catch_1_1_string_maker_3_01_t_01_5_01_4_1a2adbc75c99d71b8323f4052bcb0815c9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>static std::string Catch::StringMaker&lt; T * &gt;::convert</definition>
+        <argsstring>(U *p)</argsstring>
+        <name>convert</name>
+        <qualifiedname>Catch::StringMaker&lt; T * &gt;::convert</qualifiedname>
+        <param>
+          <type>U *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="1798" column="28" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="1798" bodyend="1804"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="1796" column="5" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="1796" bodyend="1805"/>
+    <listofallmembers>
+      <member refid="struct_catch_1_1_string_maker_3_01_t_01_5_01_4_1a2adbc75c99d71b8323f4052bcb0815c9" prot="public" virt="non-virtual"><scope>Catch::StringMaker&lt; T * &gt;</scope><name>convert</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

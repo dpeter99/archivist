@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_catch_1_1_i_context" kind="struct" language="C++" prot="public" abstract="yes">
+    <compoundname>Catch::IContext</compoundname>
+    <derivedcompoundref refid="struct_catch_1_1_i_mutable_context" prot="public" virt="non-virtual">Catch::IMutableContext</derivedcompoundref>
+    <includes refid="catch_8hpp" local="no">catch.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_catch_1_1_i_context_1aeb17355c1be6c2ced5407cad7202628d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual Catch::IContext::~IContext</definition>
+        <argsstring>()</argsstring>
+        <name>~IContext</name>
+        <qualifiedname>Catch::IContext::~IContext</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4360" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_i_context_1a950f10a5f6d3c9385f9493ba6298b174" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="struct_catch_1_1_i_result_capture" kindref="compound">IResultCapture</ref> *</type>
+        <definition>virtual IResultCapture * Catch::IContext::getResultCapture</definition>
+        <argsstring>()=0</argsstring>
+        <name>getResultCapture</name>
+        <qualifiedname>Catch::IContext::getResultCapture</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4362" column="32"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_i_context_1ace6ece997b27c76d70563272f9e93f2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="struct_catch_1_1_i_runner" kindref="compound">IRunner</ref> *</type>
+        <definition>virtual IRunner * Catch::IContext::getRunner</definition>
+        <argsstring>()=0</argsstring>
+        <name>getRunner</name>
+        <qualifiedname>Catch::IContext::getRunner</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4363" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_i_context_1ad72743ae753feab0a6f5505f26f79ced" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespace_catch_1afd20a5d4f9d2f4d525db81a7765367b0" kindref="member">IConfigPtr</ref> const &amp;</type>
+        <definition>virtual IConfigPtr const  &amp; Catch::IContext::getConfig</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getConfig</name>
+        <qualifiedname>Catch::IContext::getConfig</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4364" column="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Catch::IContext</label>
+        <link refid="struct_catch_1_1_i_context"/>
+      </node>
+      <node id="2">
+        <label>Catch::IMutableContext</label>
+        <link refid="struct_catch_1_1_i_mutable_context"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4358" column="5" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4359" bodyend="4365"/>
+    <listofallmembers>
+      <member refid="struct_catch_1_1_i_context_1ad72743ae753feab0a6f5505f26f79ced" prot="public" virt="pure-virtual"><scope>Catch::IContext</scope><name>getConfig</name></member>
+      <member refid="struct_catch_1_1_i_context_1a950f10a5f6d3c9385f9493ba6298b174" prot="public" virt="pure-virtual"><scope>Catch::IContext</scope><name>getResultCapture</name></member>
+      <member refid="struct_catch_1_1_i_context_1ace6ece997b27c76d70563272f9e93f2f" prot="public" virt="pure-virtual"><scope>Catch::IContext</scope><name>getRunner</name></member>
+      <member refid="struct_catch_1_1_i_context_1aeb17355c1be6c2ced5407cad7202628d" prot="public" virt="virtual"><scope>Catch::IContext</scope><name>~IContext</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

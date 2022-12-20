@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="namespacevlkxtemp" kind="namespace" language="C++">
+    <compoundname>vlkxtemp</compoundname>
+    <innerclass refid="classvlkxtemp_1_1_model" prot="public">vlkxtemp::Model</innerclass>
+    <innerclass refid="classvlkxtemp_1_1_model_builder" prot="public">vlkxtemp::ModelBuilder</innerclass>
+    <innerclass refid="classvlkxtemp_1_1_model_loader" prot="public">vlkxtemp::ModelLoader</innerclass>
+    <innerclass refid="structvlkxtemp_1_1_wavefront" prot="public">vlkxtemp::Wavefront</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacevlkxtemp_1af6d571a0c0a222f6162c882d47ad827d" prot="public" static="no">
+        <type><ref refid="classvlkx_1_1_per_vertex_buffer_1_1_no_share_meta" kindref="compound">PerVertexBuffer::NoShareMeta</ref></type>
+        <definition>using vlkxtemp::VertexData = typedef PerVertexBuffer::NoShareMeta</definition>
+        <argsstring></argsstring>
+        <name>VertexData</name>
+        <qualifiedname>vlkxtemp::VertexData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" line="6" column="5" bodyfile="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacevlkxtemp_1aaa3a87e75bdf1b502c9898768f912cd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classvlkx_1_1_samplable_image" kindref="compound">SamplableImage</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; SamplableImage &gt; vlkxtemp::createTex</definition>
+        <argsstring>(const ModelBuilder::TextureSource &amp;source)</argsstring>
+        <name>createTex</name>
+        <qualifiedname>vlkxtemp::createTex</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkxtemp_1_1_model_builder_1abdb3e5a4d714eeeaed51c6d427c2f24a" kindref="member">ModelBuilder::TextureSource</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" line="8" column="21" bodyfile="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkxtemp_1a374351cbd9a6241735281b8525d7c46f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkxtemp::fillTextureMeta</definition>
+        <argsstring>(const ModelBuilder::BindingPoints &amp;binding, const ModelBuilder::TexturePerMesh &amp;textures, const ModelBuilder::TexturePerMesh &amp;sharedTextures, Descriptor::Meta *meta, Descriptor::ImageInfos *infos)</argsstring>
+        <name>fillTextureMeta</name>
+        <qualifiedname>vlkxtemp::fillTextureMeta</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkxtemp_1_1_model_builder_1a129ba88f65b8da8d86db1cec5f66a05c" kindref="member">ModelBuilder::BindingPoints</ref> &amp;</type>
+          <declname>binding</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classvlkxtemp_1_1_model_builder_1a6f9efb7520fe2d499e296b1cd1b1f754" kindref="member">ModelBuilder::TexturePerMesh</ref> &amp;</type>
+          <declname>textures</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classvlkxtemp_1_1_model_builder_1a6f9efb7520fe2d499e296b1cd1b1f754" kindref="member">ModelBuilder::TexturePerMesh</ref> &amp;</type>
+          <declname>sharedTextures</declname>
+        </param>
+        <param>
+          <type><ref refid="structvlkx_1_1_descriptor_1_1_meta" kindref="compound">Descriptor::Meta</ref> *</type>
+          <declname>meta</declname>
+        </param>
+        <param>
+          <type><ref refid="classvlkx_1_1_descriptor_1a4e02bf81a006a3dfadb9269b8c1f1647" kindref="member">Descriptor::ImageInfos</ref> *</type>
+          <declname>infos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" line="13" column="10" bodyfile="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" bodystart="13" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkxtemp_1aaf30ec04731c7ee76f31300a96af68bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; VkPushConstantRange &gt;</type>
+        <definition>std::vector&lt; VkPushConstantRange &gt; vlkxtemp::createRanges</definition>
+        <argsstring>(const ModelBuilder::ModelPushConstant &amp;constants)</argsstring>
+        <name>createRanges</name>
+        <qualifiedname>vlkxtemp::createRanges</qualifiedname>
+        <param>
+          <type>const <ref refid="structvlkxtemp_1_1_model_builder_1_1_model_push_constant" kindref="compound">ModelBuilder::ModelPushConstant</ref> &amp;</type>
+          <declname>constants</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" line="37" column="17" bodyfile="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" bodystart="37" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkxtemp_1ad2d51c85cd9253700e96e194f6812838" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkVertexInputBindingDescription</type>
+        <definition>VkVertexInputBindingDescription vlkxtemp::getBinding</definition>
+        <argsstring>(uint32_t stride, bool instancing)</argsstring>
+        <name>getBinding</name>
+        <qualifiedname>vlkxtemp::getBinding</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>stride</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>instancing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" line="45" column="37" bodyfile="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkxtemp_1a93c4da19d9eece4f71294c92f18b8b73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkxtemp::setVertexInput</definition>
+        <argsstring>(const PerVertexBuffer &amp;buffer, const std::vector&lt; PerInstanceVertexBuffer * &gt; &amp;instanceBuffers, GraphicsPipelineBuilder *builder)</argsstring>
+        <name>setVertexInput</name>
+        <qualifiedname>vlkxtemp::setVertexInput</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_per_vertex_buffer" kindref="compound">PerVertexBuffer</ref> &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="classvlkx_1_1_per_instance_vertex_buffer" kindref="compound">PerInstanceVertexBuffer</ref> * &gt; &amp;</type>
+          <declname>instanceBuffers</declname>
+        </param>
+        <param>
+          <type><ref refid="classvlkx_1_1_graphics_pipeline_builder" kindref="compound">GraphicsPipelineBuilder</ref> *</type>
+          <declname>builder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" line="49" column="10" bodyfile="shadow-engine/shadow-renderer/src/temp/model/Builder.cpp" bodystart="49" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevlkxtemp_1a25b1d4d7ac9a80fab1c584cba39c9420" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; vlkxtemp::split</definition>
+        <argsstring>(std::string_view s, char delim)</argsstring>
+        <name>split</name>
+        <qualifiedname>vlkxtemp::split</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>delim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/temp/model/Loader.cpp" line="10" column="17" bodyfile="shadow-engine/shadow-renderer/src/temp/model/Loader.cpp" bodystart="10" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="8" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_f33c86364dee5226829de7b73d23be3b" kind="dir">
+    <compoundname>shadow-engine/shadow-renderer/inc/vlkx/vulkan</compoundname>
+    <innerdir refid="dir_ff695c667cbd09161332cc8dd8cb4cd1">shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction</innerdir>
+    <innerfile refid="_swap_chain_8h">SwapChain.h</innerfile>
+    <innerfile refid="_tools_8h">Tools.h</innerfile>
+    <innerfile refid="_validation_and_extension_8h">ValidationAndExtension.h</innerfile>
+    <innerfile refid="_vulkan_device_8h">VulkanDevice.h</innerfile>
+    <innerfile refid="_vulkan_module_8h">VulkanModule.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/"/>
+  </compounddef>
+</doxygen>

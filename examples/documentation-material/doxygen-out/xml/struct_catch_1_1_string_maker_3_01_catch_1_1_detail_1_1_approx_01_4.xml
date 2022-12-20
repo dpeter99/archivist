@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_catch_1_1_string_maker_3_01_catch_1_1_detail_1_1_approx_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>Catch::StringMaker&lt; Catch::Detail::Approx &gt;</compoundname>
+    <includes refid="catch_8hpp" local="no">catch.hpp</includes>
+    <templateparamlist>
+    </templateparamlist>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="struct_catch_1_1_string_maker_3_01_catch_1_1_detail_1_1_approx_01_4_1a8e5015720682fecfbff0f05de19a698f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string Catch::StringMaker&lt; Catch::Detail::Approx &gt;::convert</definition>
+        <argsstring>(Catch::Detail::Approx const &amp;value)</argsstring>
+        <name>convert</name>
+        <qualifiedname>Catch::StringMaker&lt; Catch::Detail::Approx &gt;::convert</qualifiedname>
+        <param>
+          <type><ref refid="class_catch_1_1_detail_1_1_approx" kindref="compound">Catch::Detail::Approx</ref> const &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="3186" column="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="3185" column="1" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="3185" bodyend="3187"/>
+    <listofallmembers>
+      <member refid="struct_catch_1_1_string_maker_3_01_catch_1_1_detail_1_1_approx_01_4_1a8e5015720682fecfbff0f05de19a698f" prot="public" virt="non-virtual"><scope>Catch::StringMaker&lt; Catch::Detail::Approx &gt;</scope><name>convert</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

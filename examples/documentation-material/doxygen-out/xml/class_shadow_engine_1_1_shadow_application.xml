@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_shadow_engine_1_1_shadow_application" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::ShadowApplication</compoundname>
+    <includes refid="_shadow_application_8h" local="no">ShadowApplication.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_application_1a62d5270b10d96b2a41d387fea5bc720e" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_shadow_engine_1_1_shadow_application" kindref="compound">ShadowApplication</ref> *</type>
+        <definition>ShadowApplication * ShadowEngine::ShadowApplication::instance</definition>
+        <argsstring></argsstring>
+        <name>instance</name>
+        <qualifiedname>ShadowEngine::ShadowApplication::instance</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>This is the singleton instance  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowApplication.h" line="21" column="26" bodyfile="shadow-engine/core/inc/core/ShadowApplication.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_application_1a0cdc9c18ae36618b9b1d4440141364d7" prot="private" static="no" mutable="no">
+        <type><ref refid="class_shadow_engine_1_1_shadow_window" kindref="compound">ShadowWindow</ref> *</type>
+        <definition>ShadowWindow* ShadowEngine::ShadowApplication::window_</definition>
+        <argsstring></argsstring>
+        <name>window_</name>
+        <qualifiedname>ShadowEngine::ShadowApplication::window_</qualifiedname>
+        <briefdescription>
+<para>The active window that we are drawing to  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowApplication.h" line="26" column="14" bodyfile="shadow-engine/core/inc/core/ShadowApplication.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_application_1a59ea6e111ad5a12960a94d5480839813" prot="private" static="no" mutable="no">
+        <type><ref refid="class_shadow_engine_1_1_module_manager" kindref="compound">ModuleManager</ref></type>
+        <definition>ModuleManager ShadowEngine::ShadowApplication::moduleManager</definition>
+        <argsstring></argsstring>
+        <name>moduleManager</name>
+        <qualifiedname>ShadowEngine::ShadowApplication::moduleManager</qualifiedname>
+        <briefdescription>
+<para>The module manager instance  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowApplication.h" line="31" column="15" bodyfile="shadow-engine/core/inc/core/ShadowApplication.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_application_1ad8bb10440698b9875c9c222b57315542" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ShadowEngine::ShadowApplication::running</definition>
+        <argsstring></argsstring>
+        <name>running</name>
+        <qualifiedname>ShadowEngine::ShadowApplication::running</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Represents the running state.  </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If set to false the main loop will stop and continue with the shutdown. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowApplication.h" line="37" column="6" bodyfile="shadow-engine/core/inc/core/ShadowApplication.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_application_1a9abe8f893f4fe0af77f4b979b6e335f9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ShadowEngine::ShadowApplication::no_gui</definition>
+        <argsstring></argsstring>
+        <name>no_gui</name>
+        <qualifiedname>ShadowEngine::ShadowApplication::no_gui</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowApplication.h" line="39" column="6" bodyfile="shadow-engine/core/inc/core/ShadowApplication.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_application_1aeb8a231341963d8d5243215067c32fd4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ShadowEngine::ShadowApplication::game</definition>
+        <argsstring></argsstring>
+        <name>game</name>
+        <qualifiedname>ShadowEngine::ShadowApplication::game</qualifiedname>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowApplication.h" line="41" column="21" bodyfile="shadow-engine/core/inc/core/ShadowApplication.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_application_1a4d0c9644d890315c18d7de6dc02e59b2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowApplication::loadGame</definition>
+        <argsstring>()</argsstring>
+        <name>loadGame</name>
+        <qualifiedname>ShadowEngine::ShadowApplication::loadGame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowApplication.h" line="43" column="14" bodyfile="shadow-engine/core/src/core/ShadowApplication.cpp" bodystart="50" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_application_1a0a0c56b7253848ec62cd82aaddd3247a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::ShadowApplication::ShadowApplication</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>ShadowApplication</name>
+        <qualifiedname>ShadowEngine::ShadowApplication::ShadowApplication</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>Default constructor  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowApplication.h" line="49" column="1" bodyfile="shadow-engine/core/src/core/ShadowApplication.cpp" bodystart="25" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_application_1a1290e475011963d5153f183f28f553f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>ShadowEngine::ShadowApplication::~ShadowApplication</definition>
+        <argsstring>()</argsstring>
+        <name>~ShadowApplication</name>
+        <qualifiedname>ShadowEngine::ShadowApplication::~ShadowApplication</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowApplication.h" line="50" column="17" bodyfile="shadow-engine/core/src/core/ShadowApplication.cpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_application_1adec8a20f9d5cd23cad0955d3b1cfc7bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_shadow_engine_1_1_module_manager" kindref="compound">ShadowEngine::ModuleManager</ref> &amp;</type>
+        <definition>ShadowEngine::ModuleManager &amp; ShadowEngine::ShadowApplication::GetModuleManager</definition>
+        <argsstring>()</argsstring>
+        <name>GetModuleManager</name>
+        <qualifiedname>ShadowEngine::ShadowApplication::GetModuleManager</qualifiedname>
+        <briefdescription>
+<para>Returns the active window used for rendering  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The window instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowApplication.h" line="66" column="37" bodyfile="shadow-engine/core/inc/core/ShadowApplication.h" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_application_1ace60be180c74cfabd834ec3d51531ea4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowApplication::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>ShadowEngine::ShadowApplication::Init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowApplication.h" line="68" column="14" bodyfile="shadow-engine/core/src/core/ShadowApplication.cpp" bodystart="70" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_application_1a44b71edb85babd74d30c67dbbacbe64f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowApplication::Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>ShadowEngine::ShadowApplication::Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowApplication.h" line="69" column="14" bodyfile="shadow-engine/core/src/core/ShadowApplication.cpp" bodystart="85" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_application_1a63d3d4620119cb2008de60de606dc769" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowApplication::PollEvents</definition>
+        <argsstring>()</argsstring>
+        <name>PollEvents</name>
+        <qualifiedname>ShadowEngine::ShadowApplication::PollEvents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowApplication.h" line="71" column="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_application_1a88962791ce15c8719755411ae7e6b007" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_shadow_engine_1_1_shadow_application" kindref="compound">ShadowApplication</ref> &amp;</type>
+        <definition>ShadowApplication &amp; ShadowEngine::ShadowApplication::Get</definition>
+        <argsstring>()</argsstring>
+        <name>Get</name>
+        <qualifiedname>ShadowEngine::ShadowApplication::Get</qualifiedname>
+        <briefdescription>
+<para>Static getter for the singleton instance  </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Use this for accessing the Application <simplesect kind="return"><para>The current application reference</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/core/inc/core/ShadowApplication.h" line="57" column="26" bodyfile="shadow-engine/core/src/core/ShadowApplication.cpp" bodystart="111" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents the application  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/core/inc/core/ShadowApplication.h" line="16" column="5" bodyfile="shadow-engine/core/inc/core/ShadowApplication.h" bodystart="17" bodyend="72"/>
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_shadow_application_1aeb8a231341963d8d5243215067c32fd4" prot="private" virt="non-virtual"><scope>ShadowEngine::ShadowApplication</scope><name>game</name></member>
+      <member refid="class_shadow_engine_1_1_shadow_application_1a88962791ce15c8719755411ae7e6b007" prot="public" virt="non-virtual"><scope>ShadowEngine::ShadowApplication</scope><name>Get</name></member>
+      <member refid="class_shadow_engine_1_1_shadow_application_1adec8a20f9d5cd23cad0955d3b1cfc7bf" prot="public" virt="non-virtual"><scope>ShadowEngine::ShadowApplication</scope><name>GetModuleManager</name></member>
+      <member refid="class_shadow_engine_1_1_shadow_application_1ace60be180c74cfabd834ec3d51531ea4" prot="public" virt="non-virtual"><scope>ShadowEngine::ShadowApplication</scope><name>Init</name></member>
+      <member refid="class_shadow_engine_1_1_shadow_application_1a62d5270b10d96b2a41d387fea5bc720e" prot="private" virt="non-virtual"><scope>ShadowEngine::ShadowApplication</scope><name>instance</name></member>
+      <member refid="class_shadow_engine_1_1_shadow_application_1a4d0c9644d890315c18d7de6dc02e59b2" prot="private" virt="non-virtual"><scope>ShadowEngine::ShadowApplication</scope><name>loadGame</name></member>
+      <member refid="class_shadow_engine_1_1_shadow_application_1a59ea6e111ad5a12960a94d5480839813" prot="private" virt="non-virtual"><scope>ShadowEngine::ShadowApplication</scope><name>moduleManager</name></member>
+      <member refid="class_shadow_engine_1_1_shadow_application_1a9abe8f893f4fe0af77f4b979b6e335f9" prot="private" virt="non-virtual"><scope>ShadowEngine::ShadowApplication</scope><name>no_gui</name></member>
+      <member refid="class_shadow_engine_1_1_shadow_application_1a63d3d4620119cb2008de60de606dc769" prot="public" virt="non-virtual"><scope>ShadowEngine::ShadowApplication</scope><name>PollEvents</name></member>
+      <member refid="class_shadow_engine_1_1_shadow_application_1ad8bb10440698b9875c9c222b57315542" prot="private" virt="non-virtual"><scope>ShadowEngine::ShadowApplication</scope><name>running</name></member>
+      <member refid="class_shadow_engine_1_1_shadow_application_1a0a0c56b7253848ec62cd82aaddd3247a" prot="public" virt="non-virtual"><scope>ShadowEngine::ShadowApplication</scope><name>ShadowApplication</name></member>
+      <member refid="class_shadow_engine_1_1_shadow_application_1a44b71edb85babd74d30c67dbbacbe64f" prot="public" virt="non-virtual"><scope>ShadowEngine::ShadowApplication</scope><name>Start</name></member>
+      <member refid="class_shadow_engine_1_1_shadow_application_1a0cdc9c18ae36618b9b1d4440141364d7" prot="private" virt="non-virtual"><scope>ShadowEngine::ShadowApplication</scope><name>window_</name></member>
+      <member refid="class_shadow_engine_1_1_shadow_application_1a1290e475011963d5153f183f28f553f1" prot="public" virt="virtual"><scope>ShadowEngine::ShadowApplication</scope><name>~ShadowApplication</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

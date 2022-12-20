@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_84a8b5ccd6b67407b61fd28bc38e3725" kind="dir">
+    <compoundname>shadow-engine/shadow-renderer/src/render/render_pass</compoundname>
+    <innerfile refid="_generic_render_pass_8cpp">GenericRenderPass.cpp</innerfile>
+    <innerfile refid="_g_p_u_pass_8cpp">GPUPass.cpp</innerfile>
+    <innerfile refid="_screen_render_pass_8cpp">ScreenRenderPass.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/src/render/render_pass/"/>
+  </compounddef>
+</doxygen>

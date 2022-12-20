@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structvlkx_1_1_render_pass_builder_1_1_attachment" kind="struct" language="C++" prot="public">
+    <compoundname>vlkx::RenderPassBuilder::Attachment</compoundname>
+    <includes refid="_generic_render_pass_8h" local="no">GenericRenderPass.h</includes>
+    <innerclass refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_color_ops" prot="public">vlkx::RenderPassBuilder::Attachment::ColorOps</innerclass>
+    <innerclass refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_stencil_depth_ops" prot="public">vlkx::RenderPassBuilder::Attachment::StencilDepthOps</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structvlkx_1_1_render_pass_builder_1_1_attachment_1a47807f6875527fa0d044a910cfb70a4a" prot="public" static="no">
+        <type>std::variant&lt; <ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_color_ops" kindref="compound">ColorOps</ref>, <ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1_1_stencil_depth_ops" kindref="compound">StencilDepthOps</ref> &gt;</type>
+        <definition>using vlkx::RenderPassBuilder::Attachment::OpsType =  std::variant&lt;ColorOps, StencilDepthOps&gt;</definition>
+        <argsstring></argsstring>
+        <name>OpsType</name>
+        <qualifiedname>vlkx::RenderPassBuilder::Attachment::OpsType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GenericRenderPass.h" line="90" column="13" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GenericRenderPass.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvlkx_1_1_render_pass_builder_1_1_attachment_1a87d470a278d32b90e7b2b1054e66d2d6" prot="public" static="no" mutable="no">
+        <type><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1a47807f6875527fa0d044a910cfb70a4a" kindref="member">OpsType</ref></type>
+        <definition>OpsType vlkx::RenderPassBuilder::Attachment::ops</definition>
+        <argsstring></argsstring>
+        <name>ops</name>
+        <qualifiedname>vlkx::RenderPassBuilder::Attachment::ops</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GenericRenderPass.h" line="93" column="21" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GenericRenderPass.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_render_pass_builder_1_1_attachment_1afd6e9c8a099c6042fb323e5da0159519" prot="public" static="no" mutable="no">
+        <type>VkImageLayout</type>
+        <definition>VkImageLayout vlkx::RenderPassBuilder::Attachment::layoutInitial</definition>
+        <argsstring></argsstring>
+        <name>layoutInitial</name>
+        <qualifiedname>vlkx::RenderPassBuilder::Attachment::layoutInitial</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GenericRenderPass.h" line="95" column="27" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GenericRenderPass.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_render_pass_builder_1_1_attachment_1a4b209665eed624bec0f238b1bbf55a20" prot="public" static="no" mutable="no">
+        <type>VkImageLayout</type>
+        <definition>VkImageLayout vlkx::RenderPassBuilder::Attachment::layoutFinal</definition>
+        <argsstring></argsstring>
+        <name>layoutFinal</name>
+        <qualifiedname>vlkx::RenderPassBuilder::Attachment::layoutFinal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GenericRenderPass.h" line="97" column="27" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GenericRenderPass.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Information required to define an attachment to be used in a render pass. Contains information on the layout, the operations to use on read and write, etc. </para>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GenericRenderPass.h" line="75" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GenericRenderPass.h" bodystart="75" bodyend="98"/>
+    <listofallmembers>
+      <member refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1a4b209665eed624bec0f238b1bbf55a20" prot="public" virt="non-virtual"><scope>vlkx::RenderPassBuilder::Attachment</scope><name>layoutFinal</name></member>
+      <member refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1afd6e9c8a099c6042fb323e5da0159519" prot="public" virt="non-virtual"><scope>vlkx::RenderPassBuilder::Attachment</scope><name>layoutInitial</name></member>
+      <member refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1a87d470a278d32b90e7b2b1054e66d2d6" prot="public" virt="non-virtual"><scope>vlkx::RenderPassBuilder::Attachment</scope><name>ops</name></member>
+      <member refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1a47807f6875527fa0d044a910cfb70a4a" prot="public" virt="non-virtual"><scope>vlkx::RenderPassBuilder::Attachment</scope><name>OpsType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

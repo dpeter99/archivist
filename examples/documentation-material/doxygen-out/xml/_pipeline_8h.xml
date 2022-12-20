@@ -1,0 +1,504 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_pipeline_8h" kind="file" language="C++">
+    <compoundname>Pipeline.h</compoundname>
+    <includes local="no">vulkan/vulkan.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">optional</includes>
+    <includes local="no">fstream</includes>
+    <includes refid="_ref_counter_8h" local="yes">shadow/util/RefCounter.h</includes>
+    <includes refid="_vulkan_module_8h" local="yes">vlkx/vulkan/VulkanModule.h</includes>
+    <includedby refid="_builder_8h" local="yes">shadow-engine/shadow-renderer/inc/temp/model/Builder.h</includedby>
+    <includedby refid="_pipeline_8cpp" local="yes">shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp</includedby>
+    <incdepgraph>
+      <node id="19">
+        <label>core/Module.h</label>
+        <link refid="_module_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>exports.h</label>
+        <link refid="exports_8h"/>
+      </node>
+      <node id="20">
+        <label>SHObject.h</label>
+        <link refid="_s_h_object_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h</label>
+        <link refid="_pipeline_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>SwapChain.h</label>
+        <link refid="_swap_chain_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>vlkx/vulkan/Tools.h</label>
+        <link refid="_tools_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>vlkx/vulkan/ValidationAndExtension.h</label>
+        <link refid="_validation_and_extension_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>vlkx/vulkan/VulkanDevice.h</label>
+        <link refid="_vulkan_device_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>vlkx/vulkan/VulkanModule.h</label>
+        <link refid="_vulkan_module_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>Buffer.h</label>
+        <link refid="_buffer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>vlkx/vulkan/abstraction/Commands.h</label>
+        <link refid="_commands_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>vlkx/vulkan/abstraction/Image.h</label>
+        <link refid="_image_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>ImageUsage.h</label>
+        <link refid="_image_usage_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>Queue.h</label>
+        <link refid="_queue_8h"/>
+      </node>
+      <node id="17">
+        <label>vulkan/vk_mem_alloc.h</label>
+        <link refid="vk__mem__alloc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>shadow/util/RefCounter.h</label>
+        <link refid="_ref_counter_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>SDL.h</label>
+      </node>
+      <node id="23">
+        <label>SDL_events.h</label>
+      </node>
+      <node id="18">
+        <label>SDL_vulkan.h</label>
+      </node>
+      <node id="28">
+        <label>algorithm</label>
+      </node>
+      <node id="34">
+        <label>array</label>
+      </node>
+      <node id="5">
+        <label>fstream</label>
+      </node>
+      <node id="26">
+        <label>functional</label>
+      </node>
+      <node id="12">
+        <label>iostream</label>
+      </node>
+      <node id="8">
+        <label>map</label>
+      </node>
+      <node id="9">
+        <label>memory</label>
+      </node>
+      <node id="4">
+        <label>optional</label>
+      </node>
+      <node id="16">
+        <label>set</label>
+      </node>
+      <node id="15">
+        <label>stdexcept</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="21">
+        <label>typeinfo</label>
+      </node>
+      <node id="35">
+        <label>utility</label>
+      </node>
+      <node id="33">
+        <label>variant</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="2">
+        <label>vulkan/vulkan.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>shadow-engine/shadow-renderer/inc/temp/model/Builder.h</label>
+        <link refid="_builder_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h</label>
+        <link refid="_pipeline_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp</label>
+        <link refid="_pipeline_8cpp"/>
+      </node>
+      <node id="3">
+        <label>shadow-engine/shadow-renderer/src/temp/model/Builder.cpp</label>
+        <link refid="_builder_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classvlkx_1_1_shader_module" prot="public">vlkx::ShaderModule</innerclass>
+    <innerclass refid="classvlkx_1_1_pipeline_builder" prot="public">vlkx::PipelineBuilder</innerclass>
+    <innerclass refid="classvlkx_1_1_graphics_pipeline_builder" prot="public">vlkx::GraphicsPipelineBuilder</innerclass>
+    <innerclass refid="structvlkx_1_1_graphics_pipeline_builder_1_1_viewport" prot="public">vlkx::GraphicsPipelineBuilder::Viewport</innerclass>
+    <innerclass refid="structvlkx_1_1_graphics_pipeline_builder_1_1_pass_info" prot="private">vlkx::GraphicsPipelineBuilder::PassInfo</innerclass>
+    <innerclass refid="classvlkx_1_1_compute_pipeline_builder" prot="public">vlkx::ComputePipelineBuilder</innerclass>
+    <innerclass refid="classvlkx_1_1_pipeline" prot="public">vlkx::Pipeline</innerclass>
+    <innernamespace refid="namespacevlkx">vlkx</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_pipeline_8h_1a68b39832e0bbd552c45aae02054bbe79" prot="public" static="no">
+        <name>fluent</name>
+        <initializer>GraphicsPipelineBuilder&amp;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="83" column="17" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_pipeline_8h_1a68b39832e0bbd552c45aae02054bbe79" prot="public" static="no">
+        <name>fluent</name>
+        <initializer>ComputePipelineBuilder&amp;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="136" column="17" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vulkan/vulkan.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;optional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ref_counter_8h" kindref="compound">shadow/util/RefCounter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_vulkan_module_8h" kindref="compound">vlkx/vulkan/VulkanModule.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacevlkx" kindref="compound">vlkx</ref><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Pipeline;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>simple<sp/>wrapper<sp/>for<sp/>the<sp/>shader<sp/>module<sp/>used<sp/>by<sp/>the<sp/>pipeline.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="classvlkx_1_1_shader_module" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_shader_module" kindref="compound">ShaderModule</ref><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15" refid="classvlkx_1_1_shader_module_1abf19f7031c060cb9682e37324f43a3e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classshadowutil_1_1_ref_counter" kindref="compound">CountedShader</ref><sp/>=<sp/><ref refid="classshadowutil_1_1_ref_counter" kindref="compound">shadowutil::RefCounter&lt;ShaderModule&gt;</ref>;</highlight></codeline>
+<codeline lineno="16" refid="classvlkx_1_1_shader_module_1a7f874a822b8a748d033e5e9d66c83246" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_shader_module_1a7f874a822b8a748d033e5e9d66c83246" kindref="member">ReleasePool</ref><sp/>=<sp/>CountedShader::AutoRelease;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_shader_module" kindref="compound">ShaderModule</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>path);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classvlkx_1_1_shader_module_1aedfab2ea9976801c8132bab82bce41c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_shader_module_1aedfab2ea9976801c8132bab82bce41c5" kindref="member">ShaderModule</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_shader_module" kindref="compound">ShaderModule</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21" refid="classvlkx_1_1_shader_module_1a40e62afbacb4b545a447c365793c556c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_shader_module" kindref="compound">ShaderModule</ref>&amp;<sp/><ref refid="classvlkx_1_1_shader_module_1a40e62afbacb4b545a447c365793c556c" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_shader_module" kindref="compound">ShaderModule</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classvlkx_1_1_shader_module_1a9b41b8674a32345e65a55bdac15acfdd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_shader_module_1a9b41b8674a32345e65a55bdac15acfdd" kindref="member">~ShaderModule</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkDestroyShaderModule(<ref refid="class_vulkan_module_1ae98fb6b5c4497288b51c9c4b860cb1bd" kindref="member">VulkanModule::getInstance</ref>()-&gt;getDevice()-&gt;logical,<sp/>shader,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classvlkx_1_1_shader_module_1aa64c3cf264ebdcc38f21dfbecbeb17b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkShaderModule&amp;<sp/><ref refid="classvlkx_1_1_shader_module_1aa64c3cf264ebdcc38f21dfbecbeb17b8" kindref="member">operator*</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>shader;<sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkShaderModule<sp/>shader;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classvlkx_1_1_pipeline_builder" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_pipeline_builder" kindref="compound">PipelineBuilder</ref><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35" refid="classvlkx_1_1_pipeline_builder_1a68fd2d6f6f7ffc45a9a4021577c191e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_pipeline_builder_1a68fd2d6f6f7ffc45a9a4021577c191e5" kindref="member">PipelineBuilder</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_pipeline_builder" kindref="compound">PipelineBuilder</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36" refid="classvlkx_1_1_pipeline_builder_1a81582cacf02c2f3d9a4cb8870acc7d8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_pipeline_builder" kindref="compound">PipelineBuilder</ref>&amp;<sp/><ref refid="classvlkx_1_1_pipeline_builder_1a81582cacf02c2f3d9a4cb8870acc7d8e" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_pipeline_builder" kindref="compound">PipelineBuilder</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classvlkx_1_1_pipeline_builder_1a4ec90bc8f54b7c2df3020fdcb832e627" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_pipeline_builder_1a4ec90bc8f54b7c2df3020fdcb832e627" kindref="member">~PipelineBuilder</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vkDestroyPipelineCache(<ref refid="class_vulkan_module_1ae98fb6b5c4497288b51c9c4b860cb1bd" kindref="member">VulkanModule::getInstance</ref>()-&gt;getDevice()-&gt;logical,<sp/>cache,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classvlkx_1_1_pipeline_builder_1ad3942e094ce70b2ba93b574768302bea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::unique_ptr&lt;Pipeline&gt;<sp/><ref refid="classvlkx_1_1_pipeline_builder_1ad3942e094ce70b2ba93b574768302bea" kindref="member">build</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_pipeline_builder" kindref="compound">PipelineBuilder</ref>(std::optional&lt;int&gt;<sp/>maxCache);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classvlkx_1_1_pipeline_builder_1a608297e8fd73ce118c96f3e1488df455" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_pipeline_builder_1a608297e8fd73ce118c96f3e1488df455" kindref="member">setName</ref>(std::string&amp;&amp;<sp/>n)<sp/>{<sp/>name<sp/>=<sp/>std::move(name);<sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_pipeline_builder_1ab2d07a03863810149b799d0c091711b0" kindref="member">setLayout</ref>(std::vector&lt;VkDescriptorSetLayout&gt;&amp;&amp;<sp/>descLayouts,<sp/>std::vector&lt;VkPushConstantRange&gt;&amp;&amp;<sp/>constants);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classvlkx_1_1_pipeline_builder_1a75fd7368111f0304716e4d93df0addfe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="classvlkx_1_1_pipeline_builder_1a75fd7368111f0304716e4d93df0addfe" kindref="member">getName</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>name;<sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classvlkx_1_1_pipeline_builder_1af56031e253ed578425b016c9ec007c7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_pipeline_builder_1af56031e253ed578425b016c9ec007c7b" kindref="member">hasLayout</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>layoutInfo.has_value();<sp/>}</highlight></codeline>
+<codeline lineno="54" refid="classvlkx_1_1_pipeline_builder_1a65fd212125818c0f96c064b8b13cf069" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkPipelineLayoutCreateInfo&amp;<sp/><ref refid="classvlkx_1_1_pipeline_builder_1a65fd212125818c0f96c064b8b13cf069" kindref="member">getLayout</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>layoutInfo.value();<sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkPipelineCache<sp/>cache;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>name;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::optional&lt;VkPipelineLayoutCreateInfo&gt;<sp/>layoutInfo;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;VkDescriptorSetLayout&gt;<sp/>descLayouts;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;VkPushConstantRange&gt;<sp/>constants;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classvlkx_1_1_graphics_pipeline_builder" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_graphics_pipeline_builder" kindref="compound">GraphicsPipelineBuilder</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_pipeline_builder" kindref="compound">PipelineBuilder</ref><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="73" refid="structvlkx_1_1_graphics_pipeline_builder_1_1_viewport" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvlkx_1_1_graphics_pipeline_builder_1_1_viewport" kindref="compound">Viewport</ref><sp/>{</highlight></codeline>
+<codeline lineno="74" refid="structvlkx_1_1_graphics_pipeline_builder_1_1_viewport_1aff9768268f4fbc7b64d9d83b7dbd0be9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkViewport<sp/><ref refid="structvlkx_1_1_graphics_pipeline_builder_1_1_viewport_1aff9768268f4fbc7b64d9d83b7dbd0be9" kindref="member">viewport</ref>;</highlight></codeline>
+<codeline lineno="75" refid="structvlkx_1_1_graphics_pipeline_builder_1_1_viewport_1aae49c8a4eae288e44fddc010aebb8ab2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkRect2D<sp/><ref refid="structvlkx_1_1_graphics_pipeline_builder_1_1_viewport_1aae49c8a4eae288e44fddc010aebb8ab2" kindref="member">scissor</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder" kindref="compound">GraphicsPipelineBuilder</ref>(std::optional&lt;int&gt;<sp/>maxCache<sp/>=<sp/>std::nullopt);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classvlkx_1_1_graphics_pipeline_builder_1a82f2546a3932c28fbdcb0fc3555df508" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder_1a82f2546a3932c28fbdcb0fc3555df508" kindref="member">GraphicsPipelineBuilder</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder" kindref="compound">GraphicsPipelineBuilder</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81" refid="classvlkx_1_1_graphics_pipeline_builder_1a64b69aa6ed1da47bfa25b78dcdf02241" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder" kindref="compound">GraphicsPipelineBuilder</ref>&amp;<sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder_1a64b69aa6ed1da47bfa25b78dcdf02241" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder" kindref="compound">GraphicsPipelineBuilder</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>fluent<sp/>GraphicsPipelineBuilder&amp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder_1a6b6ced68f6f9248863ee9a5f9ab5eb1c" kindref="member">name</ref>(std::string&amp;&amp;<sp/>name);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder_1aa87c9e47ada1b334f76e6231a38fbe9c" kindref="member">depthTest</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>write);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder_1a8c036fdad112473684f992df23a49d6a" kindref="member">stencilTest</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder_1abe1147fa2cc5f0233bb6b580ff8dff05" kindref="member">multiSample</ref>(VkSampleCountFlagBits<sp/>samples);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder_1a4cebae040cbbcc2a3a968741376f5aaf" kindref="member">topology</ref>(VkPrimitiveTopology<sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder_1a4cebae040cbbcc2a3a968741376f5aaf" kindref="member">topology</ref>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder_1acf55e4e9974cd89102f1290e4f327939" kindref="member">stencilOp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkStencilOpState&amp;<sp/>state,<sp/>VkStencilFaceFlags<sp/>flags);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder_1a31091c2c00cb01f2c31fdc97d20d3187" kindref="member">addVertex</ref>(uint32_t<sp/>bindPoint,<sp/>VkVertexInputBindingDescription&amp;&amp;<sp/>desc,<sp/>std::vector&lt;VkVertexInputAttributeDescription&gt;&amp;&amp;<sp/>attrs);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder_1a4ea338c32bb94860b2e0bae70115e465" kindref="member">layout</ref>(std::vector&lt;VkDescriptorSetLayout&gt;&amp;&amp;<sp/>descLayouts,<sp/>std::vector&lt;VkPushConstantRange&gt;&amp;&amp;<sp/>constants);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder_1a6e469a3ebc193d05a56efa059f5b34ad" kindref="member">viewport</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_graphics_pipeline_builder_1_1_viewport" kindref="compound">Viewport</ref>&amp;<sp/>port,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>flipY<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder_1a7b085a9a2f5430a31a49721eeac78f71" kindref="member">renderPass</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkRenderPass&amp;<sp/>pass,<sp/>uint32_t<sp/>subpass);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder_1a553615ef782154875bcadb265139a415" kindref="member">colorBlend</ref>(std::vector&lt;VkPipelineColorBlendAttachmentState&gt;&amp;&amp;<sp/>states);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder_1a6750623442d14b0a53481e6278d662c8" kindref="member">shader</ref>(VkShaderStageFlagBits<sp/>stage,<sp/>std::string&amp;&amp;<sp/>file);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_ptr&lt;Pipeline&gt;<sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder_1ae7bb74db7f81a53ff825d4a3788955ee" kindref="member">build</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">PassInfo<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkRenderPass<sp/>pass;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>subpass;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkPipelineInputAssemblyStateCreateInfo<sp/>assemblyInfo;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkPipelineRasterizationStateCreateInfo<sp/>rasterizationInfo;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkPipelineMultisampleStateCreateInfo<sp/>multisampleInfo;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkPipelineDepthStencilStateCreateInfo<sp/>depthStencilInfo;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkPipelineDynamicStateCreateInfo<sp/>dynamicStateInfo;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;VkVertexInputBindingDescription&gt;<sp/>bindingDescs;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;VkVertexInputAttributeDescription&gt;<sp/>attrDescs;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::optional&lt;Viewport&gt;<sp/>viewportMeta;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::optional&lt;PassInfo&gt;<sp/>passMeta;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;VkPipelineColorBlendAttachmentState&gt;<sp/>blendStates;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;VkShaderStageFlagBits,<sp/>std::string&gt;<sp/>shaders;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="classvlkx_1_1_compute_pipeline_builder" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_compute_pipeline_builder" kindref="compound">ComputePipelineBuilder</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_pipeline_builder" kindref="compound">PipelineBuilder</ref><sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="131" refid="classvlkx_1_1_compute_pipeline_builder_1a7092467b51e408e43cdc28c045b94902" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_compute_pipeline_builder_1a7092467b51e408e43cdc28c045b94902" kindref="member">ComputePipelineBuilder</ref>(std::optional&lt;int&gt;<sp/>maxCache<sp/>=<sp/>std::nullopt)<sp/>:<sp/><ref refid="classvlkx_1_1_pipeline_builder" kindref="compound">PipelineBuilder</ref>(maxCache)<sp/>{}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="classvlkx_1_1_compute_pipeline_builder_1a2209360076e0d1397a997b0615888a5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_compute_pipeline_builder_1a2209360076e0d1397a997b0615888a5c" kindref="member">ComputePipelineBuilder</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_compute_pipeline_builder" kindref="compound">ComputePipelineBuilder</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="134" refid="classvlkx_1_1_compute_pipeline_builder_1a3ec87ad9a093812cbc4e1d470394f81d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_compute_pipeline_builder" kindref="compound">ComputePipelineBuilder</ref>&amp;<sp/><ref refid="classvlkx_1_1_compute_pipeline_builder_1a3ec87ad9a093812cbc4e1d470394f81d" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_compute_pipeline_builder" kindref="compound">ComputePipelineBuilder</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="_pipeline_8h_1a68b39832e0bbd552c45aae02054bbe79" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>fluent<sp/>ComputePipelineBuilder&amp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/>name(std::string&amp;&amp;<sp/>name);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/><ref refid="classvlkx_1_1_compute_pipeline_builder_1a08ed641037563a2176342cab9e5a3427" kindref="member">layout</ref>(std::vector&lt;VkDescriptorSetLayout&gt;&amp;&amp;<sp/>descLayouts,<sp/>std::vector&lt;VkPushConstantRange&gt;&amp;&amp;<sp/>pushConstants);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_generic_render_pass_8h_1a68b39832e0bbd552c45aae02054bbe79" kindref="member">fluent</ref><sp/><ref refid="classvlkx_1_1_compute_pipeline_builder_1a30ba558773c831545aa2607bb45b120e" kindref="member">shader</ref>(std::string&amp;&amp;<sp/>path);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_ptr&lt;Pipeline&gt;<sp/><ref refid="classvlkx_1_1_compute_pipeline_builder_1a7b608ca529ebb8969ade3a36b9a7ea22" kindref="member">build</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::optional&lt;std::string&gt;<sp/>shaderPath;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="classvlkx_1_1_pipeline" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_pipeline" kindref="compound">Pipeline</ref><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="171" refid="classvlkx_1_1_pipeline_1a655dd02182d0760521d7ec379cc853f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_pipeline_1a655dd02182d0760521d7ec379cc853f8" kindref="member">Pipeline</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_pipeline" kindref="compound">Pipeline</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="172" refid="classvlkx_1_1_pipeline_1abc585cea80ea43d48b791afcd79eda97" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_pipeline" kindref="compound">Pipeline</ref>&amp;<sp/><ref refid="classvlkx_1_1_pipeline_1abc585cea80ea43d48b791afcd79eda97" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_pipeline" kindref="compound">Pipeline</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_pipeline_1acd7fac5764518bf732ec39d22e45b07a" kindref="member">~Pipeline</ref>();</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_pipeline_1a3f5104841664ea7e3c913f26c8f3e2ab" kindref="member">bind</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkCommandBuffer&amp;<sp/>buffer)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="classvlkx_1_1_pipeline_1abc824ee46ecb2f5530ad8df0e20ba5ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkPipeline&amp;<sp/><ref refid="classvlkx_1_1_pipeline_1abc824ee46ecb2f5530ad8df0e20ba5ae" kindref="member">operator*</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pipeline;<sp/>}</highlight></codeline>
+<codeline lineno="179" refid="classvlkx_1_1_pipeline_1acccb321290a74e21bb674feab5ea4af1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkPipelineLayout&amp;<sp/><ref refid="classvlkx_1_1_pipeline_1acccb321290a74e21bb674feab5ea4af1" kindref="member">getLayout</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>layout;<sp/>}</highlight></codeline>
+<codeline lineno="180" refid="classvlkx_1_1_pipeline_1ad1e80070ca42b28d804bb8301b49a80f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkPipelineBindPoint<sp/><ref refid="classvlkx_1_1_pipeline_1ad1e80070ca42b28d804bb8301b49a80f" kindref="member">getBind</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>bindPoint;<sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="classvlkx_1_1_pipeline_1addc3f08653e4344044bf4300fc8dd9c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>VkPipelineColorBlendAttachmentState<sp/><ref refid="classvlkx_1_1_pipeline_1addc3f08653e4344044bf4300fc8dd9c4" kindref="member">getAlphaBlendState</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>blending)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blending,<sp/>VK_BLEND_FACTOR_SRC_ALPHA,<sp/>VK_BLEND_FACTOR_ONE_MINUS_SRC_ALPHA,</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_BLEND_OP_ADD,<sp/>VK_BLEND_FACTOR_ONE,<sp/>VK_BLEND_FACTOR_ONE_MINUS_SRC_ALPHA,</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VK_BLEND_OP_ADD,<sp/>VK_COLOR_COMPONENT_R_BIT<sp/>|<sp/>VK_COLOR_COMPONENT_G_BIT<sp/>|<sp/>VK_COLOR_COMPONENT_B_BIT<sp/>|<sp/>VK_COLOR_COMPONENT_A_BIT</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="191" refid="classvlkx_1_1_pipeline_1afd18f74b7a2a1c31e8b2f402865099ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::unique_ptr&lt;Pipeline&gt;<sp/><ref refid="classvlkx_1_1_graphics_pipeline_builder_1ae7bb74db7f81a53ff825d4a3788955ee" kindref="member">GraphicsPipelineBuilder::build</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="192" refid="classvlkx_1_1_pipeline_1aab74fd68f2425052a2e459e660b1300d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::unique_ptr&lt;Pipeline&gt;<sp/><ref refid="classvlkx_1_1_compute_pipeline_builder_1a7b608ca529ebb8969ade3a36b9a7ea22" kindref="member">ComputePipelineBuilder::build</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_pipeline" kindref="compound">Pipeline</ref>(std::string<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkPipeline&amp;<sp/>line,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkPipelineLayout&amp;<sp/>lay,<sp/>VkPipelineBindPoint<sp/>bPoint)</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>name(std::move(name)),<sp/>pipeline(line),<sp/>layout(lay),<sp/>bindPoint(bPoint)<sp/>{}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>name;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>active<sp/>Pipeline<sp/>layout.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkPipelineLayout<sp/>layout;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>active<sp/>Pipeline<sp/>instance.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkPipeline<sp/>pipeline;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Whether<sp/>this<sp/>is<sp/>a<sp/>graphics<sp/>or<sp/>compute<sp/>pipeline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VkPipelineBindPoint<sp/>bindPoint;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h"/>
+  </compounddef>
+</doxygen>

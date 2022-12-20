@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_vma_pool" kind="struct" language="C++" prot="public">
+    <compoundname>VmaPool</compoundname>
+    <includes refid="vk__mem__alloc_8h" local="no">vk_mem_alloc.h</includes>
+    <briefdescription>
+<para>Represents custom memory pool. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Fill structure <ref refid="struct_vma_pool_create_info" kindref="compound">VmaPoolCreateInfo</ref> and call function <ref refid="group__group__alloc_1ga250d4f6f4c09a6a03b82323f999c9c4e" kindref="member">vmaCreatePool()</ref> to create it. Call function <ref refid="group__group__alloc_1gad03da7fd4d8b772bc2a299bc34850d98" kindref="member">vmaDestroyPool()</ref> to destroy it.</para>
+<para>For more information see [Custom memory pools](<ref refid="choosing_memory_type_1choosing_memory_type_custom_memory_pools" kindref="member">Custom memory pools</ref>). </para>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="835" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

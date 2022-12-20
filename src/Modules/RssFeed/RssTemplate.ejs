@@ -1,0 +1,22 @@
+<rss version="2.0">
+    <channel>
+        <title><%= siteData.title %></title>
+        <link><%= siteURL %></link>
+        <description><%= siteData.description %></description>
+        <language>en-us</language>
+        <pubDate>Tue, 10 Jun 2003 04:00:00 GMT</pubDate>
+        <lastBuildDate>Tue, 10 Jun 2003 09:41:01 GMT</lastBuildDate>        
+        <generator>Archivist</generator>
+        <managingEditor><%= siteData.email %></managingEditor>
+        <webMaster>webmaster@example.com</webMaster>
+        <% helper.subArticles().forEach(doc => {%>
+            <item>
+                <title><%=doc.meta.title %></title>
+                <link><%= helper.getLink(doc) %></link>
+                <description><%= doc.meta.description %></description>
+                <pubDate><%=doc.meta.date %></pubDate>
+                <guid><%= helper.getLink(doc) %></guid>
+            </item>
+        <% }) %>
+    </channel>
+</rss>

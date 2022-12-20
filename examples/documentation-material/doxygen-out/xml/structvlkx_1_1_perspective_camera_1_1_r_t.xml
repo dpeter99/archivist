@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structvlkx_1_1_perspective_camera_1_1_r_t" kind="struct" language="C++" prot="public">
+    <compoundname>vlkx::PerspectiveCamera::RT</compoundname>
+    <includes refid="shadow-renderer_2inc_2vlkx_2render_2_camera_8h" local="no">Camera.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvlkx_1_1_perspective_camera_1_1_r_t_1afa5e459b9bfebee8a2cd7190739b6afd" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 vlkx::PerspectiveCamera::RT::up</definition>
+        <argsstring></argsstring>
+        <name>up</name>
+        <qualifiedname>vlkx::PerspectiveCamera::RT::up</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" line="88" column="23" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_perspective_camera_1_1_r_t_1a901bff2b811a87b2e47cd6911b87e2b4" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 vlkx::PerspectiveCamera::RT::forward</definition>
+        <argsstring></argsstring>
+        <name>forward</name>
+        <qualifiedname>vlkx::PerspectiveCamera::RT::forward</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" line="89" column="23" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_perspective_camera_1_1_r_t_1a78e2f47370e5f7b79508ba02a8de7bfb" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 vlkx::PerspectiveCamera::RT::right</definition>
+        <argsstring></argsstring>
+        <name>right</name>
+        <qualifiedname>vlkx::PerspectiveCamera::RT::right</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" line="90" column="23" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" line="87" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/Camera.h" bodystart="87" bodyend="91"/>
+    <listofallmembers>
+      <member refid="structvlkx_1_1_perspective_camera_1_1_r_t_1a901bff2b811a87b2e47cd6911b87e2b4" prot="public" virt="non-virtual"><scope>vlkx::PerspectiveCamera::RT</scope><name>forward</name></member>
+      <member refid="structvlkx_1_1_perspective_camera_1_1_r_t_1a78e2f47370e5f7b79508ba02a8de7bfb" prot="public" virt="non-virtual"><scope>vlkx::PerspectiveCamera::RT</scope><name>right</name></member>
+      <member refid="structvlkx_1_1_perspective_camera_1_1_r_t_1afa5e459b9bfebee8a2cd7190739b6afd" prot="public" virt="non-virtual"><scope>vlkx::PerspectiveCamera::RT</scope><name>up</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

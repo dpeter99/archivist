@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structvlkxtemp_1_1_model_builder_1_1_model_push_constant_1_1_meta" kind="struct" language="C++" prot="public">
+    <compoundname>vlkxtemp::ModelBuilder::ModelPushConstant::Meta</compoundname>
+    <includes refid="_builder_8h" local="no">Builder.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvlkxtemp_1_1_model_builder_1_1_model_push_constant_1_1_meta_1a6d0ac2bea489974a7cb49979736d74fa" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classvlkx_1_1_push_constant" kindref="compound">vlkx::PushConstant</ref> *</type>
+        <definition>const vlkx::PushConstant* vlkxtemp::ModelBuilder::ModelPushConstant::Meta::constants</definition>
+        <argsstring></argsstring>
+        <name>constants</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::ModelPushConstant::Meta::constants</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="54" column="42" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkxtemp_1_1_model_builder_1_1_model_push_constant_1_1_meta_1a80a01d964dc050cc5698e56516ad7866" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t vlkxtemp::ModelBuilder::ModelPushConstant::Meta::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <qualifiedname>vlkxtemp::ModelBuilder::ModelPushConstant::Meta::offset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="55" column="26" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>vlkx::PushConstant</label>
+        <link refid="classvlkx_1_1_push_constant"/>
+      </node>
+      <node id="1">
+        <label>vlkxtemp::ModelBuilder::ModelPushConstant::Meta</label>
+        <link refid="structvlkxtemp_1_1_model_builder_1_1_model_push_constant_1_1_meta"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>constants</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" line="53" column="13" bodyfile="shadow-engine/shadow-renderer/inc/temp/model/Builder.h" bodystart="53" bodyend="56"/>
+    <listofallmembers>
+      <member refid="structvlkxtemp_1_1_model_builder_1_1_model_push_constant_1_1_meta_1a6d0ac2bea489974a7cb49979736d74fa" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder::ModelPushConstant::Meta</scope><name>constants</name></member>
+      <member refid="structvlkxtemp_1_1_model_builder_1_1_model_push_constant_1_1_meta_1a80a01d964dc050cc5698e56516ad7866" prot="public" virt="non-virtual"><scope>vlkxtemp::ModelBuilder::ModelPushConstant::Meta</scope><name>offset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

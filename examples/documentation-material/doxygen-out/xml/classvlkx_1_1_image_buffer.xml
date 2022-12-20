@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_image_buffer" kind="class" language="C++" prot="public">
+    <compoundname>vlkx::ImageBuffer</compoundname>
+    <basecompoundref refid="classvlkx_1_1_buffer" prot="public" virt="non-virtual">vlkx::Buffer</basecompoundref>
+    <includes refid="_image_8h" local="no">Image.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvlkx_1_1_image_buffer_1ad1a6b370864e875f0e89fa69d4f023b7" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_vk_tools_1_1_managed_image" kindref="compound">VkTools::ManagedImage</ref></type>
+        <definition>VkTools::ManagedImage vlkx::ImageBuffer::image</definition>
+        <argsstring></argsstring>
+        <name>image</name>
+        <qualifiedname>vlkx::ImageBuffer::image</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="87" column="31" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_image_buffer_1a7e8c4a3cdc9fff6cbbac10ca387f96f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::ImageBuffer::ImageBuffer</definition>
+        <argsstring>(const ImageBuffer &amp;)=delete</argsstring>
+        <name>ImageBuffer</name>
+        <qualifiedname>vlkx::ImageBuffer::ImageBuffer</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_image_buffer" kindref="compound">ImageBuffer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="71" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_image_buffer_1af504fd2db1c92a93dd16717a71c77d4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkx_1_1_image_buffer" kindref="compound">ImageBuffer</ref> &amp;</type>
+        <definition>ImageBuffer &amp; vlkx::ImageBuffer::operator=</definition>
+        <argsstring>(const ImageBuffer &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>vlkx::ImageBuffer::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_image_buffer" kindref="compound">ImageBuffer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="72" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_image_buffer_1aae7932a11b4cb26b6579c68425043b7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::ImageBuffer::~ImageBuffer</definition>
+        <argsstring>() override</argsstring>
+        <name>~ImageBuffer</name>
+        <qualifiedname>vlkx::ImageBuffer::~ImageBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="74" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="74" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_image_buffer_1a1225bb009adc667e09e2de733c532b4b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="struct_vk_tools_1_1_managed_image" kindref="compound">VkTools::ManagedImage</ref> &amp;</type>
+        <definition>const VkTools::ManagedImage &amp; vlkx::ImageBuffer::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <qualifiedname>vlkx::ImageBuffer::get</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="78" column="37" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_image_buffer_1a8af69d019a352c47d1a9ceee8da5bbd8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const VkImage &amp;</type>
+        <definition>const VkImage &amp; vlkx::ImageBuffer::getImage</definition>
+        <argsstring>() const</argsstring>
+        <name>getImage</name>
+        <qualifiedname>vlkx::ImageBuffer::getImage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="79" column="23" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="79" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classvlkx_1_1_image_buffer_1ad35569abbda03b3d34685fe5fe0397c1" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::ImageBuffer::setImage</definition>
+        <argsstring>(const VkTools::ManagedImage newImg)</argsstring>
+        <name>setImage</name>
+        <qualifiedname>vlkx::ImageBuffer::setImage</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_vk_tools_1_1_managed_image" kindref="compound">VkTools::ManagedImage</ref></type>
+          <declname>newImg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="84" column="14" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_image_buffer_1a8ad640258cbc9aa645ed68e3c320af99" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::Buffer::Buffer</definition>
+        <argsstring>(const Buffer &amp;)=delete</argsstring>
+        <name>Buffer</name>
+        <qualifiedname>vlkx::ImageBuffer::Buffer</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_buffer" kindref="compound">Buffer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="82" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_image_buffer_1a055bf8f2da8b0c7084493579a2f27ccb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::Buffer::Buffer</definition>
+        <argsstring>()</argsstring>
+        <name>Buffer</name>
+        <qualifiedname>vlkx::ImageBuffer::Buffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="82" column="9" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="115" bodyend="116"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>vlkx::Buffer</label>
+        <link refid="classvlkx_1_1_buffer"/>
+      </node>
+      <node id="1">
+        <label>vlkx::ImageBuffer</label>
+        <link refid="classvlkx_1_1_image_buffer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>vlkx::Buffer</label>
+        <link refid="classvlkx_1_1_buffer"/>
+      </node>
+      <node id="1">
+        <label>vlkx::ImageBuffer</label>
+        <link refid="classvlkx_1_1_image_buffer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="69" column="5" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="69" bodyend="89"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_image_buffer_1a8ad640258cbc9aa645ed68e3c320af99" prot="protected" virt="non-virtual"><scope>vlkx::ImageBuffer</scope><name>Buffer</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1a055bf8f2da8b0c7084493579a2f27ccb" prot="protected" virt="non-virtual"><scope>vlkx::ImageBuffer</scope><name>Buffer</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1a1225bb009adc667e09e2de733c532b4b" prot="public" virt="non-virtual"><scope>vlkx::ImageBuffer</scope><name>get</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1a8af69d019a352c47d1a9ceee8da5bbd8" prot="public" virt="non-virtual"><scope>vlkx::ImageBuffer</scope><name>getImage</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1ad1a6b370864e875f0e89fa69d4f023b7" prot="private" virt="non-virtual"><scope>vlkx::ImageBuffer</scope><name>image</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1a7e8c4a3cdc9fff6cbbac10ca387f96f4" prot="public" virt="non-virtual"><scope>vlkx::ImageBuffer</scope><name>ImageBuffer</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1af504fd2db1c92a93dd16717a71c77d4c" prot="public" virt="non-virtual"><scope>vlkx::ImageBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_buffer_1a9971cfc28a88cebf00d2642baa5cd72e" prot="public" virt="non-virtual" ambiguityscope="vlkx::Buffer::"><scope>vlkx::ImageBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1ad35569abbda03b3d34685fe5fe0397c1" prot="protected" virt="non-virtual"><scope>vlkx::ImageBuffer</scope><name>setImage</name></member>
+      <member refid="classvlkx_1_1_buffer_1a5ad6564545b79d1ce612ebf2b6fc44f7" prot="public" virt="virtual"><scope>vlkx::ImageBuffer</scope><name>~Buffer</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1aae7932a11b4cb26b6579c68425043b7c" prot="public" virt="non-virtual"><scope>vlkx::ImageBuffer</scope><name>~ImageBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

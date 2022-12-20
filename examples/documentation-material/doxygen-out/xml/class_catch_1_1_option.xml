@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_catch_1_1_option" kind="class" language="C++" prot="public">
+    <compoundname>Catch::Option</compoundname>
+    <includes refid="catch_8hpp" local="no">catch.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_catch_1_1_option_1aa6643e8dc409f4fc86cc8c80f9c3266b" prot="private" static="no" mutable="no">
+        <type>T *</type>
+        <definition>T* Catch::Option&lt; T &gt;::nullableValue</definition>
+        <argsstring></argsstring>
+        <name>nullableValue</name>
+        <qualifiedname>Catch::Option::nullableValue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4461" column="11" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4461" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_catch_1_1_option_1acdebca1b18bb8542c3f676b8dd805f23" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Catch::Option&lt; T &gt;::storage[sizeof(T)]</definition>
+        <argsstring>[sizeof(T)]</argsstring>
+        <name>storage</name>
+        <qualifiedname>Catch::Option::storage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4462" column="22" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4462" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_catch_1_1_option_1a8efb01b593d798decc80cbbdf311f2a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Catch::Option&lt; T &gt;::Option</definition>
+        <argsstring>()</argsstring>
+        <name>Option</name>
+        <qualifiedname>Catch::Option::Option</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4411" column="9" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4411" bodyend="4411"/>
+      </memberdef>
+      <memberdef kind="function" id="class_catch_1_1_option_1a5aeb9c22d48a6882bdf5fb4730b06c86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Catch::Option&lt; T &gt;::Option</definition>
+        <argsstring>(T const &amp;_value)</argsstring>
+        <name>Option</name>
+        <qualifiedname>Catch::Option::Option</qualifiedname>
+        <param>
+          <type>T const &amp;</type>
+          <declname>_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4412" column="9" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4412" bodyend="4414"/>
+      </memberdef>
+      <memberdef kind="function" id="class_catch_1_1_option_1af02f2e4559f06384baec0def8c68c5fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Catch::Option&lt; T &gt;::Option</definition>
+        <argsstring>(Option const &amp;_other)</argsstring>
+        <name>Option</name>
+        <qualifiedname>Catch::Option::Option</qualifiedname>
+        <param>
+          <type><ref refid="class_catch_1_1_option" kindref="compound">Option</ref> const &amp;</type>
+          <declname>_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4415" column="9" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4415" bodyend="4417"/>
+      </memberdef>
+      <memberdef kind="function" id="class_catch_1_1_option_1a37fe90bb47bb909f150a5ad6be25581a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Catch::Option&lt; T &gt;::~Option</definition>
+        <argsstring>()</argsstring>
+        <name>~Option</name>
+        <qualifiedname>Catch::Option::~Option</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4419" column="9" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4419" bodyend="4421"/>
+      </memberdef>
+      <memberdef kind="function" id="class_catch_1_1_option_1a960fd629f3048995038d58fcf9c018b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_catch_1_1_option" kindref="compound">Option</ref> &amp;</type>
+        <definition>Option &amp; Catch::Option&lt; T &gt;::operator=</definition>
+        <argsstring>(Option const &amp;_other)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Catch::Option::operator=</qualifiedname>
+        <param>
+          <type><ref refid="class_catch_1_1_option" kindref="compound">Option</ref> const &amp;</type>
+          <declname>_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4423" column="16" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4423" bodyend="4430"/>
+      </memberdef>
+      <memberdef kind="function" id="class_catch_1_1_option_1a32af4018dd8aaf071944f79fc1af520a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_catch_1_1_option" kindref="compound">Option</ref> &amp;</type>
+        <definition>Option &amp; Catch::Option&lt; T &gt;::operator=</definition>
+        <argsstring>(T const &amp;_value)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Catch::Option::operator=</qualifiedname>
+        <param>
+          <type>T const &amp;</type>
+          <declname>_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4431" column="16" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4431" bodyend="4435"/>
+      </memberdef>
+      <memberdef kind="function" id="class_catch_1_1_option_1a37b4e0e5d4d56296adacd267a616f4e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Catch::Option&lt; T &gt;::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <qualifiedname>Catch::Option::reset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4437" column="14" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4437" bodyend="4441"/>
+      </memberdef>
+      <memberdef kind="function" id="class_catch_1_1_option_1ac250ca96c9af3bf5f94f253f4c0ec336" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T &amp; Catch::Option&lt; T &gt;::operator*</definition>
+        <argsstring>()</argsstring>
+        <name>operator*</name>
+        <qualifiedname>Catch::Option::operator*</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4443" column="11" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4443" bodyend="4443"/>
+      </memberdef>
+      <memberdef kind="function" id="class_catch_1_1_option_1a873a00ed8844b137287f25c811cfd330" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T const &amp;</type>
+        <definition>T const  &amp; Catch::Option&lt; T &gt;::operator*</definition>
+        <argsstring>() const</argsstring>
+        <name>operator*</name>
+        <qualifiedname>Catch::Option::operator*</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4444" column="17" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4444" bodyend="4444"/>
+      </memberdef>
+      <memberdef kind="function" id="class_catch_1_1_option_1a04da75b6b0946cc38b4bbd51c8d407e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T *</type>
+        <definition>T * Catch::Option&lt; T &gt;::operator-&gt;</definition>
+        <argsstring>()</argsstring>
+        <name>operator-&gt;</name>
+        <qualifiedname>Catch::Option::operator-&gt;</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4445" column="11" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4445" bodyend="4445"/>
+      </memberdef>
+      <memberdef kind="function" id="class_catch_1_1_option_1acb3ec06778a8761e5f0014543d8f898e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const T *</type>
+        <definition>const T * Catch::Option&lt; T &gt;::operator-&gt;</definition>
+        <argsstring>() const</argsstring>
+        <name>operator-&gt;</name>
+        <qualifiedname>Catch::Option::operator-&gt;</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4446" column="17" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4446" bodyend="4446"/>
+      </memberdef>
+      <memberdef kind="function" id="class_catch_1_1_option_1a8d9ae2e30b0eb76fe134a6fbc8423124" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T Catch::Option&lt; T &gt;::valueOr</definition>
+        <argsstring>(T const &amp;defaultValue) const</argsstring>
+        <name>valueOr</name>
+        <qualifiedname>Catch::Option::valueOr</qualifiedname>
+        <param>
+          <type>T const &amp;</type>
+          <declname>defaultValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4448" column="11" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4448" bodyend="4450"/>
+      </memberdef>
+      <memberdef kind="function" id="class_catch_1_1_option_1a97c95829afbe92f2bcc5fd75b32c0825" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Catch::Option&lt; T &gt;::some</definition>
+        <argsstring>() const</argsstring>
+        <name>some</name>
+        <qualifiedname>Catch::Option::some</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4452" column="14" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4452" bodyend="4452"/>
+      </memberdef>
+      <memberdef kind="function" id="class_catch_1_1_option_1a821753afdc3fac947a13a01fbe0d248e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Catch::Option&lt; T &gt;::none</definition>
+        <argsstring>() const</argsstring>
+        <name>none</name>
+        <qualifiedname>Catch::Option::none</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4453" column="14" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4453" bodyend="4453"/>
+      </memberdef>
+      <memberdef kind="function" id="class_catch_1_1_option_1a96dccb86bdf45ee0c08e122b6133bef3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Catch::Option&lt; T &gt;::operator!</definition>
+        <argsstring>() const</argsstring>
+        <name>operator!</name>
+        <qualifiedname>Catch::Option::operator!</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4455" column="14" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4455" bodyend="4455"/>
+      </memberdef>
+      <memberdef kind="function" id="class_catch_1_1_option_1aba0def0bd9cd45d4e00fe47a604b0270" prot="public" static="no" const="yes" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Catch::Option&lt; T &gt;::operator bool</definition>
+        <argsstring>() const</argsstring>
+        <name>operator bool</name>
+        <qualifiedname>Catch::Option::operator bool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4456" column="18" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4456" bodyend="4458"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4409" column="5" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4409" bodyend="4463"/>
+    <listofallmembers>
+      <member refid="class_catch_1_1_option_1a821753afdc3fac947a13a01fbe0d248e" prot="public" virt="non-virtual"><scope>Catch::Option</scope><name>none</name></member>
+      <member refid="class_catch_1_1_option_1aa6643e8dc409f4fc86cc8c80f9c3266b" prot="private" virt="non-virtual"><scope>Catch::Option</scope><name>nullableValue</name></member>
+      <member refid="class_catch_1_1_option_1aba0def0bd9cd45d4e00fe47a604b0270" prot="public" virt="non-virtual"><scope>Catch::Option</scope><name>operator bool</name></member>
+      <member refid="class_catch_1_1_option_1a96dccb86bdf45ee0c08e122b6133bef3" prot="public" virt="non-virtual"><scope>Catch::Option</scope><name>operator!</name></member>
+      <member refid="class_catch_1_1_option_1ac250ca96c9af3bf5f94f253f4c0ec336" prot="public" virt="non-virtual"><scope>Catch::Option</scope><name>operator*</name></member>
+      <member refid="class_catch_1_1_option_1a873a00ed8844b137287f25c811cfd330" prot="public" virt="non-virtual"><scope>Catch::Option</scope><name>operator*</name></member>
+      <member refid="class_catch_1_1_option_1a04da75b6b0946cc38b4bbd51c8d407e0" prot="public" virt="non-virtual"><scope>Catch::Option</scope><name>operator-&gt;</name></member>
+      <member refid="class_catch_1_1_option_1acb3ec06778a8761e5f0014543d8f898e" prot="public" virt="non-virtual"><scope>Catch::Option</scope><name>operator-&gt;</name></member>
+      <member refid="class_catch_1_1_option_1a960fd629f3048995038d58fcf9c018b0" prot="public" virt="non-virtual"><scope>Catch::Option</scope><name>operator=</name></member>
+      <member refid="class_catch_1_1_option_1a32af4018dd8aaf071944f79fc1af520a" prot="public" virt="non-virtual"><scope>Catch::Option</scope><name>operator=</name></member>
+      <member refid="class_catch_1_1_option_1a8efb01b593d798decc80cbbdf311f2a3" prot="public" virt="non-virtual"><scope>Catch::Option</scope><name>Option</name></member>
+      <member refid="class_catch_1_1_option_1a5aeb9c22d48a6882bdf5fb4730b06c86" prot="public" virt="non-virtual"><scope>Catch::Option</scope><name>Option</name></member>
+      <member refid="class_catch_1_1_option_1af02f2e4559f06384baec0def8c68c5fd" prot="public" virt="non-virtual"><scope>Catch::Option</scope><name>Option</name></member>
+      <member refid="class_catch_1_1_option_1a37b4e0e5d4d56296adacd267a616f4e0" prot="public" virt="non-virtual"><scope>Catch::Option</scope><name>reset</name></member>
+      <member refid="class_catch_1_1_option_1a97c95829afbe92f2bcc5fd75b32c0825" prot="public" virt="non-virtual"><scope>Catch::Option</scope><name>some</name></member>
+      <member refid="class_catch_1_1_option_1acdebca1b18bb8542c3f676b8dd805f23" prot="private" virt="non-virtual"><scope>Catch::Option</scope><name>storage</name></member>
+      <member refid="class_catch_1_1_option_1a8d9ae2e30b0eb76fe134a6fbc8423124" prot="public" virt="non-virtual"><scope>Catch::Option</scope><name>valueOr</name></member>
+      <member refid="class_catch_1_1_option_1a37fe90bb47bb909f150a5ad6be25581a" prot="public" virt="non-virtual"><scope>Catch::Option</scope><name>~Option</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_mesh_renderer_8h" kind="file" language="C++">
+    <compoundname>MeshRenderer.h</compoundname>
+    <includes local="yes">EntitySystem/SceneEntity.h</includes>
+    <includes local="yes">ShadowAsset/Assets/Mesh.h</includes>
+    <includes local="yes">ShadowAsset/Assets/Material.h</includes>
+    <includes local="yes">ShadowRenderer/RenderScene.h</includes>
+    <includes local="no">Inspector\EntityInspector.h</includes>
+    <includes local="no">EntitySystem\Entities\Internal\Inspectors\DefaultInspectors.h</includes>
+    <includedby refid="_mesh_renderer_8cpp" local="yes">shadow-engine/shadow-entity/Entities/MeshRenderer.cpp</includedby>
+    <includedby refid="_sky_sphere_8h" local="yes">shadow-engine/shadow-entity/Entities/SkySphere.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>shadow-engine/shadow-entity/Entities/MeshRenderer.h</label>
+        <link refid="_mesh_renderer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EntitySystem/SceneEntity.h</label>
+      </node>
+      <node id="7">
+        <label>EntitySystem\Entities\Internal\Inspectors\DefaultInspectors.h</label>
+      </node>
+      <node id="6">
+        <label>Inspector\EntityInspector.h</label>
+      </node>
+      <node id="4">
+        <label>ShadowAsset/Assets/Material.h</label>
+      </node>
+      <node id="3">
+        <label>ShadowAsset/Assets/Mesh.h</label>
+      </node>
+      <node id="5">
+        <label>ShadowRenderer/RenderScene.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>shadow-engine/shadow-entity/Entities/MeshRenderer.cpp</label>
+        <link refid="_mesh_renderer_8cpp"/>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-entity/Entities/MeshRenderer.h</label>
+        <link refid="_mesh_renderer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>shadow-engine/shadow-entity/Entities/SkySphere.cpp</label>
+        <link refid="_sky_sphere_8cpp"/>
+      </node>
+      <node id="3">
+        <label>shadow-engine/shadow-entity/Entities/SkySphere.h</label>
+        <link refid="_sky_sphere_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_mesh_renderer" prot="public">MeshRenderer</innerclass>
+    <innerclass refid="class_mesh_renderer_inspector" prot="public">MeshRendererInspector</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;EntitySystem/SceneEntity.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ShadowAsset/Assets/Mesh.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ShadowAsset/Assets/Material.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ShadowRenderer/RenderScene.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Inspector\EntityInspector.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;EntitySystem\Entities\Internal\Inspectors\DefaultInspectors.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_mesh_renderer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mesh_renderer" kindref="compound">MeshRenderer</ref>:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" kindref="compound">ShadowEngine::EntitySystem::SceneEntity</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_s_h_object_8h_1ab6e37410b4b149b1b5cb3c4bafe8aa53" kindref="member">SHObject_Base</ref>(<ref refid="class_mesh_renderer" kindref="compound">MeshRenderer</ref>)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_base_8h_1a93745e70d6e760a481f4e634ffda2318" kindref="member">Entity_Base</ref>(<ref refid="class_mesh_renderer" kindref="compound">MeshRenderer</ref>,<sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" kindref="compound">ShadowEngine::EntitySystem::SceneEntity</ref>)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>ShadowEngine::Ref&lt;ShadowEngine::Assets::Mesh&gt;<sp/>mesh;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>ShadowEngine::Ref&lt;ShadowEngine::Assets::Material&gt;<sp/>mat;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>ShadowEngine::Ref&lt;ShadowEngine::Rendering::RenderNode&gt;<sp/>node;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mesh_renderer_1a4815504cfaa41b46e8a4f8d9b1297bc6" kindref="member">Init</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23" refid="class_mesh_renderer_1a7b730cacaaefa7d11111540fcbe5ab5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_shadow_engine_1_1_entity_system_1a02582979cc3de070200b67134662911b" kindref="member">ShadowEngine::EntitySystem::EntityFlags</ref><sp/><ref refid="class_mesh_renderer_1a7b730cacaaefa7d11111540fcbe5ab5a" kindref="member">GetFlags</ref>()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_shadow_engine_1_1_entity_system_1a02582979cc3de070200b67134662911bab50339a10e1de285ac99d4c3990b8693" kindref="member">ShadowEngine::EntitySystem::EntityFlags::NONE</ref>;<sp/>};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_mesh_renderer_1af03c188619ac2d4933fdfc281ed9648c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mesh_renderer_1af03c188619ac2d4933fdfc281ed9648c" kindref="member">SetMesh</ref>(ShadowEngine::Ref&lt;ShadowEngine::Assets::Mesh&gt;<sp/>m)<sp/>{<sp/>mesh<sp/>=<sp/>m;<sp/>};</highlight></codeline>
+<codeline lineno="26" refid="class_mesh_renderer_1ab90cf7f33b7bc3385dee6918093f60d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ShadowEngine::Ref&lt;ShadowEngine::Assets::Mesh&gt;<sp/><ref refid="class_mesh_renderer_1ab90cf7f33b7bc3385dee6918093f60d1" kindref="member">GetMesh</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><sp/>mesh;<sp/>};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="class_mesh_renderer_1af958341241065fae0143b03e5a9f38d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mesh_renderer_1af958341241065fae0143b03e5a9f38d7" kindref="member">SetMaterial</ref>(ShadowEngine::Ref&lt;ShadowEngine::Assets::Material&gt;<sp/>m)<sp/>{<sp/>mat<sp/>=<sp/>m;<sp/>};</highlight></codeline>
+<codeline lineno="29" refid="class_mesh_renderer_1aa500e6d62422e3f5749eeb96d3fac136" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ShadowEngine::Ref&lt;ShadowEngine::Assets::Material&gt;<sp/><ref refid="class_mesh_renderer_1aa500e6d62422e3f5749eeb96d3fac136" kindref="member">SetMaterial</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mat;<sp/>};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TransformChanged()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UpdateRenderNode();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="class_mesh_renderer_inspector" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mesh_renderer_inspector" kindref="compound">MeshRendererInspector</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>ShadowEngine::Debug::EntityInspector<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41" refid="class_mesh_renderer_inspector_1aee7b8cbb3effff5cd37b1d650f3ba802" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mesh_renderer_inspector_1aee7b8cbb3effff5cd37b1d650f3ba802" kindref="member">Draw</ref>(<ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">ShadowEngine::EntitySystem::rtm_ptr&lt;ShadowEngine::EntitySystem::Entity&gt;</ref>&amp;<sp/>obj)</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ShadowEngine::EntitySystem::rtm_ptr&lt;Camera&gt;<sp/>cam<sp/>=<sp/>obj;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_default_inspectors_8cpp_1ab79b2148c1586acb15e27029b7cc281d" kindref="member">DrawTransformInspector</ref>((<ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">ShadowEngine::EntitySystem::rtm_ptr&lt;ShadowEngine::EntitySystem::SceneEntity&gt;</ref>)obj);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-entity/Entities/MeshRenderer.h"/>
+  </compounddef>
+</doxygen>

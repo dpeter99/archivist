@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_vma_virtual_allocation_create_info" kind="struct" language="C++" prot="public">
+    <compoundname>VmaVirtualAllocationCreateInfo</compoundname>
+    <includes refid="vk__mem__alloc_8h" local="no">vk_mem_alloc.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_vma_virtual_allocation_create_info_1aae08752b86817abd0d944c6025dc603e" prot="public" static="no" mutable="no">
+        <type>VkDeviceSize</type>
+        <definition>VkDeviceSize VmaVirtualAllocationCreateInfo::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>VmaVirtualAllocationCreateInfo::size</qualifiedname>
+        <briefdescription>
+<para>Size of the allocation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Cannot be zero. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1518" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1518" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_virtual_allocation_create_info_1a9d19709872fc1904a105079e1c885821" prot="public" static="no" mutable="no">
+        <type>VkDeviceSize</type>
+        <definition>VkDeviceSize VmaVirtualAllocationCreateInfo::alignment</definition>
+        <argsstring></argsstring>
+        <name>alignment</name>
+        <qualifiedname>VmaVirtualAllocationCreateInfo::alignment</qualifiedname>
+        <briefdescription>
+<para>Required alignment of the allocation. Optional. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Must be power of two. Special value 0 has the same meaning as 1 - means no special alignment is required, so allocation can start at any offset. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1523" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1523" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_virtual_allocation_create_info_1ab10e16956cc4bf20ced9de77d1129ea4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__group__virtual_1gae96ffc099bf898257fb19e9410ed08a7" kindref="member">VmaVirtualAllocationCreateFlags</ref></type>
+        <definition>VmaVirtualAllocationCreateFlags VmaVirtualAllocationCreateInfo::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <qualifiedname>VmaVirtualAllocationCreateInfo::flags</qualifiedname>
+        <briefdescription>
+<para>Use combination of <ref refid="group__group__virtual_1ga2e9c64d405b14156fea7e10c4ad06cb6" kindref="member">VmaVirtualAllocationCreateFlagBits</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1526" column="37" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1526" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_virtual_allocation_create_info_1aa84c85b0b8037cd4972172a0507de360" prot="public" static="no" mutable="no">
+        <type>void *<ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref></type>
+        <definition>void* VMA_NULLABLE VmaVirtualAllocationCreateInfo::pUserData</definition>
+        <argsstring></argsstring>
+        <name>pUserData</name>
+        <qualifiedname>VmaVirtualAllocationCreateInfo::pUserData</qualifiedname>
+        <briefdescription>
+<para>Custom pointer to be associated with the allocation. Optional. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It can be any value and can be used for user-defined purposes. It can be fetched or changed later. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1531" column="23" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1531" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Parameters of created virtual allocation to be passed to <ref refid="group__group__virtual_1ga2f6cd8f6b98e754be7016b5860d02dac" kindref="member">vmaVirtualAllocate()</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1512" column="1" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1513" bodyend="1532"/>
+    <listofallmembers>
+      <member refid="struct_vma_virtual_allocation_create_info_1a9d19709872fc1904a105079e1c885821" prot="public" virt="non-virtual"><scope>VmaVirtualAllocationCreateInfo</scope><name>alignment</name></member>
+      <member refid="struct_vma_virtual_allocation_create_info_1ab10e16956cc4bf20ced9de77d1129ea4" prot="public" virt="non-virtual"><scope>VmaVirtualAllocationCreateInfo</scope><name>flags</name></member>
+      <member refid="struct_vma_virtual_allocation_create_info_1aa84c85b0b8037cd4972172a0507de360" prot="public" virt="non-virtual"><scope>VmaVirtualAllocationCreateInfo</scope><name>pUserData</name></member>
+      <member refid="struct_vma_virtual_allocation_create_info_1aae08752b86817abd0d944c6025dc603e" prot="public" virt="non-virtual"><scope>VmaVirtualAllocationCreateInfo</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,409 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="group__group__init" kind="group">
+    <compoundname>group_init</compoundname>
+    <title>Library initialization</title>
+    <innerclass refid="struct_vma_device_memory_callbacks" prot="public">VmaDeviceMemoryCallbacks</innerclass>
+    <innerclass refid="struct_vma_vulkan_functions" prot="public">VmaVulkanFunctions</innerclass>
+    <innerclass refid="struct_vma_allocator_create_info" prot="public">VmaAllocatorCreateInfo</innerclass>
+    <innerclass refid="struct_vma_allocator_info" prot="public">VmaAllocatorInfo</innerclass>
+    <innerclass refid="struct_vma_allocator" prot="public">VmaAllocator</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__group__init_1ga4f87c9100d154a65a4ad495f7763cf7c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>VmaAllocatorCreateFlagBits</name>
+        <enumvalue id="group__group__init_1gga4f87c9100d154a65a4ad495f7763cf7ca4816ddaed324ba110172ca608a20f29d" prot="public">
+          <name>VMA_ALLOCATOR_CREATE_EXTERNALLY_SYNCHRONIZED_BIT</name>
+          <initializer>= 0x00000001</initializer>
+          <briefdescription>
+<para>Allocator and all objects created from it will not be synchronized internally, so you must guarantee they are used from only one thread at a time or synchronized externally by you. </para>
+          </briefdescription>
+          <detaileddescription>
+<para>Using this flag may increase performance because internal mutexes are not used. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__init_1gga4f87c9100d154a65a4ad495f7763cf7cace7da7cc6e71a625dfa763c55a597878" prot="public">
+          <name>VMA_ALLOCATOR_CREATE_KHR_DEDICATED_ALLOCATION_BIT</name>
+          <initializer>= 0x00000002</initializer>
+          <briefdescription>
+<para>Enables usage of VK_KHR_dedicated_allocation extension. </para>
+          </briefdescription>
+          <detaileddescription>
+<para>The flag works only if <ref refid="struct_vma_allocator_create_info_1ae0ffc55139b54520a6bb704b29ffc285" kindref="member">VmaAllocatorCreateInfo::vulkanApiVersion</ref> `== VK_API_VERSION_1_0`. When it is `VK_API_VERSION_1_1`, the flag is ignored because the extension has been promoted to Vulkan 1.1.</para>
+<para>Using this extension will automatically allocate dedicated blocks of memory for some buffers and images instead of suballocating place for them out of bigger memory blocks (as if you explicitly used <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a3fc311d855c2ff53f1090ef5c722b38f" kindref="member">VMA_ALLOCATION_CREATE_DEDICATED_MEMORY_BIT</ref> flag) when it is recommended by the driver. It may improve performance on some GPUs.</para>
+<para>You may set this flag only if you found out that following device extensions are supported, you enabled them while creating Vulkan device passed as <ref refid="struct_vma_allocator_create_info_1ac35aa355d3bfcbf6bb2eb88ccf68125c" kindref="member">VmaAllocatorCreateInfo::device</ref>, and you want them to be used internally by this library:</para>
+<para><itemizedlist>
+<listitem><para>VK_KHR_get_memory_requirements2 (device extension)</para>
+</listitem><listitem><para>VK_KHR_dedicated_allocation (device extension)</para>
+</listitem></itemizedlist>
+</para>
+<para>When this flag is set, you can experience following warnings reported by Vulkan validation layer. You can ignore them.</para>
+<para>&gt; vkBindBufferMemory(): Binding memory to buffer 0x2d but vkGetBufferMemoryRequirements() has not been called on that buffer. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__init_1gga4f87c9100d154a65a4ad495f7763cf7ca8fb75bf07cd184ab903596295e863dee" prot="public">
+          <name>VMA_ALLOCATOR_CREATE_KHR_BIND_MEMORY2_BIT</name>
+          <initializer>= 0x00000004</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Enables usage of VK_KHR_bind_memory2 extension.</para>
+<para>The flag works only if <ref refid="struct_vma_allocator_create_info_1ae0ffc55139b54520a6bb704b29ffc285" kindref="member">VmaAllocatorCreateInfo::vulkanApiVersion</ref> `== VK_API_VERSION_1_0`. When it is `VK_API_VERSION_1_1`, the flag is ignored because the extension has been promoted to Vulkan 1.1.</para>
+<para>You may set this flag only if you found out that this device extension is supported, you enabled it while creating Vulkan device passed as <ref refid="struct_vma_allocator_create_info_1ac35aa355d3bfcbf6bb2eb88ccf68125c" kindref="member">VmaAllocatorCreateInfo::device</ref>, and you want it to be used internally by this library.</para>
+<para>The extension provides functions `vkBindBufferMemory2KHR` and `vkBindImageMemory2KHR`, which allow to pass a chain of `pNext` structures while binding. This flag is required if you use `pNext` parameter in <ref refid="group__group__alloc_1ga4a71c30e3474a835bdd7fd0507740be7" kindref="member">vmaBindBufferMemory2()</ref> or <ref refid="group__group__alloc_1ga0216b9225b02a66ac610cb45d4729d00" kindref="member">vmaBindImageMemory2()</ref>. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__init_1gga4f87c9100d154a65a4ad495f7763cf7ca4d4687863f7bd4b418c6006dc04400b0" prot="public">
+          <name>VMA_ALLOCATOR_CREATE_EXT_MEMORY_BUDGET_BIT</name>
+          <initializer>= 0x00000008</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Enables usage of VK_EXT_memory_budget extension.</para>
+<para>You may set this flag only if you found out that this device extension is supported, you enabled it while creating Vulkan device passed as <ref refid="struct_vma_allocator_create_info_1ac35aa355d3bfcbf6bb2eb88ccf68125c" kindref="member">VmaAllocatorCreateInfo::device</ref>, and you want it to be used internally by this library, along with another instance extension VK_KHR_get_physical_device_properties2, which is required by it (or Vulkan 1.1, where this extension is promoted).</para>
+<para>The extension provides query for current memory usage and budget, which will probably be more accurate than an estimation used by the library otherwise. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__init_1gga4f87c9100d154a65a4ad495f7763cf7ca2acce4886d8078552efa38878413970f" prot="public">
+          <name>VMA_ALLOCATOR_CREATE_AMD_DEVICE_COHERENT_MEMORY_BIT</name>
+          <initializer>= 0x00000010</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Enables usage of VK_AMD_device_coherent_memory extension.</para>
+<para>You may set this flag only if you:</para>
+<para><itemizedlist>
+<listitem><para>found out that this device extension is supported and enabled it while creating Vulkan device passed as <ref refid="struct_vma_allocator_create_info_1ac35aa355d3bfcbf6bb2eb88ccf68125c" kindref="member">VmaAllocatorCreateInfo::device</ref>,</para>
+</listitem><listitem><para>checked that `VkPhysicalDeviceCoherentMemoryFeaturesAMD::deviceCoherentMemory` is true and set it while creating the Vulkan device,</para>
+</listitem><listitem><para>want it to be used internally by this library.</para>
+</listitem></itemizedlist>
+</para>
+<para>The extension and accompanying device feature provide access to memory types with `VK_MEMORY_PROPERTY_DEVICE_COHERENT_BIT_AMD` and `VK_MEMORY_PROPERTY_DEVICE_UNCACHED_BIT_AMD` flags. They are useful mostly for writing breadcrumb markers - a common method for debugging GPU crash/hang/TDR.</para>
+<para>When the extension is not enabled, such memory types are still enumerated, but their usage is illegal. To protect from this error, if you don&apos;t create the allocator with this flag, it will refuse to allocate any memory or create a custom pool in such memory type, returning `VK_ERROR_FEATURE_NOT_PRESENT`. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__init_1gga4f87c9100d154a65a4ad495f7763cf7ca5f1b28b0414319d1687e1f2b30ab0089" prot="public">
+          <name>VMA_ALLOCATOR_CREATE_BUFFER_DEVICE_ADDRESS_BIT</name>
+          <initializer>= 0x00000020</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Enables usage of &quot;buffer device address&quot; feature, which allows you to use function `vkGetBufferDeviceAddress*` to get raw GPU pointer to a buffer and pass it for usage inside a shader.</para>
+<para>You may set this flag only if you:</para>
+<para>1. (For Vulkan version &lt; 1.2) Found as available and enabled device extension VK_KHR_buffer_device_address. This extension is promoted to core Vulkan 1.2. 2. Found as available and enabled device feature `VkPhysicalDeviceBufferDeviceAddressFeatures::bufferDeviceAddress`.</para>
+<para>When this flag is set, you can create buffers with `VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT` using VMA. The library automatically adds `VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_BIT` to allocated memory blocks wherever it might be needed.</para>
+<para>For more information, see documentation chapter <ref refid="enabling_buffer_device_address" kindref="compound">Enabling buffer device address</ref>. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__init_1gga4f87c9100d154a65a4ad495f7763cf7caffdd7a5169be3dbd7cbf6b3619e4f78a" prot="public">
+          <name>VMA_ALLOCATOR_CREATE_EXT_MEMORY_PRIORITY_BIT</name>
+          <initializer>= 0x00000040</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Enables usage of VK_EXT_memory_priority extension in the library.</para>
+<para>You may set this flag only if you found available and enabled this device extension, along with `VkPhysicalDeviceMemoryPriorityFeaturesEXT::memoryPriority == VK_TRUE`, while creating Vulkan device passed as <ref refid="struct_vma_allocator_create_info_1ac35aa355d3bfcbf6bb2eb88ccf68125c" kindref="member">VmaAllocatorCreateInfo::device</ref>.</para>
+<para>When this flag is used, <ref refid="struct_vma_allocation_create_info_1a983d39e1a2e63649d78a960aa2fdd0f7" kindref="member">VmaAllocationCreateInfo::priority</ref> and <ref refid="struct_vma_pool_create_info_1a16e686c688f6725f119ebf6e24ab5274" kindref="member">VmaPoolCreateInfo::priority</ref> are used to set priorities of allocated Vulkan memory. Without it, these variables are ignored.</para>
+<para>A priority must be a floating-point value between 0 and 1, indicating the priority of the allocation relative to other memory allocations. Larger values are higher priority. The granularity of the priorities is implementation-dependent. It is automatically passed to every call to `vkAllocateMemory` done by the library using structure `VkMemoryPriorityAllocateInfoEXT`. The value to be used for default priority is 0.5. For more details, see the documentation of the VK_EXT_memory_priority extension. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__init_1gga4f87c9100d154a65a4ad495f7763cf7cae4d5ad929caba5f23eb502b13bd5286c" prot="public">
+          <name>VMA_ALLOCATOR_CREATE_FLAG_BITS_MAX_ENUM</name>
+          <initializer>= 0x7FFFFFFF</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Flags for created <ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="314" column="1" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="315" bodyend="428"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__group__init_1gafd73b95e737ee7e76f827cb5472f559f" prot="public" static="no">
+        <type>enum <ref refid="group__group__init_1ga4f87c9100d154a65a4ad495f7763cf7c" kindref="member">VmaAllocatorCreateFlagBits</ref></type>
+        <definition>typedef enum VmaAllocatorCreateFlagBits VmaAllocatorCreateFlagBits</definition>
+        <argsstring></argsstring>
+        <name>VmaAllocatorCreateFlagBits</name>
+        <briefdescription>
+<para>Flags for created <ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="428" column="28"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__group__init_1gacfe6863e160722c2c1bbcf7573fddc4d" prot="public" static="no">
+        <type>VkFlags</type>
+        <definition>typedef VkFlags VmaAllocatorCreateFlags</definition>
+        <argsstring></argsstring>
+        <name>VmaAllocatorCreateFlags</name>
+        <briefdescription>
+<para>See <ref refid="group__group__init_1ga4f87c9100d154a65a4ad495f7763cf7c" kindref="member">VmaAllocatorCreateFlagBits</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="430" column="17" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="430" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__group__init_1gaaf884ddf34d1bb3be8365594d3882a0b" prot="public" static="no">
+        <type>void(VKAPI_PTR *</type>
+        <definition>typedef void(VKAPI_PTR * PFN_vmaAllocateDeviceMemoryFunction) (VmaAllocator VMA_NOT_NULL allocator, uint32_t memoryType, VkDeviceMemory VMA_NOT_NULL_NON_DISPATCHABLE memory, VkDeviceSize size, void *VMA_NULLABLE pUserData)</definition>
+        <argsstring>)(VmaAllocator VMA_NOT_NULL allocator, uint32_t memoryType, VkDeviceMemory VMA_NOT_NULL_NON_DISPATCHABLE memory, VkDeviceSize size, void *VMA_NULLABLE pUserData)</argsstring>
+        <name>PFN_vmaAllocateDeviceMemoryFunction</name>
+        <briefdescription>
+<para>Callback function called after successful vkAllocateMemory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="917" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="917" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__group__init_1ga786c0d8679f6fd36ce796a19cc80afbe" prot="public" static="no">
+        <type>void(VKAPI_PTR *</type>
+        <definition>typedef void(VKAPI_PTR * PFN_vmaFreeDeviceMemoryFunction) (VmaAllocator VMA_NOT_NULL allocator, uint32_t memoryType, VkDeviceMemory VMA_NOT_NULL_NON_DISPATCHABLE memory, VkDeviceSize size, void *VMA_NULLABLE pUserData)</definition>
+        <argsstring>)(VmaAllocator VMA_NOT_NULL allocator, uint32_t memoryType, VkDeviceMemory VMA_NOT_NULL_NON_DISPATCHABLE memory, VkDeviceSize size, void *VMA_NULLABLE pUserData)</argsstring>
+        <name>PFN_vmaFreeDeviceMemoryFunction</name>
+        <briefdescription>
+<para>Callback function called before vkFreeMemory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="925" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="925" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__group__init_1ga77692d3c8770ea8882d573206bd27b2b" prot="public" static="no">
+        <type>struct <ref refid="struct_vma_device_memory_callbacks" kindref="compound">VmaDeviceMemoryCallbacks</ref></type>
+        <definition>typedef struct VmaDeviceMemoryCallbacks VmaDeviceMemoryCallbacks</definition>
+        <argsstring></argsstring>
+        <name>VmaDeviceMemoryCallbacks</name>
+        <briefdescription>
+<para>Set of callbacks that the library will call for `vkAllocateMemory` and `vkFreeMemory`. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Provided for informative purpose, e.g. to gather statistics about number of allocations or total amount of memory allocated in Vulkan.</para>
+<para>Used in <ref refid="struct_vma_allocator_create_info_1afbb24551124b16bdaa29f92eb96b8c56" kindref="member">VmaAllocatorCreateInfo::pDeviceMemoryCallbacks</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="947" column="26"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__group__init_1gabb0a8e3b5040d847571cca6c7f9a8074" prot="public" static="no">
+        <type>struct <ref refid="struct_vma_vulkan_functions" kindref="compound">VmaVulkanFunctions</ref></type>
+        <definition>typedef struct VmaVulkanFunctions VmaVulkanFunctions</definition>
+        <argsstring></argsstring>
+        <name>VmaVulkanFunctions</name>
+        <briefdescription>
+<para>Pointers to some Vulkan functions - a subset used by the library. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used in <ref refid="struct_vma_allocator_create_info_1a5e45da0879451e58bee2f3a975f228f5" kindref="member">VmaAllocatorCreateInfo::pVulkanFunctions</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="997" column="20"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__group__init_1gaad9652301d33759b83e52d4f3605a14a" prot="public" static="no">
+        <type>struct <ref refid="struct_vma_allocator_create_info" kindref="compound">VmaAllocatorCreateInfo</ref></type>
+        <definition>typedef struct VmaAllocatorCreateInfo VmaAllocatorCreateInfo</definition>
+        <argsstring></argsstring>
+        <name>VmaAllocatorCreateInfo</name>
+        <briefdescription>
+<para>Description of a Allocator to be created. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1076" column="24"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__group__init_1ga1988031b0223fdbd564250fa1edd942c" prot="public" static="no">
+        <type>struct <ref refid="struct_vma_allocator_info" kindref="compound">VmaAllocatorInfo</ref></type>
+        <definition>typedef struct VmaAllocatorInfo VmaAllocatorInfo</definition>
+        <argsstring></argsstring>
+        <name>VmaAllocatorInfo</name>
+        <briefdescription>
+<para>Information about existing <ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1096" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__init_1gaf77c946fbecfcc54d02c3d1c1e7e23e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> VkResult <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE VkResult VMA_CALL_POST vmaCreateAllocator</definition>
+        <argsstring>(const VmaAllocatorCreateInfo *VMA_NOT_NULL pCreateInfo, VmaAllocator VMA_NULLABLE *VMA_NOT_NULL pAllocator)</argsstring>
+        <name>vmaCreateAllocator</name>
+        <param>
+          <type>const <ref refid="struct_vma_allocator_create_info" kindref="compound">VmaAllocatorCreateInfo</ref> *<ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>pCreateInfo</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> <ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref> *<ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>pAllocator</declname>
+        </param>
+        <briefdescription>
+<para>Creates <ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1566" column="37" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="1566" declcolumn="37"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__init_1ga0383c8c957625914e9b89bd165ff13f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaDestroyAllocator</definition>
+        <argsstring>(VmaAllocator VMA_NULLABLE allocator)</argsstring>
+        <name>vmaDestroyAllocator</name>
+        <param>
+          <type><ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> <ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref></type>
+          <declname>allocator</declname>
+        </param>
+        <briefdescription>
+<para>Destroys allocator object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1571" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="1571" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__init_1gaacc98daf40a09cddb3ca7940aba9bc3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaGetAllocatorInfo</definition>
+        <argsstring>(VmaAllocator VMA_NOT_NULL allocator, VmaAllocatorInfo *VMA_NOT_NULL pAllocatorInfo)</argsstring>
+        <name>vmaGetAllocatorInfo</name>
+        <param>
+          <type><ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>allocator</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vma_allocator_info" kindref="compound">VmaAllocatorInfo</ref> *<ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>pAllocatorInfo</declname>
+        </param>
+        <briefdescription>
+<para>Returns information about existing <ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> object - handle to Vulkan device etc. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It might be useful if you want to keep just the <ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> handle and fetch other required handles to `VkPhysicalDevice`, `VkDevice` etc. every time using this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1579" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="1579" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__init_1gadcc2ca5c2f692c8c6b77bc7bcee97751" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaGetPhysicalDeviceProperties</definition>
+        <argsstring>(VmaAllocator VMA_NOT_NULL allocator, const VkPhysicalDeviceProperties *VMA_NULLABLE *VMA_NOT_NULL ppPhysicalDeviceProperties)</argsstring>
+        <name>vmaGetPhysicalDeviceProperties</name>
+        <param>
+          <type><ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>allocator</declname>
+        </param>
+        <param>
+          <type>const VkPhysicalDeviceProperties *<ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref> *<ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>ppPhysicalDeviceProperties</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>PhysicalDeviceProperties are fetched from physicalDevice by the allocator. You can access it here, without fetching it again on your own. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1587" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="1587" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__init_1ga33698c6107c0da349c1dbf43615284df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaGetMemoryProperties</definition>
+        <argsstring>(VmaAllocator VMA_NOT_NULL allocator, const VkPhysicalDeviceMemoryProperties *VMA_NULLABLE *VMA_NOT_NULL ppPhysicalDeviceMemoryProperties)</argsstring>
+        <name>vmaGetMemoryProperties</name>
+        <param>
+          <type><ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>allocator</declname>
+        </param>
+        <param>
+          <type>const VkPhysicalDeviceMemoryProperties *<ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref> *<ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>ppPhysicalDeviceMemoryProperties</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>PhysicalDeviceMemoryProperties are fetched from physicalDevice by the allocator. You can access it here, without fetching it again on your own. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1595" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="1595" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__init_1ga27cc36c466d171c3e4e0d062c48dc1e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaGetMemoryTypeProperties</definition>
+        <argsstring>(VmaAllocator VMA_NOT_NULL allocator, uint32_t memoryTypeIndex, VkMemoryPropertyFlags *VMA_NOT_NULL pFlags)</argsstring>
+        <name>vmaGetMemoryTypeProperties</name>
+        <param>
+          <type><ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>allocator</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>memoryTypeIndex</declname>
+        </param>
+        <param>
+          <type>VkMemoryPropertyFlags *<ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>pFlags</declname>
+        </param>
+        <briefdescription>
+<para>Given Memory Type Index, returns Property Flags of this memory type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is just a convenience function. Same information can be obtained using <ref refid="group__group__init_1ga33698c6107c0da349c1dbf43615284df" kindref="member">vmaGetMemoryProperties()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1605" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="1605" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__init_1gab8e037d09b55f13312f792e0cd98cc03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaSetCurrentFrameIndex</definition>
+        <argsstring>(VmaAllocator VMA_NOT_NULL allocator, uint32_t frameIndex)</argsstring>
+        <name>vmaSetCurrentFrameIndex</name>
+        <param>
+          <type><ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>allocator</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>frameIndex</declname>
+        </param>
+        <briefdescription>
+<para>Sets index of the current frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1612" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="1612" declcolumn="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>API elements related to the initialization and management of the entire library, especially <ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> object. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

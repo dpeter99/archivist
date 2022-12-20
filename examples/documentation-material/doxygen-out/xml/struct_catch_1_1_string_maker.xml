@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_catch_1_1_string_maker" kind="struct" language="C++" prot="public">
+    <compoundname>Catch::StringMaker</compoundname>
+    <includes refid="catch_8hpp" local="no">catch.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>typename</type>
+        <defval>void</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="struct_catch_1_1_string_maker_1a98ebf81ba6ef3cfd72b23316e291d3d0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Fake</type>
+            <defval>T</defval>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt;<ref refid="class_catch_1_1_detail_1_1_is_stream_insertable" kindref="compound">::Catch::Detail::IsStreamInsertable</ref>&lt; Fake &gt;::value, std::string &gt;::type</type>
+        <definition>static std::enable_if&lt;::Catch::Detail::IsStreamInsertable&lt; Fake &gt;::value, std::string &gt;::type Catch::StringMaker&lt; T, typename &gt;::convert</definition>
+        <argsstring>(const Fake &amp;value)</argsstring>
+        <name>convert</name>
+        <qualifiedname>Catch::StringMaker::convert</qualifiedname>
+        <param>
+          <type>const Fake &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="1619" column="13" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="1619" bodyend="1625"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_string_maker_1ac23f621d0bed26c4a511d4f5c37abb91" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Fake</type>
+            <defval>T</defval>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt;!<ref refid="class_catch_1_1_detail_1_1_is_stream_insertable" kindref="compound">::Catch::Detail::IsStreamInsertable</ref>&lt; Fake &gt;::value, std::string &gt;::type</type>
+        <definition>static std::enable_if&lt;!::Catch::Detail::IsStreamInsertable&lt; Fake &gt;::value, std::string &gt;::type Catch::StringMaker&lt; T, typename &gt;::convert</definition>
+        <argsstring>(const Fake &amp;value)</argsstring>
+        <name>convert</name>
+        <qualifiedname>Catch::StringMaker::convert</qualifiedname>
+        <param>
+          <type>const Fake &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="1630" column="13" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="1630" bodyend="1636"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="1615" column="5" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="1615" bodyend="1637"/>
+    <listofallmembers>
+      <member refid="struct_catch_1_1_string_maker_1a98ebf81ba6ef3cfd72b23316e291d3d0" prot="public" virt="non-virtual"><scope>Catch::StringMaker</scope><name>convert</name></member>
+      <member refid="struct_catch_1_1_string_maker_1ac23f621d0bed26c4a511d4f5c37abb91" prot="public" virt="non-virtual"><scope>Catch::StringMaker</scope><name>convert</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

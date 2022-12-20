@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_default_inspectors_8h" kind="file" language="C++">
+    <compoundname>DefaultInspectors.h</compoundname>
+    <includes local="yes">Inspector/InspectorSystem.h</includes>
+    <includes local="yes">EntitySystem/Entity.h</includes>
+    <includes local="yes">EntitySystem/SceneEntity.h</includes>
+    <includedby refid="shadow-entity_2_entities_2_camera_8h" local="yes">shadow-engine/shadow-entity/Entities/Camera.h</includedby>
+    <includedby refid="_default_inspectors_8cpp" local="yes">shadow-engine/shadow-entity/Entities/Internal/Inspectors/DefaultInspectors.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>shadow-engine/shadow-entity/Entities/Internal/Inspectors/DefaultInspectors.h</label>
+        <link refid="_default_inspectors_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EntitySystem/Entity.h</label>
+      </node>
+      <node id="4">
+        <label>EntitySystem/SceneEntity.h</label>
+      </node>
+      <node id="2">
+        <label>Inspector/InspectorSystem.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>shadow-engine/shadow-entity/Entities/Camera.cpp</label>
+        <link refid="shadow-entity_2_entities_2_camera_8cpp"/>
+      </node>
+      <node id="2">
+        <label>shadow-engine/shadow-entity/Entities/Camera.h</label>
+        <link refid="shadow-entity_2_entities_2_camera_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>shadow-engine/shadow-entity/Entities/FirstPersonCamera.cpp</label>
+        <link refid="_first_person_camera_8cpp"/>
+      </node>
+      <node id="4">
+        <label>shadow-engine/shadow-entity/Entities/FirstPersonCamera.h</label>
+        <link refid="_first_person_camera_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>shadow-engine/shadow-entity/Entities/Internal/Inspectors/DefaultInspectors.cpp</label>
+        <link refid="_default_inspectors_8cpp"/>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-entity/Entities/Internal/Inspectors/DefaultInspectors.h</label>
+        <link refid="_default_inspectors_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>shadow-engine/shadow-entity/Entities/SkySphere.cpp</label>
+        <link refid="_sky_sphere_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_default_inspectors_8h_1ab79b2148c1586acb15e27029b7cc281d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DrawTransformInspector</definition>
+        <argsstring>(ShadowEngine::EntitySystem::rtm_ptr&lt; ShadowEngine::EntitySystem::SceneEntity &gt; &amp;entity)</argsstring>
+        <name>DrawTransformInspector</name>
+        <param>
+          <type><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">ShadowEngine::EntitySystem::rtm_ptr</ref>&lt; <ref refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" kindref="compound">ShadowEngine::EntitySystem::SceneEntity</ref> &gt; &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/Entities/Internal/Inspectors/DefaultInspectors.h" line="8" column="6" bodyfile="shadow-engine/shadow-entity/Entities/Internal/Inspectors/DefaultInspectors.cpp" bodystart="10" bodyend="38" declfile="shadow-engine/shadow-entity/Entities/Internal/Inspectors/DefaultInspectors.h" declline="8" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Inspector/InspectorSystem.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;EntitySystem/Entity.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;EntitySystem/SceneEntity.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_default_inspectors_8h_1ab79b2148c1586acb15e27029b7cc281d" kindref="member">DrawTransformInspector</ref>(<ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">ShadowEngine::EntitySystem::rtm_ptr&lt;ShadowEngine::EntitySystem::SceneEntity&gt;</ref>&amp;<sp/>entity);</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-entity/Entities/Internal/Inspectors/DefaultInspectors.h"/>
+  </compounddef>
+</doxygen>

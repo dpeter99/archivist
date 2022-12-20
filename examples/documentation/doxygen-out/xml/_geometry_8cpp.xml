@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_geometry_8cpp" kind="file" language="C++">
+    <compoundname>Geometry.cpp</compoundname>
+    <includes refid="_geometry_8h" local="no">vlkx/render/Geometry.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>vlkx/render/Geometry.h</label>
+        <link refid="_geometry_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-renderer/src/render/Geometry.cpp</label>
+        <link refid="_geometry_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>array</label>
+      </node>
+      <node id="6">
+        <label>glm/glm.hpp</label>
+      </node>
+      <node id="7">
+        <label>glm/gtc/matrix_transform.hpp</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+      <node id="3">
+        <label>vulkan/vulkan.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_geometry_8h" kindref="compound">vlkx/render/Geometry.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_geo" kindref="compound">Geo</ref>;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_geo_1_1_mesh_1a7ae41009cac2c8b253cdd45bd1868581" kindref="member">Mesh::setTriData</ref>(std::vector&lt;VertexAll&gt;&amp;<sp/>vertices,<sp/>std::vector&lt;uint32_t&gt;&amp;<sp/>indices)<sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;VertexAll&gt;<sp/>Vertices<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>0.0f,<sp/>-1.0f,<sp/>0.0f<sp/>},{<sp/>0.0f,<sp/>0.0f,<sp/>1.0<sp/>},{<sp/>0.0,<sp/>1.0<sp/>}<sp/>},</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>1.0f,<sp/>1.0f,<sp/>0.0f<sp/>},{<sp/>0.0f,<sp/>0.0f,<sp/>1.0<sp/>},{<sp/>0.0,<sp/>0.0<sp/>}<sp/>},</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>-1.0f,<sp/>1.0f,<sp/>0.0f<sp/>},{<sp/>0.0f,<sp/>0.0f,<sp/>1.0<sp/>},{<sp/>1.0,<sp/>0.0<sp/>}<sp/>},</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;uint32_t&gt;<sp/>Indices<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>1,<sp/>2,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>vertices.clear();<sp/>indices.clear();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>vertices<sp/>=<sp/>Vertices;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>indices<sp/>=<sp/>Indices;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_geo_1_1_mesh_1aec35dbb4cc272553ee0382d44ae2772e" kindref="member">Mesh::setQuadData</ref>(std::vector&lt;VertexAll&gt;&amp;<sp/>vertices,<sp/>std::vector&lt;uint32_t&gt;&amp;<sp/>indices)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;VertexAll&gt;<sp/>Vertices<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>-1.0f,<sp/>-1.0f,<sp/>0.0f<sp/>},{<sp/>0.0f,<sp/>0.0f,<sp/>1.0<sp/>},{<sp/>0.0,<sp/>1.0<sp/>}<sp/>},</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>-1.0f,<sp/>1.0f,<sp/>0.0f<sp/>},{<sp/>0.0f,<sp/>0.0f,<sp/>1.0<sp/>},{<sp/>0.0,<sp/>0.0<sp/>}<sp/>},</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>1.0f,<sp/>1.0f,<sp/>0.0f<sp/>},{<sp/>0.0f,<sp/>0.0f,<sp/>1.0<sp/>},{<sp/>1.0,<sp/>0.0<sp/>}<sp/>},</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>1.0f,<sp/>-1.0f,<sp/>0.0f<sp/>},{<sp/>0.0f,<sp/>0.0f,<sp/>1.0<sp/>},{<sp/>1.0,<sp/>1.0<sp/>}<sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;uint32_t&gt;<sp/>Indices<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>1,<sp/>2,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>2,<sp/>3</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>vertices.clear();<sp/>indices.clear();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>vertices<sp/>=<sp/>Vertices;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>indices<sp/>=<sp/>Indices;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_geo_1_1_mesh_1a6a39cb7c9aa5fe4d905e719d6ed7026b" kindref="member">Mesh::setCubeData</ref>(std::vector&lt;VertexAll&gt;&amp;<sp/>vertices,<sp/>std::vector&lt;uint32_t&gt;&amp;<sp/>indices)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;VertexAll&gt;<sp/>Vertices<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Front</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>-1.0f,<sp/>-1.0f,<sp/>1.0f<sp/>},{<sp/>0.0f,<sp/>0.0f,<sp/>1.0<sp/>},{<sp/>0.0,<sp/>1.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>-1.0f,<sp/>1.0f,<sp/>1.0f<sp/>},{<sp/>0.0f,<sp/>0.0f,<sp/>1.0<sp/>},{<sp/>0.0,<sp/>0.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>1.0f,<sp/>1.0f,<sp/>1.0f<sp/>},{<sp/>0.0f,<sp/>0.0f,<sp/>1.0<sp/>},{<sp/>1.0,<sp/>0.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>1.0f,<sp/>-1.0f,<sp/>1.0f<sp/>},{<sp/>0.0f,<sp/>0.0f,<sp/>1.0<sp/>},{<sp/>1.0,<sp/>1.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Back<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>1.0,<sp/>-1.0,<sp/>-1.0<sp/>},{<sp/>0.0f,<sp/>0.0f,<sp/>-1.0<sp/>},{<sp/>0.0,<sp/>1.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>1.0f,<sp/>1.0,<sp/>-1.0<sp/>},{<sp/>0.0f,<sp/>0.0f,<sp/>-1.0<sp/>},{<sp/>0.0,<sp/>0.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>-1.0,<sp/>1.0,<sp/>-1.0<sp/>},{<sp/>0.0f,<sp/>0.0f,<sp/>-1.0<sp/>},{<sp/>1.0,<sp/>0.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>-1.0,<sp/>-1.0,<sp/>-1.0<sp/>},{<sp/>0.0f,<sp/>0.0f,<sp/>-1.0<sp/>},{<sp/>1.0,<sp/>1.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Left</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>-1.0,<sp/>-1.0,<sp/>-1.0<sp/>},{<sp/>-1.0f,<sp/>0.0f,<sp/>0.0<sp/>},{<sp/>0.0,<sp/>1.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>-1.0f,<sp/>1.0,<sp/>-1.0<sp/>},{<sp/>-1.0f,<sp/>0.0f,<sp/>0.0<sp/>},{<sp/>0.0,<sp/>0.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>-1.0,<sp/>1.0,<sp/>1.0<sp/>},{<sp/>-1.0f,<sp/>0.0f,<sp/>0.0<sp/>},{<sp/>1.0,<sp/>0.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>-1.0,<sp/>-1.0,<sp/>1.0<sp/>},{<sp/>-1.0f,<sp/>0.0f,<sp/>0.0<sp/>},{<sp/>1.0,<sp/>1.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Right</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>1.0,<sp/>-1.0,<sp/>1.0<sp/>},{<sp/>1.0f,<sp/>0.0f,<sp/>0.0<sp/>},{<sp/>0.0,<sp/>1.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>1.0f,<sp/>1.0,<sp/>1.0<sp/>},{<sp/>1.0f,<sp/>0.0f,<sp/>0.0<sp/>},{<sp/>0.0,<sp/>0.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>1.0,<sp/>1.0,<sp/>-1.0<sp/>},{<sp/>1.0f,<sp/>0.0f,<sp/>0.0<sp/>},{<sp/>1.0,<sp/>0.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>1.0,<sp/>-1.0,<sp/>-1.0<sp/>},{<sp/>1.0f,<sp/>0.0f,<sp/>0.0<sp/>},{<sp/>1.0,<sp/>1.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Top</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>-1.0f,<sp/>1.0f,<sp/>1.0f<sp/>},{<sp/>0.0f,<sp/>1.0f,<sp/>0.0<sp/>},{<sp/>0.0,<sp/>1.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>-1.0f,<sp/>1.0f,<sp/>-1.0f<sp/>},{<sp/>0.0f,<sp/>1.0f,<sp/>0.0<sp/>},{<sp/>0.0,<sp/>0.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>17</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>1.0f,<sp/>1.0f,<sp/>-1.0f<sp/>},{<sp/>0.0f,<sp/>1.0f,<sp/>0.0<sp/>},{<sp/>1.0,<sp/>0.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>1.0f,<sp/>1.0f,<sp/>1.0f<sp/>},{<sp/>0.0f,<sp/>1.0f,<sp/>0.0<sp/>},{<sp/>1.0,<sp/>1.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>19</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Bottom<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>-1.0f,<sp/>-1.0,<sp/>-1.0<sp/>},{<sp/>0.0f,<sp/>-1.0f,<sp/>0.0<sp/>},{<sp/>0.0,<sp/>1.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>-1.0,<sp/>-1.0,<sp/>1.0<sp/>},{<sp/>0.0f,<sp/>-1.0f,<sp/>0.0<sp/>},{<sp/>0.0,<sp/>0.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>1.0,<sp/>-1.0,<sp/>1.0<sp/>},{<sp/>0.0f,<sp/>-1.0f,<sp/>0.0<sp/>},{<sp/>1.0,<sp/>0.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>22</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>1.0,<sp/>-1.0,<sp/>-1.0<sp/>},{<sp/>0.0f,<sp/>-1.0f,<sp/>0.0<sp/>},{<sp/>1.0,<sp/>1.0<sp/>}<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>23</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;uint32_t&gt;<sp/>Indices<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>1,<sp/>2,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2,<sp/>3,<sp/>0,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4,<sp/>5,<sp/>6,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4,<sp/>6,<sp/>7,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8,<sp/>9,<sp/>10,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8,<sp/>10,<sp/>11,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>12,<sp/>13,<sp/>14,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>12,<sp/>14,<sp/>15,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16,<sp/>17,<sp/>18,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16,<sp/>18,<sp/>19,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20,<sp/>21,<sp/>22,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20,<sp/>22,<sp/>23</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>vertices.clear();<sp/>indices.clear();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>vertices<sp/>=<sp/>Vertices;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>indices<sp/>=<sp/>Indices;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_geo_1_1_mesh_1a03d59fd26eca990b6c8aa3decf356402" kindref="member">Mesh::setSphereData</ref>(std::vector&lt;VertexAll&gt;&amp;<sp/>vertices,<sp/>std::vector&lt;uint32_t&gt;&amp;<sp/>indices)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;VertexAll&gt;<sp/>Vertices;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;uint32_t&gt;<sp/>Indices;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>latitudeBands<sp/>=<sp/>20.0f;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>longitudeBands<sp/>=<sp/>20.0f;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>radius<sp/>=<sp/>1.0f;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>latNumber<sp/>=<sp/>0;<sp/>latNumber<sp/>&lt;=<sp/>latitudeBands;<sp/>latNumber++)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>theta<sp/>=<sp/>latNumber<sp/>*<sp/>3.14<sp/>/<sp/>latitudeBands;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sinTheta<sp/>=<sp/>sin(theta);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>cosTheta<sp/>=<sp/>cos(theta);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>longNumber<sp/>=<sp/>0;<sp/>longNumber<sp/>&lt;=<sp/>longitudeBands;<sp/>longNumber++)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>phi<sp/>=<sp/>longNumber<sp/>*<sp/>2<sp/>*<sp/>3.147<sp/>/<sp/>longitudeBands;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sinPhi<sp/>=<sp/>sin(phi);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>cosPhi<sp/>=<sp/>cos(phi);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_geo_1_1_vertex_all" kindref="compound">VertexAll</ref><sp/>vs;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vs.<ref refid="struct_geo_1_1_vertex_all_1a6d00aa9a5cf6d1d7008a289743d3c9b2" kindref="member">texture</ref>.x<sp/>=<sp/>(longNumber<sp/>/<sp/>longitudeBands);<sp/></highlight><highlight class="comment">//<sp/>u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vs.<ref refid="struct_geo_1_1_vertex_all_1a6d00aa9a5cf6d1d7008a289743d3c9b2" kindref="member">texture</ref>.y<sp/>=<sp/>(latNumber<sp/>/<sp/>latitudeBands);<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>v</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vs.<ref refid="struct_geo_1_1_vertex_all_1a6ada83f408d4b12db7375617d428c25e" kindref="member">normal</ref>.x<sp/>=<sp/>cosPhi<sp/>*<sp/>sinTheta;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>normal<sp/>x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vs.<ref refid="struct_geo_1_1_vertex_all_1a6ada83f408d4b12db7375617d428c25e" kindref="member">normal</ref>.y<sp/>=<sp/>cosTheta;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>normal<sp/>y</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vs.<ref refid="struct_geo_1_1_vertex_all_1a6ada83f408d4b12db7375617d428c25e" kindref="member">normal</ref>.z<sp/>=<sp/>sinPhi<sp/>*<sp/>sinTheta;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>normal<sp/>z</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vs.<ref refid="struct_geo_1_1_vertex_all_1ae2b1c4d1f7af407c3d3380efa68e55df" kindref="member">position</ref>.x<sp/>=<sp/>radius<sp/>*<sp/>vs.<ref refid="struct_geo_1_1_vertex_all_1a6ada83f408d4b12db7375617d428c25e" kindref="member">normal</ref>.x;<sp/></highlight><highlight class="comment">//<sp/>x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vs.<ref refid="struct_geo_1_1_vertex_all_1ae2b1c4d1f7af407c3d3380efa68e55df" kindref="member">position</ref>.y<sp/>=<sp/>radius<sp/>*<sp/>vs.<ref refid="struct_geo_1_1_vertex_all_1a6ada83f408d4b12db7375617d428c25e" kindref="member">normal</ref>.y;<sp/></highlight><highlight class="comment">//<sp/>y</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vs.<ref refid="struct_geo_1_1_vertex_all_1ae2b1c4d1f7af407c3d3380efa68e55df" kindref="member">position</ref>.z<sp/>=<sp/>radius<sp/>*<sp/>vs.<ref refid="struct_geo_1_1_vertex_all_1a6ada83f408d4b12db7375617d428c25e" kindref="member">normal</ref>.z;<sp/></highlight><highlight class="comment">//<sp/>z</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vertices.push_back(vs);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>latNumber<sp/>=<sp/>0;<sp/>latNumber<sp/>&lt;<sp/>latitudeBands;<sp/>latNumber++)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>longNumber<sp/>=<sp/>0;<sp/>longNumber<sp/>&lt;<sp/>longitudeBands;<sp/>longNumber++)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>first<sp/>=<sp/>(latNumber<sp/>*<sp/>(longitudeBands<sp/>+<sp/>1))<sp/>+<sp/>longNumber;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>second<sp/>=<sp/>first<sp/>+<sp/>longitudeBands<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Indices.push_back(first);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Indices.push_back(second);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Indices.push_back(first<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Indices.push_back(second);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Indices.push_back(second<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Indices.push_back(first<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>vertices.clear();<sp/>indices.clear();</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>vertices<sp/>=<sp/>Vertices;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>indices<sp/>=<sp/>Indices;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-renderer/src/render/Geometry.cpp"/>
+  </compounddef>
+</doxygen>

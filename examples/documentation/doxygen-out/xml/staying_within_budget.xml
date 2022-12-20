@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="staying_within_budget" kind="page">
+    <compoundname>staying_within_budget</compoundname>
+    <title>Staying within budget</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>When developing a graphics-intensive game or program, it is important to avoid allocating more GPU memory than it is physically available. When the memory is over-committed, various bad things can happen, depending on the specific GPU, graphics driver, and operating system:</para>
+<para><itemizedlist>
+<listitem><para>It may just work without any problems.</para>
+</listitem><listitem><para>The application may slow down because some memory blocks are moved to system RAM and the GPU has to access them through PCI Express bus.</para>
+</listitem><listitem><para>A new allocation may take very long time to complete, even few seconds, and possibly freeze entire system.</para>
+</listitem><listitem><para>The new allocation may fail with `VK_ERROR_OUT_OF_DEVICE_MEMORY`.</para>
+</listitem><listitem><para>It may even result in GPU crash (TDR), observed as `VK_ERROR_DEVICE_LOST` returned somewhere later.</para>
+</listitem></itemizedlist>
+</para>
+<sect1 id="staying_within_budget_1staying_within_budget_querying_for_budget">
+<title>Querying for budget</title>
+<para>To query for current memory usage and available budget, use function <ref refid="group__group__stats_1ga620eaa8a9d919860f7deaf4d0148b2a1" kindref="member">vmaGetHeapBudgets()</ref>. Returned structure <ref refid="struct_vma_budget" kindref="compound">VmaBudget</ref> contains quantities expressed in bytes, per Vulkan memory heap.</para>
+<para>Please note that this function returns different information and works faster than <ref refid="group__group__stats_1gad176279c8da8f50399674b2ef03ca866" kindref="member">vmaCalculateStatistics()</ref>. <ref refid="group__group__stats_1ga620eaa8a9d919860f7deaf4d0148b2a1" kindref="member">vmaGetHeapBudgets()</ref> can be called every frame or even before every allocation, while <ref refid="group__group__stats_1gad176279c8da8f50399674b2ef03ca866" kindref="member">vmaCalculateStatistics()</ref> is intended to be used rarely, only to obtain statistical information, e.g. for debugging purposes.</para>
+<para>It is recommended to use <bold>VK_EXT_memory_budget</bold> device extension to obtain information about the budget from Vulkan device. VMA is able to use this extension automatically. When not enabled, the allocator behaves same way, but then it estimates current usage and available budget based on its internal information and Vulkan memory heap sizes, which may be less precise. In order to use this extension:</para>
+<para>1. Make sure extensions VK_EXT_memory_budget and VK_KHR_get_physical_device_properties2 required by it are available and enable them. Please note that the first is a device extension and the second is instance extension! 2. Use flag <ref refid="group__group__init_1gga4f87c9100d154a65a4ad495f7763cf7ca4d4687863f7bd4b418c6006dc04400b0" kindref="member">VMA_ALLOCATOR_CREATE_EXT_MEMORY_BUDGET_BIT</ref> when creating <ref refid="struct_vma_allocator" kindref="compound">VmaAllocator</ref> object. 3. Make sure to call <ref refid="group__group__init_1gab8e037d09b55f13312f792e0cd98cc03" kindref="member">vmaSetCurrentFrameIndex()</ref> every frame. Budget is queried from Vulkan inside of it to avoid overhead of querying it with every allocation.</para>
+</sect1>
+<sect1 id="staying_within_budget_1staying_within_budget_controlling_memory_usage">
+<title>Controlling memory usage</title>
+<para>There are many ways in which you can try to stay within the budget.</para>
+<para>First, when making new allocation requires allocating a new memory block, the library tries not to exceed the budget automatically. If a block with default recommended size (e.g. 256 MB) would go over budget, a smaller block is allocated, possibly even dedicated memory for just this resource.</para>
+<para>If the size of the requested resource plus current memory usage is more than the budget, by default the library still tries to create it, leaving it to the Vulkan implementation whether the allocation succeeds or fails. You can change this behavior by using <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597ab8b1764f3e9022368e440c057783b92d" kindref="member">VMA_ALLOCATION_CREATE_WITHIN_BUDGET_BIT</ref> flag. With it, the allocation is not made if it would exceed the budget or if the budget is already exceeded. VMA then tries to make the allocation from the next eligible Vulkan memory type. The all of them fail, the call then fails with `VK_ERROR_OUT_OF_DEVICE_MEMORY`. Example usage pattern may be to pass the <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597ab8b1764f3e9022368e440c057783b92d" kindref="member">VMA_ALLOCATION_CREATE_WITHIN_BUDGET_BIT</ref> flag when creating resources that are not essential for the application (e.g. the texture of a specific object) and not to pass it when creating critically important resources (e.g. render targets).</para>
+<para>On AMD graphics cards there is a custom vendor extension available: <bold>VK_AMD_memory_overallocation_behavior</bold> that allows to control the behavior of the Vulkan implementation in out-of-memory cases - whether it should fail with an error code or still allow the allocation. Usage of this extension involves only passing extra structure on Vulkan device creation, so it is out of scope of this library.</para>
+<para>Finally, you can also use <ref refid="group__group__alloc_1ggad9889c10c798b040d59c92f257cae597a89759603401014eb325eb22a3839f2ff" kindref="member">VMA_ALLOCATION_CREATE_NEVER_ALLOCATE_BIT</ref> flag to make sure a new allocation is created only when it fits inside one of the existing memory blocks. If it would require to allocate a new block, if fails instead with `VK_ERROR_OUT_OF_DEVICE_MEMORY`. This also ensures that the function call is very fast because it never goes to Vulkan to obtain a new block.</para>
+<para><simplesect kind="note"><para>Creating <ref refid="custom_memory_pools" kindref="compound">Custom memory pools</ref> with <ref refid="struct_vma_pool_create_info_1ad8006fb803185c0a699d30f3e9a865ae" kindref="member">VmaPoolCreateInfo::minBlockCount</ref> set to more than 0 will currently try to allocate memory blocks without checking whether they fit within budget. </para>
+</simplesect>
+</para>
+</sect1>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h"/>
+  </compounddef>
+</doxygen>

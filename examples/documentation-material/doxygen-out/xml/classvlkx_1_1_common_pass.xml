@@ -1,0 +1,371 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_common_pass" kind="class" language="C++" prot="public">
+    <compoundname>vlkx::CommonPass</compoundname>
+    <derivedcompoundref refid="classvlkx_1_1_compute_pass" prot="public" virt="non-virtual">vlkx::ComputePass</derivedcompoundref>
+    <derivedcompoundref refid="classvlkx_1_1_graphics_pass" prot="public" virt="non-virtual">vlkx::GraphicsPass</derivedcompoundref>
+    <includes refid="_g_p_u_pass_8h" local="no">GPUPass.h</includes>
+    <innerclass refid="structvlkx_1_1_common_pass_1_1_usages" prot="protected">vlkx::CommonPass::Usages</innerclass>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classvlkx_1_1_common_pass_1a25f432298ae391eb70749f70545e0210" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; std::string, <ref refid="classvlkx_1_1_usage_tracker" kindref="compound">UsageTracker</ref> &gt;</type>
+        <definition>std::map&lt;std::string, UsageTracker&gt; vlkx::CommonPass::usageHistory</definition>
+        <argsstring></argsstring>
+        <name>usageHistory</name>
+        <qualifiedname>vlkx::CommonPass::usageHistory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="67" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_common_pass_1aa01ec8a7f632c2cff2e895cba1381095" prot="protected" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int vlkx::CommonPass::numPasses</definition>
+        <argsstring></argsstring>
+        <name>numPasses</name>
+        <qualifiedname>vlkx::CommonPass::numPasses</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="68" column="19" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_common_pass_1a2f96fb205a65ec563552172cba691771" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::CommonPass::CommonPass</definition>
+        <argsstring>(int passes)</argsstring>
+        <name>CommonPass</name>
+        <qualifiedname>vlkx::CommonPass::CommonPass</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>passes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="19" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_common_pass_1a1b9262c051f528437e8f2bade6513003" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::CommonPass::CommonPass</definition>
+        <argsstring>(const CommonPass &amp;)=delete</argsstring>
+        <name>CommonPass</name>
+        <qualifiedname>vlkx::CommonPass::CommonPass</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_common_pass" kindref="compound">CommonPass</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="22" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_common_pass_1a1a4f5ebf18a784a25dbbc466dd07d379" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkx_1_1_common_pass" kindref="compound">CommonPass</ref> &amp;</type>
+        <definition>CommonPass &amp; vlkx::CommonPass::operator=</definition>
+        <argsstring>(const CommonPass &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>vlkx::CommonPass::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_common_pass" kindref="compound">CommonPass</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="23" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_common_pass_1a2ec068fa399c81062e5127c0ea219776" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual vlkx::CommonPass::~CommonPass</definition>
+        <argsstring>()=default</argsstring>
+        <name>~CommonPass</name>
+        <qualifiedname>vlkx::CommonPass::~CommonPass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="24" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_common_pass_1ab40583b5b09c3ae7cc3e84fab1ad3f8f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>VkImageLayout</type>
+        <definition>VkImageLayout vlkx::CommonPass::getInitialLayout</definition>
+        <argsstring>(const std::string &amp;name) const</argsstring>
+        <name>getInitialLayout</name>
+        <qualifiedname>vlkx::CommonPass::getInitialLayout</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="27" column="23" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_common_pass_1a27b43bff62d86ad2d8b1a38ee5246ef5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>VkImageLayout</type>
+        <definition>VkImageLayout vlkx::CommonPass::getFinalLayout</definition>
+        <argsstring>(const std::string &amp;name) const</argsstring>
+        <name>getFinalLayout</name>
+        <qualifiedname>vlkx::CommonPass::getFinalLayout</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="29" column="23" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_common_pass_1ae1ddc45b5a13dcaeefb9fd90e1a01286" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>VkImageLayout</type>
+        <definition>VkImageLayout vlkx::CommonPass::getSubpassLayout</definition>
+        <argsstring>(const std::string &amp;name, int subpass) const</argsstring>
+        <name>getSubpassLayout</name>
+        <qualifiedname>vlkx::CommonPass::getSubpassLayout</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>subpass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="31" column="23" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_common_pass_1afd8a13333e01d84ef27def5865537b57" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::CommonPass::update</definition>
+        <argsstring>(const std::string &amp;name, MultiImageTracker &amp;tracker) const</argsstring>
+        <name>update</name>
+        <qualifiedname>vlkx::CommonPass::update</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classvlkx_1_1_multi_image_tracker" kindref="compound">MultiImageTracker</ref> &amp;</type>
+          <declname>tracker</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="34" column="14" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classvlkx_1_1_common_pass_1a363fdb3c8cd8a0be814d1e2cc4e86188" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::CommonPass::addUsage</definition>
+        <argsstring>(std::string &amp;&amp;name, UsageTracker &amp;&amp;tracker)</argsstring>
+        <name>addUsage</name>
+        <qualifiedname>vlkx::CommonPass::addUsage</qualifiedname>
+        <param>
+          <type>std::string &amp;&amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classvlkx_1_1_usage_tracker" kindref="compound">UsageTracker</ref> &amp;&amp;</type>
+          <declname>tracker</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="48" column="14" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="16" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_common_pass_1a28959152e1f9a81700128fcf8570406a" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classvlkx_1_1_usage_tracker" kindref="compound">UsageTracker</ref> &amp;</type>
+        <definition>const UsageTracker &amp; vlkx::CommonPass::getHistory</definition>
+        <argsstring>(const std::string &amp;name) const</argsstring>
+        <name>getHistory</name>
+        <qualifiedname>vlkx::CommonPass::getHistory</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="51" column="28" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_common_pass_1a104cdcade852ddfc74291114405ba66f" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref> *</type>
+        <definition>const ImageUsage * vlkx::CommonPass::getUsage</definition>
+        <argsstring>(const std::string &amp;name, int pass) const</argsstring>
+        <name>getUsage</name>
+        <qualifiedname>vlkx::CommonPass::getUsage</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="54" column="26" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="48" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_common_pass_1a9572aa2ed2e03b85484940ebf584a993" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; <ref refid="structvlkx_1_1_common_pass_1_1_usages" kindref="compound">Usages</ref> &gt;</type>
+        <definition>std::optional&lt; CommonPass::Usages &gt; vlkx::CommonPass::checkForSync</definition>
+        <argsstring>(const std::string &amp;name, int pass) const</argsstring>
+        <name>checkForSync</name>
+        <qualifiedname>vlkx::CommonPass::checkForSync</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="57" column="23" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="55" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_common_pass_1a14d528c3da5a00363d332c8c6f3752bc" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::CommonPass::validate</definition>
+        <argsstring>(int pass, const std::string &amp;image, bool includeVirtual) const</argsstring>
+        <name>validate</name>
+        <qualifiedname>vlkx::CommonPass::validate</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>pass</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>includeVirtual</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="61" column="14" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/GPUPass.cpp" bodystart="73" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_common_pass_1a9d60fbdc2f45846f581db953ec819ca6" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int vlkx::CommonPass::getVirtualInitial</definition>
+        <argsstring>() const</argsstring>
+        <name>getVirtualInitial</name>
+        <qualifiedname>vlkx::CommonPass::getVirtualInitial</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="63" column="13" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_common_pass_1a44de9972c147e804118ca37681b7294c" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int vlkx::CommonPass::getVirtualFinal</definition>
+        <argsstring>() const</argsstring>
+        <name>getVirtualFinal</name>
+        <qualifiedname>vlkx::CommonPass::getVirtualFinal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="64" column="13" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="64" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The common base class for rendering and computing passes that run on the GPU. Provides some utility methods for handling attachment metadata between subpasses. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>vlkx::CommonPass</label>
+        <link refid="classvlkx_1_1_common_pass"/>
+      </node>
+      <node id="2">
+        <label>vlkx::ComputePass</label>
+        <link refid="classvlkx_1_1_compute_pass"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>vlkx::GraphicsPass</label>
+        <link refid="classvlkx_1_1_graphics_pass"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" line="16" column="5" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/GPUPass.h" bodystart="16" bodyend="69"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_common_pass_1a363fdb3c8cd8a0be814d1e2cc4e86188" prot="protected" virt="non-virtual"><scope>vlkx::CommonPass</scope><name>addUsage</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a9572aa2ed2e03b85484940ebf584a993" prot="protected" virt="non-virtual"><scope>vlkx::CommonPass</scope><name>checkForSync</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a2f96fb205a65ec563552172cba691771" prot="public" virt="non-virtual"><scope>vlkx::CommonPass</scope><name>CommonPass</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a1b9262c051f528437e8f2bade6513003" prot="public" virt="non-virtual"><scope>vlkx::CommonPass</scope><name>CommonPass</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a27b43bff62d86ad2d8b1a38ee5246ef5" prot="public" virt="non-virtual"><scope>vlkx::CommonPass</scope><name>getFinalLayout</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a28959152e1f9a81700128fcf8570406a" prot="protected" virt="non-virtual"><scope>vlkx::CommonPass</scope><name>getHistory</name></member>
+      <member refid="classvlkx_1_1_common_pass_1ab40583b5b09c3ae7cc3e84fab1ad3f8f" prot="public" virt="non-virtual"><scope>vlkx::CommonPass</scope><name>getInitialLayout</name></member>
+      <member refid="classvlkx_1_1_common_pass_1ae1ddc45b5a13dcaeefb9fd90e1a01286" prot="public" virt="non-virtual"><scope>vlkx::CommonPass</scope><name>getSubpassLayout</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a104cdcade852ddfc74291114405ba66f" prot="protected" virt="non-virtual"><scope>vlkx::CommonPass</scope><name>getUsage</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a44de9972c147e804118ca37681b7294c" prot="protected" virt="non-virtual"><scope>vlkx::CommonPass</scope><name>getVirtualFinal</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a9d60fbdc2f45846f581db953ec819ca6" prot="protected" virt="non-virtual"><scope>vlkx::CommonPass</scope><name>getVirtualInitial</name></member>
+      <member refid="classvlkx_1_1_common_pass_1aa01ec8a7f632c2cff2e895cba1381095" prot="protected" virt="non-virtual"><scope>vlkx::CommonPass</scope><name>numPasses</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a1a4f5ebf18a784a25dbbc466dd07d379" prot="public" virt="non-virtual"><scope>vlkx::CommonPass</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_common_pass_1afd8a13333e01d84ef27def5865537b57" prot="public" virt="non-virtual"><scope>vlkx::CommonPass</scope><name>update</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a25f432298ae391eb70749f70545e0210" prot="protected" virt="non-virtual"><scope>vlkx::CommonPass</scope><name>usageHistory</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a14d528c3da5a00363d332c8c6f3752bc" prot="protected" virt="non-virtual"><scope>vlkx::CommonPass</scope><name>validate</name></member>
+      <member refid="classvlkx_1_1_common_pass_1a2ec068fa399c81062e5127c0ea219776" prot="public" virt="virtual"><scope>vlkx::CommonPass</scope><name>~CommonPass</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

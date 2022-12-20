@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_catch_1_1_decomposer" kind="struct" language="C++" prot="public">
+    <compoundname>Catch::Decomposer</compoundname>
+    <includes refid="catch_8hpp" local="no">catch.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_catch_1_1_decomposer_1a4b1e5e844c20e5a90e3d759d216674cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto Catch::Decomposer::operator&lt;=</definition>
+        <argsstring>(T const &amp;lhs) -&gt; ExprLhs&lt; T const &amp; &gt;</argsstring>
+        <name>operator&lt;=</name>
+        <qualifiedname>Catch::Decomposer::operator&lt;=</qualifiedname>
+        <param>
+          <type>T const &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="2416" column="9" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="2416" bodyend="2418"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_catch_1_1_decomposer_1aac129b94903ae1339d5709049d83613b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto Catch::Decomposer::operator&lt;=</definition>
+        <argsstring>(bool value) -&gt; ExprLhs&lt; bool &gt;</argsstring>
+        <name>operator&lt;=</name>
+        <qualifiedname>Catch::Decomposer::operator&lt;=</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="2420" column="9" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="2420" bodyend="2422"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="2414" column="5" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="2414" bodyend="2423"/>
+    <listofallmembers>
+      <member refid="struct_catch_1_1_decomposer_1a4b1e5e844c20e5a90e3d759d216674cd" prot="public" virt="non-virtual"><scope>Catch::Decomposer</scope><name>operator&lt;=</name></member>
+      <member refid="struct_catch_1_1_decomposer_1aac129b94903ae1339d5709049d83613b" prot="public" virt="non-virtual"><scope>Catch::Decomposer</scope><name>operator&lt;=</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

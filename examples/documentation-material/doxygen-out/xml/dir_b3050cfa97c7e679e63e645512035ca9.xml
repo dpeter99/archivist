@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_b3050cfa97c7e679e63e645512035ca9" kind="dir">
+    <compoundname>shadow-engine/shadow-file-format/src</compoundname>
+    <innerfile refid="_s_f_f_element_8cpp">SFFElement.cpp</innerfile>
+    <innerfile refid="_s_f_f_element_8h">SFFElement.h</innerfile>
+    <innerfile refid="_s_f_f_parser_8cpp">SFFParser.cpp</innerfile>
+    <innerfile refid="_s_f_f_parser_8h">SFFParser.h</innerfile>
+    <innerfile refid="_s_f_f_version_8h">SFFVersion.h</innerfile>
+    <innerfile refid="_s_f_f_writer_8cpp">SFFWriter.cpp</innerfile>
+    <innerfile refid="_s_f_f_writer_8h">SFFWriter.h</innerfile>
+    <innerfile refid="_shadow_8_file_format_8ixx">Shadow.FileFormat.ixx</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-file-format/src/"/>
+  </compounddef>
+</doxygen>

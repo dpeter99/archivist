@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structvlkx_1_1_graphics_pipeline_builder_1_1_pass_info" kind="struct" language="C++" prot="private">
+    <compoundname>vlkx::GraphicsPipelineBuilder::PassInfo</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvlkx_1_1_graphics_pipeline_builder_1_1_pass_info_1a4ccfea41ee192743ce2b653b0d0e31cd" prot="public" static="no" mutable="no">
+        <type>VkRenderPass</type>
+        <definition>VkRenderPass vlkx::GraphicsPipelineBuilder::PassInfo::pass</definition>
+        <argsstring></argsstring>
+        <name>pass</name>
+        <qualifiedname>vlkx::GraphicsPipelineBuilder::PassInfo::pass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="104" column="26" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_graphics_pipeline_builder_1_1_pass_info_1abe9f0b6379109f249842e6fc6bf1886c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t vlkx::GraphicsPipelineBuilder::PassInfo::subpass</definition>
+        <argsstring></argsstring>
+        <name>subpass</name>
+        <qualifiedname>vlkx::GraphicsPipelineBuilder::PassInfo::subpass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="105" column="22" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" line="103" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/shader/Pipeline.h" bodystart="103" bodyend="106"/>
+    <listofallmembers>
+      <member refid="structvlkx_1_1_graphics_pipeline_builder_1_1_pass_info_1a4ccfea41ee192743ce2b653b0d0e31cd" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPipelineBuilder::PassInfo</scope><name>pass</name></member>
+      <member refid="structvlkx_1_1_graphics_pipeline_builder_1_1_pass_info_1abe9f0b6379109f249842e6fc6bf1886c" prot="public" virt="non-virtual"><scope>vlkx::GraphicsPipelineBuilder::PassInfo</scope><name>subpass</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

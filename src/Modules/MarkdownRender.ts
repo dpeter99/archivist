@@ -3,7 +3,7 @@ import {Content} from "../Content.ts";
 
 import {SimpleModule} from "../Module/SimpleModule.ts";
 
-import MarkdownIt from "npm:markdown-it";
+import MarkdownIt from "npm:markdown-it@13.0.1";
 
 import markdownItMultimdTable from "npm:markdown-it-multimd-table";
 import markdownItAttrs from "npm:markdown-it-attrs";
@@ -46,7 +46,7 @@ class Options {
  */
 export class MarkdownRender extends SimpleModule{
 
-    markdownIt:any;
+    public markdownIt:any;
     private _props: Options;
 
     constructor(props?:Options) {
@@ -60,7 +60,9 @@ export class MarkdownRender extends SimpleModule{
         super.setup(pipeline, parent);
 
         if(typeof MarkdownIt !== 'undefined'){
-            this.markdownIt = new MarkdownIt();
+            this.markdownIt = new MarkdownIt({
+                html:         true
+            });
         }
 
         if(this._props.func != undefined){
@@ -92,7 +94,15 @@ export class MarkdownRender extends SimpleModule{
 
 
     async processDoc(doc:Content): Promise<any> {
-        doc.content = this.markdownIt.render(doc.content);
+        doc.content = await this.markdownIt.render(doc.content);
+    }
+
+    resolveLink(link:string, env:any){
+        return this.pipeline.files.find(c=>c.path == link)?.meta.url ?? "<NOT FOUND>";
+    }
+
+    inlineParse(text:string){
+        return this.markdownIt.render(text);
     }
 
 }

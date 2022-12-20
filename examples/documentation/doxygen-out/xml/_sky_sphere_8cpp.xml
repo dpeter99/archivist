@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_sky_sphere_8cpp" kind="file" language="C++">
+    <compoundname>SkySphere.cpp</compoundname>
+    <includes local="yes">shpch.h</includes>
+    <includes refid="_sky_sphere_8h" local="yes">SkySphere.h</includes>
+    <includes local="yes">EntitySystem/Scene.h</includes>
+    <includes local="yes">ShadowAsset/Assets/Textures/TextureCubeMap.h</includes>
+    <includes refid="shadow-entity_2_entities_2_camera_8h" local="yes">Camera.h</includes>
+    <incdepgraph>
+      <node id="14">
+        <label>Camera.h</label>
+        <link refid="shadow-entity_2_entities_2_camera_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Internal/Inspectors/DefaultInspectors.h</label>
+        <link refid="_default_inspectors_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>MeshRenderer.h</label>
+        <link refid="_mesh_renderer_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-entity/Entities/SkySphere.cpp</label>
+        <link refid="_sky_sphere_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SkySphere.h</label>
+        <link refid="_sky_sphere_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>EntitySystem/Entity.h</label>
+      </node>
+      <node id="12">
+        <label>EntitySystem/Scene.h</label>
+      </node>
+      <node id="6">
+        <label>EntitySystem/SceneEntity.h</label>
+      </node>
+      <node id="11">
+        <label>EntitySystem\Entities\Internal\Inspectors\DefaultInspectors.h</label>
+      </node>
+      <node id="16">
+        <label>Inspector/EntityInspector.h</label>
+      </node>
+      <node id="18">
+        <label>Inspector/InspectorSystem.h</label>
+      </node>
+      <node id="10">
+        <label>Inspector\EntityInspector.h</label>
+      </node>
+      <node id="8">
+        <label>ShadowAsset/Assets/Material.h</label>
+      </node>
+      <node id="7">
+        <label>ShadowAsset/Assets/Mesh.h</label>
+      </node>
+      <node id="13">
+        <label>ShadowAsset/Assets/Textures/TextureCubeMap.h</label>
+      </node>
+      <node id="9">
+        <label>ShadowRenderer/RenderScene.h</label>
+      </node>
+      <node id="15">
+        <label>glm/glm.hpp</label>
+      </node>
+      <node id="2">
+        <label>shpch.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;shpch.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sky_sphere_8h" kindref="compound">SkySphere.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;EntitySystem/Scene.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ShadowAsset/Assets/Textures/TextureCubeMap.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="shadow-renderer_2inc_2vlkx_2render_2_camera_8h" kindref="compound">Camera.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sky_sphere_1a6236510405e611442bffa2e7d485ff6c" kindref="member">SkySphere::Build</ref>()</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer<sp/>=<sp/>AddInternalChildEntity&lt;MeshRenderer&gt;();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer-&gt;name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;renderer&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sky_sphere_1ae87222510a2a3eca1e9d046028b15e42" kindref="member">SkySphere::Init</ref>()</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer-&gt;SetMesh(<sp/>ShadowEngine::Assets::Mesh::CreateSphere(0,<sp/>0));</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>m_Shader<sp/>=<sp/>ShadowEngine::Ref&lt;ShadowEngine::Rendering::Shader&gt;(ShadowEngine::Rendering::Shader::CreateFromCompiled(</highlight><highlight class="stringliteral">&quot;Shaders/SkyBox-VS.cso&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Shaders/SkyBox-FS.cso&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>m_Material<sp/>=<sp/>std::make_shared&lt;ShadowEngine::Assets::Material&gt;(m_Shader);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>env_map<sp/>=<sp/>std::make_shared&lt;ShadowEngine::Assets::TextureCubeMap&gt;(</highlight><highlight class="stringliteral">&quot;./Resources/Textures/cube_maps/ame_ash/ashcanyon.tga&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>env_map-&gt;Upload();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>m_Material-&gt;SetTexture(</highlight><highlight class="stringliteral">&quot;Mat_Env&quot;</highlight><highlight class="normal">,<sp/>env_map);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>m_Material-&gt;SetProperty(</highlight><highlight class="stringliteral">&quot;tint&quot;</highlight><highlight class="normal">,<sp/>glm::vec4(1,<sp/>1,<sp/>1,<sp/>1));</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>m_Material-&gt;UpdateBufferIfDirty();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer-&gt;SetMaterial(m_Material);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer-&gt;SetScale({<sp/>2,2,2<sp/>});</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer-&gt;SetPosition({0,0,0});</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sky_sphere_1abb300c484e0514ac0954630e1ee50a96" kindref="member">SkySphere::Update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer-&gt;SetPosition(scene-&gt;mainCamera-&gt;parent-&gt;GetTransform()-&gt;GetPosition());</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-entity/Entities/SkySphere.cpp"/>
+  </compounddef>
+</doxygen>

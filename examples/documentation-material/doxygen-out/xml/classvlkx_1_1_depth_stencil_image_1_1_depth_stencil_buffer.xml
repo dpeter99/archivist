@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_depth_stencil_image_1_1_depth_stencil_buffer" kind="class" language="C++" prot="private">
+    <compoundname>vlkx::DepthStencilImage::DepthStencilBuffer</compoundname>
+    <basecompoundref refid="classvlkx_1_1_image_buffer" prot="public" virt="non-virtual">vlkx::ImageBuffer</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_depth_stencil_image_1_1_depth_stencil_buffer_1a9ed46a85c540d208737d6e5897f241ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::DepthStencilImage::DepthStencilBuffer::DepthStencilBuffer</definition>
+        <argsstring>(const VkExtent2D &amp;extent, VkFormat format)</argsstring>
+        <name>DepthStencilBuffer</name>
+        <qualifiedname>vlkx::DepthStencilImage::DepthStencilBuffer::DepthStencilBuffer</qualifiedname>
+        <param>
+          <type>const VkExtent2D &amp;</type>
+          <declname>extent</declname>
+        </param>
+        <param>
+          <type>VkFormat</type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="274" column="13" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="374" bodyend="376"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_depth_stencil_image_1_1_depth_stencil_buffer_1aa3a99ae032fe9c3d26085f8ab243e6e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::DepthStencilImage::DepthStencilBuffer::DepthStencilBuffer</definition>
+        <argsstring>(const DepthStencilBuffer &amp;)=delete</argsstring>
+        <name>DepthStencilBuffer</name>
+        <qualifiedname>vlkx::DepthStencilImage::DepthStencilBuffer::DepthStencilBuffer</qualifiedname>
+        <param>
+          <type>const DepthStencilBuffer &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="275" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_depth_stencil_image_1_1_depth_stencil_buffer_1a645787f3f461ea6a84191834ce8abd83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DepthStencilBuffer &amp;</type>
+        <definition>DepthStencilBuffer &amp; vlkx::DepthStencilImage::DepthStencilBuffer::operator=</definition>
+        <argsstring>(const DepthStencilBuffer &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>vlkx::DepthStencilImage::DepthStencilBuffer::operator=</qualifiedname>
+        <param>
+          <type>const DepthStencilBuffer &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="276" column="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>vlkx::Buffer</label>
+        <link refid="classvlkx_1_1_buffer"/>
+      </node>
+      <node id="1">
+        <label>vlkx::DepthStencilImage::DepthStencilBuffer</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vlkx::ImageBuffer</label>
+        <link refid="classvlkx_1_1_image_buffer"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>vlkx::Buffer</label>
+        <link refid="classvlkx_1_1_buffer"/>
+      </node>
+      <node id="1">
+        <label>vlkx::DepthStencilImage::DepthStencilBuffer</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vlkx::ImageBuffer</label>
+        <link refid="classvlkx_1_1_image_buffer"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="272" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="272" bodyend="277"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_image_buffer_1a8ad640258cbc9aa645ed68e3c320af99" prot="protected" virt="non-virtual"><scope>vlkx::DepthStencilImage::DepthStencilBuffer</scope><name>Buffer</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1a055bf8f2da8b0c7084493579a2f27ccb" prot="protected" virt="non-virtual"><scope>vlkx::DepthStencilImage::DepthStencilBuffer</scope><name>Buffer</name></member>
+      <member refid="classvlkx_1_1_depth_stencil_image_1_1_depth_stencil_buffer_1a9ed46a85c540d208737d6e5897f241ba" prot="public" virt="non-virtual"><scope>vlkx::DepthStencilImage::DepthStencilBuffer</scope><name>DepthStencilBuffer</name></member>
+      <member refid="classvlkx_1_1_depth_stencil_image_1_1_depth_stencil_buffer_1aa3a99ae032fe9c3d26085f8ab243e6e9" prot="public" virt="non-virtual"><scope>vlkx::DepthStencilImage::DepthStencilBuffer</scope><name>DepthStencilBuffer</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1a1225bb009adc667e09e2de733c532b4b" prot="public" virt="non-virtual"><scope>vlkx::DepthStencilImage::DepthStencilBuffer</scope><name>get</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1a8af69d019a352c47d1a9ceee8da5bbd8" prot="public" virt="non-virtual"><scope>vlkx::DepthStencilImage::DepthStencilBuffer</scope><name>getImage</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1a7e8c4a3cdc9fff6cbbac10ca387f96f4" prot="public" virt="non-virtual"><scope>vlkx::DepthStencilImage::DepthStencilBuffer</scope><name>ImageBuffer</name></member>
+      <member refid="classvlkx_1_1_depth_stencil_image_1_1_depth_stencil_buffer_1a645787f3f461ea6a84191834ce8abd83" prot="public" virt="non-virtual"><scope>vlkx::DepthStencilImage::DepthStencilBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1af504fd2db1c92a93dd16717a71c77d4c" prot="public" virt="non-virtual" ambiguityscope="vlkx::ImageBuffer::"><scope>vlkx::DepthStencilImage::DepthStencilBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_buffer_1a9971cfc28a88cebf00d2642baa5cd72e" prot="public" virt="non-virtual" ambiguityscope="vlkx::Buffer::"><scope>vlkx::DepthStencilImage::DepthStencilBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1ad35569abbda03b3d34685fe5fe0397c1" prot="protected" virt="non-virtual"><scope>vlkx::DepthStencilImage::DepthStencilBuffer</scope><name>setImage</name></member>
+      <member refid="classvlkx_1_1_buffer_1a5ad6564545b79d1ce612ebf2b6fc44f7" prot="public" virt="virtual"><scope>vlkx::DepthStencilImage::DepthStencilBuffer</scope><name>~Buffer</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1aae7932a11b4cb26b6579c68425043b7c" prot="public" virt="non-virtual"><scope>vlkx::DepthStencilImage::DepthStencilBuffer</scope><name>~ImageBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

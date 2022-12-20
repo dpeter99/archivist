@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_vma_budget" kind="struct" language="C++" prot="public">
+    <compoundname>VmaBudget</compoundname>
+    <includes refid="vk__mem__alloc_8h" local="no">vk_mem_alloc.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_vma_budget_1a6d15ab3a798fd62d9efa3a1e1f83bf54" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_vma_statistics" kindref="compound">VmaStatistics</ref></type>
+        <definition>VmaStatistics VmaBudget::statistics</definition>
+        <argsstring></argsstring>
+        <name>statistics</name>
+        <qualifiedname>VmaBudget::statistics</qualifiedname>
+        <briefdescription>
+<para>Statistics fetched from the library. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1188" column="19" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_budget_1a84dd1ecca8b0110259eb206dbadb11f6" prot="public" static="no" mutable="no">
+        <type>VkDeviceSize</type>
+        <definition>VkDeviceSize VmaBudget::usage</definition>
+        <argsstring></argsstring>
+        <name>usage</name>
+        <qualifiedname>VmaBudget::usage</qualifiedname>
+        <briefdescription>
+<para>Estimated current memory usage of the program, in bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Fetched from system using VK_EXT_memory_budget extension if enabled.</para>
+<para>It might be different than `statistics.blockBytes` (usually higher) due to additional implicit objects also occupying the memory, like swapchain, pipelines, descriptor heaps, command buffers, or `VkDeviceMemory` blocks allocated outside of this library, if any. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1197" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vma_budget_1ab82e1d1754c2d210d0bdf90220bc6cdd" prot="public" static="no" mutable="no">
+        <type>VkDeviceSize</type>
+        <definition>VkDeviceSize VmaBudget::budget</definition>
+        <argsstring></argsstring>
+        <name>budget</name>
+        <qualifiedname>VmaBudget::budget</qualifiedname>
+        <briefdescription>
+<para>Estimated amount of memory available to the program, in bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Fetched from system using VK_EXT_memory_budget extension if enabled.</para>
+<para>It might be different (most probably smaller) than `VkMemoryHeap::size[heapIndex]` due to factors external to the program, decided by the operating system. Difference `budget - usage` is the amount of additional memory that can probably be allocated without problems. Exceeding the budget may result in various problems. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1207" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1207" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Statistics of current memory usage and available budget for a specific memory heap. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>These are fast to calculate. See function <ref refid="group__group__stats_1ga620eaa8a9d919860f7deaf4d0148b2a1" kindref="member">vmaGetHeapBudgets()</ref>. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>VmaBudget</label>
+        <link refid="struct_vma_budget"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>statistics</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>VmaStatistics</label>
+        <link refid="struct_vma_statistics"/>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1184" column="1" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="1185" bodyend="1208"/>
+    <listofallmembers>
+      <member refid="struct_vma_budget_1ab82e1d1754c2d210d0bdf90220bc6cdd" prot="public" virt="non-virtual"><scope>VmaBudget</scope><name>budget</name></member>
+      <member refid="struct_vma_budget_1a6d15ab3a798fd62d9efa3a1e1f83bf54" prot="public" virt="non-virtual"><scope>VmaBudget</scope><name>statistics</name></member>
+      <member refid="struct_vma_budget_1a84dd1ecca8b0110259eb206dbadb11f6" prot="public" virt="non-virtual"><scope>VmaBudget</scope><name>usage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

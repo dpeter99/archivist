@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_static_per_vertex_buffer" kind="class" language="C++" prot="public">
+    <compoundname>vlkx::StaticPerVertexBuffer</compoundname>
+    <basecompoundref refid="classvlkx_1_1_per_vertex_buffer" prot="public" virt="non-virtual">vlkx::PerVertexBuffer</basecompoundref>
+    <includes refid="_buffer_8h" local="no">Buffer.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_static_per_vertex_buffer_1a7a0189bb94d162764c5af5536d70e296" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::StaticPerVertexBuffer::StaticPerVertexBuffer</definition>
+        <argsstring>(const BufferDataMeta &amp;info, std::vector&lt; VkVertexInputAttributeDescription &gt; &amp;&amp;attrs)</argsstring>
+        <name>StaticPerVertexBuffer</name>
+        <qualifiedname>vlkx::StaticPerVertexBuffer::StaticPerVertexBuffer</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_per_vertex_buffer_1_1_buffer_data_meta" kindref="compound">BufferDataMeta</ref> &amp;</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; VkVertexInputAttributeDescription &gt; &amp;&amp;</type>
+          <declname>attrs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="258" column="9" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Buffer.cpp" bodystart="147" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_static_per_vertex_buffer_1ac9bc2a7a3a938df4b46317e2378f53ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::StaticPerVertexBuffer::StaticPerVertexBuffer</definition>
+        <argsstring>(const StaticPerVertexBuffer &amp;)=delete</argsstring>
+        <name>StaticPerVertexBuffer</name>
+        <qualifiedname>vlkx::StaticPerVertexBuffer::StaticPerVertexBuffer</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_static_per_vertex_buffer" kindref="compound">StaticPerVertexBuffer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="260" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_static_per_vertex_buffer_1a66d82b79f1d28b571b691b6593ac8769" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkx_1_1_static_per_vertex_buffer" kindref="compound">StaticPerVertexBuffer</ref> &amp;</type>
+        <definition>StaticPerVertexBuffer &amp; vlkx::StaticPerVertexBuffer::operator=</definition>
+        <argsstring>(const StaticPerVertexBuffer &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>vlkx::StaticPerVertexBuffer::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_static_per_vertex_buffer" kindref="compound">StaticPerVertexBuffer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="261" column="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>vlkx::Buffer</label>
+        <link refid="classvlkx_1_1_buffer"/>
+      </node>
+      <node id="4">
+        <label>vlkx::DataBuffer</label>
+        <link refid="classvlkx_1_1_data_buffer"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vlkx::PerVertexBuffer</label>
+        <link refid="classvlkx_1_1_per_vertex_buffer"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>vlkx::StaticPerVertexBuffer</label>
+        <link refid="classvlkx_1_1_static_per_vertex_buffer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>vlkx::VertexBuffer</label>
+        <link refid="classvlkx_1_1_vertex_buffer"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>vlkx::Buffer</label>
+        <link refid="classvlkx_1_1_buffer"/>
+      </node>
+      <node id="4">
+        <label>vlkx::DataBuffer</label>
+        <link refid="classvlkx_1_1_data_buffer"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vlkx::PerVertexBuffer</label>
+        <link refid="classvlkx_1_1_per_vertex_buffer"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>vlkx::StaticPerVertexBuffer</label>
+        <link refid="classvlkx_1_1_static_per_vertex_buffer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>vlkx::VertexBuffer</label>
+        <link refid="classvlkx_1_1_vertex_buffer"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="256" column="5" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="256" bodyend="262"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_vertex_buffer_1acac05ae64c87a431410d0537dd7bfb73" prot="protected" virt="non-virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>attributes</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1a8ad640258cbc9aa645ed68e3c320af99" prot="protected" virt="non-virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>Buffer</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1a055bf8f2da8b0c7084493579a2f27ccb" prot="protected" virt="non-virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>Buffer</name></member>
+      <member refid="classvlkx_1_1_vertex_buffer_1ad7d395f14fe512540318e0bb971ec712" prot="protected" virt="non-virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>create</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1ad6b6ba2e5dd942b42f66a3f5c04e87a3" prot="public" virt="non-virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>DataBuffer</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1a3abb23c2d7be5c18b266478202796c9b" prot="public" virt="non-virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>DataBuffer</name></member>
+      <member refid="classvlkx_1_1_per_vertex_buffer_1ac84ee2304eaa21919dedf2009aea7cd4" prot="public" virt="non-virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>draw</name></member>
+      <member refid="classvlkx_1_1_vertex_buffer_1a84a1d2695206f30ab3eaf15a0d9f101b" prot="public" virt="non-virtual" ambiguityscope="vlkx::VertexBuffer::"><scope>vlkx::StaticPerVertexBuffer</scope><name>draw</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1a0b3ac1c5f2d714165c994f65e18b6604" prot="protected" virt="non-virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>get</name></member>
+      <member refid="classvlkx_1_1_vertex_buffer_1af7102131161f21cbf3a52653971324f8" prot="public" virt="non-virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>getAttrs</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1a9e10436c90954e0f4e213af704e10707" prot="protected" virt="non-virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>getBuffer</name></member>
+      <member refid="classvlkx_1_1_per_vertex_buffer_1a769276fcf21937804f549e2a5395d01e" prot="protected" virt="non-virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>getInfo</name></member>
+      <member refid="classvlkx_1_1_static_per_vertex_buffer_1a66d82b79f1d28b571b691b6593ac8769" prot="public" virt="non-virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_per_vertex_buffer_1ad49c5fc7f036a3b9ebf063226cbe91e7" prot="public" virt="non-virtual" ambiguityscope="vlkx::PerVertexBuffer::"><scope>vlkx::StaticPerVertexBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_vertex_buffer_1aca19fea4a31e96e9dbea2e77e5a2ea1c" prot="public" virt="non-virtual" ambiguityscope="vlkx::VertexBuffer::"><scope>vlkx::StaticPerVertexBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1a0caf832cd047de702e77433a3e97dc8d" prot="public" virt="non-virtual" ambiguityscope="vlkx::DataBuffer::"><scope>vlkx::StaticPerVertexBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_buffer_1a9971cfc28a88cebf00d2642baa5cd72e" prot="public" virt="non-virtual" ambiguityscope="vlkx::Buffer::"><scope>vlkx::StaticPerVertexBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_per_vertex_buffer_1a214a48b48c35de1cf5860c719cea2ad4" prot="public" virt="non-virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>PerVertexBuffer</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1ab4e03d32dd898176c66e13d19d7d2fa8" prot="protected" virt="non-virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>setBuffer</name></member>
+      <member refid="classvlkx_1_1_static_per_vertex_buffer_1a7a0189bb94d162764c5af5536d70e296" prot="public" virt="non-virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>StaticPerVertexBuffer</name></member>
+      <member refid="classvlkx_1_1_static_per_vertex_buffer_1ac9bc2a7a3a938df4b46317e2378f53ad" prot="public" virt="non-virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>StaticPerVertexBuffer</name></member>
+      <member refid="classvlkx_1_1_per_vertex_buffer_1a3a57f3575d6852d24b8df1307c90cd78" prot="protected" virt="non-virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>VertexBuffer</name></member>
+      <member refid="classvlkx_1_1_per_vertex_buffer_1aceabde3791209d5801d823d020db7721" prot="protected" virt="non-virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>VertexBuffer</name></member>
+      <member refid="classvlkx_1_1_buffer_1a5ad6564545b79d1ce612ebf2b6fc44f7" prot="public" virt="virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>~Buffer</name></member>
+      <member refid="classvlkx_1_1_data_buffer_1abe2a28ce8e68a76cda222d51bfca0ac0" prot="public" virt="non-virtual"><scope>vlkx::StaticPerVertexBuffer</scope><name>~DataBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

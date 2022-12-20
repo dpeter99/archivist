@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structvlkx_1_1_shader_stage" kind="struct" language="C++" prot="public">
+    <compoundname>vlkx::ShaderStage</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvlkx_1_1_shader_stage_1ad89dc5d84cbd9a4f022bef09344319ff" prot="public" static="no" mutable="no">
+        <type>VkShaderStageFlagBits</type>
+        <definition>VkShaderStageFlagBits vlkx::ShaderStage::stage</definition>
+        <argsstring></argsstring>
+        <name>stage</name>
+        <qualifiedname>vlkx::ShaderStage::stage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp" line="9" column="31" bodyfile="shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_shader_stage_1ab5625ef90c78f76b7b0777b31b6a7cf7" prot="public" static="no" mutable="no">
+        <type><ref refid="classvlkx_1_1_shader_module_1abf19f7031c060cb9682e37324f43a3e8" kindref="member">ShaderModule::CountedShader</ref></type>
+        <definition>ShaderModule::CountedShader vlkx::ShaderStage::module</definition>
+        <argsstring></argsstring>
+        <name>module</name>
+        <qualifiedname>vlkx::ShaderStage::module</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp" line="10" column="37" bodyfile="shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>shadowutil::RefCounter&lt; ShaderModule &gt;</label>
+        <link refid="classshadowutil_1_1_ref_counter"/>
+      </node>
+      <node id="1">
+        <label>vlkx::ShaderStage</label>
+        <link refid="structvlkx_1_1_shader_stage"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>module</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp" line="8" column="5" bodyfile="shadow-engine/shadow-renderer/src/render/pipeline/Pipeline.cpp" bodystart="8" bodyend="11"/>
+    <listofallmembers>
+      <member refid="structvlkx_1_1_shader_stage_1ab5625ef90c78f76b7b0777b31b6a7cf7" prot="public" virt="non-virtual"><scope>vlkx::ShaderStage</scope><name>module</name></member>
+      <member refid="structvlkx_1_1_shader_stage_1ad89dc5d84cbd9a4f022bef09344319ff" prot="public" virt="non-virtual"><scope>vlkx::ShaderStage</scope><name>stage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

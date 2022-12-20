@@ -1,0 +1,723 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_shadow_engine_1_1_entity_system_1_1_entity" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::EntitySystem::Entity</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_s_h_object" prot="public" virt="non-virtual">ShadowEngine::SHObject</basecompoundref>
+    <derivedcompoundref refid="class_directional_light" prot="public" virt="non-virtual">DirectionalLight</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" prot="public" virt="non-virtual">ShadowEngine::EntitySystem::SceneEntity</derivedcompoundref>
+    <derivedcompoundref refid="class_sky_sphere" prot="public" virt="non-virtual">SkySphere</derivedcompoundref>
+    <includes refid="_entity_8h" local="no">Entity.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_entity_system_1_1_entity_1aa0f3d66b8c0f51d1a307b08cc8989c11" prot="private" static="yes" mutable="no">
+        <type><ref refid="_s_h_object_8h_1ab6e37410b4b149b1b5cb3c4bafe8aa53" kindref="member">SHObject_Base</ref>(<ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref>) public const <ref refid="namespace_shadow_engine_1_1_entity_system_1a70b6222c789aa7585ac013f1f674717e" kindref="member">Rtm_UUID</ref></type>
+        <definition>SHObject_Base (Entity) public const Rtm_UUID ShadowEngine::EntitySystem::Entity::INVALID_UID</definition>
+        <argsstring></argsstring>
+        <name>INVALID_UID</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::INVALID_UID</qualifiedname>
+        <initializer>= -1</initializer>
+        <briefdescription>
+<para>This is the Globally unique ID of this <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref>  </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This ID will be only assigned to this <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> instance It can be used to look up entities, but it is not recommended as it is a slow process For <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> Lookup use the m_runtimeIndex</para>
+<para>This is the UID that represents an invalid ID  </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="111" column="23" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_entity_system_1_1_entity_1a676b67705575eeeb52e41854f827e241" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ShadowEngine::EntitySystem::Entity::m_runtimeIndex</definition>
+        <argsstring></argsstring>
+        <name>m_runtimeIndex</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::m_runtimeIndex</qualifiedname>
+        <briefdescription>
+<para>This is the ID of the entity usable for lookup  </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This ID will be reused when the <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> is removed</para>
+<para>To use this <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> for lookup use the LUT in the <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_manager" kindref="compound">EntityManager</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="120" column="5" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_entity_system_1_1_entity_1a625d805045965c49bddfdf2fd522453a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ShadowEngine::EntitySystem::Entity::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::name</qualifiedname>
+        <briefdescription>
+<para>The name of this entity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="123" column="13" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_entity_system_1_1_entity_1a52ae950ab9abd069ed1b1caf5139fdbf" prot="private" static="no" mutable="no">
+        <type><ref refid="class_shadow_engine_1_1_entity_system_1_1_scene" kindref="compound">Scene</ref> *</type>
+        <definition>Scene* ShadowEngine::EntitySystem::Entity::scene</definition>
+        <argsstring></argsstring>
+        <name>scene</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::scene</qualifiedname>
+        <briefdescription>
+<para>The scene this <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> is assigned to  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="128" column="7" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_entity_system_1_1_entity_1ac8bbc525cc859e252dd79b65a8a24c7a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr</ref>&lt; <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;rtm_ptr&lt;Entity&gt; &gt; ShadowEngine::EntitySystem::Entity::internalHierarchy</definition>
+        <argsstring></argsstring>
+        <name>internalHierarchy</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::internalHierarchy</qualifiedname>
+        <briefdescription>
+<para>The internal hierarchy of this <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref>  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="133" column="13" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_entity_system_1_1_entity_1aa15c54fd6fb7a658329bc3bbe8801f4d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr</ref>&lt; <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;rtm_ptr&lt;Entity&gt; &gt; ShadowEngine::EntitySystem::Entity::hierarchy</definition>
+        <argsstring></argsstring>
+        <name>hierarchy</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::hierarchy</qualifiedname>
+        <briefdescription>
+<para>The external hierarchy of this <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref>  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="138" column="13" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_entity_system_1_1_entity_1aaf841c51fe127eae2c66b84a6bcb9a96" prot="private" static="no" mutable="no">
+        <type><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr</ref>&lt; <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> &gt;</type>
+        <definition>rtm_ptr&lt;Entity&gt; ShadowEngine::EntitySystem::Entity::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::parent</qualifiedname>
+        <briefdescription>
+<para>The parent entity  </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This can be null when the <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> is the top one in the hierarchy </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="145" column="9" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1acc838f644f91d02e1c88baa793f790db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EntitySystem::Entity::Entity</definition>
+        <argsstring>()</argsstring>
+        <name>Entity</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::Entity</qualifiedname>
+        <briefdescription>
+<para>Empty default constructor  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="151" column="1" bodyfile="shadow-engine/shadow-entity/src/Entity.cpp" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1a56a49e9e0ebd81f6e2960a9a9f3163d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EntitySystem::Entity::Entity</definition>
+        <argsstring>(Scene *scene)</argsstring>
+        <name>Entity</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::Entity</qualifiedname>
+        <param>
+          <type><ref refid="class_shadow_engine_1_1_entity_system_1_1_scene" kindref="compound">Scene</ref> *</type>
+          <declname>scene</declname>
+        </param>
+        <briefdescription>
+<para>Constructor defining the scene it is located in  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scene that this entity is in</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="157" column="1" bodyfile="shadow-engine/shadow-entity/src/Entity.cpp" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1ab83dad935ab0cdc34d088530aa4290d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ShadowEngine::EntitySystem::Entity::~Entity</definition>
+        <argsstring>()</argsstring>
+        <name>~Entity</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::~Entity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="159" column="9" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="159" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1a2ce2825f04cf5a3994103d252e0a437d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> *</type>
+        <definition>Entity * ShadowEngine::EntitySystem::Entity::Create</definition>
+        <argsstring>(Scene *scene)</argsstring>
+        <name>Create</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::Create</qualifiedname>
+        <param>
+          <type><ref refid="class_shadow_engine_1_1_entity_system_1_1_scene" kindref="compound">Scene</ref> *</type>
+          <declname>scene</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref>  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scene that this entity is in</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> created</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="166" column="16" bodyfile="shadow-engine/shadow-entity/src/Entity.cpp" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1a7ed91c18cd535d461d0c0bee314778b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::EntitySystem::Entity::Build</definition>
+        <argsstring>()</argsstring>
+        <name>Build</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::Build</qualifiedname>
+        <reimplementedby refid="class_first_person_camera_1a9ec1ea48e81528d1684a06a4a88d4399">Build</reimplementedby>
+        <reimplementedby refid="class_sky_sphere_1a6236510405e611442bffa2e7d485ff6c">Build</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="168" column="14" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="168" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1ab66b3c8b723d29f36182a220ad5e4333" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::EntitySystem::Entity::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::Init</qualifiedname>
+        <reimplementedby refid="class_camera_1a5505545a402c6674b302c26e8348983a">Init</reimplementedby>
+        <reimplementedby refid="class_directional_light_1acb61bad62edfbbbb26ed5ab64e7edeeb">Init</reimplementedby>
+        <reimplementedby refid="class_first_person_camera_1aa8844af6c3b3ab98c4baa4145f3c0408">Init</reimplementedby>
+        <reimplementedby refid="class_mesh_renderer_1a4815504cfaa41b46e8a4f8d9b1297bc6">Init</reimplementedby>
+        <reimplementedby refid="class_player_1a4eaaeb9d0967fef59baac319b9cc8d60">Init</reimplementedby>
+        <reimplementedby refid="class_point_light_1a0edae8808493e63bff7f48f648a9bb56">Init</reimplementedby>
+        <reimplementedby refid="class_sky_sphere_1ae87222510a2a3eca1e9d046028b15e42">Init</reimplementedby>
+        <briefdescription>
+<para>Called when the <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> needs to be initialised.  </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when the <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> needs to be initialised. Should be used as a constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="174" column="15" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="174" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1ad2ef421c23738c0b95102972405fb0ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::EntitySystem::Entity::Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::Start</qualifiedname>
+        <reimplementedby refid="class_player_1a4c618ea9123b386e5d9ef8809797d629">Start</reimplementedby>
+        <briefdescription>
+<para>Called when the world starts or before the <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> get&apos;s it&apos;s first tick  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="179" column="14" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="179" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1ab9dbee0b3a70b05ed23472b94f7e5973" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::EntitySystem::Entity::Update</definition>
+        <argsstring>(float dt)</argsstring>
+        <name>Update</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::Update</qualifiedname>
+        <reimplementedby refid="class_first_person_camera_1a76b2d2598fd66fb9620d02b8f29f84ee">Update</reimplementedby>
+        <reimplementedby refid="class_player_1a458939904cb2b2552089b841a5da5057">Update</reimplementedby>
+        <reimplementedby refid="class_sky_sphere_1abb300c484e0514ac0954630e1ee50a96">Update</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Called every tick  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="184" column="14" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="184" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1a4cffe49cb70b159efeccc3c6c3fa1535" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::EntitySystem::Entity::LateUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>LateUpdate</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::LateUpdate</qualifiedname>
+        <reimplementedby refid="class_player_1af7c2586946a6687ad2fd5b1d928329a3">LateUpdate</reimplementedby>
+        <briefdescription>
+<para>Called every Tick after the first is finished  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="189" column="14" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="189" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1a651807d474b385c7069d842af13469c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::EntitySystem::Entity::Render</definition>
+        <argsstring>()</argsstring>
+        <name>Render</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::Render</qualifiedname>
+        <reimplementedby refid="class_player_1adadf7046d564eabdca1ce20080bb56ed">Render</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="191" column="14" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="191" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1ae8e132ee0fe4cb70ab47237867890cfd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::EntitySystem::Entity::LateRender</definition>
+        <argsstring>()</argsstring>
+        <name>LateRender</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::LateRender</qualifiedname>
+        <reimplementedby refid="class_player_1a6ea74acc03257d0bdb130ddd479a044a">LateRender</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="193" column="15" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="193" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1a06cd52aa29a540304d1fac5d81b4adc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespace_shadow_engine_1_1_entity_system_1a02582979cc3de070200b67134662911b" kindref="member">EntityFlags</ref></type>
+        <definition>virtual EntityFlags ShadowEngine::EntitySystem::Entity::GetFlags</definition>
+        <argsstring>()</argsstring>
+        <name>GetFlags</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::GetFlags</qualifiedname>
+        <reimplementedby refid="class_mesh_renderer_1a7b730cacaaefa7d11111540fcbe5ab5a">GetFlags</reimplementedby>
+        <reimplementedby refid="class_player_1a1804eed138a1c2c294ea2c933fa40d8b">GetFlags</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="195" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1a88673e7fb3299e723c9f3742086f371e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>ShadowEntity::Transform *</type>
+        <definition>ShadowEntity::Transform * ShadowEngine::EntitySystem::Entity::GetTransform</definition>
+        <argsstring>()</argsstring>
+        <name>GetTransform</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::GetTransform</qualifiedname>
+        <reimplementedby refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a973bfe0c2c49579e235fb9602f836f94">GetTransform</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="199" column="33" bodyfile="shadow-engine/shadow-entity/src/Entity.cpp" bodystart="17" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1a5b61f357021bff0686ae651d3002871a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::EntitySystem::Entity::ParentTransformUpdated</definition>
+        <argsstring>()</argsstring>
+        <name>ParentTransformUpdated</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::ParentTransformUpdated</qualifiedname>
+        <reimplementedby refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a6c1dac32de915b3137de87563144beee">ParentTransformUpdated</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="203" column="14" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="203" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1af98d0541f3281b0817d6ac558ce505c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::EntitySystem::Entity::TransformChanged</definition>
+        <argsstring>()</argsstring>
+        <name>TransformChanged</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::TransformChanged</qualifiedname>
+        <reimplementedby refid="class_camera_1a415f5bc609f7c0a9a76e2b02e6145c74">TransformChanged</reimplementedby>
+        <reimplementedby refid="class_directional_light_1a16843d3ba0cac9e74ba9fd56681f3b53">TransformChanged</reimplementedby>
+        <reimplementedby refid="class_mesh_renderer_1a3653bc27a79020e5f02a1dfb9db1bef1">TransformChanged</reimplementedby>
+        <reimplementedby refid="class_point_light_1aa32c52119b50365403bc413343c5b4ab">TransformChanged</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="210" column="14" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="210" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1ad5520f0873e2e6cc070d3a594cdae14b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::Entity::SetScene</definition>
+        <argsstring>(Scene *se)</argsstring>
+        <name>SetScene</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::SetScene</qualifiedname>
+        <param>
+          <type><ref refid="class_shadow_engine_1_1_entity_system_1_1_scene" kindref="compound">Scene</ref> *</type>
+          <declname>se</declname>
+        </param>
+        <briefdescription>
+<para>Sets the scene this <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> is in  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>se</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scene this entity belongs to</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="217" column="6" bodyfile="shadow-engine/shadow-entity/src/Entity.cpp" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1a467b64e41054aa1ce0a351c58a9b607c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::Entity::SetParent</definition>
+        <argsstring>(rtm_ptr&lt; Entity &gt; e)</argsstring>
+        <name>SetParent</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::SetParent</qualifiedname>
+        <reimplementedby refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a1fa641bdc27235315d094ea17e3ebcb2">SetParent</reimplementedby>
+        <param>
+          <type><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr</ref>&lt; <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> &gt;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="219" column="14" bodyfile="shadow-engine/shadow-entity/src/Entity.cpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1a167917321102ba2540d58b63956ce501" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>class ...</type>
+            <declname>ARGS</declname>
+            <defname>ARGS</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr</ref>&lt; T &gt;</type>
+        <definition>rtm_ptr&lt; T &gt; ShadowEngine::EntitySystem::Entity::AddChildEntity</definition>
+        <argsstring>(ARGS &amp;&amp;... args)</argsstring>
+        <name>AddChildEntity</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::AddChildEntity</qualifiedname>
+        <param>
+          <type>ARGS &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="223" column="9" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="223" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1a0631f85d7f63698d6277dab44eef0458" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>class ...</type>
+            <declname>ARGS</declname>
+            <defname>ARGS</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">rtm_ptr</ref>&lt; T &gt;</type>
+        <definition>rtm_ptr&lt; T &gt; ShadowEngine::EntitySystem::Entity::AddInternalChildEntity</definition>
+        <argsstring>(ARGS &amp;&amp;... args)</argsstring>
+        <name>AddInternalChildEntity</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::AddInternalChildEntity</qualifiedname>
+        <param>
+          <type>ARGS &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="233" column="9" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="233" bodyend="240"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_shadow_engine_1_1_entity_system_1_1_entity_1ae349cdee7f2ea586dbacf56e8ef1c4c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const Entity &amp;dt)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="243" column="8" bodyfile="shadow-engine/shadow-entity/src/Entity.cpp" bodystart="53" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1ae1e9c0d251e50e5c83017674bfda6479" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void ShadowEngine::EntitySystem::Entity::UpdateEntities</definition>
+        <argsstring>(EntityManager *mgr, float dt)</argsstring>
+        <name>UpdateEntities</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::UpdateEntities</qualifiedname>
+        <param>
+          <type><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_manager" kindref="compound">EntityManager</ref> *</type>
+          <declname>mgr</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="247" column="13" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="247" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1a3f3be81f16814ef82260bc17f3135abe" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void ShadowEngine::EntitySystem::Entity::InitEntities</definition>
+        <argsstring>(EntityManager *mgr)</argsstring>
+        <name>InitEntities</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::InitEntities</qualifiedname>
+        <param>
+          <type><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_manager" kindref="compound">EntityManager</ref> *</type>
+          <declname>mgr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="260" column="13" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="260" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_1a352e0c6d95699f06f0a427ea7c313e42" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void ShadowEngine::EntitySystem::Entity::RegisterDefaultUpdate</definition>
+        <argsstring>(EntityManager &amp;mgr)</argsstring>
+        <name>RegisterDefaultUpdate</name>
+        <qualifiedname>ShadowEngine::EntitySystem::Entity::RegisterDefaultUpdate</qualifiedname>
+        <param>
+          <type><ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_manager" kindref="compound">EntityManager</ref> &amp;</type>
+          <declname>mgr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/Entity.h" line="273" column="13" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="273" bodyend="279"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> in the scene  </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This is the base entity used in the game world. This should never be instantiated only the derived classes A entity has a parent and internal, external hierarchy. The parent is the <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> that this is under. This effects the position of this <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref>.</para>
+<para>The internal hierarchy is used for Entities that are considered as part of this <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> these would be like components in Unity or UE4 This base <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> does not have a position so it acts like a Component in other engines. If you want to have a position you have to use <ref refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" kindref="compound">SceneEntity</ref> The base <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">Entity</ref> does however does have a <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a88673e7fb3299e723c9f3742086f371e" kindref="member">Entity::GetTransform</ref> that returns the position of the first parent&apos;s position that is <ref refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" kindref="compound">SceneEntity</ref> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>Camera</label>
+        <link refid="class_camera"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DirectionalLight</label>
+        <link refid="class_directional_light"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>FirstPersonCamera</label>
+        <link refid="class_first_person_camera"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>MeshRenderer</label>
+        <link refid="class_mesh_renderer"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Player</label>
+        <link refid="class_player"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>PointLight</label>
+        <link refid="class_point_light"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ShadowEngine::EntitySystem::Entity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_entity"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ShadowEngine::EntitySystem::SceneEntity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object"/>
+      </node>
+      <node id="10">
+        <label>SkySphere</label>
+        <link refid="class_sky_sphere"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ShadowEngine::EntitySystem::Entity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_entity"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object"/>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-entity/inc/Entity.h" line="95" column="1" bodyfile="shadow-engine/shadow-entity/inc/Entity.h" bodystart="96" bodyend="280"/>
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a167917321102ba2540d58b63956ce501" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>AddChildEntity</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a0631f85d7f63698d6277dab44eef0458" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>AddInternalChildEntity</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a7ed91c18cd535d461d0c0bee314778b7" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>Build</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a2ce2825f04cf5a3994103d252e0a437d" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>Create</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1acc838f644f91d02e1c88baa793f790db" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>Entity</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a56a49e9e0ebd81f6e2960a9a9f3163d8" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>Entity</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a5244bd8527763320cbef208e3a6e4860" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>GenerateId</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a06cd52aa29a540304d1fac5d81b4adc5" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>GetFlags</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a88673e7fb3299e723c9f3742086f371e" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>GetTransform</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a3597667efd33b935a89ac11d3b47a215" prot="public" virt="pure-virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>GetType</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" virt="pure-virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>GetTypeId</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1aa15c54fd6fb7a658329bc3bbe8801f4d" prot="private" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>hierarchy</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ab66b3c8b723d29f36182a220ad5e4333" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>Init</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a3f3be81f16814ef82260bc17f3135abe" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>InitEntities</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ac8bbc525cc859e252dd79b65a8a24c7a" prot="private" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>internalHierarchy</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1aa0f3d66b8c0f51d1a307b08cc8989c11" prot="private" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>INVALID_UID</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ae8e132ee0fe4cb70ab47237867890cfd" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>LateRender</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a4cffe49cb70b159efeccc3c6c3fa1535" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>LateUpdate</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a676b67705575eeeb52e41854f827e241" prot="private" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>m_runtimeIndex</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a625d805045965c49bddfdf2fd522453a" prot="private" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>name</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ae349cdee7f2ea586dbacf56e8ef1c4c8" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1aaf841c51fe127eae2c66b84a6bcb9a96" prot="private" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>parent</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a5b61f357021bff0686ae651d3002871a" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>ParentTransformUpdated</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a352e0c6d95699f06f0a427ea7c313e42" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>RegisterDefaultUpdate</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a651807d474b385c7069d842af13469c6" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>Render</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a52ae950ab9abd069ed1b1caf5139fdbf" prot="private" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>scene</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1a467b64e41054aa1ce0a351c58a9b607c" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>SetParent</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ad5520f0873e2e6cc070d3a594cdae14b" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>SetScene</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ad2ef421c23738c0b95102972405fb0ab" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>Start</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1af98d0541f3281b0817d6ac558ce505c1" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>TransformChanged</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ab9dbee0b3a70b05ed23472b94f7e5973" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>Update</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ae1e9c0d251e50e5c83017674bfda6479" prot="public" virt="non-virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>UpdateEntities</name></member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_1ab83dad935ab0cdc34d088530aa4290d3" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>~Entity</name></member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" virt="virtual"><scope>ShadowEngine::EntitySystem::Entity</scope><name>~SHObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

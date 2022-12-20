@@ -1,0 +1,350 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_screen_render_pass_8h" kind="file" language="C++">
+    <compoundname>ScreenRenderPass.h</compoundname>
+    <includes local="no">optional</includes>
+    <includes local="no">memory</includes>
+    <includes refid="_generic_render_pass_8h" local="yes">GenericRenderPass.h</includes>
+    <includes refid="_image_usage_8h" local="yes">vlkx/vulkan/abstraction/ImageUsage.h</includes>
+    <includes refid="_image_8h" local="yes">vlkx/vulkan/abstraction/Image.h</includes>
+    <includedby refid="_screen_render_pass_8cpp" local="yes">shadow-engine/shadow-renderer/src/render/render_pass/ScreenRenderPass.cpp</includedby>
+    <includedby refid="_vulkan_module_8cpp" local="yes">shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp</includedby>
+    <incdepgraph>
+      <node id="18">
+        <label>exports.h</label>
+        <link refid="exports_8h"/>
+      </node>
+      <node id="4">
+        <label>GenericRenderPass.h</label>
+        <link refid="_generic_render_pass_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h</label>
+        <link refid="_screen_render_pass_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>vlkx/vulkan/Tools.h</label>
+        <link refid="_tools_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>vlkx/vulkan/ValidationAndExtension.h</label>
+        <link refid="_validation_and_extension_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>VulkanDevice.h</label>
+        <link refid="_vulkan_device_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>Buffer.h</label>
+        <link refid="_buffer_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>vlkx/vulkan/abstraction/Image.h</label>
+        <link refid="_image_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>ImageUsage.h</label>
+        <link refid="_image_usage_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>vulkan/vk_mem_alloc.h</label>
+        <link refid="vk__mem__alloc_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>shadow/util/RefCounter.h</label>
+        <link refid="_ref_counter_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>SDL.h</label>
+      </node>
+      <node id="25">
+        <label>array</label>
+      </node>
+      <node id="8">
+        <label>functional</label>
+      </node>
+      <node id="14">
+        <label>iostream</label>
+      </node>
+      <node id="21">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+      <node id="2">
+        <label>optional</label>
+      </node>
+      <node id="15">
+        <label>set</label>
+      </node>
+      <node id="11">
+        <label>stdexcept</label>
+      </node>
+      <node id="22">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>utility</label>
+      </node>
+      <node id="9">
+        <label>variant</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+      <node id="5">
+        <label>vulkan/vulkan.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h</label>
+        <link refid="_screen_render_pass_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>shadow-engine/shadow-renderer/src/render/render_pass/ScreenRenderPass.cpp</label>
+        <link refid="_screen_render_pass_8cpp"/>
+      </node>
+      <node id="3">
+        <label>shadow-engine/shadow-renderer/src/vulkan/VulkanModule.cpp</label>
+        <link refid="_vulkan_module_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classvlkx_1_1_renderer_config" prot="public">vlkx::RendererConfig</innerclass>
+    <innerclass refid="structvlkx_1_1_attachment_config" prot="public">vlkx::AttachmentConfig</innerclass>
+    <innerclass refid="structvlkx_1_1_attachment" prot="public">vlkx::Attachment</innerclass>
+    <innerclass refid="classvlkx_1_1_screen_render_pass_manager" prot="public">vlkx::ScreenRenderPassManager</innerclass>
+    <innernamespace refid="namespacevlkx">vlkx</innernamespace>
+    <innernamespace refid="namespacevlkx_1_1_simple_render_pass">vlkx::SimpleRenderPass</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;optional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_generic_render_pass_8h" kindref="compound">GenericRenderPass.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_image_usage_8h" kindref="compound">vlkx/vulkan/abstraction/ImageUsage.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_image_8h" kindref="compound">vlkx/vulkan/abstraction/Image.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacevlkx" kindref="compound">vlkx</ref><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>simple<sp/>and<sp/>versatile<sp/>way<sp/>to<sp/>configure<sp/>render<sp/>passes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Intended<sp/>to<sp/>be<sp/>used<sp/>with<sp/>the<sp/>SimpleRenderPass<sp/>and<sp/>the<sp/>ScreenRenderPass.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="classvlkx_1_1_renderer_config" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_renderer_config" kindref="compound">RendererConfig</ref><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15" refid="classvlkx_1_1_renderer_config_1a0e5bb1f8babbb679a03dd8a08a20c66f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_renderer_config_1a0e5bb1f8babbb679a03dd8a08a20c66f" kindref="member">RendererConfig</ref>(std::vector&lt;std::unique_ptr&lt;vlkx::Image&gt;&gt;&amp;<sp/>destinations,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>toScreen<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>:<sp/><ref refid="classvlkx_1_1_renderer_config_1a7d207eead3215bdb3be2e1d9970136c9" kindref="member">renderImages</ref>(destinations)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_renderer_config_1a462c54afd68685fe28541ca4f77e3e36" kindref="member">numOpaquePasses</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_renderer_config_1abbbfe0a388525082c88980895c02f371" kindref="member">rendersToScreen</ref><sp/>=<sp/>toScreen;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_renderer_config" kindref="compound">RendererConfig</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>passCount,<sp/>std::vector&lt;std::unique_ptr&lt;vlkx::Image&gt;&gt;&amp;<sp/>destinations,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>toScreen<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>std::optional&lt;int&gt;<sp/>firstTransparent<sp/>=<sp/>std::nullopt,<sp/>std::optional&lt;int&gt;<sp/>firstOverlay<sp/>=<sp/>std::nullopt);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>number<sp/>of<sp/>passes<sp/>that<sp/>use<sp/>the<sp/>depth<sp/>buffer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classvlkx_1_1_renderer_config_1ae4271a43427892015dc4e0d7a6feda84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_renderer_config_1ae4271a43427892015dc4e0d7a6feda84" kindref="member">depthPasses</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_renderer_config_1a462c54afd68685fe28541ca4f77e3e36" kindref="member">numOpaquePasses</ref><sp/>+<sp/><ref refid="classvlkx_1_1_renderer_config_1a391f168e9e42441bb1e178e568463a6d" kindref="member">numTransparentPasses</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>total<sp/>number<sp/>of<sp/>passes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classvlkx_1_1_renderer_config_1ac7b60b80830730b8489d2ccdb059916a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_renderer_config_1ac7b60b80830730b8489d2ccdb059916a" kindref="member">passes</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_renderer_config_1ae4271a43427892015dc4e0d7a6feda84" kindref="member">depthPasses</ref>()<sp/>+<sp/>numOverlayPasses;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>whether<sp/>any<sp/>passes<sp/>use<sp/>the<sp/>depth<sp/>buffer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classvlkx_1_1_renderer_config_1a9603ae1ba3a866156cf1113488973232" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_renderer_config_1a9603ae1ba3a866156cf1113488973232" kindref="member">usesDepth</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_renderer_config_1ae4271a43427892015dc4e0d7a6feda84" kindref="member">depthPasses</ref>()<sp/>&gt;<sp/>0;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>the<sp/>render<sp/>pass<sp/>builder.<sp/>Can<sp/>be<sp/>called<sp/>multiple<sp/>times.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classvlkx_1_1_renderer_config_1af2933cc0723caeea2c7eb181349bbf1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_renderer_config_1af2933cc0723caeea2c7eb181349bbf1e" kindref="member">build</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classvlkx_1_1_renderer_config_1ad4ed4c8515c1ebfb8fc3fe7071b4fc1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_renderer_config_1ad4ed4c8515c1ebfb8fc3fe7071b4fc1b" kindref="member">RendererConfig</ref>(<ref refid="classvlkx_1_1_renderer_config" kindref="compound">RendererConfig</ref>&amp;)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41" refid="classvlkx_1_1_renderer_config_1ad439a1ea9c689de7a1f000f34d7292d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_renderer_config_1ad439a1ea9c689de7a1f000f34d7292d7" kindref="member">RendererConfig</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_renderer_config" kindref="compound">RendererConfig</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classvlkx_1_1_renderer_config_1a462c54afd68685fe28541ca4f77e3e36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_renderer_config_1a462c54afd68685fe28541ca4f77e3e36" kindref="member">numOpaquePasses</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="44" refid="classvlkx_1_1_renderer_config_1a391f168e9e42441bb1e178e568463a6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_renderer_config_1a391f168e9e42441bb1e178e568463a6d" kindref="member">numTransparentPasses</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45" refid="classvlkx_1_1_renderer_config_1a7d207eead3215bdb3be2e1d9970136c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::unique_ptr&lt;vlkx::Image&gt;&gt;&amp;<sp/><ref refid="classvlkx_1_1_renderer_config_1a7d207eead3215bdb3be2e1d9970136c9" kindref="member">renderImages</ref>;</highlight></codeline>
+<codeline lineno="46" refid="classvlkx_1_1_renderer_config_1abbbfe0a388525082c88980895c02f371" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_renderer_config_1abbbfe0a388525082c88980895c02f371" kindref="member">rendersToScreen</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numOverlayPasses<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="structvlkx_1_1_attachment_config" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvlkx_1_1_attachment_config" kindref="compound">AttachmentConfig</ref><sp/>{</highlight></codeline>
+<codeline lineno="56" refid="structvlkx_1_1_attachment_config_1adc719d87ad5abd250a3666d7257f65a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvlkx_1_1_attachment_config_1adc719d87ad5abd250a3666d7257f65a7" kindref="member">AttachmentConfig</ref>(std::string_view<sp/><ref refid="structvlkx_1_1_attachment_config_1a107e76d6ff68bbed3bbcfd8bbed906ce" kindref="member">name</ref>,<sp/>std::optional&lt;int&gt;*<sp/><ref refid="structvlkx_1_1_attachment_config_1a8bc353093f434b5f8814840ae6728838" kindref="member">index</ref>)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="structvlkx_1_1_attachment_config_1a107e76d6ff68bbed3bbcfd8bbed906ce" kindref="member">name</ref>(<ref refid="structvlkx_1_1_attachment_config_1a107e76d6ff68bbed3bbcfd8bbed906ce" kindref="member">name</ref>),<sp/><ref refid="structvlkx_1_1_attachment_config_1a8bc353093f434b5f8814840ae6728838" kindref="member">index</ref>(*<ref refid="structvlkx_1_1_attachment_config_1a8bc353093f434b5f8814840ae6728838" kindref="member">index</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="structvlkx_1_1_attachment_config_1ab145d533209a5f2cdad5e54ec6c8bffb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvlkx_1_1_attachment_config" kindref="compound">AttachmentConfig</ref>&amp;<sp/><ref refid="structvlkx_1_1_attachment_config_1ab145d533209a5f2cdad5e54ec6c8bffb" kindref="member">setOps</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_render_pass_builder_1_1_attachment_1a47807f6875527fa0d044a910cfb70a4a" kindref="member">RenderPassBuilder::Attachment::OpsType</ref>&amp;<sp/>ops)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvlkx_1_1_attachment_config_1a63903f26a5bf9485d282c282a857c2cb" kindref="member">loadStoreOps</ref><sp/>=<sp/>ops;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="structvlkx_1_1_attachment_config_1a05766bd11dd2f6c6dfb6854b4ac1d238" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvlkx_1_1_attachment_config" kindref="compound">AttachmentConfig</ref>&amp;<sp/><ref refid="structvlkx_1_1_attachment_config_1a05766bd11dd2f6c6dfb6854b4ac1d238" kindref="member">setUsage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image_usage" kindref="compound">ImageUsage</ref>&amp;<sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvlkx_1_1_attachment_config_1affb0723de071f03310523c2dc515f916" kindref="member">finalUsage</ref><sp/>=<sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="structvlkx_1_1_attachment_config_1a107e76d6ff68bbed3bbcfd8bbed906ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structvlkx_1_1_attachment_config_1a107e76d6ff68bbed3bbcfd8bbed906ce" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="70" refid="structvlkx_1_1_attachment_config_1a8bc353093f434b5f8814840ae6728838" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::optional&lt;int&gt;&amp;<sp/><ref refid="structvlkx_1_1_attachment_config_1a8bc353093f434b5f8814840ae6728838" kindref="member">index</ref>;</highlight></codeline>
+<codeline lineno="71" refid="structvlkx_1_1_attachment_config_1a63903f26a5bf9485d282c282a857c2cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::optional&lt;RenderPassBuilder::Attachment::OpsType&gt;<sp/><ref refid="structvlkx_1_1_attachment_config_1a63903f26a5bf9485d282c282a857c2cb" kindref="member">loadStoreOps</ref>;</highlight></codeline>
+<codeline lineno="72" refid="structvlkx_1_1_attachment_config_1affb0723de071f03310523c2dc515f916" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::optional&lt;ImageUsage&gt;<sp/><ref refid="structvlkx_1_1_attachment_config_1affb0723de071f03310523c2dc515f916" kindref="member">finalUsage</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="structvlkx_1_1_attachment" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structvlkx_1_1_attachment" kindref="compound">Attachment</ref><sp/>{</highlight></codeline>
+<codeline lineno="79" refid="structvlkx_1_1_attachment_1ada5d98246548d087fd936b4a1f47f1c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_attachment_1ada5d98246548d087fd936b4a1f47f1c0" kindref="member">Attachment</ref>(std::string_view<sp/>image)<sp/>:<sp/><ref refid="structvlkx_1_1_attachment_1ad7949cd696c2ade220c75916b91ab184" kindref="member">name</ref>(image)<sp/>{}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Adds<sp/>the<sp/>image<sp/>to<sp/>the<sp/>tracker<sp/>and<sp/>initializes<sp/>state.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="structvlkx_1_1_attachment_1aee1dad9747c17453d542f7eb424ed1a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_attachment_1aee1dad9747c17453d542f7eb424ed1a8" kindref="member">add</ref>(<ref refid="classvlkx_1_1_multi_image_tracker" kindref="compound">MultiImageTracker</ref>&amp;<sp/>tracker,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_image" kindref="compound">Image</ref>&amp;<sp/>image)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tracker.<ref refid="classvlkx_1_1_multi_image_tracker_1ad5b7084777246bf17d70118f42e059a8" kindref="member">track</ref>(<ref refid="structvlkx_1_1_attachment_1ad7949cd696c2ade220c75916b91ab184" kindref="member">name</ref>,<sp/>image.<ref refid="classvlkx_1_1_image_1a6f83af709998b8b943bd7eb2f256ccb3" kindref="member">getUsage</ref>());</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="structvlkx_1_1_attachment_1a31fd8620c090e29bbf30282d88aca3c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvlkx_1_1_attachment_config" kindref="compound">AttachmentConfig</ref><sp/><ref refid="structvlkx_1_1_attachment_1a31fd8620c090e29bbf30282d88aca3c0" kindref="member">makeConfig</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<sp/><ref refid="structvlkx_1_1_attachment_1ad7949cd696c2ade220c75916b91ab184" kindref="member">name</ref>,<sp/>&amp;<ref refid="structvlkx_1_1_attachment_1a0aa726278b173d415f71d087dbcf1e20" kindref="member">index</ref><sp/>};<sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="structvlkx_1_1_attachment_1ad7949cd696c2ade220c75916b91ab184" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="structvlkx_1_1_attachment_1ad7949cd696c2ade220c75916b91ab184" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="89" refid="structvlkx_1_1_attachment_1a0aa726278b173d415f71d087dbcf1e20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::optional&lt;int&gt;<sp/><ref refid="structvlkx_1_1_attachment_1a0aa726278b173d415f71d087dbcf1e20" kindref="member">index</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Manages<sp/>Render<sp/>Passes<sp/>that<sp/>will<sp/>output<sp/>to<sp/>the<sp/>screen.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>necessarily<sp/>exclusively<sp/>a<sp/>graphical<sp/>pass.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>necessary,<sp/>a<sp/>depth<sp/>and<sp/>stencil<sp/>buffer<sp/>will<sp/>be<sp/>maintained.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>color<sp/>buffer<sp/>is<sp/>automatically<sp/>assumed<sp/>to<sp/>be<sp/>the<sp/>swapchain.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classvlkx_1_1_screen_render_pass_manager" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvlkx_1_1_screen_render_pass_manager" kindref="compound">ScreenRenderPassManager</ref><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="98" refid="classvlkx_1_1_screen_render_pass_manager_1a5c0917b179b701614df4f25e6b759221" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_screen_render_pass_manager_1a5c0917b179b701614df4f25e6b759221" kindref="member">ScreenRenderPassManager</ref>(<ref refid="classvlkx_1_1_renderer_config" kindref="compound">RendererConfig</ref><sp/>renderConfig)<sp/>:<sp/>config(renderConfig)<sp/>{}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="classvlkx_1_1_screen_render_pass_manager_1a3961fce852c323368434e7a1f9d12948" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_screen_render_pass_manager_1a3961fce852c323368434e7a1f9d12948" kindref="member">ScreenRenderPassManager</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_screen_render_pass_manager" kindref="compound">ScreenRenderPassManager</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101" refid="classvlkx_1_1_screen_render_pass_manager_1a1f5b9020dd6b2427c803d46c43cfa6fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvlkx_1_1_screen_render_pass_manager" kindref="compound">ScreenRenderPassManager</ref>&amp;<sp/><ref refid="classvlkx_1_1_screen_render_pass_manager_1a1f5b9020dd6b2427c803d46c43cfa6fc" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_screen_render_pass_manager" kindref="compound">ScreenRenderPassManager</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>render<sp/>pass<sp/>we&apos;re<sp/>managing.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_screen_render_pass_manager_1a7878052f10a2b2e13271e0c6fd70764e" kindref="member">initializeRenderPass</ref>();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="classvlkx_1_1_screen_render_pass_manager_1acfd4335e63d05e1623338e8962ce06e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_ptr&lt;vlkx::RenderPass&gt;&amp;<sp/><ref refid="classvlkx_1_1_screen_render_pass_manager_1acfd4335e63d05e1623338e8962ce06e8" kindref="member">getPass</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pass;<sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Prepare<sp/>the<sp/>Render<sp/>Pass<sp/>builder.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>preparePassBuilder();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_renderer_config" kindref="compound">RendererConfig</ref><sp/>config;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvlkx_1_1_attachment" kindref="compound">Attachment</ref><sp/>destinationInfo<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;Destination&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Attachment<sp/>multisampleInfo<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;Multisample&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Attachment<sp/>depthStencilInfo<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;Depth-Stencil&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_ptr&lt;vlkx::Image&gt;<sp/>depthStencilImage;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_ptr&lt;vlkx::RenderPassBuilder&gt;<sp/>passBuilder;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_ptr&lt;vlkx::RenderPass&gt;<sp/>pass;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="namespacevlkx_1_1_simple_render_pass" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SimpleRenderPass<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::unique_ptr&lt;RenderPassBuilder&gt;<sp/>createBuilder(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>framebuffers,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classvlkx_1_1_renderer_config" kindref="compound">RendererConfig</ref>&amp;<sp/>config,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_attachment_config" kindref="compound">AttachmentConfig</ref>&amp;<sp/>color,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_attachment_config" kindref="compound">AttachmentConfig</ref>*<sp/>multisample,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structvlkx_1_1_attachment_config" kindref="compound">AttachmentConfig</ref>*<sp/>depthStencil,<sp/><ref refid="classvlkx_1_1_multi_image_tracker" kindref="compound">MultiImageTracker</ref>&amp;<sp/>tracker);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h"/>
+  </compounddef>
+</doxygen>

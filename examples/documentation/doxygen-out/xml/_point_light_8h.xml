@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_point_light_8h" kind="file" language="C++">
+    <compoundname>PointLight.h</compoundname>
+    <includes local="yes">EntitySystem/SceneEntity.h</includes>
+    <includes local="no">Inspector\EntityInspector.h</includes>
+    <includes local="no">EntitySystem\Entities\Internal\Inspectors\DefaultInspectors.h</includes>
+    <includes local="no">ShadowRenderer\RenderScene.h</includes>
+    <includes local="no">imgui.h</includes>
+    <includedby refid="_point_light_8cpp" local="yes">shadow-engine/shadow-entity/Entities/PointLight.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>shadow-engine/shadow-entity/Entities/PointLight.h</label>
+        <link refid="_point_light_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EntitySystem/SceneEntity.h</label>
+      </node>
+      <node id="4">
+        <label>EntitySystem\Entities\Internal\Inspectors\DefaultInspectors.h</label>
+      </node>
+      <node id="3">
+        <label>Inspector\EntityInspector.h</label>
+      </node>
+      <node id="5">
+        <label>ShadowRenderer\RenderScene.h</label>
+      </node>
+      <node id="6">
+        <label>imgui.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>shadow-engine/shadow-entity/Entities/PointLight.cpp</label>
+        <link refid="_point_light_8cpp"/>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-entity/Entities/PointLight.h</label>
+        <link refid="_point_light_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_point_light" prot="public">PointLight</innerclass>
+    <innerclass refid="class_point_light_inspector" prot="public">PointLightInspector</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;EntitySystem/SceneEntity.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Inspector\EntityInspector.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;EntitySystem\Entities\Internal\Inspectors\DefaultInspectors.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ShadowRenderer\RenderScene.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;imgui.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_point_light" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_point_light" kindref="compound">PointLight</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" kindref="compound">ShadowEngine::EntitySystem::SceneEntity</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_s_h_object_8h_1ab6e37410b4b149b1b5cb3c4bafe8aa53" kindref="member">SHObject_Base</ref>(<ref refid="class_point_light" kindref="compound">PointLight</ref>)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_base_8h_1a93745e70d6e760a481f4e634ffda2318" kindref="member">Entity_Base</ref>(<ref refid="class_point_light" kindref="compound">PointLight</ref>,<sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1afc8c3004bc7d6c473f9a6faaeac6abad" kindref="member">SceneEntity</ref>)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>ShadowEngine::Ref&lt;ShadowEngine::Rendering::LightNode&gt;<sp/>node;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_point_light_1a99a3258cb88b70b23de28228dc5ee59e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>glm::vec4<sp/><ref refid="class_point_light_1a99a3258cb88b70b23de28228dc5ee59e" kindref="member">diffuse</ref>;</highlight></codeline>
+<codeline lineno="18" refid="class_point_light_1a6f6d99ca4a5bd3d579eea4b433cd3356" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_point_light_1a6f6d99ca4a5bd3d579eea4b433cd3356" kindref="member">range</ref>;</highlight></codeline>
+<codeline lineno="19" refid="class_point_light_1a8ca1748db53411217b9462120098b7a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>glm::vec3<sp/><ref refid="class_point_light_1a8ca1748db53411217b9462120098b7a1" kindref="member">attenuation</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_light_1a0edae8808493e63bff7f48f648a9bb56" kindref="member">Init</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_light_1aa32c52119b50365403bc413343c5b4ab" kindref="member">TransformChanged</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_light_1a41552b764682ab15914e9f28c7fb472f" kindref="member">UpdateRenderNode</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_point_light_inspector" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_point_light_inspector" kindref="compound">PointLightInspector</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>ShadowEngine::Debug::EntityInspector<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31" refid="class_point_light_inspector_1aeb21688ddde897108ad8784f8175940f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_light_inspector_1aeb21688ddde897108ad8784f8175940f" kindref="member">Draw</ref>(<ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">ShadowEngine::EntitySystem::rtm_ptr&lt;ShadowEngine::EntitySystem::Entity&gt;</ref>&amp;<sp/>obj)</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">ShadowEngine::EntitySystem::rtm_ptr&lt;PointLight&gt;</ref><sp/>light<sp/>=<sp/>obj;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_default_inspectors_8cpp_1ab79b2148c1586acb15e27029b7cc281d" kindref="member">DrawTransformInspector</ref>((<ref refid="class_shadow_engine_1_1_entity_system_1_1rtm__ptr" kindref="compound">ShadowEngine::EntitySystem::rtm_ptr&lt;ShadowEngine::EntitySystem::SceneEntity&gt;</ref>)obj);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>changed<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>changed<sp/>|=<sp/>ImGui::ColorEdit4(</highlight><highlight class="stringliteral">&quot;Diffuse&quot;</highlight><highlight class="normal">,<sp/>&amp;light-&gt;diffuse[0],<sp/>ImGuiColorEditFlags_Float);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>changed<sp/>|=<sp/>ImGui::DragFloat(</highlight><highlight class="stringliteral">&quot;Range&quot;</highlight><highlight class="normal">,<sp/>&amp;light-&gt;range,1,0,10);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>changed<sp/>|=<sp/>ImGui::DragFloat3(</highlight><highlight class="stringliteral">&quot;attenuation&quot;</highlight><highlight class="normal">,<sp/>&amp;light-&gt;attenuation[0],1,0,10);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(changed)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>light-&gt;UpdateRenderNode();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-entity/Entities/PointLight.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structvlkx_1_1_image_data" kind="struct" language="C++" prot="public">
+    <compoundname>vlkx::ImageData</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvlkx_1_1_image_data_1ab426912a079f3a195a5bec952bedb1c8" prot="public" static="no" mutable="no">
+        <type><ref refid="structvlkx_1_1_image_descriptor_1_1_dimension" kindref="compound">ImageDescriptor::Dimension</ref></type>
+        <definition>ImageDescriptor::Dimension vlkx::ImageData::dimensions</definition>
+        <argsstring></argsstring>
+        <name>dimensions</name>
+        <qualifiedname>vlkx::ImageData::dimensions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="31" column="36" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_image_data_1a47c3668fdb9708c8e1a6f5649deeee2c" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* vlkx::ImageData::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <qualifiedname>vlkx::ImageData::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="32" column="20" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>vlkx::ImageData</label>
+        <link refid="structvlkx_1_1_image_data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>dimensions</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vlkx::ImageDescriptor::Dimension</label>
+        <link refid="structvlkx_1_1_image_descriptor_1_1_dimension"/>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" line="30" column="5" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="30" bodyend="33"/>
+    <listofallmembers>
+      <member refid="structvlkx_1_1_image_data_1a47c3668fdb9708c8e1a6f5649deeee2c" prot="public" virt="non-virtual"><scope>vlkx::ImageData</scope><name>data</name></member>
+      <member refid="structvlkx_1_1_image_data_1ab426912a079f3a195a5bec952bedb1c8" prot="public" virt="non-virtual"><scope>vlkx::ImageData</scope><name>dimensions</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

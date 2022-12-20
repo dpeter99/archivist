@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_entity_base_8h" kind="file" language="C++">
+    <compoundname>EntityBase.h</compoundname>
+    <includedby refid="_entity_8h" local="yes">shadow-engine/shadow-entity/inc/Entity.h</includedby>
+    <invincdepgraph>
+      <node id="5">
+        <label>shadow-engine/shadow-entity/Entities/Player.cpp</label>
+        <link refid="_player_8cpp"/>
+      </node>
+      <node id="4">
+        <label>shadow-engine/shadow-entity/Entities/Player.h</label>
+        <link refid="_player_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>shadow-engine/shadow-entity/inc/Entity.h</label>
+        <link refid="_entity_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>shadow-engine/shadow-entity/inc/EntityBase.h</label>
+        <link refid="_entity_base_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>shadow-engine/shadow-entity/inc/EntityRegistry.h</label>
+        <link refid="_entity_registry_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>shadow-engine/shadow-entity/inc/EntitySystem.h</label>
+        <link refid="_entity_system_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>shadow-engine/shadow-entity/inc/Scene.h</label>
+        <link refid="_scene_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>shadow-engine/shadow-entity/inc/SceneEntity.h</label>
+        <link refid="_scene_entity_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>shadow-engine/shadow-entity/src/DefaultEntities.cpp</label>
+        <link refid="_default_entities_8cpp"/>
+      </node>
+      <node id="7">
+        <label>shadow-engine/shadow-entity/src/Entity.cpp</label>
+        <link refid="_entity_8cpp"/>
+      </node>
+      <node id="15">
+        <label>shadow-engine/shadow-entity/src/EntityManager.cpp</label>
+        <link refid="_entity_manager_8cpp"/>
+      </node>
+      <node id="8">
+        <label>shadow-engine/shadow-entity/src/EntityRegistry.cpp</label>
+        <link refid="_entity_registry_8cpp"/>
+      </node>
+      <node id="11">
+        <label>shadow-engine/shadow-entity/src/EntitySystem.cpp</label>
+        <link refid="_entity_system_8cpp"/>
+      </node>
+      <node id="12">
+        <label>shadow-engine/shadow-entity/src/Scene.cpp</label>
+        <link refid="_scene_8cpp"/>
+      </node>
+      <node id="14">
+        <label>shadow-engine/shadow-entity/src/SceneEntity.cpp</label>
+        <link refid="_scene_entity_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespace_shadow_engine">ShadowEngine</innernamespace>
+    <innernamespace refid="namespace_shadow_engine_1_1_shadow_entity">ShadowEngine::ShadowEntity</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_entity_base_8h_1a93745e70d6e760a481f4e634ffda2318" prot="public" static="no">
+        <name>Entity_Base</name>
+        <param><defname>Type</defname></param>
+        <param><defname>BaseType</defname></param>
+        <initializer>public:											\
+Type(<ref refid="class_shadow_engine_1_1_entity_system_1_1_scene" kindref="compound">ShadowEngine::EntitySystem::Scene</ref>* scene) : BaseType(scene) {}	\
+Type() : BaseType() {}	\
+<ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">ShadowEngine::EntitySystem::Entity</ref>* Type::Create(<ref refid="class_shadow_engine_1_1_entity_system_1_1_scene" kindref="compound">ShadowEngine::EntitySystem::Scene</ref>* scene) override {			\
+Type* res = new Type(scene);							\
+return res;									    \
+}												\
+private:</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/EntityBase.h" line="6" column="9" bodyfile="shadow-engine/shadow-entity/inc/EntityBase.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_entity_base_8h_1aff104a6d4d138703d17c394f0864700a" prot="public" static="no">
+        <name>Entity_Base_NoCtor</name>
+        <param><defname>Type</defname></param>
+        <param><defname>BaseType</defname></param>
+        <initializer>public:											\
+<ref refid="class_shadow_engine_1_1_entity_system_1_1_entity" kindref="compound">ShadowEngine::EntitySystem::Entity</ref>* Type::Create(<ref refid="class_shadow_engine_1_1_entity_system_1_1_scene" kindref="compound">ShadowEngine::EntitySystem::Scene</ref>* scene) override {			\
+Type* res = new Type(scene);							\
+return res;									    \
+}												\
+private:</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-entity/inc/EntityBase.h" line="16" column="9" bodyfile="shadow-engine/shadow-entity/inc/EntityBase.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_shadow_engine_1_1_shadow_entity" kindref="compound">ShadowEngine::ShadowEntity</ref><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="_entity_base_8h_1a93745e70d6e760a481f4e634ffda2318" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Entity_Base(Type,<sp/>BaseType)<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor">public:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="8"><highlight class="preprocessor">Type(ShadowEngine::EntitySystem::Scene*<sp/>scene)<sp/>:<sp/>BaseType(scene)<sp/>{}<sp/>\</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor">Type()<sp/>:<sp/>BaseType()<sp/>{}<sp/><sp/>\</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor">ShadowEngine::EntitySystem::Entity*<sp/>Type::Create(ShadowEngine::EntitySystem::Scene*<sp/>scene)<sp/>override<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor">Type*<sp/>res<sp/>=<sp/>new<sp/>Type(scene);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor">return<sp/>res;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor">}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor">private:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="_entity_base_8h_1aff104a6d4d138703d17c394f0864700a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Entity_Base_NoCtor(Type,<sp/>BaseType)<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor">public:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor">ShadowEngine::EntitySystem::Entity*<sp/>Type::Create(ShadowEngine::EntitySystem::Scene*<sp/>scene)<sp/>override<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor">Type*<sp/>res<sp/>=<sp/>new<sp/>Type(scene);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor">return<sp/>res;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor">}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor">private:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="shadow-engine/shadow-entity/inc/EntityBase.h"/>
+  </compounddef>
+</doxygen>

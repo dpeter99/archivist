@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_catch_1_1_warn_about" kind="struct" language="C++" prot="public">
+    <compoundname>Catch::WarnAbout</compoundname>
+    <includes refid="catch_8hpp" local="no">catch.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="struct_catch_1_1_warn_about_1ae3dde70ef78d700ea896eb29314e0fa3" prot="public" static="no" strong="no">
+        <type></type>
+        <name>What</name>
+        <qualifiedname>Catch::WarnAbout::What</qualifiedname>
+        <enumvalue id="struct_catch_1_1_warn_about_1ae3dde70ef78d700ea896eb29314e0fa3a9ac33f9211280cca9082557329706d27" prot="public">
+          <name>Nothing</name>
+          <initializer>= 0x00</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_catch_1_1_warn_about_1ae3dde70ef78d700ea896eb29314e0fa3a516a40a437d6ff29898e2fa93bca8f82" prot="public">
+          <name>NoAssertions</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_catch_1_1_warn_about_1ae3dde70ef78d700ea896eb29314e0fa3ab449dacc48055ee886a4a7aa283db556" prot="public">
+          <name>NoTests</name>
+          <initializer>= 0x02</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4482" column="20" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4482" bodyend="4486"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-file-format/test/catch2/catch.hpp" line="4482" column="5" bodyfile="shadow-engine/shadow-file-format/test/catch2/catch.hpp" bodystart="4482" bodyend="4486"/>
+    <listofallmembers>
+      <member refid="struct_catch_1_1_warn_about_1ae3dde70ef78d700ea896eb29314e0fa3a516a40a437d6ff29898e2fa93bca8f82" prot="public" virt="non-virtual"><scope>Catch::WarnAbout</scope><name>NoAssertions</name></member>
+      <member refid="struct_catch_1_1_warn_about_1ae3dde70ef78d700ea896eb29314e0fa3ab449dacc48055ee886a4a7aa283db556" prot="public" virt="non-virtual"><scope>Catch::WarnAbout</scope><name>NoTests</name></member>
+      <member refid="struct_catch_1_1_warn_about_1ae3dde70ef78d700ea896eb29314e0fa3a9ac33f9211280cca9082557329706d27" prot="public" virt="non-virtual"><scope>Catch::WarnAbout</scope><name>Nothing</name></member>
+      <member refid="struct_catch_1_1_warn_about_1ae3dde70ef78d700ea896eb29314e0fa3" prot="public" virt="non-virtual"><scope>Catch::WarnAbout</scope><name>What</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

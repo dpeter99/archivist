@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_multisample_image_1_1_multisample_buffer" kind="class" language="C++" prot="private">
+    <compoundname>vlkx::MultisampleImage::MultisampleBuffer</compoundname>
+    <basecompoundref refid="classvlkx_1_1_image_buffer" prot="public" virt="non-virtual">vlkx::ImageBuffer</basecompoundref>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classvlkx_1_1_multisample_image_1_1_multisample_buffer_1a658151879dabf1ffee100d680dc68340" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Type</name>
+        <qualifiedname>vlkx::MultisampleImage::MultisampleBuffer::Type</qualifiedname>
+        <enumvalue id="classvlkx_1_1_multisample_image_1_1_multisample_buffer_1a658151879dabf1ffee100d680dc68340acb5feb1b7314637725a2e73bdc9f7295" prot="public">
+          <name>Color</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classvlkx_1_1_multisample_image_1_1_multisample_buffer_1a658151879dabf1ffee100d680dc68340a2fa8076285272883c91e14402975a441" prot="public">
+          <name>DepthStencil</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="316" column="13" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="316" bodyend="316"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_multisample_image_1_1_multisample_buffer_1a2fc2b58d0ca1ec38b5e73783f862d1f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::MultisampleImage::MultisampleBuffer::MultisampleBuffer</definition>
+        <argsstring>(Type type, const VkExtent2D &amp;extent, VkFormat format, VkSampleCountFlagBits samples)</argsstring>
+        <name>MultisampleBuffer</name>
+        <qualifiedname>vlkx::MultisampleImage::MultisampleBuffer::MultisampleBuffer</qualifiedname>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const VkExtent2D &amp;</type>
+          <declname>extent</declname>
+        </param>
+        <param>
+          <type>VkFormat</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>VkSampleCountFlagBits</type>
+          <declname>samples</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="318" column="13" bodyfile="shadow-engine/shadow-renderer/src/vulkan/abstraction/Image.cpp" bodystart="423" bodyend="437"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_multisample_image_1_1_multisample_buffer_1abd3f257527e2a2df169538edfd849653" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::MultisampleImage::MultisampleBuffer::MultisampleBuffer</definition>
+        <argsstring>(const MultisampleBuffer &amp;)=delete</argsstring>
+        <name>MultisampleBuffer</name>
+        <qualifiedname>vlkx::MultisampleImage::MultisampleBuffer::MultisampleBuffer</qualifiedname>
+        <param>
+          <type>const MultisampleBuffer &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="319" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_multisample_image_1_1_multisample_buffer_1a5b19ce64a52260dd29c73bede3d501fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MultisampleBuffer &amp;</type>
+        <definition>MultisampleBuffer &amp; vlkx::MultisampleImage::MultisampleBuffer::operator=</definition>
+        <argsstring>(const MultisampleBuffer &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>vlkx::MultisampleImage::MultisampleBuffer::operator=</qualifiedname>
+        <param>
+          <type>const MultisampleBuffer &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="320" column="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>vlkx::Buffer</label>
+        <link refid="classvlkx_1_1_buffer"/>
+      </node>
+      <node id="2">
+        <label>vlkx::ImageBuffer</label>
+        <link refid="classvlkx_1_1_image_buffer"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>vlkx::MultisampleImage::MultisampleBuffer</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>vlkx::Buffer</label>
+        <link refid="classvlkx_1_1_buffer"/>
+      </node>
+      <node id="2">
+        <label>vlkx::ImageBuffer</label>
+        <link refid="classvlkx_1_1_image_buffer"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>vlkx::MultisampleImage::MultisampleBuffer</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="314" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="314" bodyend="321"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_image_buffer_1a8ad640258cbc9aa645ed68e3c320af99" prot="protected" virt="non-virtual"><scope>vlkx::MultisampleImage::MultisampleBuffer</scope><name>Buffer</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1a055bf8f2da8b0c7084493579a2f27ccb" prot="protected" virt="non-virtual"><scope>vlkx::MultisampleImage::MultisampleBuffer</scope><name>Buffer</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1a1225bb009adc667e09e2de733c532b4b" prot="public" virt="non-virtual"><scope>vlkx::MultisampleImage::MultisampleBuffer</scope><name>get</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1a8af69d019a352c47d1a9ceee8da5bbd8" prot="public" virt="non-virtual"><scope>vlkx::MultisampleImage::MultisampleBuffer</scope><name>getImage</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1a7e8c4a3cdc9fff6cbbac10ca387f96f4" prot="public" virt="non-virtual"><scope>vlkx::MultisampleImage::MultisampleBuffer</scope><name>ImageBuffer</name></member>
+      <member refid="classvlkx_1_1_multisample_image_1_1_multisample_buffer_1a2fc2b58d0ca1ec38b5e73783f862d1f3" prot="public" virt="non-virtual"><scope>vlkx::MultisampleImage::MultisampleBuffer</scope><name>MultisampleBuffer</name></member>
+      <member refid="classvlkx_1_1_multisample_image_1_1_multisample_buffer_1abd3f257527e2a2df169538edfd849653" prot="public" virt="non-virtual"><scope>vlkx::MultisampleImage::MultisampleBuffer</scope><name>MultisampleBuffer</name></member>
+      <member refid="classvlkx_1_1_multisample_image_1_1_multisample_buffer_1a5b19ce64a52260dd29c73bede3d501fe" prot="public" virt="non-virtual"><scope>vlkx::MultisampleImage::MultisampleBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1af504fd2db1c92a93dd16717a71c77d4c" prot="public" virt="non-virtual" ambiguityscope="vlkx::ImageBuffer::"><scope>vlkx::MultisampleImage::MultisampleBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_buffer_1a9971cfc28a88cebf00d2642baa5cd72e" prot="public" virt="non-virtual" ambiguityscope="vlkx::Buffer::"><scope>vlkx::MultisampleImage::MultisampleBuffer</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1ad35569abbda03b3d34685fe5fe0397c1" prot="protected" virt="non-virtual"><scope>vlkx::MultisampleImage::MultisampleBuffer</scope><name>setImage</name></member>
+      <member refid="classvlkx_1_1_multisample_image_1_1_multisample_buffer_1a658151879dabf1ffee100d680dc68340" prot="public" virt="non-virtual"><scope>vlkx::MultisampleImage::MultisampleBuffer</scope><name>Type</name></member>
+      <member refid="classvlkx_1_1_buffer_1a5ad6564545b79d1ce612ebf2b6fc44f7" prot="public" virt="virtual"><scope>vlkx::MultisampleImage::MultisampleBuffer</scope><name>~Buffer</name></member>
+      <member refid="classvlkx_1_1_image_buffer_1aae7932a11b4cb26b6579c68425043b7c" prot="public" virt="non-virtual"><scope>vlkx::MultisampleImage::MultisampleBuffer</scope><name>~ImageBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_screen_render_pass_manager" kind="class" language="C++" prot="public">
+    <compoundname>vlkx::ScreenRenderPassManager</compoundname>
+    <includes refid="_screen_render_pass_8h" local="no">ScreenRenderPass.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvlkx_1_1_screen_render_pass_manager_1ae1961bc05dc15bc387a9281db646fc5a" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classvlkx_1_1_renderer_config" kindref="compound">RendererConfig</ref></type>
+        <definition>const RendererConfig vlkx::ScreenRenderPassManager::config</definition>
+        <argsstring></argsstring>
+        <name>config</name>
+        <qualifiedname>vlkx::ScreenRenderPassManager::config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="113" column="30" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_screen_render_pass_manager_1ab261f0897732a06ece58d567e3f20c43" prot="private" static="no" mutable="no">
+        <type><ref refid="structvlkx_1_1_attachment" kindref="compound">Attachment</ref></type>
+        <definition>Attachment vlkx::ScreenRenderPassManager::destinationInfo</definition>
+        <argsstring></argsstring>
+        <name>destinationInfo</name>
+        <qualifiedname>vlkx::ScreenRenderPassManager::destinationInfo</qualifiedname>
+        <initializer>{ &quot;Destination&quot; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="115" column="20" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_screen_render_pass_manager_1a3213da52ae47e40d03160adc73342f21" prot="private" static="no" mutable="no">
+        <type><ref refid="structvlkx_1_1_attachment" kindref="compound">Attachment</ref></type>
+        <definition>Attachment vlkx::ScreenRenderPassManager::multisampleInfo</definition>
+        <argsstring></argsstring>
+        <name>multisampleInfo</name>
+        <qualifiedname>vlkx::ScreenRenderPassManager::multisampleInfo</qualifiedname>
+        <initializer>{ &quot;Multisample&quot; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="116" column="20" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_screen_render_pass_manager_1a9d148b6e6554e59f7db8a6cdcd4e60e0" prot="private" static="no" mutable="no">
+        <type><ref refid="structvlkx_1_1_attachment" kindref="compound">Attachment</ref></type>
+        <definition>Attachment vlkx::ScreenRenderPassManager::depthStencilInfo</definition>
+        <argsstring></argsstring>
+        <name>depthStencilInfo</name>
+        <qualifiedname>vlkx::ScreenRenderPassManager::depthStencilInfo</qualifiedname>
+        <initializer>{ &quot;Depth-Stencil&quot; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="117" column="20" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_screen_render_pass_manager_1a9fdf420d68e62ddff560fdcb84f5248f" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classvlkx_1_1_image" kindref="compound">vlkx::Image</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;vlkx::Image&gt; vlkx::ScreenRenderPassManager::depthStencilImage</definition>
+        <argsstring></argsstring>
+        <name>depthStencilImage</name>
+        <qualifiedname>vlkx::ScreenRenderPassManager::depthStencilImage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="119" column="25" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_screen_render_pass_manager_1a2999f42cb01e8a5a9df8be8cda2f7eb5" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classvlkx_1_1_render_pass_builder" kindref="compound">vlkx::RenderPassBuilder</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;vlkx::RenderPassBuilder&gt; vlkx::ScreenRenderPassManager::passBuilder</definition>
+        <argsstring></argsstring>
+        <name>passBuilder</name>
+        <qualifiedname>vlkx::ScreenRenderPassManager::passBuilder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="120" column="25" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_screen_render_pass_manager_1a42972b5fb0b242f3b14a825f27452e8d" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classvlkx_1_1_render_pass" kindref="compound">vlkx::RenderPass</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;vlkx::RenderPass&gt; vlkx::ScreenRenderPassManager::pass</definition>
+        <argsstring></argsstring>
+        <name>pass</name>
+        <qualifiedname>vlkx::ScreenRenderPassManager::pass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="121" column="25" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_screen_render_pass_manager_1a5c0917b179b701614df4f25e6b759221" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::ScreenRenderPassManager::ScreenRenderPassManager</definition>
+        <argsstring>(RendererConfig renderConfig)</argsstring>
+        <name>ScreenRenderPassManager</name>
+        <qualifiedname>vlkx::ScreenRenderPassManager::ScreenRenderPassManager</qualifiedname>
+        <param>
+          <type><ref refid="classvlkx_1_1_renderer_config" kindref="compound">RendererConfig</ref></type>
+          <declname>renderConfig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="98" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_screen_render_pass_manager_1a3961fce852c323368434e7a1f9d12948" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::ScreenRenderPassManager::ScreenRenderPassManager</definition>
+        <argsstring>(const ScreenRenderPassManager &amp;)=delete</argsstring>
+        <name>ScreenRenderPassManager</name>
+        <qualifiedname>vlkx::ScreenRenderPassManager::ScreenRenderPassManager</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_screen_render_pass_manager" kindref="compound">ScreenRenderPassManager</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="100" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_screen_render_pass_manager_1a1f5b9020dd6b2427c803d46c43cfa6fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvlkx_1_1_screen_render_pass_manager" kindref="compound">ScreenRenderPassManager</ref> &amp;</type>
+        <definition>ScreenRenderPassManager &amp; vlkx::ScreenRenderPassManager::operator=</definition>
+        <argsstring>(const ScreenRenderPassManager &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>vlkx::ScreenRenderPassManager::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classvlkx_1_1_screen_render_pass_manager" kindref="compound">ScreenRenderPassManager</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="101" column="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_screen_render_pass_manager_1a7878052f10a2b2e13271e0c6fd70764e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::ScreenRenderPassManager::initializeRenderPass</definition>
+        <argsstring>()</argsstring>
+        <name>initializeRenderPass</name>
+        <qualifiedname>vlkx::ScreenRenderPassManager::initializeRenderPass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="104" column="14" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/ScreenRenderPass.cpp" bodystart="103" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_screen_render_pass_manager_1acfd4335e63d05e1623338e8962ce06e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classvlkx_1_1_render_pass" kindref="compound">vlkx::RenderPass</ref> &gt; &amp;</type>
+        <definition>std::unique_ptr&lt; vlkx::RenderPass &gt; &amp; vlkx::ScreenRenderPassManager::getPass</definition>
+        <argsstring>()</argsstring>
+        <name>getPass</name>
+        <qualifiedname>vlkx::ScreenRenderPassManager::getPass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="106" column="25" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" bodystart="106" bodyend="106"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classvlkx_1_1_screen_render_pass_manager_1a7f5033683f2665edb22c4cb420ebc94e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vlkx::ScreenRenderPassManager::preparePassBuilder</definition>
+        <argsstring>()</argsstring>
+        <name>preparePassBuilder</name>
+        <qualifiedname>vlkx::ScreenRenderPassManager::preparePassBuilder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="111" column="14" bodyfile="shadow-engine/shadow-renderer/src/render/render_pass/ScreenRenderPass.cpp" bodystart="123" bodyend="144"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" line="96" column="5" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/render/render_pass/ScreenRenderPass.h" bodystart="96" bodyend="122"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_screen_render_pass_manager_1ae1961bc05dc15bc387a9281db646fc5a" prot="private" virt="non-virtual"><scope>vlkx::ScreenRenderPassManager</scope><name>config</name></member>
+      <member refid="classvlkx_1_1_screen_render_pass_manager_1a9fdf420d68e62ddff560fdcb84f5248f" prot="private" virt="non-virtual"><scope>vlkx::ScreenRenderPassManager</scope><name>depthStencilImage</name></member>
+      <member refid="classvlkx_1_1_screen_render_pass_manager_1a9d148b6e6554e59f7db8a6cdcd4e60e0" prot="private" virt="non-virtual"><scope>vlkx::ScreenRenderPassManager</scope><name>depthStencilInfo</name></member>
+      <member refid="classvlkx_1_1_screen_render_pass_manager_1ab261f0897732a06ece58d567e3f20c43" prot="private" virt="non-virtual"><scope>vlkx::ScreenRenderPassManager</scope><name>destinationInfo</name></member>
+      <member refid="classvlkx_1_1_screen_render_pass_manager_1acfd4335e63d05e1623338e8962ce06e8" prot="public" virt="non-virtual"><scope>vlkx::ScreenRenderPassManager</scope><name>getPass</name></member>
+      <member refid="classvlkx_1_1_screen_render_pass_manager_1a7878052f10a2b2e13271e0c6fd70764e" prot="public" virt="non-virtual"><scope>vlkx::ScreenRenderPassManager</scope><name>initializeRenderPass</name></member>
+      <member refid="classvlkx_1_1_screen_render_pass_manager_1a3213da52ae47e40d03160adc73342f21" prot="private" virt="non-virtual"><scope>vlkx::ScreenRenderPassManager</scope><name>multisampleInfo</name></member>
+      <member refid="classvlkx_1_1_screen_render_pass_manager_1a1f5b9020dd6b2427c803d46c43cfa6fc" prot="public" virt="non-virtual"><scope>vlkx::ScreenRenderPassManager</scope><name>operator=</name></member>
+      <member refid="classvlkx_1_1_screen_render_pass_manager_1a42972b5fb0b242f3b14a825f27452e8d" prot="private" virt="non-virtual"><scope>vlkx::ScreenRenderPassManager</scope><name>pass</name></member>
+      <member refid="classvlkx_1_1_screen_render_pass_manager_1a2999f42cb01e8a5a9df8be8cda2f7eb5" prot="private" virt="non-virtual"><scope>vlkx::ScreenRenderPassManager</scope><name>passBuilder</name></member>
+      <member refid="classvlkx_1_1_screen_render_pass_manager_1a7f5033683f2665edb22c4cb420ebc94e" prot="private" virt="non-virtual"><scope>vlkx::ScreenRenderPassManager</scope><name>preparePassBuilder</name></member>
+      <member refid="classvlkx_1_1_screen_render_pass_manager_1a5c0917b179b701614df4f25e6b759221" prot="public" virt="non-virtual"><scope>vlkx::ScreenRenderPassManager</scope><name>ScreenRenderPassManager</name></member>
+      <member refid="classvlkx_1_1_screen_render_pass_manager_1a3961fce852c323368434e7a1f9d12948" prot="public" virt="non-virtual"><scope>vlkx::ScreenRenderPassManager</scope><name>ScreenRenderPassManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="group__group__virtual" kind="group">
+    <compoundname>group_virtual</compoundname>
+    <title>Virtual allocator</title>
+    <innerclass refid="struct_vma_virtual_block_create_info" prot="public">VmaVirtualBlockCreateInfo</innerclass>
+    <innerclass refid="struct_vma_virtual_allocation_create_info" prot="public">VmaVirtualAllocationCreateInfo</innerclass>
+    <innerclass refid="struct_vma_virtual_allocation_info" prot="public">VmaVirtualAllocationInfo</innerclass>
+    <innerclass refid="struct_vma_virtual_allocation" prot="public">VmaVirtualAllocation</innerclass>
+    <innerclass refid="struct_vma_virtual_block" prot="public">VmaVirtualBlock</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__group__virtual_1ga88bcf8c1cd3bb1610ff7343811c65bca" prot="public" static="no" strong="no">
+        <type></type>
+        <name>VmaVirtualBlockCreateFlagBits</name>
+        <enumvalue id="group__group__virtual_1gga88bcf8c1cd3bb1610ff7343811c65bcaae6423e2fa2f3c9211b21c819e3f10f96" prot="public">
+          <name>VMA_VIRTUAL_BLOCK_CREATE_LINEAR_ALGORITHM_BIT</name>
+          <initializer>= 0x00000001</initializer>
+          <briefdescription>
+<para>Enables alternative, linear allocation algorithm in this virtual block. </para>
+          </briefdescription>
+          <detaileddescription>
+<para>Specify this flag to enable linear allocation algorithm, which always creates new allocations after last one and doesn&apos;t reuse space from allocations freed in between. It trades memory consumption for simplified algorithm and data structure, which has better performance and uses less memory for metadata.</para>
+<para>By using this flag, you can achieve behavior of free-at-once, stack, ring buffer, and double stack. For details, see documentation chapter <ref refid="custom_memory_pools_1linear_algorithm" kindref="member">Linear allocation algorithm</ref>. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__virtual_1gga88bcf8c1cd3bb1610ff7343811c65bcaaf9487467136e1a9e371894dc3a7c4844" prot="public">
+          <name>VMA_VIRTUAL_BLOCK_CREATE_ALGORITHM_MASK</name>
+          <initializer>=
+        VMA_VIRTUAL_BLOCK_CREATE_LINEAR_ALGORITHM_BIT</initializer>
+          <briefdescription>
+<para>Bit mask to extract only `ALGORITHM` bits from entire set of flags. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__virtual_1gga88bcf8c1cd3bb1610ff7343811c65bcaa5fc0d333c3d5687a8bbf57df9b377a87" prot="public">
+          <name>VMA_VIRTUAL_BLOCK_CREATE_FLAG_BITS_MAX_ENUM</name>
+          <initializer>= 0x7FFFFFFF</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Flags to be passed as <ref refid="struct_vma_virtual_block_create_info_1aaab9bf7e2d228c02ab6d90a72a6e6912" kindref="member">VmaVirtualBlockCreateInfo::flags</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="753" column="1" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="754" bodyend="774"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__group__virtual_1ga2e9c64d405b14156fea7e10c4ad06cb6" prot="public" static="no" strong="no">
+        <type></type>
+        <name>VmaVirtualAllocationCreateFlagBits</name>
+        <enumvalue id="group__group__virtual_1gga2e9c64d405b14156fea7e10c4ad06cb6a9524a329a55b5ec390d57d90b67ad78e" prot="public">
+          <name>VMA_VIRTUAL_ALLOCATION_CREATE_UPPER_ADDRESS_BIT</name>
+          <initializer>= VMA_ALLOCATION_CREATE_UPPER_ADDRESS_BIT</initializer>
+          <briefdescription>
+<para>Allocation will be created from upper stack in a double stack pool. </para>
+          </briefdescription>
+          <detaileddescription>
+<para>This flag is only allowed for virtual blocks created with <ref refid="group__group__virtual_1gga88bcf8c1cd3bb1610ff7343811c65bcaae6423e2fa2f3c9211b21c819e3f10f96" kindref="member">VMA_VIRTUAL_BLOCK_CREATE_LINEAR_ALGORITHM_BIT</ref> flag. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__virtual_1gga2e9c64d405b14156fea7e10c4ad06cb6ae2a9591a62b5e3b1bdcbc81c6188a1bf" prot="public">
+          <name>VMA_VIRTUAL_ALLOCATION_CREATE_STRATEGY_MIN_MEMORY_BIT</name>
+          <initializer>= VMA_ALLOCATION_CREATE_STRATEGY_MIN_MEMORY_BIT</initializer>
+          <briefdescription>
+<para>Allocation strategy that tries to minimize memory usage. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__virtual_1gga2e9c64d405b14156fea7e10c4ad06cb6a562d10a46012719d33167d3dc5dbbf9b" prot="public">
+          <name>VMA_VIRTUAL_ALLOCATION_CREATE_STRATEGY_MIN_TIME_BIT</name>
+          <initializer>= VMA_ALLOCATION_CREATE_STRATEGY_MIN_TIME_BIT</initializer>
+          <briefdescription>
+<para>Allocation strategy that tries to minimize allocation time. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__virtual_1gga2e9c64d405b14156fea7e10c4ad06cb6a3bb82d2aedd587a64846a1d7778852e6" prot="public">
+          <name>VMA_VIRTUAL_ALLOCATION_CREATE_STRATEGY_MIN_OFFSET_BIT</name>
+          <initializer>= VMA_ALLOCATION_CREATE_STRATEGY_MIN_OFFSET_BIT</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Allocation strategy that chooses always the lowest offset in available space. This is not the most efficient strategy but achieves highly packed data. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__virtual_1gga2e9c64d405b14156fea7e10c4ad06cb6ac5b5e45c335368d18df59c9f27df17e3" prot="public">
+          <name>VMA_VIRTUAL_ALLOCATION_CREATE_STRATEGY_MASK</name>
+          <initializer>= VMA_ALLOCATION_CREATE_STRATEGY_MASK</initializer>
+          <briefdescription>
+<para>A bit mask to extract only `STRATEGY` bits from entire set of flags. </para>
+          </briefdescription>
+          <detaileddescription>
+<para>These strategy flags are binary compatible with equivalent flags in <ref refid="group__group__alloc_1gad9889c10c798b040d59c92f257cae597" kindref="member">VmaAllocationCreateFlagBits</ref>. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__group__virtual_1gga2e9c64d405b14156fea7e10c4ad06cb6ac1163c03ea837fa663462dc286d6a1a9" prot="public">
+          <name>VMA_VIRTUAL_ALLOCATION_CREATE_FLAG_BITS_MAX_ENUM</name>
+          <initializer>= 0x7FFFFFFF</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Flags to be passed as <ref refid="struct_vma_virtual_allocation_create_info_1ab10e16956cc4bf20ced9de77d1129ea4" kindref="member">VmaVirtualAllocationCreateInfo::flags</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="779" column="1" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="780" bodyend="803"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__group__virtual_1ga0860ba1c0a67178fae4aecb63a78573e" prot="public" static="no">
+        <type>enum <ref refid="group__group__virtual_1ga88bcf8c1cd3bb1610ff7343811c65bca" kindref="member">VmaVirtualBlockCreateFlagBits</ref></type>
+        <definition>typedef enum VmaVirtualBlockCreateFlagBits VmaVirtualBlockCreateFlagBits</definition>
+        <argsstring></argsstring>
+        <name>VmaVirtualBlockCreateFlagBits</name>
+        <briefdescription>
+<para>Flags to be passed as <ref refid="struct_vma_virtual_block_create_info_1aaab9bf7e2d228c02ab6d90a72a6e6912" kindref="member">VmaVirtualBlockCreateInfo::flags</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="774" column="31"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__group__virtual_1ga4e49c2f0ab7f6b4868833e5bac78d91e" prot="public" static="no">
+        <type>VkFlags</type>
+        <definition>typedef VkFlags VmaVirtualBlockCreateFlags</definition>
+        <argsstring></argsstring>
+        <name>VmaVirtualBlockCreateFlags</name>
+        <briefdescription>
+<para>Flags to be passed as <ref refid="struct_vma_virtual_block_create_info_1aaab9bf7e2d228c02ab6d90a72a6e6912" kindref="member">VmaVirtualBlockCreateInfo::flags</ref>. See <ref refid="group__group__virtual_1ga88bcf8c1cd3bb1610ff7343811c65bca" kindref="member">VmaVirtualBlockCreateFlagBits</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="776" column="17" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="776" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__group__virtual_1ga936815e64946a6b6d812d08d10184c23" prot="public" static="no">
+        <type>enum <ref refid="group__group__virtual_1ga2e9c64d405b14156fea7e10c4ad06cb6" kindref="member">VmaVirtualAllocationCreateFlagBits</ref></type>
+        <definition>typedef enum VmaVirtualAllocationCreateFlagBits VmaVirtualAllocationCreateFlagBits</definition>
+        <argsstring></argsstring>
+        <name>VmaVirtualAllocationCreateFlagBits</name>
+        <briefdescription>
+<para>Flags to be passed as <ref refid="struct_vma_virtual_allocation_create_info_1ab10e16956cc4bf20ced9de77d1129ea4" kindref="member">VmaVirtualAllocationCreateInfo::flags</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="803" column="36"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__group__virtual_1gae96ffc099bf898257fb19e9410ed08a7" prot="public" static="no">
+        <type>VkFlags</type>
+        <definition>typedef VkFlags VmaVirtualAllocationCreateFlags</definition>
+        <argsstring></argsstring>
+        <name>VmaVirtualAllocationCreateFlags</name>
+        <briefdescription>
+<para>Flags to be passed as <ref refid="struct_vma_virtual_allocation_create_info_1ab10e16956cc4bf20ced9de77d1129ea4" kindref="member">VmaVirtualAllocationCreateInfo::flags</ref>. See <ref refid="group__group__virtual_1ga2e9c64d405b14156fea7e10c4ad06cb6" kindref="member">VmaVirtualAllocationCreateFlagBits</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="805" column="17" bodyfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" bodystart="805" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__group__virtual_1ga4753d42d40217a3a652a3cdf253ad773" prot="public" static="no">
+        <type>struct <ref refid="struct_vma_virtual_block_create_info" kindref="compound">VmaVirtualBlockCreateInfo</ref></type>
+        <definition>typedef struct VmaVirtualBlockCreateInfo VmaVirtualBlockCreateInfo</definition>
+        <argsstring></argsstring>
+        <name>VmaVirtualBlockCreateInfo</name>
+        <briefdescription>
+<para>Parameters of created <ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> object to be passed to <ref refid="group__group__virtual_1ga869baad02bf3b5fb012d61e1a43f92c5" kindref="member">vmaCreateVirtualBlock()</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1509" column="27"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__group__virtual_1gac3c90d80bedc6847a41b82d0e2158c9e" prot="public" static="no">
+        <type>struct <ref refid="struct_vma_virtual_allocation_create_info" kindref="compound">VmaVirtualAllocationCreateInfo</ref></type>
+        <definition>typedef struct VmaVirtualAllocationCreateInfo VmaVirtualAllocationCreateInfo</definition>
+        <argsstring></argsstring>
+        <name>VmaVirtualAllocationCreateInfo</name>
+        <briefdescription>
+<para>Parameters of created virtual allocation to be passed to <ref refid="group__group__virtual_1ga2f6cd8f6b98e754be7016b5860d02dac" kindref="member">vmaVirtualAllocate()</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1532" column="32"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__group__virtual_1ga75bc33ff7cf18c98e101f570dc2a5ebc" prot="public" static="no">
+        <type>struct <ref refid="struct_vma_virtual_allocation_info" kindref="compound">VmaVirtualAllocationInfo</ref></type>
+        <definition>typedef struct VmaVirtualAllocationInfo VmaVirtualAllocationInfo</definition>
+        <argsstring></argsstring>
+        <name>VmaVirtualAllocationInfo</name>
+        <briefdescription>
+<para>Parameters of an existing virtual allocation, returned by <ref refid="group__group__virtual_1ga64b8c2939b82f83fbec507f29a43307b" kindref="member">vmaGetVirtualAllocationInfo()</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="1552" column="26"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__virtual_1ga565936f8d98d225b536a2d9703bc7676" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>VK_DEFINE_NON_DISPATCHABLE_HANDLE</definition>
+        <argsstring>(VmaVirtualAllocation)</argsstring>
+        <name>VK_DEFINE_NON_DISPATCHABLE_HANDLE</name>
+        <param>
+          <type><ref refid="struct_vma_virtual_allocation" kindref="compound">VmaVirtualAllocation</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="890" column="1" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="890" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__virtual_1ga869baad02bf3b5fb012d61e1a43f92c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> VkResult <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE VkResult VMA_CALL_POST vmaCreateVirtualBlock</definition>
+        <argsstring>(const VmaVirtualBlockCreateInfo *VMA_NOT_NULL pCreateInfo, VmaVirtualBlock VMA_NULLABLE *VMA_NOT_NULL pVirtualBlock)</argsstring>
+        <name>vmaCreateVirtualBlock</name>
+        <param>
+          <type>const <ref refid="struct_vma_virtual_block_create_info" kindref="compound">VmaVirtualBlockCreateInfo</ref> *<ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>pCreateInfo</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> <ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref> *<ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>pVirtualBlock</declname>
+        </param>
+        <briefdescription>
+<para>Creates new <ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pCreateInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameters for creation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pVirtualBlock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Returned virtual block object or `VMA_NULL` if creation failed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="2414" column="37" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="2414" declcolumn="37"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__virtual_1ga1a464943809fb27dd3b78d1cd6e3d534" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaDestroyVirtualBlock</definition>
+        <argsstring>(VmaVirtualBlock VMA_NULLABLE virtualBlock)</argsstring>
+        <name>vmaDestroyVirtualBlock</name>
+        <param>
+          <type><ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> <ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref></type>
+          <declname>virtualBlock</declname>
+        </param>
+        <briefdescription>
+<para>Destroys <ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Please note that you should consciously handle virtual allocations that could remain unfreed in the block. You should either free them individually using <ref refid="group__group__virtual_1ga9f82fb8b8160d10bb469ae06b90134d2" kindref="member">vmaVirtualFree()</ref> or call <ref refid="group__group__virtual_1ga3114a4b34e1225b3d0a246b219d29d9d" kindref="member">vmaClearVirtualBlock()</ref> if you are sure this is what you want. If you do neither, an assert is called.</para>
+<para>If you keep pointers to some additional metadata associated with your virtual allocations in their `pUserData`, don&apos;t forget to free them. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="2427" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="2427" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__virtual_1ga59f870a818a9acf8506aa36760549a48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> VkBool32 <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE VkBool32 VMA_CALL_POST vmaIsVirtualBlockEmpty</definition>
+        <argsstring>(VmaVirtualBlock VMA_NOT_NULL virtualBlock)</argsstring>
+        <name>vmaIsVirtualBlockEmpty</name>
+        <param>
+          <type><ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>virtualBlock</declname>
+        </param>
+        <briefdescription>
+<para>Returns true of the <ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> is empty - contains 0 virtual allocations and has all its space available for new allocations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="2432" column="37" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="2432" declcolumn="37"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__virtual_1ga64b8c2939b82f83fbec507f29a43307b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaGetVirtualAllocationInfo</definition>
+        <argsstring>(VmaVirtualBlock VMA_NOT_NULL virtualBlock, VmaVirtualAllocation VMA_NOT_NULL_NON_DISPATCHABLE allocation, VmaVirtualAllocationInfo *VMA_NOT_NULL pVirtualAllocInfo)</argsstring>
+        <name>vmaGetVirtualAllocationInfo</name>
+        <param>
+          <type><ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>virtualBlock</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vma_virtual_allocation" kindref="compound">VmaVirtualAllocation</ref> <ref refid="vk__mem__alloc_8h_1af10160f1e2fdeb1e5445ee48f61fd2f2" kindref="member">VMA_NOT_NULL_NON_DISPATCHABLE</ref></type>
+          <declname>allocation</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vma_virtual_allocation_info" kindref="compound">VmaVirtualAllocationInfo</ref> *<ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>pVirtualAllocInfo</declname>
+        </param>
+        <briefdescription>
+<para>Returns information about a specific virtual allocation within a virtual block, like its size and `pUserData` pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="2437" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="2437" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__virtual_1ga2f6cd8f6b98e754be7016b5860d02dac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> VkResult <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE VkResult VMA_CALL_POST vmaVirtualAllocate</definition>
+        <argsstring>(VmaVirtualBlock VMA_NOT_NULL virtualBlock, const VmaVirtualAllocationCreateInfo *VMA_NOT_NULL pCreateInfo, VmaVirtualAllocation VMA_NULLABLE_NON_DISPATCHABLE *VMA_NOT_NULL pAllocation, VkDeviceSize *VMA_NULLABLE pOffset)</argsstring>
+        <name>vmaVirtualAllocate</name>
+        <param>
+          <type><ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>virtualBlock</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_vma_virtual_allocation_create_info" kindref="compound">VmaVirtualAllocationCreateInfo</ref> *<ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>pCreateInfo</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vma_virtual_allocation" kindref="compound">VmaVirtualAllocation</ref> <ref refid="vk__mem__alloc_8h_1ab2073c76e8756145dd9426345e13b57e" kindref="member">VMA_NULLABLE_NON_DISPATCHABLE</ref> *<ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>pAllocation</declname>
+        </param>
+        <param>
+          <type>VkDeviceSize *<ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref></type>
+          <declname>pOffset</declname>
+        </param>
+        <briefdescription>
+<para>Allocates new virtual allocation inside given <ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the allocation fails due to not enough free space available, `VK_ERROR_OUT_OF_DEVICE_MEMORY` is returned (despite the function doesn&apos;t ever allocate actual GPU memory). `pAllocation` is then set to `VK_NULL_HANDLE` and `pOffset`, if not null, it set to `UINT64_MAX`.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>virtualBlock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Virtual block </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pCreateInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameters for the allocation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pAllocation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Returned handle of the new allocation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Returned offset of the new allocation. Optional, can be null. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="2452" column="37" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="2452" declcolumn="37"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__virtual_1ga9f82fb8b8160d10bb469ae06b90134d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaVirtualFree</definition>
+        <argsstring>(VmaVirtualBlock VMA_NOT_NULL virtualBlock, VmaVirtualAllocation VMA_NULLABLE_NON_DISPATCHABLE allocation)</argsstring>
+        <name>vmaVirtualFree</name>
+        <param>
+          <type><ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>virtualBlock</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vma_virtual_allocation" kindref="compound">VmaVirtualAllocation</ref> <ref refid="vk__mem__alloc_8h_1ab2073c76e8756145dd9426345e13b57e" kindref="member">VMA_NULLABLE_NON_DISPATCHABLE</ref></type>
+          <declname>allocation</declname>
+        </param>
+        <briefdescription>
+<para>Frees virtual allocation inside given <ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It is correct to call this function with `allocation == VK_NULL_HANDLE` - it does nothing. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="2462" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="2462" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__virtual_1ga3114a4b34e1225b3d0a246b219d29d9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaClearVirtualBlock</definition>
+        <argsstring>(VmaVirtualBlock VMA_NOT_NULL virtualBlock)</argsstring>
+        <name>vmaClearVirtualBlock</name>
+        <param>
+          <type><ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>virtualBlock</declname>
+        </param>
+        <briefdescription>
+<para>Frees all virtual allocations inside given <ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>You must either call this function or free each virtual allocation individually with <ref refid="group__group__virtual_1ga9f82fb8b8160d10bb469ae06b90134d2" kindref="member">vmaVirtualFree()</ref> before destroying a virtual block. Otherwise, an assert is called.</para>
+<para>If you keep pointer to some additional metadata associated with your virtual allocation in its `pUserData`, don&apos;t forget to free it as well. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="2474" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="2474" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__virtual_1ga9e697c001a3750c3bf1a081ee15f6b10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaSetVirtualAllocationUserData</definition>
+        <argsstring>(VmaVirtualBlock VMA_NOT_NULL virtualBlock, VmaVirtualAllocation VMA_NOT_NULL_NON_DISPATCHABLE allocation, void *VMA_NULLABLE pUserData)</argsstring>
+        <name>vmaSetVirtualAllocationUserData</name>
+        <param>
+          <type><ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>virtualBlock</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vma_virtual_allocation" kindref="compound">VmaVirtualAllocation</ref> <ref refid="vk__mem__alloc_8h_1af10160f1e2fdeb1e5445ee48f61fd2f2" kindref="member">VMA_NOT_NULL_NON_DISPATCHABLE</ref></type>
+          <declname>allocation</declname>
+        </param>
+        <param>
+          <type>void *<ref refid="vk__mem__alloc_8h_1a3ff043960766509fbba947bc2c68bdb6" kindref="member">VMA_NULLABLE</ref></type>
+          <declname>pUserData</declname>
+        </param>
+        <briefdescription>
+<para>Changes custom pointer associated with given virtual allocation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="2479" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="2479" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__virtual_1gac63bab2c8ae8e74451a11ef6dab48a5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaGetVirtualBlockStatistics</definition>
+        <argsstring>(VmaVirtualBlock VMA_NOT_NULL virtualBlock, VmaStatistics *VMA_NOT_NULL pStats)</argsstring>
+        <name>vmaGetVirtualBlockStatistics</name>
+        <param>
+          <type><ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>virtualBlock</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vma_statistics" kindref="compound">VmaStatistics</ref> *<ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>pStats</declname>
+        </param>
+        <briefdescription>
+<para>Calculates and returns statistics about virtual allocations and memory usage in given <ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is fast to call. For more detailed statistics, see <ref refid="group__group__virtual_1ga87017b57fb0e9623573f07c236c37566" kindref="member">vmaCalculateVirtualBlockStatistics()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="2488" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="2488" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__virtual_1ga87017b57fb0e9623573f07c236c37566" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="vk__mem__alloc_8h_1a3f0fa870030b4d421bf71e3928d5fe31" kindref="member">VMA_CALL_PRE</ref> void <ref refid="vk__mem__alloc_8h_1aab7d949b3d77783f0ba704ae5e3136e0" kindref="member">VMA_CALL_POST</ref></type>
+        <definition>VMA_CALL_PRE void VMA_CALL_POST vmaCalculateVirtualBlockStatistics</definition>
+        <argsstring>(VmaVirtualBlock VMA_NOT_NULL virtualBlock, VmaDetailedStatistics *VMA_NOT_NULL pStats)</argsstring>
+        <name>vmaCalculateVirtualBlockStatistics</name>
+        <param>
+          <type><ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref> <ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>virtualBlock</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vma_detailed_statistics" kindref="compound">VmaDetailedStatistics</ref> *<ref refid="vk__mem__alloc_8h_1a0366f45516136c073f98582341ecf9de" kindref="member">VMA_NOT_NULL</ref></type>
+          <declname>pStats</declname>
+        </param>
+        <briefdescription>
+<para>Calculates and returns detailed statistics about virtual allocations and memory usage in given <ref refid="struct_vma_virtual_block" kindref="compound">VmaVirtualBlock</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is slow to call. Use for debugging purposes. For less detailed statistics, see <ref refid="group__group__virtual_1gac63bab2c8ae8e74451a11ef6dab48a5d" kindref="member">vmaGetVirtualBlockStatistics()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" line="2497" column="33" declfile="shadow-engine/shadow-renderer/inc/vulkan/vk_mem_alloc.h" declline="2497" declcolumn="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>API elements related to the mechanism of <ref refid="virtual_allocator" kindref="compound">Virtual allocator</ref> - using the core allocation algorithm for user-defined purpose without allocating any real GPU memory. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structvlkx_1_1_per_vertex_buffer_1_1_no_share_meta_1_1_per_mesh" kind="struct" language="C++" prot="public">
+    <compoundname>vlkx::PerVertexBuffer::NoShareMeta::PerMesh</compoundname>
+    <includes refid="_buffer_8h" local="no">Buffer.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvlkx_1_1_per_vertex_buffer_1_1_no_share_meta_1_1_per_mesh_1a23b56c2d28e76f26db35a90598425629" prot="public" static="no" mutable="no">
+        <type><ref refid="structvlkx_1_1_per_vertex_buffer_1_1_vertex_data_meta" kindref="compound">VertexDataMeta</ref></type>
+        <definition>VertexDataMeta vlkx::PerVertexBuffer::NoShareMeta::PerMesh::indices</definition>
+        <argsstring></argsstring>
+        <name>indices</name>
+        <qualifiedname>vlkx::PerVertexBuffer::NoShareMeta::PerMesh::indices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="206" column="32" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvlkx_1_1_per_vertex_buffer_1_1_no_share_meta_1_1_per_mesh_1a1ce27e91025db3e43895726f91250ef3" prot="public" static="no" mutable="no">
+        <type><ref refid="structvlkx_1_1_per_vertex_buffer_1_1_vertex_data_meta" kindref="compound">VertexDataMeta</ref></type>
+        <definition>VertexDataMeta vlkx::PerVertexBuffer::NoShareMeta::PerMesh::vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <qualifiedname>vlkx::PerVertexBuffer::NoShareMeta::PerMesh::vertices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="207" column="32" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>vlkx::PerVertexBuffer::NoShareMeta::PerMesh</label>
+        <link refid="structvlkx_1_1_per_vertex_buffer_1_1_no_share_meta_1_1_per_mesh"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>indices</edgelabel>
+          <edgelabel>vertices</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vlkx::PerVertexBuffer::VertexDataMeta</label>
+        <link refid="structvlkx_1_1_per_vertex_buffer_1_1_vertex_data_meta"/>
+      </node>
+    </collaborationgraph>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" line="205" column="13" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Buffer.h" bodystart="205" bodyend="208"/>
+    <listofallmembers>
+      <member refid="structvlkx_1_1_per_vertex_buffer_1_1_no_share_meta_1_1_per_mesh_1a23b56c2d28e76f26db35a90598425629" prot="public" virt="non-virtual"><scope>vlkx::PerVertexBuffer::NoShareMeta::PerMesh</scope><name>indices</name></member>
+      <member refid="structvlkx_1_1_per_vertex_buffer_1_1_no_share_meta_1_1_per_mesh_1a1ce27e91025db3e43895726f91250ef3" prot="public" virt="non-virtual"><scope>vlkx::PerVertexBuffer::NoShareMeta::PerMesh</scope><name>vertices</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

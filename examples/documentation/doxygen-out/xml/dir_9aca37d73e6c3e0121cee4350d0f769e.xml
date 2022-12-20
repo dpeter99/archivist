@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_9aca37d73e6c3e0121cee4350d0f769e" kind="dir">
+    <compoundname>shadow-engine/shadow-renderer/inc/vlkx/render/shader</compoundname>
+    <innerfile refid="_pipeline_8h">Pipeline.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/render/shader/"/>
+  </compounddef>
+</doxygen>

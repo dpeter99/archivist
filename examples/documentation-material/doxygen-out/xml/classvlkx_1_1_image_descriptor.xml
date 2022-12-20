@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classvlkx_1_1_image_descriptor" kind="class" language="C++" prot="public">
+    <compoundname>vlkx::ImageDescriptor</compoundname>
+    <includes refid="_image_8h" local="no">Image.h</includes>
+    <innerclass refid="structvlkx_1_1_image_descriptor_1_1_dimension" prot="public">vlkx::ImageDescriptor::Dimension</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classvlkx_1_1_image_descriptor_1a6e183c614c5b0aa6ee0a1e37e414e0c8" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Type</name>
+        <qualifiedname>vlkx::ImageDescriptor::Type</qualifiedname>
+        <enumvalue id="classvlkx_1_1_image_descriptor_1a6e183c614c5b0aa6ee0a1e37e414e0c8a66ba162102bbf6ae31b522aec561735e" prot="public">
+          <name>Single</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classvlkx_1_1_image_descriptor_1a6e183c614c5b0aa6ee0a1e37e414e0c8a29b142520cd0349c9f7375be4aa848c0" prot="public">
+          <name>Cubemap</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="16" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="16" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvlkx_1_1_image_descriptor_1ae3914dd1333f353c4585943ccfb88d63" prot="private" static="no" mutable="no">
+        <type><ref refid="classvlkx_1_1_image_descriptor_1a6e183c614c5b0aa6ee0a1e37e414e0c8" kindref="member">Type</ref></type>
+        <definition>Type vlkx::ImageDescriptor::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>vlkx::ImageDescriptor::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="51" column="14" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_image_descriptor_1a5950a0c555dcce4284e9c3b13f0f7519" prot="private" static="no" mutable="no">
+        <type><ref refid="structvlkx_1_1_image_descriptor_1_1_dimension" kindref="compound">Dimension</ref></type>
+        <definition>Dimension vlkx::ImageDescriptor::dimensions</definition>
+        <argsstring></argsstring>
+        <name>dimensions</name>
+        <qualifiedname>vlkx::ImageDescriptor::dimensions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="52" column="19" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvlkx_1_1_image_descriptor_1acda3567fae8a1cf1201eb320db97a6bc" prot="private" static="no" mutable="no">
+        <type>const void *</type>
+        <definition>const void* vlkx::ImageDescriptor::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <qualifiedname>vlkx::ImageDescriptor::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="53" column="20" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvlkx_1_1_image_descriptor_1a66550c634edcdf9996a8a7f15912eb52" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classvlkx_1_1_image_descriptor_1a6e183c614c5b0aa6ee0a1e37e414e0c8" kindref="member">Type</ref></type>
+        <definition>Type vlkx::ImageDescriptor::getType</definition>
+        <argsstring>() const</argsstring>
+        <name>getType</name>
+        <qualifiedname>vlkx::ImageDescriptor::getType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="26" column="14" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_image_descriptor_1a9d78e1245db294ed5d4a90be69839801" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkExtent2D</type>
+        <definition>VkExtent2D vlkx::ImageDescriptor::getExtent</definition>
+        <argsstring>() const</argsstring>
+        <name>getExtent</name>
+        <qualifiedname>vlkx::ImageDescriptor::getExtent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="27" column="20" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_image_descriptor_1a364026059da04edbc8092aa41132dad5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t vlkx::ImageDescriptor::getWidth</definition>
+        <argsstring>() const</argsstring>
+        <name>getWidth</name>
+        <qualifiedname>vlkx::ImageDescriptor::getWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="28" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_image_descriptor_1af5bac38365ca952a15cc052c3b03bb57" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t vlkx::ImageDescriptor::getHeight</definition>
+        <argsstring>() const</argsstring>
+        <name>getHeight</name>
+        <qualifiedname>vlkx::ImageDescriptor::getHeight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="29" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_image_descriptor_1a72260b8ebbb6d6b4e1984f79892627d8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t vlkx::ImageDescriptor::getChannels</definition>
+        <argsstring>() const</argsstring>
+        <name>getChannels</name>
+        <qualifiedname>vlkx::ImageDescriptor::getChannels</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="30" column="18" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_image_descriptor_1a1d46a869dc88dd4df380c8dfa2cc942b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; void * &gt;</type>
+        <definition>std::vector&lt; void * &gt; vlkx::ImageDescriptor::getData</definition>
+        <argsstring>() const</argsstring>
+        <name>getData</name>
+        <qualifiedname>vlkx::ImageDescriptor::getData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="32" column="21" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="32" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_image_descriptor_1aecf77455db73611d183f007dd3b3d9b9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int vlkx::ImageDescriptor::getLayers</definition>
+        <argsstring>() const</argsstring>
+        <name>getLayers</name>
+        <qualifiedname>vlkx::ImageDescriptor::getLayers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="46" column="13" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classvlkx_1_1_image_descriptor_1afc74870a2543eb54792a4e05d762b38e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>vlkx::ImageDescriptor::ImageDescriptor</definition>
+        <argsstring>(Type t, const Dimension &amp;d, const void *ptr)</argsstring>
+        <name>ImageDescriptor</name>
+        <qualifiedname>vlkx::ImageDescriptor::ImageDescriptor</qualifiedname>
+        <param>
+          <type><ref refid="classvlkx_1_1_image_descriptor_1a6e183c614c5b0aa6ee0a1e37e414e0c8" kindref="member">Type</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structvlkx_1_1_image_descriptor_1_1_dimension" kindref="compound">Dimension</ref> &amp;</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="48" column="9" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" line="14" column="5" bodyfile="shadow-engine/shadow-renderer/inc/vlkx/vulkan/abstraction/Image.h" bodystart="14" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classvlkx_1_1_image_descriptor_1acda3567fae8a1cf1201eb320db97a6bc" prot="private" virt="non-virtual"><scope>vlkx::ImageDescriptor</scope><name>data</name></member>
+      <member refid="classvlkx_1_1_image_descriptor_1a5950a0c555dcce4284e9c3b13f0f7519" prot="private" virt="non-virtual"><scope>vlkx::ImageDescriptor</scope><name>dimensions</name></member>
+      <member refid="classvlkx_1_1_image_descriptor_1a72260b8ebbb6d6b4e1984f79892627d8" prot="public" virt="non-virtual"><scope>vlkx::ImageDescriptor</scope><name>getChannels</name></member>
+      <member refid="classvlkx_1_1_image_descriptor_1a1d46a869dc88dd4df380c8dfa2cc942b" prot="public" virt="non-virtual"><scope>vlkx::ImageDescriptor</scope><name>getData</name></member>
+      <member refid="classvlkx_1_1_image_descriptor_1a9d78e1245db294ed5d4a90be69839801" prot="public" virt="non-virtual"><scope>vlkx::ImageDescriptor</scope><name>getExtent</name></member>
+      <member refid="classvlkx_1_1_image_descriptor_1af5bac38365ca952a15cc052c3b03bb57" prot="public" virt="non-virtual"><scope>vlkx::ImageDescriptor</scope><name>getHeight</name></member>
+      <member refid="classvlkx_1_1_image_descriptor_1aecf77455db73611d183f007dd3b3d9b9" prot="public" virt="non-virtual"><scope>vlkx::ImageDescriptor</scope><name>getLayers</name></member>
+      <member refid="classvlkx_1_1_image_descriptor_1a66550c634edcdf9996a8a7f15912eb52" prot="public" virt="non-virtual"><scope>vlkx::ImageDescriptor</scope><name>getType</name></member>
+      <member refid="classvlkx_1_1_image_descriptor_1a364026059da04edbc8092aa41132dad5" prot="public" virt="non-virtual"><scope>vlkx::ImageDescriptor</scope><name>getWidth</name></member>
+      <member refid="classvlkx_1_1_image_descriptor_1afc74870a2543eb54792a4e05d762b38e" prot="public" virt="non-virtual"><scope>vlkx::ImageDescriptor</scope><name>ImageDescriptor</name></member>
+      <member refid="classvlkx_1_1_image_descriptor_1a6e183c614c5b0aa6ee0a1e37e414e0c8" prot="public" virt="non-virtual"><scope>vlkx::ImageDescriptor</scope><name>Type</name></member>
+      <member refid="classvlkx_1_1_image_descriptor_1ae3914dd1333f353c4585943ccfb88d63" prot="private" virt="non-virtual"><scope>vlkx::ImageDescriptor</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
