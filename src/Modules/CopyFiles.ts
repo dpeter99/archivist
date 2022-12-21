@@ -5,6 +5,7 @@ import { regexCopy } from "https://deno.land/x/regex_copy@1.0.3/mod.ts";
 import {SimpleModule} from "../Module/SimpleModule.ts";
 import {Pipeline} from "../Pipeline.ts";
 import {IModule} from "../Module/IModule.ts";
+import {path} from "https://deno.land/x/deno_ejs@v0.3.1/deps.ts";
 
 
 /**
@@ -23,8 +24,8 @@ export class CopyFiles extends SimpleModule {
      */
     constructor(from: string, to:string, includes?: string) {
         super();
-        this.from = from;
-        this.to = to;
+        this.from = path.join(Deno.cwd(), from);
+        this.to = path.join(Deno.cwd(), to);
         this.includes = includes;
     }
 
