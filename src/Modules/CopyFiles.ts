@@ -8,9 +8,7 @@ import {IModule} from "../Module/IModule.ts";
 
 
 /**
- * This module is responsible for copying the static files of your template
- * It does this by copying every file in your templates "compiledPath" that
- * isn't matched by the "ignore" list in your template.
+ * Copy files from folder to folder
  */
 export class CopyFiles extends SimpleModule {
     private from: string;
