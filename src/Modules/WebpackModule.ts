@@ -13,11 +13,8 @@ import { copy } from "https://deno.land/std@0.104.0/io/util.ts";
 
 
 export class WebpackModule extends SimpleModule {
-
     path?:string
-
     template!: Template;
-
 
     constructor(path?: string) {
         super();

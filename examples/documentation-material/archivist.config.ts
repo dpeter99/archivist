@@ -1,7 +1,7 @@
 import "../../src/index.ts";
 import {DoxygenReader} from "../../src/Modules/Input/doxygen/DoxygenReader.ts";
 import * as Arch from "../../src/index.ts";
-import {Pipeline, StaticTemplateFilesModule, WebUrlOutputResolver} from "../../src/index.ts";
+import {Pipeline, CopyTemplateFiles, WebUrlOutputResolver} from "../../src/index.ts";
 
 
 export let config: Arch.Config = {
@@ -11,7 +11,7 @@ export let config: Arch.Config = {
     outputPath: "./out",
     preProcessors: [
         Pipeline.fromModules({name:"build_template"},
-            new StaticTemplateFilesModule(),
+            new CopyTemplateFiles(),
         )
     ],
     pipelines:[

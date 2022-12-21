@@ -9,7 +9,7 @@ export let config: archivist.Config = {
     preProcessors: [
         archivist.Pipeline.fromModules({name:"build_template"},
             new archivist.WebpackModule(),
-            new archivist.StaticTemplateFilesModule(),
+            new archivist.CopyTemplateFiles(),
             new archivist.WebpackModule("./examples/blog/template/"),
 
         )
@@ -38,7 +38,7 @@ export let config: archivist.Config = {
             new archivist.MarkdownRender(),
             new archivist.TemplateModule(),
             new archivist.OutputModule("./out/"),
-            new archivist.StaticTemplateFilesModule()
+            new archivist.CopyTemplateFiles()
         )
     ]
 }

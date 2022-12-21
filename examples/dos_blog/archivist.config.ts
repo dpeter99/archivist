@@ -4,7 +4,7 @@ import {
     FileReaderModule,
     FrontMatterMetadata, MarkdownRender, OutputModule,
     Pipeline,
-    StaticTemplateFilesModule, TemplateModule
+    CopyTemplateFiles, TemplateModule
 } from "../../src/index.ts";
 import {WebUrlOutputResolver} from "../../src/Modules/WebUrlOutputResolver.ts";
 
@@ -17,7 +17,7 @@ export let config: Config = {
     outputURL: "http://127.0.0.1:8888",
     preProcessors: [
         Pipeline.fromModules({name:"build_template"},
-            new StaticTemplateFilesModule(),
+            new CopyTemplateFiles(),
         )
     ],
     pipelines:[

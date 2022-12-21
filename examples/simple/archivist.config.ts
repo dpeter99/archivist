@@ -2,7 +2,7 @@
 import {Config} from "../../src/Archivist.ts";
 import {Pipeline} from "../../src/Pipeline.ts";
 import {
-    StaticTemplateFilesModule,
+    CopyTemplateFiles,
     FileReaderModule,
     ExtractMetadata,
     FrontMatterMetadata,
@@ -19,7 +19,7 @@ export let config: Config = {
     outputPath: "./out",
     preProcessors: [
         Pipeline.fromModules({name:"build_template"},
-            new StaticTemplateFilesModule(),
+            new CopyTemplateFiles(),
         )
     ],
     pipelines:[
