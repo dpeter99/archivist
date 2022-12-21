@@ -11,7 +11,6 @@ export let config: archivist.Config = {
             new archivist.WebpackModule(),
             new archivist.CopyTemplateFiles(),
             new archivist.WebpackModule("./examples/blog/template/"),
-
         )
     ],
     pipelines:[

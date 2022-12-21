@@ -5,6 +5,7 @@ import {SimpleModule} from "../Module/SimpleModule.ts";
 import {Content} from "../Content.ts";
 
 /**
+ * @deprecated Use CopyFiles
  * This is a simple copy module that copies files to the output folder
  * Useful for ``static`` folders where you might keep images that are not directly referenced in your MD files
  * For files directly ref-ed in MD files use the @see {@link ExtractResources} module.
