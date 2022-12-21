@@ -193,6 +193,7 @@ export class DoxygenReader extends SimpleModule{
 
             doc.metadata.addData("name", name);
             doc.metadata.addData("code:data", data);
+            doc.metadata.addData("type","docs");
 
             docs.push(doc);
         }

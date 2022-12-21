@@ -4,9 +4,9 @@ import {ArticleHelper} from "../../../utils/ArticleHelper.ts";
 import {Component} from "./static-tsx/react.ts";
 
 export class Experimental_TSXTemplater extends SimpleModule {
-    private root: Component;
+    private root: (doc:Content,helper: TSXHelper)=>Component;
 
-    constructor(root: Component) {
+    constructor(root: (doc:Content,helper: TSXHelper)=>Component) {
         super();
         this.root = root;
     }
@@ -14,8 +14,6 @@ export class Experimental_TSXTemplater extends SimpleModule {
     async processDoc(doc: Content): Promise<any> {
         await super.processDoc(doc);
         let helper = new TSXHelper(doc.path,this);
-
-        //let root = (await import("./template/root.tsx")).root;
 
         let page_root = this.root(doc, helper);
 

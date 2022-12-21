@@ -1,6 +1,5 @@
 import {dirname} from "https://deno.land/std@0.61.0/path/mod.ts";
-
-import {compile} from "https://deno.land/x/deno_ejs/mod.ts";
+import {compile} from "https://deno.land/x/deno_ejs@v0.3.1/mod.ts";
 
 import {SimpleModule} from "../../Module/SimpleModule.ts";
 import {Pipeline} from "../../Pipeline.ts";
