@@ -39,7 +39,7 @@ export class CopyFiles extends SimpleModule {
         //Make sure we have a place to put the files
         fs.ensureDirSync(this.to);
 
-        regexCopy(this.from, this.to);
+        await regexCopy([this.from, this.to],{});
     }
 
 }
