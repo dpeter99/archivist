@@ -26,9 +26,9 @@ export class WebUrlOutputResolver extends SimpleModule{
         const file_name = doc.name.replace(path.extname(doc.name),"");
         const parent_dir = path.basename(path.dirname(doc.path));
 
-        if(path.dirname(doc.path)+"\\" != this.pipeline.ContentRoot) {
+        if(path.dirname(doc.path)+"\\" != this.pipeline.ContentRoot || true) {
 
-            let new_path = doc.path;
+            let new_path: string;
             //If we are the same name as the dir than we are the index file of that dir
             if (file_name == parent_dir) {
                 new_path = path.dirname(doc.path) + path.sep + "index.html";
@@ -40,10 +40,16 @@ export class WebUrlOutputResolver extends SimpleModule{
             else{
                 new_path = doc.path.replace(path.extname(doc.path),".html");
             }
+            new_path = path.normalize(new_path);
+
             doc.metadata.addData("outputPath", new_path);
 
             let url = this.baseURL + "/" + this.getFileRelativePath(path.dirname(new_path))
-            url = url.replace("\\", "/");
+
+            if(archivistInst.detailedOutput)
+                console.log( this.baseURL + "  /  " + this.getFileRelativePath(path.dirname(new_path)) )
+
+            url = url.replaceAll("\\", "/");
             doc.metadata.addData("url",url);
 
             //console.log(new_path);

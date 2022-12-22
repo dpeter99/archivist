@@ -62,7 +62,10 @@ export class RssFeedModule extends SimpleModule {
 
         const __dirname = dirname(import.meta.url);
         const template_path = __dirname+"/./RssTemplate.ejs";
-        console.log(template_path);
+
+        if(archivistInst.detailedOutput)
+            console.log(template_path);
+
         const template_string =  await (await fetch(template_path)).text();
 
         this.template = compile_help(template_string,{});

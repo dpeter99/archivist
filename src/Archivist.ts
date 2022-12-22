@@ -24,6 +24,12 @@ export class Archivist {
     outputURL?: string
 
     /**
+     * This is the root at witch the site is deployed
+     * This is the same as outputURL unless we are building only part of the site.
+     */
+    rootURL?: string
+
+    /**
      * Option to get detailed output info useful for debugging
      */
     detailedOutput: boolean;
@@ -36,6 +42,7 @@ export class Archivist {
 
         this.outputPath = conf.outputPath;
         this.outputURL = conf.outputURL;
+        this.rootURL = conf.rootURL ?? conf.outputURL;
 
         if(conf.template){
             try {
@@ -94,11 +101,9 @@ export class Archivist {
             if (printFilesList) {
                 ink.terminal.log(`<green>${pipeline.name} ran successfully on the following files: </green>`)
                 if (this.detailedOutput) {
-
                     for (const doc of docs!) {
                         console.log(doc);
                     }
-
                 } else {
                     console.table(docs!.map((d) => ({
                         name: d.name,
@@ -123,6 +128,7 @@ export class Config {
 
     outputPath?: string;
     outputURL?: string;
+    rootURL?: string;
 
     detailedOutput: boolean = false;
 

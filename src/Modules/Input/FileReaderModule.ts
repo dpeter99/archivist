@@ -15,6 +15,11 @@ export class FileReaderModule extends SimpleModule{
 
     pattern: string;
 
+    /**
+     *
+     * @param pattern Glob pattern to read in files.
+     * It is relative to the content root of the pipeline's content root
+     */
     constructor(pattern: string) {
         super();
         this.pattern = pattern;
@@ -31,7 +36,7 @@ export class FileReaderModule extends SimpleModule{
         if(archivistInst.detailedOutput)
             console.log("Current content root is: " + this.pipeline.ContentRoot);
 
-        for await (const file of expandGlob(this.pattern,{root:this.pipeline.ContentRoot})) {
+        for await (const file of expandGlob(this.pattern, {root: this.pipeline.ContentRoot, globstar: true})) {
 
             if(archivistInst.detailedOutput)
                 console.log("Reading in: " + file.path);

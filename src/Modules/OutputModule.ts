@@ -39,10 +39,13 @@ export class OutputModule extends SimpleModule{
 
     async processDoc(doc:Content): Promise<any> {
 
-        let path = this.getFileOutputLoc(doc.path);
+        if(doc.meta.output || doc.meta.output === "none")
+            return ;
+
+        let path = this.getFileOutputLoc(doc.path, this.outputPath);
 
         if(doc.meta.outputpath){
-            path = this.getFileOutputLoc(doc.meta.outputpath);
+            path = this.getFileOutputLoc(doc.meta.outputpath, this.outputPath);
         }
 
         const dir = Path.dirname(path);

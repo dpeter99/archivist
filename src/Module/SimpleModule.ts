@@ -46,9 +46,9 @@ export class SimpleModule implements IModule{
        return path.relative(this.pipeline.ContentRoot,p);
     }
 
-    public getFileOutputLoc(file:string){
+    public getFileOutputLoc(file:string, base: string = this.OutputPath){
         const fileRel = this.getFileRelativePath(file);
-        return this.OutputPath + fileRel;
+        return (base) + fileRel;
     }
 
 }

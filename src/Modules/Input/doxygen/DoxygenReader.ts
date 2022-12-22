@@ -55,10 +55,12 @@ export class DoxygenReader extends SimpleModule{
     docPath: string;
 
     refMap: Map<string,any> = new Map<string, any>();
+    private prefix: string;
 
-    constructor(doc_path: string) {
+    constructor(doc_path: string, prefix: string) {
         super();
         this.docPath = doc_path;
+        this.prefix = prefix;
     }
 
     async setup(pipeline: Pipeline, parent?: IModule): Promise<any> {
@@ -92,6 +94,7 @@ export class DoxygenReader extends SimpleModule{
 
             let text = await Deno.readTextFile(name);
 
+            // Mark certain fields as cdata, so we can get the full text content
             text = this.addCdataToTag(text, "briefdescription");
             text = this.addCdataToTag(text, "detaileddescription");
             text = this.addCdataToTag(text, "type");
@@ -147,7 +150,11 @@ export class DoxygenReader extends SimpleModule{
         if(node.attr["kind"] == "class"){
             const name :string = <string> node.getChildren("compoundname")[0].value;
 
-            const doc = new Content("doc/"+name.replaceAll("::","/")+".class", "");
+            let path = this.prefix + name.replaceAll("::","/") + ".class";
+            if(Path.isAbsolute(this.docPath))
+                path = this.pipeline.ContentRoot + path
+
+            const doc = new Content(path, "");
             this.addRef(node, doc.path);
 
             const members: Member[] = node.getChildren("sectiondef").flatMap(sec=>sec.getChildren("memberdef")).map(n=>{

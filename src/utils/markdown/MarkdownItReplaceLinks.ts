@@ -2,6 +2,7 @@
 import cheerio from "npm:cheerio";
 import MarkdownIt from "npm:markdown-it@13.0.1";
 import {Token} from "./markdown.d.ts";
+import {archivistInst} from "../../Archivist.ts";
 
 export type Callback = (link: string, env: any) => string;
 
@@ -57,7 +58,8 @@ export default function (md: any, opts: any & Options) {
                         attribute,
                         callback!(attributeValue, state.env)
                     );
-                    console.log(attributeValue);
+                    if(archivistInst.detailedOutput)
+                        console.log(attributeValue);
                 });
                 blockToken.content = $.html();
             }

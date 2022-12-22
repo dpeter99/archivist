@@ -36,8 +36,8 @@ export class CopyModule extends SimpleModule{
             copySync(this.source, targ);
         }
         catch (e){
-          console.log(e);
-        };
+          console.error(e);
+        }
 
     }
 }

@@ -57,7 +57,7 @@ export class ArticleHelper {
      * @param f
      */
     public subArticle(f:Content): boolean{
-        let common =path.common([this.dir,path.dirname(f.path)])
+        let common = path.common([this.dir,path.dirname(f.path)])
         common = common.replace(/[\/\\]$/, "")
 
         return common == this.dir && f.path != this.file;
