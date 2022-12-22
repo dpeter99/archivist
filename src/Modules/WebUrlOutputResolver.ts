@@ -44,13 +44,16 @@ export class WebUrlOutputResolver extends SimpleModule{
 
             doc.metadata.addData("outputPath", new_path);
 
-            let url = this.baseURL + "/" + this.getFileRelativePath(path.dirname(new_path))
+            let relativeURL = "/" + this.getFileRelativePath(path.dirname(new_path))
 
             if(archivistInst.detailedOutput)
                 console.log( this.baseURL + "  /  " + this.getFileRelativePath(path.dirname(new_path)) )
 
-            url = url.replaceAll("\\", "/");
-            doc.metadata.addData("url",url);
+            relativeURL = relativeURL.replaceAll("\\", "/");
+            doc.metadata.addData("url_rel",relativeURL);
+
+            const url = (this.baseURL + relativeURL).replaceAll("\\", "/");
+            doc.metadata.addData("url", url);
 
             //console.log(new_path);
         }
