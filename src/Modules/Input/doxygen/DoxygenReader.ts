@@ -52,22 +52,22 @@ export type Member = Function | Varaible | Other;
  */
 export class DoxygenReader extends SimpleModule{
 
-    docPath: string;
+    pattern: string;
 
     refMap: Map<string,any> = new Map<string, any>();
     private prefix: string;
 
     constructor(doc_path: string, prefix: string) {
         super();
-        this.docPath = doc_path;
+        this.pattern = doc_path;
         this.prefix = prefix;
     }
 
     async setup(pipeline: Pipeline, parent?: IModule): Promise<any> {
         await super.setup(pipeline, parent);
 
-        if(!Path.isAbsolute(this.docPath))
-            this.docPath = Path.join(this.pipeline.ContentRoot,this.docPath);
+        //if(!Path.isAbsolute(this.docPath))
+        //    this.docPath = Path.join(this.pipeline.ContentRoot,this.docPath);
 
         return Promise.resolve();
     }
@@ -75,14 +75,14 @@ export class DoxygenReader extends SimpleModule{
     async process(docs: Content[]): Promise<any> {
 
         if(archivistInst.detailedOutput)
-            console.log("Doc root is: " + this.docPath);
+            console.log("Doc root is: " + this.pattern);
 
         const arser = new Parser({
             reflectAttrs: false,
             reflectValues: false,
         });
 
-        for await (const file of expandGlob(this.docPath,{root:this.pipeline.ContentRoot})) {
+        for await (const file of expandGlob(this.pattern, {root: this.pipeline.ContentRoot, globstar: true})) {
 
             if(archivistInst.detailedOutput)
                 console.log("Reading in: " + file.path);
@@ -151,7 +151,7 @@ export class DoxygenReader extends SimpleModule{
             const name :string = <string> node.getChildren("compoundname")[0].value;
 
             let path = this.prefix + name.replaceAll("::","/") + ".class";
-            if(Path.isAbsolute(this.docPath))
+            if(!Path.isAbsolute(this.pattern))
                 path = this.pipeline.ContentRoot + path
 
             const doc = new Content(path, "");

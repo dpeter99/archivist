@@ -34,12 +34,15 @@ export class FileReaderModule extends SimpleModule{
     async process(docs: Content[]): Promise<any> {
 
         if(archivistInst.detailedOutput)
-            console.log("Current content root is: " + this.pipeline.ContentRoot);
+            console.log("Current content root is: " + this.pipeline.ContentRoot + "\n Pattern is: " + this.pattern);
 
         for await (const file of expandGlob(this.pattern, {root: this.pipeline.ContentRoot, globstar: true})) {
 
             if(archivistInst.detailedOutput)
                 console.log("Reading in: " + file.path);
+
+            if(file.isDirectory)
+                continue;
 
             let name = String(file.path);
             if(name.indexOf("node_modules") == -1){
