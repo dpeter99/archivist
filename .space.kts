@@ -5,5 +5,7 @@
 */
 
 job("Hello World!") {
+    startOn{}
+    
     container(displayName = "Say Hello", image = "hello-world")
 }
