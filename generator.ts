@@ -1,4 +1,4 @@
-import {build, type InlineConfig} from 'vite'
+import {build, BuildEnvironment, createBuilder, type InlineConfig} from 'vite'
 import rsc from "@vitejs/plugin-rsc";
 import react from "@vitejs/plugin-react";
 import Inspect from "vite-plugin-inspect";
@@ -51,5 +51,7 @@ const config: InlineConfig = {
   }
 }
 
-await build(config)
+const builder = await createBuilder(config)
+//builder.build(new BuildEnvironment('client', builder))
+await builder.buildApp()
 
