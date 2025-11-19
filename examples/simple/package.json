@@ -1,0 +1,13 @@
+{
+  "name": "simple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "archavist build"
+  },
+  "private": true,
+  "devDependencies": {
+    "archavist": "workspace:*"
+  }
+}

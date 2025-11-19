@@ -1,0 +1,18 @@
+# TypeScript build output
+dist/
+
+# Static site output
+build/
+
+# Dependencies
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+.archavist/
