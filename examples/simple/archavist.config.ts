@@ -7,7 +7,7 @@ import {
 
 const config: ArchavistConfig = {
   // Path to your Obsidian vault (required)
-  vaultPath: "/home/dpeter99/Documents/TTRPG/CoS_Orsi_ver/Rens-Mind/",
+  vaultPath: "./content",
 
   outputPath: "./build",
 
