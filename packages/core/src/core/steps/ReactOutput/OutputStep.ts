@@ -5,9 +5,12 @@ import {createBuilder, InlineConfig} from "vite";
 import rsc from "@vitejs/plugin-rsc";
 import react from "@vitejs/plugin-react";
 
-import { BasePipelineStep } from '@/core';
+import {BasePipelineStep, Content} from '@/core';
 import type { PipelineContext } from '@/core';
 import {fileURLToPath} from "node:url";
+import {ReactElement} from "react";
+import {TemplateOptions} from "@/core/steps/ReactOutput/shared";
+import * as fs from "node:fs";
 
 /**
  * Pipeline step that writes the generated HTML to disk
@@ -20,8 +23,8 @@ export class OutputStep extends BasePipelineStep {
   async execute(context: PipelineContext): Promise<PipelineContext> {
     const { outputPath } = context.config;
 
-    const renderer = await this.buildTemplate(context)
-    const {template} = await import('/home/dpeter99/Documents/Projects/Archavist/Archavist_v2/examples/simple/.archavist/rsc/index.js')
+    const templater = await this.buildTemplate(context)
+    
     
     // Create output directory if it doesn't exist
     await mkdir(outputPath, { recursive: true });
@@ -34,18 +37,7 @@ export class OutputStep extends BasePipelineStep {
 
       const outputFilePath = this.getOutputPath(url, outputPath);
       
-      
-      const res = await renderer(template.rootComponent)
-      
-      console.log(`Wrtiting file: ${outputFilePath}`)
-
-      // Create directory if needed
-      await mkdir(dirname(outputFilePath), { recursive: true });
-      
-      // Write the file
-      //await writeFile(outputFilePath, "asdasd", 'utf-8');
-
-      this.writeFileStream(outputFilePath, res.html)
+      await templater.render(content, outputFilePath);
     }
 
     console.log(`Wrote ${context.content.length} pages to ${outputPath}`);
@@ -54,18 +46,17 @@ export class OutputStep extends BasePipelineStep {
   }
 
 
-  private async buildTemplate(context: PipelineContext): Promise<void> {
+  private async buildTemplate(context: PipelineContext): Promise<ContentTemplater> {
 
     const buildDir = context.buildDir;
     const srcDir = fileURLToPath(new URL('.', import.meta.url))
-
-    console.log(`meta url : ${srcDir}`);
     
     const config: InlineConfig = {
       root: srcDir,
       configFile: false,
       build:{
         outDir: buildDir,
+        sourcemap: true,
       },
       plugins: [
         rsc({}),
@@ -115,17 +106,16 @@ export class OutputStep extends BasePipelineStep {
     const builder = await createBuilder(config)
     await builder.buildApp()
 
-    const {render} = await import('/home/dpeter99/Documents/Projects/Archavist/Archavist_v2/examples/simple/.archavist/rsc/rscRender.js')
-    const {template} = await import('/home/dpeter99/Documents/Projects/Archavist/Archavist_v2/examples/simple/.archavist/rsc/index.js')
-    // const result = render(template.rootComponent)
+    const { render } : typeof import('@/core/framework/entry.rsc') = await import((`${buildDir}/rsc/rscRender.js`))
+    const {template} : {template: TemplateOptions} = await import(`${buildDir}/rsc/index.js`)
     
-    return render;
+    
+    fs.cpSync(`${buildDir}/client`, context.config.outputPath, { recursive: true})
+    
+    return new ContentTemplater(render, template);
   }
 
-  async writeFileStream(filePath: string, stream: ReadableStream) {
-    await mkdir(path.dirname(filePath), { recursive: true })
-    await writeFile(filePath, stream)
-  }
+
   
   /**
    * Convert a ReadableStream to a string
@@ -163,5 +153,35 @@ export class OutputStep extends BasePipelineStep {
     }
 
     return join(outputPath, path);
+  }
+}
+
+type RenderFn = (component: ReactElement) => Promise<{html: ReadableStream<Uint8Array>, rsc: ReadableStream<Uint8Array>}>
+
+class ContentTemplater {
+  private renderer: RenderFn;
+  private template: TemplateOptions;
+  
+  
+  constructor(renderer: RenderFn, template: TemplateOptions) {
+    this.renderer = renderer;
+    this.template = template;
+  }
+  
+  public async render(page: Content, outputFilePath: string) {
+    const res = await this.renderer(this.template.rootComponent)
+
+    console.log(`Wrtiting file: ${outputFilePath}`)
+
+    // Create directory if needed
+    await mkdir(dirname(outputFilePath), { recursive: true });
+
+    // Write the file
+    await this.writeFileStream(outputFilePath, res.html)
+  }
+
+  async writeFileStream(filePath: string, stream: ReadableStream) {
+    await mkdir(path.dirname(filePath), { recursive: true })
+    await writeFile(filePath, stream)
   }
 }

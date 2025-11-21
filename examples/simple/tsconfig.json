@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "archavist:template": ["archavist/dist/entry.rsc.ts"]
+    }
+  },
+  "include": [
+    "template/**"
+  ]
+}

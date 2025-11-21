@@ -24,8 +24,10 @@ export interface SiteConfig {
 export interface PipelineContext {
   /** Site configuration */
   config: SiteConfig;
-
+  /** The directory for intermediate build files */
   buildDir: string;
-
+  /** The directory where the current project is */
+  projectDir: string;
+  
   content: Content[];
 }

@@ -5,7 +5,7 @@ import type { RscPayload } from '@/core/steps/ReactOutput/shared'
 
 export async function renderHtml(
   rscStream: ReadableStream<Uint8Array>,
-): Promise<{ stream: ReadableStream<Uint8Array> }> {
+): Promise<ReadableStream<Uint8Array>> {
   const [rsc1, rsc2] = rscStream.tee();
 
   const rscPayload = await createFromReadableStream<RscPayload>(rsc1)
@@ -20,5 +20,5 @@ export async function renderHtml(
 
   let responseStream: ReadableStream<Uint8Array> = htmlStream
   responseStream = responseStream.pipeThrough(injectRSCPayload(rsc2))
-  return { stream: responseStream }
+  return responseStream
 }

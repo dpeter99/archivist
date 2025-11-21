@@ -10,15 +10,12 @@ export async function render(component: ReactElement){
   const ssr = await import.meta.viteRsc.loadModule<
     typeof import('./entry.ssr')
   >('ssr', 'index')
-  const ssrResult = await ssr.renderHtml(rscStream1)
+  const ssrResult: ReadableStream<Uint8Array> = await ssr.renderHtml(rscStream1)
 
-  return { html: ssrResult.stream, rsc: rscStream2 }
+  return { html: ssrResult, rsc: rscStream2 }
 }
 
 
-export type TemplateOptions = {
-  rootComponent: ReactNode;
-}
 
 export function defineTemplate(options: TemplateOptions) {
   return options;

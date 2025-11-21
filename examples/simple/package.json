@@ -4,12 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "archavist build"
+    "build": "archavist build",
+    "serve": "serve build/"
   },
   "private": true,
   "dependencies": {
     "archavist": "workspace:*",
     "react": "19.2.0",
-    "rsc-html-stream": "^0.0.7"
+    "react-dom": "^19.2.0",
+    "rsc-html-stream": "^0.0.7",
+    "serve": "^14.2.5"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2"
   }
 }

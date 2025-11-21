@@ -1,3 +1,4 @@
+import {ClientCounter} from "./counter";
 
 
 export const Root = () => {
@@ -9,6 +10,7 @@ export const Root = () => {
     <body>
       <div>
         asdasd
+        <ClientCounter/>
       </div>
     </body>
     </html>
