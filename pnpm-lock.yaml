@@ -7,10 +7,16 @@ settings:
 importers:
 
   examples/simple:
-    devDependencies:
+    dependencies:
       archavist:
         specifier: workspace:*
         version: link:../../packages/core
+      react:
+        specifier: 19.2.0
+        version: 19.2.0
+      rsc-html-stream:
+        specifier: ^0.0.7
+        version: 0.0.7
 
   packages/core:
     dependencies:
@@ -1171,6 +1177,10 @@ packages:
 
   react@19.0.0:
     resolution: {integrity: sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==}
+    engines: {node: '>=0.10.0'}
+
+  react@19.2.0:
+    resolution: {integrity: sha512-tmbWg6W31tQLeB5cdIBOicJDJRR2KzXsV7uSK9iNfLWQ5bIZfxuPEHp7M8wiHyHnn0DD1i7w3Zmin0FtkrwoCQ==}
     engines: {node: '>=0.10.0'}
 
   readdirp@4.1.2:
@@ -2468,6 +2478,8 @@ snapshots:
   react-refresh@0.18.0: {}
 
   react@19.0.0: {}
+
+  react@19.2.0: {}
 
   readdirp@4.1.2: {}
 

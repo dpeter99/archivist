@@ -1,5 +1,5 @@
 import { mkdir, writeFile } from 'node:fs/promises';
-import { dirname, join } from 'node:path';
+import path, { dirname, join } from 'node:path';
 
 import {createBuilder, InlineConfig} from "vite";
 import rsc from "@vitejs/plugin-rsc";
@@ -20,7 +20,8 @@ export class OutputStep extends BasePipelineStep {
   async execute(context: PipelineContext): Promise<PipelineContext> {
     const { outputPath } = context.config;
 
-    await this.buildTemplate(context)
+    const renderer = await this.buildTemplate(context)
+    const {template} = await import('/home/dpeter99/Documents/Projects/Archavist/Archavist_v2/examples/simple/.archavist/rsc/index.js')
     
     // Create output directory if it doesn't exist
     await mkdir(outputPath, { recursive: true });
@@ -33,13 +34,18 @@ export class OutputStep extends BasePipelineStep {
 
       const outputFilePath = this.getOutputPath(url, outputPath);
       
+      
+      const res = await renderer(template.rootComponent)
+      
       console.log(`Wrtiting file: ${outputFilePath}`)
 
       // Create directory if needed
       await mkdir(dirname(outputFilePath), { recursive: true });
-
+      
       // Write the file
-      await writeFile(outputFilePath, "asdasd", 'utf-8');
+      //await writeFile(outputFilePath, "asdasd", 'utf-8');
+
+      this.writeFileStream(outputFilePath, res.html)
     }
 
     console.log(`Wrote ${context.content.length} pages to ${outputPath}`);
@@ -66,13 +72,19 @@ export class OutputStep extends BasePipelineStep {
         react(),
         // Inspect(),
       ],
+      resolve:{
+        alias:[
+          {find: 'archavist:template', replacement: `${srcDir}/entry.rsc.tsx`} 
+        ]
+      },
       environments:{
         rsc: {
           build: {
             outDir: buildDir + '/rsc',
             rollupOptions: {
               input: {
-                index: `${srcDir}/entry.rsc.tsx`,
+                index: `/home/dpeter99/Documents/Projects/Archavist/Archavist_v2/examples/simple/template/index.tsx`,
+                rscRender: `${srcDir}/entry.rsc.tsx`
               },
             },
           },
@@ -103,8 +115,18 @@ export class OutputStep extends BasePipelineStep {
     const builder = await createBuilder(config)
     await builder.buildApp()
 
+    const {render} = await import('/home/dpeter99/Documents/Projects/Archavist/Archavist_v2/examples/simple/.archavist/rsc/rscRender.js')
+    const {template} = await import('/home/dpeter99/Documents/Projects/Archavist/Archavist_v2/examples/simple/.archavist/rsc/index.js')
+    // const result = render(template.rootComponent)
+    
+    return render;
   }
 
+  async writeFileStream(filePath: string, stream: ReadableStream) {
+    await mkdir(path.dirname(filePath), { recursive: true })
+    await writeFile(filePath, stream)
+  }
+  
   /**
    * Convert a ReadableStream to a string
    */
