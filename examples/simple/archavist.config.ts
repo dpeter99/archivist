@@ -3,7 +3,7 @@ import {
   ObsidianLoader,
   OutputStep,
   Pipeline,
-} from "archavist";
+} from "@dpeter99/archavist";
 
 const config: ArchavistConfig = {
   // Path to your Obsidian vault (required)

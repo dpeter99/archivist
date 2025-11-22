@@ -3,4 +3,5 @@
  */
 
 export { ObsidianLoader } from './ObsidianLoader';
+export { UrlGenerationStep } from './UrlGenerationStep';
 export { OutputStep } from './ReactOutput/OutputStep';
