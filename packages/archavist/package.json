@@ -12,7 +12,9 @@
   },
   "scripts": {
     "build": "rolldown --config rolldown.config.ts && npm run copy-public",
-    "copy-public": "node ./scripts/copy_public.js"
+    "copy-public": "node ./scripts/copy_public.js",
+    "test": "node --import tsx --test src/**/*.test.ts",
+    "test:watch": "node --import tsx --test --watch src/**/*.test.ts"
   },
 
   "type": "module",
@@ -68,6 +70,7 @@
     "typescript": "5.9.3",
     "rolldown": "1.0.0-beta.51",
     "@rolldown/pluginutils": "1.0.0-beta.51",
-    "rolldown-plugin-dts" : "0.18.0"
+    "rolldown-plugin-dts" : "0.18.0",
+    "tsx": "^4.19.2"
   }
 }

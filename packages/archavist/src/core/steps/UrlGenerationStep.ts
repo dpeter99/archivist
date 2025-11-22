@@ -13,17 +13,12 @@ export class UrlGenerationStep extends BasePipelineStep {
   }
 
   async execute(context: PipelineContext): Promise<PipelineContext> {
-    const { baseUrl = '' } = context.config;
-
     for (const content of context.content) {
       // Generate slug from filename
       content.slug = this.generateSlug(content.fileName || '');
 
       // Generate URL from source path structure
       content.url = this.generateUrl(content);
-
-      // Generate full permalink with baseUrl
-      content.permalink = this.buildPermalink(content.url, baseUrl);
 
       // Generate output path
       content.outPath = this.generateOutputPath(content.url, context.config.outputPath);
@@ -41,9 +36,12 @@ export class UrlGenerationStep extends BasePipelineStep {
     return text
       .toLowerCase()
       .trim()
+      // Transliterate accented characters to ASCII equivalents
+      .normalize('NFD')
+      .replaceAll(/[\u0300-\u036f]/g, '')
       // Replace spaces and underscores with hyphens
       .replaceAll(/[\s_]+/g, '-')
-      // Remove special characters except hyphens
+      // Remove special characters except hyphens and alphanumeric
       .replaceAll(/[^\w-]+/g, '')
       // Remove multiple consecutive hyphens
       .replaceAll(/-+/g, '-')
@@ -89,26 +87,6 @@ export class UrlGenerationStep extends BasePipelineStep {
 
     // Normalize multiple slashes
     url = url.replaceAll(/\/+/g, '/');
-
-    return url;
-  }
-
-  /**
-   * Build full permalink with baseUrl
-   */
-  private buildPermalink(url: string, baseUrl: string): string {
-    // Remove trailing slash from baseUrl
-    const normalizedBaseUrl = baseUrl.replace(/\/$/, '');
-
-    // If baseUrl is a full URL (starts with http:// or https://)
-    if (normalizedBaseUrl.match(/^https?:\/\//)) {
-      return normalizedBaseUrl + url;
-    }
-
-    // Otherwise, it's a path prefix
-    if (normalizedBaseUrl) {
-      return this.normalizeUrl(normalizedBaseUrl + url);
-    }
 
     return url;
   }
