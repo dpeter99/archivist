@@ -10,7 +10,7 @@ export default defineConfig({
   input: {
     index: './src/index.ts',
     cli: './src/cli/main.ts',
-    // types: './src/core/types/types.d.ts',
+    template: './src/core/template/index.ts',
   },
   external: [
     /^node:/,

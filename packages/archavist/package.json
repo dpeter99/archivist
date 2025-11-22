@@ -24,10 +24,7 @@
     ".": {
       "import": "./dist/index.js"
     },
-    "./template": {
-      "import": "./dist/entry.rsc.tsx",
-      "types": "./dist/types.d.ts"
-    }
+    "./template": "./dist/template.js"
   },
   "bin": {
     "archavist": "./dist/cli.js"

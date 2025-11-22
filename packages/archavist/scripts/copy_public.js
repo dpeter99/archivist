@@ -22,7 +22,7 @@ fs.copyFile('src/core/framework/entry.browser.tsx', 'dist/entry.browser.tsx', (e
 
 
 
-fs.copyFile('src/core/types/types.d.ts', 'dist/types.d.ts', (err) => {
-  if (err) throw err;
-  console.log('src/core/types/types.d.ts was copied to dist');
-});
+// fs.copyFile('src/core/types/types.d.ts', 'dist/types.d.ts', (err) => {
+//   if (err) throw err;
+//   console.log('src/core/types/types.d.ts was copied to dist');
+// });
