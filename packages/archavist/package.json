@@ -1,19 +1,21 @@
 {
   "name": "@dpeter99/archavist",
-  "version": "0.0.0-c1",
+  "version": "0.0.0-alpha1",
   "description": "static site gen",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "private": false,
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "public"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dpeter99/archivist.git"
   },
+  "scripts": {
+    "build": "rolldown --config rolldown.config.ts && npm run copy-public",
+    "copy-public": "node ./scripts/copy_public.js"
+  },
+
+  "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -25,15 +27,10 @@
       "types": "./dist/types.d.ts"
     }
   },
-  "type": "module",
-  "scripts": {
-    "build": "rolldown --config rolldown.config.ts && npm run copy-public",
-    "copy-public": "node ./scripts/copy_public.js"
-  },
   "bin": {
     "archavist": "./dist/cli.js"
   },
-
+  
   "dependencies": {
     "chokidar": "4.0.3",
     "commander": "14.0.2",
