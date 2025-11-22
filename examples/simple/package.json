@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build": "archavist build",
     "serve": "serve build/"
@@ -12,11 +13,12 @@
     "archavist": "workspace:*",
     "react": "19.2.0",
     "react-dom": "^19.2.0",
-    "rsc-html-stream": "^0.0.7",
     "serve": "^14.2.5"
   },
   "devDependencies": {
     "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2"
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "latest",
+    "@vitejs/plugin-rsc": "latest"
   }
 }

@@ -1,5 +1,5 @@
-import type { PipelineContext, SiteConfig } from './types.ts';
-import type { PipelineStep } from './PipelineStep.ts';
+import type { PipelineContext, SiteConfig } from '@/core';
+import type { PipelineStep } from '@/core';
 
 /**
  * Main pipeline orchestrator
@@ -32,6 +32,7 @@ export class Pipeline {
     // Initialize the pipeline context
     let context: PipelineContext = {
       config,
+      projectDir: process.cwd(), 
       buildDir: process.cwd() + '/.archavist',
       content: []
     };

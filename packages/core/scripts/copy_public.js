@@ -6,16 +6,23 @@ import fs from "node:fs";
 // File destination.txt will be created or overwritten by default.
 fs.copyFile('src/core/framework/entry.rsc.tsx', 'dist/entry.rsc.tsx', (err) => {
   if (err) throw err;
-  console.log('source.txt was copied to destination.txt');
+  console.log('src/core/framework/entry.rsc.tsx was copied to dist');
 });
 
 fs.copyFile('src/core/framework/entry.ssr.tsx', 'dist/entry.ssr.tsx', (err) => {
   if (err) throw err;
-  console.log('source.txt was copied to destination.txt');
+  console.log('src/core/framework/entry.ssr.tsx was copied to dist');
 });
 
 
 fs.copyFile('src/core/framework/entry.browser.tsx', 'dist/entry.browser.tsx', (err) => {
   if (err) throw err;
-  console.log('source.txt was copied to destination.txt');
+  console.log('src/core/framework/entry.browser.tsx was copied to dist');
+});
+
+
+
+fs.copyFile('src/core/types/types.d.ts', 'dist/types.d.ts', (err) => {
+  if (err) throw err;
+  console.log('src/core/types/types.d.ts was copied to dist');
 });

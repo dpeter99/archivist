@@ -49,23 +49,24 @@ export class OutputStep extends BasePipelineStep {
   private async buildTemplate(context: PipelineContext): Promise<ContentTemplater> {
 
     const buildDir = context.buildDir;
-    const srcDir = fileURLToPath(new URL('.', import.meta.url))
+    const packageDir = fileURLToPath(new URL('.', import.meta.url))
     
     const config: InlineConfig = {
-      root: srcDir,
+      root: context.projectDir,
       configFile: false,
       build:{
         outDir: buildDir,
         sourcemap: true,
+        minify: false,
       },
       plugins: [
         rsc({}),
         react(),
-        // Inspect(),
       ],
       resolve:{
         alias:[
-          {find: 'archavist:template', replacement: `${srcDir}/entry.rsc.tsx`} 
+          {find: 'archavist:template', replacement: `${packageDir}/entry.rsc.tsx`},
+          {find: 'template', replacement: `./template/index.tsx`},
         ]
       },
       environments:{
@@ -74,8 +75,8 @@ export class OutputStep extends BasePipelineStep {
             outDir: buildDir + '/rsc',
             rollupOptions: {
               input: {
-                index: `/home/dpeter99/Documents/Projects/Archavist/Archavist_v2/examples/simple/template/index.tsx`,
-                rscRender: `${srcDir}/entry.rsc.tsx`
+                index: `./template/index.tsx`,
+                rscRender: `${packageDir}/entry.rsc.tsx`
               },
             },
           },
@@ -85,7 +86,7 @@ export class OutputStep extends BasePipelineStep {
             outDir: buildDir + '/ssr',
             rollupOptions: {
               input: {
-                index: `${srcDir}/entry.ssr.tsx`,
+                index: `${packageDir}/entry.ssr.tsx`,
               },
             },
           },
@@ -95,7 +96,7 @@ export class OutputStep extends BasePipelineStep {
             outDir: buildDir + '/client',
             rollupOptions: {
               input: {
-                index: `${srcDir}/entry.browser.tsx`,
+                index: `${packageDir}/entry.browser.tsx`,
               },
             },
           },
@@ -105,7 +106,9 @@ export class OutputStep extends BasePipelineStep {
 
     const builder = await createBuilder(config)
     await builder.buildApp()
-
+    
+    console.log('Finished vite build');
+    
     const { render } : typeof import('@/core/framework/entry.rsc') = await import((`${buildDir}/rsc/rscRender.js`))
     const {template} : {template: TemplateOptions} = await import(`${buildDir}/rsc/index.js`)
     
@@ -156,7 +159,7 @@ export class OutputStep extends BasePipelineStep {
   }
 }
 
-type RenderFn = (component: ReactElement) => Promise<{html: ReadableStream<Uint8Array>, rsc: ReadableStream<Uint8Array>}>
+type RenderFn = () => Promise<{html: ReadableStream<Uint8Array>, rsc: ReadableStream<Uint8Array>}>
 
 class ContentTemplater {
   private renderer: RenderFn;
@@ -169,7 +172,7 @@ class ContentTemplater {
   }
   
   public async render(page: Content, outputFilePath: string) {
-    const res = await this.renderer(this.template.rootComponent)
+    const res = await this.renderer()
 
     console.log(`Wrtiting file: ${outputFilePath}`)
 

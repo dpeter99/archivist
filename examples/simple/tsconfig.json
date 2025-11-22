@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
-    "paths": {
-      "archavist:template": ["archavist/dist/entry.rsc.ts"]
-    }
+    "moduleResolution": "bundler",
   },
   "include": [
     "template/**"

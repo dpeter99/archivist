@@ -1,9 +1,11 @@
-import {ReactElement, ReactNode} from "react";
-import {RscPayload} from "@/core/steps/ReactOutput/shared";
+import {ReactElement} from "react";
+import {RscPayload, TemplateOptions} from "@/core/steps/ReactOutput/shared";
 import {renderToReadableStream} from "@vitejs/plugin-rsc/rsc";
+import { template } from 'template';
 
-export async function render(component: ReactElement){
-  const rscPayload: RscPayload = { root: component };
+export async function render(){
+  
+  const rscPayload: RscPayload = { root: template.rootComponent };
   const rscStream = renderToReadableStream<RscPayload>(rscPayload)
   const [rscStream1, rscStream2] = rscStream.tee()
 

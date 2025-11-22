@@ -2,8 +2,22 @@
   "name": "archavist",
   "version": "1.0.0",
   "description": "static site gen",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    },
+    "./template": {
+      "import": "./dist/entry.rsc.tsx",
+      "types": "./dist/types.d.ts"
+    }
+  },
   "type": "module",
   "scripts": {
     "build": "rolldown --config rolldown.config.ts && npm run copy-public",
@@ -12,10 +26,7 @@
   "bin": {
     "archavist": "./dist/cli.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "private": true,
+
   "dependencies": {
     "chokidar": "4.0.3",
     "commander": "14.0.2",
@@ -24,8 +35,8 @@
     "gray-matter": "4.0.3",
     "ora": "9.0.0",
     "picocolors": "1.1.1",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "rehype-stringify": "10.0.1",
     "remark": "15.0.1",
     "remark-parse": "11.0.0",
@@ -47,8 +58,8 @@
   },
   "devDependencies": {
     "@types/node": "24.10.1",
-    "@types/react": "19.0.0",
-    "@types/react-dom": "19.0.0",
+    "@types/react": "19.2.6",
+    "@types/react-dom": "19.2.3",
     "@types/serve-handler": "6.1.4",
     "typescript": "5.9.3",
     "rolldown": "1.0.0-beta.51",

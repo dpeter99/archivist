@@ -10,16 +10,12 @@ export default defineConfig({
   input: {
     index: './src/index.ts',
     cli: './src/cli/main.ts',
+    // types: './src/core/types/types.d.ts',
   },
   external: [
     /^node:/,
     /node_modules/
   ],
-  // resolve: {
-  //   alias: {
-  //     '@': '/src',
-  //   },
-  // },
   plugins: [
     viteAliasPlugin({
       entries: [
