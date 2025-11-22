@@ -8,9 +8,9 @@ importers:
 
   examples/simple:
     dependencies:
-      archavist:
+      '@dpeter99/archavist':
         specifier: workspace:*
-        version: link:../../packages/core
+        version: link:../../packages/archavist
       react:
         specifier: 19.2.0
         version: 19.2.0
@@ -34,7 +34,7 @@ importers:
         specifier: latest
         version: 0.5.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.2.2(@types/node@24.10.1))
 
-  packages/core:
+  packages/archavist:
     dependencies:
       '@vitejs/plugin-react':
         specifier: 5.1.1

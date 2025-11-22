@@ -10,7 +10,7 @@
   },
   "private": true,
   "dependencies": {
-    "archavist": "workspace:*",
+    "@dpeter99/archavist": "workspace:*",
     "react": "19.2.0",
     "react-dom": "^19.2.0",
     "serve": "^14.2.5"
