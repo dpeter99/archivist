@@ -1,0 +1,219 @@
+name: Deploy V2
+
+on:
+  push:
+    branches:
+      - v2
+      - 'v2/**'
+    tags:
+      - 'v2.*'
+      - 'v2-*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  version-check:
+    name: Check Version Change
+    runs-on: ubuntu-latest
+    # Only run version check on branch pushes, not tags
+    if: ${{ !startsWith(github.ref, 'refs/tags/') }}
+    outputs:
+      version_changed: ${{ steps.version-check.outputs.changed }}
+      version: ${{ steps.version-check.outputs.version }}
+      commit_hash: ${{ steps.version-check.outputs.commit_hash }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2 # Need at least 2 commits to compare
+
+      - name: Check version change
+        id: version-check
+        uses: EndBug/version-check@v2
+        with:
+          file-name: package.json
+          diff-search: true
+
+      - name: Log version check result
+        run: |
+          echo "Version changed: ${{ steps.version-check.outputs.changed }}"
+          echo "Version: ${{ steps.version-check.outputs.version }}"
+          echo "Commit hash: ${{ steps.version-check.outputs.commit_hash }}"
+          echo "Version type: ${{ steps.version-check.outputs.type }}"
+
+  auto-tag:
+    name: Auto Tag on Version Change
+    needs: version-check
+    if: needs.version-check.outputs.version_changed == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create and push tag
+        env:
+          VERSION: ${{ needs.version-check.outputs.version }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          TAG_NAME="v2-${VERSION}"
+          echo "Creating tag: ${TAG_NAME}"
+
+          # Check if tag already exists
+          if git rev-parse "$TAG_NAME" >/dev/null 2>&1; then
+            echo "Tag $TAG_NAME already exists, skipping..."
+            exit 0
+          fi
+
+          git tag "$TAG_NAME"
+          git push origin "$TAG_NAME"
+
+  publish-preview:
+    name: Publish Preview Version
+    needs: version-check
+    # Run for branch pushes only, and skip if version just changed (will be tagged and released properly)
+    if: |
+      !startsWith(github.ref, 'refs/tags/') &&
+      needs.version-check.outputs.version_changed != 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Generate preview version
+        id: version
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          SHORT_SHA=$(git rev-parse --short HEAD)
+          COMMIT_COUNT=$(git rev-list --count HEAD)
+
+          # MinVer-style preview version: base-version.height.sha
+          PREVIEW_VERSION="${VERSION}-preview.${COMMIT_COUNT}.${SHORT_SHA}"
+          PREVIEW_TAG="preview-${SHORT_SHA}"
+
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          echo "preview_version=${PREVIEW_VERSION}" >> $GITHUB_OUTPUT
+          echo "preview_tag=${PREVIEW_TAG}" >> $GITHUB_OUTPUT
+          echo "short_sha=${SHORT_SHA}" >> $GITHUB_OUTPUT
+          echo "commit_count=${COMMIT_COUNT}" >> $GITHUB_OUTPUT
+
+      - name: Update version in index.ts
+        run: |
+          # Update the version export in src/index.ts for preview
+          sed -i 's/export let version = ".*";/export let version = "${{ steps.version.outputs.preview_version }}";/' src/index.ts
+          cat src/index.ts | grep "export let version"
+
+      - name: Create Preview Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.preview_tag }}
+          name: 🔍 Preview ${{ steps.version.outputs.preview_version }}
+          body: |
+            ## Preview Release
+
+            **Version:** `${{ steps.version.outputs.preview_version }}`
+            **Commit:** `${{ github.sha }}`
+            **Branch:** `${{ github.ref_name }}`
+
+            This is an automated preview release for development and testing.
+
+            ### Usage
+
+            Import this preview version in your Deno project:
+
+            ```typescript
+            import * as archivist from "https://raw.githubusercontent.com/${{ github.repository }}/${{ steps.version.outputs.preview_tag }}/src/index.ts";
+            ```
+
+            Or with a specific tagged version:
+            ```typescript
+            import * as archivist from "https://raw.githubusercontent.com/${{ github.repository }}/${{ steps.version.outputs.preview_tag }}/src/index.ts";
+            ```
+
+            ---
+
+            ⚠️ **Note:** This is a preview release and may be unstable. Use stable releases for production.
+          prerelease: true
+          draft: false
+          make_latest: false
+
+  publish-release:
+    name: Publish Release Version
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Get version info
+        id: version
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          TAG_NAME=${GITHUB_REF#refs/tags/}
+
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          echo "tag_name=${TAG_NAME}" >> $GITHUB_OUTPUT
+
+      - name: Update version in index.ts
+        run: |
+          # Update the version export in src/index.ts
+          sed -i 's/export let version = ".*";/export let version = "${{ steps.version.outputs.version }}";/' src/index.ts
+          cat src/index.ts | grep "export let version"
+
+      - name: Generate changelog
+        id: changelog
+        run: |
+          # Get commits since last tag
+          PREVIOUS_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
+
+          if [ -n "$PREVIOUS_TAG" ]; then
+            echo "## Changes since $PREVIOUS_TAG" > CHANGELOG.md
+            echo "" >> CHANGELOG.md
+            git log ${PREVIOUS_TAG}..HEAD --pretty=format:"- %s (%h)" >> CHANGELOG.md
+          else
+            echo "## Initial Release" > CHANGELOG.md
+          fi
+
+          cat CHANGELOG.md
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: 🚀 Version ${{ steps.version.outputs.version }}
+          body_path: CHANGELOG.md
+          body: |
+            ## Release ${{ steps.version.outputs.version }}
+
+            ### Usage
+
+            Import this version in your Deno project:
+
+            ```typescript
+            import * as archivist from "https://raw.githubusercontent.com/${{ github.repository }}/${{ steps.version.outputs.tag_name }}/src/index.ts";
+            ```
+
+            Or import from the main branch for the latest stable:
+            ```typescript
+            import * as archivist from "https://raw.githubusercontent.com/${{ github.repository }}/main/src/index.ts";
+            ```
+          prerelease: false
+          draft: false
+          make_latest: true
+          generate_release_notes: true
