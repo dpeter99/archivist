@@ -1,6 +1,7 @@
 import {
   ArchavistConfig,
   ObsidianLoader,
+  MarkdownRenderStep,
   OutputStep,
   Pipeline,
 } from "@dpeter99/archavist";
@@ -15,6 +16,7 @@ const config: ArchavistConfig = {
 
   pipeline: new Pipeline()
     .addStep(new ObsidianLoader())
+    .addStep(new MarkdownRenderStep())
     .addStep(new OutputStep()),
 };
 

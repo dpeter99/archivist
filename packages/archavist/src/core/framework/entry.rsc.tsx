@@ -1,11 +1,16 @@
 import '@vitejs/plugin-rsc/types';
+import React from 'react';
 import {RscPayload} from "@/core/steps/ReactOutput/shared";
 import {renderToReadableStream} from "@vitejs/plugin-rsc/rsc";
 import { template } from 'template';
+import { setCurrentContent } from '@dpeter99/archavist/template';
+import { Content } from '../Content';
 
-export async function render(){
-  
-  const rscPayload: RscPayload = { root: template.rootComponent };
+export async function render(content: Content){
+  // Set the current content in global context
+  setCurrentContent(content);
+
+  const rscPayload: RscPayload = { root: <template.rootComponent content={content} /> };
   const rscStream = renderToReadableStream<RscPayload>(rscPayload)
   const [rscStream1, rscStream2] = rscStream.tee()
 

@@ -60,6 +60,8 @@ export type Content = {
   // ============ Raw Content ============
   /** Raw markdown content (without frontmatter) */
   markdown: string;
+  /** Rendered HTML content (converted from markdown) */
+  html?: string;
   /** Parsed frontmatter data */
   frontmatter: Frontmatter;
   /** Original raw file content (with frontmatter) */

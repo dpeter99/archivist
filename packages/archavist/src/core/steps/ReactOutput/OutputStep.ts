@@ -159,7 +159,7 @@ export class OutputStep extends BasePipelineStep {
   }
 }
 
-type RenderFn = () => Promise<{html: ReadableStream<Uint8Array>, rsc: ReadableStream<Uint8Array>}>
+type RenderFn = (content: Content) => Promise<{html: ReadableStream<Uint8Array>, rsc: ReadableStream<Uint8Array>}>
 
 class ContentTemplater {
   private renderer: RenderFn;
@@ -172,7 +172,7 @@ class ContentTemplater {
   }
   
   public async render(page: Content, outputFilePath: string) {
-    const res = await this.renderer()
+    const res = await this.renderer(page)
 
     console.log(`Wrtiting file: ${outputFilePath}`)
 

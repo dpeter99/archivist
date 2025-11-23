@@ -1,4 +1,5 @@
-import {ReactElement, ReactNode} from "react";
+import {ComponentType, ReactNode} from "react";
+import type { Content } from "../../Content";
 
 
 export type RscPayload = {
@@ -6,5 +7,5 @@ export type RscPayload = {
 }
 
 export type TemplateOptions = {
-  rootComponent: ReactElement;
+  rootComponent: ComponentType<{ content: Content }>;
 }
