@@ -4,11 +4,42 @@ on:
   push:
     branches:
       - v2
+      - ci-cd
     tags:
       - 'v*'
   workflow_dispatch:
 
 jobs:
+  version-check:
+    name: Check Version Change
+    runs-on: ubuntu-latest
+    # Only run version check on branch pushes, not tags
+    if: ${{ !startsWith(github.ref, 'refs/tags/') }}
+    outputs:
+      version_changed: ${{ steps.version-check.outputs.changed }}
+      version: ${{ steps.version-check.outputs.version }}
+      commit_hash: ${{ steps.version-check.outputs.commit_hash }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2 # Need at least 2 commits to compare
+
+      - name: Check version change
+        id: version-check
+        uses: EndBug/version-check@v2
+        with:
+          file-name: packages/archavist/package.json
+          diff-search: true
+
+      - name: Log version check result
+        run: |
+          echo "Version changed: ${{ steps.version-check.outputs.changed }}"
+          echo "Version: ${{ steps.version-check.outputs.version }}"
+          echo "Commit hash: ${{ steps.version-check.outputs.commit_hash }}"
+          echo "Version type: ${{ steps.version-check.outputs.type }}"
+  
+  
   build-and-publish:
     runs-on: ubuntu-latest
     permissions:
