@@ -14,8 +14,6 @@ export interface SiteConfig {
   outputPath: string;
   /** Base URL for the site (e.g., "/docs" or "https://example.com") */
   baseUrl?: string;
-  /** Custom configuration options */
-  [key: string]: unknown;
 }
 
 /**

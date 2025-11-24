@@ -76,12 +76,4 @@ export type Content = {
   permalink?: string;
   /** Output file path (e.g., "build/blog/my-post.html") */
   outPath?: string;
-
-  // ============ Navigation & Relationships ============
-  /** Navigation breadcrumbs */
-  breadcrumbs?: Array<{ title: string; url: string }>;
-  /** Next page in sequence (for pagination) */
-  next?: Content;
-  /** Previous page in sequence (for pagination) */
-  prev?: Content;
 };
