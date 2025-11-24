@@ -24,8 +24,7 @@ export class OutputStep extends BasePipelineStep {
     const { outputPath } = context.config;
 
     const templater = await this.buildTemplate(context)
-    
-    
+
     // Create output directory if it doesn't exist
     await mkdir(outputPath, { recursive: true });
 
@@ -36,8 +35,8 @@ export class OutputStep extends BasePipelineStep {
       const url = content.sourcePath.replace(/\.[^/.]+$/, "")
 
       const outputFilePath = this.getOutputPath(url, outputPath);
-      
-      await templater.render(content, outputFilePath);
+
+      await templater.render(content, context.navTree, outputFilePath);
     }
 
     console.log(`Wrote ${context.content.length} pages to ${outputPath}`);
@@ -159,20 +158,20 @@ export class OutputStep extends BasePipelineStep {
   }
 }
 
-type RenderFn = (content: Content) => Promise<{html: ReadableStream<Uint8Array>, rsc: ReadableStream<Uint8Array>}>
+type RenderFn = (content: Content, navTree?: import('@/core/NavTree').NavTreeNode[]) => Promise<{html: ReadableStream<Uint8Array>, rsc: ReadableStream<Uint8Array>}>
 
 class ContentTemplater {
   private renderer: RenderFn;
   private template: TemplateOptions;
-  
-  
+
+
   constructor(renderer: RenderFn, template: TemplateOptions) {
     this.renderer = renderer;
     this.template = template;
   }
-  
-  public async render(page: Content, outputFilePath: string) {
-    const res = await this.renderer(page)
+
+  public async render(page: Content, navTree: import('@/core/NavTree').NavTreeNode[] | undefined, outputFilePath: string) {
+    const res = await this.renderer(page, navTree)
 
     console.log(`Wrtiting file: ${outputFilePath}`)
 

@@ -3,12 +3,16 @@ import React from 'react';
 import {RscPayload} from "@/core/steps/ReactOutput/shared";
 import {renderToReadableStream} from "@vitejs/plugin-rsc/rsc";
 import { template } from 'template';
-import { setCurrentContent } from '@dpeter99/archavist/template';
+import { setCurrentContent, setNavTree } from '@dpeter99/archavist/template';
 import { Content } from '../Content';
+import type { NavTreeNode } from '../NavTree';
 
-export async function render(content: Content){
+export async function render(content: Content, navTree?: NavTreeNode[]){
   // Set the current content in global context
   setCurrentContent(content);
+
+  // Set the navigation tree in global context
+  setNavTree(navTree);
 
   const rscPayload: RscPayload = { root: <template.rootComponent content={content} /> };
   const rscStream = renderToReadableStream<RscPayload>(rscPayload)

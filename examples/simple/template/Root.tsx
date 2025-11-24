@@ -1,7 +1,22 @@
-import { getCurrentContent } from '@dpeter99/archavist/template';
+import { getCurrentContent, getNavTree, NavTreeNode } from '@dpeter99/archavist/template';
 import type { Content } from '@dpeter99/archavist';
 import {ClientCounter} from "./counter";
 import React from "react";
+
+function NavItem({ node }: { node: NavTreeNode }) {
+  return (
+    <li>
+      <a href={node.url}>{node.title}</a>
+      {node.children.length > 0 && (
+        <ul>
+          {node.children.map(child => (
+            <NavItem key={child.url} node={child} />
+          ))}
+        </ul>
+      )}
+    </li>
+  );
+}
 
 
 export const Root = ({ content }: { content: Content }) => {
@@ -13,6 +28,9 @@ export const Root = ({ content }: { content: Content }) => {
   const currentContent = getCurrentContent();
   const sourcePath = currentContent.sourcePath;
 
+  // Get navigation tree
+  const navTree = getNavTree();
+
   return (
     <html lang="en">
     <head>
@@ -21,6 +39,14 @@ export const Root = ({ content }: { content: Content }) => {
     </head>
     <body>
       <div>
+        <nav>
+          <ul>
+            {navTree.map(node => (
+              <NavItem key={node.url} node={node} />
+            ))}
+          </ul>
+        </nav>
+
         <h1>{title}</h1>
         <p>Source: {sourcePath}</p>
 

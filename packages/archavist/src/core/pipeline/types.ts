@@ -3,6 +3,7 @@
  */
 
 import {Content} from "../Content";
+import {NavTreeNode} from "../NavTree";
 
 /**
  * Configuration for the static site generator
@@ -26,6 +27,8 @@ export interface PipelineContext {
   buildDir: string;
   /** The directory where the current project is */
   projectDir: string;
-  
+
   content: Content[];
+  /** Navigation tree built from content URLs */
+  navTree?: NavTreeNode[];
 }
