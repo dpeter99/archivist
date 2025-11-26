@@ -32,9 +32,12 @@ export class OutputStep extends BasePipelineStep {
     for (const content of context.content) {
       console.log(`Processing file: ${content.sourcePath}`)
 
-      const url = content.sourcePath.replace(/\.[^/.]+$/, "")
+      // Use the already-calculated URL from UrlGenerationStep
+      if (!content.url) {
+        throw new Error(`Content missing URL: ${content.sourcePath}. Ensure UrlGenerationStep runs before OutputStep.`);
+      }
 
-      const outputFilePath = this.getOutputPath(url, outputPath);
+      const outputFilePath = this.getOutputPath(content.url, outputPath);
 
       await templater.render(content, context.navTree, outputFilePath);
     }

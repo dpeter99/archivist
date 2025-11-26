@@ -55,12 +55,14 @@ export class UrlGenerationStep extends BasePipelineStep {
   private generateUrl(content: Content): string {
     const parts: string[] = [];
 
-    // Add directory structure if present
+    // Split and slugify EACH directory segment
     if (content.sourceDir && content.sourceDir !== '.') {
-      parts.push(content.sourceDir);
+      const dirParts = content.sourceDir.split('/').filter(p => p);
+      const slugifiedDirs = dirParts.map(dir => this.generateSlug(dir));
+      parts.push(...slugifiedDirs);
     }
 
-    // Add slug
+    // Add slug (already slugified filename)
     if (content.slug) {
       parts.push(content.slug);
     }

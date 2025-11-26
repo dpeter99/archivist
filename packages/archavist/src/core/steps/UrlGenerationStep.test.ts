@@ -144,4 +144,72 @@ describe('UrlGenerationStep', () => {
       }
     });
   });
+
+  describe('directory slugification', () => {
+    test('should slugify directory names with spaces', async () => {
+      const step = new UrlGenerationStep();
+      const context = createMockContext([
+        {
+          fileName: 'article',
+          sourceDir: 'Blog Posts',
+          sourcePath: 'Blog Posts/article.md'
+        },
+      ]);
+
+      const result = await step.execute(context);
+
+      assert.strictEqual(result.content[0].slug, 'article');
+      assert.strictEqual(result.content[0].url, '/blog-posts/article');
+      assert.strictEqual(result.content[0].outPath, '/test/output/blog-posts/article.html');
+    });
+
+    test('should slugify multi-level directory paths', async () => {
+      const step = new UrlGenerationStep();
+      const context = createMockContext([
+        {
+          fileName: 'post',
+          sourceDir: 'My Blog/2024 Posts',
+          sourcePath: 'My Blog/2024 Posts/post.md'
+        },
+      ]);
+
+      const result = await step.execute(context);
+
+      assert.strictEqual(result.content[0].slug, 'post');
+      assert.strictEqual(result.content[0].url, '/my-blog/2024-posts/post');
+      assert.strictEqual(result.content[0].outPath, '/test/output/my-blog/2024-posts/post.html');
+    });
+
+    test('should slugify directory with special characters', async () => {
+      const step = new UrlGenerationStep();
+      const context = createMockContext([
+        {
+          fileName: 'article',
+          sourceDir: 'Work & Projects!/Client #1',
+          sourcePath: 'Work & Projects!/Client #1/article.md'
+        },
+      ]);
+
+      const result = await step.execute(context);
+
+      assert.strictEqual(result.content[0].slug, 'article');
+      assert.strictEqual(result.content[0].url, '/work-projects/client-1/article');
+    });
+
+    test('should slugify filename and all directory segments', async () => {
+      const step = new UrlGenerationStep();
+      const context = createMockContext([
+        {
+          fileName: 'My Cool Article!',
+          sourceDir: 'Blog Posts/Featured Items',
+          sourcePath: 'Blog Posts/Featured Items/My Cool Article!.md'
+        },
+      ]);
+
+      const result = await step.execute(context);
+
+      assert.strictEqual(result.content[0].slug, 'my-cool-article');
+      assert.strictEqual(result.content[0].url, '/blog-posts/featured-items/my-cool-article');
+    });
+  });
 });
