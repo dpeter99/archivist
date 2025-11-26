@@ -212,4 +212,57 @@ describe('UrlGenerationStep', () => {
       assert.strictEqual(result.content[0].url, '/blog-posts/featured-items/my-cool-article');
     });
   });
+
+  describe('folder index support', () => {
+    test('should create folder index when file matches folder name', async () => {
+      const step = new UrlGenerationStep({ folderIndex: true });
+      const context = createMockContext([
+        { fileName: 'posts', sourceDir: 'posts', sourcePath: 'posts/posts.md' },
+      ]);
+
+      const result = await step.execute(context);
+
+      assert.strictEqual(result.content[0].slug, 'posts');
+      assert.strictEqual(result.content[0].url, '/posts/');
+      assert.strictEqual(result.content[0].outPath, '/test/output/posts/index.html');
+    });
+
+    test('should not create folder index when disabled', async () => {
+      const step = new UrlGenerationStep({ folderIndex: false });
+      const context = createMockContext([
+        { fileName: 'posts', sourceDir: 'posts', sourcePath: 'posts/posts.md' },
+      ]);
+
+      const result = await step.execute(context);
+
+      assert.strictEqual(result.content[0].url, '/posts/posts');
+      assert.strictEqual(result.content[0].outPath, '/test/output/posts/posts.html');
+    });
+
+    test('should handle nested folder indexes', async () => {
+      const step = new UrlGenerationStep({ folderIndex: true });
+      const context = createMockContext([
+        { fileName: 'intro', sourceDir: 'guides/intro', sourcePath: 'guides/intro/intro.md' },
+      ]);
+
+      const result = await step.execute(context);
+
+      assert.strictEqual(result.content[0].slug, 'intro');
+      assert.strictEqual(result.content[0].url, '/guides/intro/');
+      assert.strictEqual(result.content[0].outPath, '/test/output/guides/intro/index.html');
+    });
+
+    test('should handle normal files when folder index enabled', async () => {
+      const step = new UrlGenerationStep({ folderIndex: true });
+      const context = createMockContext([
+        { fileName: 'article', sourceDir: 'posts', sourcePath: 'posts/article.md' },
+      ]);
+
+      const result = await step.execute(context);
+
+      assert.strictEqual(result.content[0].slug, 'article');
+      assert.strictEqual(result.content[0].url, '/posts/article');
+      assert.strictEqual(result.content[0].outPath, '/test/output/posts/article.html');
+    });
+  });
 });

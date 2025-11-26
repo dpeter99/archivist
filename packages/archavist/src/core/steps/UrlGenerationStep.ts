@@ -8,8 +8,11 @@ import type { Content } from '@/core/Content';
  * Pipeline step that generates URLs and slugs for content
  */
 export class UrlGenerationStep extends BasePipelineStep {
-  constructor() {
+  private folderIndex: boolean;
+
+  constructor(options?: { folderIndex?: boolean }) {
     super('URL Generation');
+    this.folderIndex = options?.folderIndex ?? false;
   }
 
   async execute(context: PipelineContext): Promise<PipelineContext> {
@@ -62,15 +65,27 @@ export class UrlGenerationStep extends BasePipelineStep {
       parts.push(...slugifiedDirs);
     }
 
-    // Add slug (already slugified filename)
-    if (content.slug) {
+    // Check if this is a folder index note (filename matches parent folder)
+    const isFolderIndex = this.folderIndex &&
+                           parts.length > 0 &&
+                           content.slug === parts[parts.length - 1];
+
+    // Only add slug if it's NOT a folder index
+    if (content.slug && !isFolderIndex) {
       parts.push(content.slug);
     }
 
     // Join with forward slashes and ensure leading slash
-    const url = '/' + parts.join('/');
+    let url = '/' + parts.join('/');
+    url = this.normalizeUrl(url);
 
-    return this.normalizeUrl(url);
+    // Add trailing slash for folder indexes AFTER normalization
+    // This triggers index.html generation in generateOutputPath()
+    if (isFolderIndex && !url.endsWith('/')) {
+      url += '/';
+    }
+
+    return url;
   }
 
   /**
