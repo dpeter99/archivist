@@ -1,0 +1,89 @@
+@use "sass:color";
+@use "sass:meta";
+
+@use "mixins" as *;
+
+$color-stone: def_color_palette('color-stone', #0c0a09);
+$color-amber: def_color_palette('color-amber', #450d03);
+
+$paper-color: var_def('paper-color', antiquewhite);
+$paper-edge-color: var_def('paper-edge-color', lch(from var(--paper-color) calc(l - 30) c h));
+
+$bg-body: var_def('bg-body', token($color-stone));
+
+$text-primary: var_def('text-primary', token($color-stone));
+$text-secondary: var_def('text-secondary', token($color-stone, 750));
+$text-accent: var_def('text-accent', token($color-stone, 800));
+$text-accent-dark: var_def('text-accent-dark', token($color-stone, 900));
+
+// Typography
+$font-serif: 'Crimson Text', serif;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 0.75rem;
+$spacing-lg: 1rem;
+$spacing-xl: 1.5rem;
+$spacing-2xl: 2rem;
+$spacing-3xl: 2.5rem;
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+// Transitions
+$transition-default: all 0.2s;
+$transition-drawer: transform 0.3s ease-in-out;
+
+// Paper texture pattern
+$line-height: 1lh;
+$line-color: rgba(139, 92, 46, 0.15);
+$margin-color: rgba(128, 14, 14, 0.34);
+$margin-offset: 25px;
+
+@mixin paper-texture($side: left) {
+  background-image:
+    linear-gradient(
+        90deg,
+        transparent 0px,
+        transparent $margin-offset,
+        $margin-color $margin-offset,
+        $margin-color $margin-offset+1,
+        transparent $margin-offset+1
+    ),
+    repeating-linear-gradient(
+        transparent 0px,
+        transparent calc($line-height - 2px),
+        $line-color calc($line-height - 2px),
+        $line-color $line-height
+    ),
+    linear-gradient(
+        to $side,
+        var(--paper-edge-color) 0px,
+        transparent 30px
+    )
+  ;
+  background-attachment: local;
+}
+
+// Interaction colors (rgba for overlays)
+$bg-hover-light: rgba(120, 53, 15, 0.05);
+$bg-hover-medium: rgba(120, 53, 15, 0.1);
+$bg-hover-dark: rgba(120, 53, 15, 0.2);
+$bg-code: rgba(120, 53, 15, 0.1);
+$bg-note-hover: rgba(254, 243, 199, 0.5);
+
+// Decorative colors
+$color-decorative: rgba(120, 53, 15, 0.4);
+$color-decorative-light: rgba(120, 53, 15, 0.3);
+
+// Border radius
+$radius-sm: 0.25rem;
+$radius-md: 0.5rem;
+
+// Z-index scale
+$z-index-menu: 10;
+$z-index-drawer: 50;

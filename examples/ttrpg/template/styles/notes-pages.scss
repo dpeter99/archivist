@@ -1,0 +1,215 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@font-face {
+  font-family: "Enchnated Land";
+  src: url("./fonts/enchanted_land/Enchanted Land.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "IM FELL Great Primer";
+  src: url("./fonts/im-fell-great-primer.roman.ttf") format("truetype");
+}
+
+
+$header-image-bg-color: var_def('header-image-bg-color', token($paper-color));
+$header-image-boder-color: var_def('header-image-boder-color', token($color-amber, 800));
+
+.page-header {
+  line-height: 1lh;
+
+  @supports (width: calc-size(fit-content, size)) {
+    --height: calc-size(fit-content, round(up, size, 1lh));
+    height: var(--height, 6lh);
+  }
+
+  @include flex(row, $align: stretch);
+  gap: 16px;
+
+  &.image{
+    height: 6lh;
+  }
+
+  &__image{
+    background-color: token($paper-color);
+    border: token($header-image-boder-color) 4px solid;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    overflow: clip;
+
+    @include media-down(md){
+      width: 100px;
+      height: 100px;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__title {
+    @include flex(column, $align: start, $justify: start);
+
+    h1 {
+      font-size: 3em;
+      word-spacing: 2px;
+      font-family: "Enchnated Land", serif;
+
+      line-height: 2lh;
+      border-bottom: token($header-image-boder-color) 4px solid;
+      //margin-bottom: calc(0.5lh - 4px);
+      margin-bottom: -2px;
+
+      @include media-down(md){
+        font-size: 2em;
+      }
+    }
+
+    .subtitle {
+      font-size: 0.8em;
+      color: token($color-amber, 800);
+    }
+  }
+
+}
+
+.page-content {
+  font-family: "IM FELL Great Primer", serif;
+
+  --line-height: 1lh;
+
+  h2{
+    line-height: 2lh;
+    font-size: 2em;
+    // --test-2: round(up, calc(1.8em / var(--line-height)));
+    // --test: calc(var(--test-2) * 1lh);
+    // margin-bottom: var(--test);
+  }
+
+  p {
+    text-indent: 24px;
+    margin-bottom: 1lh;
+  }
+
+  a{
+    font-style: italic;
+    color: token($color-amber, 800);
+    //text-decoration-line: underline;
+    //text-decoration-thickness: 2px;
+    //text-decoration-style: dotted;
+    //text-decoration-color: var(--color-amber-800);
+  }
+}
+
+
+
+
+/*
+// =============================================================================
+// PAGE HEADER
+// =============================================================================
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-lg;
+  padding-bottom: $spacing-md;
+  border-bottom: 1px solid $border-medium;
+  margin-top: $spacing-3xl;
+
+  //@include md {
+  //  margin-top: 0;
+  //}
+
+  &__icon {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: $text-primary;
+  }
+}
+
+// =============================================================================
+// NOTE CARDS
+// =============================================================================
+
+.note-list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.note-card {
+  //@include link-reset;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: $spacing-md $spacing-lg;
+  background: none;
+  border: none;
+  border-left: 2px solid $border-dark;
+  border-radius: 0 $radius-sm $radius-sm 0;
+  transition: $transition-default;
+
+  &:hover {
+    background-color: $bg-note-hover;
+    border-left-width: 4px;
+    padding-left: $spacing-md;
+  }
+
+  // Nested card child elements
+  &__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: $spacing-xs;
+  }
+
+  &__date {
+    font-size: 0.75rem;
+    color: $text-accent;
+    font-style: italic;
+    margin-bottom: $spacing-xs;
+  }
+
+  &__preview {
+    font-size: 0.875rem;
+    color: $text-secondary;
+    //@include line-clamp(2);
+  }
+}
+
+// =============================================================================
+// NAVIGATION & DECORATIVE ELEMENTS
+// =============================================================================
+
+.back-link {
+  //@include link-reset;
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+  font-size: 0.875rem;
+  color: $text-accent-dark;
+  margin-bottom: $spacing-lg;
+  transition: $transition-default;
+
+  &:hover {
+    color: $text-accent;
+  }
+}
+
+.end-marks {
+  //@include flex-center;
+  margin: $spacing-2xl 0;
+
+  &__content {
+    color: $color-decorative-light;
+    font-size: 0.875rem;
+  }
+}
+*/

@@ -1,0 +1,22 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@font-face {
+  font-family: "Faith Collapsing";
+  src: url("./fonts/faith_collapsing/Faith Collapsing.ttf") format("truetype") ,
+}
+
+.nav-header {
+  @include flex($direction: column, $align: center);
+  height: 5lh;
+
+  h1 {
+    font-family: "Faith Collapsing";
+    font-size: 60px;
+    font-weight: normal;
+  }
+  span {
+    color: token($color-amber, 800);
+  }
+
+}

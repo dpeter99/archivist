@@ -1,0 +1,96 @@
+// @forward "old";
+
+@forward "color_setup";
+
+@use "sass:map";
+
+@mixin flex($direction: row, $justify: normal, $align: normal, $inline: false, $wrap: false, $gap: false) {
+  // display: flex/inline-flex
+  @if $inline { display: inline-flex } @else { display: flex }
+
+  // flex-direction
+  @if $direction == row { flex-direction: row
+  } @else if $direction == column { flex-direction: column
+  } @else if $direction == row-reverse { flex-direction: row-reverse
+  } @else if $direction == column-reverse { flex-direction: column-reverse }
+
+  // justify-content
+  @if $justify == normal { justify-content: normal
+  } @else if $justify == center { justify-content: center
+  } @else if $justify == start { justify-content: flex-start
+  } @else if $justify == end { justify-content: flex-end
+  } @else if $justify == between { justify-content: space-between
+  } @else if $justify == around { justify-content: space-around
+  } @else if $justify == evenly { justify-content: space-evenly }
+
+  // align-items/align-content
+  @if $align == normal { align-items: normal
+  } @else if $align == center { align-items: center
+  } @else if $align == start { align-items: flex-start
+  } @else if $align == end { align-items: flex-end
+  } @else if $align == baseline { align-items: baseline
+  } @else if $align == between { align-content: space-between
+  } @else if $align == around { align-content: space-around
+  } @else if $align == strech { align-content: stretch
+  } @else if $align == evenly { align-content: space-evenly }
+
+  // flex-wrap
+  @if $wrap { flex-wrap: wrap } @else { flex-wrap: nowrap }
+
+  // gap
+  @if $gap { gap: 10px }
+}
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 840px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+
+/// Mixin to manage responsive breakpoints
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin media-up($breakpoint) {
+  // If the key exists in the map
+  @if map.has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+    // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map.keys($breakpoints)}.";
+  }
+}
+
+@mixin media-down($breakpoint) {
+  // If the key exists in the map
+  @if map.has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (max-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+    // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map.keys($breakpoints)}.";
+  }
+}
+
+@function repeat($char, $times) {
+  $content: "";
+
+  @for $i from 1 through $times {
+    $content: $content + $char;
+  }
+  @return $content;
+}

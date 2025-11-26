@@ -1,0 +1,23 @@
+{
+  "name": "ttrpg",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "archavist build",
+    "serve": "serve build/"
+  },
+  "private": true,
+  "dependencies": {
+    "@dpeter99/archavist": "workspace:*",
+    "react": "19.2.0",
+    "react-dom": "^19.2.0",
+    "sass-embedded": "^1.83.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "latest",
+    "@vitejs/plugin-rsc": "latest",
+    "serve": "^14.2.5"
+  }
+}

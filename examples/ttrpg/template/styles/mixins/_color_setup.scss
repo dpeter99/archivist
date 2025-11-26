@@ -1,0 +1,65 @@
+@use 'sass:map';
+@use 'sass:meta';
+
+$variables: (
+  //dummy: '--dummy',
+);
+
+@mixin color_setup($colors){
+  @each $name, $color in $colors {
+    @property --#{$name} {
+      syntax: "<color>";
+      inherits: true;
+      initial-value: #ffffff;
+    }
+  }
+
+  :root{
+    @each $name, $color in $colors {
+      --#{$name}: #{$color};
+    }
+  }
+};
+
+@function var_def($name, $value) {
+  @if map.has-key($variables, $name){
+    @warn "variable #{$name} already exists";
+  }
+  $variables: map.set($variables, $name, $value) !global;
+  @return #{$name};
+}
+
+@function def_color_palette($name, $palette) {
+  $colors: ();
+  $base_name: var_def(#{$name}-900, $palette);
+  $colors: map.set($colors, 900, $base_name);
+  @each $step, $i in (
+    850: 1,
+    800: 2,
+    750: 3,
+    50: 7,
+  ){
+    $var-name: var_def(#{$name}-#{$step}, lch(from token($base_name) calc(l + #{$i*10}) c h));
+    $colors: map.set($colors, $step, $var-name);
+  }
+
+  @return $colors;
+}
+
+@function token($name, $number: 900){
+  @if meta.type-of($name) == 'map' {
+    @if map.has-key($name, $number){
+      $name: map.get($name, $number)
+    }
+    @else { @warn "color list has no member #{$number}";}
+  }
+
+  @if map.has-key($variables, $name) {
+    @return var(--#{$name})
+  }
+  @else {
+    @warn "#{$name} is invalid. "
+          + "Available tokens are: #{map.keys($variables)}.";
+    @return "";
+  }
+}

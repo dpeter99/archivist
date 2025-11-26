@@ -1,0 +1,134 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// =============================================================================
+// BASE STYLES
+// =============================================================================
+
+body {
+  font-family: $font-serif;
+  background-color: token($bg-body);
+  height: 100vh;
+  padding: 1rem;
+
+
+  @include media-down(md){
+    padding: 2px;
+  }
+}
+
+// =============================================================================
+// BOOK STRUCTURE
+// =============================================================================
+
+// Layout
+$book-color: var_def('book-color', token($color-amber, 850));
+
+.book-container {
+  height: 100%;
+  margin: 0 auto;
+  background-color: token($book-color);
+  border-radius: $radius-md;
+  padding: $spacing-md;
+
+  @include media-down(md){
+    padding: $spacing-sm;
+  }
+
+  @include media-up(xl){
+    max-width: 70vw;
+  }
+}
+
+.book-pages {
+  @include flex(row);
+  position: relative;
+  background-color: token($paper-color);
+  border-radius: $radius-sm;
+  min-height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+
+  line-height: 1.4;
+
+  .mobile-menu-toggle{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include media-up(md){
+      display: none;
+    }
+
+    img {
+      height: 54px;
+    }
+  }
+}
+
+// =============================================================================
+// LEFT PAGE - TABLE OF CONTENTS
+// =============================================================================
+
+$width-left-page: 360px;
+
+.left-page {
+  position: relative;
+  @include paper-texture;
+
+  @include media-down(md) {
+    position: absolute;
+    width: 100%;
+    background-color: token($paper-color);
+    @include paper-texture(right);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: $z-index-drawer;
+    transform: translateX(-100%);
+    transition: $transition-drawer;
+    overflow-y:  auto;
+
+    &.show {
+      transform: translateX(0);
+    }
+  }
+
+  @include media-up(md) {
+    width: $width-left-page;
+  }
+
+  &__content {
+    padding-top: $line-height;
+    padding-bottom: $line-height;
+    padding-right: 12px;
+    padding-left: $margin-offset;
+    overflow-y: auto;
+    max-height: 100%;
+  }
+}
+
+// =============================================================================
+// RIGHT PAGE - CONTENT
+// =============================================================================
+
+.right-page {
+  flex: 1;
+  @include paper-texture(right);
+  position: relative;
+  overflow-y: auto;
+  padding-left: $margin-offset + 4px;
+  padding-top: 1lh;
+
+  &__content {
+
+  }
+}
+
+// =============================================================================
+// UTILITY CLASSES
+// =============================================================================
+
+.line-clamp-2 {
+  // @include line-clamp(2);
+}

@@ -1,0 +1,91 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// =============================================================================
+// NAVIGATION TREE
+// =============================================================================
+
+
+
+$bg-hover: rgb(234 226 190 / 38%);
+
+.nav-tree {
+  display: flex;
+  flex-direction: column;
+
+  font-family: "IM FELL Great Primer";
+}
+
+.nav-node {
+  @for $i from 0 through 5 {
+    &--depth-#{$i} {
+      padding-left: calc(10px * $i);
+    }
+  }
+
+  &__content {
+    @include flex(column);
+
+    &.collapsed {
+      display: none;
+    }
+  }
+}
+
+$selection-indicator-size: 4px;
+
+// Individual tree item
+.nav-item {
+  display: grid;
+  justify-items: start;
+  align-items: center;
+
+  grid-template-columns: [indicator] 24px [label] 1fr;
+  height: $line-height;
+
+  border-radius: 2px;
+
+  &__label {
+    grid-column-start: label;
+    display: block;
+    font-size: 1rem;
+    text-wrap: nowrap;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  a{
+    display: contents;
+  }
+
+  //.filler{
+  //  width: 100%;
+  //  overflow: hidden;
+  //  text-overflow: ellipsis;
+  //  white-space: nowrap;
+  //
+  //  //&:after {
+  //  //  content: repeat(".", 80);
+  //  //  overflow: hidden;
+  //  //  text-overflow: ellipsis;
+  //  //  white-space: nowrap;
+  //  //}
+  //}
+
+  &__toggle {
+
+    display: contents;
+    cursor: pointer;
+
+    &-icon {
+      grid-column-start: indicator;
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  &--active {
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,115 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+/*
+// =============================================================================
+// ARTICLE CONTENT
+// =============================================================================
+
+article {
+  color: $color-stone-800;
+  font-size: 1rem;
+  line-height: 1.625;
+
+  // Headings
+  h1, h2, h3, h4, h5, h6 {
+    color: $text-primary;
+    font-weight: 600;
+    margin-top: $spacing-xl;
+    margin-bottom: $spacing-md;
+  }
+
+  h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: $spacing-sm;
+    padding-bottom: $spacing-md;
+    border-bottom: 1px solid $border-medium;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid $border-light;
+    padding-bottom: $spacing-sm;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  // Text elements
+  p {
+    margin-bottom: $spacing-lg;
+  }
+
+  strong {
+    font-weight: 700;
+    color: $text-primary;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  // Lists
+  ul, ol {
+    margin-left: $spacing-xl;
+    margin-bottom: $spacing-lg;
+  }
+
+  li {
+    margin-bottom: $spacing-sm;
+  }
+
+  // Links
+  a {
+    color: $text-accent;
+    text-decoration: underline;
+    transition: $transition-default;
+
+    &:hover {
+      color: $text-accent-dark;
+    }
+  }
+
+  // Blockquotes
+  blockquote {
+    border-left: 3px solid $border-dark;
+    padding-left: $spacing-lg;
+    margin: $spacing-lg 0;
+    font-style: italic;
+    color: $text-secondary;
+  }
+
+  // Code blocks
+  code {
+    background-color: $bg-code;
+    padding: 0.125rem 0.25rem;
+    border-radius: $radius-sm;
+    font-size: 0.875em;
+  }
+
+  pre {
+    background-color: $bg-code;
+    padding: $spacing-lg;
+    border-radius: $radius-sm;
+    overflow-x: auto;
+    margin: $spacing-lg 0;
+
+    code {
+      background: none;
+      padding: 0;
+    }
+  }
+}
+
+// =============================================================================
+// ARTICLE METADATA
+// =============================================================================
+
+.article-date {
+  font-size: 0.875rem;
+  color: $text-accent;
+  font-style: italic;
+  margin-bottom: $spacing-lg;
+}
+*/
