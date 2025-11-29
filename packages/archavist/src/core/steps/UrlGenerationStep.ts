@@ -116,8 +116,10 @@ export class UrlGenerationStep extends BasePipelineStep {
     let path = url.replace(/^\//, '');
 
     // If URL ends with /, make it index.html
-    if (path === '' || path.endsWith('/')) {
+    if (path === '') {
       path += 'index.html';
+    } else if (path.endsWith('/')) {
+      path = path.slice(0, -1) + '.html';
     } else {
       // Add .html extension
       path += '.html';

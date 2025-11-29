@@ -24,7 +24,7 @@ const config: ArchavistConfig = {
 
   pipeline: new Pipeline()
     .addStep(new ObsidianLoader())
-    .addStep(new UrlGenerationStep())
+    .addStep(new UrlGenerationStep({ folderIndex: true }))
     .addStep(new MarkdownRenderStep())
     .addStep(new NavTreeStep())
     .addStep(new OutputStep()),

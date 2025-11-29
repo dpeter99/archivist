@@ -37,7 +37,7 @@ export class OutputStep extends BasePipelineStep {
         throw new Error(`Content missing URL: ${content.sourcePath}. Ensure UrlGenerationStep runs before OutputStep.`);
       }
 
-      const outputFilePath = this.getOutputPath(content.url, outputPath);
+      const outputFilePath = content.outPath;
 
       await templater.render(content, context.navTree, outputFilePath);
     }
@@ -141,24 +141,6 @@ export class OutputStep extends BasePipelineStep {
 
     return result;
   }
-
-  /**
-   * Get the output file path for a URL
-   */
-  private getOutputPath(url: string, outputPath: string): string {
-    // Remove leading slash
-    let path = url.replace(/^\//, '');
-
-    // If URL ends with /, make it index.html
-    if (path === '' || path.endsWith('/')) {
-      path += 'index.html';
-    } else {
-      // Add .html extension
-      path += '.html';
-    }
-
-    return join(outputPath, path);
-  }
 }
 
 type RenderFn = (content: Content, navTree?: import('@/core/NavTree').NavTreeNode[]) => Promise<{html: ReadableStream<Uint8Array>, rsc: ReadableStream<Uint8Array>}>
@@ -183,6 +165,9 @@ class ContentTemplater {
 
     // Write the file
     await this.writeFileStream(outputFilePath, res.html)
+
+    const rscFile = outputFilePath.replace(path.extname(outputFilePath), '.rsc');
+    await this.writeFileStream(rscFile, res.rsc)
   }
 
   async writeFileStream(filePath: string, stream: ReadableStream) {
