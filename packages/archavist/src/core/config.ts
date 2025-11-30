@@ -1,45 +1,39 @@
 import {Pipeline} from "@/core/pipeline";
 
+
+export interface BuildConfig {
+  clean?: boolean;
+  
+  buildDir: string;
+
+  /** Output directory for generated site */
+  outputPath?: string;
+}
+
 /**
  * Configuration schema for Archavist
  */
 export interface ArchavistConfig {
-    /** Path to the Obsidian vault (required) */
-    vaultPath: string;
-
-    /** Output directory for generated site */
-    outputPath?: string;
-
     /** Base URL for the site */
     baseUrl?: string;
 
-    /** Site metadata */
-    site?: {
-        title?: string;
-        description?: string;
-        lang?: string;
-    };
-
-    /** Development server options */
-    dev?: {
-        port?: number;
-        host?: string;
-        open?: boolean;
-    };
-
-    /** Watch configuration */
-    watch?: {
-        ignored?: string[];
-        debounce?: number;
-    };
-
+    projectDir: string;
+    
     /** Build options */
-    build?: {
-        clean?: boolean;
-    };
+    build?: BuildConfig;
+    
+    verbose?: boolean;
+}
 
-    /**
-     * Pipeline
-     */
-    pipeline: Pipeline;
+export interface UserConfig {
+  /** Base URL for the site */
+  baseUrl?: string;
+  
+  /** Build options */
+  build?: BuildConfig;
+
+  /**
+   * Pipeline
+   */
+  pipeline: Pipeline;
 }

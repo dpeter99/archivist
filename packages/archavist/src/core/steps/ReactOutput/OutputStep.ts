@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, writeFile, rm } from 'node:fs/promises';
 import path, { dirname, join } from 'node:path';
 
 import {createBuilder, InlineConfig} from "vite";
@@ -21,16 +21,30 @@ export class OutputStep extends BasePipelineStep {
   }
 
   async execute(context: PipelineContext): Promise<PipelineContext> {
-    const { outputPath } = context.config;
+    const { build } = context.config;
+
+    // Clean output directory if configured
+    if (build?.clean) {
+      try {
+        await rm(build.outputPath, { recursive: true, force: true });
+        console.log(`Cleaned output directory: ${build.outputPath}`);
+      } catch (error) {
+        // Ignore ENOENT (directory doesn't exist on first build)
+        if (error instanceof Error && !error.message.includes('ENOENT')) {
+          throw error;
+        }
+      }
+    }
 
     const templater = await this.buildTemplate(context)
 
     // Create output directory if it doesn't exist
-    await mkdir(outputPath, { recursive: true });
+    await mkdir(build.outputPath, { recursive: true });
 
     // Write each page
     for (const content of context.content) {
-      console.log(`Processing file: ${content.sourcePath}`)
+      if (context.config.verbose)
+        console.log(`Processing file: ${content.sourcePath}`)
 
       // Use the already-calculated URL from UrlGenerationStep
       if (!content.url) {
@@ -42,7 +56,8 @@ export class OutputStep extends BasePipelineStep {
       await templater.render(content, context.navTree, outputFilePath);
     }
 
-    console.log(`Wrote ${context.content.length} pages to ${outputPath}`);
+    if (context.config.verbose)
+      console.log(`Wrote ${context.content.length} pages to ${build.outputPath}`);
 
     return context;
   }
@@ -50,11 +65,11 @@ export class OutputStep extends BasePipelineStep {
 
   private async buildTemplate(context: PipelineContext): Promise<ContentTemplater> {
 
-    const buildDir = context.buildDir;
+    const buildDir = context.config.build.buildDir;
     const packageDir = fileURLToPath(new URL('.', import.meta.url))
     
     const config: InlineConfig = {
-      root: context.projectDir,
+      root: context.config.projectDir,
       configFile: false,
       build:{
         outDir: buildDir,
@@ -115,7 +130,7 @@ export class OutputStep extends BasePipelineStep {
     const {template} : {template: TemplateOptions} = await import(`${buildDir}/rsc/index.js`)
     
     
-    fs.cpSync(`${buildDir}/client`, context.config.outputPath, { recursive: true})
+    fs.cpSync(`${buildDir}/client`, context.config.build.outputPath, { recursive: true})
     
     return new ContentTemplater(render, template);
   }

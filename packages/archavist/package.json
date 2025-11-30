@@ -11,6 +11,7 @@
     "url": "git+https://github.com/dpeter99/archivist.git"
   },
   "scripts": {
+    "check": "tsc --noEmit",
     "build": "rolldown --config rolldown.config.ts && npm run copy-public",
     "copy-public": "node ./scripts/copy_public.js",
     "test": "node --import tsx --test src/**/*.test.ts",

@@ -1,6 +1,7 @@
-import type { ArchavistConfig } from '@/core/config';
+import type {ArchavistConfig, UserConfig} from '@/core/config';
 import { logger } from '../utils/logger';
 import { Pipeline } from "@/core";
+import {Archavist} from "@/core/Archavist";
 
 export interface BuildOptions {
   config?: string;
@@ -12,32 +13,17 @@ export interface BuildOptions {
  * Execute the build command
  */
 export async function buildCommand(
-  config: ArchavistConfig,
+  config: UserConfig,
   options: BuildOptions
 ): Promise<void> {
 
-  if (options.verbose) {
-    logger.info(`Vault path: ${config.vaultPath}`);
-    logger.info(`Output path: ${config.outputPath}`);
-    logger.info(`Base URL: ${config.baseUrl || '(none)'}`);
-    logger.log('');
-  }
+
 
   try {
-    // Create the pipeline
-    let pipeline: Pipeline = config.pipeline;
-
-    // Execute the pipeline
-    const context = await pipeline.execute({
-      vaultPath: config.vaultPath,
-      outputPath: config.outputPath || './build',
-      baseUrl: config.baseUrl || '',
-    });
-
-    if (options.verbose) {
-      logger.log('');
-      logger.info(`Output: ${config.outputPath}`);
-    }
+    
+    const archavist = new Archavist(config);
+    const context = await archavist.build();
+    
   } catch (error) {
     logger.error(
       error instanceof Error ? error.message : 'Unknown error occurred'

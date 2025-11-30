@@ -1,5 +1,5 @@
 import {
-  ArchavistConfig,
+  UserConfig,
   ObsidianLoader,
   UrlGenerationStep,
   MarkdownRenderStep,
@@ -8,16 +8,11 @@ import {
   Pipeline,
 } from "@dpeter99/archavist";
 
-const config: ArchavistConfig = {
-  // Path to your Obsidian vault (required)
-  vaultPath: "./content",
-
-  outputPath: "./build",
-
+const config: UserConfig = {
   baseUrl: "",
 
   pipeline: new Pipeline()
-    .addStep(new ObsidianLoader())
+    .addStep(new ObsidianLoader({ vaultPath: "./content" }))
     .addStep(new UrlGenerationStep())
     .addStep(new MarkdownRenderStep())
     .addStep(new NavTreeStep())

@@ -7,16 +7,24 @@ import { BasePipelineStep } from '@/core/pipeline/PipelineStep';
 import type { PipelineContext } from '@/core/pipeline/types';
 import { Content, Frontmatter } from "@/core/Content";
 
+
+type ObsidianLoaderOptions = {
+  vaultPath: string;
+}
+
 /**
  * Pipeline step that loads markdown files from the vault
  */
 export class ObsidianLoader extends BasePipelineStep {
-  constructor() {
+  options: ObsidianLoaderOptions;
+  
+  constructor(options: ObsidianLoaderOptions) {
     super('Obsidian Loading');
+    this.options = options;
   }
 
   async execute(context: PipelineContext): Promise<PipelineContext> {
-    const { vaultPath } = context.config;
+    const vaultPath = this.options.vaultPath;
 
     // Find all markdown files in the vault
     const files = await glob('**/*.md', {

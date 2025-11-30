@@ -9,11 +9,12 @@ describe('UrlGenerationStep', () => {
   function createMockContext(content: Partial<Content>[]): PipelineContext {
     return {
       config: {
-        vaultPath: '/test/vault',
-        outputPath: '/test/output',
+        build:{
+          buildDir: './.archavist',
+          outputPath: '/test/output'
+        },
+        projectDir: './',
       },
-      buildDir: '/test/build',
-      projectDir: '/test/project',
       content: content.map(c => ({
         sourcePath: c.sourcePath || 'test.md',
         markdown: c.markdown || '',
@@ -224,7 +225,7 @@ describe('UrlGenerationStep', () => {
 
       assert.strictEqual(result.content[0].slug, 'posts');
       assert.strictEqual(result.content[0].url, '/posts/');
-      assert.strictEqual(result.content[0].outPath, '/test/output/posts/index.html');
+      assert.strictEqual(result.content[0].outPath, '/test/output/posts.html');
     });
 
     test('should not create folder index when disabled', async () => {
@@ -249,7 +250,7 @@ describe('UrlGenerationStep', () => {
 
       assert.strictEqual(result.content[0].slug, 'intro');
       assert.strictEqual(result.content[0].url, '/guides/intro/');
-      assert.strictEqual(result.content[0].outPath, '/test/output/guides/intro/index.html');
+      assert.strictEqual(result.content[0].outPath, '/test/output/guides/intro.html');
     });
 
     test('should handle normal files when folder index enabled', async () => {

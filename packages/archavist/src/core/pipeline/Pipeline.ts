@@ -1,4 +1,4 @@
-import type { PipelineContext, SiteConfig } from '@/core';
+import type {ArchavistConfig, PipelineContext} from '@/core';
 import type { PipelineStep } from '@/core';
 
 /**
@@ -28,12 +28,10 @@ export class Pipeline {
    * @param config Site configuration
    * @returns The final pipeline context after all steps
    */
-  async execute(config: SiteConfig): Promise<PipelineContext> {
+  async execute(config: ArchavistConfig): Promise<PipelineContext> {
     // Initialize the pipeline context
     let context: PipelineContext = {
       config,
-      projectDir: process.cwd(), 
-      buildDir: process.cwd() + '/.archavist',
       content: []
     };
 

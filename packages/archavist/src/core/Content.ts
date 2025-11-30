@@ -11,39 +11,6 @@ export type FileStats = {
 };
 
 /**
- * Common frontmatter fields (all optional)
- * Extends Record<string, any> to allow custom fields
- */
-export type Frontmatter = {
-  /** Page title */
-  title?: string;
-  /** Page description */
-  description?: string;
-  /** Publication date */
-  date?: string | Date;
-  /** Last updated date */
-  updated?: string | Date;
-  /** Tags for categorization */
-  tags?: string[];
-  /** Categories for organization */
-  categories?: string[];
-  /** Author name or names */
-  author?: string | string[];
-  /** Draft status (exclude from production) */
-  draft?: boolean;
-  /** Alternative names/aliases for this page */
-  aliases?: string[];
-  /** Custom permalink override */
-  permalink?: string;
-  /** Layout/template to use */
-  layout?: string;
-  /** Featured image */
-  image?: string;
-  /** Custom frontmatter fields */
-  [key: string]: any;
-};
-
-/**
  * Comprehensive content object representing a page/document
  */
 export type Content = {
@@ -63,7 +30,7 @@ export type Content = {
   /** Rendered HTML content (converted from markdown) */
   html?: string;
   /** Parsed frontmatter data */
-  frontmatter: Frontmatter;
+  frontmatter: Record<string, any>;
   /** Original raw file content (with frontmatter) */
   raw?: string;
 
@@ -76,4 +43,11 @@ export type Content = {
   permalink?: string;
   /** Output file path (e.g., "build/blog/my-post.html") */
   outPath?: string;
+  
+  components: ContentComponent[];
 };
+
+
+export type ContentComponent = {
+  id: string;
+}

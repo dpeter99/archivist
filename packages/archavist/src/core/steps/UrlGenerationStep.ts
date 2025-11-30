@@ -24,7 +24,7 @@ export class UrlGenerationStep extends BasePipelineStep {
       content.url = this.generateUrl(content);
 
       // Generate output path
-      content.outPath = this.generateOutputPath(content.url, context.config.outputPath);
+      content.outPath = this.generateOutputPath(content.url, context.config.build.outputPath);
     }
 
     console.log(`Generated URLs for ${context.content.length} pages`);
