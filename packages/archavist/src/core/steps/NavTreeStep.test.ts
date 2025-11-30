@@ -251,4 +251,180 @@ describe('NavTreeStep', () => {
       assert.strictEqual(current[0].title, 'Deep Page');
     });
   });
+
+  describe('tree sorting', () => {
+    it('sorts folders before files at same level', async () => {
+      const step = new NavTreeStep();
+      const context = createContext([
+        createContent({
+          url: '/file1',
+          sourceDir: '.',
+          fileName: 'file1',
+          frontmatter: { title: 'File 1' }
+        }),
+        createContent({
+          url: '/folder/page',
+          sourceDir: 'Folder',
+          fileName: 'page',
+          frontmatter: { title: 'Page' }
+        }),
+        createContent({
+          url: '/file2',
+          sourceDir: '.',
+          fileName: 'file2',
+          frontmatter: { title: 'File 2' }
+        })
+      ]);
+
+      await step.execute(context);
+
+      assert.strictEqual(context.navTree!.length, 3);
+      // Folder should be first
+      assert.strictEqual(context.navTree![0].title, 'Folder');
+      assert.ok(context.navTree![0].children.length > 0);
+      // Files should follow
+      assert.strictEqual(context.navTree![1].title, 'File 1');
+      assert.strictEqual(context.navTree![2].title, 'File 2');
+    });
+
+    it('sorts alphabetically within folders', async () => {
+      const step = new NavTreeStep();
+      const context = createContext([
+        createContent({
+          url: '/zebra/page',
+          sourceDir: 'Zebra',
+          fileName: 'page',
+          frontmatter: { title: 'Page' }
+        }),
+        createContent({
+          url: '/apple/page',
+          sourceDir: 'Apple',
+          fileName: 'page',
+          frontmatter: { title: 'Page' }
+        }),
+        createContent({
+          url: '/mango/page',
+          sourceDir: 'Mango',
+          fileName: 'page',
+          frontmatter: { title: 'Page' }
+        })
+      ]);
+
+      await step.execute(context);
+
+      assert.strictEqual(context.navTree!.length, 3);
+      assert.strictEqual(context.navTree![0].title, 'Apple');
+      assert.strictEqual(context.navTree![1].title, 'Mango');
+      assert.strictEqual(context.navTree![2].title, 'Zebra');
+    });
+
+    it('sorts alphabetically within files', async () => {
+      const step = new NavTreeStep();
+      const context = createContext([
+        createContent({
+          url: '/zebra',
+          sourceDir: '.',
+          fileName: 'zebra',
+          frontmatter: { title: 'Zebra' }
+        }),
+        createContent({
+          url: '/apple',
+          sourceDir: '.',
+          fileName: 'apple',
+          frontmatter: { title: 'Apple' }
+        }),
+        createContent({
+          url: '/mango',
+          sourceDir: '.',
+          fileName: 'mango',
+          frontmatter: { title: 'Mango' }
+        })
+      ]);
+
+      await step.execute(context);
+
+      assert.strictEqual(context.navTree!.length, 3);
+      assert.strictEqual(context.navTree![0].title, 'Apple');
+      assert.strictEqual(context.navTree![1].title, 'Mango');
+      assert.strictEqual(context.navTree![2].title, 'Zebra');
+    });
+
+    it('recursively sorts nested children', async () => {
+      const step = new NavTreeStep();
+      const context = createContext([
+        createContent({
+          url: '/parent/file1',
+          sourceDir: 'Parent',
+          fileName: 'file1',
+          frontmatter: { title: 'File 1' }
+        }),
+        createContent({
+          url: '/parent/subfolder/page',
+          sourceDir: 'Parent/Subfolder',
+          fileName: 'page',
+          frontmatter: { title: 'Page' }
+        }),
+        createContent({
+          url: '/parent/file2',
+          sourceDir: 'Parent',
+          fileName: 'file2',
+          frontmatter: { title: 'File 2' }
+        })
+      ]);
+
+      await step.execute(context);
+
+      const parent = context.navTree![0];
+      assert.strictEqual(parent.title, 'Parent');
+      assert.strictEqual(parent.children.length, 3);
+
+      // Subfolder should be first (it's a folder)
+      assert.strictEqual(parent.children[0].title, 'Subfolder');
+      assert.ok(parent.children[0].children.length > 0);
+
+      // Then files alphabetically
+      assert.strictEqual(parent.children[1].title, 'File 1');
+      assert.strictEqual(parent.children[2].title, 'File 2');
+    });
+
+    it('sorts mixed folders and files correctly', async () => {
+      const step = new NavTreeStep();
+      const context = createContext([
+        createContent({
+          url: '/zoo',
+          sourceDir: '.',
+          fileName: 'zoo',
+          frontmatter: { title: 'Zoo' }
+        }),
+        createContent({
+          url: '/beta/page',
+          sourceDir: 'Beta',
+          fileName: 'page',
+          frontmatter: { title: 'Page' }
+        }),
+        createContent({
+          url: '/apple',
+          sourceDir: '.',
+          fileName: 'apple',
+          frontmatter: { title: 'Apple' }
+        }),
+        createContent({
+          url: '/delta/page',
+          sourceDir: 'Delta',
+          fileName: 'page',
+          frontmatter: { title: 'Page' }
+        })
+      ]);
+
+      await step.execute(context);
+
+      assert.strictEqual(context.navTree!.length, 4);
+      // Folders first, alphabetically
+      assert.strictEqual(context.navTree![0].title, 'Beta');
+      assert.strictEqual(context.navTree![1].title, 'Delta');
+      // Then files, alphabetically
+      assert.strictEqual(context.navTree![2].title, 'Apple');
+      assert.strictEqual(context.navTree![3].title, 'Zoo');
+    });
+  });
 });

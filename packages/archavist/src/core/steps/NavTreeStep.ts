@@ -38,6 +38,9 @@ export class NavTreeStep extends BasePipelineStep {
     // Store tree in context
     context.navTree = tree;
 
+    // Sort the tree: folders first, then files, alphabetically
+    this.sortTreeRecursively(tree);
+
     console.log(`Built navigation tree with ${context.content.length} pages`);
 
     return context;
@@ -88,6 +91,30 @@ export class NavTreeStep extends BasePipelineStep {
       // Move to next level (only if not leaf or if node exists)
       if (!isLeaf && node) {
         currentTree = node.children;
+      }
+    }
+  }
+
+  /**
+   * Recursively sort nav tree nodes: folders first, then files, alphabetically by title
+   */
+  private sortTreeRecursively(tree: NavTreeNode[]): void {
+    tree.sort((a, b) => {
+      const aIsFolder = a.children.length > 0;
+      const bIsFolder = b.children.length > 0;
+
+      // Folders before files
+      if (aIsFolder && !bIsFolder) return -1;
+      if (!aIsFolder && bIsFolder) return 1;
+
+      // Alphabetically by title within same type
+      return a.title.localeCompare(b.title);
+    });
+
+    // Recursively sort children
+    for (const node of tree) {
+      if (node.children.length > 0) {
+        this.sortTreeRecursively(node.children);
       }
     }
   }
