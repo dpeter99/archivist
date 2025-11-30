@@ -44,10 +44,29 @@ export type Content = {
   /** Output file path (e.g., "build/blog/my-post.html") */
   outPath?: string;
   
-  components: ContentComponent[];
+  components: DataComponent[];
 };
 
 
-export type ContentComponent = {
+export type DataComponent = {
   id: string;
+  type: string;
+}
+
+/**
+ * Individual page entry for the page index
+ */
+export interface PageIndexEntry {
+  title: string;
+  aliases: string[];
+  sourcePath: string;
+  url: string;
+}
+
+/**
+ * Data component that holds all page index entries
+ */
+export interface PageIndexComponent extends DataComponent {
+  type: 'page-index';
+  entries: PageIndexEntry[];
 }

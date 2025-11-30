@@ -71,6 +71,7 @@ export class OutputStep extends BasePipelineStep {
     const config: InlineConfig = {
       root: context.config.projectDir,
       configFile: false,
+      logLevel: 'error',
       build:{
         outDir: buildDir,
         sourcemap: true,
@@ -113,7 +114,7 @@ export class OutputStep extends BasePipelineStep {
             outDir: buildDir + '/client',
             rollupOptions: {
               input: {
-                index: `${packageDir}/entry.browser.tsx`,
+                index: `${packageDir}/browser/entry.browser.tsx`,
               },
             },
           },
@@ -172,8 +173,6 @@ class ContentTemplater {
 
   public async render(page: Content, navTree: import('@/core/NavTree').NavTreeNode[] | undefined, outputFilePath: string) {
     const res = await this.renderer(page, navTree)
-
-    console.log(`Wrtiting file: ${outputFilePath}`)
 
     // Create directory if needed
     await mkdir(dirname(outputFilePath), { recursive: true });

@@ -14,10 +14,10 @@ fs.copyFile('src/core/framework/entry.ssr.tsx', 'dist/entry.ssr.tsx', (err) => {
   console.log('src/core/framework/entry.ssr.tsx was copied to dist');
 });
 
-
-fs.copyFile('src/core/framework/entry.browser.tsx', 'dist/entry.browser.tsx', (err) => {
+fs.mkdirSync('dist/browser');
+fs.copyFile('src/core/framework/browser/entry.browser.tsx', 'dist/browser/entry.browser.tsx', (err) => {
   if (err) throw err;
-  console.log('src/core/framework/entry.browser.tsx was copied to dist');
+  console.log('src/core/framework/browser/entry.browser.tsx was copied to dist');
 });
 
 

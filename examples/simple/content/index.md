@@ -14,6 +14,7 @@ This is a simple blog generated using **Archavist**, a static site generator for
 - [[first-blog-post|My First Blog Post]]
 - [[react-19-features|Exploring React 19 Features]]
 - [[obsidian-tips|Obsidian Tips and Tricks]]
+- [[WikiLink Test Page]] - Test WikiLink resolution features
 
 ## About This Site
 

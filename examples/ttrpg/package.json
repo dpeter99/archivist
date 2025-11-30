@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "archavist build",
-    "serve": "serve build/"
+    "serve": "serve dist/"
   },
   "private": true,
   "dependencies": {

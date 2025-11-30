@@ -2,6 +2,7 @@ import {
   UserConfig,
   ObsidianLoader,
   UrlGenerationStep,
+  PageIndexStep,
   MarkdownRenderStep,
   NavTreeStep,
   OutputStep,
@@ -14,6 +15,7 @@ const config: UserConfig = {
   pipeline: new Pipeline()
     .addStep(new ObsidianLoader({ vaultPath: "./content" }))
     .addStep(new UrlGenerationStep())
+    .addStep(new PageIndexStep())
     .addStep(new MarkdownRenderStep())
     .addStep(new NavTreeStep())
     .addStep(new OutputStep()),

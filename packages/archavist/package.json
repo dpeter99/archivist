@@ -17,7 +17,6 @@
     "test": "node --import tsx --test src/**/*.test.ts",
     "test:watch": "node --import tsx --test --watch src/**/*.test.ts"
   },
-
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -30,8 +29,10 @@
   "bin": {
     "archavist": "./dist/cli.js"
   },
-  
   "dependencies": {
+    "@flowershow/remark-wiki-link": "^3.2.1",
+    "@vitejs/plugin-react": "5.1.1",
+    "@vitejs/plugin-rsc": "0.5.1",
     "chokidar": "4.0.3",
     "commander": "14.0.2",
     "cosmiconfig": "9.0.0",
@@ -45,12 +46,10 @@
     "remark": "15.0.1",
     "remark-parse": "11.0.0",
     "remark-rehype": "11.1.1",
+    "rsc-html-stream": "^0.0.7",
     "serve-handler": "6.1.6",
     "unified": "11.0.5",
-    "vite": "7.2.2",
-    "@vitejs/plugin-react": "5.1.1",
-    "@vitejs/plugin-rsc": "0.5.1",
-    "rsc-html-stream": "^0.0.7"
+    "vite": "7.2.2"
   },
   "peerDependencies": {
     "react": "19.2.0"
@@ -61,14 +60,14 @@
     }
   },
   "devDependencies": {
+    "@rolldown/pluginutils": "1.0.0-beta.51",
     "@types/node": "24.10.1",
     "@types/react": "19.2.6",
     "@types/react-dom": "19.2.3",
     "@types/serve-handler": "6.1.4",
-    "typescript": "5.9.3",
     "rolldown": "1.0.0-beta.51",
-    "@rolldown/pluginutils": "1.0.0-beta.51",
-    "rolldown-plugin-dts" : "0.18.0",
-    "tsx": "^4.19.2"
+    "rolldown-plugin-dts": "0.18.0",
+    "tsx": "^4.19.2",
+    "typescript": "5.9.3"
   }
 }

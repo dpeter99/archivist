@@ -32,7 +32,8 @@ export class Pipeline {
     // Initialize the pipeline context
     let context: PipelineContext = {
       config,
-      content: []
+      content: [],
+      dataComponents: []
     };
 
     // Execute each step in sequence
