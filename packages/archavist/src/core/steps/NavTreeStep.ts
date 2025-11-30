@@ -14,10 +14,25 @@ export class NavTreeStep extends BasePipelineStep {
     for (const content of context.content) {
       if (!content.url) continue;
 
-      const title = content.frontmatter?.title || content.fileName || 'Untitled';
-      const url = content.url;
+      // Extract title with priority: nav_title → title → fileName → 'Untitled'
+      const title = content.frontmatter?.nav_title
+                    || content.frontmatter?.title
+                    || content.fileName
+                    || 'Untitled';
 
-      this.insertIntoTree(tree, url, title);
+      // Construct the node to insert
+      const node: NavTreeNode = {
+        title,
+        url: content.url,
+        children: []
+      };
+
+      // Get original directory names from sourceDir for intermediate nodes
+      const sourceDirParts = content.sourceDir
+        ? content.sourceDir.split('/').filter(Boolean)
+        : [];
+
+      this.insertIntoTree(tree, node, sourceDirParts);
     }
 
     // Store tree in context
@@ -28,40 +43,52 @@ export class NavTreeStep extends BasePipelineStep {
     return context;
   }
 
-  private insertIntoTree(tree: NavTreeNode[], url: string, title: string): void {
-    const parts = url.split('/').filter(p => p);
+  private insertIntoTree(
+    tree: NavTreeNode[],
+    nodeToInsert: NavTreeNode,
+    sourceDirParts: string[]
+  ): void {
+    const urlParts = nodeToInsert.url.split('/').filter(Boolean);
 
     // Root page
-    if (parts.length === 0) {
-      tree.push({ title, url: '/', children: [] });
+    if (urlParts.length === 0) {
+      tree.push({ ...nodeToInsert, url: '/' });
       return;
     }
 
-    // Build path and find/create nodes
     let currentTree = tree;
     let currentPath = '';
 
-    for (let i = 0; i < parts.length; i++) {
-      currentPath += '/' + parts[i];
-      const isLeaf = i === parts.length - 1;
+    for (let i = 0; i < urlParts.length; i++) {
+      currentPath += '/' + urlParts[i];
+      const isLeaf = i === urlParts.length - 1;
 
       // Find existing node at this level
       let node = currentTree.find(n => n.url === currentPath);
 
       if (!node) {
-        // Create new node
-        node = {
-          title: isLeaf ? title : parts[i],
-          url: currentPath,
-          children: []
-        };
-        currentTree.push(node);
+        if (isLeaf) {
+          // Insert the leaf node with its title
+          currentTree.push(nodeToInsert);
+        } else {
+          // Create intermediate directory node with original casing
+          const dirTitle = sourceDirParts[i] || urlParts[i];
+          node = {
+            title: dirTitle,
+            url: currentPath,
+            children: []
+          };
+          currentTree.push(node);
+        }
       } else if (isLeaf) {
-        // Update title for leaf node
-        node.title = title;
+        // Update existing node with new title
+        node.title = nodeToInsert.title;
       }
 
-      currentTree = node.children;
+      // Move to next level (only if not leaf or if node exists)
+      if (!isLeaf && node) {
+        currentTree = node.children;
+      }
     }
   }
 }
