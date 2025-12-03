@@ -1,5 +1,6 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert';
+import { VFile } from 'vfile';
 import { UrlGenerationStep } from './UrlGenerationStep';
 import type { PipelineContext } from '@/core/pipeline/types';
 import type { Content } from '@/core/Content';
@@ -15,12 +16,15 @@ describe('UrlGenerationStep', () => {
         },
         projectDir: './',
       },
+      dataComponents: [],
       content: content.map(c => ({
         sourcePath: c.sourcePath || 'test.md',
         markdown: c.markdown || '',
         frontmatter: c.frontmatter || {},
         fileName: c.fileName,
         sourceDir: c.sourceDir,
+        components: c.components || [],
+        vfile: c.vfile || new VFile({ path: c.sourcePath || 'test.md', value: c.markdown || '' }),
         ...c,
       })) as Content[],
     };

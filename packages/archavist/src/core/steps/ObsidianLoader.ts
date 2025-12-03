@@ -2,10 +2,11 @@ import { glob } from 'glob';
 import { readFile, stat } from 'node:fs/promises';
 import { join, dirname, basename, extname } from 'node:path';
 import matter from 'gray-matter';
+import { VFile } from 'vfile';
 
 import { BasePipelineStep } from '@/core/pipeline/PipelineStep';
 import type { PipelineContext } from '@/core/pipeline/types';
-import { Content, Frontmatter } from "@/core/Content";
+import { Content } from "@/core/Content";
 
 
 type ObsidianLoaderOptions = {
@@ -65,7 +66,15 @@ export class ObsidianLoader extends BasePipelineStep {
         // Raw content
         raw: rawContent,
         markdown,
-        frontmatter: frontmatter as Frontmatter,
+        frontmatter: frontmatter,
+
+        // Initialize VFile with path and content
+        vfile: new VFile({
+          path: filePath,
+          value: markdown
+        }),
+
+        components: []
       };
 
       context.content.push(fileData);

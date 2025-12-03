@@ -7,6 +7,7 @@ import {
   NavTreeStep,
   OutputStep,
   Pipeline,
+  VFileReporterStep,
 } from "@dpeter99/archavist";
 
 const config: UserConfig = {
@@ -17,6 +18,7 @@ const config: UserConfig = {
     .addStep(new UrlGenerationStep())
     .addStep(new PageIndexStep())
     .addStep(new MarkdownRenderStep())
+    .addStep(new VFileReporterStep())
     .addStep(new NavTreeStep())
     .addStep(new OutputStep()),
 };

@@ -7,6 +7,7 @@ import { BasePipelineStep } from '@/core/pipeline/PipelineStep';
 import type { PipelineContext } from '@/core';
 import { getDataComponent } from '@/core/pipeline/utils';
 import type { PageIndexComponent } from '@/core/Content';
+import { remarkWikiLinkValidator } from './plugins/remarkWikiLinkValidator';
 
 
 /**
@@ -17,9 +18,6 @@ interface WikiLinkTarget {
   heading: string;
   isEmbed: boolean;
 }
-
-
-let missingLinks: WikiLinkTarget[] = [];
 
 /**
  * Creates a URL resolver function for WikiLinks using the page index
@@ -52,10 +50,8 @@ function createUrlResolver(pageIndex: PageIndexComponent | undefined) {
     if (match) {
       return heading ? `${match.url}#${heading}` : match.url;
     }
-    else {
-      missingLinks.push(target);
-    }
-    
+
+    // Link not found - return null (validator plugin will handle warnings)
     return null;
   };
 }
@@ -82,22 +78,24 @@ export class MarkdownRenderStep extends BasePipelineStep {
       .use(wikiLinkPlugin, {
         urlResolver,
       })
+      .use(remarkWikiLinkValidator, { pageIndex })
       .use(remarkRehype)
       .use(rehypeStringify);
     
     for (const content of context.content) {
-      const result = await processor.process(content.markdown);
+      // Use the existing VFile that was created in ObsidianLoader
+      const vfile = content.vfile;
+
+      // Update the value to ensure it has the current markdown
+      vfile.value = content.markdown;
+
+      // Process the VFile (messages will be added to the existing VFile)
+      const result = await processor.process(vfile);
+
+      // Store HTML
       content.html = String(result);
 
-      if (missingLinks.length > 0) {
-        console.log(`Errors in file: ${content.sourcePath}`);
-        for (const missingLink of missingLinks) {
-          console.warn(`Missing Link: ${missingLink.filePath}`);
-        }
-        
-      }
-      missingLinks = [];
-      
+      // VFile is already stored in content.vfile, messages are now attached
     }
 
     console.log(`Rendered ${context.content.length} markdown files to HTML`);

@@ -1,3 +1,5 @@
+import type { VFile } from 'vfile';
+
 /**
  * File system metadata
  */
@@ -43,7 +45,11 @@ export type Content = {
   permalink?: string;
   /** Output file path (e.g., "build/blog/my-post.html") */
   outPath?: string;
-  
+
+  // ============ Diagnostics ============
+  /** VFile object with diagnostic messages (initialized in ObsidianLoader) */
+  vfile: VFile;
+
   components: DataComponent[];
 };
 

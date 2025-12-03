@@ -1,5 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert';
+import { VFile } from 'vfile';
 import { NavTreeStep } from './NavTreeStep';
 import type { PipelineContext } from '@/core';
 import type { Content } from '@/core/Content';
@@ -10,6 +11,7 @@ describe('NavTreeStep', () => {
     markdown: '',
     frontmatter: {},
     components: [],
+    vfile: new VFile({ path: 'test.md', value: '' }),
     ...overrides
   });
 

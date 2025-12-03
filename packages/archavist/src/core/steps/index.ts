@@ -8,3 +8,4 @@ export { MarkdownRenderStep } from './MarkdownRenderStep';
 export { NavTreeStep } from './NavTreeStep';
 export { PageIndexStep } from './PageIndexStep';
 export { OutputStep } from './ReactOutput/OutputStep';
+export { VFileReporterStep } from './VFileReporterStep';
