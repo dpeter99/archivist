@@ -1,4 +1,4 @@
-import { mkdir, writeFile, rm } from 'node:fs/promises';
+import { mkdir, writeFile, rm, copyFile } from 'node:fs/promises';
 import path, { dirname, join } from 'node:path';
 
 import {createBuilder, InlineConfig} from "vite";
@@ -11,6 +11,8 @@ import {fileURLToPath} from "node:url";
 import {ReactElement} from "react";
 import {TemplateOptions} from "@/core/steps/ReactOutput/shared";
 import * as fs from "node:fs";
+import { getDataComponent } from '@/core/pipeline/utils';
+import type { AssetManifestComponent } from '@/core/Content';
 
 /**
  * Pipeline step that writes the generated HTML to disk
@@ -40,6 +42,29 @@ export class OutputStep extends BasePipelineStep {
 
     // Create output directory if it doesn't exist
     await mkdir(build.outputPath, { recursive: true });
+
+    // Copy assets from manifest (if any)
+    const assetManifest = getDataComponent<AssetManifestComponent>(context, 'asset-manifest');
+    if (assetManifest?.assets && assetManifest.assets.size > 0) {
+      console.log(`Copying ${assetManifest.assets.size} assets...`);
+      let copiedCount = 0;
+
+      for (const asset of assetManifest.assets.values()) {
+        try {
+          // Ensure directory exists
+          await mkdir(dirname(asset.outPath), { recursive: true });
+
+          // Copy file
+          await copyFile(asset.absolutePath, asset.outPath);
+          copiedCount++;
+        } catch (error) {
+          const errorMessage = error instanceof Error ? error.message : String(error);
+          console.warn(`Failed to copy asset ${asset.sourcePath}: ${errorMessage}`);
+        }
+      }
+
+      console.log(`Copied ${copiedCount} assets to ${build.outputPath}`);
+    }
 
     // Write each page
     for (const content of context.content) {

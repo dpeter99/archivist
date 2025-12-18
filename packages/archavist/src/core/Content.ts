@@ -76,3 +76,25 @@ export interface PageIndexComponent extends DataComponent {
   type: 'page-index';
   entries: PageIndexEntry[];
 }
+
+/**
+ * Metadata for a single asset file
+ */
+export interface AssetMetadata {
+  /** Source path relative to vault (e.g., "images/map.png") */
+  sourcePath: string;
+  /** Absolute source file path for copying */
+  absolutePath: string;
+  /** Output URL (e.g., "/images/map.png") */
+  url: string;
+  /** Output file path (e.g., "build/images/map.png") */
+  outPath: string;
+}
+
+/**
+ * Data component that holds all asset metadata
+ */
+export interface AssetManifestComponent extends DataComponent {
+  type: 'asset-manifest';
+  assets: Map<string, AssetMetadata>;
+}

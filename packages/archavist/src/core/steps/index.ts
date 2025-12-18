@@ -3,6 +3,7 @@
  */
 
 export { ObsidianLoader } from './ObsidianLoader';
+export { AssetStep } from './AssetStep';
 export { UrlGenerationStep } from './UrlGenerationStep';
 export { MarkdownRenderStep } from './MarkdownRenderStep';
 export { NavTreeStep } from './NavTreeStep';
