@@ -4,8 +4,8 @@ import { VFile } from 'vfile';
 import { resolveAsset } from './index';
 import { setCurrentContent } from './currentContent';
 import { setAssetManifest } from './assetManifest';
-import type { Content } from '../Content';
-import { AssetManifestComponent, type AssetMetadata } from '../Content';
+import type { Content } from '../../core/Content';
+import {AssetManifestComponent, AssetMetadata} from "@/core";
 
 describe('resolveAsset', () => {
   // Helper to create test content

@@ -4,7 +4,7 @@ import { join, basename } from 'node:path';
 
 import { BasePipelineStep } from '@/core/pipeline/PipelineStep';
 import type { PipelineContext } from '@/core/pipeline/types';
-import { AssetManifestComponent, type AssetMetadata } from '@/core/Content';
+import {AssetManifestComponent, AssetMetadata} from "@/core";
 
 const DEFAULT_ASSET_EXTENSIONS = [
   'png', 'jpg', 'jpeg', 'gif', 'webp', 'svg',  // Images

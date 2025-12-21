@@ -52,7 +52,8 @@
     "unist-util-visit": "^5.0.0",
     "vfile": "^6.0.3",
     "vfile-reporter": "^8.1.0",
-    "vite": "7.2.2"
+    "vite": "7.2.2",
+    "hast": "1.0.0"
   },
   "peerDependencies": {
     "react": "19.2.0"

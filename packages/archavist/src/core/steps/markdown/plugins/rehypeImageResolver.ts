@@ -3,7 +3,8 @@ import type { Root, Element } from 'hast';
 import type { VFile } from 'vfile';
 import { visit } from 'unist-util-visit';
 import { join, dirname, relative } from 'node:path';
-import type { AssetManifestComponent } from '@/core/Content';
+
+import {AssetManifestComponent} from "@/core";
 
 interface Options {
   assetManifest?: AssetManifestComponent;

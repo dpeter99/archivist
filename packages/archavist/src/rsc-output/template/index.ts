@@ -1,10 +1,10 @@
-import {TemplateOptions} from "@/core/steps/ReactOutput/shared";
+import {TemplateOptions} from "@/rsc-output/shared";
 import { getCurrentContent } from './currentContent';
 import { getAssetManifest } from './assetManifest';
 export { getCurrentContent, setCurrentContent } from './currentContent';
 export { getNavTree, setNavTree } from './navTree';
 export { setAssetManifest, getAssetManifest } from './assetManifest';
-export type { NavTreeNode } from '../NavTree';
+export type { NavTreeNode } from '../../core/NavTree';
 
 export function defineTemplate(options: TemplateOptions) {
   return options;

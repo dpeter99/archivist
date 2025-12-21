@@ -6,7 +6,7 @@ import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import { VFile } from 'vfile';
 import { rehypeImageResolver } from './rehypeImageResolver';
-import type { AssetManifestComponent, AssetMetadata } from '@/core/Content';
+import {AssetManifestComponent, AssetMetadata} from "@/core";
 
 describe('rehypeImageResolver', () => {
   // Helper to create mock asset manifest

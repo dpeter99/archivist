@@ -5,11 +5,11 @@ import rehypeStringify from 'rehype-stringify';
 import wikiLinkPlugin from '@flowershow/remark-wiki-link';
 import { join, dirname, basename, extname } from 'node:path';
 import { BasePipelineStep } from '@/core/pipeline/PipelineStep';
-import type { PipelineContext } from '@/core';
+import {AssetManifestComponent, AssetMetadata, PipelineContext} from '@/core';
 import { getDataComponent } from '@/core/pipeline/utils';
-import type { PageIndexComponent, AssetManifestComponent, AssetMetadata } from '@/core/Content';
-import { remarkWikiLinkValidator } from './plugins/remarkWikiLinkValidator';
-import { rehypeImageResolver } from './plugins/rehypeImageResolver';
+import type { PageIndexComponent } from '@/core/Content';
+import { remarkWikiLinkValidator } from '@/core/steps/markdown/plugins/remarkWikiLinkValidator';
+import { rehypeImageResolver } from '@/core/steps/markdown/plugins/rehypeImageResolver';
 
 
 /**

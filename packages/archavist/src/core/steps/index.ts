@@ -3,10 +3,12 @@
  */
 
 export { ObsidianLoader } from './ObsidianLoader';
-export { AssetStep } from './AssetStep';
+export { AssetStep } from './assets/AssetStep';
 export { UrlGenerationStep } from './UrlGenerationStep';
-export { MarkdownRenderStep } from './MarkdownRenderStep';
+export { MarkdownRenderStep } from './markdown/MarkdownRenderStep';
 export { NavTreeStep } from './NavTreeStep';
 export { PageIndexStep } from './PageIndexStep';
-export { OutputStep } from './ReactOutput/OutputStep';
+export { OutputStep } from '../../rsc-output/OutputStep';
 export { VFileReporterStep } from './VFileReporterStep';
+export {AssetManifestComponent} from "@/core/steps/assets/asset-component";
+export type {AssetMetadata} from "@/core/steps/assets/asset-component";

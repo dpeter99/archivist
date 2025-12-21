@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert';
-import { AssetManifestComponent, type AssetMetadata } from './Content';
+import {AssetManifestComponent, AssetMetadata} from "@/core/steps";
 
 describe('AssetManifestComponent', () => {
   describe('findAssetByPath', () => {

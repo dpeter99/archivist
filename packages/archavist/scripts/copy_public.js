@@ -4,20 +4,20 @@
 
 import fs from "node:fs";
 // File destination.txt will be created or overwritten by default.
-fs.copyFile('src/core/framework/entry.rsc.tsx', 'dist/entry.rsc.tsx', (err) => {
+fs.copyFile('src/rsc-output/framework/entry.rsc.tsx', 'dist/entry.rsc.tsx', (err) => {
   if (err) throw err;
-  console.log('src/core/framework/entry.rsc.tsx was copied to dist');
+  console.log('src/rsc-output/framework/entry.rsc.tsx was copied to dist');
 });
 
-fs.copyFile('src/core/framework/entry.ssr.tsx', 'dist/entry.ssr.tsx', (err) => {
+fs.copyFile('src/rsc-output/framework/entry.ssr.tsx', 'dist/entry.ssr.tsx', (err) => {
   if (err) throw err;
-  console.log('src/core/framework/entry.ssr.tsx was copied to dist');
+  console.log('src/rsc-output/framework/entry.ssr.tsx was copied to dist');
 });
 
 fs.mkdirSync('dist/browser');
-fs.copyFile('src/core/framework/browser/entry.browser.tsx', 'dist/browser/entry.browser.tsx', (err) => {
+fs.copyFile('src/rsc-output/framework/browser/entry.browser.tsx', 'dist/browser/entry.browser.tsx', (err) => {
   if (err) throw err;
-  console.log('src/core/framework/browser/entry.browser.tsx was copied to dist');
+  console.log('src/rsc-output/framework/browser/entry.browser.tsx was copied to dist');
 });
 
 

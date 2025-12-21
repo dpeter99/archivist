@@ -10,7 +10,7 @@ export default defineConfig({
   input: {
     index: './src/index.ts',
     cli: './src/cli/main.ts',
-    template: './src/core/template/index.ts',
+    template: './src/rsc-output/template/index.ts',
   },
   external: [
     /^node:/,

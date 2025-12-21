@@ -5,14 +5,13 @@ import {createBuilder, InlineConfig} from "vite";
 import rsc from "@vitejs/plugin-rsc";
 import react from "@vitejs/plugin-react";
 
-import {BasePipelineStep, Content} from '@/core';
+import {AssetManifestComponent, BasePipelineStep, Content} from '@/core';
 import type { PipelineContext } from '@/core';
 import {fileURLToPath} from "node:url";
 import {ReactElement} from "react";
-import {TemplateOptions} from "@/core/steps/ReactOutput/shared";
+import {TemplateOptions} from "@/rsc-output/shared";
 import * as fs from "node:fs";
 import { getDataComponent } from '@/core/pipeline/utils';
-import type { AssetManifestComponent } from '@/core/Content';
 
 /**
  * Pipeline step that writes the generated HTML to disk
@@ -152,7 +151,7 @@ export class OutputStep extends BasePipelineStep {
     
     console.log('Finished vite build');
     
-    const { render } : typeof import('@/core/framework/entry.rsc') = await import((`${buildDir}/rsc/rscRender.js`))
+    const { render } : typeof import('@/rsc-output/framework/entry.rsc') = await import((`${buildDir}/rsc/rscRender.js`))
     const {template} : {template: TemplateOptions} = await import(`${buildDir}/rsc/index.js`)
     
     

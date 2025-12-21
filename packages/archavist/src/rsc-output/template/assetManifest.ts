@@ -1,4 +1,4 @@
-import type { AssetManifestComponent } from '../Content';
+import {AssetManifestComponent} from "@/core";
 
 let assetManifest: AssetManifestComponent | null = null;
 

@@ -1,4 +1,4 @@
-import type { NavTreeNode } from '../NavTree';
+import type { NavTreeNode } from '../../core/NavTree';
 
 let navTree: NavTreeNode[] | null = null;
 

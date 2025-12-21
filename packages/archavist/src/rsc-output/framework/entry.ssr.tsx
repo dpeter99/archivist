@@ -1,7 +1,7 @@
 import { createFromReadableStream } from '@vitejs/plugin-rsc/ssr'
 import { prerender } from 'react-dom/static.edge'
 import { injectRSCPayload } from 'rsc-html-stream/server'
-import type { RscPayload } from '@/core/steps/ReactOutput/shared'
+import type { RscPayload } from '@/rsc-output/shared'
 
 export async function renderHtml(
   rscStream: ReadableStream<Uint8Array>,

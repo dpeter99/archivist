@@ -1,12 +1,13 @@
 import '@vitejs/plugin-rsc/types';
 import React from 'react';
-import {RscPayload} from "@/core/steps/ReactOutput/shared";
+import {RscPayload} from "@/rsc-output/shared";
 import {renderToReadableStream} from "@vitejs/plugin-rsc/rsc";
 import { template } from 'template';
 import { setCurrentContent, setNavTree, setAssetManifest } from '@dpeter99/archavist/template';
-import { Content, type AssetManifestComponent } from '../Content';
-import type { NavTreeNode } from '../NavTree';
-import type { PipelineContext } from '../pipeline/types';
+import { Content } from '../../core/Content';
+import type { NavTreeNode } from '../../core/NavTree';
+import type { PipelineContext } from '../../core/pipeline/types';
+import {AssetManifestComponent} from "@/core";
 
 export async function render(
   content: Content,
@@ -35,4 +36,4 @@ export async function render(
   const ssrResult: ReadableStream<Uint8Array> = await ssr.renderHtml(rscStream1)
 
   return { html: ssrResult, rsc: rscStream2 }
-}
+} 

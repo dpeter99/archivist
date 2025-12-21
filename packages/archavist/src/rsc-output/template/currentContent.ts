@@ -1,4 +1,4 @@
-import type { Content } from '../Content';
+import type { Content } from '../../core/Content';
 
 let currentContent: Content | null = null;
 
