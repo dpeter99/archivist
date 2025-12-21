@@ -1,4 +1,4 @@
-import { getCurrentContent, getNavTree, NavTreeNode } from '@dpeter99/archavist/template';
+import { getCurrentContent, getNavTree, NavTreeNode, resolveAsset } from '@dpeter99/archavist/template';
 import type { Content } from '@dpeter99/archavist';
 import {ClientCounter} from "./counter";
 import React from "react";
@@ -31,6 +31,10 @@ export const Root = ({ content }: { content: Content }) => {
   // Get navigation tree
   const navTree = getNavTree();
 
+  // Test resolveAsset with frontmatter image
+  const imagePath = content.frontmatter?.image as string | undefined;
+  const imageUrl = resolveAsset(imagePath);
+
   return (
     <html lang="en">
     <head>
@@ -49,6 +53,19 @@ export const Root = ({ content }: { content: Content }) => {
 
         <h1>{title}</h1>
         <p>Source: {sourcePath}</p>
+
+        {imageUrl && (
+          <div style={{ border: '2px solid green', padding: '10px', margin: '10px 0' }}>
+            <p><strong>Resolved Asset:</strong> {imageUrl}</p>
+            <img src={imageUrl} alt="Test" style={{ maxWidth: '200px' }} />
+          </div>
+        )}
+        {imagePath && !imageUrl && (
+          <div style={{ border: '2px solid red', padding: '10px', margin: '10px 0' }}>
+            <p><strong>Asset Resolution Failed:</strong> {imagePath}</p>
+            <p>Check console warnings for details.</p>
+          </div>
+        )}
 
         <article>
           {content.html && <div dangerouslySetInnerHTML={{ __html: content.html }} />}

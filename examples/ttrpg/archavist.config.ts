@@ -7,7 +7,8 @@ import {
   Pipeline,
   PageIndexStep,
   VFileReporterStep,
-  UserConfig
+  UserConfig,
+  AssetStep
 } from "@dpeter99/archavist";
 
 const config: UserConfig = {
@@ -15,6 +16,7 @@ const config: UserConfig = {
 
   pipeline: new Pipeline()
     .addStep(new ObsidianLoader({ vaultPath: "/home/dpeter99/Documents/TTRPG/CoS_Orsi_ver/Rens-Mind/", }))
+    .addStep(new AssetStep({ vaultPath: "/home/dpeter99/Documents/TTRPG/CoS_Orsi_ver/Rens-Mind/" }))
     .addStep(new UrlGenerationStep({ folderIndex: true }))
     .addStep(new PageIndexStep())
     .addStep(new MarkdownRenderStep())

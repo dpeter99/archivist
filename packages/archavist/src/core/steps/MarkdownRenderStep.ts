@@ -3,11 +3,13 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import wikiLinkPlugin from '@flowershow/remark-wiki-link';
+import { join, dirname, basename, extname } from 'node:path';
 import { BasePipelineStep } from '@/core/pipeline/PipelineStep';
 import type { PipelineContext } from '@/core';
 import { getDataComponent } from '@/core/pipeline/utils';
-import type { PageIndexComponent } from '@/core/Content';
+import type { PageIndexComponent, AssetManifestComponent, AssetMetadata } from '@/core/Content';
 import { remarkWikiLinkValidator } from './plugins/remarkWikiLinkValidator';
+import { rehypeImageResolver } from './plugins/rehypeImageResolver';
 
 
 /**
@@ -20,14 +22,46 @@ interface WikiLinkTarget {
 }
 
 /**
- * Creates a URL resolver function for WikiLinks using the page index
+ * Image file extensions to recognize
+ */
+const IMAGE_EXTENSIONS = [
+  '.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg',
+  '.bmp', '.ico', '.avif'
+];
+
+/**
+ * Check if a file path is likely an image based on extension
+ */
+function isImagePath(filePath: string): boolean {
+  const ext = extname(filePath).toLowerCase();
+  return IMAGE_EXTENSIONS.includes(ext);
+}
+
+/**
+ * Creates a URL resolver function for WikiLinks using the page index and asset manifest
  * @param pageIndex - The PageIndexComponent containing all pages
+ * @param assetManifest - The AssetManifestComponent containing all assets
  * @returns A function that resolves WikiLink targets to URLs
  */
-function createUrlResolver(pageIndex: PageIndexComponent | undefined) {
-  return (target: WikiLinkTarget): string => {
-    const { filePath, heading } = target;
+function createUrlResolver(
+  pageIndex: PageIndexComponent | undefined,
+  assetManifest: AssetManifestComponent | undefined
+) {
+  return (target: WikiLinkTarget): string | null => {
+    const { filePath, heading, isEmbed } = target;
 
+    // Check if this is an image embed
+    if (isEmbed && isImagePath(filePath)) {
+      if (!assetManifest) {
+        return null; // No asset manifest, can't resolve
+      }
+
+      // Try to find asset by various path formats
+      const asset = assetManifest.findAssetByPath(filePath);
+      return asset ? asset.url : null;
+    }
+
+    // Original page link logic
     if (!pageIndex) {
       const baseUrl = `/${filePath.toLowerCase().replace(/\s+/g, '-')}`;
       return heading ? `${baseUrl}#${heading}` : baseUrl;
@@ -56,12 +90,19 @@ function createUrlResolver(pageIndex: PageIndexComponent | undefined) {
   };
 }
 
+export interface MarkdownRenderStepOptions {
+  vaultPath?: string;
+}
+
 /**
  * Pipeline step that renders markdown to HTML with WikiLink support
  */
 export class MarkdownRenderStep extends BasePipelineStep {
-  constructor() {
+  private vaultPath?: string;
+
+  constructor(options?: MarkdownRenderStepOptions) {
     super('Markdown Rendering');
+    this.vaultPath = options?.vaultPath;
   }
 
   async execute(context: PipelineContext): Promise<PipelineContext> {
@@ -70,8 +111,14 @@ export class MarkdownRenderStep extends BasePipelineStep {
       context,
       'page-index'
     );
-    
-    const urlResolver = createUrlResolver(pageIndex);
+
+    // Get asset manifest for image resolution
+    const assetManifest = getDataComponent<AssetManifestComponent>(
+      context,
+      'asset-manifest'
+    );
+
+    const urlResolver = createUrlResolver(pageIndex, assetManifest);
     
     const processor = unified()
       .use(remarkParse)
@@ -80,6 +127,7 @@ export class MarkdownRenderStep extends BasePipelineStep {
       })
       .use(remarkWikiLinkValidator, { pageIndex })
       .use(remarkRehype)
+      .use(rehypeImageResolver, { assetManifest, vaultPath: this.vaultPath })
       .use(rehypeStringify);
     
     for (const content of context.content) {

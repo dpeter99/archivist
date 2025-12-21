@@ -1,4 +1,5 @@
 import { Content } from '@dpeter99/archavist';
+import { resolveAsset } from '@dpeter99/archavist/template';
 import { MobileMenuToggle } from '../sidebar/MobileMenuToggle';
 
 interface ContentPanelProps {
@@ -7,7 +8,8 @@ interface ContentPanelProps {
 
 export function ContentPanel({ content }: ContentPanelProps) {
   const title = content.frontmatter?.title || 'Untitled';
-  const image = content.frontmatter?.image as string | undefined;
+  const imagePath = content.frontmatter?.image as string | undefined;
+  const imageUrl = resolveAsset(imagePath);
   const dateRaw = content.frontmatter?.date;
   const date = dateRaw ? (dateRaw instanceof Date ? dateRaw.toISOString().split('T')[0] : String(dateRaw)) : undefined;
 
@@ -16,10 +18,10 @@ export function ContentPanel({ content }: ContentPanelProps) {
       <MobileMenuToggle action="open" />
 
       <div className="right-page__content">
-        <div className={`page-header ${image ? 'image' : ''}`}>
-          {image && (
+        <div className={`page-header ${imageUrl ? 'image' : ''}`}>
+          {imageUrl && (
             <div className="page-header__image">
-              <img src={`/${image}`} alt="" />
+              <img src={imageUrl} alt="" />
             </div>
           )}
           <div className="page-header__title">

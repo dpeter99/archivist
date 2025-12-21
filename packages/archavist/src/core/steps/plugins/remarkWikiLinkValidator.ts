@@ -5,7 +5,7 @@ import { visit } from 'unist-util-visit';
 import type { PageIndexComponent } from '@/core/Content';
 
 interface WikiLinkNode {
-  type: 'wikiLink';
+  type: 'wikiLink' | 'embed';  // Support both wikiLinks and embeds
   value: string;
   data: {
     alias?: string;
@@ -33,19 +33,20 @@ interface Options {
  */
 export const remarkWikiLinkValidator: Plugin<[Options], Root> = (options) => {
   return (tree: Root, file: VFile) => {
-    const { pageIndex } = options;
+    // Validate WikiLinks and embeds even without pageIndex
+    // Image embeds don't need pageIndex, only assetManifest (handled in urlResolver)
 
-    if (!pageIndex) {
-      // No page index available, can't validate
-      return;
-    }
-
-    visit(tree, 'wikiLink', (node: WikiLinkNode) => {
+    // Visit both 'wikiLink' and 'embed' nodes
+    visit(tree, ['wikiLink', 'embed'], (node: WikiLinkNode) => {
       // The @flowershow plugin sets data.path to the resolved URL
-      // If path is null, the link couldn't be resolved
+      // If path is null, the link/embed couldn't be resolved
       if (node.data.path === null) {
+        // Different message format for embeds vs links
+        const isEmbed = node.type === 'embed';
         const message = file.message(
-          `Cannot resolve WikiLink: [[${node.value}]]`,
+          isEmbed
+            ? `Cannot resolve image embed: ![[${node.value}]]`
+            : `Cannot resolve WikiLink: [[${node.value}]]`,
           node.position,
           'archavist:wikilink'
         );

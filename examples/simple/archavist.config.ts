@@ -19,7 +19,7 @@ const config: UserConfig = {
     .addStep(new AssetStep({ vaultPath: "./content" }))
     .addStep(new UrlGenerationStep())
     .addStep(new PageIndexStep())
-    .addStep(new MarkdownRenderStep())
+    .addStep(new MarkdownRenderStep({ vaultPath: "./content" }))
     .addStep(new VFileReporterStep())
     .addStep(new NavTreeStep())
     .addStep(new OutputStep()),

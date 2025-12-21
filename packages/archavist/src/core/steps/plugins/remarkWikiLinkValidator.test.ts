@@ -94,14 +94,14 @@ describe('remarkWikiLinkValidator', () => {
   });
 
   describe('edge cases', () => {
-    it('should skip validation when no page index provided', async () => {
+    it('should validate even when no page index provided', async () => {
       const markdown = '[[SomeLink]]';
       const result = await processMarkdown(markdown, { 'SomeLink': null }, false);
 
       assert.strictEqual(
         result.messages.length,
-        0,
-        'Should not validate when no page index'
+        1,
+        'Should validate and warn even without page index (for image embeds)'
       );
     });
 
@@ -169,6 +169,60 @@ Don't go to [[Nowhere]].
       assert.ok(
         result.messages[0].message.includes('[[Nowhere]]'),
         'Should only warn about the broken link'
+      );
+    });
+  });
+
+  describe('embed validation', () => {
+    it('should warn for missing image embeds', async () => {
+      const markdown = '![[missing-image.png]]';
+
+      const result = await processMarkdown(markdown, {
+        'missing-image.png': null
+      });
+
+      assert.strictEqual(result.messages.length, 1, 'Should have one warning');
+      assert.match(
+        result.messages[0].message,
+        /Cannot resolve image embed: !\[\[missing-image\.png\]\]/,
+        'Should specifically identify as image embed'
+      );
+    });
+
+    it('should not warn for resolved image embeds', async () => {
+      const markdown = '![[logo.png]]';
+
+      const result = await processMarkdown(markdown, {
+        'logo.png': '/logo.png'
+      });
+
+      assert.strictEqual(result.messages.length, 0, 'Should have no warnings');
+    });
+
+    it('should handle mixed embeds and links', async () => {
+      const markdown = `
+See ![[logo.png]] and [[Document]]
+
+Also ![[missing.png]] and [[MissingPage]]
+      `;
+
+      const result = await processMarkdown(markdown, {
+        'logo.png': '/logo.png',
+        'Document': '/document',
+        'missing.png': null,
+        'MissingPage': null
+      });
+
+      assert.strictEqual(result.messages.length, 2, 'Should have two warnings');
+
+      const messages = result.messages.map(m => m.message);
+      assert.ok(
+        messages.some(m => m.includes('![[missing.png]]')),
+        'Should warn about missing image embed'
+      );
+      assert.ok(
+        messages.some(m => m.includes('[[MissingPage]]')),
+        'Should warn about missing wikilink'
       );
     });
   });

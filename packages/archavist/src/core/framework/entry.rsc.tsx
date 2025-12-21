@@ -3,16 +3,27 @@ import React from 'react';
 import {RscPayload} from "@/core/steps/ReactOutput/shared";
 import {renderToReadableStream} from "@vitejs/plugin-rsc/rsc";
 import { template } from 'template';
-import { setCurrentContent, setNavTree } from '@dpeter99/archavist/template';
-import { Content } from '../Content';
+import { setCurrentContent, setNavTree, setAssetManifest } from '@dpeter99/archavist/template';
+import { Content, type AssetManifestComponent } from '../Content';
 import type { NavTreeNode } from '../NavTree';
+import type { PipelineContext } from '../pipeline/types';
 
-export async function render(content: Content, navTree?: NavTreeNode[]){
+export async function render(
+  content: Content,
+  navTree: NavTreeNode[] | undefined,
+  context: PipelineContext
+) {
   // Set the current content in global context
   setCurrentContent(content);
 
   // Set the navigation tree in global context
   setNavTree(navTree);
+
+  // Extract and set asset manifest from pipeline context data components
+  const assetManifest = context.dataComponents.find(
+    (comp) => comp.type === 'asset-manifest'
+  ) as AssetManifestComponent | undefined;
+  setAssetManifest(assetManifest);
 
   const rscPayload: RscPayload = { root: <template.rootComponent content={content} /> };
   const rscStream = renderToReadableStream<RscPayload>(rscPayload)

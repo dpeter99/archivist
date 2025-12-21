@@ -1,10 +1,10 @@
 import { glob } from 'glob';
 import { stat } from 'node:fs/promises';
-import { join } from 'node:path';
+import { join, basename } from 'node:path';
 
 import { BasePipelineStep } from '@/core/pipeline/PipelineStep';
 import type { PipelineContext } from '@/core/pipeline/types';
-import type { AssetMetadata, AssetManifestComponent } from '@/core/Content';
+import { AssetManifestComponent, type AssetMetadata } from '@/core/Content';
 
 const DEFAULT_ASSET_EXTENSIONS = [
   'png', 'jpg', 'jpeg', 'gif', 'webp', 'svg',  // Images
@@ -74,18 +74,14 @@ export class AssetStep extends BasePipelineStep {
         absolutePath,
         url,
         outPath,
+        basename: basename(assetPath),
       };
 
       assetManifest.set(assetPath, metadata);
     }
 
     // Create AssetManifestComponent and add to data components
-    const assetComponent: AssetManifestComponent = {
-      id: 'asset-manifest',
-      type: 'asset-manifest',
-      assets: assetManifest
-    };
-
+    const assetComponent = new AssetManifestComponent(assetManifest);
     context.dataComponents.push(assetComponent);
 
     console.log(`Indexed ${assetManifest.size} assets for output`);

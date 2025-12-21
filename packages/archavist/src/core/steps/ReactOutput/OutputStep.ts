@@ -78,7 +78,7 @@ export class OutputStep extends BasePipelineStep {
 
       const outputFilePath = content.outPath;
 
-      await templater.render(content, context.navTree, outputFilePath);
+      await templater.render(content, context.navTree, context, outputFilePath);
     }
 
     if (context.config.verbose)
@@ -184,7 +184,11 @@ export class OutputStep extends BasePipelineStep {
   }
 }
 
-type RenderFn = (content: Content, navTree?: import('@/core/NavTree').NavTreeNode[]) => Promise<{html: ReadableStream<Uint8Array>, rsc: ReadableStream<Uint8Array>}>
+type RenderFn = (
+  content: Content,
+  navTree: import('@/core/NavTree').NavTreeNode[] | undefined,
+  context: PipelineContext
+) => Promise<{html: ReadableStream<Uint8Array>, rsc: ReadableStream<Uint8Array>}>
 
 class ContentTemplater {
   private renderer: RenderFn;
@@ -196,8 +200,13 @@ class ContentTemplater {
     this.template = template;
   }
 
-  public async render(page: Content, navTree: import('@/core/NavTree').NavTreeNode[] | undefined, outputFilePath: string) {
-    const res = await this.renderer(page, navTree)
+  public async render(
+    page: Content,
+    navTree: import('@/core/NavTree').NavTreeNode[] | undefined,
+    context: PipelineContext,
+    outputFilePath: string
+  ) {
+    const res = await this.renderer(page, navTree, context)
 
     // Create directory if needed
     await mkdir(dirname(outputFilePath), { recursive: true });
