@@ -54,8 +54,8 @@ export class PageIndexStep extends BasePipelineStep {
       type: 'page-index',
       entries,
     };
-    
-    context.dataComponents.push(pageIndexComponent);
+
+    context.dataComponents.add(pageIndexComponent);
 
     return context;
   }

@@ -1,10 +1,14 @@
 import type { PipelineContext } from './types';
 import type { DataComponent } from '../Content';
+import { ComponentStore } from '../ComponentStore';
 
 /**
- * Get a data component from the pipeline context by type
+ * Get a data component by type from any ComponentStore container
  *
- * @param context - The pipeline context
+ * This function works with both PipelineContext and Content objects,
+ * or can be called directly with a ComponentStore instance.
+ *
+ * @param container - PipelineContext, Content, or ComponentStore instance
  * @param type - The type of data component to find
  * @returns The data component if found, undefined otherwise
  *
@@ -17,10 +21,13 @@ import type { DataComponent } from '../Content';
  * ```
  */
 export function getDataComponent<T extends DataComponent>(
-  context: PipelineContext,
+  container: { dataComponents: ComponentStore } | ComponentStore,
   type: string
 ): T | undefined {
-  return context.dataComponents.find(
-    (component) => component.type === type
-  ) as T | undefined;
+  // If passed a ComponentStore directly, use it
+  if (container instanceof ComponentStore) {
+    return container.get<T>(type);
+  }
+  // Otherwise, extract the dataComponents property
+  return container.dataComponents.get<T>(type);
 }

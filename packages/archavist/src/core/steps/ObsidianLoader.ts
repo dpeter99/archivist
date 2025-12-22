@@ -7,6 +7,7 @@ import { VFile } from 'vfile';
 import { BasePipelineStep } from '@/core/pipeline/PipelineStep';
 import type { PipelineContext } from '@/core/pipeline/types';
 import { Content } from "@/core/Content";
+import { ComponentStore } from '@/core/ComponentStore';
 
 
 type ObsidianLoaderOptions = {
@@ -74,7 +75,7 @@ export class ObsidianLoader extends BasePipelineStep {
           value: markdown
         }),
 
-        components: []
+        dataComponents: new ComponentStore()
       };
 
       context.content.push(fileData);

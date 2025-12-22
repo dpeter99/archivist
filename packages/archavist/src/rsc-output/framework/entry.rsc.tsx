@@ -7,7 +7,7 @@ import { setCurrentContent, setNavTree, setAssetManifest } from '@dpeter99/archa
 import { Content } from '../../core/Content';
 import type { NavTreeNode } from '../../core/NavTree';
 import type { PipelineContext } from '../../core/pipeline/types';
-import {AssetManifestComponent} from "@/core";
+import {AssetManifestComponent, ComponentStore} from "@/core";
 
 export async function render(
   content: Content,
@@ -21,9 +21,7 @@ export async function render(
   setNavTree(navTree);
 
   // Extract and set asset manifest from pipeline context data components
-  const assetManifest = context.dataComponents.find(
-    (comp) => comp.type === 'asset-manifest'
-  ) as AssetManifestComponent | undefined;
+  const assetManifest = context.dataComponents.get<AssetManifestComponent>('asset-manifest');
   setAssetManifest(assetManifest);
 
   const rscPayload: RscPayload = { root: <template.rootComponent content={content} /> };

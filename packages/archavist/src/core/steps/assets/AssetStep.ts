@@ -82,7 +82,7 @@ export class AssetStep extends BasePipelineStep {
 
     // Create AssetManifestComponent and add to data components
     const assetComponent = new AssetManifestComponent(assetManifest);
-    context.dataComponents.push(assetComponent);
+    context.dataComponents.add(assetComponent);
 
     console.log(`Indexed ${assetManifest.size} assets for output`);
 

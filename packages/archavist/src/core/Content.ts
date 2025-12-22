@@ -1,4 +1,5 @@
 import type {VFile} from 'vfile';
+import {ComponentStore} from './ComponentStore';
 
 /**
  * File system metadata
@@ -50,7 +51,7 @@ export type Content = {
   /** VFile object with diagnostic messages (initialized in ObsidianLoader) */
   vfile: VFile;
 
-  components: DataComponent[];
+  dataComponents: ComponentStore;
 };
 
 

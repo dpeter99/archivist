@@ -2,9 +2,10 @@
  * Core types for the static site generator pipeline
  */
 
-import {Content, DataComponent} from "../Content";
+import {Content} from "../Content";
 import {NavTreeNode} from "../NavTree";
 import {ArchavistConfig} from "@/core";
+import {ComponentStore} from "../ComponentStore";
 
 /**
  * Context object that flows through the pipeline
@@ -17,5 +18,5 @@ export interface PipelineContext {
   /** Navigation tree built from content URLs */
   navTree?: NavTreeNode[];
   /** Shared data components registry for cross-step data sharing */
-  dataComponents: DataComponent[];
+  dataComponents: ComponentStore;
 }

@@ -1,5 +1,6 @@
 import type {ArchavistConfig, PipelineContext} from '@/core';
 import type { PipelineStep } from '@/core';
+import { ComponentStore } from '@/core';
 
 /**
  * Main pipeline orchestrator
@@ -33,7 +34,7 @@ export class Pipeline {
     let context: PipelineContext = {
       config,
       content: [],
-      dataComponents: []
+      dataComponents: new ComponentStore()
     };
 
     // Execute each step in sequence
