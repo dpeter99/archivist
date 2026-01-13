@@ -1,13 +1,33 @@
-import {TemplateOptions} from "@/rsc-output/shared";
-import { getCurrentContent } from './currentContent';
-import { getAssetManifest } from './assetManifest';
-export { getCurrentContent, setCurrentContent } from './currentContent';
-export { getNavTree, setNavTree } from './navTree';
-export { setAssetManifest, getAssetManifest } from './assetManifest';
-export type { NavTreeNode } from '../../core/NavTree';
+import {AssetManifestComponent, Content, PipelineContext} from "@/core";
+import {NavTreeNode} from "@/core/NavTree";
 
-export function defineTemplate(options: TemplateOptions) {
-  return options;
+
+export interface TemplateContext {
+
+  content: Content
+
+  pipelineContext : PipelineContext
+
+}
+
+export let templateContext: TemplateContext;
+
+export function setTemplateContext(val: TemplateContext) {
+  templateContext = val;
+}
+
+
+
+export function getContent() {
+  return templateContext.content;
+}
+
+export function getNavTree(): NavTreeNode[] {
+  let navTree = templateContext.pipelineContext.navTree;
+  if (navTree === null) {
+    throw new Error('getNavTree() called before navigation tree was set');
+  }
+  return navTree;
 }
 
 /**
@@ -45,18 +65,12 @@ export function defineTemplate(options: TemplateOptions) {
  *   return <img src={imageUrl} alt="Hero" />;
  * }
  */
-export function resolveAsset(path: string | undefined | null): string | null {
-  // Handle undefined/null gracefully
-  if (!path) {
-    return null;
-  }
+export function resolveAsset(path: string): string | null {
 
   // Get asset manifest from context
-  const manifest = getAssetManifest();
+  const manifest = templateContext.pipelineContext.dataComponents.get<AssetManifestComponent>("asset-manifest");
   if (!manifest) {
-    // No asset manifest available (AssetStep not in pipeline)
-    // Get current content for warning
-    const currentContent = getCurrentContent();
+    const currentContent = templateContext.content;
     currentContent.vfile.message(
       `Cannot resolve asset "${path}": Asset manifest not available. Add AssetStep to your pipeline.`,
       undefined,
@@ -70,7 +84,7 @@ export function resolveAsset(path: string | undefined | null): string | null {
 
   if (!asset) {
     // Asset not found - emit warning
-    const currentContent = getCurrentContent();
+    const currentContent = templateContext.content;
     currentContent.vfile.message(
       `Cannot resolve asset: ${path} - asset not found in manifest`,
       undefined,

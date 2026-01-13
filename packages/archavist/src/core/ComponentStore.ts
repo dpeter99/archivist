@@ -20,7 +20,7 @@ export class ComponentStore {
    * Get a data component by type
    * @returns The component if found, undefined otherwise
    */
-  get<T extends DataComponent>(type: string): T | undefined {
+  get<T extends DataComponent>(type: T["id"]): T | undefined {
     return this.components.find(c => c.type === type) as T | undefined;
   }
 

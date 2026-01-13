@@ -105,12 +105,6 @@ export class OutputStep extends BasePipelineStep {
         rsc({}),
         react(),
       ],
-      resolve:{
-        alias:[
-          {find: 'archavist:template', replacement: `${packageDir}/entry.rsc.tsx`},
-          {find: 'template', replacement: `./template/index.tsx`},
-        ]
-      },
       environments:{
         rsc: {
           build: {
@@ -118,7 +112,6 @@ export class OutputStep extends BasePipelineStep {
             rollupOptions: {
               input: {
                 index: `./template/index.tsx`,
-                rscRender: `${packageDir}/entry.rsc.tsx`
               },
             },
           },
@@ -151,7 +144,7 @@ export class OutputStep extends BasePipelineStep {
     
     console.log('Finished vite build');
     
-    const { render } : typeof import('@/rsc-output/framework/entry.rsc') = await import((`${buildDir}/rsc/rscRender.js`))
+    const { render } : typeof import('@/rsc-output/entry.rsc') = await import((`${buildDir}/rsc/rscRender.js`))
     const {template} : {template: TemplateOptions} = await import(`${buildDir}/rsc/index.js`)
     
     

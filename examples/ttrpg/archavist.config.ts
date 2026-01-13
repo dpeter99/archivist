@@ -11,12 +11,14 @@ import {
   AssetStep
 } from "@dpeter99/archavist";
 
+const vaultPath = "/home/dpeter99/Documents/Rens Mind/";
+
 const config: UserConfig = {
   baseUrl: "",
 
   pipeline: new Pipeline()
-    .addStep(new ObsidianLoader({ vaultPath: "/home/dpeter99/Documents/TTRPG/CoS_Orsi_ver/Rens-Mind/", }))
-    .addStep(new AssetStep({ vaultPath: "/home/dpeter99/Documents/TTRPG/CoS_Orsi_ver/Rens-Mind/" }))
+    .addStep(new ObsidianLoader({ vaultPath, }))
+    .addStep(new AssetStep({ vaultPath }))
     .addStep(new UrlGenerationStep({ folderIndex: true }))
     .addStep(new PageIndexStep())
     .addStep(new MarkdownRenderStep())

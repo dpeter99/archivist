@@ -4,9 +4,9 @@
 
 export { ObsidianLoader } from './ObsidianLoader';
 export { AssetStep } from './assets/AssetStep';
-export { UrlGenerationStep } from './UrlGenerationStep';
+export { UrlGenerationStep } from './url-gen/UrlGenerationStep';
 export { MarkdownRenderStep } from './markdown/MarkdownRenderStep';
-export { NavTreeStep } from './NavTreeStep';
+export { NavTreeStep } from './nav-tree/NavTreeStep';
 export { PageIndexStep } from './PageIndexStep';
 export { OutputStep } from '../../rsc-output/OutputStep';
 export { VFileReporterStep } from './VFileReporterStep';

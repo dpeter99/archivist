@@ -96,6 +96,9 @@ $width-left-page: 360px;
 
   @include media-up(md) {
     width: $width-left-page;
+
+    overflow-y: auto;
+    max-height: 100%;
   }
 
   &__content {
@@ -103,8 +106,6 @@ $width-left-page: 360px;
     padding-bottom: $line-height;
     padding-right: 12px;
     padding-left: $margin-offset;
-    overflow-y: auto;
-    max-height: 100%;
   }
 }
 

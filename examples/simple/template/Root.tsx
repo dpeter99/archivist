@@ -1,4 +1,4 @@
-import { getCurrentContent, getNavTree, NavTreeNode, resolveAsset } from '@dpeter99/archavist/template';
+import { getNavTree, resolveAsset, getContent, NavTreeNode} from '@dpeter99/archavist/template';
 import type { Content } from '@dpeter99/archavist';
 import {ClientCounter} from "./counter";
 import React from "react";
@@ -25,7 +25,7 @@ export const Root = ({ content }: { content: Content }) => {
   const title = content.frontmatter?.title || 'Untitled';
 
   // 2. Via global getter (useful for deeply nested components)
-  const currentContent = getCurrentContent();
+  const currentContent = getContent();
   const sourcePath = currentContent.sourcePath;
 
   // Get navigation tree

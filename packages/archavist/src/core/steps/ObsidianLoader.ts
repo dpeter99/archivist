@@ -48,6 +48,10 @@ export class ObsidianLoader extends BasePipelineStep {
       // Parse frontmatter
       const { data: frontmatter, content: markdown } = matter(rawContent);
 
+      if(!("published" in frontmatter) || !frontmatter.published) {
+        continue;
+      }
+
       // Extract file path components
       const sourceDir = dirname(filePath);
       const fileName = basename(filePath, extname(filePath));

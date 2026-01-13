@@ -3,15 +3,9 @@
 // Retrieved 2025-11-20, License - CC BY-SA 4.0
 
 import fs from "node:fs";
-// File destination.txt will be created or overwritten by default.
-fs.copyFile('src/rsc-output/framework/entry.rsc.tsx', 'dist/entry.rsc.tsx', (err) => {
+fs.copyFile('src/rsc-output/entry.ssr.tsx', 'dist/entry.ssr.tsx', (err) => {
   if (err) throw err;
-  console.log('src/rsc-output/framework/entry.rsc.tsx was copied to dist');
-});
-
-fs.copyFile('src/rsc-output/framework/entry.ssr.tsx', 'dist/entry.ssr.tsx', (err) => {
-  if (err) throw err;
-  console.log('src/rsc-output/framework/entry.ssr.tsx was copied to dist');
+  console.log('src/rsc-output/entry.ssr.tsx was copied to dist');
 });
 
 fs.mkdirSync('dist/browser');
